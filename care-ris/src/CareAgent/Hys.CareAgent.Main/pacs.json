@@ -1,0 +1,18 @@
+{
+    "desktopClient": {
+        "disabled": true,
+        "path": "C:\\Users\\Administrator\\Desktop\\ClearCanvas\\ClearCanvas.Desktop.Executable.exe",
+        "args": [ "ClearCanvas.Desktop.Application", "i" ],
+        "param": {
+            "AETitle": "SERVERAE",
+            "IP": "192.168.1.108",
+            "port": 104,
+            "HeaderServicePort": 50221,
+            "WadoServicePort": 1000
+        }
+    },
+    "webClient": {
+        "disabled": false,
+        "url": "http://192.168.1.108:8080/oviyam2/oviyam"
+    }
+}

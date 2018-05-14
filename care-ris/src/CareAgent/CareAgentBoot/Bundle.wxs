@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+  <Bundle Name="CareAgentSetup"
+          Version="!(bind.packageVersion.CareAgentInstaller)"
+          Manufacturer="CloudHys"
+          UpgradeCode="e9602482-16c2-4397-bc07-58c22a58426e">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" >
+      <bal:WixStandardBootstrapperApplication
+        LicenseFile="license.rtf"
+        LocalizationFile="2052.wxl"
+        ThemeFile="theme.xml"/>
+    </BootstrapperApplicationRef>
+    <Chain>
+      <!-- Install .NET 4 Full -->
+      <PackageGroupRef Id="Net4Full"/>
+      <!-- Install Microsoft Visual C++ 2013 x86 Redistributable -->
+      <PackageGroupRef Id="MSVisCPP2013x86Redist"/>
+
+      <MsiPackage Id="CareAgentInstaller"
+                  DisplayInternalUI='yes'
+                  SourceFile="$(var.CareAgentInstaller.TargetPath)"
+                  Visible="yes"/>
+    </Chain>
+  </Bundle>
+  <Fragment>
+    <!-- Search for .NET 4.0 -->
+    <util:RegistrySearch Id="NETFRAMEWORK40"
+                         Root="HKLM"
+                         Key="SOFTWARE\Microsoft\Net Framework Setup\NDP\v4\Full"
+                         Value="Install"
+                         Variable="NETFRAMEWORK40"
+                         Result="value"/>
+    <!-- Search for Microsoft Visual C++ 2013 x86 Redistributable -->
+    <util:ProductSearch Id="SearchForCPP2013X86"
+        UpgradeCode="B59F5BF1-67C8-3802-8E59-2CE551A39FC5"
+        Result="version"
+        Variable="CPP2013Redist" />
+
+    <!-- Install .NET 4.0 -->
+    <PackageGroup Id="Net4Full">
+      <ExePackage Id="Net4Full"
+                  Name="Microsoft .NET Framework 4.0 Setup"
+                  Cache="no"
+                  Compressed="yes"
+                  PerMachine="yes"
+                  Permanent="yes"
+                  Vital="yes"
+                  SourceFile="deps\dotNetFx40_Full_x86_x64.exe"
+                  DetectCondition="NETFRAMEWORK40"/>
+    </PackageGroup>
+
+    <!-- Install Microsoft Visual C++ 2013 x86 Redistributable -->
+    <PackageGroup Id="MSVisCPP2013x86Redist">
+      <ExePackage Id="MSVisCPP2013x86Redis"
+                  Name="Microsoft Visual C++ 2013 x86 Redistributable "
+                  Cache="no"
+                  Compressed="yes"
+                  PerMachine="yes"
+                  Permanent="yes"
+                  Vital="yes"
+                  InstallCommand="/quiet /norestart"
+                  DetectCondition="(CPP2013Redist &gt;= v12.0.21005)"
+                  SourceFile="deps\vcredist_x86.exe"/>
+    </PackageGroup>
+  </Fragment>
+</Wix>

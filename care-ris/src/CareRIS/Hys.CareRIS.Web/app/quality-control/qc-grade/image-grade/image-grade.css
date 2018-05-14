@@ -1,0 +1,51 @@
+﻿.k-header {
+    font-size: 14px!important;
+}
+.image-history {
+    font-size: 14px;
+    background: #f7f7f7;
+}
+.table-grade-container {
+    width: 100%;
+    height: 50%;
+    background: #f7f7f7;
+    position: relative;
+}
+.table-grade-container table {
+    table-layout: fixed;
+}
+
+.table-grade-flex-container {
+    min-height: 60px;
+    max-height: 120px;
+    overflow-y: auto;
+}
+.image-container {
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.image-row {
+    position: relative;
+    margin-bottom: 5px;
+}
+.image-row-title {
+    width: 80px;
+    height: 100%;
+    position:absolute;
+    left: 0;
+    top: 0;
+}
+
+.image-row-content {
+    background: #f7f7f7;
+    margin-left: 80px;
+}
+
+.table-grade-container tr td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}

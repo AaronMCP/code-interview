@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99001A23-7716-44B5-A7F3-A009FAE7E628}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UITest</RootNamespace>
+    <AssemblyName>UITest</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HYS.Common.Dicom, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DicomAdapter\HYS.Common.Dicom\bin\Debug\HYS.Common.Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MappingViewer\IPanel.cs" />
+    <Compile Include="MappingViewer\MListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MappingViewer\MListForm.Designer.cs">
+      <DependentUpon>MListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XmlMapper\DListViewItem.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDicom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDicom.Designer.cs">
+      <DependentUpon>FormDicom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXSLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXSLT.Designer.cs">
+      <DependentUpon>FormXSLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MappingViewer\IControler.cs" />
+    <Compile Include="MappingViewer\IItem.cs" />
+    <Compile Include="MappingViewer\IRelation.cs" />
+    <Compile Include="MappingViewer\MListControler.cs" />
+    <Compile Include="MappingViewer\MListItem.cs" />
+    <Compile Include="MappingViewer\MPanelControler.cs" />
+    <Compile Include="MappingViewer\MRelation.cs" />
+    <Compile Include="MappingViewer\MRelationType.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDicom.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormDicom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXSLT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormXSLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MappingViewer\MListForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="XmlMapper\TListViewControler.cs" />
+    <Compile Include="XmlMapper\TListViewItem.cs">
+    </Compile>
+    <Compile Include="XmlMapper\XListViewControler.cs" />
+    <Compile Include="XmlMapper\XListViewItem.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueball.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4D805299-9559-4F4B-A95C-FEFB294AC2FF}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.IM.UIControl\IM.UIControl.csproj">
+      <Project>{7D04D7F7-10D2-4E29-A30E-6934D48800FE}</Project>
+      <Name>IM.UIControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drawing1s.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XMLBlank\result.xml" />
+    <Content Include="XMLBlank\test.xml" />
+    <Content Include="XMLBlank\test_transform.xml" />
+    <Content Include="XMLBlank\transfrom.xsl" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

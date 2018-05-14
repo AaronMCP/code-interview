@@ -1,0 +1,191 @@
+﻿<form class="form-horizontal exam-add-item" name="examAddItemForm" novalidate>
+    <div class="content">
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>ExamMaterialType</label>
+            <div class="col-sm-7">
+                <input class="form-control" type="text" disabled ng-model="module.title" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{error:examAddItemForm.addItemCheckNO.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemCheckNO.$touched)}">
+            <label class="col-sm-2 control-label required-filed">{{checkNo}}</label>
+            <div class="col-sm-7">
+                <input type="text" class="form-control" ng-disabled="disableEdit" required name="addItemCheckNO" placeholder="{{checkNo}}" ng-model="item.accessionNo" ng-maxlength="256">
+            </div>
+        </div>
+        <div class="form-group message-for-error" ng-class="{error:examAddItemForm.addItemCheckNO.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemCheckNO.$touched)}">
+            <div ng-show="examAddItemForm.addItemCheckNO.$error.required">
+                <div class="col-sm-2"></div>
+                <label class="col-sm-7 error-message">{{checkNoRequireErrorMsg}}</label>
+            </div>
+            <div ng-show="examAddItemForm.addItemCheckNO.$error.maxlength">
+                <div class="col-sm-2"></div>
+                <label class="col-sm-7 error-message">{{checkNoMaxLengthErrorMsg}}</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>PatientNo</label>
+            <div class="col-sm-7">
+                <input type="text" ng-disabled="disableEdit" class="form-control" name="addItemPatientNo" placeholder="{{'PatientNo'|translate}}" ng-model="item.patientNo" ng-maxlength="128" />
+            </div>
+        </div>
+        <div class="form-group message-for-error" ng-class="{error:examAddItemForm.addItemPatientNo.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemPatientNo.$touched)}">
+            <div ng-show="examAddItemForm.addItemPatientNo.$error.maxlength">
+                <div class="col-sm-2"></div>
+                <label class="col-sm-7 error-message" translate>ExamPatientNoMaxLength</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>ExamSection</label>
+            <div class="col-sm-7">
+                <select ng-disabled="disableEdit" class="form-control" kendo-drop-down-list
+                        k-data-source="examSectionList"
+                        k-data-text-field="'name'" k-data-value-field="'name'"
+                        ng-model="item.examSection"></select>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{error:examAddItemForm.addItemExamDate.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemExamDate.$touched)}">
+            <label class="col-sm-2 control-label required-filed" translate>ExamDate</label>
+            <div class="col-sm-7">
+                <input type="text" ng-disabled="disableEdit" class="form-control" id="addItemExamDate" name="addItemExamDate" required kendo-date-picker="examDatePicker" k-max="today" ng-model="item.examDate" />
+            </div>
+        </div>
+        <div class="form-group message-for-error" ng-class="{error:examAddItemForm.addItemExamDate.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemExamDate.$touched)}">
+            <div class="col-sm-2"></div>
+            <label class="col-sm-7 error-message" translate>ExamDateRequireErrorMsg</label>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>ExamBodyPart</label>
+            <div class="col-sm-10">
+                <textarea ng-disabled="disableEdit" class="form-control" rows="4" cols="5" ng-model="item.bodyPart" name="addItemBodyPart" ng-maxlength="128"></textarea>
+            </div>
+        </div>
+        <div class="form-group message-for-error" ng-class="{error:examAddItemForm.addItemBodyPart.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemBodyPart.$touched)}">
+            <div ng-show="examAddItemForm.addItemBodyPart.$error.maxlength">
+                <div class="col-sm-2"></div>
+                <label class="col-sm-7 error-message" translate>ExamBodyPartMaxLengthErrorMsg</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>ExamDescription</label>
+            <div class="col-sm-10">
+                <textarea ng-disabled="disableEdit" class="form-control" rows="4" cols="5" name="addItemExamDescription" ng-model="item.examDescription" ng-maxlength="512"></textarea>
+            </div>
+        </div>
+        <div class="form-group message-for-error" ng-class="{error:examAddItemForm.addItemExamDescription.$invalid&&(examAddItemForm.$submitted || examAddItemForm.addItemExamDescription.$touched)}">
+            <div ng-show="examAddItemForm.addItemExamDescription.$error.maxlength">
+                <div class="col-sm-2"></div>
+                <label class="col-sm-7 error-message" translate>ExamDescriptionMaxLengthErrorMsg</label>
+            </div>
+        </div>
+        <div class="form-group" ng-if="isMobile">
+            <label class="col-sm-2 control-label" style="padding: 25px;" translate>ExamSelect</label>
+            <div class="col-sm-10">
+                <ul style="list-style: none">
+                    <li ng-hide="disableEdit">
+                        <input name="files"
+                               type="file"
+                               kendo-upload
+                               k-async="{ saveUrl: '{{damServerSaveFile}}', removeUrl:'FileUpload/Remove', autoUpload: true }"
+                               k-success="onSuccess"
+                               k-upload="onUpload"
+                               k-error="onError" />
+                    </li>
+                </ul>
+                <div class="upload-control-list form-control">
+                    <table class="table">
+                        <colgroup>
+                            <col style="width: 60px;" />
+                            <col />
+                            <col style="width: 60px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th translate>ExamFileIndex</th>
+                                <th translate>FileName</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in item.fileList" ng-class="{selected:file.selected}" ng-click="fileSelected(file)">
+                                <th>{{$index+1}}</th>
+                                <td>
+                                    <div class="exam-file {{file.fileType}}">{{file.fileName}}</div>
+                                </td>
+                                <td style="text-align: right;">
+                                    <a class="icon-remove" href="javascript:void(0);" ng-click="deleteFile($index)"></a>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="detail in item.itemDetails|filter:{deleted:false}" ng-class="{selected:detail.selected}" ng-click="fileSelected(detail)">
+                                <th>{{item.fileList.length+$index+1}}</th>
+                                <td>
+                                    <div class="exam-file {{detail.file.fileType}}">{{detail.file.fileName}}</div>
+                                </td>
+                                <td style="text-align: right;">
+                                    <a class="icon-remove" href="javascript:void(0);" ng-click="deleteItemDetails(detail,$index)"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="form-group" ng-if="!isMobile">
+            <label class="col-sm-2 control-label" translate>ExamSelect</label>
+            <div class="col-sm-10">
+                <ul class="upload-control form-control">
+                    <li ng-hide="disableEdit"><a class="icon-uploadFile"  href="javascript:void(0)" title="{{'ExamSelectFile' | translate}}" ng-click="openFileManager('file')"></a></li>
+                    <li ng-hide="disableEdit"><a class="icon-uploadFolder" href="javascript:void(0)" title="{{'ExamSelectFolder' | translate}}" ng-click="openFileManager('folder')"></a></li>
+                    <li ng-hide="disableEdit"><a class="icon-receive_image" href="javascript:void(0)" title="{{'DICOMList' | translate}}" ng-click="selectDICOM()"></a></li>
+                </ul>
+                <div class="ng-cloak" ng-show="clientAgentError">
+                    <span translate>ExamClientAgentInstall</span><a ng-href="{{clientAgentUrl}}">ClientAgent</a>;<span translate>ExamClientAgentInstalled</span>
+                </div>
+                <div class="upload-control-list form-control" ng-hide="clientAgentError">
+                    <table class="table">
+                        <colgroup>
+                            <col style="width: 60px;" />
+                            <col />
+                            <col style="width: 60px;" />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th translate>ExamFileIndex</th>
+                                <th translate>FileName</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="file in item.fileList" ng-class="{selected:file.selected}" ng-click="fileSelected(file)">
+                                <th>{{$index+1}}</th>
+                                <td>
+                                    <div class="exam-file {{file.fileType}}">{{file.fileName}}</div>
+                                </td>
+                                <td style="text-align: right;">
+                                    <a class="icon-remove" href="javascript:void(0);" ng-click="deleteFile($index)"></a>
+                                </td>
+                            </tr>
+                            <tr ng-repeat="detail in item.itemDetails|filter:{deleted:false}" ng-class="{selected:detail.selected}" ng-click="fileSelected(detail)">
+                                <th>{{item.fileList.length+$index+1}}</th>
+                                <td>
+                                    <div class="exam-file {{detail.file.fileType}}">{{detail.file.fileName}}</div>
+                                </td>
+                                <td style="text-align: right;">
+                                    <a class="icon-remove" href="javascript:void(0);" ng-click="deleteItemDetails(detail,$index)"></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-pan">
+        <input type="submit" ng-hide="disableEdit" class="btn btn-green" value="{{'ExamConfirm'|translate}}" ng-click="confirmItem()" />
+        <input type="button" class="btn btn-default" value="{{'ExamCancel'|translate}}" ng-click="cancellItem()" />
+    </div>
+    <div class="loader" ng-show="isLoading"></div>
+    <div kendo-window="dicomWin" k-title="'{{'DICOMList'|translate}}'"
+         k-width="'70%'" k-height="'70%'" k-visible="false" k-modal="true" k-on-activate="activeDicomWin(kendoEvent)" k-on-deactivate="deactiveDicomWin(kendoEvent)">
+        <!--<dicom-list-view is-select-dicom="true" cancel-dicom="cancelDicom()" confirm-dicom="confirmDicom(dicom)"></dicom-list-view>-->
+    </div>
+</form>

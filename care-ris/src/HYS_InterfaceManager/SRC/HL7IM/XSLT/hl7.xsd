@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by adam (Rayco (Shanghai) Medical Products Company Limited) -->
+<xs:schema xmlns="gw" xmlns:mstns="gw" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="gw" elementFormDefault="qualified" id="PID">
+	<xs:element name="HL7">
+		<xs:complexType>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="ERR"/>
+				<xs:element ref="MSA"/>
+				<xs:element ref="MSH"/>
+				<xs:element ref="NTE"/>
+				<xs:element ref="OBR"/>
+				<xs:element ref="OBX"/>
+				<xs:element ref="ORC"/>
+				<xs:element ref="PID"/>
+				<xs:element ref="PV1"/>
+				<xs:element ref="ZE1"/>
+				<xs:element ref="ZE2"/>
+				<xs:element ref="IPC"/>
+				<xs:element ref="TQ1"/>
+				<xs:element ref="MRG"/>
+				<xs:element ref="DSC"/>
+				<xs:element ref="QAK"/>
+				<xs:element ref="RCP"/>
+				<xs:element ref="ZDS"/>
+				<xs:element ref="QID"/>
+				<xs:element ref="QPD"/>
+				<xs:element ref="EVN"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PID">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PatientID_External" type="CX" id="PID-2" minOccurs="0"/>
+				<xs:element name="PatientID_InternalID" type="CX" id="PID-3" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="AlternatePatientID-PID" type="CX" id="PID-4" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PatientName" type="XPN" id="PID-5" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="MothersMaidenName" type="XPN" id="PID-6" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PatientAlias" type="XPN" id="PID-9" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Race" type="CE" id="PID-10" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PatientAddress" type="XAD" id="PID-11" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PhoneNumber-Home" type="XTN" id="PID-13" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PhoneNumber-Business" type="XTN" id="PID-14" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PrimaryLanguage" type="CE" id="PID-15" minOccurs="0"/>
+				<xs:element name="MaritalStatus" type="CE" id="PID-16" minOccurs="0"/>
+				<xs:element name="Religion" type="CE" id="PID-17" minOccurs="0"/>
+				<xs:element name="PatientAccountNumber" type="CX" id="PID-18" minOccurs="0"/>
+				<xs:element name="DriversLicNum-Patient" type="DLN" id="PID-20" minOccurs="0"/>
+				<xs:element name="MothersIdentifier" type="CX" id="PID-21" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="EthnicGroup" type="CE" id="PID-22" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Citizenship" type="CE" id="PID-26" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="VeteransMilitaryStatus" type="CE" id="PID-27" minOccurs="0"/>
+				<xs:element name="Nationality" type="CE" id="PID-28" minOccurs="0"/>
+				<xs:element name="IdentityReliabilltyCode" type="IS" id="PID-32" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="LastUpdateFacility" type="HD" id="PID-34" minOccurs="0"/>
+				<xs:element name="SpeciesCode" type="CE" id="PID-35" minOccurs="0"/>
+				<xs:element name="BreedCode" type="CE" id="PID-36" minOccurs="0"/>
+				<xs:element name="ProductionClassCode" type="CE" id="PID-38" minOccurs="0" maxOccurs="2"/>
+				<xs:element name="TribalCitizenship" type="CWE" id="PID-39" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDPatientID" type="SI" id="PID-1"/>
+			<xs:attribute name="DTOfBirth" type="TS" id="PID-7"/>
+			<xs:attribute name="Sex" type="IS" id="PID-8"/>
+			<xs:attribute name="CountyCode" type="IS" id="PID-12"/>
+			<xs:attribute name="SSNNumber-Patient" type="ST" id="PID-19"/>
+			<xs:attribute name="BirthPlace" type="ST" id="PID-23"/>
+			<xs:attribute name="MultipleBirthIndicator" type="ID" id="PID-24"/>
+			<xs:attribute name="BirthOrder" type="NM" id="PID-25"/>
+			<xs:attribute name="PatientDeathDateandTime" type="TS" id="PID-29"/>
+			<xs:attribute name="PatientDeathIndicator" type="ID" id="PID-30"/>
+			<xs:attribute name="IdentityUnknownIndicator" type="ID" id="PID-31"/>
+			<xs:attribute name="LastUpdateDT" type="TS" id="PID-33"/>
+			<xs:attribute name="Strain" type="ST" id="PID-37"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MSH">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="SendingApplication" type="HD" id="MSH-3" minOccurs="0"/>
+				<xs:element name="SendingFacility" type="HD" id="MSH-4" minOccurs="0"/>
+				<xs:element name="ReceivingApplication" type="HD" id="MSH-5" minOccurs="0"/>
+				<xs:element name="ReceivingFacility" type="HD" id="MSH-6" minOccurs="0"/>
+				<xs:element name="MessageType" type="MSG" id="MSH-9" minOccurs="0"/>
+				<xs:element name="ProcessingID" type="PT" id="MSH-11" minOccurs="0"/>
+				<xs:element name="VersionID" type="VID" id="MSH-12" minOccurs="0"/>
+				<xs:element name="CharacterSet" type="ID" id="MSH-18" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PrincipalLanguageofMessage" type="CE" id="MSH-19" minOccurs="0"/>
+				<xs:element name="MessageProfileIdentifier" type="EI" id="MSH-21" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="FieldSeparator" type="ST" id="MSH-1"/>
+			<xs:attribute name="EncodingCharacters" type="ST" id="MSH-2"/>
+			<xs:attribute name="DTOfMessage" type="TS" id="MSH-7"/>
+			<xs:attribute name="Security" type="ST" id="MSH-8"/>
+			<xs:attribute name="MessageControlID" type="ST" id="MSH-10"/>
+			<xs:attribute name="SequenceNumber" type="NM" id="MSH-13"/>
+			<xs:attribute name="ContinuationPointer" type="ST" id="MSH-14"/>
+			<xs:attribute name="AcceptAcknowledgmentType" type="ID" id="MSH-15"/>
+			<xs:attribute name="ApplicationAcknowledgmentType" type="ID" id="MSH-16"/>
+			<xs:attribute name="CountryCode" type="ID" id="MSH-17"/>
+			<xs:attribute name="AlternateCharacterSetHandlingScheme" type="ID" id="MSH-20"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ERR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ErrorCodeAndPosition" type="ELD" id="ERR-1" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ErrorPosition" type="ERL" id="ERR-2" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="HL7ErrorCode" type="CWE" id="ERR-3" minOccurs="0"/>
+				<xs:element name="AppErrorCode" type="CWE" id="ERR-5" minOccurs="0"/>
+				<xs:element name="AppErrorParam" type="ST" id="ERR-6" minOccurs="0" maxOccurs="10"/>
+				<xs:element name="NoticeIndextoPerson" type="IS" id="ERR-9" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="InvalidModel" type="CWE" id="ERR-10" minOccurs="0"/>
+				<xs:element name="InvalidModelCode" type="CWE" id="ERR-11" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="HelpDeskContactPoint" type="XTN" id="ERR-12" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="InfluenceDegree" type="ID" id="ERR-4"/>
+			<xs:attribute name="DiagnosisInformation" type="TX" id="ERR-7"/>
+			<xs:attribute name="UserMessage" type="TX" id="ERR-8"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MSA">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ErrorCondition" type="CE" id="MSA-6" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="AcknowledgmentCode" type="ID" id="MSA-1"/>
+			<xs:attribute name="MessageControlID" type="ST" id="MSA-2"/>
+			<xs:attribute name="TextMessage" type="ST" id="MSA-3"/>
+			<xs:attribute name="ExpectedSequenceNumber" type="NM" id="MSA-4"/>
+			<xs:attribute name="DelayedAcknowledgmentType" type="xs:string" id="MSA-5"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NTE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Comment" type="FT" id="NTE-3" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="CommentType" type="CE" id="NTE-4" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDNTE" type="SI" id="NTE-1"/>
+			<xs:attribute name="SourceofComment" type="ID" id="NTE-2"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OBR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PlacerOrderNumber" type="EI" id="OBR-2" minOccurs="0"/>
+				<xs:element name="FillerOrderNumber" type="EI" id="OBR-3" minOccurs="0"/>
+				<xs:element name="UniversalServiceID" type="CE" id="OBR-4" minOccurs="0"/>
+				<xs:element name="CollectionVolume" type="CQ" id="OBR-9" minOccurs="0"/>
+				<xs:element name="CollectorIdentifier" type="XCN" id="OBR-10" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="DangerCode" type="CE" id="OBR-12" minOccurs="0"/>
+				<xs:element name="SpecimenSource" type="SPS" id="OBR-15" minOccurs="0"/>
+				<xs:element name="OrderingProvider" type="XCN" id="OBR-16" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderCallbackPhoneNumber" type="XTN" id="OBR-17" minOccurs="0" maxOccurs="2"/>
+				<xs:element name="ChargetoPractice" type="MOC" id="OBR-23" minOccurs="0"/>
+				<xs:element name="ParentResult" type="PRL" id="OBR-26" minOccurs="0"/>
+				<xs:element name="QuantityTiming" type="TQ" id="OBR-27" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ResultCopiesTo" type="XCN" id="OBR-28" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ParentNumber" type="EIP" id="OBR-29" minOccurs="0"/>
+				<xs:element name="ReasonforStudy" type="CE" id="OBR-31" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PrincipalResultInterpreter" type="NDL" id="OBR-32" minOccurs="0"/>
+				<xs:element name="AssistantResultInterpreter" type="NDL" id="OBR-33" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Technician" type="NDL" id="OBR-34" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Transcriptionist" type="NDL" id="OBR-35" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="TransportLogisticsofCollectedSample" type="CE" id="OBR-38" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="CollectorsComment" type="CE" id="OBR-39" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="TransportArrangementResponsibility" type="CE" id="OBR-40" minOccurs="0"/>
+				<xs:element name="PlannedPatientTransportComment" type="CE" id="OBR-43" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ProcedureCode" type="CE" id="OBR-44" minOccurs="0"/>
+				<xs:element name="ProcedureCodeModifier" type="CE" id="OBR-45" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PlacerSupplementalServiceInformation" type="CE" id="OBR-46" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="FillerSupplementalServiceInformation" type="CE" id="OBR-47" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="MedicallyNecessaryDuplicateProcedureReason" type="CWE" id="OBR-48" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDObservationRequest" type="SI" id="OBR-1"/>
+			<xs:attribute name="Priority" type="ID" id="OBR-5"/>
+			<xs:attribute name="RequestedDT" type="TS" id="OBR-6"/>
+			<xs:attribute name="ObservationDT" type="TS" id="OBR-7"/>
+			<xs:attribute name="ObservationEndDT" type="TS" id="OBR-8"/>
+			<xs:attribute name="SpecimenActionCode" type="ID" id="OBR-11"/>
+			<xs:attribute name="RelevantClinicalInfo." type="ST" id="OBR-13"/>
+			<xs:attribute name="SpecimenReceivedDT" type="TS" id="OBR-14"/>
+			<xs:attribute name="Placerfield1" type="ST" id="OBR-18"/>
+			<xs:attribute name="Placerfield2" type="ST" id="OBR-19"/>
+			<xs:attribute name="FillerField1" type="ST" id="OBR-20"/>
+			<xs:attribute name="FillerField2" type="ST" id="OBR-21"/>
+			<xs:attribute name="ResultsRptStatusChngDT" type="TS" id="OBR-22"/>
+			<xs:attribute name="DiagnosticServSectID" type="ID" id="OBR-24"/>
+			<xs:attribute name="ResultStatus" type="ID" id="OBR-25"/>
+			<xs:attribute name="TransportationMode" type="ID" id="OBR-30"/>
+			<xs:attribute name="ScheduledDT" type="TS" id="OBR-36"/>
+			<xs:attribute name="NumberofSampleContainers" type="NM" id="OBR-37"/>
+			<xs:attribute name="TransportArranged" type="ID" id="OBR-41"/>
+			<xs:attribute name="EscortRequired" type="ID" id="OBR-42"/>
+			<xs:attribute name="ResultHandling" type="IS" id="OBR-49"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OBX">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ObservationIdentifier" type="CE" id="OBX-3" minOccurs="0"/>
+				<xs:element name="ObservationValue" type="xs:string" id="OBX-5" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Units" type="CE" id="OBX-6" minOccurs="0"/>
+				<xs:element name="AbnormalFlags" type="IS" id="OBX-8" minOccurs="0" maxOccurs="5"/>
+				<xs:element name="NatureofAbnormalTest" type="ID" id="OBX-10" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ProducersID" type="CE" id="OBX-15" minOccurs="0"/>
+				<xs:element name="ResponsibleObserver" type="XCN" id="OBX-16" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ObservationMethod" type="CE" id="OBX-17" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="EquipmentInstanceIdentifier" type="EI" id="OBX-18" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDObservational" type="SI" id="OBX-1"/>
+			<xs:attribute name="ValueType" type="ID" id="OBX-2"/>
+			<xs:attribute name="ObservationSub-ID" type="ST" id="OBX-4"/>
+			<xs:attribute name="ReferencesRange" type="ST" id="OBX-7"/>
+			<xs:attribute name="Probability" type="NM" id="OBX-9"/>
+			<xs:attribute name="ObservResultStatus" type="ID" id="OBX-11"/>
+			<xs:attribute name="DateLastObsNormalValues" type="TS" id="OBX-12"/>
+			<xs:attribute name="UserDefinedAccessChecks" type="ST" id="OBX-13"/>
+			<xs:attribute name="DateTimeoftheObservation" type="TS" id="OBX-14"/>
+			<xs:attribute name="DTOftheAnalysis" type="TS" id="OBX-19"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ORC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PlacerOrderNumber" type="EI" id="ORC-2" minOccurs="0"/>
+				<xs:element name="FillerOrderNumber" type="EI" id="ORC-3" minOccurs="0"/>
+				<xs:element name="PlacerGroupNumber" type="EI" id="ORC-4" minOccurs="0"/>
+				<xs:element name="QuantityTiming" type="TQ" id="ORC-7" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Parent" type="EIP" id="ORC-8" minOccurs="0"/>
+				<xs:element name="EnteredBy" type="XCN" id="ORC-10" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="VerifiedBy" type="XCN" id="ORC-11" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderingProvider" type="XCN" id="ORC-12" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="EnterersLocation" type="PL" id="ORC-13" minOccurs="0"/>
+				<xs:element name="CallBackPhoneNumber" type="XTN" id="ORC-14" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderControlCodeReason" type="CE" id="ORC-16" minOccurs="0"/>
+				<xs:element name="EnteringOrganization" type="CE" id="ORC-17" minOccurs="0"/>
+				<xs:element name="EnteringDevice" type="CE" id="ORC-18" minOccurs="0"/>
+				<xs:element name="ActionBy" type="XCN" id="ORC-19" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="AdvancedBeneficiaryNoticeCode" type="CE" id="ORC-20" minOccurs="0"/>
+				<xs:element name="OrderingFacilityName" type="XON" id="ORC-21" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderingFaciloityAddress" type="XAD" id="ORC-22" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderingFacilityPhoneNumber" type="XTN" id="ORC-23" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderingProviderAddress" type="XAD" id="ORC-24" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OrderStatusModifier" type="CWE" id="ORC-25" minOccurs="0"/>
+				<xs:element name="AdvancedBeneficiaryNoticeOverrideReason" type="CWE" id="ORC-26" minOccurs="0"/>
+				<xs:element name="ConfidentialityCode" type="CWE" id="ORC-28" minOccurs="0"/>
+				<xs:element name="OrderType" type="CWE" id="ORC-29" minOccurs="0"/>
+				<xs:element name="EntererAuthorizationMode" type="CNE" id="ORC-30" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="OrderControl" type="ID" id="ORC-1"/>
+			<xs:attribute name="OrderStatus" type="ID" id="ORC-5"/>
+			<xs:attribute name="ResponseFlag" type="ID" id="ORC-6"/>
+			<xs:attribute name="DTOfTransaction" type="TS" id="ORC-9"/>
+			<xs:attribute name="OrderEffectiveDT" type="TS" id="ORC-15"/>
+			<xs:attribute name="FillersExpectedAvailabilityDT" type="TS" id="ORC-27"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PV1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AssignedPatientLocation" type="PL" id="PV1-3" minOccurs="0"/>
+				<xs:element name="PreadmitNumber" type="CX" id="PV1-5" minOccurs="0"/>
+				<xs:element name="PriorPatientLocation" type="PL" id="PV1-6" minOccurs="0"/>
+				<xs:element name="AttendingDoctor" type="XCN" id="PV1-7" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ReferringDoctor" type="XCN" id="PV1-8" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ConsultingDoctor" type="XCN" id="PV1-9" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="TemporaryLocation" type="PL" id="PV1-11" minOccurs="0"/>
+				<xs:element name="AmbulatoryStatus" type="IS" id="PV1-15" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="AdmittingDoctor" type="XCN" id="PV1-17" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="VisitNumber" type="CX" id="PV1-19" minOccurs="0"/>
+				<xs:element name="FinancialClass" type="FC" id="PV1-20" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ContractCode" type="IS" id="PV1-24" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ContractEffectiveDate" type="DT" id="PV1-25" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ContractAmount" type="NM" id="PV1-26" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ContractPeriod" type="NM" id="PV1-27" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="DischargedtoLocation" type="DLD" id="PV1-37" minOccurs="0"/>
+				<xs:element name="DietType" type="CE" id="PV1-38" minOccurs="0"/>
+				<xs:element name="PendingLocation" type="PL" id="PV1-42" minOccurs="0"/>
+				<xs:element name="PriorTemporaryLocation" type="PL" id="PV1-43" minOccurs="0"/>
+				<xs:element name="AlternateVisitID" type="CX" id="PV1-50" minOccurs="0"/>
+				<xs:element name="OtherHealthcareProvider" type="XCN" id="PV1-52" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDPatientVisit" type="SI" id="PV1-1"/>
+			<xs:attribute name="PatientClass" type="IS" id="PV1-2"/>
+			<xs:attribute name="AdmissionType" type="IS" id="PV1-4"/>
+			<xs:attribute name="HospitalService" type="IS" id="PV1-10"/>
+			<xs:attribute name="PreadmitTestIndicator" type="IS" id="PV1-12"/>
+			<xs:attribute name="ReadmissionIndicator" type="IS" id="PV1-13"/>
+			<xs:attribute name="AdmitSource" type="IS" id="PV1-14"/>
+			<xs:attribute name="VIPIndicator" type="IS" id="PV1-16"/>
+			<xs:attribute name="PatientType" type="IS" id="PV1-18"/>
+			<xs:attribute name="ChargePriceIndicator" type="IS" id="PV1-21"/>
+			<xs:attribute name="CourtesyCode" type="IS" id="PV1-22"/>
+			<xs:attribute name="CreditRating" type="IS" id="PV1-23"/>
+			<xs:attribute name="InterestCode" type="IS" id="PV1-28"/>
+			<xs:attribute name="TransfertoBadDebtCode" type="IS" id="PV1-29"/>
+			<xs:attribute name="TransfertoBadDebtDate" type="DT" id="PV1-30"/>
+			<xs:attribute name="BadDebtAgencyCode" type="IS" id="PV1-31"/>
+			<xs:attribute name="BadDebtTransferAmount" type="NM" id="PV1-32"/>
+			<xs:attribute name="BadDebtRecoveryAmount" type="NM" id="PV1-33"/>
+			<xs:attribute name="DeleteAccountIndicator" type="IS" id="PV1-34"/>
+			<xs:attribute name="DeleteAccountDate" type="DT" id="PV1-35"/>
+			<xs:attribute name="DischargeDisposition" type="IS" id="PV1-36"/>
+			<xs:attribute name="ServicingFacility" type="IS" id="PV1-39"/>
+			<xs:attribute name="BedStatus" type="IS" id="PV1-40"/>
+			<xs:attribute name="AccountStatus" type="IS" id="PV1-41"/>
+			<xs:attribute name="AdmitDT" type="TS" id="PV1-44"/>
+			<xs:attribute name="DischargeDT" type="TS" id="PV1-45"/>
+			<xs:attribute name="CurrentPatientBalance" type="NM" id="PV1-46"/>
+			<xs:attribute name="TotalCharges" type="NM" id="PV1-47"/>
+			<xs:attribute name="TotalAdjustments" type="NM" id="PV1-48"/>
+			<xs:attribute name="TotalPayments" type="NM" id="PV1-49"/>
+			<xs:attribute name="VisitIndicator" type="IS" id="PV1-51"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TQ1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Quantity" type="CQ" id="TQ1-2" minOccurs="0"/>
+				<xs:element name="RepeatPattern" type="RPT" id="TQ1-3" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ExplicitTime" type="TM" id="TQ1-4" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="RelativeTimeAndUnits" type="CQ" id="TQ1-5" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="ServiceDuration" type="CQ" id="TQ1-6" minOccurs="0"/>
+				<xs:element name="Priority" type="CWE" id="TQ1-9" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="OccurrenceDuration" type="CQ" id="TQ1-13" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="SetIDTQ1" type="SI" id="TQ1-1"/>
+			<xs:attribute name="StartDT" type="TS" id="TQ1-7"/>
+			<xs:attribute name="EndDT" type="TS" id="TQ1-8"/>
+			<xs:attribute name="ConditionText" type="TX" id="TQ1-10"/>
+			<xs:attribute name="TextInstruction" type="TX" id="TQ1-11"/>
+			<xs:attribute name="Conjunction" type="ID" id="TQ1-12"/>
+			<xs:attribute name="TotalOccurrences" type="NM" id="TQ1-14"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="IPC">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="AccessionIdentifier" type="EI" id="IPC-1" minOccurs="0"/>
+				<xs:element name="RequestedProcedureID" type="EI" id="IPC-2" minOccurs="0"/>
+				<xs:element name="StudyInstanceUID" type="EI" id="IPC-3" minOccurs="0"/>
+				<xs:element name="ScheduledProcedureStepID" type="EI" id="IPC-4" minOccurs="0"/>
+				<xs:element name="Modality" type="CE" id="IPC-5" minOccurs="0"/>
+				<xs:element name="ProtocolCode" type="CE" id="IPC-6" minOccurs="0"/>
+				<xs:element name="ScheduledStationName" type="EI" id="IPC-7" minOccurs="0"/>
+				<xs:element name="ScheduledProcedureStepLocation" type="CE" id="IPC-8" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ScheduledAETitle" type="ST" id="IPC-9"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ZE1">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Technical" type="CE" id="ZE1-3" minOccurs="0"/>
+				<xs:element name="MedicalAddition" type="CE" id="ZE1-5" minOccurs="0"/>
+				<xs:element name="MedicalWorkClass" type="JCC" id="ZE1-6" minOccurs="0"/>
+				<xs:element name="MedicalWork" type="XCN" id="ZE1-7" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="UseCommodity" type="ZRD" id="ZE1-9" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Contact" type="XTN" id="ZE1-10" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="SetID" type="SI" id="ZE1-1"/>
+			<xs:attribute name="ControlCode" type="IS" id="ZE1-2"/>
+			<xs:attribute name="TechnicalCount" type="NM" id="ZE1-4"/>
+			<xs:attribute name="UseCommodityClass" type="IS" id="ZE1-8"/>
+			<xs:attribute name="OperationField" type="ST" id="ZE1-11"/>
+			<xs:attribute name="AccountField" type="ST" id="ZE1-12"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ZE2">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Voltage" type="CQ" id="ZE2-2" minOccurs="0"/>
+				<xs:element name="ElectricCurrent" type="CQ" id="ZE2-3" minOccurs="0"/>
+				<xs:element name="Distance" type="CQ" id="ZE2-4" minOccurs="0"/>
+				<xs:element name="Time" type="CQ" id="ZE2-5" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="SetID" type="SI" id="ZE2-1"/>
+			<xs:attribute name="Count" type="NM" id="ZE2-6"/>
+			<xs:attribute name="ShootField" type="ST" id="ZE2-7"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MRG">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="PriorPatientIdentifierList" type="CX" id="MRG-1" maxOccurs="unbounded"/>
+				<xs:element name="PriorAlternativePatientID" type="CX" id="MRG-2" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PriorPatientAccountNumber" type="CX" id="MRG-3" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PriorPatientID" type="CX" id="MRG-4" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PriorVisitNumber" type="CX" id="MRG-5" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PriorAlternativeVisitID" type="CX" id="MRG-6" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="PriorPatientName" type="XPN" id="MRG-7" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QPD">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MessageQueryName" type="CE" id="QPD-1"/>
+				<xs:element name="PersonalIdentifier" type="CX" id="QPD-3_PIX" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="DemographicsFields" type="QIP" id="QPD-3_PDQ" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="WhatDomainReturned" type="CX" id="QPD-4" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="QueryTag" type="ST" id="QPD-2"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QAK">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MessageQueryName" type="CE" id="QAK-3" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="QueryTag" type="ST" id="QAK-1"/>
+			<xs:attribute name="QueryResponseStatus" type="ID" id="QAK-2"/>
+			<xs:attribute name="HitCount" type="NM" id="QAK-4"/>
+			<xs:attribute name="thisPayload" type="NM" id="QAK-5"/>
+			<xs:attribute name="HitsRemaining" type="NM" id="QAK-6"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EVN">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="OperatorID" type="XCN" id="EVN-5" minOccurs="0"/>
+				<xs:element name="EventFacility" type="HD" id="EVN-7" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="EventTypeCode" type="ID" id="EVN-1"/>
+			<xs:attribute name="RecordedDateTime" type="TS" id="EVN-2"/>
+			<xs:attribute name="DateTimePlannedEvent" type="TS" id="EVN-3"/>
+			<xs:attribute name="EventReasonCode" type="IS" id="EVN-4"/>
+			<xs:attribute name="EventOccurred" type="TS" id="EVN-6"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="RCP">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="QuantityLimitedRequest" type="CQ" id="RCP-2" minOccurs="0"/>
+				<xs:element name="ResponseModality" type="CE" id="RCP-3" minOccurs="0"/>
+				<xs:element name="SortByField" type="SRT" id="RCP-6" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="QueryPriority" type="ID" default="I" id="RCP-1"/>
+			<xs:attribute name="ExcutionandDeliveryTime" type="TS" id="RCP-4"/>
+			<xs:attribute name="ModifyIndicator" type="ID" id="RCP-5"/>
+			<xs:attribute name="SegmentGroupInclusion" type="ID" id="RCP-7"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DSC">
+		<xs:complexType>
+			<xs:attribute name="ContinuationPointer" type="ST" id="DSC-1"/>
+			<xs:attribute name="ContinuationStyle" type="ID" id="DSC-2"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ZDS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="ReferencePointer" type="RP" id="ZDS-1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QID">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MessageQueryName" type="CE" id="QID-2"/>
+			</xs:sequence>
+			<xs:attribute name="QueryTag" type="ST" id="QID-1"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADTA40">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MSH"/>
+				<xs:element ref="EVN" minOccurs="0"/>
+				<xs:element ref="PID"/>
+				<xs:element ref="MRG"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADTA01">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MSH"/>
+				<xs:element ref="EVN" minOccurs="0"/>
+				<xs:element ref="PID"/>
+				<xs:element ref="PV1" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ADTACK">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="MSH"/>
+				<xs:element ref="MSA"/>
+				<xs:element ref="ERR" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="CE">
+		<xs:sequence/>
+		<xs:attribute name="Identifier" type="ST"/>
+		<xs:attribute name="Text" type="ST"/>
+		<xs:attribute name="NameOfCodingSystem" type="IS"/>
+		<xs:attribute name="AlternateIdentifier" type="ST"/>
+		<xs:attribute name="AlternateText" type="ST"/>
+		<xs:attribute name="NameOfAlternateCodingSystem" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="XPN">
+		<xs:sequence>
+			<xs:element name="FamilyName" type="FN" minOccurs="0"/>
+			<xs:element name="NameContext" type="CE" minOccurs="0"/>
+			<xs:element name="NameValidityRange" type="DR" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="GivenName" type="ST"/>
+		<xs:attribute name="SecondAndFurtherGivenNamesOrInitialsThereof" type="ST"/>
+		<xs:attribute name="Suffix" type="ST"/>
+		<xs:attribute name="Prefix" type="ST"/>
+		<xs:attribute name="Degree" type="ST"/>
+		<xs:attribute name="NameTypeCode" type="ID"/>
+		<xs:attribute name="NameRepresentationCode" type="ID"/>
+		<xs:attribute name="NameAssemblyOrder" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="FN">
+		<xs:sequence/>
+		<xs:attribute name="Surname" type="ST"/>
+		<xs:attribute name="OwnSurnamePrefix" type="ST"/>
+		<xs:attribute name="OwnSurname" type="ST"/>
+		<xs:attribute name="SurnamePrefixFromPartnerSpouse" type="ST"/>
+		<xs:attribute name="SurnameFromPartnerSpouse" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="CN">
+		<xs:sequence>
+			<xs:element name="FamilyName" type="FN" minOccurs="0"/>
+			<xs:element name="AssigningAuthority" type="HD" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="IDNumber" type="ST"/>
+		<xs:attribute name="GivenName" type="ST"/>
+		<xs:attribute name="SecondAndFurtherGivenNamesOrInitialsThereof" type="ST"/>
+		<xs:attribute name="Suffix" type="ST"/>
+		<xs:attribute name="Prefix" type="ST"/>
+		<xs:attribute name="Degree" type="IS"/>
+		<xs:attribute name="SourceTable" type="IS"/>
+	</xs:complexType>
+	<xs:complexType name="DR">
+		<xs:sequence/>
+		<xs:attribute name="RangeStartDateTime" type="TS"/>
+		<xs:attribute name="RangeEndDateTime" type="TS"/>
+	</xs:complexType>
+	<xs:complexType name="MO">
+		<xs:sequence/>
+		<xs:attribute name="Quantity" type="NM"/>
+		<xs:attribute name="Denomination" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="SAD">
+		<xs:sequence/>
+		<xs:attribute name="StreetOrMailingAddress" type="ST"/>
+		<xs:attribute name="StreetName" type="ST"/>
+		<xs:attribute name="DwellingNumber" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="CNE">
+		<xs:sequence/>
+		<xs:attribute name="Identifier" type="ST"/>
+		<xs:attribute name="Text" type="ST"/>
+		<xs:attribute name="NameOfCodingSystem" type="IS"/>
+		<xs:attribute name="AlternateIdentifier" type="ST"/>
+		<xs:attribute name="AlternateText" type="ST"/>
+		<xs:attribute name="NameOfAlternateCodingSystem" type="IS"/>
+		<xs:attribute name="CodingSystemVersionID" type="ST"/>
+		<xs:attribute name="AlternateCodingSystemVersionID" type="ST"/>
+		<xs:attribute name="OriginalText" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="CQ">
+		<xs:sequence>
+			<xs:element name="Units" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Quantity" type="NM"/>
+	</xs:complexType>
+	<xs:complexType name="CWE">
+		<xs:sequence/>
+		<xs:attribute name="Identifier" type="ST"/>
+		<xs:attribute name="Text" type="ST"/>
+		<xs:attribute name="NameOfCodingSystem" type="IS"/>
+		<xs:attribute name="AlternateIdentifier" type="ST"/>
+		<xs:attribute name="AlternateText" type="ST"/>
+		<xs:attribute name="NameOfAlternateCodingSystem" type="IS"/>
+		<xs:attribute name="CodingSystemVersionID" type="ST"/>
+		<xs:attribute name="AlternateCodingSystemVersionID" type="ST"/>
+		<xs:attribute name="OriginalText" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="CX">
+		<xs:sequence>
+			<xs:element name="AssigningAuthority" type="HD" minOccurs="0"/>
+			<xs:element name="AssigningFacility" type="HD" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="ID" type="ST"/>
+		<xs:attribute name="CheckDigit" type="ST"/>
+		<xs:attribute name="CodeIdentifyingTheCheckDigitSchemeEmployed" type="ID"/>
+		<xs:attribute name="IdentifierTypeCodeID" type="IS"/>
+		<xs:attribute name="EffectiveDate" type="DT"/>
+		<xs:attribute name="ExpirationDate" type="DT"/>
+	</xs:complexType>
+	<xs:complexType name="DLD">
+		<xs:sequence/>
+		<xs:attribute name="ReleasedDestination" type="IS"/>
+		<xs:attribute name="IssueDay" type="TS"/>
+	</xs:complexType>
+	<xs:complexType name="DLN">
+		<xs:sequence/>
+		<xs:attribute name="LicenseNumber" type="ST"/>
+		<xs:attribute name="IssuingSrateProvinceCountry" type="IS"/>
+		<xs:attribute name="ExpirationDate" type="DT"/>
+	</xs:complexType>
+	<xs:complexType name="EI">
+		<xs:sequence/>
+		<xs:attribute name="EntityIdentifier" type="ST"/>
+		<xs:attribute name="NamespaceID" type="IS"/>
+		<xs:attribute name="UniversalID" type="ST"/>
+		<xs:attribute name="UniversalIDType" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="EIP">
+		<xs:sequence>
+			<xs:element name="RequestAllocationID" type="EI" minOccurs="0"/>
+			<xs:element name="ImplementAllocationID" type="EI" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ELD">
+		<xs:sequence>
+			<xs:element name="ErrorCode" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="SegmentID" type="ST"/>
+		<xs:attribute name="SegmentSequence" type="NM"/>
+		<xs:attribute name="FieldLocated" type="NM"/>
+	</xs:complexType>
+	<xs:complexType name="ERL">
+		<xs:sequence/>
+		<xs:attribute name="SegmentID" type="ST"/>
+		<xs:attribute name="SegmentSequence" type="NM"/>
+		<xs:attribute name="FieldLocated" type="NM"/>
+		<xs:attribute name="FieldRepetitionNo" type="NM"/>
+		<xs:attribute name="MainIngredientsNo" type="NM"/>
+		<xs:attribute name="SubIngredientsNo" type="NM"/>
+	</xs:complexType>
+	<xs:complexType name="FC">
+		<xs:sequence/>
+		<xs:attribute name="FinancialClass" type="IS"/>
+		<xs:attribute name="EffectiveDate" type="TS"/>
+	</xs:complexType>
+	<xs:complexType name="HD">
+		<xs:sequence/>
+		<xs:attribute name="NameSpaceID" type="IS"/>
+		<xs:attribute name="UniversalID" type="ST"/>
+		<xs:attribute name="UniversalIDType" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="MOC">
+		<xs:sequence>
+			<xs:element name="Money" type="MO" minOccurs="0"/>
+			<xs:element name="DemandCode" type="CE" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MSG">
+		<xs:sequence/>
+		<xs:attribute name="MessageCode" type="ID"/>
+		<xs:attribute name="TriggerEvent" type="ID"/>
+		<xs:attribute name="MessageStructure" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="NDL">
+		<xs:sequence>
+			<xs:element name="Name" type="CN" minOccurs="0"/>
+			<xs:element name="Facilities" type="HD" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="StartDateTime" type="TS"/>
+		<xs:attribute name="EndDateTime" type="TS"/>
+		<xs:attribute name="CarePlaces" type="IS"/>
+		<xs:attribute name="Room" type="IS"/>
+		<xs:attribute name="Sickbed" type="IS"/>
+		<xs:attribute name="LocatedCondition" type="IS"/>
+		<xs:attribute name="PatientLocatedType" type="IS"/>
+		<xs:attribute name="Building" type="IS"/>
+		<xs:attribute name="Floor" type="IS"/>
+	</xs:complexType>
+	<xs:complexType name="PL">
+		<xs:sequence>
+			<xs:element name="Facility" type="HD" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="PointOfCare" type="IS"/>
+		<xs:attribute name="Room" type="IS"/>
+		<xs:attribute name="Bed" type="IS"/>
+		<xs:attribute name="LocationStatus" type="IS"/>
+		<xs:attribute name="PersonLocationType" type="IS"/>
+		<xs:attribute name="Building" type="IS"/>
+		<xs:attribute name="Floor" type="IS"/>
+		<xs:attribute name="LocationDescription" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="PRL">
+		<xs:sequence>
+			<xs:element name="ParentExamID" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="ParentExamSubID" type="ST"/>
+		<xs:attribute name="ParentExamNote" type="TX"/>
+	</xs:complexType>
+	<xs:complexType name="PT">
+		<xs:sequence/>
+		<xs:attribute name="ProcessingID" type="ID"/>
+		<xs:attribute name="ProcessingMode" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="SPS">
+		<xs:sequence>
+			<xs:element name="SamplePicPlaceNameOrCode" type="CWE" minOccurs="0"/>
+			<xs:element name="Additive" type="CWE" minOccurs="0"/>
+			<xs:element name="Region" type="CWE" minOccurs="0"/>
+			<xs:element name="RegionQualifier" type="CWE" minOccurs="0"/>
+			<xs:element name="SamplePicMethodQualifierCode" type="CWE" minOccurs="0"/>
+			<xs:element name="SampleRole" type="CWE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="SamplePicMethod" type="TX"/>
+	</xs:complexType>
+	<xs:complexType name="TQ">
+		<xs:sequence>
+			<xs:element name="Quantity" type="CQ" minOccurs="0"/>
+			<xs:element name="Interval" type="CM" minOccurs="0"/>
+			<xs:element name="OrderSequencing" type="CM" minOccurs="0"/>
+			<xs:element name="OccurrenceDuration" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Duration" type="ST"/>
+		<xs:attribute name="StartDateTime" type="TS"/>
+		<xs:attribute name="EndDateTime" type="TS"/>
+		<xs:attribute name="Priority" type="ST"/>
+		<xs:attribute name="Condition" type="ST"/>
+		<xs:attribute name="Text" type="TX"/>
+		<xs:attribute name="Conjunction" type="ID"/>
+		<xs:attribute name="TotalOccurrences" type="NM"/>
+	</xs:complexType>
+	<xs:complexType name="VID">
+		<xs:sequence>
+			<xs:element name="InternationalizationCode" type="CE" minOccurs="0"/>
+			<xs:element name="InternationalVersionID" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="VersionID" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="XAD">
+		<xs:sequence>
+			<xs:element name="StreetAddress" type="SAD" minOccurs="0"/>
+			<xs:element name="AddressValidityRange" type="DR" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="OtherDesignation" type="ST"/>
+		<xs:attribute name="City" type="ST"/>
+		<xs:attribute name="StateOrProvince" type="ST"/>
+		<xs:attribute name="ZipOrPostalCode" type="ST"/>
+		<xs:attribute name="Country" type="ID"/>
+		<xs:attribute name="AddressType" type="ID"/>
+		<xs:attribute name="OtherGeographicDesignation" type="ST"/>
+		<xs:attribute name="CountyParishCode" type="IS"/>
+		<xs:attribute name="CensusTract" type="IS"/>
+		<xs:attribute name="AddressRepresentationCode" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="XCN">
+		<xs:sequence>
+			<xs:element name="FamilyName" type="FN" minOccurs="0"/>
+			<xs:element name="AssigningAuthority" type="HD" minOccurs="0"/>
+			<xs:element name="AssigningFacility" type="HD" minOccurs="0"/>
+			<xs:element name="NameContext" type="CE" minOccurs="0"/>
+			<xs:element name="NameValidityRange" type="DR" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="IDNumber" type="ST"/>
+		<xs:attribute name="GivenName" type="ST"/>
+		<xs:attribute name="SecondAndFurtherGivenNamesOrInitialsThereof" type="ST"/>
+		<xs:attribute name="Suffix" type="ST"/>
+		<xs:attribute name="Prefix" type="ST"/>
+		<xs:attribute name="Degree" type="ST"/>
+		<xs:attribute name="SourceTable" type="IS"/>
+		<xs:attribute name="NameTypeCode" type="ID"/>
+		<xs:attribute name="IdentifierCheckDigit" type="ST"/>
+		<xs:attribute name="CodeIdentifyingTheCheckDigitSchemeEmployed" type="ID"/>
+		<xs:attribute name="IdentifierTypeCode" type="IS"/>
+		<xs:attribute name="NameRepresentationCode" type="ID"/>
+		<xs:attribute name="NameAssemblyOrder" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="XON">
+		<xs:sequence>
+			<xs:element name="AssigningAuthority" type="HD" minOccurs="0"/>
+			<xs:element name="AssigningFacilityID" type="HD" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="OrganizationName" type="ST"/>
+		<xs:attribute name="OrganizationNameTypeCode" type="IS"/>
+		<xs:attribute name="IDNumber" type="NM"/>
+		<xs:attribute name="CheckDigit" type="NM"/>
+		<xs:attribute name="CodeIdentifyingTheCheckDigitSchemeEmployed" type="ID"/>
+		<xs:attribute name="IdentifierTypeCode" type="IS"/>
+		<xs:attribute name="NameRepresentationCode" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="XTN">
+		<xs:sequence/>
+		<xs:attribute name="CAnyText" type="ST"/>
+		<xs:attribute name="TelecommunicationUseCode" type="ID"/>
+		<xs:attribute name="TelecommunicationEquipmentType" type="ID"/>
+		<xs:attribute name="EmailAddress" type="ST"/>
+		<xs:attribute name="CountryCode" type="NM"/>
+		<xs:attribute name="AreaCityCode" type="NM"/>
+		<xs:attribute name="TelephoneNumber" type="NM"/>
+		<xs:attribute name="Extension" type="NM"/>
+		<xs:attribute name="AnyText" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="CM">
+		<xs:sequence/>
+		<xs:attribute name="CM" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="JCC">
+		<xs:sequence/>
+		<xs:attribute name="JobCode" type="IS"/>
+		<xs:attribute name="JobClass" type="IS"/>
+	</xs:complexType>
+	<xs:complexType name="ZRD">
+		<xs:sequence>
+			<xs:element name="Unit" type="CE" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Identifier" type="ST"/>
+		<xs:attribute name="Text" type="ST"/>
+		<xs:attribute name="CodingMethodName" type="IS"/>
+		<xs:attribute name="Value" type="NM"/>
+		<xs:attribute name="FilmNumberOfPartitions" type="NM"/>
+	</xs:complexType>
+	<xs:complexType name="RPT">
+		<xs:sequence>
+			<xs:element name="RepeatPatternCode" type="CWE" minOccurs="0"/>
+			<xs:element name="GeneralTimingSpecification" type="GTS" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="CalendarAlignment" type="ID"/>
+		<xs:attribute name="PhaseRangeBeginValue" type="NM"/>
+		<xs:attribute name="PhaseRangeEndValue" type="NM"/>
+		<xs:attribute name="PeriodQuantity" type="NM"/>
+		<xs:attribute name="PeriodUnits" type="IS"/>
+		<xs:attribute name="InstitutionSpecifiedTime" type="ID"/>
+		<xs:attribute name="Event" type="ID"/>
+		<xs:attribute name="EventOffsetQuantity" type="NM"/>
+		<xs:attribute name="EventOffsetUnits" type="IS"/>
+	</xs:complexType>
+	<xs:complexType name="GTS">
+		<xs:sequence/>
+		<xs:attribute name="GeneralTimingSpecification" type="ST"/>
+	</xs:complexType>
+	<xs:complexType name="QIP">
+		<xs:attribute name="SegmentFieldName" type="ST" id="QIP-1"/>
+		<xs:attribute name="Value" type="ST" id="QIP-2"/>
+	</xs:complexType>
+	<xs:complexType name="SRT">
+		<xs:attribute name="SortByField" type="ST" use="required"/>
+		<xs:attribute name="Sequencing" type="ID"/>
+	</xs:complexType>
+	<xs:complexType name="RP">
+		<xs:sequence>
+			<xs:element name="ApplicationID" type="HD"/>
+		</xs:sequence>
+		<xs:attribute name="Pointer" type="ST"/>
+		<xs:attribute name="DataOfType" type="ID"/>
+		<xs:attribute name="SubType" type="ID"/>
+	</xs:complexType>
+	<xs:simpleType name="NM">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="FT">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TX">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="IS" id="IS">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="DT">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="SI">
+		<xs:restriction base="xs:decimal"/>
+	</xs:simpleType>
+	<xs:simpleType name="ID">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TS">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TM">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

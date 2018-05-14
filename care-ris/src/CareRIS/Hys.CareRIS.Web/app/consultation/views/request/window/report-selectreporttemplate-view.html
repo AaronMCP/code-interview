@@ -1,0 +1,22 @@
+﻿<div class="popover report-preview-content-popover">
+    <div class="arrow"></div>
+    <div class="popover-inner popover-content container report-preview-container">
+        <div class="row" style="height:45%">
+            <span class="label label-warning" translate>WYS</span>
+            <textarea style="height:135px; width:100%;margin-top:10px; background-color: #f7f7f7;font-size:14px;" ng-model="popReportTemplate.wysText" ng-readonly="true"></textarea>
+        </div>
+
+        <div class="row" style="height:45%">
+            <span class="label label-warning" translate>WYG</span>
+            <textarea style="height:135px; width:100%;margin-top:10px; background-color: #f7f7f7;font-size:14px;" ng-model="popReportTemplate.wygText" ng-readonly="true"></textarea>
+        </div>
+        <div class="row" style="height:10%" style="vertical-align:middle;">
+            <button type="button" class="btn btn-default pull-right" style="margin:10px" ng-click="selectReportTemplate()" translate>UseReportTemplate</button>
+            <span class="pull-right" style="margin-right:20px;margin-top:20px;">
+                <input type="checkbox"
+                       ng-model="$parent.isAppend" />
+                <span style="font-weight: normal;" translate>Appendingreporttemplate</span>
+            </span>
+        </div>
+    </div>
+</div>

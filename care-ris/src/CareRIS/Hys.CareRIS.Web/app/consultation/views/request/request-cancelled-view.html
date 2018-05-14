@@ -1,0 +1,13 @@
+﻿<div id="consultation-applied">
+    <link href="/app-resources/css/request-completed-view.css" rel="stylesheet" />
+    <request-common-layout-view></request-common-layout-view>
+    <div class="footer-applied">
+        <request-info-back-button></request-info-back-button>
+        <div class="action">
+            <span ng-if="report.isDeleted == 0">
+                <button type="button" class="btn btn-md btn-primary" ng-if="user.isJuniorDoctor" ng-click="applyRequest()">{{'ApplyConsultation'|translate}}</button>
+            </span>
+            <request-delete-button></request-delete-button>
+        </div>
+    </div>
+</div>

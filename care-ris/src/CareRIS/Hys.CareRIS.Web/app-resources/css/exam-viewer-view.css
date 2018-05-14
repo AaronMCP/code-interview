@@ -1,0 +1,104 @@
+﻿.exam-viewer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.exam-viewer-tree-panel {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #F0F0F0;
+}
+
+.exam-viewer-body {
+    position: absolute;
+    left: 200px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2F2C2D;
+}
+
+    .exam-viewer-body.full-screen {
+        position: fixed;
+        top: 0;
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        z-index: 1031;
+    }
+
+.exam-viewer-toolbar {
+    height: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: right;
+    background-color: #393637;
+}
+
+    .exam-viewer-toolbar ul {
+        list-style: none;
+        overflow: hidden;
+    }
+
+        .exam-viewer-toolbar ul > li {
+            margin: auto 8px;
+            float: right;
+            list-style: none;
+            color: #A9A9A9;
+        }
+
+    .exam-viewer-toolbar span {
+        cursor: pointer;
+    }
+
+    .exam-viewer-toolbar .glyphicon {
+        font-size: 1.5em;
+        padding: 12px;
+    }
+
+    .exam-viewer-toolbar .icon-shrink {
+        font-size: 3em;
+        padding: 0;
+    }
+
+.exam-viewer-file-container {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.exam-viewer-downloadlink {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+.exam-viewer-iframe {
+    height: 100%;
+    width: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+}
+.exam-viewer-message {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+    color:#f00;
+}

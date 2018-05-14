@@ -1,0 +1,18 @@
+﻿<div>
+    <div ng-show="sidePanel.isExpanded" class="g-sidepanel g-sidepanel-expand">
+        <div class="g-sidepanel-title">
+            {{'Referral' | translate}}<a class="icon-general icon-left" title="{{'Collapse' | translate}}" ng-click="sidePanel.collapse()"></a>
+        </div>
+        <ul class="g-sidepanel-menu">
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.All)" ng-class="{'click':highlightList.all}">
+                <span class="icon-general icon-all" title="{{'All' | translate}}"></span><span class="title">{{'All' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Unsend)" ng-class="{'click':highlightList.unsend}">
+                <span class="icon-general icon-inMeeting" title="{{'Consulting' | translate}}"></span><span class="title">{{'Unsend' | translate}}</span>
+            </li>
+        </ul>
+    </div>
+    <div ng-hide="sidePanel.isExpanded" class="g-sidepanel">
+        <div class="g-sidepanel-title">{{'Referral' | translate}}<a class="icon-general icon-right" title="{{'Expand' | translate}}" ng-click="sidePanel.expand()" style="color: #f7941e"></a></div>
+    </div>
+</div>

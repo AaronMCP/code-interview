@@ -1,0 +1,57 @@
+﻿.disease-code {
+    height:100%;
+    overflow:hidden;
+    position: relative;
+}
+.disease-code .code-top{
+    padding-top:10px;
+    overflow: auto;
+}
+.disease-code .option-container {
+    width: 19%;
+    float: left;
+    margin-right: 1%;
+}
+.disease-code .option-container label {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: #787878;
+}
+.disease-code .code-top li button {
+    margin: 2px;
+}
+.disease-code .code-content{
+    position: absolute;
+    top: 60px;
+    bottom: 10px;
+}
+    .disease-code .code-content .k-grid {
+        border:0;
+    }
+    .disease-code .code-top .navbar-right {
+        margin-right:15px;
+    }
+    .disease-code .code-top form {
+        overflow:hidden;
+    }
+    .disease-code .code-top .form-group {
+        padding:0 15px;
+    }
+     .disease-code .code-top .form-group label {
+        line-height:34px;
+    }
+     .disease-code form > .col-md-12 > .col-md-7 {
+         width: 13%;
+         padding-right: 10px;
+     }
+     .disease-code form > .col-md-12 > label {
+         width: auto;
+         padding-right: 5px;
+         color: #787878;
+     }
+.searchForm label {
+    height: 34px;
+    line-height:34px;
+    color:#787878;
+}

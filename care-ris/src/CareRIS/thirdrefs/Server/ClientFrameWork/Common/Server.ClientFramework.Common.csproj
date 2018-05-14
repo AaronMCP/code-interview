@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F0BDF556-F79E-4164-9246-D9D51F3793B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Server.ClientFramework.Common</RootNamespace>
+    <AssemblyName>Server.ClientFramework.Common</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cryptography.cs" />
+    <Compile Include="Data\DsKeyValue.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsKeyValue.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Login\DsRole.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsRole.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Login\DsUser.cs">
+      <DependentUpon>DsUser.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Login\DsUser.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\MultiLan\DsMultiLanRes.cs">
+      <DependentUpon>DsMultiLanRes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\MultiLan\DsMultiLanRes.Designer.cs">
+      <DependentUpon>DsMultiLanRes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\MultiLan\DsStringRes.cs">
+      <DependentUpon>DsStringRes.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\MultiLan\DsStringRes.Designer.cs">
+      <DependentUpon>DsStringRes.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\Panels\DsPanelInfo.cs">
+      <DependentUpon>DsPanelInfo.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Panels\DsPanelInfo.Designer.cs">
+      <DependentUpon>DsPanelInfo.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Data\Profile\DsConfigDic.cs">
+      <DependentUpon>DsConfigDic.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Profile\DsConfigDic.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsConfigDic.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Profile\DsProfile.cs">
+      <DependentUpon>DsProfile.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\Profile\DsProfile.Designer.cs">
+      <DependentUpon>DsProfile.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="GcRisUserNameToken.cs" />
+    <Compile Include="LoginExceedMaxUserNoException.cs" />
+    <Compile Include="LoginExpireDateExcepiton.cs" />
+    <Compile Include="LoginHiJackerException.cs" />
+    <Compile Include="LoginInvalidDomainOrSiteException.cs" />
+    <Compile Include="LoginInValidException.cs" />
+    <Compile Include="LoginNoDogException.cs" />
+    <Compile Include="LoginOnlineTextInvalidException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RisControlBaseClass\RisUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="RisControlBaseClass\RisUserControl.Designer.cs">
+      <DependentUpon>RisUserControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\DsKeyValue.xsc">
+      <DependentUpon>DsKeyValue.xsd</DependentUpon>
+    </None>
+    <None Include="Data\DsKeyValue.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsKeyValue.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\DsKeyValue.xss">
+      <DependentUpon>DsKeyValue.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Login\DsRole.xsc">
+      <DependentUpon>DsRole.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Login\DsRole.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsRole.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Login\DsRole.xss">
+      <DependentUpon>DsRole.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Login\DsUser.xsc">
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Login\DsUser.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsUser.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Login\DsUser.xss">
+      <DependentUpon>DsUser.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MultiLan\DsMultiLanRes.xsc">
+      <DependentUpon>DsMultiLanRes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MultiLan\DsMultiLanRes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsMultiLanRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\MultiLan\DsMultiLanRes.xss">
+      <DependentUpon>DsMultiLanRes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MultiLan\DsStringRes.xsc">
+      <DependentUpon>DsStringRes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\MultiLan\DsStringRes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsStringRes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\MultiLan\DsStringRes.xss">
+      <DependentUpon>DsStringRes.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Panels\DsPanelInfo.xsc">
+      <DependentUpon>DsPanelInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Panels\DsPanelInfo.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPanelInfo.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Panels\DsPanelInfo.xss">
+      <DependentUpon>DsPanelInfo.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Profile\DsConfigDic.xsc">
+      <DependentUpon>DsConfigDic.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Profile\DsConfigDic.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsConfigDic.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\Profile\DsConfigDic.xss">
+      <DependentUpon>DsConfigDic.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Profile\DsProfile.xsc">
+      <DependentUpon>DsProfile.xsd</DependentUpon>
+    </None>
+    <None Include="Data\Profile\DsProfile.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsProfile.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Data\Profile\DsProfile.xss">
+      <DependentUpon>DsProfile.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RisControlBaseClass\RisUserControl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>RisUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

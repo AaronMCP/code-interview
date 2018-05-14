@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADT_A31>
+  <MSH>
+    <FIELD.1>|</FIELD.1>
+    <FIELD.2>^~\&amp;</FIELD.2>
+    <FIELD.3>
+      <FIELD_ITEM>
+        <COMPONENT.1>MESA_ADT</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.3>
+    <FIELD.4>
+      <FIELD_ITEM>
+        <COMPONENT.1>XYZ_ADMITTING</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.4>
+    <FIELD.5>
+      <FIELD_ITEM>
+        <COMPONENT.1>MESA_OP</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.5>
+    <FIELD.6>
+      <FIELD_ITEM>
+        <COMPONENT.1>XYZ_HOSPITAL</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.6>
+    <FIELD.7>
+      <FIELD_ITEM>
+        <COMPONENT.1>200511031045</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.7>
+    <FIELD.8 />
+    <FIELD.9>
+      <FIELD_ITEM>
+        <COMPONENT.1>ADT</COMPONENT.1>
+        <COMPONENT.2>A31</COMPONENT.2>
+        <COMPONENT.3>ADT_A05</COMPONENT.3>
+      </FIELD_ITEM>
+    </FIELD.9>
+    <FIELD.10>
+      <FIELD_ITEM>
+        <COMPONENT.1>12102104</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.10>
+    <FIELD.11>
+      <FIELD_ITEM>
+        <COMPONENT.1>P</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.11>
+    <FIELD.12>
+      <FIELD_ITEM>
+        <COMPONENT.1>2.5</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.12>
+    <FIELD.13 />
+    <FIELD.14 />
+    <FIELD.15 />
+    <FIELD.16 />
+    <FIELD.17 />
+    <FIELD.18 />
+    <FIELD.19 />
+    <FIELD.20 />
+  </MSH>
+  <EVN>
+    <FIELD.1 />
+    <FIELD.2>
+      <FIELD_ITEM>
+        <COMPONENT.1>200511031045</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.2>
+    <FIELD.3>
+      <FIELD_ITEM>
+        <COMPONENT.1>01</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.3>
+    <FIELD.4 />
+    <FIELD.5 />
+    <FIELD.6>
+      <FIELD_ITEM>
+        <COMPONENT.1>200511031045</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.6>
+  </EVN>
+  <PID>
+    <FIELD.1 />
+    <FIELD.2 />
+    <FIELD.3>
+      <FIELD_ITEM>
+        <COMPONENT.1>PAT000478</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>PatientIDIssuer</COMPONENT.4>
+      </FIELD_ITEM>
+      <FIELD_ITEM>
+        <COMPONENT.1>V_PAT000478</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>VirtualDataCenter</COMPONENT.4>
+      </FIELD_ITEM>
+    </FIELD.3>
+    <FIELD.4 />
+    <FIELD.5>
+      <FIELD_ITEM>
+        <COMPONENT.1>FN</COMPONENT.1>
+        <COMPONENT.2>GN</COMPONENT.2>
+        <COMPONENT.3>MN</COMPONENT.3>
+        <COMPONENT.4>S</COMPONENT.4>
+        <COMPONENT.5>P</COMPONENT.5>
+        <COMPONENT.6>D</COMPONENT.6>
+        <COMPONENT.7>T</COMPONENT.7>
+        <COMPONENT.8>R</COMPONENT.8>
+      </FIELD_ITEM>
+    </FIELD.5>
+    <FIELD.6 />
+    <FIELD.7>
+      <FIELD_ITEM>
+        <COMPONENT.1>19601014</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.7>
+    <FIELD.8>
+      <FIELD_ITEM>
+        <COMPONENT.1>F</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.8>
+    <FIELD.9 />
+    <FIELD.10>
+      <FIELD_ITEM>
+        <COMPONENT.1>WH</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.10>
+    <FIELD.11>
+      <FIELD_ITEM>
+        <COMPONENT.1>14 WILLOW</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3>LADUE</COMPONENT.3>
+        <COMPONENT.4>MO</COMPONENT.4>
+        <COMPONENT.5>63124</COMPONENT.5>
+      </FIELD_ITEM>
+    </FIELD.11>
+    <FIELD.12 />
+    <FIELD.13>
+      <FIELD_ITEM>
+        <COMPONENT.1>314.555.1234</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.13>
+    <FIELD.14>
+      <FIELD_ITEM>
+        <COMPONENT.1>314.555.4444</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.14>
+    <FIELD.15 />
+    <FIELD.16 />
+    <FIELD.17 />
+    <FIELD.18>
+      <FIELD_ITEM>
+        <COMPONENT.1>12102-001</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.18>
+    <FIELD.19>
+      <FIELD_ITEM>
+        <COMPONENT.1>444-91-2102</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.19>
+    <FIELD.20>
+      <FIELD_ITEM>
+        <COMPONENT.1>MODOTJ12102</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.20>
+    <FIELD.21 />
+    <FIELD.22 />
+    <FIELD.23 />
+    <FIELD.24 />
+    <FIELD.25 />
+    <FIELD.26 />
+    <FIELD.27 />
+    <FIELD.28 />
+    <FIELD.29 />
+    <FIELD.30 />
+    <FIELD.31>
+      <FIELD_ITEM>
+        <COMPONENT.1>Y</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.31>
+    <FIELD.32>
+      <FIELD_ITEM>
+        <COMPONENT.1>AL</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.32>
+    <FIELD.33>
+      <FIELD_ITEM>
+        <COMPONENT.1>20051103</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.33>
+    <FIELD.34 />
+    <FIELD.35 />
+    <FIELD.36 />
+    <FIELD.37 />
+    <FIELD.38 />
+    <FIELD.39 />
+  </PID>
+  <PV1>
+    <FIELD.1 />
+    <FIELD.2>
+      <FIELD_ITEM>
+        <COMPONENT.1>N</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.2>
+    <FIELD.3 />
+    <FIELD.4 />
+    <FIELD.5 />
+    <FIELD.6 />
+    <FIELD.7 />
+    <FIELD.8 />
+    <FIELD.9 />
+    <FIELD.10 />
+    <FIELD.11 />
+    <FIELD.12 />
+    <FIELD.13 />
+    <FIELD.14 />
+    <FIELD.15 />
+    <FIELD.16 />
+    <FIELD.17 />
+    <FIELD.18 />
+    <FIELD.19>
+      <FIELD_ITEM>
+        <COMPONENT.1>V12102</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>ADT1</COMPONENT.4>
+      </FIELD_ITEM>
+    </FIELD.19>
+    <FIELD.20 />
+    <FIELD.21 />
+    <FIELD.22 />
+    <FIELD.23 />
+    <FIELD.24 />
+    <FIELD.25 />
+    <FIELD.26 />
+    <FIELD.27 />
+    <FIELD.28 />
+    <FIELD.29 />
+    <FIELD.30 />
+    <FIELD.31 />
+    <FIELD.32 />
+    <FIELD.33 />
+    <FIELD.34 />
+    <FIELD.35 />
+    <FIELD.36 />
+    <FIELD.37 />
+    <FIELD.38 />
+    <FIELD.39 />
+    <FIELD.40 />
+    <FIELD.41 />
+    <FIELD.42 />
+    <FIELD.43 />
+    <FIELD.44>
+      <FIELD_ITEM>
+        <COMPONENT.1>200511031045</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.44>
+    <FIELD.45 />
+    <FIELD.46 />
+    <FIELD.47 />
+    <FIELD.48 />
+    <FIELD.49 />
+    <FIELD.50 />
+    <FIELD.51>
+      <FIELD_ITEM>
+        <COMPONENT.1>V</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.51>
+    <FIELD.52 />
+  </PV1>
+</ADT_A31>

@@ -1,0 +1,109 @@
+﻿<div class="client-manage">
+
+    <div class="client-manage-content">
+        <div style="margin:20px;">
+
+            <form name="clientForm" novalidate>
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-8 client-row-col client-pacs-title"><span translate><strong>桌面配置</strong></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                            <span translate>路径</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col">
+                            <input type="text" style="width:100%" class="form-control client-desk" ng-maxlength="300" ng-model="pacs.desktopClient.path" ng-pattern="pathPattern" required/>
+                        </div>
+
+                        <div class="col-md-2 client-row-col">
+                            <input type="checkbox" ng-model="pacs.desktopClient.disabled" ng-true-value="true" ng-false-value="false" />是否停用
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                            <span translate>参数</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col">
+                            <input type="text" style="width:100%" class="form-control  client-desk" ng-maxlength="300" ng-model="strArgs" ng-pattern="integerval" />
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                        <span translate>IP</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col ">
+                            <input type="text" style="width:100%" class="form-control client-desk" ng-maxlength="20" ng-model="pacs.desktopClient.param.IP" ng-pattern="ipPattern" />
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                        <span translate>端口</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col ">
+                            <input type="text" style="width:100%" class="form-control  client-desk" ng-maxlength="30" ng-model="pacs.desktopClient.param.port" ng-pattern="portPattern" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col ">
+                        <span translate>服务端口</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col ">
+                            <input style="width:100%" class="form-control  client-desk" ng-maxlength="50" ng-model="pacs.desktopClient.param.HeaderServicePort" ng-pattern="portPattern" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                            <span translate>Wado服务端口</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col  ">
+                            <input type="text" style="width:100%" class="form-control client-desk" ng-maxlength="30" ng-model="pacs.desktopClient.param.WadoServicePort" ng-pattern="portPattern" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                            <span translate>AETitle</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.desktopClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col ">
+                            <input type="text" style="width:100%" class="form-control  client-desk" ng-maxlength="50" ng-model="pacs.desktopClient.param.AETitle" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 client-row-col client-pacs-title "><span translate><strong>浏览器配置</strong></span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2 client-row-col">
+                        <span translate>URL</span>:
+                            <span class="right" style="color:red;" ng-show="!pacs.webClient.disabled">*</span>
+                        </div>
+                        <div class="col-md-6 client-row-col  client-web">
+                            <input style="width:100%" class="form-control" ng-maxlength="200" ng-model="pacs.webClient.url" ng-pattern="urlPattern" />
+                        </div>
+                        <div class="col-md-2 client-row-col">
+                            <input type="checkbox" ng-model="pacs.webClient.disabled" ng-true-value="true" ng-false-value="false" />是否停用
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 client-row-col" style="text-align:right">
+                            <button type="button" class="btn btn-default" ng-click="savePacsConfig()" ng-disabled="clientForm.$pristine || clientForm.$invalid">保存</button>
+                            <button type="button" class="btn btn-default" ng-click="clientRefresh()">刷新</button>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

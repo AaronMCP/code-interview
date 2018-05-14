@@ -1,0 +1,298 @@
+﻿<div class="domain-manage">
+    <div class="domain-buttons">
+        <button type="button" class="btn btn-default" ng-click="addSite()" data-toggle="modal" data-target="#domainManageModal">添加站点</button>
+        <button type="button" class="btn btn-default" ng-click="update()"
+                data-toggle="modal" data-target="#domainManageModal"
+                ng-disabled="!selectedDomain && !selectedSite">
+            修改
+        </button>
+        <button class="btn btn-default" ng-click="refresh()">刷新</button>
+        <button class="btn btn-default" ng-click="openSiteConfig()" ng-disabled="!isSite">站点配置</button>
+    </div>
+    <div class="domain-content">
+        <div class="domain-title">集团医院管理</div>
+        <div class="domain-container">
+            <div ng-class="{'patient-blur': !isDomain}" kendo-grid="domainGrid" data-k-options="domainGridOption">
+                <div k-detail-template>
+                    <div ng-class="{'patient-blur': isDomain}" kendo-grid="siteGrid" data-k-options="siteGridOption(dataItem)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade hys-modal" id="domainManageModal" tabindex="-1" role="dialog" aria-labelledby="domainManageModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">{{operateText}}</div>
+                <div class="modal-body" style="height: 130px;">
+                    <div class="domain-footer">
+                        <form name="domainForm" ng-show="changeDomain">
+                            <div class="clear-float" style="margin-bottom: 20px;">
+                                <div class="col-md-3">
+                                    <label class="col-md-5">域名 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="domainName" ng-model="domain.domainName" autocomplete="off" disabled required />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">域简称 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="alias" ng-model="domain.alias" autocomplete="off" required />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">域前缀 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="domainPrefix" ng-model="domain.domainPrefix" autocomplete="off" required />
+                                </div>
+                            </div>
+                            <div class="clear-float" style="margin-bottom: 20px;">
+                                <div class="col-md-3">
+                                    <label class="col-md-5">FTP服务器 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="ftpServer" ng-model="domain.ftpServer" autocomplete="off" required
+                                           ng-pattern="/^(?:(?:1[0-9][0-9]\.)|(?:2[0-4][0-9]\.)|(?:25[0-5]\.)|(?:[1-9][0-9]\.)|(?:[0-9]\.)){3}(?:(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5])|(?:[1-9][0-9])|(?:[0-9]))$/" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">FTP端口号 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="ftpPort" ng-model="domain.ftpPort" autocomplete="off" required />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">FTP用户名 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="ftpUser" ng-model="domain.ftpUser" autocomplete="off" required />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">FTP密码 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" type="password" name="ftpPassword" ng-model="domain.ftpPassword" autocomplete="off" required />
+                                </div>
+                            </div>
+                        </form>
+                        <form name="siteForm" ng-show="changeSite">
+                            <div class="clear-float" style="margin-bottom: 20px;">
+                                <div class="col-md-3">
+                                    <label class="col-md-5">站点名 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="siteName" ng-change="change()" ng-model="site.siteName" autocomplete="off" required ng-disabled="!isAdd" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">站点简称 <span style="color: red;">*</span></label>
+                                    <input class="form-control col-md-7" name="alias" ng-model="site.alias" autocomplete="off" required />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">电话</label>
+                                    <input class="form-control col-md-7" name="telephone" ng-model="site.telephone" autocomplete="off" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">地址</label>
+                                    <input class="form-control col-md-7" name="address" ng-model="site.address" autocomplete="off" />
+                                </div>
+                            </div>
+                            <div class="clear-float" style="margin-bottom: 20px;">
+                                <div class="col-md-3">
+                                    <label class="col-md-5">PACS服务器</label>
+                                    <input class="form-control col-md-7" name="pacsServer" autocomplete="off" ng-model="site.pacsServer"
+                                           ng-pattern="/^(?:(?:1[0-9][0-9]\.)|(?:2[0-4][0-9]\.)|(?:25[0-5]\.)|(?:[1-9][0-9]\.)|(?:[0-9]\.)){3}(?:(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5])|(?:[1-9][0-9])|(?:[0-9]))$/" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">PACSWeb服务器</label>
+                                    <input class="form-control col-md-7" name="pacsWebServer" autocomplete="off" ng-model="site.pacsWebServer"
+                                           ng-pattern="/^(?:(?:1[0-9][0-9]\.)|(?:2[0-4][0-9]\.)|(?:25[0-5]\.)|(?:[1-9][0-9]\.)|(?:[0-9]\.)){3}(?:(?:1[0-9][0-9])|(?:2[0-4][0-9])|(?:25[0-5])|(?:[1-9][0-9])|(?:[0-9]))$/" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-md-5">AE Title</label>
+                                    <input class="form-control col-md-7" name="pacsAETitle" autocomplete="off" ng-model="site.pacsAETitle" />
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="save()" ng-disabled="domainForm.$invalid && siteForm.$invalid">保存</button>
+                    <button class="btn btn-primary" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div kendo-window="siteConfigureWindow"
+         class="site-config"
+         k-width="'800px'" k-height="'500px'"
+         k-visible="false" k-resizable="false"
+         k-modal="true">
+        <div class="siteWindow-content">
+            <div class="siteWindow-left">
+                <div ng-repeat="(profilesName,profiles) in siteProfileList" ng-show="profiles.items.length > 0">
+                    <div class="domain-config-togglepan"
+                         ng-click="togglePan(profiles)">
+                        <span class="glyphicon"
+                              style="color: #f4b54d;margin: 0 10px;"
+                              ng-class="{'glyphicon-chevron-up':profiles.down,'glyphicon-chevron-down':!profiles.down}"></span>
+                        <span>{{profiles.name}}</span>
+                    </div>
+                    <div ng-class="{in:profiles.down}" class="collapse">
+                        <table class="table table-hover" style="table-layout: fixed;">
+                            <tr ng-repeat="profile in profiles.items track by $index"
+                                ng-class="{'quality-active':profile.selected}"
+                                ng-click="siteProfileClick(profile)">
+                                <td title="{{profile.Name}}">
+                                    <div class="col-md-11">{{profile.Name}}</div>
+                                    <div class="col-md-1" ng-show="profile.isChange">*</div>
+                                </td>
+                                <td ng-if="profile.PropertyType==='0'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="form-control" ng-show="profile.selected" ng-change="profile.isChange=true" ng-model="profile.Value" type="text" />
+                                </td>
+
+                                <td ng-if="profile.PropertyType==='1'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="input-number form-control" ng-show="profile.selected"
+                                           ng-model="profile.Value" type="number"
+                                           ng-min="profile.minNumber"
+                                           ng-max="profile.maxNumber"
+                                           name="profile.Name"
+                                           ng-change="profile.isChange=true" />
+                                </td>
+
+                                <td ng-if="profile.PropertyType==='3'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <select class="form-control" ng-show="profile.selected"
+                                            ng-model="profile.Value"
+                                            ng-change="profile.isChange=true"
+                                            ng-options="o for o in profile.selectOptions"></select>
+                                </td>
+
+                                <td ng-if="profile.PropertyType==='4'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <select class="form-control" ng-show="profile.selected"
+                                            ng-model="profile.Value"
+                                            ng-change="profile.isChange=true"
+                                            ng-options="o for o in profile.selectOptions"></select>
+                                </td>
+                                <td ng-if="profile.PropertyType==='5'" class="col-lg-6">
+                                    <span ng-show="!profile.selected" title="{{profile.Value}}">{{profile.Value}}</span>
+                                    <select ng-show="profile.selected" kendo-multi-select
+                                            k-value-primitive="true"
+                                            k-auto-bind="false"
+                                            k-data-bound="noDataFound"
+                                            k-on-change="siteProfileChange(profile)"
+                                            k-ng-model="profile.selectValue"
+                                            k-data-source="profile.selectOptions"></select>
+                                </td>
+                                <td ng-if="profile.PropertyType==='6'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <div ng-show="profile.selected"
+                                         kendo-flat-color-picker
+                                         k-ng-model="profile.selectValue"
+                                         k-on-change="siteProfileColorChange(profile)"
+                                         k-opacity="true"
+                                         class="role-color"></div>
+                                </td>
+
+                                <td ng-if="profile.PropertyType==='9'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="form-control" ng-show="profile.selected"
+                                           ng-model="profile.Value"
+                                           ng-pattern="/^[a-zA-Z]:(\\[0-9a-zA-Z\u4e00-\u9fa5]*)$/" type="text"
+                                           ng-change="profile.isChange=true" />
+                                </td>
+
+                                <td ng-if="profile.PropertyType==='10'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="form-control" ng-show="profile.selected"
+                                           ng-model="profile.Value"
+                                           ng-change="profile.isChange=true" />
+                                </td>
+                                <td ng-if="profile.PropertyType==='11'" class="col-lg-6">
+                                    <span ng-model="profile.Value">{{profile.Value==='1'?'是':'否'}}</span>
+                                </td>
+                                <td ng-if="profile.PropertyType==='15'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="form-control"
+                                           ng-show="profile.selected"
+                                           ng-change="profile.isChange=true"
+                                           ng-model="profile.Value" type="password" />
+                                </td>
+                                <td ng-if="profile.PropertyType==='15'" class="col-lg-6">
+                                    <span ng-show="!profile.selected">{{profile.Value}}</span>
+                                    <input class="form-control"
+                                           ng-show="profile.selected"
+                                           ng-change="profile.isChange=true"
+                                           ng-model="profile.Value" type="password" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="siteWindow-right">
+                {{selectedSiteProfile.PropertyDesc}}
+            </div>
+            <div class="siteWindow-bottom">
+                <button class="btn btn-primary" ng-click="saveSite()">保存</button>
+                <button class="btn btn-primary" ng-click="refreshSite()">刷新</button>
+                <button class="btn btn-primary" ng-click="openEditSite()">编辑配置</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="edit-config" ng-show="isEditConfig">
+        <div class="edit-header">
+            <div>{{editText}}</div>
+            <span class="k-icon k-i-close" ng-click="closeEditSite()"></span>
+        </div>
+        <div class="edit-content">
+            <div class="edit-content-top">
+                <div class="edit-content-left">
+                    <div class="edit-content-header">域配置</div>
+                    <div class="domain-config-content">
+                        <div ng-repeat="(profilesName,profiles) in systemProfiles">
+                            <div class="domain-config-togglepan"
+                                 ng-click="togglePan(profiles)">
+                                <span class="glyphicon"
+                                      style="color: #f4b54d;margin: 0 10px;"
+                                      ng-class="{'glyphicon-chevron-up':profiles.down,'glyphicon-chevron-down':!profiles.down}"></span>
+                                <span>{{profiles.name}}</span>
+                            </div>
+                            <div ng-class="{in:profiles.down}" class="collapse">
+                                <table class="table table-hover" style="table-layout: fixed;">
+                                    <tbody>
+                                        <tr ng-repeat="profile in profiles.items track by $index"
+                                            ng-class="{'quality-active':profile.selected}"
+                                            ng-click="selectSystemProfile(profile)">
+                                            <td title="{{profile.Name}}">{{profile.Name}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="edit-content-center">
+                    <div class="edit-operate">
+                        <button style="margin-bottom: 3px;" class="btn btn-primary" ng-click="moveProfile(selectedSystemProfile, systemProfiles, siteProfiles,true)" ng-disabled="!selectedSystemProfile">>></button>
+                        <button style="margin-top: 3px;" class="btn btn-primary" ng-click="moveProfile(selectedSiteProfile, siteProfiles, systemProfiles, false)" ng-disabled="!selectedSiteProfile"><<</button>
+                    </div>
+                </div>
+                <div class="edit-content-right">
+                    <div class="edit-content-header">站点配置</div>
+                    <div class="site-config-content">
+                        <div ng-repeat="(profilesName,profiles) in siteProfiles" ng-show="profiles.items.length > 0">
+                            <div class="domain-config-togglepan"
+                                 ng-click="togglePan(profiles)">
+                                <span class="glyphicon"
+                                      style="color: #f4b54d;margin: 0 10px;"
+                                      ng-class="{'glyphicon-chevron-up':profiles.down,'glyphicon-chevron-down':!profiles.down}"></span>
+                                <span>{{profiles.name}}</span>
+                            </div>
+                            <div ng-class="{in:profiles.down}" class="collapse">
+                                <table class="table table-hover" style="table-layout: fixed;">
+                                    <tbody>
+                                        <tr ng-repeat="profile in profiles.items track by $index"
+                                            ng-class="{'quality-active':profile.selected}"
+                                            ng-click="selectSiteProfile(profile)">
+                                            <td title="{{profile.Name}}">{{profile.Name}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="edit-content-bottom">
+                <button style="float: right;display: inline;margin-right: 15px;" class="btn btn-primary" ng-click="closeEditSite()">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

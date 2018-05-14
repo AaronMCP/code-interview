@@ -1,0 +1,13 @@
+﻿<div class="popover report-preview-content-popover">
+    <div class="arrow"></div>
+    <div class="popover-content container" style="width:350px;height:50px">
+        <form id="shortcutNameInputForm" class="form-inline" role="form">
+            <div class="form-group">
+                <label translate>ShortcutName</label>
+                <input type="text" class="form-control" id="inputShortcutName" maxlength="100"
+                       ng-model="shortcut.name" ris-focus-on="shortcutNameInputView:inputName">
+            </div>
+            <button type="button" class="btn btn-primary" ng-click="addShortcut()" ng-disabled="shortcut.name.length === 0" translate>Ok</button>
+        </form>
+    </div>
+</div>

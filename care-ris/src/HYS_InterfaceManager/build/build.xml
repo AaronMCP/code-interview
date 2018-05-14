@@ -1,0 +1,403 @@
+<?xml version="1.0"?>
+
+<project name="HYSInterfaceManager" default="build_main" basedir=".">
+
+  <description>
+    HYSInterfaceManager Daily Build File.
+  </description>
+
+  <tstamp>
+    <format property="TODAY_CN" pattern="yyMMdd" locale="en"/>
+  </tstamp>
+
+  <property environment="env"/>
+  <property file="build.properties"/>
+  <!--<property location="C:\WINDOWS\Microsoft.NET\Framework\v3.5\MsBuild.exe" name="msbuild"/>
+  <property location="D:\Program Files\Visual Studio 9.0\VC\vcpackages\vcbuild.exe" name="vcbuild"/>-->
+  <property location="C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\MsBuild.exe" name="msbuild"/>
+  <property location="C:\Program Files (x86)\MSBuild\12.0\Bin\MsBuild.exe" name="vcbuild"/>
+
+  <target name="build_main">
+
+    <echo message="--- Make directory ---"/>
+    <delete dir="${build.dir}"/>
+    <mkdir dir="${build.dir}"/>
+
+    <echo message="--- Copy dicom dll ---"/>
+    <copy todir="${build.dir}\HYSInterfaceManager\foDicom_lib" overwrite="true">
+      <fileset dir="${cc.dir}\3rdParty\foDicom"/>
+    </copy>
+
+    <echo message="--- Copy osql.exe for x86 ---" />
+    <copy todir="${build.dir}\HYSInterfaceManager\osql" overwrite="true">
+      <fileset dir="${cc.dir}\3rdParty\osql\x86" />
+    </copy>
+
+    <echo message="--- Copy pinyin library ---"/>
+    <copy file="${cc.dir}\3rdParty\Chinese2English\JKTCPYCnvt_BIG5.dll" todir="${build.dir}\HYSInterfaceManager\pinyin_lib" overwrite="true"/>
+    <copy file="${cc.dir}\3rdParty\Chinese2English\JKTCPYCnvt_GB.dll" todir="${build.dir}\HYSInterfaceManager\pinyin_lib" overwrite="true"/>
+
+    <echo message="--- Copy database script ---"/>
+    <copy file="${cc.dir}\SRC\Framework\InstallDB.sql" todir="${build.dir}\HYSInterfaceManager\db_install" overwrite="true"/>
+    <copy file="${cc.dir}\SRC\Framework\IMDataDB.sql" todir="${build.dir}\HYSInterfaceManager\db_install" overwrite="true"/>
+    <copy file="${cc.dir}\SRC\Framework\IMConfigDB.sql" todir="${build.dir}\HYSInterfaceManager\db_install" overwrite="true"/>
+    <copy file="${cc.dir}\SRC\Framework\DropDB.sql" todir="${build.dir}\HYSInterfaceManager\db_install" overwrite="true"/>
+
+    <exec executable="cmd.exe" dir="${cc.dir}" failonerror="Yes">
+      <arg line="/c attrib -R *.* /S /D"/>
+    </exec>
+
+    <antcall target="build_HYSInterfaceManager"/>
+  </target>
+
+
+  <target name="build_HYSInterfaceManager" description="Build H">
+
+    <echo message="" />
+    <echo message="-------------------------------------------" />
+    <echo message="Build HYS InterfaceManager" />
+    <echo message="-------------------------------------------" />
+    <echo message="" />
+
+    <exec executable="${msbuild}" dir="${cc.dir}\SRC" failonerror="true">
+      <arg line="HYSInterfaceManager.sln" />
+      <arg line="/t:Rebuild;Clean" />
+      <arg line="/p:Configuration=Release" />
+    </exec>
+
+    <!--
+    In Visual Studio 2008, MSBuild did not support C++. This is a new feature that we are providing in Visual Studio 2010. In Visual Studio 2008, C++ was compiled with the VCBuild system.
+    http://social.msdn.microsoft.com/Forums/en-US/msbuild/thread/d75afde7-9969-4a31-a6eb-b4de20155e01/
+		-->
+
+    <echo message="--- Copy IM ---" />
+
+    <mkdir dir="${build.dir}\HYSInterfaceManager\IM\Device"/>
+    <mkdir dir="${build.dir}\HYSInterfaceManager\IM\Interface"/>
+
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.IM.exe" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.IM.BusinessControl.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.IM.BusinessEntity.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.IM.UIControl.dll" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM.config" todir="${build.dir}\HYSInterfaceManager\IM" overwrite="true" />
+
+    <echo message="--- Copy SQL Inbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\bin\Release\SQLInboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\bin\Release\AdapterDatabase.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\bin\Release\HYS.SQLInboundAdapterObjects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundConfiguration\bin\Release\HYS.SQLInboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\CallExternalMethod\bin\Release\CallExternalMethod.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLInAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_1" overwrite="true" />
+
+    <echo message="--- Copy SQL OutInbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\bin\Release\SQLOutboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\bin\Release\AdapterDatabase.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\bin\Release\HYS.SQLOutboundAdapterObjects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundConfiguration\bin\Release\HYS.SQLOutboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SQLAdapters\SQLOutboundAdapter\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_2" overwrite="true" />
+
+    <echo message="--- Copy Socket Inbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\bin\Release\HYS.SocketAdapter.SocketInboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\bin\Release\HYS.SocketAdapter.SocketInboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\bin\Release\HYS.SocketAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\bin\Release\HYS.SocketAdapter.Configuration.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\bin\Release\HYS.SocketAdapter.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketInboundAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_3" overwrite="true" />
+
+    <echo message="--- Copy Socket Outbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\bin\Release\HYS.SocketAdapter.SocketOutboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\bin\Release\HYS.SocketAdapter.SocketOutboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\bin\Release\HYS.SocketAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\bin\Release\HYS.SocketAdapter.Configuration.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\bin\Release\HYS.SocketAdapter.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+    <copy file="${cc.dir}/SRC/SocketAdapter\SocketOutboundAdapter\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_4" overwrite="true" />
+
+    <echo message="--- Copy File Inbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\bin\Release\HYS.FileAdapter.FileInboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\bin\Release\HYS.FileAdapter.FileInboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\bin\Release\HYS.FileAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\bin\Release\HYS.FileAdapter.Configuration.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileInboundAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_5" overwrite="true" />
+
+    <echo message="--- Copy File Outbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\bin\Release\HYS.FileAdapter.FileOutboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundConfiguration\bin\Release\HYS.FileAdapter.FileOutboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\bin\Release\HYS.FileAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\bin\Release\HYS.FileAdapter.Configuration.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+    <copy file="${cc.dir}/SRC/FileAdapter\FileOutboundAdapter\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_6" overwrite="true" />
+
+
+    
+    <echo message="--- Copy RDET Outbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true"/>
+
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter\bin\Release\HYS.RdetOutboundAdapter.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter\bin\Release\HYS.RdetOutboundAdapterConfiguration.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter\bin\Release\HYS.RdetAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter\bin\Release\HYS.RdetAdapter.Configuration.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter\bin\Release\StarConvert.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/RdetAdapter\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\RdetOutboundAdapter.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+    <copy file="${cc.dir}/SRC/RdetAdapter\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_10" overwrite="true" />
+
+    <echo message="--- Copy XML Inbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true"/>
+ 
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\bin\Release\HYS.XmlAdapter.Inbound.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\bin\Release\HYS.XmlAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Inbound\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\XIMInbound.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_11" overwrite="true" />
+
+    <echo message="--- Copy XML Outbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true"/>
+ 
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\bin\Release\HYS.XmlAdapter.Outbound.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\bin\Release\HYS.XmlAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\XIMOutbound.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+    <copy file="${cc.dir}/SRC/XmlAdapter\HYS.XmlAdapter.Outbound\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_12" overwrite="true" />
+
+    <echo message="--- Copy MWL Outbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\HYS.DicomAdapter.MWLServer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\HYS.DicomAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\HYS.Common.Dicom.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\Dicom.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\NLog.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\bin\Release\NLog.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\MWLServer.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/OutboundTrigger\OutboundDBInstall\bin\Release\OutboundDBInstall.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.MWLServer\OutboundDBInstallConfig.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_8" overwrite="true" />
+
+   <echo message="--- Copy SSCP Inbound ---" />
+
+    <copy file="${cc.dir}/3rdParty\dotnet_tools\InstallUtil.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/3rdParty\Chinese2English\gatewaylang_SC.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true"/>
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Adapter.Base.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.DataAccess.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Objects.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.IM\bin\Release\HYS.Common.Xml.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Composer\bin\Release\HYS.IM.Adapter.Composer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Config\bin\Release\HYS.IM.Adapter.Config.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Framework\HYS.Adapter.Service\bin\Release\HYS.IM.Adapter.Service.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/Monitor\HYS.Monitor\bin\Release\HYS.IM.Adapter.Monitor.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\HYS.DicomAdapter.StorageServer.exe" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\HYS.DicomAdapter.Common.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\HYS.Common.Dicom.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\HYS.Common.Soap.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\Dicom.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\NLog.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\NLog.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\DeviceDir" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\HYS.Adapter.Composer.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\HYS.Adapter.Config.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\HYS.Adapter.Monitor.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\HYS.Adapter.Service.config" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\StorageServer.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+
+    <copy file="${cc.dir}/SRC/DicomAdapter\HYS.DicomAdapter.StorageServer\bin\Release\HYS.IM.Common.WCFHelper.dll" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\SOAPClientConfig.WCF.xml" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\SOAPClient.Request.xslt" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\SOAPClient.Response.xslt" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\XSLT\StdResponseToDicom.xsl" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\XSLT\DicomToStdRequest.xsl" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9\XSLT" overwrite="true" />
+    <copy file="${cc.dir}/SRC/DicomAdapter\SOAPScripts\XSLT\StdResponseToDicom.xsl" todir="${build.dir}\HYSInterfaceManager\IM\Device\Device_9\XSLT" overwrite="true" />
+
+  </target>
+
+</project>

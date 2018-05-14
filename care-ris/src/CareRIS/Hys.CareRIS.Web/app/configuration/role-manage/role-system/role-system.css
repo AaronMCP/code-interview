@@ -1,0 +1,76 @@
+﻿.role-system {
+    height:100%;
+    width:100%;
+    position: relative;
+}
+.role-system > h5 {
+    height: 35px;
+    line-height: 35px;
+    margin: 0;
+    border-bottom: 3px solid #f5a623
+}
+.role-system form {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+}
+.role-system .table{
+    margin-top:15px;
+    border-top: 0;
+    margin-top: 0;
+    border-left:1px solid #e2e2e2;
+    border-bottom:1px solid #e2e2e2;
+    width: 100%;
+    table-layout: fixed;
+}
+    .role-system .table tr {
+        border-bottom:1px solid #e2e2e2;
+        width: 100%;
+    }
+        .role-system .table tr td {
+            border-top: 0;
+            display: inline-block;
+            border-right:1px solid #e2e2e2;
+            padding-top:0;
+            padding-bottom:0;
+            line-height:36px;
+            box-sizing:border-box;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+            height: 36px;
+            position: relative;
+            overflow-x: auto;
+        }
+        .role-system .table tr td > div {
+             overflow: hidden;
+            white-space: nowrap;
+            text-overflow:ellipsis;
+         }
+        .input-number {
+            border-width: 1px!important;
+            height: 34px;
+        }
+            .role-system .table tr td > span {
+                display: inline-block;
+                width: 100%!important;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .role-system .table tr td select {
+                border-radius: 0;
+                border: 0;
+                height: 36px;
+                width: 50%;
+            }
+            .role-color {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin: auto;
+                z-index: 999;
+                background-color: #fff!important;
+            }

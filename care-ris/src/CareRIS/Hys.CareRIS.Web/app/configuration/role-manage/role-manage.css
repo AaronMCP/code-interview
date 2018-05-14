@@ -1,0 +1,79 @@
+﻿.role-manage {
+    height:100%;
+    background:#f5f5f5;
+    position: relative;
+}
+.role-manage-top {
+    height:60px;
+}
+    .role-manage-top .nav {
+        margin-right:0;
+    }
+    .role-manage-top .form-group {
+        margin-top:10px;
+    }
+    .role-manage-top .form-group label{
+        float:left;
+        line-height:34px;
+        padding-right:10px;
+    }
+.role-manage-content {
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 60px;
+    bottom: 0;
+    background:#ececec;
+}
+.role-manage-left {
+    height:100%;
+    overflow-y: auto;
+}
+.role-manage-right {
+    height: 100%;
+    background-color: #fff;
+}
+    .role-manage-right h4 {
+       padding-left: 23px;
+    }
+    .role-manage-right .nav {
+        background:#e0e0e0;
+        padding-left: 5px;
+    }
+.role-manage-right .nav a{
+    color:#333;
+    padding-top:5px;
+    margin-top:5px;
+}
+
+.role-manage-right .tab-content {
+    padding:20px;
+    position: absolute;
+    top: 83px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.role-manage-right .tab-content .tab-pane {
+    height: 100%;
+}
+.role-font-color {
+    color:#333;
+}
+
+.add-role-content {
+    padding: 20px;
+}
+
+.add-role-content .form-group input, .add-role-content .form-group select {
+    width: 130px;
+    height: 32px;
+    float: right;
+}
+
+.role-btn-group {
+    float:right;
+}
+.role-btn-group button + button {
+    margin-left: 10px;
+}

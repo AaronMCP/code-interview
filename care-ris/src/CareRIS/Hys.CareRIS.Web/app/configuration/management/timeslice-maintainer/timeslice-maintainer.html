@@ -1,0 +1,127 @@
+﻿<div class="tsm-container">
+    <form class="form-horizontal tsm-body" name="tsmMaintainerForm" novalidate>
+        <div class="form-group" ng-class="{error:tsmMaintainerForm.availabelDate.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.availabelDate.$touched)}">
+            <label for="tsm-availabledate" class="col-sm-3 control-label required-filed">生效日期</label>
+            <div class="col-sm-9">
+                <input type="datetime"
+                       name="availabelDate"
+                       ng-disabled="!isNew"
+                       required
+                       kendo-date-picker="availableDatePicker"
+                       k-min="today"
+                       ng-model="timeslice.availableDate"
+                       class="form-control contet-box"
+                       id="tsm-availabledate">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tsm-site" class="col-sm-3 control-label">站点</label>
+            <div class="col-sm-3">
+                <select class="form-control"
+                        id="tsm-site"
+                        ng-show="isNew"
+                        ng-model="searchOption.site"
+                        ng-change="refreshModality()"
+                        ng-options="s for s in sites">
+                    <option value="">全局</option>
+                </select>
+                <input type="text" class="form-control" disabled ng-show="!isNew" ng-model="site" />
+            </div>
+            <label for="tsm-modalitytype" class="col-sm-3 control-label">设备类型</label>
+            <div class="col-sm-3">
+                <select class="form-control" id="tsm-modalitytype"
+                        ng-show="isNew"
+                        ng-model="searchOption.modalityType"
+                        ng-change="refreshModality()"
+                        ng-options="m for m in modalityTypes"></select>
+                <input type="text" class="form-control" disabled ng-show="!isNew" ng-model="timeslice.modalityType" />
+            </div>
+        </div>
+        <div class="form-group" ng-class="{error:tsmMaintainerForm.modality.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.modality.$touched)}">
+            <label for="tsm-modality" class="col-sm-3 control-label required-filed">设备</label>
+            <div class="col-sm-9">
+                <select id="tsm-modality"
+                        ng-show="isNew"
+                        class="form-control"
+                        required
+                        name="modality"
+                        ng-model="timeslice.modality"
+                        ng-change="searchOptionChanged()"
+                        ng-options="m for m in modalities"></select>
+                <input type="text" class="form-control" disabled ng-show="!isNew" ng-model="timeslice.modality" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tsm-beginTime" class="col-sm-3 control-label required-filed">起始时间</label>
+            <div class="col-sm-3" ng-class="{error:tsmMaintainerForm.startDt.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.startDt.$touched)}">
+                <input type="text"
+                       name="startDt"
+                       autocomplete="off"
+                       required
+                       kendo-time-picker
+                       ng-pattern="/^([01]?\d|2[0-3]):([0-5]?\d)$/"
+                       ng-model="timeslice.startDt"
+                       ng-change="timeRangeChanged()"
+                       class="form-control contet-box"
+                       id="tsm-beginTime" />
+            </div>
+            <label for="tsm-endTime" class="col-sm-3 control-label required-filed">结束时间</label>
+            <div class="col-sm-3" ng-class="{error:tsmMaintainerForm.endDt.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.endDt.$touched)}">
+                <input type="text"
+                       name="endDt"
+                       required
+                       autocomplete="off"
+                       ng-pattern="/^([01]?\d|2[0-3]):([0-5]?\d)$/"
+                       class="form-control contet-box"
+                       kendo-time-picker
+                       ng-change="timeRangeChanged()"
+                       ng-model="timeslice.endDt"
+                       id="tsm-endTime" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tsm-desc" class="col-sm-3 control-label">描述</label>
+            <div class="col-sm-9">
+                <input class="form-control" ng-model="timeslice.description" readonly id="tsm-desc" type="text" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="tsm-maxmount" class="col-sm-3 control-label required-filed">最大量</label>
+            <div class="col-sm-3" ng-class="{error:tsmMaintainerForm.maxNumber.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.maxNumber.$touched)}">
+                <input class="form-control"
+                       id="tsm-maxmount"
+                       name="maxNumber"
+                       required
+                       ng-pattern="/^[1-9]\d*$/"
+                       ng-model="timeslice.maxNumber" type="number" />
+            </div>
+            <label for="tsm-interval" class="col-sm-3 control-label" ng-show="isNew">片段时长</label>
+            <div class="col-sm-3" ng-show="isNew" ng-class="{error:tsmMaintainerForm.interval.$invalid&&(tsmMaintainerForm.$submitted || tsmMaintainerForm.interval.$touched)}">
+                <input class="form-control"
+                       id="tsm-interval"
+                       placeholder="单位:分钟"
+                       name="interval"
+                       ng-pattern="/^[1-9]\d*$/"
+                       ng-model="timeslice.interval" type="number" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">日期类型</label>
+            <div class="col-sm-9 tsm-datetype-group">
+                <label class="checkbox-inline" ng-repeat="dateType in dateTypes">
+                    <input type="checkbox" ng-model="dateType.checked" ng-disabled="!isNew" ng-click="dateTypeChanged(dateType)">{{dateType.text}}
+                </label>
+            </div>
+        </div>
+    </form>
+    <div class="tsm-footer">
+        <button class="btn btn-primary" ng-click="clickCancel()" style="box-sizing: content-box!important;">取消</button>
+        <button type="button"
+                class="btn btn-primary"
+                ng-disabled="tsmMaintainerForm.$invalid"
+                style="box-sizing: content-box!important;"
+                ng-click="clickOk()">
+            确定
+        </button>
+    </div>
+</div>

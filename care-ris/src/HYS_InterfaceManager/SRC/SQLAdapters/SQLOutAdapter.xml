@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?><SQLOutAdapterConfig><ThirdPartyInteractConfig><InteractType>Active</InteractType>
+<ConnectionParameter><IsChanged>False</IsChanged>
+<Server>CNSHW9RSZM1X</Server>
+<Database>GWDataDB</Database>
+<User>sa</User>
+<Password>123456</Password>
+<ConnectionStr></ConnectionStr>
+</ConnectionParameter>
+<TimerInterval>30000</TimerInterval>
+<TimerEnable>True</TimerEnable>
+</ThirdPartyInteractConfig>
+<OutboundChanels><SQLOutboundChanel><ChannelName>ImageArrival</ChannelName>
+<Enable>True</Enable>
+<OperationName>SP_IMAGEARRIVE_UPD</OperationName>
+<OperationType>StorageProcedure</OperationType>
+<Rule><CheckProcessFlag>True</CheckProcessFlag>
+<QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><SQLOutQueryCriteriaItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField /><TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[14]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</SQLOutQueryCriteriaItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>AccNo</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>FILLER_NO</SourceField>
+<TargetField>AccNo</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PATIENTID</SourceField>
+<TargetField>PatientID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ModalityName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STATION_AETITLE</SourceField>
+<TargetField>ModalityName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>OperatorName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>TECHNICIAN</SourceField>
+<TargetField>OperatorName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>TECHNICIAN</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>PerformedEnddt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>EXAM_DT</SourceField>
+<TargetField>PerformedEnddt</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>EXAM_DT</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>PerformedStartdt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>EXAM_DT</SourceField>
+<TargetField>PerformedStartdt</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>EXAM_DT</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>6330454153016083592</RuleID>
+<RuleName>SP_SQL_OUT_ImageArrival</RuleName>
+</Rule>
+<SPName /><Modified>False</Modified>
+<IgnoreDBException>True</IgnoreDBException>
+<SPStatement><![CDATA[]]></SPStatement>
+</SQLOutboundChanel>
+<SQLOutboundChanel><ChannelName>PACS_QC_Notification</ChannelName>
+<Enable>True</Enable>
+<OperationName>SP_PACSQCNOTIFY_UPD</OperationName>
+<OperationType>StorageProcedure</OperationType>
+<Rule><CheckProcessFlag>True</CheckProcessFlag>
+<QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><SQLOutQueryCriteriaItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField /><TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[15]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</SQLOutQueryCriteriaItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>AccNo</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>FILLER_NO</SourceField>
+<TargetField>AccNo</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PATIENTID</SourceField>
+<TargetField>PatientID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ModalityName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STATION_AETITLE</SourceField>
+<TargetField>ModalityName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>OperatorName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>TECHNICIAN</SourceField>
+<TargetField>OperatorName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>TECHNICIAN</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>PerformedStartdt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_1</SourceField>
+<TargetField>PerformedStartdt</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_1</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>PerformedEnddt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_2</SourceField>
+<TargetField>PerformedEnddt</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_2</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourcePatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PRIOR_PATIENT_ID</SourceField>
+<TargetField>SourcePatientID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PRIOR_PATIENT_ID</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourceAccNo</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_3</SourceField>
+<TargetField>SourceAccNo</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_3</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+<SQLOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourceAccNoEmpty</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_4</SourceField>
+<TargetField>SourceAccNoEmpty</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_4</FieldName>
+</GWDataDBField>
+</SQLOutQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>6330454191987567391</RuleID>
+<RuleName>SP_SQLOutAdapter_2_PACS_QC_Notification</RuleName>
+</Rule>
+<SPName /><Modified>False</Modified>
+<IgnoreDBException>True</IgnoreDBException>
+<SPStatement><![CDATA[]]></SPStatement>
+</SQLOutboundChanel>
+</OutboundChanels>
+<OutboundPassiveChanels /><ThrPartyDBParamters /></SQLOutAdapterConfig>

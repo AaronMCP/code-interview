@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><ManagerConfig><InterfaceList><HL7InterfaceConfig><InterfaceFolder><![CDATA[Receiver\HL7GW_RCV]]></InterfaceFolder>
+<InterfaceType>Receiver</InterfaceType>
+<InstallDate>07/04/2011 15:13:38</InstallDate>
+</HL7InterfaceConfig>
+<HL7InterfaceConfig><InterfaceFolder><![CDATA[Sender\HL7GW_SND]]></InterfaceFolder>
+<InterfaceType>Sender</InterfaceType>
+<InstallDate>07/04/2011 15:14:39</InstallDate>
+</HL7InterfaceConfig>
+</InterfaceList>
+<LoginUser>service</LoginUser>
+<LoginPassword>service</LoginPassword>
+<AppCaption>HL7 Gateway Interface Manager</AppCaption>
+<LogType>Error</LogType>
+</ManagerConfig>

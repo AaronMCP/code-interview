@@ -1,0 +1,26 @@
+﻿What is the Messaging.Mapping namespace?
+
+(2011/02/25)
+
+This namespace contains message processing utilities, 
+such as (XML) message transforming, validating, encrypting 
+and (text) value encoding, replacing, translating, 
+as well as UI helper for message processing configuration or unit testing.
+
+In the future, we will try to provide a message processing pipeline,
+which can be configured, reused and embeded into message entities.
+It is something like the MessagePipe component in XDSGW 1.1,
+but much simpler than that.
+
+(2011/03/09)
+
+However, currently we found that AOP model applied on the push and pull channel
+may be more suitable to the message processing scenario.
+For details, please refer to IDuplexProcessChannel and IOneWayProcessChannel 
+in Messaging.Objects.ProcessModel namespace.
+It is much more lightweight than the pipeline, 
+more suitable to be implemented in the framework level.
+If you really need a pipline anyway, 
+it is also OK to modify the XSLT script to include multiple XSLT files.
+However, message schema validation and other things like that,
+may also be added into the AOP model in the future.

@@ -1,0 +1,57 @@
+﻿#tabHis div {
+    font-size: 13px;
+    color: rgb(62, 62, 62);
+    margin: 0;
+    padding-left: 2px;
+}
+
+#tabHis {
+    float: left;
+    border-radius: 5px;
+    border: solid 1px rgb(198, 198, 198);
+    padding: 3px;
+    background-color: rgb(248,248,248);
+    box-sizing: border-box;
+}
+
+.reporttab li {
+    float: left;
+    background-color: rgb(200,200,200);
+    padding: 5px 5px;
+    margin: 5px 1px 5px 0px;
+    color: black;
+    list-style: none;
+}
+
+    .reporttab li:hover, .reporttab li:hover a {
+        background-color: #eb9316;
+        color: white;
+    }
+
+    .reporttab li a {
+        text-decoration: none;
+        color: white;
+        font-size: 13px;
+        text-shadow: 1px 0px 3px rgb(157, 157, 157);
+    }
+
+    .reporttab li:nth-child(1) {
+        border-radius: 4px 0px 0px 4px;
+        margin-left: 1px;
+    }
+
+    .reporttab li:nth-child(3) {
+        border-radius: 0px 4px 4px 0px;
+    }
+
+.reporttab .active {
+    background-color: #eb9316;
+}
+
+.report-preview-content {
+    margin: 10px 0px 10px 0px;
+    height: 80%;
+    background-color: #f7f7f7;
+    overflow:auto;
+    word-break:break-all;
+}

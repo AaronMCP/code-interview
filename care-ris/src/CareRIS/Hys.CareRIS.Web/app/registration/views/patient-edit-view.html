@@ -1,0 +1,197 @@
+﻿<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable">
+    <p class="registration-module-title" translate>PatientEdit</p>
+    <div class="popup-content">
+        <div class="row" id="patientInfo" ris-enter-action>
+            <form name="editPatientForm">
+                <div class="registration-edit-inputGroup col-md-11">
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="patientNo">{{'PatientNo'|translate}}<span class="registration-edit-required">*</span></label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control"
+                                   id="patientNo"
+                                   ng-model="patient.patientNo"
+                                   placeholder="{{'PatientNo'|translate}}"
+                                   name="patientNo"
+                                   maxlength=128
+                                   disabled
+                                   required>
+                        </div>
+                        <div ng-messages="editPatientForm.patientNo.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="patientName">{{'PatientName'|translate}}<span class="registration-edit-required">*</span></label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control"
+                                   id="patientName" placeholder="{{'PatientName'|translate}}"
+                                   autocomplete="off"
+                                   ng-model="patient.localName"
+                                   name="patientName"
+                                   maxlength="128"
+                                   ris-auto-focus
+                                   ris-enter-index
+                                   required
+                                   ng-blur="simplifiedToEnglish(patient.localName)" />
+                        </div>
+
+                        <div ng-messages="editPatientForm.patientName.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="EnglishName">{{'EnglishName'|translate}}</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" ris-enter-index
+                                   id="englishName" placeholder="{{'EnglishName'|translate}}"
+                                   ng-model="patient.englishName"
+                                   name="englishName"
+                                   maxlength="128" />
+                        </div>
+
+                        <div ng-messages="editPatientForm.englishName.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!--<div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>-->
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="ReferenceNo" translate>ReferenceNo</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" ris-enter-index
+                                   id="referenceNo"
+                                   name="referenceNo"
+                                   ng-model="patient.referenceNo"
+                                   maxlength=128
+                                   ris-id-number
+                                   placeholder="{{'ReferenceNo'|translate}}" />
+                        </div>
+                        <div ng-messages="editPatientForm.referenceNo.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <div ng-message="IDNumber_valid">
+                                <span class="label label-danger">
+                                    <span translate>IDCardNumberError</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="gender">{{'Gender'|translate}}<span class="registration-edit-required">*</span></label>
+                        </div>
+                        <div class="col-md-5">
+                            <select class="form-control" ng-model="patient.gender" name="gender"
+                                    ng-options="gender.value as gender.text for gender in genderList"
+                                    required
+                                    ris-enter-index></select>
+                        </div>
+                        <div ng-messages="editPatientForm.gender.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                            <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="Birthday">{{'Birthday'|translate}}</label>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="input-group" id="inputCreateStartDate" style="width:100%">
+                                <input kendo-date-picker="patientbirthdayPicker"
+                                       k-max="maxDate"
+                                       id="patientbirthday"
+                                       autocomplete="off"
+                                       name="birthday"
+                                       ng-model="patient.birthday"
+                                       k-format="'yyyy-MM-dd'"
+                                       style="width:100%"
+                                       ng-keydown="birthdayKey($event)"
+                                       ng-click="birthdayclick()"
+                                       ng-change="setAge()" />
+                            </p>
+                        </div>
+                        <div ng-messages="editPatientForm.birthday.$error" class="col-md-4" ng-if="isShowTransformError">
+                            <!-- the required message is displayed first... -->
+                            <div ng-message="transform">
+                                <span class="label label-danger">
+                                    <span ng-bind="editPatientForm.birthday.transformAgeError">
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div ng-messages="editPatientForm.currentAge.$error" class="col-md-4" ng-if="isShowErrorMsg||isShowTransformError">
+                            <!-- the required message is displayed first... -->
+                            <div ng-message="transform">
+                                <span class="label label-danger">
+                                    <span ng-bind="editPatientForm.currentAge.transformAgeError">
+                                    </span>
+                                </span>
+                            </div>
+                            <div ng-message="required" ng-if="isShowErrorMsg"><span class="label label-danger" translate>AgeRequiredErrorMsg</span></div>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="currentAge">{{'Age'|translate}}<span class="registration-edit-required">*</span></label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" id="currentAge" name="currentAge" ris-enter-index
+                                   ng-model="order.currentAge" placeholder="{{'Age'|translate}}" ng-change="setBirthday()" required />
+                        </div>
+                        <div class="col-md-4">
+                            <select class="form-control" ng-model="order.ageType" name="ageType"
+                                    ng-options="ageType.value as ageType.text for ageType in ageUnitList"
+                                    ng-change="ageTypeChage()"
+                                    ris-enter-index></select>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="Telephone">{{'Telephone'|translate}}</label>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" id="telephone" placeholder="{{'Telephone'|translate}}" ris-enter-index
+                                   name="telephone" ng-model="patient.telephone" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+                        </div>
+                        <div ng-messages="editPatientForm.telephone.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <div ng-message="pattern"><span class="label label-danger" translate>TelephoneErrorMsg</span></div>
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="address">{{'Address'|translate}}</label>
+                        </div>
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" id="address" placeholder="{{'Address'|translate}}" ris-enter-index
+                                   name="address" ng-model="patient.address"/>
+                        </div>
+                        <div ng-messages="editPatientForm.address.$error" class="col-md-4" ng-if="isShowErrorMsg"></div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                        </div>
+                        <div class="col-md-5">
+                            <input type="checkbox"
+                                   id="IsVip"
+                                   name="IsVip"
+                                   ng-model="patient.isVip" ris-enter-index />
+                            <span>VIP</span>
+                        </div>
+                        <div ng-messages="editPatientForm.IsVip.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <p class="csd-module-footer registration-edit-footer">
+        <button class="btn btn-primary" type="button" ng-click="cancel()" ng-disabled="isSaving" translate>Cancel</button>
+        <button type="submit" class="btn btn-primary  btn-registration-edit-save" ng-click="save(editPatientForm)" translate>Ok</button>
+    </p>
+</div>

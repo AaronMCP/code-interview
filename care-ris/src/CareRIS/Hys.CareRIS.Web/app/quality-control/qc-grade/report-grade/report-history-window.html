@@ -1,0 +1,53 @@
+﻿<div class="report-history">
+    <div class="table-grade-container">
+        <table class="table table-hover quality-table" style="margin-bottom: 0">
+            <thead>
+                <tr>
+                    <th style="width: 25%">创建时间</th>
+                    <th style="width: 15%">评分结果</th>
+                    <th style="width: 15%">评分人</th>
+                    <th style="width: 30%">备注</th>
+                    <th style="width: 15%">诊断符合</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="table-grade-flex-container">
+            <table class="table table-hover quality-table">
+                <tbody>
+                    <tr ng-repeat="history in historys" ng-click="showHistory(history)" ng-class="{'quality-active':history.selected}">
+                        <td style="width: 25%">{{history.createDate}}</td>
+                        <td style="width: 15%; text-align: center;">{{history.result2}}</td>
+                        <td style="width: 15%" title="{{history.userName}}">{{history.userName}}</td>
+                        <td style="width: 30%" title="{{history.comment}}">{{history.comment}}</td>
+                        <td style="width: 15%; text-align: center">{{history.accordRate}}</td>
+                    </tr>
+                <tbody>
+            </table>
+        </div>
+    </div>
+    <div class="report-container">
+        <div class="report-row">
+            <div class="report-row-title">报告质量</div>
+            <div class="report-row-content">
+                <div class="checkbox" ng-repeat="standard in selectedHistory.standards">
+                    <label>
+                        <input type="checkbox" ng-model="standard.selected" ng-true-value="true" ng-false-value="false" disabled/>
+                        {{standard.desc}}
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="report-row">
+            <div class="report-row-title">评分结果</div>
+            <input ng-disabled="true" ng-model="selectedHistory.result2" style="margin-left: 80px; width: 80px;" />
+            <div class="report-row-title2">诊断符合</div>
+            <input ng-disabled="true" ng-model="selectedHistory.accordRate" style="margin-left: 80px; width: 80px;" />
+        </div>
+        <div class="report-row">
+            <div class="report-row-title">备注</div>
+            <input ng-disabled="true" ng-model="selectedHistory.comment" style="margin-left: 80px;"
+                   title="{{history.comment}}" />
+        </div>
+
+    </div>
+</div>

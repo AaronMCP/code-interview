@@ -1,0 +1,11 @@
+﻿<div class="worklist-container">
+    <aside class="sidepanel worklist-nav-pan">
+        <div ui-view="ris-side-panel" class="fill"></div>
+    </aside>
+    <div id="mainContent" class="worklist-content">
+        <div id="registrationsContainer" class="content-container" ui-view="registrations" ng-show="$state.includes('ris.worklist.registrations')"></div>
+        <div id="registrationTransferContainer" class="content-container" ui-view="registrationTransfer" ng-show="$state.includes('ris.worklist.registrationTransfer')"></div>
+        <div class="content-container" ui-view="role" ng-show="$state.includes('ris.worklist.role')"></div>
+        <div class="content-container" ui-view="config" ng-show="$state.includes('ris.worklist.config')"></div>
+    </div>
+</div>

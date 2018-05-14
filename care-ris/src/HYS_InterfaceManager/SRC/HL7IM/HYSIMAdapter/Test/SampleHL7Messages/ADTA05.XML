@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+  <Header />
+  <Body>
+    <HL7><MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" MessageControlID="102102"><SendingApplication EntityIdentifier="RISMALL_ADT"/><SendingFacility EntityIdentifier="MESA"/><ReceivingApplication EntityIdentifier="RIS_CSH_GC"/><ReceivingFacility EntityIdentifier="CSH"/><MessageType MessageCode="ADT" TriggerEvent="A05" MessageStructure="ADT_A05"/><ProcessingID ProcessingID="P"/><VersionID VersionID="2.3.1"/></MSH><EVN RecordDT="200006211300" EventOccurred="200006211300"/><PID DTOfBirth="19501216" Sex="M"><PatientID_InternalID ID="583030"><AssigningAuthority NameSpaceID="ADT1"/></PatientID_InternalID><PatientName FamilyName="RISMALL" LastNamePrefix="Monday"/><Race Identifier="AI"/><PatientAddress StreetAddress="537 PURDUE AVE" City="ST. LOUIS" StateOrProvince="MO" ZipOrPostalCode="63130"/><PatientAccountNumber ID="20952000"/></PID><PV1 PatientClass="P"/></HL7>
+  </Body>
+</Message>

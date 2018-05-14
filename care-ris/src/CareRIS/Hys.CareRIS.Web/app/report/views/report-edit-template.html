@@ -1,0 +1,101 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>{{title}}</h4>
+</div>
+<div class="modal-body" style="overflow-x: hidden; overflow-y: auto;">
+    <form class="form-horizontal" role="form" name="selectTemplateForm">
+
+        <div class="form-group">
+            <div class="col-md-3">
+                <label class="col-sm-2 control-label" style="width:100%;">{{'TemplateName'|translate}}<span class="registration-edit-required">*</span></label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="templateName" ng-blur="judgeDuplicateName()"
+                       ng-model="selectTemplate.templateName" required />
+            </div>
+            <div ng-messages="selectTemplateForm.templateName.$error" class="col-md-3" ng-if="isShowErrorMsg||isDuplicateName">
+                <div ng-message="isDuplicateName">
+                    <span class="label label-danger">
+                        <span ng-bind="selectTemplateForm.templateName.duplicateNameError">
+                        </span>
+                    </span>
+                </div>
+                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <label class="col-sm-2 control-label" style="width:100%;">检查名称<span class="registration-edit-required">*</span></label>
+            </div>
+            <div class="col-md-6">
+                <input type="text" class="form-control" name="checkItemName"
+                       ng-model="selectTemplate.checkItemName" required />
+            </div>
+            <div ng-messages="selectTemplateForm.checkItemName.$error" class="col-md-3" ng-if="isShowErrorMsg">
+                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <label class="col-sm-2 control-label" style="width:100%;">{{'Modality'|translate}}<span class="registration-edit-required">*</span></label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control" ng-model="selectTemplate.modalityType" ng-options="m for m in modalityTypeList"></select>
+                <!--<input type="text" class="form-control" name="modalityType"
+                       ng-model="selectTemplate.modalityType" required />-->
+            </div>
+
+            <div ng-messages="selectTemplateForm.modalityType.$error" class="col-md-3" ng-if="isShowErrorMsg">
+                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <label class="col-sm-2 control-label" style="width:100%;">{{'CheckBody'|translate}}<span class="registration-edit-required">*</span></label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control" ng-model="selectTemplate.bodyPart" ng-options="b.bodyPart as b.bodyPart for b in bodyPartList"></select>
+                <!--<input type="text" class="form-control" name="bodyPart"
+                       ng-model="selectTemplate.bodyPart" required />-->
+            </div>
+            <div ng-messages="selectTemplateForm.bodyPart.$error" class="col-md-3" ng-if="isShowErrorMsg">
+                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+            </div>
+            </div>
+        <div class="form-group">
+            <div class="col-md-3">
+                <label class="col-sm-2 control-label" style="width:100%;">{{'Gender'|translate}}</label>
+            </div>
+            <div class="col-md-6">
+                <select class="form-control" ng-model="selectTemplate.gender" ng-options="gender.value as gender.text for gender in genderList"></select>
+            </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label class="col-sm-2 control-label" style="width:100%;">{{'WYS'|translate}}</label>
+                </div>
+                <div class="col-md-6">
+
+                    <textarea id="areaWYS" name="wysText" class="form-control ng-valid ng-dirty ng-valid-parse ng-touched" style="width:100%;height:100px;padding:0px;" ng-model="selectTemplate.wysText"></textarea>
+                </div>
+              
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label class="col-sm-2 control-label" style="width:100%;">{{'WYG'|translate}}</label>
+                </div>
+                <div class="col-md-6">
+
+                    <textarea id="areaWYG" name="wygText" class="form-control ng-valid ng-dirty ng-valid-parse ng-touched" style="width:100%;height:100px;padding:0px;" ng-model="selectTemplate.wygText"></textarea>
+                </div>
+                
+            </div>
+</form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary" ng-click="saveTemplate(selectTemplateForm)" translate>
+        Ok
+    </button>
+    <button class="btn btn-primary" ng-click="cancel()" translate>Cancel</button>
+
+</div>

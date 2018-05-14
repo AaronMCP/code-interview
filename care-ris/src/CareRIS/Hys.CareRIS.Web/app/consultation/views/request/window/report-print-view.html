@@ -1,0 +1,247 @@
+﻿<div id="printModal">
+    <div class="modal-header" id="header" draggable="true">
+        <button type="submit" id="btnPrint" translate class="btn btn-green" translate ng-click="printReport()" style="margin-right:10px;">
+            PrintResults
+        </button>
+
+        <button type="submit" translate class="btn btn-green" translate ng-click="exportWord()" style="margin-right:10px;">
+            ExportReportWord
+        </button>
+    </div>
+
+<div id="report" class="modal-body">
+    <style>
+        .report-print-window .modal-dialog {
+            width: 800px;
+        }
+
+        #report table, th, td {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        #report .tdbordernone {
+            border: 0;
+        }
+
+            #report .tdbordernone th, #report .tdbordernone td {
+                border: 0;
+            }
+
+        #report .printcontent {
+            text-align: center;
+            width: 600px;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        #report .contentleft {
+            text-align: left;
+        }
+
+        #report .contentmiddle {
+            vertical-align: middle;
+        }
+
+        #report .history1 {
+            vertical-align: top;
+            padding-top: 5px;
+            height: 60px;
+        }
+
+        #report .history2 {
+            vertical-align: top;
+            padding-top: 5px;
+        }
+
+        #report .history3 {
+            width: 500px;
+            text-align: left;
+        }
+    </style>
+
+    <div id="printContent" class="printcontent">
+
+        <div class="contentleft">
+            <table class="tdbordernone">
+                <tr>
+                    <td style="vertical-align: middle;" align="left">
+                        <img src="/app-resources/images/login_logo.png"
+                             style="height:20px;margin-top:2px;"/>
+                    </td>
+                    <td align="left" class="contentleft contentmiddle" nowrap="true">
+                        重庆医科大学附属第一医院
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2 style="font-family: 'Microsoft YaHei';margin:0;margin-top:20px;">
+            <div>重庆市放射诊断中心</div>
+            影像会诊咨询意见
+        </h2>
+        <table cellspacing="0" style="border-collapse: collapse; width: 600px; margin: 0 auto;border:0;">
+            <tr>
+                <td class="title" width="12%">
+                    {{'ReportRequestHospital'|translate}}
+                </td>
+                <td width="20%">
+                    {{report.requestHospitalName}}
+                </td>
+                <td class="title" width="12%">
+                    {{'ReportRequestDoctor'|translate}}
+                </td>
+                <td width="20%">
+                    {{report.requestUser}}
+                </td>
+                <td class="title" width="12%"></td>
+                <td width="20%"></td>
+            </tr>
+            <tr>
+                <td class="title">
+                    {{'RequestCreateDate' | translate}}
+                </td>
+                <td id="request_time">
+                    {{report.requestCreateDate|date:'yyyy/MM/dd'}}
+                </td>
+                <td class="title">
+                    {{'ConsultationType' | translate}}
+                </td>
+                <td>
+                    {{report.serviceTypeName}}
+                </td>
+                <td class="title">{{'ConsultationCompleteDate' | translate}}</td>
+                <td>{{report.requestCompleteDate|date:'yyyy/MM/dd'}}</td>
+            </tr>
+            <tr>
+                <td class="title">
+                    {{'PatientName' | translate}}
+                </td>
+                <td>
+                    {{report.patientName}}
+                </td>
+                <td class="title">
+                    {{'Gender' | translate}}
+                </td>
+                <td>
+                    {{report.gender}}
+                </td>
+                <td class="title">
+                    {{'Age' | translate}}
+                </td>
+                <td>
+                    {{report.currentAge}}
+                </td>
+            </tr>
+            <tr>
+                <td class="title history1">
+                    {{'History' | translate}}
+                </td>
+                <td colspan="5" class="history2">
+                    <div class="history3" ng-bind-html="report.history">
+
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="title history1">
+                    {{'ClinicalDiagnosis' | translate}}
+                </td>
+                <td colspan="5" class="history2">
+                    <div class="history3" ng-bind-html="report.clinicalDiagnosis">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="title history1">
+                    {{'RequestPurpose' | translate}}
+                </td>
+                <td colspan="5" class="history2">
+                    <div class="history3" ng-bind-html="report.requestPurpose">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="title history1">
+                    {{'RequestRequirement' | translate}}
+                </td>
+                <td colspan="5" class="history2">
+                    <div class="history3" ng-bind-html="report.requestRequirement">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="title">
+                    {{'ConsultationTimeInfo' | translate}}
+                </td>
+                <td id="request_time">
+                    {{report.consultationDate|date:'yyyy/MM/dd'}}
+                </td>
+                <td class="title">
+                    {{'AttendExpert' | translate}}
+                </td>
+                <td colspan="3" style="text-align:left;">
+                    {{report.assignExpertNames}}
+                </td>
+            </tr>
+            <tr>
+                <td class="title" style="vertical-align: top; padding-top: 5px; height: 240px;">
+                    <div style="width:100px;">
+                        {{'ConsultationAdvice' | translate}}
+                    </div>
+                </td>
+                <td colspan="5" style="vertical-align: top; padding-top: 5px;text-align:left;" id="Td1">
+                    <table class="tdbordernone" width="100%">
+                        <tr>
+                            <td class="title" style="text-align:left;">
+                                {{'ConsultationAdviceContent' | translate}}：
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top:1px solid;border-bottom:1px solid;">
+                                <div style="width:496px;text-align:left;min-height: 200px" ng-bind-html="report.consultationAdvice">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="title" style="text-align:left;border-bottom:1px solid;">
+                                {{'Remark' | translate}}：
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="width:496px;text-align:left;min-height: 50px" ng-bind-html="report.consultationRemark">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: right; border: 1">
+                    <h3 style="text-align: right;">
+                        {{'Writer' | translate}}：
+                        <span id="spanWriter">
+                            {{report.writer}}
+                        </span>
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="6" style="text-align: left;border:0;">
+                    <div ng-show="showPrintTime">
+                        {{'PrintTime' | translate}}：
+                        <span>
+                            {{currentTime}}
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+       
+    </div>
+</div>
+<div class="modal-footer">
+    
+</div>
+    </div>
+

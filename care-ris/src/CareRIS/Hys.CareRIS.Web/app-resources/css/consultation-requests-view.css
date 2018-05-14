@@ -1,0 +1,52 @@
+﻿#consulation-requests {
+    height: 100%;
+}
+
+    #consulation-requests .consulation-gird {
+        height: 100%;
+    }
+
+    #consulation-requests consulation-gird-dropdown {
+        vertical-align: middle;
+    }
+
+.k-grid tr td {
+    overflow: visible;
+}
+
+a.dropdown-toggle:hover {
+    text-decoration: none;
+}
+
+a.dropdown-toggle:active {
+    text-decoration: none;
+}
+
+a.dropdown-toggle:focus {
+    text-decoration: none;
+}
+
+.k-grid td {
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+}
+
+.innerGrid td {
+    border-width: 0 !important;
+}
+
+.k-state-selected {
+    background-color: #fdf6dc !important;
+    color: #333333 !important;
+}
+
+.k-gird-font {
+    font-size: 40px !important;
+}
+
+.icon-gender-font {
+    font-size: 20px !important;
+}
+.overdue-warning{
+    color:red;
+}

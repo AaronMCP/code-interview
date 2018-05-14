@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B08B8253-744A-4C76-A1A7-264704D352F5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonGlobalSettings</RootNamespace>
+    <AssemblyName>CommonGlobalSettings</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActionResult\Framework\LoginSettingsActionResult.cs" />
+    <Compile Include="Consts\ConstStrings.cs" />
+    <Compile Include="Consts\LicenseInfo.cs" />
+    <Compile Include="Model\Common\SignHistoryModel.cs" />
+    <Compile Include="Model\Framework\LoginSettingsModel.cs" />
+    <Compile Include="Model\Oam\FilmModule.cs" />
+    <Compile Include="Model\Oam\MedicineStoreModel.cs" />
+    <Compile Include="Model\Oam\PathologyTrackModel.cs" />
+    <Compile Include="Model\Oam\UserCertModel.cs" />
+    <Compile Include="Model\Referral\BookingResponse.cs" />
+    <Compile Include="Model\Referral\CancelResponse.cs" />
+    <Compile Include="Model\Referral\ConsultReportResponse.cs" />
+    <Compile Include="Model\Referral\SendingRefContext.cs" />
+    <Compile Include="Validator\AccessionNoValdiation.cs" />
+    <Compile Include="ActionResult\BaseActionResult.cs" />
+    <Compile Include="ActionResult\Common\BackupActionResult.cs" />
+    <Compile Include="ActionResult\Common\CommonBaseActionResult.cs" />
+    <Compile Include="ActionResult\Common\FTPActionResult.cs" />
+    <Compile Include="ActionResult\DataSetActionResult.cs" />
+    <Compile Include="ActionResult\Exam\ExamBaseActionResult.cs" />
+    <Compile Include="ActionResult\Framework\ArrayActionResult.cs" />
+    <Compile Include="ActionResult\Framework\DsPanelInfoActionResult.cs" />
+    <Compile Include="ActionResult\Framework\FrameworkBaseDataSetActionResult.cs" />
+    <Compile Include="ActionResult\Oam\ACRCodeDataTableActionResult.cs" />
+    <Compile Include="ActionResult\Oam\AddRoleActionResult.cs" />
+    <Compile Include="ActionResult\Oam\OamBaseActionResult.cs" />
+    <Compile Include="ActionResult\Oam\ResourceActionResult.cs" />
+    <Compile Include="ActionResult\Referral\ReferralBaseModelActionResult.cs" />
+    <Compile Include="ActionResult\Referral\ReferralBookingActionResult.cs" />
+    <Compile Include="ActionResult\Referral\ReferralLogActionResult.cs" />
+    <Compile Include="ActionResult\Referral\ReferralActionResult.cs" />
+    <Compile Include="ActionResult\Referral\RefReportSnapshotActionResult.cs" />
+    <Compile Include="ActionResult\Web\WebBaseActionResult.cs" />
+    <Compile Include="Action\ActionMessage.cs" />
+    <Compile Include="Action\BaseAction.cs" />
+    <Compile Include="BillBoard\Entities.cs" />
+    <Compile Include="BillBoard\InfoCenter.cs" />
+    <Compile Include="BillBoard\Utility.cs" />
+    <Compile Include="BillBoard\Wrapper.cs" />
+    <Compile Include="ButtonMenu\ButtonMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Enums\CommonEnum.cs" />
+    <Compile Include="Enums\DatabaseType.cs" />
+    <Compile Include="Validator\DoubleRangeValidaton.cs" />
+    <Compile Include="Consts\FunctionNames.cs" />
+    <Compile Include="Consts\HippaNames.cs" />
+    <Compile Include="HotKey\SystemHotkey.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HotKey\SystemHotKeyEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HotKey\Win32.cs" />
+    <Compile Include="Validator\IntRangeValidationDecorator.cs" />
+    <Compile Include="Validator\IntRangeValidaton.cs" />
+    <Compile Include="KeyBoardHook.cs" />
+    <Compile Include="Model\BaseDataSetModel.cs" />
+    <Compile Include="Model\BaseModel.cs" />
+    <Compile Include="Model\Common\CommonBaseModel.cs" />
+    <Compile Include="Model\Common\FtpModel.cs" />
+    <Compile Include="Model\Assignment\AssignmentLog.cs" />
+    <Compile Include="Model\Assignment\SearchCriteria.cs" />
+    <Compile Include="Model\Assignment\UnwrittenReport.cs" />
+    <Compile Include="Model\Assignment\WriteReportDoctor.cs" />
+    <Compile Include="Model\Exam\ExamBaseModel.cs" />
+    <Compile Include="Model\Exam\ExamModel.cs" />
+    <Compile Include="Model\Framework\FrameworkBaseModel.cs" />
+    <Compile Include="Model\Framework\SaveUserProfileModel.cs" />
+    <Compile Include="Model\Framework\DsUserProfileModel.cs" />
+    <Compile Include="Model\Framework\DsRoleProfileModel.cs" />
+    <Compile Include="Model\Framework\DsProfileModel.cs" />
+    <Compile Include="Model\ModelAttributes.cs" />
+    <Compile Include="Model\Oam\BookingNoticeModel.cs" />
+    <Compile Include="Model\Oam\BulletinBoardModel.cs" />
+    <Compile Include="Model\Oam\RoleNodeModel.cs" />
+    <Compile Include="Model\Oam\WorkCalendarModel.cs" />
+    <Compile Include="Model\Oam\ChargeCodeModel.cs" />
+    <Compile Include="Model\Oam\ChargeModel.cs" />
+    <Compile Include="Model\Oam\CopyScheduleModel.cs" />
+    <Compile Include="Model\Oam\DictionaryModel.cs" />
+    <Compile Include="Model\Oam\EmployeeScheduleModel.cs" />
+    <Compile Include="Model\Oam\HippaModel.cs" />
+    <Compile Include="Model\Oam\ModalityScheduleModel.cs" />
+    <Compile Include="Model\Oam\OamBaseModel.cs" />
+    <Compile Include="Model\Oam\ProcedureCodeModel.cs" />
+    <Compile Include="Model\Oam\ResourceModel.cs" />
+    <Compile Include="Model\Oam\RoleModel.cs" />
+    <Compile Include="Model\Oam\StringConsts.cs" />
+    <Compile Include="Model\Oam\SystemModel.cs" />
+    <Compile Include="Model\Oam\UserModel.cs" />
+    <Compile Include="Model\Oam\WorkTimeModel.cs" />
+    <Compile Include="Model\Referral\CoreBussinessModel.cs" />
+    <Compile Include="Model\Referral\BookingRefModel.cs" />
+    <Compile Include="Model\Referral\ReferralBaseModel.cs" />
+    <Compile Include="Model\Referral\ReferralModel.cs" />
+    <Compile Include="Model\Referral\RefEventModel.cs" />
+    <Compile Include="Model\Referral\RefLogModel.cs" />
+    <Compile Include="Model\Referral\RefNonBookingModel.cs" />
+    <Compile Include="Model\Referral\RefOrderModel.cs" />
+    <Compile Include="Model\Referral\RefPatientModel.cs" />
+    <Compile Include="Model\Referral\RefProcedureCodeModel.cs" />
+    <Compile Include="Model\Referral\RefProcedureModel.cs" />
+    <Compile Include="Model\Referral\RefReportModel.cs" />
+    <Compile Include="Model\Referral\RefReportSnapshotModel.cs" />
+    <Compile Include="Model\Referral\RefReprotFileModel.cs" />
+    <Compile Include="Model\Referral\RefRequisitionModel.cs" />
+    <Compile Include="Model\Referral\ERequisitionModel.cs" />
+    <Compile Include="Model\Registration\OrderBaseModel.cs" />
+    <Compile Include="Model\Registration\OrderModel.cs" />
+    <Compile Include="Model\Registration\PatientBaseModel.cs" />
+    <Compile Include="Model\Registration\PatientModel.cs" />
+    <Compile Include="Model\Report\ExaminTemplateModel.cs" />
+    <Compile Include="Model\Report\PhraseTemplateModel.cs" />
+    <Compile Include="Model\Report\ReportBaseModel.cs" />
+    <Compile Include="Model\Report\ReportModel.cs" />
+    <Compile Include="Model\Report\ReportTemplateBaseModel.cs" />
+    <Compile Include="Model\Report\ReportTemplateModel.cs" />
+    <Compile Include="Model\Assignment\SearchCriteriaBaseModel.cs" />
+    <Compile Include="Model\Statistic\GeneralStatisticModel.cs" />
+    <Compile Include="Model\Statistic\StatisticBaseModel.cs" />
+    <Compile Include="Model\Teaching\TeachingBaseModel.cs" />
+    <Compile Include="Model\Teaching\TeachingModel.cs" />
+    <Compile Include="Consts\ModuleInstanceName.cs" />
+    <Compile Include="Validator\PatienNameValdiation.cs" />
+    <Compile Include="Validator\PatientIDValdiation.cs" />
+    <Compile Include="Consts\ProfileNames.cs" />
+    <Compile Include="Enums\PropertyItemType.cs" />
+    <Compile Include="Validator\RegularExpressionRangeValidaton.cs" />
+    <Compile Include="Validator\RegularExpressionValidationDecorator.cs" />
+    <Compile Include="Enums\ShortcutCategory.cs" />
+    <Compile Include="SQLSentence.cs" />
+    <Compile Include="TimePicker\HourMinuteSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimePicker\HourSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimePicker\MinuteSelectorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Enums\ModuleEnum.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TimePicker\TimePicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TimePicker\TimePickerValueEditor.cs" />
+    <Compile Include="Utility\ActionFactory.cs" />
+    <Compile Include="Utility\Context.cs" />
+    <Compile Include="Utility\GCRISException.cs" />
+    <Compile Include="Utility\GlobalCommon.cs" />
+    <Compile Include="Utility\Utilities.cs" />
+    <Compile Include="Utility\XmlConfiguration.cs" />
+    <Compile Include="Validator\Validation.cs" />
+    <Compile Include="Validator\ValidationDecorator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="TimePicker\HourMinuteSelectorForm.resx">
+      <DependentUpon>HourMinuteSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimePicker\HourSelectorForm.resx">
+      <DependentUpon>HourSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimePicker\MinuteSelectorForm.resx">
+      <DependentUpon>MinuteSelectorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimePicker\TimePicker.resx">
+      <DependentUpon>TimePicker.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Server\ClientFrameWork\Common\Server.ClientFramework.Common.csproj">
+      <Project>{F0BDF556-F79E-4164-9246-D9D51F3793B2}</Project>
+      <Name>Server.ClientFramework.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LogServer\LogServer.csproj">
+      <Project>{14198e0b-98a6-4d3e-818a-bb96f2ee32e9}</Project>
+      <Name>LogServer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestCase\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

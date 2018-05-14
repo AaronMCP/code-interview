@@ -1,0 +1,28 @@
+﻿<div>
+    <link href="/app-resources/css/request-edit-window.css" rel="stylesheet" />
+    <div class="request-advice-title title">
+        <strong>
+            {{'History' | translate}}
+        </strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </div>
+    <form name="requestAdvice" class="ris-form">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="History">{{'History'|translate}}</label>
+                <span class="registration-edit-required">*</span>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea id="request-advice-text" kendo-editor ris-enter-index tabindex="11" k-ng-model="result.history"
+                          k-tools="['bold','italic','underline','foreColor','backColor','fontSize',{name: 'fontName',items: [{ text: '宋体', value: '宋体' },{ text: '黑体', value: '黑体' }, { text: '微软雅黑', value: '微软雅黑' }]}]"
+                          class="form-control col2input"></textarea>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="request-advice-action">
+            <button class="btn btn-green" translate ng-click="updateRequestPatienthistory()">OK</button>
+            <button class="btn btn-default btn-left" translate ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

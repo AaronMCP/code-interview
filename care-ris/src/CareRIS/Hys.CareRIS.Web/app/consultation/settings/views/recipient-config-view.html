@@ -1,0 +1,17 @@
+﻿<div ng-if="!loginUser.isSuperAdmin" class="row" style="margin: 10px">
+    <button type="button" class="btn btn-sm btn-primary" ng-click="createRecipientConfig()" translate>CreateRecipientConfig</button>
+</div>
+<div class="row g-kendo-grid" style="margin: 10px; height: 100%;" ng-style="{'padding-bottom': loginUser.isSuperAdmin ?'0px':'60px'}">
+    <div class="recipientListGrid" style="height:100%;" kendo-grid k-options="gridOption" k-ng-delay="gridOption"></div>
+</div>
+<script id="column-menu-recipition" type="text/x-kendo-tmpl">
+    <div ng-class="{'invisible':loginUser.isSuperAdmin}" class="dropdown" style="vertical-align: middle;">
+        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="margin-left: 20px;">
+            <span class="icon-general icon-pencil line2Icon"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li ng-click="$parent.editRecipientConfig(dataItem)"><a>{{ 'Edit' | translate }}</a></li>
+            <li ng-click="$parent.deleteRecipientConfig(dataItem)"><a>{{ 'Delete' | translate }}</a></li>
+        </ul>
+    </div>
+</script>

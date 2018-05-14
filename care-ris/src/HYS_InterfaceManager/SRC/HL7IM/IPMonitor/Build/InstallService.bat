@@ -1,0 +1,1 @@
+InstallUtil.exe HYS.Messaging.Service.exe

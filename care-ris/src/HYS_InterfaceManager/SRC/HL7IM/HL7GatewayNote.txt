@@ -1,0 +1,72 @@
+
+B04
+--------------------------------------------------
+
+在基于XML的系统间交互（如SOAP）的场景下，XML命名空间有重要的意义。
+因此，通信过程中的每一个XML节点都应该属于某个命名空间。
+
+http://www.carestream.com/CSBroker
+http://www.carestream.com/HL7_SDK
+http://www.carestream.com/HL7_STD
+
+http://www.carestream.com/Messaging
+
+
+
+B01
+--------------------------------------------------
+
+HYS.Common
+HYS.Messaging
+HYS.MessageDevices.MessagePipe
+HYS.MessageDevices.SOAPAdapter
+HYS.MessageDevices.HL7Adapter
+HYS.MessageDevices.CSBAdapter
+
+Common
+
+ - Logging
+ - WCFHelper
+ - Xml
+ - HL7v2
+ - HL7v2Test
+ - HL7GWHelper (metadata/message type registry)
+
+Messaging
+
+MessagePipe 
+
+ - Base
+ - [Engine] (optimize configuration GUI)						cancel
+ - Channels
+ - Processors
+
+SOAPAdapter
+
+ - SOAPClient (HL7v2/v3/other XMLs via SOAP)					
+ - SOAPServer (HL7v2/v3/other XMLs via SOAP)
+
+HL7Adapter (support other XMLs)								done by late Mar (L)
+
+ - HL7Receiver (HL7v2/v3/other XMLs via MLLP/Socket)					
+ - HL7Sender (HL7v2/v3/other XMLs via MLLP/Socket)
+
+FileAdapter
+
+ - FileReader (HL7v2/v3/other XMLs via File)						done by late Mar (F)
+ - FileWriter (HL7v2/v3/other XMLs via File)						done by late Mar (F)
+
+CSBAdapter (connect with CS Broker passive mode SQL Interfaces via OLEDB)
+
+ - CSBrokerInbound (read from tables of SQL Outbound Interface directly)		done by late Feb (F)
+ - CSBrokerOutbound (write into tables of SQL Inbound Interface directly)		done by late Jan (L)
+ - CSBrokerQuery (query SQL Outbound Interface via user defined storage procedure)	cancel
+
+
+Jan (SOAPServer->MessagePipe->CSBrokerOutbound)
+
+- setup env (msg type, build scripts)
+- CSBrokerOutbound
+- XSLT
+
+

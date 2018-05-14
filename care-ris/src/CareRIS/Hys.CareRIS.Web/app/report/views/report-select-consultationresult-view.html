@@ -1,0 +1,13 @@
+﻿<div class="popover report-preview-content-popover">
+    <div class="arrow"></div>
+    <div class="popover-inner popover-content container report-preview-container">
+        <div class="row" style="height:90%">
+            <span class="label label-warning" translate>ConsiltationAdvice</span>
+            <div style="height:270px; width:100%; margin-top:10px;background-color: #f7f7f7;" ng-bind-html="popResultAdvice.advice" ng-readonly="true"></div>
+        </div>
+
+        <div class="row" style="height:10%" style="vertical-align:middle;"> 
+            <button type="button" class="btn btn-primary pull-right" style="margin: 10px" ng-click="closeAllPopover()" translate>CloseReportOther</button>
+        </div>
+    </div>
+</div>

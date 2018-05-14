@@ -1,0 +1,66 @@
+﻿.advice-edit-window .modal-dialog {
+    width: 900px;
+    margin-top: 100px;
+}
+
+.request-advice-title {
+    background: #E6E7E8;
+    padding: 10px;
+}
+
+.request-advice-action {
+    background: #E6E7E8;
+    padding: 5px;
+    text-align: center;
+}
+
+#patientCaseInfo {
+    width: 100%;
+    background-color: white;
+    margin-bottom: 5px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+    #patientCaseInfo .col1 {
+        text-align: right;
+        top: 5px;
+        padding: 0;
+        width: 140px;
+    }
+
+    #patientCaseInfo .col2 {
+        width: 260px;
+    }
+
+        #patientCaseInfo .col2 button {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+    #patientCaseInfo .col2input {
+        height: 34px;
+        width: 260px;
+    }
+
+    #patientCaseInfo .form-group {
+        margin: 0 auto !important;
+        padding-top: 10px !important;
+        height: 60px !important;
+    }
+
+    #patientCaseInfo #age {
+        width: 155px;
+        display: inline;
+    }
+
+    #patientCaseInfo #ageList {
+        width: 100px;
+        display: inline;
+    }
+
+    #patientCaseInfo #birthday {
+        height: 34px;
+        width: 220px;
+    }

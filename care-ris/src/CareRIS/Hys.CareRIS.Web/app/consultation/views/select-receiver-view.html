@@ -1,0 +1,31 @@
+﻿<div>
+    <div class="modal-header">
+        <h4 class="modal-title">{{'SelectConsultReceiver'|translate}}
+        </h4>
+    </div>
+    <div class="modal-body" style="overflow-x: hidden; overflow-y: auto; padding-bottom: 0;">
+        <div class="container-selection row" ng-if="selection.length>0">
+            <span class="pull-left"> {{'CurrentSelect'|translate}}:</span>
+         
+                <span class="tag-selection" ng-repeat="se in selection">
+                    <span ng-if="se.type===1">
+                        <span class="icon-doctor">{{se.text}}-</span>
+                        <span class="icon-hospital"> {{se.hospitalName}}</span>
+                        <a><i class="remove glyphicon glyphicon-remove-sign glyphicon-gray" ng-click="removeSelection(se.value)"></i></a>
+                    </span>
+
+                    <span ng-if="se.type===0">
+                        <span class="icon-hospital">{{se.text}}</span>
+                    </span>
+                </span>
+            
+        </div>
+        <recipient-selector selection="selection"></recipient-selector>
+    </div>
+    <p class="ris-module-footer">
+        <button type="submit" class="btn btn-md btn-primary" ng-click="selectReceiver()" translate>
+            Save
+        </button>
+        <button class="btn btn-md btn-normal" ng-click="cancel()" translate>Cancel</button>
+    </p>
+</div>

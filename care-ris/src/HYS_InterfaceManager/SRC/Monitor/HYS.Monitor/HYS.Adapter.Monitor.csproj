@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE201503-78E1-467A-8ED4-FA30C812E988}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.Adapter.Monitor</RootNamespace>
+    <AssemblyName>HYS.IM.Adapter.Monitor</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\EnumComboBox.Designer.cs">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCAdvancedMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCAdvancedMode.Designer.cs">
+      <DependentUpon>UCAdvancedMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCListviewMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCListviewMode.Designer.cs">
+      <DependentUpon>UCListviewMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UCTextBoxMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\UCTextBoxMode.Designer.cs">
+      <DependentUpon>UCTextBoxMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UIDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\AddRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddRecord.Designer.cs">
+      <DependentUpon>AddRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DataFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DataFilter.Designer.cs">
+      <DependentUpon>DataFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilterItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilterItem.Designer.cs">
+      <DependentUpon>FilterItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LogItemInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LogItemInfo.Designer.cs">
+      <DependentUpon>LogItemInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Monitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitor.Designer.cs">
+      <DependentUpon>Monitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\FilterDataInfo.cs" />
+    <Compile Include="Objects\FilterMode.cs" />
+    <Compile Include="Objects\SimpleQueryItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\EnumComboBox.resx">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCAdvancedMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCAdvancedMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCListviewMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCListviewMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\UCTextBoxMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UCTextBoxMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddRecord.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>AddRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DataFilter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>DataFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilterItem.resx">
+      <DependentUpon>FilterItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LogItemInfo.resx">
+      <DependentUpon>LogItemInfo.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Monitor.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Monitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Objects\SimpleQuery.cs" />
+    <Compile Include="Utility\DataAccess.cs" />
+    <Compile Include="Utility\GWDBControl.cs" />
+    <Compile Include="Utility\ListViewSort.cs" />
+    <Compile Include="Utility\QueryRuleControl.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Refresh.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

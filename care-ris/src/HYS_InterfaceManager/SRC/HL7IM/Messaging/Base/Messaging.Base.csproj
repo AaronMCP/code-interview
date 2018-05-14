@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{670743BB-BD5E-4840-87D9-6D507F3535F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.Messaging.Base</RootNamespace>
+    <AssemblyName>HYS.Messaging.Base</AssemblyName>
+    <SccProjectName>Rational ClearCase</SccProjectName>
+    <SccLocalPath>Rational ClearCase</SccLocalPath>
+    <SccAuxPath>Rational ClearCase</SccAuxPath>
+    <SccProvider>Rational ClearCase</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CSH.XDSGateway.Messaging.Base/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\ConfigManager.cs" />
+    <Compile Include="Config\EntityConfigHostConfig.cs" />
+    <Compile Include="Config\EntityInformation.cs" />
+    <Compile Include="Config\IConfigManager.cs" />
+    <Compile Include="INotifyAdapterStatus.cs" />
+    <Compile Include="License\LicenseConfig.cs" />
+    <Compile Include="License\LicenseManager.cs" />
+    <Compile Include="Config\MInterface.cs" />
+    <Compile Include="Config\MInterfaceConfigItem.cs" />
+    <Compile Include="Config\MInterfaceConfigPage.cs" />
+    <Compile Include="Config\MInterfaceConfigPageType.cs" />
+    <Compile Include="Config\MInterfaceConfigSection.cs" />
+    <Compile Include="Config\MInterfaceMonitorPage.cs" />
+    <Compile Include="Config\MInterfaceMonitorPageType.cs" />
+    <Compile Include="Config\NTServiceHostGroup.cs" />
+    <Compile Include="Config\NTServiceHostInfo.cs" />
+    <Compile Include="Config\NTServiceHostInformation.cs" />
+    <Compile Include="Config\NTServiceHostStartArgument.cs" />
+    <Compile Include="Config\ResponseConfig.cs" />
+    <Compile Include="Config\SolutionConfig.cs" />
+    <Compile Include="Config\SolutionWebSetting.cs" />
+    <Compile Include="Controler\EntityAgent.Publish.cs" />
+    <Compile Include="Controler\EntityAgent.Request.cs" />
+    <Compile Include="Controler\EntityAgent.Response.cs" />
+    <Compile Include="Controler\EntityAgent.Subscribe.cs" />
+    <Compile Include="Config\ConfigHelper.cs" />
+    <Compile Include="Config\EntityAssemblyConfig.cs" />
+    <Compile Include="Config\EntityHostConfig.cs" />
+    <Compile Include="Config\NTServiceHostConfig.cs" />
+    <Compile Include="Config\EntityConfigBase.cs" />
+    <Compile Include="Config\EntityContractBase.cs" />
+    <Compile Include="Config\PublishConfig.cs" />
+    <Compile Include="Config\RequestConfig.cs" />
+    <Compile Include="Config\SubscribeConfig.cs" />
+    <Compile Include="Controler\EntityAgent.cs" />
+    <Compile Include="Controler\EntityConfigAgent.cs" />
+    <Compile Include="Controler\EntityContainer.cs" />
+    <Compile Include="Controler\EntityHost.cs" />
+    <Compile Include="Controler\EntityLoader.cs" />
+    <Compile Include="DirectionType.cs" />
+    <Compile Include="EntryAttribute.cs" />
+    <Compile Include="Forms\FormEntity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEntity.Designer.cs">
+      <DependentUpon>FormEntity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormExecuteScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormExecuteScript.Designer.cs">
+      <DependentUpon>FormExecuteScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScriptTask.cs" />
+    <Compile Include="IConfigUI.cs" />
+    <Compile Include="IEntry.cs" />
+    <Compile Include="IMessageEntity.cs" />
+    <Compile Include="Config\EntityInitializeArgument.cs" />
+    <Compile Include="Config\NTServiceHostStatus.cs" />
+    <Compile Include="IMessageEntityConfig.cs" />
+    <Compile Include="InteractionType.cs" />
+    <Compile Include="MessageEntityConfigEntryAttribute.cs" />
+    <Compile Include="MessageEntityEntryAttribute.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859b757e-44c6-4183-8e1e-9c3c21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Logging\Common.Logging.csproj">
+      <Project>{391A304B-8F73-4D9C-AD82-2DB495EF6E23}</Project>
+      <Name>Common.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapping\Messaging.Mapping.csproj">
+      <Project>{5497186E-8E85-4BE2-BDEE-46EF44828796}</Project>
+      <Name>Messaging.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objects\Messaging.Objects.csproj">
+      <Project>{BB39B254-8B49-4924-9124-A66271B913D1}</Project>
+      <Name>Messaging.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Queuing\Messaging.Queuing.csproj">
+      <Project>{8BDE987B-8994-4E34-A809-F23792560866}</Project>
+      <Name>Messaging.Queuing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormEntity.resx">
+      <DependentUpon>FormEntity.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormExecuteScript.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormExecuteScript.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft.Net.Framework.2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

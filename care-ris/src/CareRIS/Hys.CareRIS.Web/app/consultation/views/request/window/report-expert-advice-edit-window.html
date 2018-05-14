@@ -1,0 +1,220 @@
+﻿<div class="advice-edit-window2">
+    <link href="/app-resources/css/request-edit-window.css" rel="stylesheet" />
+    <style>
+        #divHostAdvice .photo {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        #divExpertAdvice .photo {
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+
+        #divExpertAdvice hr {
+            margin-top: 1px;
+            margin-bottom: 10px;
+            border-color: white;
+        }
+
+        .request-advice-title .refresh-content {
+            border-width: 0;
+            margin: 0 20px 5px 0;
+            text-decoration: none;
+        }
+
+        .request-advice-title .refresh-icon {
+            font-size: 16px;
+            color: #a7a9ac;
+        }
+
+        .request-advice-title .refresh-marker {
+            color: red;
+            position: relative;
+            top: -10px;
+            left: -5px;
+            font-size: 16px;
+        }
+
+        #divHostAdvice {
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #ffeedf;
+            margin-bottom: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            border: 1px solid #f5921e;
+        }
+
+            #divHostAdvice .title {
+                width: 100%;
+                height: 30px;
+                background-color: #f5921e;
+                overflow: hidden;
+            }
+
+            #divHostAdvice .title-icon {
+                font-size: 20px;
+                color: white;
+                margin: 3px;
+            }
+
+            #divHostAdvice .title-content {
+                margin: 5px;
+                color: white;
+            }
+
+            #divHostAdvice .advice-content {
+                width: 100%;
+                height: 150px;
+                background-color: #ffeedf;
+                overflow: auto;
+                padding: 10px 10px 0 10px;
+            }
+
+
+        #divExpertAdvice {
+            height: 180px;
+            width: 100%;
+            overflow: hidden;
+            background-color: #f4f4f4;
+            margin-bottom: 10px;
+            margin-left: 0;
+            border: 1px solid #cacaca;
+        }
+
+            #divExpertAdvice .title {
+                width: 100%;
+                height: 30px;
+                background-color: #cacaca;
+                overflow: hidden;
+            }
+
+            #divExpertAdvice .title-icon {
+                font-size: 20px;
+                color: white;
+                margin: 3px;
+            }
+
+            #divExpertAdvice .title-content {
+                margin: 5px;
+                color: white;
+            }
+
+            #divExpertAdvice .advice-content {
+                width: 100%;
+                height: 150px;
+                background-color: #f4f4f4;
+                overflow: auto;
+                padding: 10px 10px 0 10px;
+            }
+
+        .advice-edit-title {
+            background-color: #EB9316;
+            color: white;
+            margin: 0;
+            border-radius: 4px 4px 0px 0px;
+            padding: 5px 15px;
+        }
+    </style>
+    <div class="request-advice-title title">
+
+    </div>
+    <table>
+        <tr>
+            <td>
+                <div class="reportTemplate">
+                    <div class="reportTemplate-scroll">
+                        <div id="templateContainer">
+                            <div class="sectionContainer k-header">
+                                <div id="tvTemplate" kendo-tree-view k-options="toTemplate" style="overflow:visible;">
+                                    <span k-template>
+                                        # if (!item.items) { #
+                                        <span class="btn btn-sm btn-link btn-selectable ris-popover" ng-mouseenter="$parent.showReportTemplate('#: item.id #')" ng-mouseleave="$parent.closeReportTemplate('#: item.id #')" ng-click="$parent.closeReportTemplate('#: item.id #')" id='#: item.id #' ng-dblclick="$parent.selectReportTemplate()"
+                                              ris-popover popover-container=" body" popover-trigger="mouseenter" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+                                              data-placement="right" data-templateurl="/app/consultation/views/request/window/report-selectreporttemplate-view.html" style="padding:0;">
+                                            #: item.name #
+
+                                        </span>
+                                        # } else {#
+                                        #: item.name #
+                                        #}#
+                                    </span>
+
+                                </div>
+                            </div>
+                            <script id="treeview-template" type="text/kendo-ui-template">
+                                <!--#: item.name #-->
+                                # if (!item.items) { #
+                                <span class="btn btn-sm btn-link btn-selectable ris-popover" ng-mouseenter="showReportTemplate('#: item.id #')" ng-mouseleave="$parent.closeReportTemplate('#: item.id #')" ng-click="$parent.closeReportTemplate('#: item.id #')" id='#: item.id #' ng-dblclick="$parent.selectReportTemplate()"
+                                      ris-popover popover-container=" body" popover-trigger="mouseenter" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+                                      data-placement="right" data-templateurl="/app/consultation/views/request/window/report-selectreporttemplate-view.html" style="padding:0;">
+                                    #: item.name #
+
+                                </span>
+                                # } else {#
+                                #: item.name #
+                                #}#
+                            </script>
+
+                        </div>
+                    </div>
+
+                </div>
+            </td>
+            <td valign="top">
+                <form name="requestAdvice" class="ris-form" style="padding:10px;">
+                    <div class="row" id="divHostAdvice">
+                        <div class="title">
+                            <a href="javascript:void(0);" class="ng-binding" ng-click="toggleHostAdvice()">
+                                <span class="pull-left title-icon glyphicon glyphicon-triangle-bottom" aria-hidden="true"
+                                      id="iconHostAdvice">
+                                </span>
+                            </a>
+                            <label for="ConsiltationAdvice" class="title-content">{{'ConsiltationAdvice'|translate}}</label>
+                            <a href="javascript:void(0);" ng-click="refreshExpertAdvice()" style="margin:5px;" class="pull-right refresh-content" title="{{'Refresh' | translate}}">
+                                <span class="icon-refresh" aria-hidden="true" class="refresh-icon"></span>
+                                <span class="refresh-marker" ng-if="isUpdated">●</span>
+                            </a>
+                        </div>
+                        <div ng-bind-html="hostAdviceEdit" class="advice-content">
+
+                        </div>
+                    </div>
+
+                    <div class="row" id="divExpertAdvice">
+                        <div class="title">
+                            <a href="javascript:void(0);" class="ng-binding" ng-click="toggleExpertAdvice()">
+                                <span class="pull-left title-icon glyphicon glyphicon-triangle-bottom" aria-hidden="true"
+                                      id="iconExpertAdvice">
+                                </span>
+                            </a>
+                            <label for="ConsiltationAdvice" class="title-content">{{'ExpertAdvice'|translate}}</label>
+                        </div>
+                        <div ng-bind-html="expertAdvices" class="advice-content">
+
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:0;margin-left:0;">
+                        <label class="advice-edit-title" for="ConsiltationAdvice">{{'ExpertAdvice'|translate}}</label>
+                        <div class="ris-form-input col-md-12">
+                            <textarea id="request-advice-text" kendo-editor ris-enter-index k-ng-model="expertAdviceEdit"
+                                      k-tools="['bold','italic','underline','foreColor','backColor','fontSize',{name: 'fontName',items: [{ text: '宋体', value: '宋体' },{ text: '黑体', value: '黑体' }, { text: '微软雅黑', value: '微软雅黑' }]}]"
+                                      class="form-control col2input" style="height:238px;"></textarea>
+                        </div>
+                    </div>
+
+                </form>
+            </td>
+        </tr>
+    </table>
+    <div class="footer">
+        <div class="request-advice-action">
+            <button class="btn btn-green" translate ng-click="saveAdvice()">OK</button>
+            <button class="btn btn-default btn-left" translate ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

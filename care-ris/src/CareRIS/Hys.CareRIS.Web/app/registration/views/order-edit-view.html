@@ -1,0 +1,132 @@
+﻿<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable">
+    <p class="registration-module-title" translate>OrderEdit</p>
+    <div class="popup-content">
+        <form name="editOrderForm">
+            <div class="row" id="orderInfo" ris-enter-action>
+                <div class="registration-edit-inputGroup col-md-11">
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="patientType">{{'PatientType'|translate}}<span class="registration-edit-required">*</span></label>
+                        </div>
+                        <div class="col-md-5">
+                            <select id="patientType" class="form-control" ng-model="order.patientType" name="patientType" required
+                                    ng-options="patientType.value as patientType.text for patientType in patientTypeList"
+                                    ris-auto-focus
+                                    ris-enter-index></select>
+                        </div>
+                        <div ng-messages="editOrderForm.patientType.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                            <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="chargeType" translate>ChargeType</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select id="chargeType" class="form-control" ng-model="order.chargeType" name="chargeType"
+                                    ng-options="chargeType.value as chargeType.text for chargeType in chargeTypeList"
+                                    ris-enter-index>
+                                <option value=""></option>
+                            </select>
+                        </div>
+                        <div ng-messages="editOrderForm.chargeType.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+
+                        </div>
+                    </div>
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="applyDept" translate>ApplyDepartment</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select kendo-combo-box
+                                    k-data-text-field="'deptName'"
+                                    k-data-value-field="'deptName'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="true"
+                                    k-data-bound="noDataFound"
+                                    k-data-source="applyDeptList"
+                                    onfiltering="applyDeptFiltering(kendoEvent)"
+                                    ng-change="applyDeptChange()"
+                                    style="width:100%;height:26px;"
+                                    ris-enter-index
+                                    ng-model="order.applyDept"></select>
+                        </div>
+                        <div ng-messages="editOrderForm.applyDept.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                        </div>
+                    </div>
+
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="applyDoctor" translate>ApplyDoctor</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select kendo-combo-box
+                                    k-data-text-field="'doctorName'"
+                                    k-data-value-field="'doctorName'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="true"
+                                    k-data-bound="noDataFound"
+                                    k-data-source="applyDoctorList"
+                                    onfiltering="applyDoctorFiltering(kendoEvent)"
+                                    ng-change="applyDoctorChange()"
+                                    style="width:100%;height:26px;"
+                                    ris-enter-index
+                                    ng-model="order.applyDoctor"></select>
+                        </div>
+                        <div ng-messages="editOrderForm.applyDoctor.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                        </div>
+                    </div>
+
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="healthHistory" translate>HealthHistory</label>
+                        </div>
+                        <div class="col-md-5" style="padding-bottom: 3px;">
+                            <textarea class="form-control"
+                                      id="healthHistory"
+                                      name="healthHistory"
+                                      placeholder="{{'HealthHistory'|translate}}"
+                                      ris-enter-index
+                                      ng-model="order.healthHistory" rows="5" cols="5" />
+                        </div>
+                        <div ng-messages="editOrderForm.healthHistory.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                        </div>
+                    </div>
+
+                    <div class="form-group row registration-edit-form-group">
+                        <div class="col-md-3">
+                            <label for="observation" translate>Observation</label>
+                        </div>
+                        <div class="col-md-5">
+                            <select kendo-combo-box="observationCombox"
+                                    k-data-text-field="'text'"
+                                    k-data-value-field="'text'"
+                                    k-filter="'contains'"
+                                    k-auto-bind="true"
+                                    ris-enter-index
+                                    k-data-source="observationList"
+                                    k-data-bound="noDataFound"
+                                    style="width:100%;height:26px;"
+                                    name="observation"
+                                    ng-model="order.observation"></select>
+                        </div>
+                        <div ng-messages="editOrderForm.observation.$error" class="col-md-4" ng-if="isShowErrorMsg">
+                            <!-- the required message is displayed first... -->
+                            <!--<div ng-message="required">Birthday Required.</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <p class="csd-module-footer registration-edit-footer"> 
+        <button class="btn btn-primary" type="button" ng-click="cancel()" ng-disabled="isSaving" translate>Cancel</button>
+        <button type="submit" class="btn btn-primary" ng-click="save(editOrderForm)" translate>Ok</button>
+    </p>
+</div>

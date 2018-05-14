@@ -1,0 +1,15 @@
+﻿<div class="container-applied">
+    <div class="main-applied">
+        <span ng-if="report.isDeleted == 0">
+            <request-nav-info-view></request-nav-info-view>
+        </span>
+        <span ng-if="report.isDeleted != 0">
+            <request-tips-bar></request-tips-bar>
+        </span>
+        <request-patient-info-view></request-patient-info-view>
+        <div class="row hospital-info">
+            <request-receiver-info-view></request-receiver-info-view>
+            <request-request-info-view></request-request-info-view>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,296 @@
+Hi Beyond,
+
+Answer to Question 1: To insert multiple procedure codes into one record, you can re-implement the "ORM_O01" XSL template:
+
+1) Copy the following ORM_O01.xsl file (a new implementation of "ORM_O01" template) into the hk7_sdk_to_dataset folder.
+
+
+
+ 
+
+2) Modify the main.xsl file to apply the new implementation of "ORM_O01" template.
+
+
+
+Answer to Question 2: To map the prior patient ID from HL7 message to database, you simply need to modify the XPath in the PATIENT.xsl.
+
+1) Open the dumped HL7 XML file in the Bin\Services\HL7GW_RCV\Dump\Publish folder, and locate the prior patient ID in the file.
+
+
+
+2) Modify the XPath in the PATIENT.xsl, according to the location of the prior patient ID, for example:
+
+
+
+Or, if you need to get the HKID, the XPath is: ../MRG/FIELD.1/FIELD_ITEM[COMPONENT.5='HKID']/COMPONENT.1
+if you need to get the PATKEY, the XPath is: ../MRG/FIELD.1/FIELD_ITEM[COMPONENT.5='PATKEY']/COMPONENT.1
+
+
+Best regards,
+
+Liang Liang
+Carestream Health Global R&D Center, Shanghai
+EMail:liang.liang@carestream.com
+Tel:86-21-50308810-6175
+Fax:86-21-50308802
+
+
+
+From:	Beyond Lee/10082224/APAC/CSH
+To:	Liang Liang/10095177/APAC/CSH@CSH
+Date:	2011/09/15 20:21
+Subject:	Re: Fw: Updated test plan
+
+
+Dear Liang Liang:
+
+Thanks, and I need to add a question, 
+
+HA test a Patient Merge Msg (two type, one for PatientID, one for HKID), but the HK_SQLIN's PATIENT_PRIOR_PATIENT_ID field is NULL, 
+
+I add the following setting in the ORDER.xsl, but still have no data appear. 
+
+May you help to take a view with the ORDER.xsl, Thanks !
+
+[attachment "HL7Dump_20110912.zip" deleted by Liang Liang/10095177/APAC/CSH] [attachment "ORDER.xsl" deleted by Liang Liang/10095177/APAC/CSH] 
+
+
+
+
+Best Regards
+
+Beyond Lee | HCIS Integration Specialist
+GCC / Integration Solutions
+ 
+beyond.lee@carestreamhealth.com  
+Office: 02-21815515, 02-21815500 Cell: (886)0930990003, (852)81999034 (852)94137631, (86)13426863240
+ 
+
+ 
+www.carestreamhealth.com
+Carestream Health | 4F-1,129,Sec.2,Zhongshan N. Rd.,Zhongshan Dist. | Taipei 10448, Taiwan R.O.C.
+ 
+ 
+ 
+ 
+
+
+
+
+From:	Liang Liang/10095177/APAC/CSH
+To:	Beyond Lee/10082224/APAC/CSH@CSH
+Date:	09/15/2011 下午 06:01
+Subject:	Re: Fw: Updated test plan
+
+
+Hi Beyond,
+
+[Desire Solution]
+Step1	HL7 Message
+		MSH
+			ORC	ANO001	1001
+			ORC	ANO001	1002
+			ORC	ANO001	1003
+Step2	HK_HL7SQLIN
+		ANO001	1001/1002/1003
+Step3	HK_MWLOUT
+		ANO001	1001/1002/1003
+Step4	JDICOM MWL got Worklist
+		ANO001	1001
+		ANO001	1002
+		ANO001	1003
+
+In the former email, my suggestion can only help you to implement Step3 to Step4.
+
+I will send you another email tomorrow, to tell you how to modify the XSLT in the HL7 Receiver Interface to implement Step1 to Step2.
+
+Best regards,
+
+Liang Liang
+Carestream Health Global R&D Center, Shanghai
+EMail:liang.liang@carestream.com
+Tel:86-21-50308810-6175
+Fax:86-21-50308802
+
+
+
+
+From:	Beyond Lee/10082224/APAC/CSH
+To:	Liang Liang/10095177/APAC/CSH@CSH
+Date:	2011/09/15 14:30
+Subject:	Re: Fw: Updated test plan
+
+
+Dear Liang Liang:
+
+I had tryed, and the require is difference with our current setting.
+
+Ex.
+	AccessionNumber = ANO001
+	ProcedureCode = 1001/1002/1003
+[Current]
+	HL7 Message
+		MSH
+			ORC	ANO001	1001
+			ORC	ANO001	1002
+			ORC	ANO001	1003
+	HK_HL7SQLIN
+		ANO001	1001
+		ANO001	1002
+		ANO001	1003
+	HK_MWLOUT
+		ANO001	1001
+		ANO001	1002
+		ANO001	1003
+	JDICOM MWL got Worklist
+		ANO001	1001
+		ANO001	1002
+		ANO001	1003
+
+[Desire Solution]
+	HL7 Message
+		MSH
+			ORC	ANO001	1001
+			ORC	ANO001	1002
+			ORC	ANO001	1003
+	HK_HL7SQLIN
+		ANO001	1001/1002/1003
+	HK_MWLOUT
+		ANO001	1001/1002/1003
+	JDICOM MWL got Worklist
+		ANO001	1001
+		ANO001	1002
+		ANO001	1003
+
+I understand the setting as you mention, the setting at HK_MWLOUT will a little differenece with the above list.
+
+May you help to give me a advice, thanks !
+
+Best Regards
+
+Beyond Lee | HCIS Integration Specialist
+GCC / Integration Solutions
+ 
+beyond.lee@carestreamhealth.com  
+Office: 02-21815515, 02-21815500 Cell: (886)0930990003, (852)81999034 (852)94137631, (86)13426863240
+ 
+
+ 
+www.carestreamhealth.com
+Carestream Health | 4F-1,129,Sec.2,Zhongshan N. Rd.,Zhongshan Dist. | Taipei 10448, Taiwan R.O.C.
+ 
+ 
+ 
+ 
+
+
+
+
+From:	Liang Liang/10095177/APAC/CSH
+To:	Beyond Lee/10082224/APAC/CSH@CSH
+Date:	09/13/2011 上午 11:09
+Subject:	Re: Fw: Updated test plan
+
+
+Hi Beyond,
+
+It is easy to change the config for "AccessionNumber" as primary key.
+
+1. Please ensure the match criteria in the trigger setting only contains AccessionNumber.
+    BTW, It seems the additional trigger on the MWLOUT_DATAINDEX to delete records of the same AccessionNumber is useless now.
+
+2. Please be aware of the following setting on MWLOUT, in order to recognize multiple procedure code in one record.
+
+ 
+
+Best regards,
+
+Liang Liang
+Carestream Health Global R&D Center, Shanghai
+EMail:liang.liang@carestream.com
+Tel:86-21-50308810-6175
+Fax:86-21-50308802
+
+
+
+
+From:	Beyond Lee/10082224/APAC/CSH
+To:	Liang Liang/10095177/APAC/CSH@CSH
+Date:	09/10/2011 12:03 AM
+Subject:	Fw: Updated test plan
+
+
+Dear Liang Liang:
+
+I had goto HK HA office yesterday, and discuss with Janice, they had workflow issue with all vendor (include CSH and Agfa), 
+
+And I will continue work on the HL7 test with HA.
+
+After discuss, they decide, change the key from "AccessionNumber+ProcedureCode" to "AccessionNumber"
+
+Now is "AccessionNumber+ProcedureCode"
+Data is...
+	ANO001	1001
+	ANO001	1002
+	ANO001	1003
+
+After change, key is "AccessionNumber"
+Data is...
+	ANO001	1001/1002/1003
+
+May you help me to change the config from "AccessionNumber+ProcedureCode" to "AccessionNumber", 
+
+Thanks !
+
+Best Regards
+
+Beyond Lee | HCIS Integration Specialist
+GCC / Integration Solutions
+ 
+beyond.lee@carestreamhealth.com  
+Office: 02-21815515, 02-21815500 Cell: (886)0930990003, (852)81999034 (852)94137631, (86)13426863240
+ 
+
+ 
+www.carestreamhealth.com
+Carestream Health | 4F-1,129,Sec.2,Zhongshan N. Rd.,Zhongshan Dist. | Taipei 10448, Taiwan R.O.C.
+ 
+ 
+ 
+ 
+----- Forwarded by Beyond Lee/10082224/APAC/CSH on 09/09/2011 下午 11:37 -----
+
+From:	Janice FU <janice.fu@ha.org.hk>
+To:	"Beyond Lee (beyond.lee@carestream.com)" <beyond.lee@carestream.com>
+Cc:	CHAN Tat-yin <tychan@ha.org.hk>
+Date:	09/09/2011 下午 06:33
+Subject:	Updated test plan
+
+
+
+Dear Beyond,
+ 
+Attached please find the updated test plan for your reference. I’ve tested the TC1 – Plain XRAY workflow, please follow up:
+ 
+1.      Change the key to Accession No. in your broker
+2.      Verify the cancel registration status is successfully processed at your broker
+3.      Verify with hk local support about the study complete status implemented for XRAY and special exam
+ 
+Thanks and see you tomorrow.
+ 
+Janice
+SA(CD2)5, HAITS
+Tel: 2300-8030
+Fax: 3904-0782
+Email: janice.fu@ha.org.hk
+ 
+
+***************************************************************************
+Disclaimer
+
+This Email may contain privileged and confidential information and is solely for the use of the intended recipient. If you are not the intended recipient, you must not print, copy, distribute or take any action in reliance on it. If you have received this Email by mistake, please notify the sender and then delete this Email from your computer. The Hospital Authority does not accept liability arising from Email transmitted by mistake.
+
+Although this Email and any attachments are believed to be free of virus or other defects that might affect any computer system into which it is received and opened, it is the responsibility of the recipient to ensure that it is virus free, and no responsibility is accepted by the Hospital Authority for any loss or damage in any way arising from its use.
+
+All views or opinions expressed in this Email and its attachments are those of the sender and do not necessarily reflect the views and opinions of the Hospital Authority.
+************************************************************************** *[attachment "Test Plan for RIS HL7 Interface with PACS via HAESB HL7 MLLP Service (Carestream).docx" deleted by Liang Liang/10095177/APAC/CSH] 

@@ -1,0 +1,39 @@
+﻿<div>
+    <link href="/app-resources/css/patient-cases-view.css" rel="stylesheet" />
+    <form class="navbar-form form-inline dicom-search-form" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control input-sm input-search" placeholder="{{'PatientNo' | translate}}" ng-model="searchCriteria.patientId">
+            <input type="text" class="form-control input-sm input-search" placeholder="{{'PatientName' | translate}}" ng-model="searchCriteria.patientName">
+            <input type="text" class="form-control input-sm input-search" placeholder="{{'AccessionNo' | translate}}" ng-model="searchCriteria.accessionNo">
+            <button type="submit" class="btn btn-default btn-sm" ng-click="search()">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+    <div id="dicomList" ng-class="{'dicom-select-list':isSelectDicom}">
+        <div id="dicomGrid" kendo-grid k-options="dicomListOptions" k-ng-delay="dicomListOptions" class="dicom-gird"></div>
+        <script id="column-menu-dicoms" type="text/x-kendo-tmpl">
+            <div class="dropdown dicom-gird-dropdown">
+                <a href=" javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="icon-general icon-pencil"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="" ng-click="createNewCase(dataItem)" ng-if="!isSelectDicom">{{ 'CreateNewCase' | translate }}</a></li>
+                    <li><a href="" ng-click="loadImage(dataItem.StudyInstanceUID)">{{ 'LoadImage' | translate }}</a></li>
+                    <li><a href="" ng-click="deleteDicom(dataItem.AccessionNo,dataItem.StudyInstanceUID)">{{ 'Delete' | translate }}</a></li>
+                </ul>
+            </div>
+        </script>
+        <script id="column-menu-createCase" type="text/x-kendo-tmpl">
+            <span class="icon-general icon-status_ok icon-blue" ng-if="dataItem.IsCreatedCase"></span>
+        </script>
+    </div>
+    <div class="dicomList-bottom-pan" ng-if="isSelectDicom">
+        <input type="submit" ng-hide="disableEdit" class="btn btn-green" value="{{'ExamConfirm'|translate}}" ng-click="confirmDicomClick(item)"/>
+        <input type="button" class="btn btn-default" value="{{'ExamCancel'|translate}}" ng-click="cancelDicom()"/>
+    </div>
+    <div kendo-window="moduleTypeWin" k-title="'{{'ExamMaterialType'|translate}}'"
+         k-width="'25%'" k-height="'25%'" k-visible="false" k-modal="true">
+        <div ng-repeat="module in modules" class=" module-item module-{{module.type}}" ng-click="selectModule(module)">{{module.title}}</div>
+    </div>
+</div>

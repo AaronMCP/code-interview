@@ -1,0 +1,308 @@
+﻿<style>
+    .pg-content .navbar {
+        margin-bottom: 5px;
+    }
+
+    .regist-container {
+        position: relative;
+        overflow: hidden;
+        padding-top: 60px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+        .regist-container > .navbar-static-top {
+            padding-left: 15px;
+            box-shadow: none;
+            background: #f2f2f2;
+            background-image: none;
+            border-bottom: 0;
+        }
+
+    .regist-top {
+        margin-top: -60px;
+    }
+</style>
+
+<div class="pg-content" style="padding-bottom: 0;height: 98%;">
+    <div class="content-container regist-container">
+
+        <nav class="navbar navbar-default navbar-static-top navbar-width-1280 regist-top"
+             role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header navbar-static-top">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#registration-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand" style="padding-top: 0; padding-bottom: 0; padding-left: 0;line-height:50px;">
+                        <span style="cursor: pointer;" class="return-button" ng-click="returnToSearchResult()">
+                            <span class="iconfont icon-fanhui"></span>
+                            <span>返回</span>
+                        </span>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse navbar-common" id="registration-nav">
+                    <ul class="nav navbar-nav navbar-right rispro-navbar-nav" style="margin-right: auto;">
+                        <li>
+                            <button type="button" class="btn btn-default btn-sm" translate ng-click="viewRequisition()" ng-disabled="!order.isScan">ViewRequisition</button>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <button type="button" class="btn btn-default btn-sm" translate ng-click="scan()">ScanRequisition</button>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="printRequisition()" translate>PrintRequisition</button>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <button type="button" class="btn btn-default btn-sm" ng-click="printBarCode()" translate>PrintBarCode</button>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-default btn-sm" translate
+                                   ng-disabled="isDisabledPreviewReport" ng-click="selectViewReport()"
+                                   style="padding-right: 5px!important;border-right: 0;">PreviewReport</a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false" ng-disabled="isDisabledPreviewReport"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="viewReportDropdown">
+                                    <li ng-repeat="item in dataViewReprot"><a href="javascript:void(0);" ng-click="viewReport(item.procedureID)">{{item.rpDesc}}</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <a id="rwriteReportLoadImage" class="btn btn-default btn-sm" translate
+                                   ng-disabled="isDisabledWriteReport" ng-click="selectRelateReport()"
+                                   style="padding-right: 5px!important;">WriteReprot</a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                                        data-toggle="dropdown" aria-expanded="false"
+                                        ng-disabled="isDisabledWriteReport"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="editReportDropdown">
+                                    <li id="rlistLoadImage" ng-repeat="item in dataWriteReprot">
+                                        <a ng-click="selectLockedProcedure(item)" style="padding-left: 0;">
+                                            &nbsp;
+                                            <span class="tickMark ng-scope" ng-if="item.status == enums.rpStatus.examination">&nbsp;&nbsp;</span>
+                                            <span class="tickMark ng-scope" ng-if="item.status > enums.rpStatus.examination">✔</span>
+                                            <span class="glyphicon glyphicon-lock" aria-hidden="true" ng-if="item.isLock==true"></span>
+                                            {{item.rpDesc}}
+                                        </a>
+                                    </li>
+                                    <li class='divider' ng-if="writeReprotCount > 1"></li>
+                                    <li ng-if="writeReprotCount > 1">
+                                        <a id="rrelateReportLoadImage" style="text-indent: 1em;" ng-click="selectRelateReport()" translate>RelateReport</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <span id="registrationLoadImage" class="btn btn-default btn-sm" ng-if="isPACSIntegration" ng-disabled="isDisabledLoadImage" ng-click="openPACSImageViewer()" translate style="padding: 5px 10px; height: 21px;line-height: 21px;">LoadImage</span>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-default btn-sm" ng-click='finishExam()' ng-disabled="isDisabledFinishExam" translate>FinishExam</button>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-default btn-sm" ng-disabled="isDisabledTransferReg" ng-click="transferBookingToReg()" translate>Booking2Reg</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!--patient order procedure-->
+        <div class="registration-info-container">
+            <div class="registration-info-title">
+                <span class="registration-info-title-block"><span translate>AccNo</span> {{order.accNo}}</span>
+                <span class="registration-info-title-block">{{'CreateTime'|translate}}: {{order.createTime|date:'yyyy-MM-dd HH:mm'}}</span>
+            </div>
+            <div class="registration-info-pane">
+                <!--patient info-->
+                <div class="registration-info-pane-item">
+                    <div class="col-md-6 pane-item-block" id="patientBaseInfo">
+                        <div class="info-title">
+                            <span class="pull-left" translate>PatientBaseInfo</span>
+                            <a href="javascript:void(0);" class="pull-right iconfont icon-xinjiandengji" ng-click="createNewFlup()" title="{{'NewFlup'|translate}}" style="margin-right:10px;"></a>
+                            <a href="javascript:void(0);" class="pull-right iconfont icon-bianji" ng-click="editPatient()" title="{{'Edit'|translate}}">
+                            </a>
+                        </div>
+                        <div class="info-content">
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 18%;" />
+                                    <col style="width: 35%;" />
+                                    <col style="width: 10%;" />
+                                    <col style="width: 37%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th translate>PatientNo</th>
+                                        <td>{{patient.patientNo}}</td>
+                                        <th translate>VIP</th>
+                                        <td>{{patient.isVip?Yes:No}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>PatientName</th>
+                                        <td>{{patient.localName}}</td>
+                                        <th translate>Gender</th>
+                                        <td>{{patient.gender}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>Birthday</th>
+                                        <td>{{patient.birthday|date:'yyyy-MM-dd'}}</td>
+                                        <th translate>Age</th>
+                                        <td>{{order.currentAge}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>ReferenceNo</th>
+                                        <td>{{patient.referenceNo}}</td>
+                                        <th translate>Telephone</th>
+                                        <td>{{patient.telephone}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>Address</th>
+                                        <td colspan="3">{{patient.address}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pane-item-block" id="orderInfo">
+                        <div class="info-title">
+                            <span class="pull-left" translate>OrderInfo</span>
+                            <a href="javascript:void(0);" class="pull-right iconfont icon-bianji" ng-click="editOrder()" title="{{'Edit'|translate}}">
+                            </a>
+                        </div>
+                        <div class="info-content">
+                            <table class="table">
+                                <colgroup>
+                                    <col style="width: 18%;" />
+                                    <col style="width: 32%;" />
+                                    <col style="width: 18%;" />
+                                    <col style="width: 32%;" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th translate>PatientType</th>
+                                        <td>{{order.patientType}}</td>
+                                        <th translate>ChargeType</th>
+                                        <td>{{order.chargeType}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>ApplyDepartment</th>
+                                        <td>{{order.applyDept}}</td>
+                                        <th translate>ApplyDoctor</th>
+                                        <td>{{order.applyDoctor}}</td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>Observation</th>
+                                        <td ng-bind-html="order.observation|newline" colspan="3"></td>
+                                    </tr>
+                                    <tr>
+                                        <th translate>HealthHistory</th>
+                                        <td ng-bind-html="order.healthHistory|newline" colspan="3"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!--procedure info-->
+                <div class="registration-info-pane-item registration-info-check">
+                    <div class="info-dashed-title">
+                        <span class="pull-left info-dashed-title-content" translate>OrderPlan</span>
+                        <button style="border-radius: 3px;margin-left: 10px;" class="btn btn-primary pull-right" ng-click="getProcedureHistory()" translate>ProceduresHistory</button>
+                        <button style="border-radius: 3px;margin-left: 10px;" class="btn btn-primary pull-right" ng-click="addProcedure()" translate>AddProcedure</button>
+                        <button timeslice-launcher style="border-radius: 3px;" class="btn btn-primary pull-right"
+                                t-operater="timesliceOperater"
+                                t-options="timesliceOption"
+                                ng-click="modifySlice()" ng-if="isBooking">
+                            {{'ModifySplic'|translate}}
+                        </button>
+                    </div>
+                    <div class="info-dashed-content">
+                        <table class="table table-hover quality-table">
+                            <colgroup>
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col />
+                                <col style="width: 120px" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th translate>CheckingItem</th>
+                                    <th translate>CheckingSystem</th>
+                                    <th translate>ModalityType</th>
+                                    <th translate>Modality</th>
+                                    <th translate>Registrar</th>
+                                    <th translate>Status</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat=" row in procedures" ng-if="procedures.length !== 0">
+                                    <td>{{row.checkingItem}}</td>
+                                    <td>{{row.examSystem}}</td>
+                                    <td>{{row.modalityType}}</td>
+                                    <td title="修改设备">
+                                        <!--status:10--Booking-->
+                                        <a href="javascript:void(0);" class="btn btn-sm  ris-popover" ng-if="row.status!=enums.rpStatus.noCheck"
+                                           style="color: #337ab7; padding: 0!important;"
+                                           id='P_{{row.uniqueID}}'
+                                           ng-click="$parent.showUpdateModalityView(row)"
+                                           ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true"
+                                           use-optimized-placement-algorithm="true"
+                                           title="修改设备"
+                                           data-placement="auto bottom top" data-templateurl="/app/registration/views/modality-input-view.html">
+                                            {{row.modality}}
+                                        </a>
+                                        <span ng-if="row.status==enums.rpStatus.noCheck" ng-bind="row.modality"></span>
+                                    </td>
+                                    <td>{{row.registrarName}}</td>
+                                    <td ng-bind-html="row.status|statusFilter:statusList"></td>
+                                    <td class="info-dashed-content-table-operate">
+                                        <a href="javascript:void(0);" class="iconfont icon-baogaomoban"
+                                           style="color: #0fb595; margin-right: 12px;"
+                                           title="{{'PreviewReport'|translate}}"
+                                           ng-hide='row.reportID===null||row.reportID===""'
+                                           ng-mouseenter="$parent.prepareSummary(row)"
+                                           ng-click="$parent.showSummary()"
+                                           ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true"
+                                           use-optimized-placement-algorithm="true"
+                                           data-placement="auto right left bottom top"
+                                           data-templateurl="/app/registration/views/registration-history-report-preview.html"></a>
+                                        <a href="javascript:void(0);" class="iconfont icon-bianji"
+                                           style="color: #0fb595;margin-right: 12px;"
+                                           ng-click="updateProcedure(row)" title="{{'Edit'|translate}}"></a>
+                                        <a href="javascript:void(0);" class="icon-general icon-remove"
+                                           ng-hide="row.status>100||row.status===100"
+                                           ng-click="deleteProcedure(row)" title="{{'Delete'|translate}}"
+                                           style="color: #0fb595;">
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div collapse="isCollapsed" class="info-dashed-subcontent">
+                        <div class="info-dashed-title">
+                            <span class="pull-left info-dashed-title-content">历史检查信息</span>
+                        </div>
+                        <div ng-include="'/app/registration/views/procedures-history-table.html'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

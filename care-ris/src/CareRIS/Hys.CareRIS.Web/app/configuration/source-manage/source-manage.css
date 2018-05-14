@@ -1,0 +1,136 @@
+﻿.source-manage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.source-manage-left {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    top: 50px;
+    bottom: 50px;
+}
+
+.source-manage-center {
+    position: absolute;
+    left: 210px;
+    right: 300px;
+    top: 50px;
+    bottom: 50px;
+    background: #fff;
+    padding-top: 10px;
+}
+.source-manage-center form {
+    height: 300px;
+}
+.source-manage-check {
+    position: absolute;
+    top: 300px;
+    bottom: 0;
+    border: 1px solid #d8d8d8;
+    width: 100%;
+}
+
+.source-manage-check h5 {
+    background: #f2f2f2;
+    text-indent: 1em;
+    font-weight: bold;
+    margin: 0;
+    height: 35px;
+    line-height: 35px;
+}
+.source-manage-check div {
+    position: absolute;
+    top: 35px;
+    bottom: 0;
+    width: 100%;
+    resize:none;
+    background: #fff;
+}
+.source-manage-check div textarea {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 5px;
+}
+.source-manage-center form > .col-lg-6 {
+    padding: 0;
+}
+.source-manage-center form > .col-lg-6 label {
+    font-size: 14px;
+    font-weight: normal;
+    color: #787878;
+    text-align: right;
+    margin-top: 5px;
+}
+.source-manage-center form > .col-lg-6 > label {
+    float: left;
+    width: 25%;
+}
+.source-manage-center form > .col-lg-6 > .form-control {
+    width: 70%;
+    float: right;
+}
+.source-manage-right {
+    position: absolute;
+    width: 300px;
+    right: 0;
+    top: 50px;
+    bottom: 50px;
+    background: #fff;
+    padding-left: 10px;
+}
+
+.source-manage-right .source-group {
+    margin-bottom: 10px;
+}
+.source-manage-right-content {
+    border: 1px solid #bababa;
+    position: absolute;
+    width: 100%;
+    top: 110px;
+    bottom: 0;
+}
+.source-manage-right-content ul li {
+    padding: 10px;
+    list-style-type: circle;
+    list-style-position: inside;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.source-manage-right-content ul li:hover,
+.source-manage-right-content ul li:active,
+.source-manage-right-content ul li:visited {
+    background: #EDF8F9;
+}
+.source-manage-top {
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+}
+.addScanWindow-contnet > div {
+    overflow: hidden;
+    zoom: 1;
+    margin-bottom: 15px;
+}
+.addScanWindow-contnet > div label {
+    width: 20%;
+    text-align: right;
+    font-size: 14px;
+    font-weight: normal;
+    color: #787878;
+    float: left;
+    margin-top: 5px;
+}
+.addScanWindow-contnet > div .form-control {
+    width: 75%;
+    float: right;
+}
+.addScanWindow-bottom {
+    display: flex;
+    justify-content: center;
+}
+.source-manage-bottom button, .source-manage-right button, .addScanWindow-bottom button {
+    margin: 0 3px;
+}

@@ -1,0 +1,140 @@
+﻿<div>
+    <style>
+        .hospital-edit-window .modal-dialog {
+            width: 800px;
+            margin-top: 30px;
+        }
+
+        .ris-form .container-title {
+            padding-left: 20px;
+            padding-right: 0px;
+            margin-bottom: 30px;
+        }
+
+            .ris-form .container-title hr {
+                margin-top: -10px;
+            }
+    </style>
+
+    <p class="ris-module-title">
+        <strong>{{isEdit ? 'EditHospital' : 'CreateHospital' | translate}}</strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </p>
+    <form name="hospitalEditForm" class="ris-form" style=" padding: 20px 20px 10px 10px; overflow-y: auto; overflow-x: hidden; height: 625px;">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Avatar' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ris-avatar data="hospital.hospitalImage" on-changed="hospitalEditForm.$setDirty()" default-image="/app-resources/images/consultation/hospital_portrait_default.png"></ris-avatar>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'OrganizationName' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.hospitalName" required ng-model-options="{ updateOn: 'blur' }" maxlength="100">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label" translate>Status</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ui-select ng-model="hospital.status" theme="select2" search-enabled="false" style="width: 250px;">
+                    <ui-select-match>{{$select.selected ? 'Active':'Inactive' | translate}}</ui-select-match>
+                    <ui-select-choices repeat="status in [true,false]">
+                        <span>{{status ? 'Active':'Inactive' | translate}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><label class="control-label" translate>Location</label></div>
+            <div class="ris-form-input col-md-10">
+                <china-area-selector region="hospital"></china-area-selector>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><label class="control-label" translate>Address</label></div>
+            <div class="ris-form-input col-md-10">
+                <input type="text" class="form-control" ng-model="hospital.address" ng-model-options="{ updateOn: 'blur' }" maxlength="200">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Type' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.hospitalType" ng-model-options="{ updateOn: 'blur' }" maxlength="100">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'Level' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.hospitalLevel" ng-model-options="{ updateOn: 'blur' }" maxlength="100">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'ConsultCenter' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ui-select ng-model="hospital.isConsultation" theme="select2" search-enabled="false" style="width: 250px;">
+                    <ui-select-match>{{$select.selected ?'Yes' : 'No' | translate}}</ui-select-match>
+                    <ui-select-choices repeat="type in [false,true]">
+                        <span>{{type?'Yes' : 'No' | translate}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'DicomPrefix' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.dicomPrefix" required ng-model-options="{ updateOn: 'blur' }" maxlength="10">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Phone' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.telePhone" ng-model-options="{ updateOn: 'blur' }" maxlength="100">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'Website' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="hospital.website" ng-model-options="{ updateOn: 'blur' }" maxlength="200">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Introduction' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea class="form-control" id="input" style="height: 100px;" ng-model="hospital.introduction"></textarea>
+            </div>
+        </div>
+        <div class="container-title">
+            <span translate>DAM-DAPMapping</span>
+            <hr class="container-divide">
+        </div>
+        <div class="row">
+            <div class="col-md-2"><label class="control-label">DAM 1</label></div>
+            <div class="ris-form-input col-md-4">
+                <ui-select ng-model="hospital.dam1ID" theme="select2" search-enabled="false" style="width: 250px;">
+                    <ui-select-match allow-clear>{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices repeat="dam.uniqueID as dam in dams">
+                        <span>{{dam.name}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+    </form>
+
+    <p class="ris-module-footer">
+        <button class="btn ris-btn-primary" translate ng-click="saveHospital()" ng-disabled="hospitalEditForm.$pristine || hospitalEditForm.$invalid ">OK</button>
+        <button class="btn btn-normal" translate ng-click="close()">Cancel</button>
+    </p>
+</div>

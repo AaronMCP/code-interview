@@ -1,0 +1,68 @@
+﻿<div>
+    <style>
+        .content-container {
+            position: relative;
+        }
+
+        #referral {
+            position: absolute;
+            top: 53px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+            #referral .referral-gird {
+                height: 100%;
+            }
+
+        .k-grid tr td {
+            overflow: visible;
+        }
+
+        .k-grid td {
+            border-style: solid !important;
+            border-width: 0 0 1px 0 !important;
+        }
+
+        .innerGrid td {
+            border-width: 0 !important;
+        }
+
+        .k-state-selected {
+            background-color: #fdf6dc !important;
+            color: #333333 !important;
+        }
+
+        .icon-gender-font {
+            font-size: 20px !important;
+        }
+    </style>
+    <nav class="navbar navbar-default navbar-static-top" role="navigation" style="z-index: 1002; margin-bottom: 0px">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="searchResult">
+                <ul class="nav navbar-nav rispro-navbar-nav" style="margin-right:auto;">
+                    <li>
+                        <button type="button" class="btn btn-default btn-sm" ng-click="send()" ng-disabled="isDisabledSend" translate>Send</button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default btn-sm" ng-click="cancelReferral()" ng-disabled="isDisabledCancel" translate>CancelReferral</button>
+                    </li>
+                    <li ng-if="!isMobile">
+                        <button type="button" class="btn btn-default btn-sm" ng-click="previewReport()" ng-disabled="isDisabledPreviewReport" translate>PreviewReport</button>
+                    </li>
+                    <li ng-if="!isMobile">
+
+                        <button type="button" class="btn btn-default btn-sm" ng-click="printReport()" ng-disabled="isDisabledPrintReport" translate>PrintReport</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="referral">
+        <div kendo-grid k-options="referralWorklist" k-ng-delay="referralWorklist" class="referral-gird"></div>
+    </div>
+    <script id="column-menu-createDate" type="text/x-kendo-tmpl">
+        #= kendo.toString(kendo.parseDate(createDt), 'yyyy/MM/dd HH:mm:ss')#
+    </script>
+</div>

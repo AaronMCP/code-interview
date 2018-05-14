@@ -1,0 +1,17 @@
+﻿<ul class="nav nav-tabs nav-stacked ris-navbar-left">
+    <!--<span class="hys-logo"></span>-->
+    <!--<div class="popover bottom rispro-app-switcher" ng-show="isShow">
+        <div class="arrow"></div>
+        <div class="popover-content">
+            <div class="rispro-app-module" style="background-color: #FAC61B;" ng-click="switchToRisApp()">RIS</div>
+            <div class="rispro-app-module" style="background-color: #C96C06;" ng-click="switchToConsultationApp()" translate>Consultation</div>
+        </div>
+    </div>-->
+    <!--<li><img  class="hys-logo" ng-src="/LogoImage/logo.png" /></li>-->
+    <li><a title="工作列表" ng-click="goHome()" class="hys-tab" ng-class="{'active':$state.includes('ris.worklist')}"><span class="iconfont icon-gongzuoliebiao"></span></a></li>
+    <li><a title="新建预约" ng-click="addBooking()" class="hys-tab" ng-class="{'active':$state.includes('ris.newbooking')}"><span class="iconfont icon-xinjianyuyue"></span></a></li>
+    <li><a title="新建登记" ng-click="addRegistration()" class="hys-tab" ng-class="{'active':$state.includes('ris.newregistration')}"><span class="iconfont icon-xinjiandengji1"></span></a></li>
+    <li><a title="质量控制" ng-click="goControl()" class="hys-tab" ng-class="{'active':$state.includes('ris.qualitycontrol')}" ng-if="loginUser.isAdmin||loginUser.isSenior||loginUser.isIntermediate"><span class="iconfont icon-zhiliangkongzhi"></span></a></li>
+    <li><a title="配置" ng-click="goConfiguration()" class="hys-tab" ng-class="{'active':$state.includes('ris.configuration')}"><span class="iconfont icon-peizhi"></span></a></li>
+    <li><a title="模板" ng-click="goTemplate()" class="hys-tab" ng-class="{'active':$state.includes('ris.template')}" ng-if="loginUser.isAdmin"><span class="iconfont icon-moban"></span></a></li>
+</ul>

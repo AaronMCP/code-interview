@@ -1,0 +1,34 @@
+.patient {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .patient-body {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        .search-group {
+            min-width: 950px;
+            float: right;
+            height: 36px;
+            line-height: 36px;
+            >div {
+                line-height: 36px;
+                label {
+                    float: left;
+                    margin-right: 10px;
+                    margin-left: 5px;
+                }
+                input {
+                    float: left;
+                    margin-top: 4px;
+                    width: 80px;
+                }
+            }
+        }
+    }
+}
+
+.ant-calendar-picker {
+    width: 100%;
+}

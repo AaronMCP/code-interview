@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+    <Fragment>
+        <DirectoryRef Id="INSTALLFOLDER">
+            <Directory Id="dirD14FC8A823A878E4AF0649EA144442B1" Name="da" />
+            <Directory Id="dir242DC17B8DFC53C13CAF172FC08B730A" Name="de" />
+            <Directory Id="dir9AE38F4F5CB5E565E774521E138F44FD" Name="es" />
+            <Directory Id="dirB55DFDA91FEE7CCCBC65CA7493B75748" Name="fr" />
+            <Directory Id="dir45DE18DD71F3E8DD6BE4A0E2B48778C8" Name="it" />
+            <Directory Id="dir07100F2E598E14B511BAF734827AE4AB" Name="locales" />
+            <Directory Id="dirCF01D5040FD9778C6964A1321276CBAE" Name="Logs" />
+            <Directory Id="dir2F3D431E0ED26930C4D37E679C7700A1" Name="nl" />
+            <Directory Id="dirB6C57608593BDEA87B90E388CF59E0E8" Name="pl" />
+            <Directory Id="dirE9205C68F964857267FD3312DBFF9A91" Name="ru" />
+            <Directory Id="dir8FBB04D7AB5FE55FCF40758128EC763E" Name="sv" />
+            <Directory Id="dirE562A4656FE03253EA39D17E8127BA05" Name="tr" />
+        </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="ProductComponents">
+            <Component Id="cmp70C32DD99D5C76C17B1021C82FE99424" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF5892D387C7A16C4018D853BE663A533" KeyPath="yes" Source="!(wix.OutputPath)\acse.mgd{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp2AE419398E71BE13B77FEEECBDF9D5E3" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil41452322A370DEA7C69E8E99F29AC70F" KeyPath="yes" Source="!(wix.OutputPath)\acse.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp9038FC48D8AF00E7C1A4108D81101E13" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD433E0B105E9EB2618B9F3F2BE1F62FF" KeyPath="yes" Source="!(wix.OutputPath)\app.manifest" />
+            </Component>
+            <Component Id="cmpFD65F52CD5EC0B46A750F8EEFC3D4422" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1F7E777B326B02F60B86F747002F8605" KeyPath="yes" Source="!(wix.OutputPath)\AutoMapper.dll" />
+            </Component>
+            <Component Id="cmp46C017C55E8475A5DADE1FC7176D3149" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filBDEE9B5D3DB78199A411BCA41D9460F9" KeyPath="yes" Source="!(wix.OutputPath)\AutoMapper.xml" />
+            </Component>
+            <Component Id="cmp62A610FDDE92CF51D05322BEF0E226B2" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil734562E1142DB06F0A4D7B4FFCE2E13D" KeyPath="yes" Source="!(wix.OutputPath)\AutoUpdater.NET.dll" />
+            </Component>
+            
+            <Component Id="cmp28ACA6D79CCC4A4B06C42CB54A9C7BF5" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil972AEA20C0E982B52D610B17131C1E43" KeyPath="yes" Source="!(wix.OutputPath)\AutoUpdater.NET.xml" />
+            </Component>
+            <Component Id="cmp3F9300DF73434BD39DC0B0DD21DC204C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filDE7A1C19E3631329ED1A4379D8F24FB7" KeyPath="yes" Source="!(wix.OutputPath)\AxInterop.DICOMVIEWERLib.dll" />
+            </Component>
+            <Component Id="cmp1F5CE46DD1DF9CA4FB8C313B42FC5DEA" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil6FC13767964518A452C7FD5B0DAFF4C9" KeyPath="yes" Source="!(wix.OutputPath)\C1.C1Report.4.dll" />
+            </Component>
+            <Component Id="cmp77AC5C951CF58446FE78AF8C5D6199BC" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filC87CCDCB327D31D0B4CDF03B5DDA3D1E" KeyPath="yes" Source="!(wix.OutputPath)\cef.pak" />
+            </Component>
+            <Component Id="cmp79286F884DB1708DC01E1AF310348896" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil2765FF17FEE64E748F212D52F4BAE101" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.BrowserSubprocess.Core.dll" />
+            </Component>
+            <Component Id="cmp1CDA8B622AD34DED228816495B1F54D1" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD414186516649EBD72D449960A85B6EA" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.BrowserSubprocess.exe" />
+            </Component>
+            <Component Id="cmpD56C9C8669FB90C94EC360E6FCAEC11D" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filC533CA4596859F7AE42053FF6C380599" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.Core.dll" />
+            </Component>
+            <Component Id="cmp9405017B71323099CF16C1999DEA278F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil83173F9FCC907AD4BAE09160F6001E13" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.Core.xml" />
+            </Component>
+            <Component Id="cmp0C3CB3D99D82ADCC9DE80403F67B081E" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filFD46F57654D5F344C5A9770B8BA2C3C5" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.dll" />
+            </Component>
+            <Component Id="cmp5B56CAB04DFF4B644F50A037029E7857" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filAC5682C884D6A91376C05D0FF26962CE" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.WinForms.dll" />
+            </Component>
+            <Component Id="cmp0BC8EFC12C1B63873B0EEC57DD7FA21A" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil19D15A1B3C06ED2C2C8DCA8EACBE6396" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.WinForms.xml" />
+            </Component>
+            <Component Id="cmp2F9A64AC585476E42962419E0483DBA7" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil02A7CDAF93B6BC9193DC009ABD18827D" KeyPath="yes" Source="!(wix.OutputPath)\CefSharp.xml" />
+            </Component>
+            <Component Id="cmp72AF7414E35E96581AE2FB10FD8DBEE1" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil8C5E2B66235C9522FEB067738F7986F7" KeyPath="yes" Source="!(wix.OutputPath)\cef_100_percent.pak" />
+            </Component>
+            <Component Id="cmp0C10CD841DAF46DF759AAC401A2A59C6" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1C7B1084A62BB6C53F85E7C7745E3F48" KeyPath="yes" Source="!(wix.OutputPath)\cef_200_percent.pak" />
+            </Component>
+            <Component Id="cmp173F6102356776004CB2481FD9493DD2" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF3AED9BA9180DA43F6F1ED4682550008" KeyPath="yes" Source="!(wix.OutputPath)\cef_extensions.pak" />
+            </Component>
+            <Component Id="cmp3324C06954E93AB56835A6E0E1001D04" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3CB6DB8F192F078CE81DC94F4A5F3A4B" KeyPath="yes" Source="!(wix.OutputPath)\coding.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmpE2AF1FF8139D1F4D0BA89504BF949058" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil4DC8BF49B8E7A1EEB767E859F745B6A5" KeyPath="yes" Source="!(wix.OutputPath)\Communication.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp6ADACC365BF758E51EF214CAE514B2D6" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEC0C5CADCE16BB3FEC059773A6BA4585" KeyPath="yes" Source="!(wix.OutputPath)\d3dcompiler_43.dll" />
+            </Component>
+            <Component Id="cmp41DC9741013CA4AD62A4A5FF421F08BC" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil84B847A9F8DABE6B95AF875695C9E6D1" KeyPath="yes" Source="!(wix.OutputPath)\d3dcompiler_47.dll" />
+            </Component>
+            <Component Id="cmp7A316B3A5291CCAF19EC9CE9C809A796" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1F17CE426FF524D0F559BF88D23BF1E8" KeyPath="yes" Source="!(wix.OutputPath)\DamConfig.xml" />
+            </Component>
+            <Component Id="cmp953E935EFD854363EA5BE90BEB265A15" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1663242DBF722C40CBAF8839CC52B5ED" KeyPath="yes" Source="!(wix.OutputPath)\devtools_resources.pak" />
+            </Component>
+            <Component Id="cmpEAE81FA4CD2152EC50D0175E7495CD80" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD75D6B1A32B51CBBCAD6A7DBA3253E38" KeyPath="yes" Source="!(wix.OutputPath)\DICOMInterface.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmpDA12479587C7FC0979BDDAC2D2B2FB2E" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3F1DE9175789FC20DA250D09FBC88486" KeyPath="yes" Source="!(wix.OutputPath)\Dlugosz Repertoire Classics.vc71{pb8+3}.dll" />
+            </Component>
+            <Component Id="cmp55427E3A0D3CEE787FCA00A52CC50472" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filE3A6CC7ED432B8F23B4D8DAAC3D6001A" KeyPath="yes" Source="!(wix.OutputPath)\Dlugosz Repertoire Classics.vc71{pb9}.dll" />
+            </Component>
+            <Component Id="cmpA0E4CB977F7FE44954BD8BAC2A572D56" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil9C229643DAC48324328FB6B35C07979A" KeyPath="yes" Source="!(wix.OutputPath)\Dlugosz Repertoire Ratwin.vc71{pb8}.dll" />
+            </Component>
+            <Component Id="cmp95362DF9DD622095299873F1ACB6E032" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF09C1E8BBCBBF221538E04D207BB5C47" KeyPath="yes" Source="!(wix.OutputPath)\Dlugosz Repertoire Ratwin.vc71{pb9}.dll" />
+            </Component>
+            <Component Id="cmpABDF2985549B39AD06FAF604C2E9485B" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil79070BDB0CFB3AFC38AD13B8E824646A" KeyPath="yes" Source="!(wix.OutputPath)\DShowNET.dll" />
+            </Component>
+            <Component Id="cmp75E4860DDE347F091453B6A45FBA88CE" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil54E64FFACFA8F82F57252BC832154CF9" KeyPath="yes" Source="!(wix.OutputPath)\element.mgd{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp7A29DDAD392142B1867344A25DDCF372" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil5F0C803DFF92D91A68F84225251D9730" KeyPath="yes" Source="!(wix.OutputPath)\element.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp0BFABD100B4065787B40AA6B05938DF7" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1D38723F4A034EDE78B6A3B94EFB99F2" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.dll" />
+            </Component>
+            <Component Id="cmpB8E7B130B6B78399B39307530A3D65B2" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil55247FAD2E00E96001D9F9C3E501E9FA" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.SqlServer.dll" />
+            </Component>
+            <Component Id="cmp0FB966002F85AF6212B7AD3DB5E1B405" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3CA52A37FA9A6E996CBB782A0218A667" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.SqlServer.xml" />
+            </Component>
+            <Component Id="cmp91A60CC354F75BBFA5DB5DA53267FD41" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD05D22EF28FD1B1CB20F3A5C520633B5" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.SqlServerCompact.dll" />
+            </Component>
+            <Component Id="cmp0B8B47C4CBBCBF9D391D6F764437D74D" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil8E586CCD0EFC12307D059B4ED08512C6" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.SqlServerCompact.xml" />
+            </Component>
+            <Component Id="cmp6CF5CB56E3583D0EBD44D2BB10A62A27" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD3369B082D009ADB833B8DD9F589E45E" KeyPath="yes" Source="!(wix.OutputPath)\EntityFramework.xml" />
+            </Component>
+            <Component Id="cmp4EDB907CCF1204556D08DB4CB2706EEF" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filC9F2F15E2B9C44E4AE026752DB3098CA" KeyPath="yes" Source="!(wix.OutputPath)\Foxit.PDF.Printing.40.x86.dll" />
+            </Component>
+            <Component Id="cmp7AE2509747823C2E5492CEFE65A83E23" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil59AC706A70A9A50D1F68DCD6405A2FF9" KeyPath="yes" Source="!(wix.OutputPath)\Foxit.PDF.Printing.40.x86.xml" />
+            </Component>
+            <Component Id="cmpBE3C1D05C7C90455322C9F819A57A07A" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filE7C602A91344AD969255F20A2CA7411A" KeyPath="yes" Source="!(wix.OutputPath)\Hardcodet.Wpf.TaskbarNotification.dll" />
+            </Component>
+            
+            <Component Id="cmp1AB3F692680AD43D977D2B4893C60651" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil8DCFE8E2064CED909E7B76E107F2D738" KeyPath="yes" Source="!(wix.OutputPath)\Hardcodet.Wpf.TaskbarNotification.xml" />
+            </Component>
+            <Component Id="cmpED49553942769829999921261621131F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil06D5FE49793BB1C400EF2CB86637F107" KeyPath="yes" Source="!(wix.OutputPath)\HisRisService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp7B89551ACDB040C98249D253F80D7165" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil11C50B0EC5D8E792DB9FD95784E4A0E5" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Common.dll" />
+            </Component>
+            <Component Id="cmp4DA59797169F46FB2B1E3F2D15DA7645" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil525F041C0F6F9CBE8AE4B950376BE4CE" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Common.dll.config" />
+            </Component>
+            <Component Id="cmpBC443A117FFEDB1CCB3E3B2143FF94E2" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF62668FCDA5A56FE5B01EC27F976EF3A" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.DAP.dll" />
+            </Component>
+            <Component Id="cmp5B6FFC83777FBD094ADE93E8B6247245" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil5954C03B230600B65DFE749AA2F8BA47" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.DAP.dll.config" />
+            </Component>
+            <Component Id="cmp0276EA1946C42ABE56A528E46615C2F8" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil2F8EC4392B2F6824F8F0F70B32E45384" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.DICOMReceiver.dll" />
+            </Component>
+            <Component Id="cmp718961E6939CC1C5F2F5735F4A11A63C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD127E46E0F1B48393A7C51CC09B338A0" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.DICOMReceiver.dll.config" />
+            </Component>
+            <Component Id="cmp9D1EB7B4C2B530C25335BCBC83024977" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil7F607E284C553E64D998164641C2E5EA" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Kdt.dll" />
+            </Component>
+            <Component Id="C_Hys_CareAgent_Main" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="Hys_CareAgent_Main" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Main.exe" />
+            </Component>
+            <Component Id="cmp75DB6975C61680128AC0462CEAC1EA90" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil75E05E4EB074C06D2D661713241EA642" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Main.exe.config" />
+            </Component>
+            <Component Id="cmp15BB40D7D33BCA62FB46170F426AEFCF" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filA4F2C782FAB2374795C740EC2EE5A084" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.Upload.dll" />
+            </Component>
+            <Component Id="cmp4A9D6A58782FDEA9614A9FC071102840" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil589B3D374C189B5648DAE56AF6DAEC30" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.WcfService.dll" />
+            </Component>
+            <Component Id="cmpF314ED9C3188C3EBF8268EDE2CF51165" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil24D535883EBF77C5EF1324104C6E01FE" KeyPath="yes" Source="!(wix.OutputPath)\Hys.CareAgent.WcfService.dll.config" />
+            </Component>
+            <Component Id="cmpBDBA16CBEE531189F4ADEB44F36FA9CA" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil22B9AE685C747A265E9A4BC34E90558B" KeyPath="yes" Source="!(wix.OutputPath)\icudtl.dat" />
+            </Component>
+            <Component Id="cmpFBA8E0B5E124816CFFA0D90EABBD345C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEFE12C184B36A34A57F4A64D838DC053" KeyPath="yes" Source="!(wix.OutputPath)\Kodak KFC Language.vc71{i4r4}.dll" />
+            </Component>
+            <Component Id="cmp798F30A6E6206126BF1AC1366B3C8FC4" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil97E2CA14BD9E4195748EB16E63C3E0D0" KeyPath="yes" Source="!(wix.OutputPath)\Kodak KFC Types.vc71{i4r4}.dll" />
+            </Component>
+            <Component Id="cmp2DBF8B1ADC63628B6A8AC335F1979A4C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD0581EC9D860B37C7035787902F55D10" KeyPath="yes" Source="!(wix.OutputPath)\libcef.dll" />
+            </Component>
+            <Component Id="cmp363F691415DD37B081CFC985FD89E1ED" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filE4A8517FAA43FB8132ED89D5B5EB797C" KeyPath="yes" Source="!(wix.OutputPath)\libEGL.dll" />
+            </Component>
+            <Component Id="cmp8A64E7CE3EE5BD2D11823B3C59FDDE7C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil65C8C2AF07D3CA4AE7D7A2844A4D914E" KeyPath="yes" Source="!(wix.OutputPath)\libGLESv2.dll" />
+            </Component>
+            <Component Id="cmp18E80A0BB5A41A9BD6608BEE883F1CAE" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filA74C4991E9CC7A9868AE22B524511788" KeyPath="yes" Source="!(wix.OutputPath)\Log4net.config" />
+            </Component>
+            <Component Id="cmp13D58469BCB864EB53214ED46E622188" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil28F7A9478894C77C5F6C2A95DAA4B459" KeyPath="yes" Source="!(wix.OutputPath)\log4net.dll" />
+            </Component>
+            <Component Id="cmp742785C9A7B88BE6B2E81C2322E3D2EE" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filA307C00D897BECB908C510DE71A3AD29" KeyPath="yes" Source="!(wix.OutputPath)\log4net.xml" />
+            </Component>
+            <Component Id="cmpC15A2221D1A05D645DDD4F2D43291826" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filB6BE10BA74778CB840F90E23636CE163" KeyPath="yes" Source="!(wix.OutputPath)\MadMilkman.Ini.dll" />
+            </Component>
+            <Component Id="cmp06434F432A0A7A54D188D8A0AFF30187" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil9F07DA129C1564A9773EF6D3B207313D" KeyPath="yes" Source="!(wix.OutputPath)\MadMilkman.Ini.xml" />
+            </Component>
+            <Component Id="cmp88A64D3674EC23789D83499DD793A1B5" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil06C8C076DAEF589B1825C1F65BFC73FF" KeyPath="yes" Source="!(wix.OutputPath)\MeetingConfig.xml" />
+            </Component>
+            <Component Id="cmpF2F1C15A47B64F045101B1AE5B4D6054" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filC342596B66E98254BB6E1CFFE50AE4AA" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.ServiceLocation.dll" />
+            </Component>
+            
+            <Component Id="cmp6B78BD7805E072190247D7503A0E7659" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil97C995578E25C0BCDEA9A9A8984D1772" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.ServiceLocation.xml" />
+            </Component>
+            <Component Id="cmpAA856A11EEF773F32618D29332CADFD0" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filFBB0E3892854598F759A072FB8581B46" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.Unity.Configuration.dll" />
+            </Component>
+            <Component Id="cmp012342D81A705F0A2AFF3CBC8F1D57B5" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3FB6253C70AF30707F6DEAD8F701E80B" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.Unity.Configuration.xml" />
+            </Component>
+            <Component Id="cmp5141EFC969B8F1A9A0F1A01FFAD874BA" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filE0B15D2B280E1EDFAB44F822C47D44ED" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.Unity.dll" />
+            </Component>
+            <Component Id="cmpCFA8F064372A36F9EE1B802542E54972" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3861DDA5FAC6B55ED05EA3EC3DB8996A" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Practices.Unity.xml" />
+            </Component>
+            <Component Id="cmp8BA75E72607AF2E0F6AF81ABD889D2D3" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil10E5E9B843518B3F62B1E938B2B2055A" KeyPath="yes" Source="!(wix.OutputPath)\Microsoft.Web.Infrastructure.dll" />
+            </Component>
+            <Component Id="cmp8F39B50F7A84C7CA93F615D086438680" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil191CF44E2EF9E885284DFD23D90FB448" KeyPath="yes" Source="!(wix.OutputPath)\MPPSService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp25AF5D3C948FE8C55BE5F69245CEBD08" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filD49FF59BB30119F67B37BF288C6C1F70" KeyPath="yes" Source="!(wix.OutputPath)\msvcp71.dll" />
+            </Component>
+            <Component Id="cmpE5A93C1B258884D710FAF12C3EFAF6AC" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil4B81F3E4EA088AFC163EF9818776B03D" KeyPath="yes" Source="!(wix.OutputPath)\msvcr71.dll" />
+            </Component>
+            <Component Id="cmpD2494A4F9168D06F172F90837CA4F9FB" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filDE471C18BBAAC9BEAC80121FDB8A0A74" KeyPath="yes" Source="!(wix.OutputPath)\natives_blob.bin" />
+            </Component>
+            <Component Id="cmpBC4FC00A26E7D32479D42D3411317FC5" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil90A8AAD9FC612906D405476D61CEA3F4" KeyPath="yes" Source="!(wix.OutputPath)\Newtonsoft.Json.dll" />
+            </Component>
+            <Component Id="cmp125C379E185231EFADA4CB4301BD0A9E" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil3A2F44A7730E98D18E0948B3261DFABD" KeyPath="yes" Source="!(wix.OutputPath)\Newtonsoft.Json.xml" />
+            </Component>
+            <Component Id="cmpB96B1D10DBEB86CCE9F41E2CF038AA08" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEC8751E9D92974152B0C15D1F8A1E83D" KeyPath="yes" Source="!(wix.OutputPath)\pacs.json" />
+            </Component>
+            <Component Id="cmp9AECFD7BA172BFAE2C2FD44F6662B0A9" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filC5BADEFA0200E610E1342E0D23A980B4" KeyPath="yes" Source="!(wix.OutputPath)\PrintService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp5EEB4C1D2FCCA0A8EC6303FED10AECA3" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil639017F97449C77DC977FE48D18C8AAB" KeyPath="yes" Source="!(wix.OutputPath)\QueryRetService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp502591F7CF4C605EDE7BA63509CB751F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil880CC9252F2536067E68688D233C67AD" KeyPath="yes" Source="!(wix.OutputPath)\snapshot_blob.bin" />
+            </Component>
+            <Component Id="cmp04DB9F5057371CA0E33FB1E1DCD85CB6" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil097E43C6697547F41F318B6B37507D9B" KeyPath="yes" Source="!(wix.OutputPath)\StoreComService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp57FE4D95C6567EBFA094ACCDE3A17404" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1238B136FCE96C4C0B430570C26A7F19" KeyPath="yes" Source="!(wix.OutputPath)\StoreService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmpE763840EE41F851D57CAC8F2218E3DA8" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filA6034E877F3DDC0C35D1EDEECB7E7C3C" KeyPath="yes" Source="!(wix.OutputPath)\System.Data.SqlServerCe.dll" />
+            </Component>
+            <Component Id="cmp06E205989506C503C7B11F6FE4B449C6" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1585A04883FF89B289FC2454E8EDC783" KeyPath="yes" Source="!(wix.OutputPath)\System.IO.dll" />
+            </Component>
+            <Component Id="cmp29F939233941398174AE650F10917EE2" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil60F9BEFA23716E87B5A5BBE1A9D95798" KeyPath="yes" Source="!(wix.OutputPath)\System.IO.xml" />
+            </Component>
+            <Component Id="cmpBA5ABAFBBC1B2CC2232B3287ABE89965" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil7D48B04FDEE4653060C375A94010A762" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.dll" />
+            </Component>
+            <Component Id="cmp6FD941A56CFB6288079AD725FC4C6CC9" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF62ABB9A1DBA3DB8EA89A66F6CDF9023" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.Formatting.dll" />
+            </Component>
+            <Component Id="cmpFEEE7919C5B2121D5C590DFC8C3AEB3F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil6866E993A383A98854F8CAC32E9E1C07" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.Formatting.xml" />
+            </Component>
+            <Component Id="cmp5CBF91F07AFC195A7A5B6006DE491FFF" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filDA6A662B79BB9F3A75FFF1382B78F6E7" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.WebRequest.dll" />
+            </Component>
+            <Component Id="cmpAC7F14E01CF7B0339BC7498B004EAB5A" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEEA458C8C389DFCE095A6EDEDB33304D" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.WebRequest.xml" />
+            </Component>
+            <Component Id="cmp42DCC6F5718EE9E99FD27D6EC4DC8B65" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filBEC8D8E145CC6BF308933B7C61B08E0A" KeyPath="yes" Source="!(wix.OutputPath)\System.Net.Http.xml" />
+            </Component>
+            <Component Id="cmp5535623A0957F12A580F2E0AE9AB7F24" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1F7505072F9E81ACFDD7E6910787823E" KeyPath="yes" Source="!(wix.OutputPath)\System.Runtime.dll" />
+            </Component>
+            <Component Id="cmp069F536DD65148B9E0DADDF7F860B86D" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil6366DF6D9D8AF01E24128E6663573FDA" KeyPath="yes" Source="!(wix.OutputPath)\System.Runtime.xml" />
+            </Component>
+            <Component Id="cmp174FEA916F072AFEF2DC68827B08C208" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil7F3C8D53605A91C20728F321E6100DC4" KeyPath="yes" Source="!(wix.OutputPath)\System.Threading.Tasks.dll" />
+            </Component>
+            <Component Id="cmpE2022A5DDEE4638DF06043143814CE16" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil1E7D5F59F3BB9AD60650D47B9BE37AAF" KeyPath="yes" Source="!(wix.OutputPath)\System.Threading.Tasks.xml" />
+            </Component>
+            <Component Id="cmp71DA7097E14917B9AC30A86E75301E99" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filF67AC09BAB1A1F37B45F12A0595AC034" KeyPath="yes" Source="!(wix.OutputPath)\tomahawk.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp56CB242AF2C8CD38291A3A53BD123E6C" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filE036836409D1FEDA6621AB0171E59647" KeyPath="yes" Source="!(wix.OutputPath)\types.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmpBB476CF50B27C7C0F6F0A635FE219B06" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil82AAB8290E7A36E549B22B58E248B98D" KeyPath="yes" Source="!(wix.OutputPath)\utils.mgd{i14r5}.dll" />
+            </Component>
+            <Component Id="cmpC227CC054A577292E33A05BD0070514A" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil372FC68CE1E86B01823937DC8BFF02F7" KeyPath="yes" Source="!(wix.OutputPath)\WebActivatorEx.dll" />
+            </Component>
+            <Component Id="cmp0C049D3465D62CFB71A1749269255C8F" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="filEEDDB838AB531DA8517487CA67D95B8F" KeyPath="yes" Source="!(wix.OutputPath)\widevinecdmadapter.dll" />
+            </Component>
+            <Component Id="cmp718BE03668C8935CC5955D24D4A44514" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil8B654B13D001C995FA336DE3FBB043C1" KeyPath="yes" Source="!(wix.OutputPath)\WindowsFormsIntegration.dll" />
+            </Component>
+            <Component Id="cmpDE39A1996BA5E63AB5A520C09518FE50" Directory="INSTALLFOLDER" Guid="*">
+                <File Id="fil515ED0534EE4B39903447CAACB4D61FD" KeyPath="yes" Source="!(wix.OutputPath)\WorkListService.vc7{i14r5}.dll" />
+            </Component>
+            <Component Id="cmp7A52A7006AA31864612288DFDC2D6C89" Directory="dirD14FC8A823A878E4AF0649EA144442B1" Guid="*">
+                <File Id="filBB26C49B09E0EB24E92504C6E9C73C2C" KeyPath="yes" Source="!(wix.OutputPath)\da\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmpAD847E5D07A4019928B6F50A0E259314" Directory="dir242DC17B8DFC53C13CAF172FC08B730A" Guid="*">
+                <File Id="filAB45D4B252E6609FAB597DAEDD781CAB" KeyPath="yes" Source="!(wix.OutputPath)\de\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmp082975F0F52B80826E2A9F1F6C3752A4" Directory="dir9AE38F4F5CB5E565E774521E138F44FD" Guid="*">
+                <File Id="fil7BD9DB26FCDB44E3B0C747C9728B90CD" KeyPath="yes" Source="!(wix.OutputPath)\es\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmpAD1075A401127AB36B9C9EEC70A133A4" Directory="dirB55DFDA91FEE7CCCBC65CA7493B75748" Guid="*">
+                <File Id="fil2005C914A61E6D57D915D00D44ED729D" KeyPath="yes" Source="!(wix.OutputPath)\fr\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmpE8AD76FDEB68BBBF9D4DAF6EF9283617" Directory="dir45DE18DD71F3E8DD6BE4A0E2B48778C8" Guid="*">
+                <File Id="filD2ECE40B696341BA76D2F991EE202E74" KeyPath="yes" Source="!(wix.OutputPath)\it\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmp93B53FD801CE3270DE5D9AF01811CD8F" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil32C51E9E820B1FEE0FB7D2E6E3650736" KeyPath="yes" Source="!(wix.OutputPath)\locales\am.pak" />
+            </Component>
+            <Component Id="cmpD2797D63574120F1A02B6E6185F4B7E2" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filE62371EEC2BE8913C457C9896BC40E9A" KeyPath="yes" Source="!(wix.OutputPath)\locales\ar.pak" />
+            </Component>
+            <Component Id="cmp1AF90EE181A1DEC5823E23D7370B0AC2" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil197468F9B67748B054E36BB298793554" KeyPath="yes" Source="!(wix.OutputPath)\locales\bg.pak" />
+            </Component>
+            <Component Id="cmp9122F3FD82E13BBDEB542C177A0EC7D5" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil69C5332C84289AEB85A0CD1354977C6F" KeyPath="yes" Source="!(wix.OutputPath)\locales\bn.pak" />
+            </Component>
+            <Component Id="cmp370DC6B00487D74A5F7A2E29559F1D90" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil080B7233B73921355D2AFD19757F80F4" KeyPath="yes" Source="!(wix.OutputPath)\locales\ca.pak" />
+            </Component>
+            <Component Id="cmpAB150C6499776718D81F89B0265B385C" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil5711D2A370AA838D04CC84A20FB2D003" KeyPath="yes" Source="!(wix.OutputPath)\locales\cs.pak" />
+            </Component>
+            <Component Id="cmpEEA4B811F2050E122093474F4C3DDC22" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filF93366DEB72F1954365B01581D840CB2" KeyPath="yes" Source="!(wix.OutputPath)\locales\da.pak" />
+            </Component>
+            <Component Id="cmp8E7B894FEEA9D2544CD2711A257B11A4" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filDEA640C897520178D603DAE3884CE9E1" KeyPath="yes" Source="!(wix.OutputPath)\locales\de.pak" />
+            </Component>
+            <Component Id="cmpABEF315E588C010C42447949EC808AE4" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filD99255DFF55AFC1FCFB6E5CAA9882BC3" KeyPath="yes" Source="!(wix.OutputPath)\locales\el.pak" />
+            </Component>
+            <Component Id="cmp116941C2E2E7C9B899A83AD97EF8E7D7" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filD44653A1ED9BC2BFC4319FBAEF2673C4" KeyPath="yes" Source="!(wix.OutputPath)\locales\en-GB.pak" />
+            </Component>
+            <Component Id="cmp1E9EB69C90AF854878152528EE404BA8" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filFFCCBA7E104B020272FC529C9BAB0AAC" KeyPath="yes" Source="!(wix.OutputPath)\locales\en-US.pak" />
+            </Component>
+            <Component Id="cmp15BDFF12521FE67EBA060B799E1A0D93" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil63E338785F4491D992D3903722D3B6EF" KeyPath="yes" Source="!(wix.OutputPath)\locales\es-419.pak" />
+            </Component>
+            <Component Id="cmp1F53EACB722F43303A8863937CAE9291" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil0766667F6ABA83BE7F48FCAC1A2901E1" KeyPath="yes" Source="!(wix.OutputPath)\locales\es.pak" />
+            </Component>
+            <Component Id="cmp10AC23BF72464B8B90624A3E997776E4" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filF4514DAA92D828FFB8780676B26FEBC0" KeyPath="yes" Source="!(wix.OutputPath)\locales\et.pak" />
+            </Component>
+            <Component Id="cmp8D529815FA519DD03174555F81E9432C" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil9C1652CFE226171A1DAB8DE1932FC343" KeyPath="yes" Source="!(wix.OutputPath)\locales\fa.pak" />
+            </Component>
+            <Component Id="cmpC0300B48619E85CC72FE79E8917363E0" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil3586CA3C720B816206B05A4B2FC4AAD3" KeyPath="yes" Source="!(wix.OutputPath)\locales\fi.pak" />
+            </Component>
+            <Component Id="cmpBF1200CBA7335661198621024C47AB95" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil307AD6DB42F42A7B16855D8BD515BE70" KeyPath="yes" Source="!(wix.OutputPath)\locales\fil.pak" />
+            </Component>
+            <Component Id="cmpF0433B61030E830A7CDE05B6B5715E3F" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filEED9FF376F27B3DEADF4D9F000FF635E" KeyPath="yes" Source="!(wix.OutputPath)\locales\fr.pak" />
+            </Component>
+            <Component Id="cmp063FD815C8251B48E56F2C4EADDA9BAD" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil58E5427690D013654296A6731139691E" KeyPath="yes" Source="!(wix.OutputPath)\locales\gu.pak" />
+            </Component>
+            <Component Id="cmp3143C2120E07B8B0960135F609F9046A" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil6D4577F865C2CA110A3C91456B2B9FFA" KeyPath="yes" Source="!(wix.OutputPath)\locales\he.pak" />
+            </Component>
+            <Component Id="cmpF56E022E28C51D72B3E1973D3779D239" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filD04C5871771E24822D916CBB4F175C48" KeyPath="yes" Source="!(wix.OutputPath)\locales\hi.pak" />
+            </Component>
+            <Component Id="cmp57995CAE9ED4DBAF0A8D6A3CFD22B801" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filD841A14EBCF7D80432707F0EA0D9D001" KeyPath="yes" Source="!(wix.OutputPath)\locales\hr.pak" />
+            </Component>
+            <Component Id="cmp3FFA918A28CB6851B668FA38EF737013" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filA1F200EBD3BE190C99D672E49782958C" KeyPath="yes" Source="!(wix.OutputPath)\locales\hu.pak" />
+            </Component>
+            <Component Id="cmpD81CBFA59C14DC5F01C36D5F2D70E892" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil2BEC26B3E56A049BB9FA51553BD6A88C" KeyPath="yes" Source="!(wix.OutputPath)\locales\id.pak" />
+            </Component>
+            <Component Id="cmpC4FB3A2F1FEC6CFCDE9A0BE743E7F6D9" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filD167F7F85C4873B561A69E160D748432" KeyPath="yes" Source="!(wix.OutputPath)\locales\it.pak" />
+            </Component>
+            <Component Id="cmp99DA4070D1A05ED903D0B1045F4CB807" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil30C367B34BE066E12F9728A7615E6A88" KeyPath="yes" Source="!(wix.OutputPath)\locales\ja.pak" />
+            </Component>
+            <Component Id="cmp6A6473C02425A6733CC160845C56436E" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil1C71CED22AA3F3867FBFA98B8B2EDFAF" KeyPath="yes" Source="!(wix.OutputPath)\locales\kn.pak" />
+            </Component>
+            <Component Id="cmp4BC8631015E4672D4836CDCE97E2CEF9" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil577C0634EDCB4B746195D64D9E2F9E81" KeyPath="yes" Source="!(wix.OutputPath)\locales\ko.pak" />
+            </Component>
+            <Component Id="cmp5218FB633BEDEE8BECAD031A2F5D0598" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil3E5F1496C928D4B825DCDB0307241AE0" KeyPath="yes" Source="!(wix.OutputPath)\locales\lt.pak" />
+            </Component>
+            <Component Id="cmpFBB47518212FA949EBDDB5C9237979DC" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filA398FE151CDF7979BF9AC53D8CFA82C5" KeyPath="yes" Source="!(wix.OutputPath)\locales\lv.pak" />
+            </Component>
+            <Component Id="cmpACA7EA0460B91B4D1931EB61430E084A" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil77A7A24D45400F96ECFBB9886F1CEFD6" KeyPath="yes" Source="!(wix.OutputPath)\locales\ml.pak" />
+            </Component>
+            <Component Id="cmp51ED07B7B76B22DF2F693142B411B747" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filF20231EEB000EA181CD44731D794D329" KeyPath="yes" Source="!(wix.OutputPath)\locales\mr.pak" />
+            </Component>
+            <Component Id="cmpCF56E74D3DEDCFFA6B07A0F646766426" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil52A07789EE7C0E7157531E2D36180DC3" KeyPath="yes" Source="!(wix.OutputPath)\locales\ms.pak" />
+            </Component>
+            <Component Id="cmpE148651493613E026DE50D51E32C9D36" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil7A6CCCAB61609A4FE3516B07CE34CB59" KeyPath="yes" Source="!(wix.OutputPath)\locales\nb.pak" />
+            </Component>
+            <Component Id="cmpA550175598E90A95F9EA0FE0B5420674" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filCC586543F15D26FEEDB970F9C8E3C1F8" KeyPath="yes" Source="!(wix.OutputPath)\locales\nl.pak" />
+            </Component>
+            <Component Id="cmpB8D9D975685D2766C0145A80BBC753D2" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filACB5827860225636FDADCBE0A180A72C" KeyPath="yes" Source="!(wix.OutputPath)\locales\pl.pak" />
+            </Component>
+            <Component Id="cmp2D2F750D066E5C616BF96CC2D2C19C3F" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil77BBF2F61A3922ADC5ACE58CB631FBA3" KeyPath="yes" Source="!(wix.OutputPath)\locales\pt-BR.pak" />
+            </Component>
+            <Component Id="cmp2C93BD707B4E95E9B4C39746C6AFC072" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil94C287653A43818B9DB420EEAD365A81" KeyPath="yes" Source="!(wix.OutputPath)\locales\pt-PT.pak" />
+            </Component>
+            <Component Id="cmp1CC474982F842464BC57160F3469FE9D" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil660BDA7672AB67027249AC93E7DD2CE1" KeyPath="yes" Source="!(wix.OutputPath)\locales\ro.pak" />
+            </Component>
+            <Component Id="cmpA03EC2080F86CAD0190A073F463D0A6A" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil32F940C60F041D18490E308365ADB39C" KeyPath="yes" Source="!(wix.OutputPath)\locales\ru.pak" />
+            </Component>
+            <Component Id="cmp46AE10957CC5BFF14ADF2F589AF84ADB" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil9AA414870F50D9CF1BB2E32C25A51FD5" KeyPath="yes" Source="!(wix.OutputPath)\locales\sk.pak" />
+            </Component>
+            <Component Id="cmp966963C734F9127821405781A74C395A" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filB230566A7E9DCD1BE19EC00D694BA972" KeyPath="yes" Source="!(wix.OutputPath)\locales\sl.pak" />
+            </Component>
+            <Component Id="cmp3A37E594568D9C8FC805401E9F537A15" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil2808F891D8F9BDBE596DCA07A733D482" KeyPath="yes" Source="!(wix.OutputPath)\locales\sr.pak" />
+            </Component>
+            <Component Id="cmpB3B6BCE656FBF128D00532AC082351CD" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil6D5A260A7B169BE6302A256ED94AE364" KeyPath="yes" Source="!(wix.OutputPath)\locales\sv.pak" />
+            </Component>
+            <Component Id="cmp01DA64CB05C8208C5866696CCA3A6F1D" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil33988F1E51A9F13306543F8EABBAB196" KeyPath="yes" Source="!(wix.OutputPath)\locales\sw.pak" />
+            </Component>
+            <Component Id="cmp6B2D68FA43306E35219A58389D7E6E72" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filA074476FF2286963A6DE4A84A6C38F70" KeyPath="yes" Source="!(wix.OutputPath)\locales\ta.pak" />
+            </Component>
+            <Component Id="cmp6EE3CCCBBCF4AF2E6ABEA15A31097EB7" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filDDAA366E0596957885171C41B8C0CED7" KeyPath="yes" Source="!(wix.OutputPath)\locales\te.pak" />
+            </Component>
+            <Component Id="cmp2BA1A13793CDF598C1BC89182DAB4F9F" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filB1DBF99CA7F144B8F04607E2FBF3F16A" KeyPath="yes" Source="!(wix.OutputPath)\locales\th.pak" />
+            </Component>
+            <Component Id="cmpFB95F9A9F80BAB90CBF5CDABAC0461A2" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filC862018B514C4C7499938D51D5C50B6F" KeyPath="yes" Source="!(wix.OutputPath)\locales\tr.pak" />
+            </Component>
+            <Component Id="cmpCDA6E7086714AD0613F7CBA0546FA99F" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil8B04B85DE94D1EC009615182A0D5AD74" KeyPath="yes" Source="!(wix.OutputPath)\locales\uk.pak" />
+            </Component>
+            <Component Id="cmp80642D2D1994622CA31AC0ED1ED014D1" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filE214F8C85939B07DAA0CDFAE4A0F5700" KeyPath="yes" Source="!(wix.OutputPath)\locales\vi.pak" />
+            </Component>
+            <Component Id="cmp5775E2EF67EC1F2A7A26152C6507EA35" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="fil5445EF7D54ED17AE5131F5EF25F54F2C" KeyPath="yes" Source="!(wix.OutputPath)\locales\zh-CN.pak" />
+            </Component>
+            <Component Id="cmpC00155C4F0BBC6D4B881D098F564FA42" Directory="dir07100F2E598E14B511BAF734827AE4AB" Guid="*">
+                <File Id="filAD427424F750F9EADEDB5030ACC85834" KeyPath="yes" Source="!(wix.OutputPath)\locales\zh-TW.pak" />
+            </Component>
+            
+            <Component Id="cmpE87744AD9F8464B26CE2161C636F8951" Directory="dir2F3D431E0ED26930C4D37E679C7700A1" Guid="*">
+                <File Id="fil50CB822A75EB7A18D935894D0389EC6D" KeyPath="yes" Source="!(wix.OutputPath)\nl\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmp51EB8FB757E7B406EF4C4812AAA5282E" Directory="dirB6C57608593BDEA87B90E388CF59E0E8" Guid="*">
+                <File Id="fil31B28D6AC5A80D7B5D34AFA8638A28D6" KeyPath="yes" Source="!(wix.OutputPath)\pl\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmp5AE50C6A24CB1D82BA447952E0B9E20F" Directory="dirE9205C68F964857267FD3312DBFF9A91" Guid="*">
+                <File Id="filEF86E75255311A0E1B87918B9C3BC7EF" KeyPath="yes" Source="!(wix.OutputPath)\ru\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmp080C2D522F603923AD40A41557717920" Directory="dir8FBB04D7AB5FE55FCF40758128EC763E" Guid="*">
+                <File Id="fil4C1155EC6ADC0D41C30A4D0C1F46F285" KeyPath="yes" Source="!(wix.OutputPath)\sv\AutoUpdater.NET.resources.dll" />
+            </Component>
+            <Component Id="cmpE397D2376B649010E440E295D35D5A0C" Directory="dirE562A4656FE03253EA39D17E8127BA05" Guid="*">
+                <File Id="fil5FBDC325127F202EAE74067321EA6FB9" KeyPath="yes" Source="!(wix.OutputPath)\tr\AutoUpdater.NET.resources.dll" />
+            </Component>
+        </ComponentGroup>
+    </Fragment>
+</Wix>

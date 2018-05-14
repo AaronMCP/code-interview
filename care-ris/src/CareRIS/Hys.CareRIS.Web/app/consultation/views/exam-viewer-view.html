@@ -1,0 +1,21 @@
+﻿<div class="exam-viewer">
+    <div class="exam-viewer-tree-panel" kendo-tree-view="examInfoTree" k-data-source="treeSource">
+        <a k-template href="javascript:void(0);" ng-click="showFile(dataItem)">{{dataItem.text}}</a>
+    </div>
+    <div class="exam-viewer-body">
+        <div class="exam-viewer-toolbar">
+            <ul>
+                <!--<li><span class="glyphicon glyphicon-menu-right" title="{{'nextfile'|translate}}"></span></li>-->
+                <li ng-show="isDicom && !isMobile">
+                    <input style="margin: 8px;" class="btn btn-default" type="button" value="{{'AdvancedView'|translate}}" ng-click="viewDicom()">
+                    <input type="checkbox" ng-model="isSystem5DX" ng-checked="isSystem5DX" ng-click="setIsSystem5DX()">
+                    <span translate style="color:white;">IsSystem5DX</span>
+                </li>
+                <li ng-show="isImage&&!isFullScreen"><span class="glyphicon glyphicon-fullscreen" title="{{'fullScreen'|translate}}" ng-click="fullScreen()"></span></li>
+                <li ng-show="isImage&&isFullScreen"><span class="icon-shrink" title="{{'Restore'|translate}}" ng-click="restore()"></span></li>
+            </ul>
+        </div>
+        <div class="exam-viewer-file-container"></div>
+        <div class="loader" ng-show="fileLoading"></div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+﻿
+<div class="popover filter-list">
+    <div class="arrow"></div>
+    <div class="select-pane-title">
+        <a href="javascript:void(0);" class="cleararea" translate ng-click="clearDep()">ClearSelectedDep</a>
+    </div>
+    <span class="label label-info label-filter" ng-repeat="dp in hoveredDepartments" ng-click="selectDepartment(dp)">{{dp.name}}</span>
+</div>
+

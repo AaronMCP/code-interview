@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OutboundConfig_for_ris.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="InterfaceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SQLInbound</Value>
+    </Setting>
+    <Setting Name="RISTablePrefix" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GW</Value>
+    </Setting>
+    <Setting Name="RISDBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GCRis2</Value>
+    </Setting>
+    <Setting Name="RISDBInstanceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(local)\CSSERVER</Value>
+    </Setting>
+    <Setting Name="RISDBUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="RISDBPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="RISDBWindowsAuthentication" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoInstall" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BrokerInstanceName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">(local)\CSSERVER</Value>
+    </Setting>
+    <Setting Name="BrokerDBName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">GWDataDB</Value>
+    </Setting>
+    <Setting Name="BrokerDBUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="BrokerDBPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">sa</Value>
+    </Setting>
+    <Setting Name="BrokerDBWindowsAuthentication" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="RISOrderSPMultiSiteSuffix" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

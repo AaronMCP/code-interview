@@ -1,0 +1,2 @@
+MSH|^~\&|<%MSH-5%>|<%MSH-6%>|<%MSH-3%>|<%MSH-4%>|20091209175006||ACK|10|P|2.3
+MSA|AE|<%MSH-10%>|Cannot process this HL7 message in current application configuraiton.|

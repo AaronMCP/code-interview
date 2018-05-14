@@ -1,0 +1,60 @@
+﻿<div class="qc-edit-patientInfo">
+    <form>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">病人编号</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" disabled ng-model="patient.patientNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">病人姓名 <span style="color: red">*</span></label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.localName" ng-disabled="!isPatient"/>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">拼音</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.englishName" ng-disabled="!isPatient" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">性别 <span style="color: red">*</span></label>
+            <div class="col-md-8">
+                <select class ="form-control" ng-model="patient.gender" ng-disabled="!isPatient">
+                    <option ng-repeat="gender in genderList">{{gender.text}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">生日</label>
+            <div class="col-md-8">
+                <input id="birthdayPicker" class="form-control" kendo-date-picker="birthdayPicker" ng-model="patient.birthday" ng-disabled="!isPatient" editable="false" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">电话</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.telephone" ng-disabled="!isPatient" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">地址</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.address" ng-disabled="!isPatient" maxlength="50" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">证件号码</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.referenceNo" ng-disabled="!isPatient" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">医保号码</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-model="patient.medicareNo" ng-disabled="!isPatient" />
+            </div>
+        </div>
+    </form>
+</div>

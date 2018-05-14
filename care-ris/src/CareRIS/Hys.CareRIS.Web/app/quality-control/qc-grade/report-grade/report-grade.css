@@ -1,0 +1,31 @@
+﻿.k-header {
+    font-size: 14px!important;
+}
+.report-history {
+    font-size: 14px;
+    background: #f7f7f7;
+}
+.report-container {
+    padding: 5px;
+}
+
+.report-row {
+    position: relative;
+    margin-bottom: 5px;
+}
+.report-row-title, .report-row-title2 {
+    width: 80px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+.report-row-title {
+    left: 0;
+}
+.report-row-title2 {
+    left: 180px;
+}
+.report-row-content {
+    background: #f7f7f7;
+    margin-left: 80px;
+}

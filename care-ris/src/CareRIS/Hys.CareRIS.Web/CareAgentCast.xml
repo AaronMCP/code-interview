@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<item>
+  <title>New 1.0.0.0 update available</title>
+  <version>1.0.0.0</version>
+  <url>http://localhost:8653/FileDownload/CareAgent?version=1.0.0.0</url>
+  <mandatory>true</mandatory>
+</item>

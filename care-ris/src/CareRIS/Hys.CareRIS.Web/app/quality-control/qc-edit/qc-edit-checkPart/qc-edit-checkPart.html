@@ -1,0 +1,64 @@
+﻿<div class="qc-edit-checkPart">
+    <form name="checkPartForm" novalidate>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">曝光次数</label>
+            <div class="col-md-8">
+                <input class="form-control" type="number" ng-model="procedure.exposalCount" ng-disabled="!isProcedure" min="0" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">胶片数量</label>
+            <div class="col-md-8">
+                <input class="form-control" type="number" ng-model="procedure.filmCount" ng-disabled="!isProcedure" min="0"/>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">胶片规格</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.filmSpec" ng-disabled="!isProcedure"
+                        ng-options="filmspec.value as filmspec.text for filmspec in filmspecList"></select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">体位</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.posture" ng-disabled="!isProcedure"
+                        ng-options="p.value as p.text for p in positionList"></select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">用药方式</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.medicineUsage" ng-disabled="!isProcedure"
+                        ng-options="m.value as m.text for m in medicineUsageList"></select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">上机医生</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.techDoctor" ng-disabled="!isProcedure"
+                        ng-options="d.uniqueID as d.localName for d in doctorList"></select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">上机护士</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.techNurse" ng-disabled="!isProcedure"
+                        ng-options="t.uniqueID as t.localName for t in technicianList"></select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">上机技师</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="procedure.technician" ng-disabled="!isProcedure"
+                        ng-options="n.uniqueID as n.localName for n in nurseList"></select>
+            </div>
+        </div>     
+        <div class="form-group col-md-4">
+            <label class="col-md-2">费用</label>
+            <div class="col-md-8">
+                <input class="form-control" ng-model="procedure.charge" ng-disabled="!isProcedure" />
+            </div>
+        </div>
+    </form>
+</div>

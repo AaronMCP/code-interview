@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+  <Header>
+    <Type>
+      <CodeSystem>RHISPIX</CodeSystem>
+      <Code>REQUEST</Code>
+    </Type>
+  </Header >
+  <Body>
+    <HL7><MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" MessageControlID="11311110"><SendingApplication NameSpaceID="MESA_PD_CONSUMER"/><SendingFacility NameSpaceID="MESA_DEPARTMENT"/><ReceivingApplication NameSpaceID="MESA_PD_SUPPLIER"/><ReceivingFacility NameSpaceID="XYZ_HOSPITAL"/><MessageType MessageCode="QBP" TriggerEvent="Q22" MessageStructure="QBP_Q22"/><ProcessingID ProcessingID="P"/><VersionID VersionID="2.5"/></MSH><QPD QueryTag="QRY11311110"><MessageQueryName Identifier="IHE PDQ Query"/><DemographicsFields SegmentFieldName="@PID.3.1" Value="123456"/><DemographicsFields SegmentFieldName="@PID.3.4" Value="IssuerA"/></QPD><RCP QueryPriority="I"><QuantityLimitedRequest Quantity="10"><Units Identifier="RD"/></QuantityLimitedRequest></RCP></HL7>
+  </Body>
+</Message>

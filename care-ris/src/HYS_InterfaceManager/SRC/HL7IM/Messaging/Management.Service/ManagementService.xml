@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8" ?><ServiceConfig><RemotingPort>30808</RemotingPort>
+<RemotingUrl>http://localhost:30808/Script.svc</RemotingUrl>
+</ServiceConfig>

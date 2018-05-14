@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{98622138-B273-4D0B-9240-B6C6633F9572}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hys.CareRIS.EntityFramework</RootNamespace>
+    <AssemblyName>Hys.CareRIS.EntityFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Application">
+      <HintPath>..\..\dll\Hys.Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.Extensions">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.LogContract">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.LogContract.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Data.EntityFramework">
+      <HintPath>..\..\dll\Hys.Platform.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain">
+      <HintPath>..\..\dll\Hys.Platform.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Mappers\ACRCodeSubPathologicalMapper.cs" />
+    <Compile Include="Mappers\ACRCodeSubAnatomicalMapper.cs" />
+    <Compile Include="Mappers\ACRCodePathologicalMapper.cs" />
+    <Compile Include="Mappers\ACRCodeAnatomicalMapper.cs" />
+    <Compile Include="Mappers\ICDTenMapper.cs" />
+    <Compile Include="Mappers\ScanningTechMapper.cs" />
+    <Compile Include="Mappers\PanelMapper.cs" />
+    <Compile Include="Mappers\PatientListMapper.cs" />
+    <Compile Include="Mappers\BodySystemMapMapper.cs" />
+    <Compile Include="Mappers\ApplyDoctorMapper.cs" />
+    <Compile Include="Mappers\ApplyDeptMapper.cs" />
+    <Compile Include="Mappers\ClientConfigMapper.cs" />
+    <Compile Include="Mappers\IDMaxValueMapper.cs" />
+    <Compile Include="Mappers\DictionaryMapper.cs" />
+    <Compile Include="Mappers\DictionaryValueMapper.cs" />
+    <Compile Include="Mappers\GWDataIndexMapper.cs" />
+    <Compile Include="Mappers\GWOrderMapper.cs" />
+    <Compile Include="Mappers\GWPatientMapper.cs" />
+    <Compile Include="Mappers\ModalityMapper.cs" />
+    <Compile Include="Mappers\ModalityShareMapper.cs" />
+    <Compile Include="Mappers\ModalityTimeSliceMapper.cs" />
+    <Compile Include="Mappers\OrderMapper.cs" />
+    <Compile Include="Mappers\ModuleMapper.cs" />
+    <Compile Include="Mappers\RoleDirMapper.cs" />
+    <Compile Include="Mappers\ScoringResultMapper.cs" />
+    <Compile Include="Mappers\QualityScoreMapper.cs" />
+    <Compile Include="Mappers\Referral\ReferralLogMapper.cs" />
+    <Compile Include="Mappers\RequisitionMapper.cs" />
+    <Compile Include="Mappers\Referral\ReferralEventMapper.cs" />
+    <Compile Include="Mappers\Referral\ReferralListMapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Mappers\RequestItemMapper.cs" />
+    <Compile Include="Mappers\RquestChargeMapper.cs" />
+    <Compile Include="Mappers\RquestListMapper.cs" />
+    <Compile Include="Mappers\RquestMapper.cs" />
+    <Compile Include="Mappers\PrintTemplateFieldsMapper.cs" />
+    <Compile Include="Mappers\PrintTemplateMapper.cs" />
+    <Compile Include="Mappers\ProcedureMapper.cs" />
+    <Compile Include="Mappers\GWReportMapper.cs" />
+    <Compile Include="Mappers\AccessionNumberListMapper.cs" />
+    <Compile Include="Mappers\ReportPrintLogMapper.cs" />
+    <Compile Include="Mappers\RoleToUserMapper.cs" />
+    <Compile Include="Mappers\DomainListMapper.cs" />
+    <Compile Include="Mappers\ShortcutMapper.cs" />
+    <Compile Include="Mappers\SiteMapper.cs" />
+    <Compile Include="Mappers\SyncMapper.cs" />
+    <Compile Include="Mappers\ReportFileMapper.cs" />
+    <Compile Include="Mappers\ReportDelPoolMapper.cs" />
+    <Compile Include="Mappers\ReportListMapper.cs" />
+    <Compile Include="Mappers\ReportTemplateDirecMapper.cs" />
+    <Compile Include="Mappers\ReportTemplateMapper.cs" />
+    <Compile Include="Mappers\ReportMapper.cs" />
+    <Compile Include="Mappers\PatientMapper.cs" />
+    <Compile Include="Mappers\ProcedureCodeMapper.cs" />
+    <Compile Include="Mappers\ModalityTypeMapper.cs" />
+    <Compile Include="Mappers\RoleMapper.cs" />
+    <Compile Include="Mappers\RoleProfileMapper.cs" />
+    <Compile Include="Mappers\SiteProfileMapper.cs" />
+    <Compile Include="Mappers\SystemProfileMapper.cs" />
+    <Compile Include="Mappers\User2DomainMapper.cs" />
+    <Compile Include="Mappers\OnlineClientMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
+    <Compile Include="Mappers\UserProfileMapper.cs" />
+    <Compile Include="Mappers\WarningTimeMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\DictionaryRepository.cs" />
+    <Compile Include="Repositories\DictionaryValueRepository.cs" />
+    <Compile Include="Repositories\GWDataIndexRepository.cs" />
+    <Compile Include="Repositories\GWPatientRepository.cs" />
+    <Compile Include="Repositories\GWOrderRepository.cs" />
+    <Compile Include="Repositories\AccessionNumberListRepository.cs" />
+    <Compile Include="Repositories\ModalityRepository.cs" />
+    <Compile Include="Repositories\BodySystemMapRepository.cs" />
+    <Compile Include="Repositories\OrderRepository.cs" />
+    <Compile Include="Repositories\RequisitionRepository.cs" />
+    <Compile Include="Repositories\Referral\ReferralListRepository.cs" />
+    <Compile Include="Repositories\RequestItemRepository.cs" />
+    <Compile Include="Repositories\RequestChargeRepository.cs" />
+    <Compile Include="Repositories\RequestListRepository.cs" />
+    <Compile Include="Repositories\RequestRepository.cs" />
+    <Compile Include="Repositories\PatientRepository.cs" />
+    <Compile Include="Repositories\PrintTemplateFieldsRepository.cs" />
+    <Compile Include="Repositories\ProcedureCodeRepository.cs" />
+    <Compile Include="Repositories\ModalityTypeRepository.cs" />
+    <Compile Include="Repositories\ProcedureRepository.cs" />
+    <Compile Include="Repositories\ReportDelPoolRepository.cs" />
+    <Compile Include="Repositories\GWReportRepository.cs" />
+    <Compile Include="Repositories\ReportPrintLogRepository.cs" />
+    <Compile Include="Repositories\RoleToUserRepository.cs" />
+    <Compile Include="Repositories\DomainListRepository.cs" />
+    <Compile Include="Repositories\ShortcutRepository.cs" />
+    <Compile Include="Repositories\SiteRepository.cs" />
+    <Compile Include="Repositories\SyncRepository.cs" />
+    <Compile Include="Repositories\ReportFileRepository.cs" />
+    <Compile Include="Repositories\PrintTemplateRepository.cs" />
+    <Compile Include="Repositories\ReportListRepository.cs" />
+    <Compile Include="Repositories\ReportTemplateDirecRepository.cs" />
+    <Compile Include="Repositories\ReportTemplateRepository .cs" />
+    <Compile Include="Repositories\ReportRepository.cs" />
+    <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\OnlineClientRepository.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="RisProContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Hys.CareRIS.Domain\Hys.CareRIS.Domain.csproj">
+      <Project>{24217679-47ff-47f4-8220-66be854f8d5d}</Project>
+      <Name>Hys.CareRIS.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

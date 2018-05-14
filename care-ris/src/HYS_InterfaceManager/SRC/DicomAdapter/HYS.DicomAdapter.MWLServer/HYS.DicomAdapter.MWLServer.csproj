@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{843CD859-A8AE-4B8C-88A5-C24220DFB258}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.DicomAdapter.MWLServer</RootNamespace>
+    <AssemblyName>HYS.DicomAdapter.MWLServer</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dicom">
+      <HintPath>..\..\..\3rdParty\foDicom\Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\3rdParty\foDicom\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\ConfigMain.cs" />
+    <Compile Include="Adapter\ServiceMain.cs" />
+    <Compile Include="Dicom\WorklistIOD.cs" />
+    <Compile Include="Dicom\WorklistSCP.cs" />
+    <Compile Include="Dicom\WorklistSCPHelper.cs" />
+    <Compile Include="Dicom\WorkListSCPService.cs" />
+    <Compile Include="Forms\FormAutoGenIDs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAutoGenIDs.Designer.cs">
+      <DependentUpon>FormAutoGenIDs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQCAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQCAdvance.Designer.cs">
+      <DependentUpon>FormQCAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQCItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQCItem.Designer.cs">
+      <DependentUpon>FormQCItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQRAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQRAdvance.Designer.cs">
+      <DependentUpon>FormQRAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormService.Designer.cs">
+      <DependentUpon>FormService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQCElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQCElement.Designer.cs">
+      <DependentUpon>FormQCElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQRElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQRElement.Designer.cs">
+      <DependentUpon>FormQRElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryCriteria.Designer.cs">
+      <DependentUpon>FormQueryCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQueryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQueryResult.Designer.cs">
+      <DependentUpon>FormQueryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QCListControler.cs" />
+    <Compile Include="Forms\QRListControler.cs" />
+    <Compile Include="Objects\MWLQueryCriteriaItem.cs" />
+    <Compile Include="Objects\MWLQueryResultItem.cs" />
+    <Compile Include="Objects\MWLServerConfig.cs" />
+    <Compile Include="Objects\MWLServerConfigMgt.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAutoGenIDs.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAutoGenIDs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQCAdvance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQCAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQCItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQCItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQRAdvance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQRAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormService.resx">
+      <DependentUpon>FormService.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQCElement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQCElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQRElement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQRElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryCriteria.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQueryCriteria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQueryResult.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQueryResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DeviceDir" />
+    <None Include="HYS.Adapter.Composer.config" />
+    <None Include="HYS.Adapter.Config.config" />
+    <None Include="HYS.Adapter.Monitor.config" />
+    <None Include="HYS.Adapter.Service.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5acf1f45-a8ba-4a67-b2d1-8506381ec0e5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.Common.Dicom\HYS.Common.Dicom.csproj">
+      <Project>{60386368-A41D-4A74-BF7F-9AC87575CADC}</Project>
+      <Name>HYS.Common.Dicom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.DicomAdapter.Common\HYS.DicomAdapter.Common.csproj">
+      <Project>{E1EF831A-9DD5-4E68-B31A-53FE6E5EE891}</Project>
+      <Name>HYS.DicomAdapter.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OutboundDBInstallConfig.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MWLTemplate.xslt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

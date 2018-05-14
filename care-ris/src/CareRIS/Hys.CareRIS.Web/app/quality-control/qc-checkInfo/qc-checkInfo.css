@@ -1,0 +1,116 @@
+﻿.qc-check-info {
+    height: 98%;
+    position: relative;
+    background-color:#f2f2f2;
+}
+    .qc-check-info > form {
+        overflow: hidden;
+        padding-top: 10px;
+        padding-left: 15px
+    }
+    .qc-check-info > form > .form-group {
+        margin-bottom: 0;
+    }
+
+    .qc-check-info > form > .col-md-5 > .col-md-5 {
+        width: auto;
+    }
+
+    .qc-check-info > form > .form-group label {
+        line-height: 34px;
+        padding-right: 5px;
+        width: auto;
+        float: left;
+    }
+
+    .qc-check-info > .navbar-right label {
+        line-height: 32px;
+        padding-right: 10px;
+        color:#787878;
+        font-weight:500;
+    }
+
+    .qc-check-info > .navbar-right {
+        margin-right: 0;
+    }
+
+        .qc-check-info > .navbar-right button {
+            margin-top: 0;
+        }
+
+.qc-check-content {
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+    .qc-check-content .left {
+        margin-right: 2%;
+    }
+
+    .qc-check-content .left, .qc-check-content .right {
+        width: 49%;
+        height: 100%;
+        float: left;
+        background-color: #fff;
+    }
+
+    .qc-check-content .title {
+        line-height: 40px;
+        padding-left: 20px;
+        border-bottom: 1px solid #d1d1d1;
+    }
+
+        .qc-check-content .title .qc-btn {
+            float: right;
+            margin-right: 10px;
+        }
+
+    .qc-check-content .qc-check-main {
+        padding: 0 15px;
+        height: 89%;
+        overflow-y: auto;
+    }
+
+        .qc-check-content .qc-check-main .info .k-grid-content {
+            height: 210px;
+        }
+
+.merge-patient {
+    padding: 15px;
+    position: static !important;
+}
+
+.merge-patient-tipInfo {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 24px;
+    font-size: 14px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.afterDelPatient {
+    height: 30px;
+    line-height: 30px;
+}
+
+    .afterDelPatient input {
+        width: 14px;
+        height: 14px;
+    }
+
+    .afterDelPatient label {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+.qc-check-main .table-checkinfo .table tr td, .qc-check-main .table-checkinfo .table tr th {
+    width: 16.6%;
+}
+
+.qc-check-main .table-checkPartinfo .table tr td, .qc-check-main .table-checkPartinfo .table tr th {
+    width: 20%;
+}

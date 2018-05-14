@@ -1,0 +1,15 @@
+﻿<div class="row sub-nav-request">
+    <div class="col-md-12 status">
+        <div class="status-flag status-red">
+            <div class="status-title">{{'Deleted'|translate}}</div>
+        </div>
+    </div>
+    <div class="status-message-red">
+        <div class="status-message-icon"><span class="icon-general icon-status_trash icon-red" title="{{'Deleted'|translate}}"></span></div>
+        <div class="status-message-text">
+            <div class="status-message-title"><span>{{'DeleteReason'|translate}}</span></div>
+            <div>{{report.deleteReason}}</div>
+            <div class="status-message-sig"><span>{{report.deleteUserName}}</span><span>{{report.deleteTime | date:'yyyy/MM/dd HH:mm:ss'}}</span></div>
+        </div>
+    </div>
+</div>

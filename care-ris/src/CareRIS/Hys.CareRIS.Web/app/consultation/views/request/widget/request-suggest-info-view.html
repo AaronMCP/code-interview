@@ -1,0 +1,37 @@
+﻿<div class="row suggest-info">
+    <div class="title">
+        <h4>{{'ConsultationAdvice'|translate}}</h4>
+        <div class="action">
+            <button type="button" class="btn btn-sm btn-default" ng-click="hideHistory(historyButtonstatus)">
+                {{historyButtonText |translate}}
+            </button>
+            <button type="button" class="btn btn-sm btn-default" ng-click="modifyConsiltationAdvice()" ng-show="editReportPermission">
+                {{'EditReport'|translate}}
+            </button>
+        </div>
+    </div>
+
+    <div kendo-window="reportHostWin" k-title="'{{'ConsiltationAdvice'|translate}}'"
+         k-width="'80%'" k-height="'80%'" k-visible="false" k-modal="true" k-on-activate="activeReportHostWin(kendoEvent)" k-on-deactivate="deactiveReportHostWin(kendoEvent)">
+    </div>
+
+    <div class="main-info">
+        <p ng-bind-html="report.consultationAdvice"></p>
+        <div class="history" id="request-applied-history">
+            <div class="history-item" ng-repeat="his in report.reportHistories">
+                <div class="time-mark">
+                    {{his.lastEditTime|date:'yyyy/MM/dd HH:mm:ss'}}
+                </div>
+                <div class="detail" ng-bind-html="his.consultationAdvice">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row footer">
+        <div class="col-md-10">
+            <dt class="col-md-1">{{'Remark'|translate}}</dt>
+            <dd class="col-md-11" ng-bind-html="report.consultationRemark">
+            </dd>
+        </div>
+    </div>
+</div>

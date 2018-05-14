@@ -1,0 +1,36 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>StartMeeting</h4>
+</div>
+<div class="modal-body" style="overflow-x: hidden; overflow-y: auto;">
+    <style>
+        .k-grid td {
+            border-style: solid !important;
+            border-width: 0 0 1px 0 !important;
+        }
+    </style>
+    <div><label>{{'SelectMeeting'|translate}}<span class="registration-edit-required">*</span></label></div>
+    <div id="meetingList" style="height:200px;" kendo-grid k-options="worklist" k-ng-delay="worklist"></div>
+
+    <div style="margin-top:10px;">
+        <label style="width:150px;">{{'MeetingDisplayName'|translate}}<span class="registration-edit-required">*</span></label>
+        <input type="text" class="form-control col2input"
+               ng-model="displayName"
+               placeholder="{{'MeetingDisplayName'|translate}}"
+               maxlength=128 style="width:300px;display:inline-block;">
+    </div>
+    <div style="margin-top:10px;">
+        <label style="width:150px;">{{'MeetingPassword'|translate}}</label>
+        <input type="password" class="form-control col2input"
+               ng-model="meetingPassword"
+               placeholder="{{'MeetingPassword'|translate}}"
+               maxlength=128 style="width:300px;display:inline-block;">
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button type="submit" class="btn btn-green" style="margin-right:30px;" ng-click="startMeeting()" translate>
+        StartMeeting
+    </button>
+    <button class="btn btn-default" ng-click="cancel()" style="margin-right:200px;" translate>Cancel</button>
+
+</div>

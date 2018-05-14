@@ -1,0 +1,27 @@
+------------------------------------
+Design Notes For XSLT of HL7 Gateway
+------------------------------------
+
+HL7 Gateway应用程序跟XSLT之间交换的XML格式可能是以下几种：
+
+  - 以/Message/Body/...为根的HL7_SDK格式
+  - 以/Message/Body/...为根的HL7_STD格式
+  - 以/Message/Body/...为根的CSB DataSet格式
+
+BTW: 将来会为三种格式显式声明XML命名空间，以便维护和管理。
+ 
+因此，XSLT及其中所有XPath都以/Message/Body/...为根来编写。
+
+以/Message/Body/...为根的好处是：
+
+1. 在HL7 Gateway内部进行的所有XML处理都使用统一的根节点，
+   为集成工程师提供统一的XSLT编程接口。
+
+2. 将来可以在/Message/Header中包含一些系统上下文信息，
+   比如当前日期时间、当前机器名和IP地址等，
+   某些消息中可能需要使用这些信息。
+
+3. 在XML处理过程中可以在/Message/Header中保存一些中间变量，
+   这些变量可以简化下一步处理中XPath的编写，
+   或者用来进行消息路由（这个思路来自Biztalk Server）。
+

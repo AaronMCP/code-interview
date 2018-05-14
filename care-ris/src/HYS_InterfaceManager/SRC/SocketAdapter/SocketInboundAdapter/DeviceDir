@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?><DeviceDir><Header><Type>SOCKET</Type>
+<Direction>INBOUND</Direction>
+<ID>3</ID>
+<Name>GC_SOCKET_IN</Name>
+<Version>1.0.0.0</Version>
+<UseCommandOnly>False</UseCommandOnly>
+<Description>Socket Inbound Adapter</Description>
+<RefDeviceID /><RefDeviceName /><EventTypes><GWEventType><Code>10</Code>
+<Description>Create Order</Description>
+<Enable>True</Enable>
+</GWEventType>
+<GWEventType><Code>11</Code>
+<Description>Update Order</Description>
+<Enable>True</Enable>
+</GWEventType>
+<GWEventType><Code>00</Code>
+<Description>Insert Patient</Description>
+<Enable>True</Enable>
+</GWEventType>
+<GWEventType><Code>01</Code>
+<Description>Update Patient</Description>
+<Enable>True</Enable>
+</GWEventType>
+<GWEventType><Code>14</Code>
+<Description>Image Arrival</Description>
+<Enable>True</Enable>
+</GWEventType>
+<GWEventType><Code>15</Code>
+<Description>PACS QC Notification</Description>
+<Enable>True</Enable>
+</GWEventType>
+</EventTypes>
+</Header>
+<Files><DeviceFile><Type>OtherScript</Type>
+<Backupable>True</Backupable>
+<Location>SocketInboundAdapter.xml</Location>
+<Description>Socket Inbound Adapter configuration</Description>
+</DeviceFile>
+<DeviceFile><Type>ServiceAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Service.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ServiceConfig</Type>
+<Backupable>True</Backupable>
+<Location>HYS.Adapter.Service.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ConfigAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Config.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ConfigConfig</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Config.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Composer.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Base.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.DataAccess.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.Objects.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.Xml.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Installer</Type>
+<Backupable>False</Backupable>
+<Location>InstallUtil.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Composer.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.SocketAdapter.SocketInboundAdapter.exe</Location>
+<Description>Socket Inbound Adapter</Description>
+</DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.SocketAdapter.Common.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.SocketAdapter.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.SocketAdapter.Configuration.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.SocketAdapter.SocketInboundAdapterConfiguration.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>MonitorAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Monitor.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>MonitorConfig</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Monitor.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>gatewaylang_SC.dll</Location>
+<Description /></DeviceFile>
+
+</Files>
+<Commands /><LogInfo><LogType>Error</LogType>
+<FileDuration>7</FileDuration>
+</LogInfo>
+</DeviceDir>

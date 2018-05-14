@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://HISConService" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://HISConService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://HISConService">
+      <s:import namespace="http://www.w3.org/2001/XMLSchema" />
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getModelsInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="getModelsInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getModelsInfoResult" type="tns:ModelsInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ModelsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="sharedinfo" type="tns:SharedInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="returnModel" type="tns:ReturnModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="queuebody" type="s:GetQueueInfoBodyReturnModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="requestbody" type="s:GetRequestInfoBodyReturnModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="inputModel" type="tns:InputModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="queueBody" type="s:GetQueueInfoBodyInputModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="requestBody" type="s:GetRequestInfoBodyInputModel" />
+          <s:element minOccurs="0" maxOccurs="1" name="bookingBody" type="s:UpdateBookInfoBodyInputModel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SharedInfo" />
+      <s:complexType name="ReturnModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SystemID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CalledResult" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultBodyFormat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultBodyVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResultBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NextActionURI" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InputModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MessageID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageBodyFormat" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageBodyVersion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageBody" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DoCommand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sToken" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCallingParamsInfo" type="tns:InputModel" />
+            <s:element minOccurs="0" maxOccurs="1" name="sReturnInfo" type="tns:ReturnModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoCommandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sReturnInfo" type="tns:ReturnModel" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.w3.org/2001/XMLSchema">
+      <s:complexType name="GetQueueInfoBodyReturnModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AccNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalQueueNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomQueueNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamRoomID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamRoom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalAmountOfUnfinished" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomAmountOfUnfinished" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlannedExamDateTimeInQueue" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetRequestInfoBodyReturnModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientInfo" type="s:PatientInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Requests" type="s:ArrayOfRequest" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension1" type="s:Extension1" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PatientInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HISID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SocialSecurityNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedicareNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsVIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MatchKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Patient" type="s:Patient" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Patient">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Marriage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnglishName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemotePID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Alias" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParentName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Request" nillable="true" type="s:Request" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Request">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestInfo" type="s:RequestInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestDetailInfo" type="s:RequestDetailsInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension2" type="s:Extension2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestFormName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InhospitalNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClinicNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyDept" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyDeptNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyDoctor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplyDoctorID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ApplyDateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Observation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HealthHistory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TeethPosition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAcquisitionURL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EAcquisition" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Order" type="s:Order" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Order">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BedNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InhospitalRegion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BedSide" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ThreedRebuild" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemoteAccNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalFee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HisID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsEmergency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VisitComment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCharge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyWeight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FilmFee" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PathologicalFindings" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalOptional1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InternalOptional2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalOptional1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalOptional2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExternalOptional3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BodyHeight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BloodSugar" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Insulin" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestDetailsInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItems" type="s:ArrayOfRequestItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeInfo" type="s:ChargeInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequestItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestItem" nillable="true" type="s:RequestItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModalityType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Modality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemComments" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduleInfo" type="s:ScheduleInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeInfo" type="s:ChargeInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Procedure" type="s:Procedure" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extension3" type="s:Extension3" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ScheduleInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduleUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduleType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduleStatus" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ScheduledDateTime" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduledModality" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChargeInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItems" type="s:ArrayOfChargeItem" />
+        </s:sequence>
+        <s:attribute name="TotalCharge" type="s:string" />
+        <s:attribute name="IsCharged" type="s:string" />
+      </s:complexType>
+      <s:complexType name="ArrayOfChargeItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ChargeItem" nillable="true" type="s:ChargeItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ChargeItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemSum" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemUnitPrice" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemUnit" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChargeItemSource" type="s:string" />
+        </s:sequence>
+        <s:attribute name="IsItemCharged" type="s:string" />
+      </s:complexType>
+      <s:complexType name="Procedure">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ContrastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContrastDose" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCharge" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Optional3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RemoteRPID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Extension3" />
+      <s:complexType name="Extension2" />
+      <s:complexType name="Extension1" />
+      <s:complexType name="GetQueueInfoBodyInputModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OperationType" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="dwFlags" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalQueueNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamModality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamRoomID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExamRoom" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookedExamTimePart" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorLocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorLoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GetRequestInfoBodyInputModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorLocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OperatorLoginName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UpdateBookInfoBodyInputModel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestFormName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientInfo" type="s:PatientInfo2" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItems" type="s:ArrayOfRequestItem2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PatientInfo2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PatientID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HISID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SocailSecurityNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MedicareNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Telephone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlobalID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsVIP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MatchKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Patient" type="s:Patient2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Patient2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Marriage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRequestItem2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RequestItem2" nillable="true" type="s:RequestItem2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RequestItem2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestItemCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestTeethCount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ModalityType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Modality" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ScheduledDateTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModelsInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:getModelsInfo" />
+  </wsdl:message>
+  <wsdl:message name="getModelsInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:getModelsInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoCommandSoapIn">
+    <wsdl:part name="parameters" element="tns:DoCommand" />
+  </wsdl:message>
+  <wsdl:message name="DoCommandSoapOut">
+    <wsdl:part name="parameters" element="tns:DoCommandResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HISConServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getModelsInfo">
+      <wsdl:input message="tns:getModelsInfoSoapIn" />
+      <wsdl:output message="tns:getModelsInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoCommand">
+      <wsdl:input message="tns:DoCommandSoapIn" />
+      <wsdl:output message="tns:DoCommandSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HISConServiceSoap" type="tns:HISConServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://HISConService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelsInfo">
+      <soap:operation soapAction="http://HISConService/getModelsInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoCommand">
+      <soap:operation soapAction="http://HISConService/DoCommand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HISConServiceSoap12" type="tns:HISConServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://HISConService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getModelsInfo">
+      <soap12:operation soapAction="http://HISConService/getModelsInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoCommand">
+      <soap12:operation soapAction="http://HISConService/DoCommand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HISConService">
+    <wsdl:port name="HISConServiceSoap" binding="tns:HISConServiceSoap">
+      <soap:address location="http://localhost:8080/HISConService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HISConServiceSoap12" binding="tns:HISConServiceSoap12">
+      <soap12:address location="http://localhost:8080/HISConService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

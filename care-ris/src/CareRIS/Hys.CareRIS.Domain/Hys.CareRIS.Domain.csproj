@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24217679-47FF-47F4-8220-66BE854F8D5D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hys.CareRIS.Domain</RootNamespace>
+    <AssemblyName>Hys.CareRIS.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Application">
+      <HintPath>..\..\dll\Hys.Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.Extensions">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.Globalization">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.LogContract">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.LogContract.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Data.EntityFramework">
+      <HintPath>..\..\dll\Hys.Platform.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain">
+      <HintPath>..\..\dll\Hys.Platform.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\Packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\ACRCodePathological.cs" />
+    <Compile Include="Entities\ACRCodeSubPathological.cs" />
+    <Compile Include="Entities\ACRCodeSubAnatomical.cs" />
+    <Compile Include="Entities\ACRCodeAnatomical.cs" />
+    <Compile Include="Entities\BodySystemMap.cs" />
+    <Compile Include="Entities\ApplyDept.cs" />
+    <Compile Include="Entities\ApplyDoctor.cs" />
+    <Compile Include="Entities\ClientConfig.cs" />
+    <Compile Include="Entities\ICDTen.cs" />
+    <Compile Include="Entities\IDMaxValue.cs" />
+    <Compile Include="Entities\Dictionary.cs" />
+    <Compile Include="Entities\DictionaryValue.cs" />
+    <Compile Include="Entities\GWDataIndex.cs" />
+    <Compile Include="Entities\GWPatient.cs" />
+    <Compile Include="Entities\GWOrder.cs" />
+    <Compile Include="Entities\Modality.cs" />
+    <Compile Include="Entities\ModalityShare.cs" />
+    <Compile Include="Entities\ScanningTech.cs" />
+    <Compile Include="Entities\Panel.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\PatientList.cs" />
+    <Compile Include="Entities\Module.cs" />
+    <Compile Include="Entities\RoleDir.cs" />
+    <Compile Include="Entities\ScoringResult.cs" />
+    <Compile Include="Entities\QualityScore.cs" />
+    <Compile Include="Entities\Referral\ReferralLog.cs" />
+    <Compile Include="Entities\Requisition.cs" />
+    <Compile Include="Entities\Patient.cs" />
+    <Compile Include="Entities\PrintTemplateFields.cs" />
+    <Compile Include="Entities\Procedure.cs" />
+    <Compile Include="Entities\Procedurecode.cs" />
+    <Compile Include="Entities\PrintTemplate.cs" />
+    <Compile Include="Entities\GWReport.cs" />
+    <Compile Include="Entities\AccessionNumberList.cs" />
+    <Compile Include="Entities\Referral\ReferralEvent.cs" />
+    <Compile Include="Entities\Referral\ReferralList.cs" />
+    <Compile Include="Entities\ReportPrintLog.cs" />
+    <Compile Include="Entities\RequestList.cs" />
+    <Compile Include="Entities\RequestCharge.cs" />
+    <Compile Include="Entities\RequestItem.cs" />
+    <Compile Include="Entities\Request.cs" />
+    <Compile Include="Entities\RoleToUser.cs" />
+    <Compile Include="Entities\DomainList.cs" />
+    <Compile Include="Entities\Shortcut.cs" />
+    <Compile Include="Entities\Sync.cs" />
+    <Compile Include="Entities\ReportList.cs" />
+    <Compile Include="Entities\ReportDelPool.cs" />
+    <Compile Include="Entities\Report.cs" />
+    <Compile Include="Entities\ReportFile.cs" />
+    <Compile Include="Entities\ModalityType.cs" />
+    <Compile Include="Entities\ReportTemplateDirec.cs" />
+    <Compile Include="Entities\ReportTemplate.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\RoleProfile.cs" />
+    <Compile Include="Entities\Site.cs" />
+    <Compile Include="Entities\SiteProfile.cs" />
+    <Compile Include="Entities\SystemProfile.cs" />
+    <Compile Include="Entities\OnlineClient.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\User2Domain.cs" />
+    <Compile Include="Entities\UserProfile.cs" />
+    <Compile Include="Entities\WarningTime.cs" />
+    <Compile Include="Interface\IAccessionNumberListRepository.cs" />
+    <Compile Include="Interface\IDictionaryRepository.cs" />
+    <Compile Include="Interface\IDictionaryValueRepository.cs.cs" />
+    <Compile Include="Interface\IGWDataIndexRepository.cs" />
+    <Compile Include="Interface\IGWPatientRepository.cs" />
+    <Compile Include="Interface\IGWOrderRepository.cs" />
+    <Compile Include="Interface\IModalityRepository.cs" />
+    <Compile Include="Interface\IBodySystemMapRepository.cs" />
+    <Compile Include="Interface\IModalityTypeRepository.cs" />
+    <Compile Include="Interface\IRequestItemRepository.cs" />
+    <Compile Include="Interface\IRequestListRepository.cs" />
+    <Compile Include="Interface\IRequisitionRepository.cs" />
+    <Compile Include="Interface\IReuqestChargeRepository.cs" />
+    <Compile Include="Interface\IRequestRepository.cs" />
+    <Compile Include="Interface\IPrintTemplateFieldsRepository.cs" />
+    <Compile Include="Interface\IProcedureCodeRepository.cs" />
+    <Compile Include="Interface\IOrderRepository.cs" />
+    <Compile Include="Interface\IPatientRepository.cs" />
+    <Compile Include="Interface\IProcedureRepository.cs" />
+    <Compile Include="Interface\IPrintTemplateRepository.cs" />
+    <Compile Include="Interface\IGWReportRepository.cs" />
+    <Compile Include="Interface\IReportPrintLogRepository.cs" />
+    <Compile Include="Interface\IRoleToUserRepository.cs" />
+    <Compile Include="Interface\IDomainListRepository.cs" />
+    <Compile Include="Interface\IShortcutRepository.cs" />
+    <Compile Include="Interface\ISiteRepository.cs" />
+    <Compile Include="Interface\ISyncRepository.cs" />
+    <Compile Include="Interface\IReportListRepository.cs" />
+    <Compile Include="Interface\IReportFileRepository.cs" />
+    <Compile Include="Interface\IReportDelPoolRepository.cs" />
+    <Compile Include="Interface\IReportTemplateDirecRepository.cs" />
+    <Compile Include="Interface\IReportTemplateRepository.cs" />
+    <Compile Include="Interface\IReportRepository.cs" />
+    <Compile Include="Interface\IRoleRepository.cs" />
+    <Compile Include="Interface\IOnlineClientRepository.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
+    <Compile Include="Interface\Referral\IReferralListRepository.cs" />
+    <Compile Include="Entities\ModalityTimeSlice.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="domain.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

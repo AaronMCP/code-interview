@@ -1,0 +1,95 @@
+﻿
+#patientCaseInfo .col1 {
+    top: 5px;
+    padding: 0px;
+    width: 160px;
+    padding-left: 45px;
+}
+
+#patientCaseInfo .col2 {
+    width: 260px;
+}
+
+    #patientCaseInfo .col2 button {
+        box-sizing: border-box;
+    }
+
+#patientCaseInfo .col2input {
+    height: 34px;
+    width: 260px;
+}
+
+.container-applied .sub-nav-request .status-red .status-title {
+    float: left !important;
+    width: 100% !important;
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    color: #FFF !important;
+    background-color: #f25a29 !important;
+}
+
+.container-applied .sub-nav-request .status {
+    text-align: center !important;
+}
+
+.container-applied .sub-nav-request {
+    margin-bottom: 15px !important;
+}
+
+
+
+
+.status-message-red {
+    border: 1px solid #bcbcbc;
+    border-left: 5px solid #f25a29;
+    padding: 5px 10px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.status-message-blue {
+    border: 1px solid #bcbcbc;
+    border-left: 5px solid #00acf1;
+    padding: 5px 10px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.status-message-icon {
+    display: block;
+    float: left;
+}
+
+    .status-message-icon .icon-general {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+.status-message-text {
+    margin-left: 60px;
+}
+
+.status-message-title {
+    color: #f25a29;
+}
+
+.status-message-sig {
+    color: #999;
+}
+
+    .status-message-sig span {
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+
+.status-message-blue .status-message-title {
+    color: #00acf1;
+}
+
+.container-applied .sub-nav-request .status-title-time {
+    font-size: 12px;
+    margin-left: 10px;
+}

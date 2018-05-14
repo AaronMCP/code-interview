@@ -1,0 +1,53 @@
+﻿@using Hys.CrossCutting.Common.Utils;
+@{
+    Layout = null;
+    var appConfig = new AppConfig();
+    var appVersion = appConfig["Version"];
+    var lang = ViewBag.lang;
+
+    var isDebug = HttpContext.Current.IsDebuggingEnabled;
+}
+<!DOCTYPE html>
+<html lang="@lang">
+<head>
+    <base href="/" />
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CareRIS</title>
+
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+    @if (isDebug)
+    {
+        @Styles.Render("~/bundles/css", "~/bundles/app-css");
+    }
+    else
+    {
+        <link href="~/script/vendor-base.css" rel="stylesheet" />
+        <link href="~/script/app.css" rel="stylesheet" />
+    }
+
+</head>
+<body>
+    <input type="hidden" value="@(AppConfig.JsonString)" id="server-app-config" />
+    <input type="hidden" value="@(Url.Content("~"))" id="server-app-host" />
+    <div data-ui-view ng-cloak></div>
+    @if (isDebug)
+    {
+        @Scripts.Render("~/bundles/js", "~/bundles/app-js")
+        <script src="~/Scripts/kendo/cultures/kendo.culture.@(lang).min.js"></script>
+        <script src="~/Scripts/kendo/messages/kendo.messages.@(lang).min.js"></script>
+        <script src="~/Scripts/i18n/angular-locale_@(lang).js"></script>
+    }
+    else
+    {
+        <script src="~/script/vendor-base.js"></script>
+        <script src="~/script/vendor-extra.js"></script>
+        <script src="~/script/app.js"></script>
+    }
+    <script src="~/signalr/hubs"></script>
+</body>
+</html>

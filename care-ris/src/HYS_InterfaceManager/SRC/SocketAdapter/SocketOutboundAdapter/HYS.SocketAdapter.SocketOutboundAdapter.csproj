@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70185B42-8D67-48BE-8AEA-B1B7033D4916}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.SocketAdapter.SocketOutboundAdapter</RootNamespace>
+    <AssemblyName>HYS.SocketAdapter.SocketOutboundAdapter</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapters\AdapterMain.cs" />
+    <Compile Include="Adapters\DataAccessControler.cs" />
+    <Compile Include="Forms\FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DeviceDir" />
+    <None Include="HYS.Adapter.Composer.config" />
+    <None Include="HYS.Adapter.Config.config" />
+    <None Include="HYS.Adapter.Monitor.config" />
+    <None Include="HYS.Adapter.Service.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\HYS.SocketAdapter.Common.csproj">
+      <Project>{BCDAB08C-43FC-4479-90CE-FA0C12DE413C}</Project>
+      <Name>HYS.SocketAdapter.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\HYS.SocketAdapter.Configuration.csproj">
+      <Project>{5608C177-B2DB-43C4-AC28-169853EDCC48}</Project>
+      <Name>HYS.SocketAdapter.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketAdapter\HYS.SocketAdapter.SocketAdapter.csproj">
+      <Project>{E9548934-00B5-4E52-83E7-DD689147F6B6}</Project>
+      <Name>HYS.SocketAdapter.SocketAdapter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SocketOutboundConfig\HYS.SocketAdapter.SocketOutboundAdapterConfiguration.csproj">
+      <Project>{7DC0B947-90FB-4D2D-8DAB-27B01F4F36BF}</Project>
+      <Name>HYS.SocketAdapter.SocketOutboundAdapterConfiguration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="OutboundDBInstallConfig.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,40 @@
+﻿<div id="consultation-applied">
+    <link href="/app-resources/css/request-completed-view.css" rel="stylesheet" />
+
+    <div kendo-window="reportHostWin" k-title="'{{'ConsiltationAdvice'|translate}}'"
+         k-width="'80%'" k-height="'80%'" k-visible="false" k-modal="true" k-on-activate="activeReportHostWin(kendoEvent)" k-on-deactivate="deactiveReportHostWin(kendoEvent)">
+    </div>
+
+    <div kendo-window="reportExpertWin" k-title="'{{'ConsiltationAdvice'|translate}}'"
+         k-width="'80%'" k-height="'80%'" k-visible="false" k-modal="true" k-on-activate="activeReportExpertWin(kendoEvent)" k-on-deactivate="deactiveReportExpertWin(kendoEvent)">
+    </div>
+
+    <div class="container-applied">
+        <div class="main-applied">
+            <span ng-if="report.isDeleted == 0">
+                <request-nav-info-view></request-nav-info-view>
+            </span>
+            <span ng-if="report.isDeleted != 0">
+                <request-tips-bar></request-tips-bar>
+            </span>
+            <div class="row hospital-info">
+                <request-receiver-info-view></request-receiver-info-view>
+                <request-request-info-view></request-request-info-view>
+            </div>
+            <request-patient-info-view></request-patient-info-view>
+        </div>
+    </div>
+    <div class="footer-applied">
+        <request-info-back-button></request-info-back-button>
+        <div class="action">
+            <span ng-if="report.isDeleted == 0">
+                <button type="button" class="btn btn-md btn-primary" ng-if="user.isJuniorDoctor" ng-click="ApplyCancelRequest()">{{'ApplyCancellingConsultation'|translate}}</button>
+                <button type="button" class="btn btn-md btn-primary" ng-click="startMeeting()">{{'StartMeeting'|translate}}</button>
+                <button type="button" class="btn btn-md btn-primary" ng-if="user.isConsultationCenter" ng-click="rejectRequest()">{{'RejectRequest'|translate}}</button>
+                <button type="button" class="btn btn-md btn-primary" ng-if="wirteAdvicePermisson" ng-click="writeAdvice()">{{'EditReport'|translate}}</button>
+                <button type="button" class="btn btn-md btn-primary" ng-if="completePermisson" ng-click="completeRequest()">{{'CompleteRequest'|translate}}</button>
+            </span>
+            <request-delete-button></request-delete-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4351B960-C1FA-4C0E-91DA-38D24AB8E730}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmlTest</RootNamespace>
+    <AssemblyName>XmlTest</AssemblyName>
+    <SccProjectName>Rational ClearCase</SccProjectName>
+    <SccLocalPath>Rational ClearCase</SccLocalPath>
+    <SccAuxPath>Rational ClearCase</SccAuxPath>
+    <SccProvider>Rational ClearCase</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormCoding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCoding.Designer.cs">
+      <DependentUpon>FormCoding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDirectory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDirectory.Designer.cs">
+      <DependentUpon>FormDirectory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransform.Designer.cs">
+      <DependentUpon>FormTransform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormList.Designer.cs">
+      <DependentUpon>FormList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXIS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXIS.Designer.cs">
+      <DependentUpon>FormXIS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXSLT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXSLT.Designer.cs">
+      <DependentUpon>FormXSLT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEControler.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormCoding.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormCoding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDirectory.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormDirectory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransform.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormTransform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormList.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXIS.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormXIS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXSLT.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormXSLT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Xml2Html.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="XMLDemo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RequestDemo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="12_to_PATIENT_DISCHARGE.xsl" />
+    <Content Include="DataSet2Request.xslt" />
+    <Content Include="NOTIFICATION%28PATIENT_ADMIT_VISIT%29_to_10.xsl" />
+    <Content Include="Request2DataSet.xslt" />
+    <Content Include="XIMInTemplate.xsl" />
+    <Content Include="XIMOutTemplate.xsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4D805299-9559-4F4B-A95C-FEFB294AC2FF}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.XmlAdapter.Common\HYS.XmlAdapter.Common.csproj">
+      <Project>{4A280B55-A6C2-4DFC-B612-34DB6E3F918E}</Project>
+      <Name>HYS.XmlAdapter.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

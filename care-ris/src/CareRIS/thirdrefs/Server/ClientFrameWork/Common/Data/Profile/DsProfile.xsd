@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsProfile" targetNamespace="http://tempuri.org/DsProfile.xsd" xmlns:mstns="http://tempuri.org/DsProfile.xsd" xmlns="http://tempuri.org/DsProfile.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsProfile" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsProfile" msprop:Generator_DataSetName="DsProfile">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Profile" msprop:Generator_UserTableName="Profile" msprop:Generator_RowDeletedName="ProfileRowDeleted" msprop:Generator_RowChangedName="ProfileRowChanged" msprop:Generator_RowClassName="ProfileRow" msprop:Generator_RowChangingName="ProfileRowChanging" msprop:Generator_RowEvArgName="ProfileRowChangeEvent" msprop:Generator_RowEvHandlerName="ProfileRowChangeEventHandler" msprop:Generator_TableClassName="ProfileDataTable" msprop:Generator_TableVarName="tableProfile" msprop:Generator_RowDeletingName="ProfileRowDeleting" msprop:Generator_TablePropName="Profile">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInTable="NameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInTable="ValueColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModuleID" msprop:Generator_UserColumnName="ModuleID" msprop:Generator_ColumnPropNameInRow="ModuleID" msprop:Generator_ColumnVarNameInTable="columnModuleID" msprop:Generator_ColumnPropNameInTable="ModuleIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Exportable" msprop:Generator_UserColumnName="Exportable" msprop:Generator_ColumnPropNameInRow="Exportable" msprop:Generator_ColumnVarNameInTable="columnExportable" msprop:Generator_ColumnPropNameInTable="ExportableColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropertyDesc" msprop:Generator_UserColumnName="PropertyDesc" msprop:Generator_ColumnPropNameInRow="PropertyDesc" msprop:Generator_ColumnVarNameInTable="columnPropertyDesc" msprop:Generator_ColumnPropNameInTable="PropertyDescColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropertyOptions" msprop:Generator_UserColumnName="PropertyOptions" msprop:Generator_ColumnPropNameInRow="PropertyOptions" msprop:Generator_ColumnVarNameInTable="columnPropertyOptions" msprop:Generator_ColumnPropNameInTable="PropertyOptionsColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1024" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Inheritance" msprop:Generator_UserColumnName="Inheritance" msprop:Generator_ColumnPropNameInRow="Inheritance" msprop:Generator_ColumnVarNameInTable="columnInheritance" msprop:Generator_ColumnPropNameInTable="InheritanceColumn" type="xs:int" />
+              <xs:element name="PropertyType" msprop:Generator_UserColumnName="PropertyType" msprop:Generator_ColumnPropNameInRow="PropertyType" msprop:Generator_ColumnVarNameInTable="columnPropertyType" msprop:Generator_ColumnPropNameInTable="PropertyTypeColumn" type="xs:int" />
+              <xs:element name="IsHidden" msprop:Generator_UserColumnName="IsHidden" msprop:Generator_ColumnPropNameInRow="IsHidden" msprop:Generator_ColumnVarNameInTable="columnIsHidden" msprop:Generator_ColumnPropNameInTable="IsHiddenColumn" type="xs:int" />
+              <xs:element name="OrderingPos" msprop:Generator_UserColumnName="OrderingPos" msprop:Generator_ColumnPropNameInRow="OrderingPos" msprop:Generator_ColumnVarNameInTable="columnOrderingPos" msprop:Generator_ColumnPropNameInTable="OrderingPosColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Profile" />
+      <xs:field xpath="mstns:Name" />
+      <xs:field xpath="mstns:ModuleID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

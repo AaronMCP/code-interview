@@ -1,0 +1,133 @@
+﻿<div class="role-manage">
+    <div class="role-manage-top">
+        <div class="form-group col-md-2">
+            <label>医院</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="domain" ng-options="h for h in hospitalList"></select>
+            </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+            <li>
+                <button type="button" class="btn btn-default" ng-click="copyRole()" ng-disabled="!selectedRole">拷贝</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="addRole()" ng-disabled="!selectedParent">添加</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="deleteRole(selectedRole)" ng-disabled="!selectedRole">删除</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="updateRole()" ng-disabled="!selectedRole">保存</button>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="refreshRole()">
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="role-manage-content">
+        <div class="role-manage-left col-md-3">
+            <h4>角色名称</h4>
+            <div kendo-tree-view="roleTree"
+                 k-on-change="roleTreeClick(dataItem);">
+                <span k-template>
+                    <span class="role-font-color">{{dataItem.text}}</span>
+                </span>
+            </div>
+        </div>
+        <div class="role-manage-right col-md-9">
+            <h4>角色描述:  {{selectedRole.name}}</h4>
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role1">
+                        系统框架
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role2">
+                        检查
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role3">
+                        全局
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role4">
+                        质量控制
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role5">
+                        登记检查
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role6">
+                        报告
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role7">
+                        统计
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" data-toggle="tab" data-target="#role8">
+                        教学
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="role1">
+                    <role-system role-profile-list="roleProfileListAuthorization"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role2">
+                    <role-system role-profile-list="roleProfileListExamination"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role3">
+                    <role-system role-profile-list="roleProfileListGlobal"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role4">
+                    <role-system role-profile-list="roleProfileListQualityControl"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role5">
+                    <role-system role-profile-list="roleProfileListRegistration"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role6">
+                    <role-system role-profile-list="roleProfileListReport"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role7">
+                    <role-system role-profile-list="roleProfileListStatistic"></role-system>
+                </div>
+                <div class="tab-pane fade" id="role8">
+                    <role-system role-profile-list="roleProfileListTeaching"></role-system>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div kendo-window="addRoleWindow"
+         k-width="'300px'" k-height="'200px'"
+         k-visible="false"
+         k-resizable="false" k-modal="true"
+         k-title="'添加角色'">
+        <div class="add-role-content">
+            <form name="addRoleForm" novalidate>
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <span class="required-filed">角色名称：</span>
+                    <input type="text" class="form-control" ng-model="roleName" required />
+                </div>
+                <div class="form-group" style="margin-bottom: 30px;">
+                    <span class="required-filed">角色描述：</span>
+                    <input type="text" class="form-control" ng-model="roleDescription" required />
+                </div>
+                <div class="role-btn-group">
+                    <button class="btn btn-primary" ng-click="addRoleCancel()">取消</button>
+                    <button class="btn btn-primary" ng-click="addRoleSure()" ng-disabled="addRoleForm.$invalid">确定</button>
+                </div>
+            </form>  
+        </div>
+    </div>
+</div>

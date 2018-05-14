@@ -1,0 +1,94 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>Search</h4>
+</div>
+<div class="modal-body" ui-keydown="{'enter':'search($event)'}">
+    <form id="advancedSearchForm" class="form-horizontal" role="form">
+        <div class="form-group">
+            <label for="inputPatientNo" class="col-md-2 control-label" translate>ConsultPatientNo</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputPatientNo" ng-model="searchCriteria.patientNo">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPatientName" class="col-md-2 control-label" translate>PatientName</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputPatientName" ng-model="searchCriteria.patientName">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputInsuranceNumber" class="col-md-2 control-label" translate>InsuranceNumber</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputInsuranceNumber" ng-model="searchCriteria.insuranceNumber">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputIdentityCard" class="col-md-2 control-label" translate>IdentityCard</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control" id="inputIdentityCard" ng-model="searchCriteria.identityCard">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputStatus" class="col-md-2 control-label" translate>Status</label>
+            <div class="col-sm-8">
+                <!--<input type="text" class="form-control" id="inputStatus">-->
+                <ui-select id="inputStatus" multiple ng-model="searchCriteria.statusList"
+                           theme="bootstrap" search-enabled="false">
+                    <ui-select-match>{{$item.text | translate}}</ui-select-match>
+                    <ui-select-choices repeat="status as status in statusOptions">
+                        <span>{{status.text | translate}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" translate>ConsultationTimeInfo</label>
+            <div class="col-sm-4">
+                <p class="input-group">
+                    <input class="form-control" id="consultationStartDate" kendo-date-picker
+                           k-ng-model="searchCriteria.consultationStartDate" />
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p class="input-group">
+                    <input class="form-control" id="consultationEndDate" kendo-date-picker
+                           k-ng-model="searchCriteria.consultationEndDate" />
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" translate>RequestCreateDate</label>
+            <div class="col-sm-4">
+                <p class="input-group">
+                    <input class="form-control" id="requestStartDate" kendo-date-picker
+                           k-ng-model="searchCriteria.requestStartDate" />
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <p class="input-group">
+                    <input class="form-control" id="requestEndDate" kendo-date-picker
+                           k-ng-model="searchCriteria.requestEndDate" />
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-sm-8">
+                <input type="checkbox" id="IncludeDeleted" ng-model="searchCriteria.includeDeleted">
+                <label for="IncludeDeleted" translate>IncludeDeleted</label>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-green" ng-click="search()">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+    <button class="btn btn-default" ng-click="cancel()" translate>Cancel</button>
+
+    <button class="btn btn-default pull-left" ng-click="resetCriteria()" translate>ResetSearchCriteria</button>
+    <button class="btn btn-default pull-left ris-popover" ng-click="clearShortcutName()" translate id="showShortcutNameButton"
+            ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+            data-placement="auto top bottom" data-templateurl="/app/worklist/views/shortcut-name-input-view.html">
+        Save
+    </button>
+</div>

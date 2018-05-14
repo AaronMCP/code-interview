@@ -1,0 +1,62 @@
+﻿.system-configure {
+    height:100%;
+    position: relative;
+    width: 100%;
+}
+.system-configure-right > .nav a{
+        color:#333;
+    }
+.system-configure-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+}
+    .system-configure-top .nav {
+        margin-right:0;
+    }
+    .system-configure-top .form-group {
+        margin-top:10px;
+    }
+    .system-configure-top .form-group label{
+        float:left;
+        line-height:34px;
+        padding-right:10px;
+        color:#787878;
+        font-weight:500;
+    }
+.system-configure-content {
+    position: absolute;
+    top: 60px;
+    border-top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:#e0e0e0;
+}
+.system-configure-right {
+    height: 100%;
+    position: relative;
+    background-color: #fff;
+}
+    .system-configure-right .nav {
+        height: 44px;
+        background:#e0e0e0;
+        padding-left: 5px;
+    }
+    
+.system-configure-right .tab-content {
+    position: absolute;
+    top: 44px;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    padding:20px;
+    overflow:hidden;
+}
+
+.system-configure-right .tab-content .tab-pane {
+    height: 100%;
+}
+

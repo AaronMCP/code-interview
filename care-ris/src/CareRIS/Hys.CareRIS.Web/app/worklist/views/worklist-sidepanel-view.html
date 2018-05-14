@@ -1,0 +1,73 @@
+﻿<style>
+    .shortcut-button {
+        padding: 0!important;
+        width: 156px;
+        height: 38px;
+        text-align: center;
+        line-height: 36px;
+        background: #fff;
+        box-shadow:0 2px 4px 0 rgba(199,197,197,0.50);
+        border-radius:8px;
+        cursor: pointer;
+    }
+    .shortcut-ul li a{
+        padding: 3px 10px!important;
+    }
+</style>
+
+<nav class="aside-nav">
+    <div class="accordion-group">
+        <div class="shortcut-button dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span>{{myFiter}}</span>
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </div>
+        <ul class="shortcut-ul dropdown-menu multi-level" role="menu">
+            <li ng-if="shortcuts.length < 1" style="text-align: center"><a href="javascript:void(0);">空</a><li/>
+            <li ng-repeat="shortcut in shortcuts" ng-mousemove="showButton = true;" ng-mouseleave="showButton = false;">
+                <a href="javascript:void(0);" ng-click="searchByShortcut(shortcut)"
+                   ng-class="{'selected':shortcut.selected}"
+                   style="display: flex; align-items: center;height:36px;">
+                    <span title="{{shortcut.name}}" style="display:inline-block;width:60px; overflow: hidden;text-overflow: ellipsis;white-space:nowrap">{{shortcut.name}}</span>
+                    <span style="display:inline-block" class="glyphicon glyphicon-star" aria-hidden="true" title="{{'Default' | translate}}"
+                          ng-show="shortcut.isDefault"></span>
+                    <span style="display:flex;align-items:center;margin-left: 10px;">
+                        <span class="glyphicon glyphicon-star-empty" aria-hidden="true" title="{{'SetAsDetault' | translate}}"
+                              style="margin-right: 5px" ng-show="showButton" ng-click="setAsDefaultShortcut($event, shortcut)"></span>
+                        <span class="glyphicon glyphicon-pencil" aria-hidden="true" title="{{'EditShoutcut' | translate}}"
+                              style="margin-right: 5px" ng-show="showButton" ng-click="editShortcut($event, shortcut)"></span>
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true" title="{{'Delete' | translate}}"
+                              ng-show="showButton" ng-click="deleteShortcut($event, shortcut)"></span>
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <!--<div class="accordion-heading">
+            <a class="accordion-toggle my-filter" data-toggle="collapse" href="#collapseOne" ng-init="isDown=true;" ng-click="isDown=!isDown">
+                <span translate>MyFilter </span>
+                <span class="glyphicon" ng-class="{true:'glyphicon-chevron-up',false:'glyphicon-chevron-down'}[isDown]"></span>
+            </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse in">
+            <div class="accordion-inner">
+                <ul>
+                    <li ng-repeat="shortcut in shortcuts" ng-mousemove="showButton = true;" ng-mouseleave="showButton = false;">
+                        <a href="javascript:void(0);" ng-click="searchByShortcut(shortcut)" ng-class="{selected:shortcut.uniqueID===$parent.selectedId}">
+                            <span title="{{shortcut.name}}" style="display:inline-block;width:60px; overflow: hidden;text-overflow: ellipsis;white-space:nowrap">{{shortcut.name}}</span>
+                            <span style="display:inline-block" class="glyphicon glyphicon-star" aria-hidden="true" title="{{'Default' | translate}}"
+                                  ng-show="shortcut.isDefault"></span>
+                            <span class="pull-right" style="display:inline-block">
+                                <span class="glyphicon glyphicon-star-empty" aria-hidden="true" title="{{'SetAsDetault' | translate}}"
+                                      style="margin-right: 5px" ng-show="showButton" ng-click="setAsDefaultShortcut($event, shortcut)"></span>
+                                <span class="glyphicon glyphicon-pencil" aria-hidden="true" title="{{'EditShoutcut' | translate}}"
+                                      ng-show="showButton" ng-click="editShortcut($event, shortcut)"></span>
+                                <span class="glyphicon glyphicon-remove" aria-hidden="true" title="{{'Delete' | translate}}"
+                                      ng-show="showButton" ng-click="deleteShortcut($event, shortcut)"></span>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>-->
+    </div>
+</nav>

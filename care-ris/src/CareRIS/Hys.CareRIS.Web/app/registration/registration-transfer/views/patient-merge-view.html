@@ -1,0 +1,69 @@
+﻿<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable">
+    <p class="registration-module-title" style="font-size:18px" translate>PatientMerge</p>
+    <div class="popup-content" style="height:400px">
+        <p class="patient-merge-warning" translate>MergeWarning</p>
+
+        <div class="contrast-content" style="font-size:13px" ris-contrast merge-check="mergeCheck(name,checked)">
+            <div class="col-lg-6">
+                <h4 translate>IntergrationPatientInfo</h4>
+                <dl class="dl-horizontal" name="localName">
+                    <dt>{{'PatientName'|translate}}</dt>
+                    <dd>{{intergrationPatient.localName}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="gender">
+                    <dt>{{'Gender'|translate}}</dt>
+                    <dd>{{intergrationPatient.gender}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="birthday">
+                    <dt>{{'Birthday'|translate}}</dt>
+                    <dd>{{intergrationPatient.birthday|date:'yyyy-MM-dd'}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="referenceNo">
+                    <dt>{{'ReferenceNo'|translate}}</dt>
+                    <dd>{{intergrationPatient.referenceNo}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="telephone">
+                    <dt>{{'Telephone'|translate}}</dt>
+                    <dd>{{intergrationPatient.telephone}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="address">
+                    <dt>{{'Address'|translate}}</dt>
+                    <dd>{{intergrationPatient.address}}</dd>
+                </dl>
+            </div>
+
+            <div class="col-lg-6">
+                <h4 translate>ExistPatientInfo</h4>
+                <dl class="dl-horizontal" name="localName">
+                    <dt>{{'PatientName'|translate}}</dt>
+                    <dd>{{existPatient.localName}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="gender">
+                    <dt>{{'Gender'|translate}}</dt>
+                    <dd>{{existPatient.gender}}</dd>
+                </dl>
+
+                <dl class="dl-horizontal" name="birthday">
+                    <dt>{{'Birthday'|translate}}</dt>
+                    <dd>{{existPatient.birthday|date:'yyyy-MM-dd'}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="referenceNo">
+                    <dt>{{'ReferenceNo'|translate}}</dt>
+                    <dd>{{existPatient.referenceNo}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="telephone">
+                    <dt>{{'Telephone'|translate}}</dt>
+                    <dd>{{existPatient.telephone}}</dd>
+                </dl>
+                <dl class="dl-horizontal" name="address">
+                    <dt>{{'Address'|translate}}</dt>
+                    <dd>{{existPatient.address}}</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <p class="csd-module-footer registration-edit-footer">
+        <button type="submit" class="btn btn-green" ng-click="merge()" translate>Merge</button>
+        <button class="btn btn-merge " type="button" ng-click="cancel()" ng-disabled="isSaving" translate>CancelMerge</button>
+    </p>
+</div>

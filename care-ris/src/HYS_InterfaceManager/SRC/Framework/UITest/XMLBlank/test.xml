@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<r>
+ <a>  as  
+ df   </a>
+ <b><![CDATA[  as   df   ]]></b>
+ <c>&#32;&#32;as&#32;&#32;&#32;df&#32;&#32;&#32;</c>
+ <d xml:space="preserve">  as   df   </d>
+</r>

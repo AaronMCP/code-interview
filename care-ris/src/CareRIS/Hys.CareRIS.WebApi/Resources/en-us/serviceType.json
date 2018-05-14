@@ -1,0 +1,18 @@
+﻿[
+   {
+      "UniqueId":"1",
+      "UniqueID":"1",
+      "Name":"Common Consultation",          
+      "Description":"",
+      "LastEditUser":"1",
+      "LastEditTime":"2015-06-25T11:09:07.48+08:00"
+   },
+   {
+      "UniqueId":"2",
+      "UniqueID":"2",
+      "Name":"Acute Consultation",               
+      "Description":"",
+      "LastEditUser":"1",
+      "LastEditTime":"2015-06-25T11:09:07.48+08:00"
+   }
+]

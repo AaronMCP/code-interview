@@ -1,0 +1,132 @@
+﻿<div>
+    <link href="/app-resources/css/request-patientcase-edit-window.css" rel="stylesheet" />
+    <div class="request-advice-title title">
+        <strong>
+            {{'PatientBaseInformation' | translate}}
+        </strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </div>
+    <form name="requestAdvice" class="ris-form">
+        <div id="patientCaseInfo" class="col-md-11" sris-enter-action>
+            <div class="form-group">
+                <div class="col-md-3 col1">
+                    <label for="patientNo">{{'ConsultPatientNo'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input type="text" class="form-control col2input"
+                           id="patientNo"
+                           ng-model="patientCase.patientNo"
+                           placeholder="{{'PatientNo'|translate}}"
+                           name="patientNo"
+                           maxlength=128
+                           ng-readonly=true
+                           tabindex="1"
+                           ris-enter-index
+                           required>
+                </div>
+                <div class="col-md-3 col1">
+                    <label for="patientNo">{{'InsuranceNumber'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input type="text" class="form-control col2input"
+                           id="insuranceNumber"
+                           ng-model="patientCase.insuranceNumber"
+                           placeholder="{{'InsuranceNumber'|translate}}"
+                           name="patientNo"
+                           maxlength=128
+                           tabindex="2"
+                           ris-enter-index
+                           required>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 col1">
+                    <label for="patientName">{{'PatientName'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input type="text" class="form-control col2input"
+                           id="patientName"
+                           ng-model="patientCase.patientName"
+                           placeholder="{{'PatientName'|translate}}"
+                           name="patientName"
+                           maxlength=128
+                           tabindex="3"
+                           ris-enter-index
+                           required>
+                </div>
+                <div class="col-md-3 col1">
+                    <label for="gender">{{'Gender'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <select id="gender" class="form-control col2input" ng-model="patientCase.gender" name="gender"
+                            ng-options="gender.value as gender.text for gender in genderList"
+                            required
+                            ris-enter-index tabindex="4"></select>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 col1">
+                    <label for="ReferenceNo">{{'ReferenceNo'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input type="text" class="form-control col2input"
+                           id="referenceNo"
+                           name="referenceNo"
+                           ng-model="patientCase.identityCard"
+                           maxlength=128
+                           tabindex="5"
+                           ris-enter-index
+                           ris-id-number
+                           placeholder="{{'ReferenceNo'|translate}}"
+                           ng-change="changeReferenceNo()" />
+                </div>
+                <div class="col-md-3 col1">
+                    <label for="Birthday">{{'Birthday'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <p class="input-group">
+                        <input id="birthday" type="text" datepicker-popup="yyyy-MM-dd" ris-datepicker-popup ris-enter-index
+                               is-open="selectBirthdayOpened" datepicker-options="dateOptions" ris-datepicker-multiformat
+                               current-text="{{'Today' | translate}}" clear-text="{{'Clear' | translate}}" close-text="{{'Close' | translate}}"
+                               ng-change="setAge()"
+                               class="form-control col2input" id="birthday" placeholder="{{'Birthday'|translate}}"
+                               name="birthday" ng-model="patientCase.birthday"
+                               tabindex="6" ris-enter-index />
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-default" ng-click="selectBirthday($event)">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </button>
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-3 col1">
+                    <label for="currentAge">{{'Age'|translate}}<span class="registration-edit-required">*</span></label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input id="age" type="text" class="form-control col2input" name="currentAge" ris-enter-index
+                           ng-model="patientCase.currentAge" placeholder="{{'Age'|translate}}" ng-change="setBirthday()" required tabindex="7" />
+                    <select id="ageList" class="form-control col2input" ng-model="patientCase.ageType"
+                            ng-options="ageType.value as ageType.text for ageType in ageUnitList"
+                            ng-change="ageTypeChage()"
+                            ris-enter-index
+                            tabindex="8"></select>
+                </div>
+                <div class="col-md-3 col1">
+                    <label for="Telephone">{{'Telephone'|translate}}</label>
+                </div>
+                <div class="col-md-5 col2">
+                    <input type="text" class="form-control col2input" ris-enter-index id="telephone" placeholder="{{'Telephone'|translate}}"
+                           name="telephone" ng-model="patientCase.telephone" ng-pattern="integerval" tabindex="9" maxlength=64 />
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="request-advice-action">
+            <button class="btn btn-green" translate ng-click="updatePatientCaseBaseInfo()">OK</button>
+            <button class="btn btn-default btn-left" translate ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

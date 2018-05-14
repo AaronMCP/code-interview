@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+  <Header />
+  <Body>
+    <HL7><MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" MessageControlID="101168"><SendingApplication EntityIdentifier="RISMALL_ADT"/><SendingFacility EntityIdentifier="MESA"/><ReceivingApplication EntityIdentifier="RIS_CSH_GC"/><ReceivingFacility EntityIdentifier="CSH"/><MessageType MessageCode="ADT" TriggerEvent="A40" MessageStructure="ADT_A39"/><ProcessingID ProcessingID="P"/><VersionID VersionID="2.3.1"/></MSH><EVN RecordDT="200004211000" EventOccurred="200004210950"/><PID DTOfBirth="19980704" Sex="M"><PatientID_InternalID ID="V_TPID001"><AssigningAuthority NameSpaceID="VirtualDataCenter"/></PatientID_InternalID><PatientID_InternalID ID="PID0005"><AssigningAuthority NameSpaceID="PatientIDIssuer"/></PatientID_InternalID><PatientName FamilyName="TESTPATIENT001"/><Race Identifier="AI"/><PatientAddress StreetAddress="7616 STANFORD AVE" City="ST. LOUIS" StateOrProvince="MO" ZipOrPostalCode="63130"/><PatientAccountNumber ID="20981701"/></PID><MRG><PriorPatientIdentifierList ID="PID0005"><AssigningAuthority>PatientIDIssuer</AssigningAuthority></PriorPatientIdentifierList></MRG></HL7>
+  </Body>
+</Message>

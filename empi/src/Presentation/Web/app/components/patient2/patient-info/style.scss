@@ -1,0 +1,30 @@
+.patient-info-content {
+    width: 100%;
+    height: 100%;
+    .patient-info-row {
+        width: 100%;
+        // height: 40px;
+        border-bottom: 1px solid #e1e1e1;
+        font-size: 14px;
+        // line-height: 40px;
+        span{
+            padding: 12px 0 14px;
+        }
+        span:first-child {
+            display: inline-block;
+            text-indent: 12px;
+            // width: 80px;
+            color: #787878;
+        }
+        span:last-child {
+            display: inline-block;
+            // width: 170px;
+            color: #1c2029;
+        }
+    }
+
+    // .patient-info-row:last-child {
+    //     height: 59px;
+    //     line-height: 59px;
+    // }
+}

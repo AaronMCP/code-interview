@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<GCRIS-config>
+  <action-mappings>
+    <!--authored by Roy Ma -->
+    <action message="About_VersionThanks" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.AboutAction" />
+    <action message="Login_Settings" type="Kodak.GCRIS.Server.OamAction.Action.LoginSettingsAction" />
+    <action message="KeyPerformanceRating" type="Kodak.GCRIS.Server.OamAction.Action.KeyPerformanceRatingAction" />
+    <!--authored by Wade Zhou -->
+    <action message="RandomInspection" type="Kodak.GCRIS.Server.OamAction.Action.RandomInspectionAction" />
+
+    <!--authored by Fred Li -->
+    <action message="DsPanelInfoLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsPanelInfoAction" />
+    <action message="DsSystemProfileLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsSystemProfileAction" />
+    <action message="DsSiteProfileLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsSiteProfileAction" />
+    <action message="DsRoleProfileLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsRoleProfileAction" />
+    <action message="DsUserProfileLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsUserProfileAction" />
+    <action message="DsUserProfileSave" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.SaveDsUserProfileAction" />
+    <action message="LoadAllProfile" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadAllProfileAction" />
+    <action message="Login" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoginAction" />
+    <action message="LogOut" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LogOutAction" />
+    <action message="DsRoleLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsRoleAction" />
+    <action message="DsConfigDicLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsConfigDicAction" />
+    <action message="DsDictionaryLoad" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDictionaryAction" />
+    <action message="GetExamInfo" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadImageAction" />
+
+    <action message="ConditionShortCutLoad" type="Kodak.GCRIS.Server.Statistic.GeneralQueryAction.Action.LoadConditionShortCut" />
+    <action message="QueryDataLoad" type="Kodak.GCRIS.Server.Statistic.GeneralQueryAction.Action.LoadQueryData" />
+    <action message="QueryMake" type="Kodak.GCRIS.Server.Statistic.GeneralQueryAction.Action.MakeQuery" />
+    <action message="ShortcutSave" type="Kodak.GCRIS.Server.Statistic.GeneralQueryAction.Action.SaveShortcut" />
+    <action message="GetExpireDays" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.GetExpireDaysAction" />
+    <action message="GetAllNotesInDB" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.BillBoardAction" />
+    <action message="GetBillBoardDictionaryData" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.BillBoardAction" />
+    <action message="GetCurDomain" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.DomainAction" />
+    <action message="GetCurSite" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.DomainAction" />
+    <action message="GetFilterSite" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.SiteAction" />
+
+    <!--authored by Terrence Jiang -->
+    <action message="LoadDsFunctionInfoAction" type="Kodak.GCRIS.Server.ClientFrameworkAction.Action.LoadDsFunctionInfoAction" />
+    <action message="CheckClinic" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="LoadMainAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="LoadSubAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="AddNewAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="AddNewAnatomyStorProc" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="UpdateMainAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="UpdateSubAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="DeleteAnatomy" type="Kodak.GCRIS.Server.OamAction.Action.AnatomyAction" />
+    <action message="LoadMainPathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="LoadSubPathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="AddNewPathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="AddNewPathologyStorProc" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="UpdateMainPathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="UpdateSubPathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="DeletePathology" type="Kodak.GCRIS.Server.OamAction.Action.PathologyAction" />
+    <action message="GetACRCodeDesc" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+    <action message="SearchACRCode" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+    <action message="getAllRowCount" type="Kodak.GCRIS.Server.OamAction.Action.HippaQueryAction" />
+    <action message="HippaQuery" type="Kodak.GCRIS.Server.OamAction.Action.HippaQueryAction" />
+    <action message="GetAllACRCode" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+
+    <action message="GetAllProcedureCodeForExport" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+
+    <action message="GetAllUser" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+    <action message="ImportACRCode" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+
+    <action message="ImportProcedureCode" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+    <action message="ImportProcedureCodeXls" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+    <action message="ImportBodyPartSystemMapXls" type="Kodak.GCRIS.Server.OamAction.Action.ACRCodeAction" />
+
+    <action message="ImportPhraseTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+    <action message="GetAllPhraseTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+
+    <action message="GetAllPrintTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+    <action message="ImportPrintTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+
+    <action message="GetAllReportTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+    <action message="ImportReportTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+
+    <action message="GetAllBookingNoticeTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+    <action message="ImportBookingNoticeTemplate" type="Kodak.GCRIS.Server.OamAction.Action.TemplateIEAction" />
+
+
+
+
+    <action message="LoadShortcut" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="GetShortcutName" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="AddShortcut" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="EditShortcut" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="DeleteShortcut" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="QueryEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+    <action message="SaveEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+    <action message="DelEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+    <action message="UpdateEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+    <action message="LockEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+    <action message="UnLockEYTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.EmergencyTemplateAction"/>
+
+    <action message="GetDirectoryField" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="AddNewNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="AddNewLeafNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="EditNodeName" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="AddNodeItemOrder" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="MinusNodeItemOrde" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="DeleteNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetSubNodes" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="IsLeaf" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetTemplateGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetReportTemplateByName" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetReportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="DeleteReportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="ModifyReportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetItemGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetParentGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetReportTemplateByShortcut" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="GetReportInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="MoveLeafNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+    <action message="CopyLeafNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.ReportTemplateAction"/>
+
+    <action message="LoadPrintTemplateInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="AddPrintTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="DeletePrintTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadPrintTemplateType" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadSubPrintTemplateInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="SetDefault" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadPrintTemplateField" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="GetTemplateModalityType" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="LoadPhraseTemplatesByModality" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="AddPhraseTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="EditPhraseTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="DeletePhraseTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="LoadPhraseTemplateByGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="LoadPhraseTemplateByShortcut" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="ExistPhraseShortcut" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="LoadChildren" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="UpDownNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="CopyPhraseLeafNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="MovePhraseLeafNode" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+
+    <action message="ModifyPrintTemplateFieldInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="ModifyPrintTemplateName" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+
+    <action message="LoadGeneralStatType" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadExportTemplateType" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadSubExportTemplateInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="LoadExportTemplateInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="AddExportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="ModifyExportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="ModifyExportTemplateInfo" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="DeleteExportTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+
+    <action message="GetDefaultPrintTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+
+    <action message="LoadPrintTemplateByName" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="GetLatestVersion" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="IsPrintTemplateSameName" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+    <action message="GetPrintTemplateNameByGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+	<action message="GetPrintData" type="Kodak.GCRIS.Server.TemplatesActions.Action.PrintTemplateAction"/>
+
+
+
+    <action message="LoadExaminTemplatesByModality" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="AddExaminTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="EditExaminTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="DeleteExaminTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="LoadExaminTemplateByGuid" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="LoadExaminTemplateByShortcut" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="ExistExaminShortcut" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+
+    <action message="ExistPhraseTemplateName" type="Kodak.GCRIS.Server.TemplatesActions.Action.PhraseTemplateAction"/>
+    <action message="ExistExaminTemplateName" type="Kodak.GCRIS.Server.TemplatesActions.Action.ExaminTemplateAction"/>
+    <action message="GetReportAllInfor" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="GetAccordRate" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="SaveTeaching" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="GetTeachingInfoByReportGuid" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="GetFileType" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="GetTeachingProperty" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="SearchTeaching" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="DeleteTeaching" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="Teaching.ExistReport" type="Kodak.GCRIS.Server.TeachingAction.Action.TeachingAction"/>
+    <action message="CheckOrderStatus" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+
+    <action message="GetRequisitionType" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="SaveERequisitionTemplateGuid" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="QueryAllOnlineOfflineUser" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="IsArchived" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="SendFetchCommand" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="GetOrderInfo" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="UpdateOrderMessage" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="GetFieldValue" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="PostEvent" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="PostMessage" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="GetValidApproverDoctor" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="CanEditOrderMessage" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    
+
+    <!-- ICD10 By Foman Liang -->
+    <action message="SearchICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+    <action message="GetAllICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+    <action message="ModifyICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+    <action message="AddICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+    <action message="DeleteICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+    <action message="ImportICD10" type="Kodak.GCRIS.Server.OamAction.Action.ICD10Action" />
+
+    <!--for Statistic module authored by Andy Bu -->
+    <action message="InitStaffDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitStaffDataLoadAction" />
+    <action message="StaffYearStatistic" type="Kodak.GCRIS.Server.Statistic.Action.StaffYearStatisticAction" />
+    <action message="StaffMonthStatistic" type="Kodak.GCRIS.Server.Statistic.Action.StaffMonthStatisticAction" />
+    <action message="StaffTimeSliceStatistic" type="Kodak.GCRIS.Server.Statistic.Action.StaffTimeSliceStatisticAction" />
+    <action message="InitDeviceDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitDeviceDataLoadAction" />
+    <action message="DeviceStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.DeviceStaisticQueryAcgtion" />
+    <action message="InitFilmDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitFilmDataLoadAction" />
+    <action message="FilmStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.FilmStaisticQueryAction" />
+    <action message="InitChargeDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitChargeDataLoadAction" />
+    <action message="ChargeStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.ChargeStaisticQueryAction" />
+    <action message="InitOrderDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitOrderDataLoadAction" />
+    <action message="OrderStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.OrderStaisticQueryAction" />
+    <action message="InitPositiveDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitPositiveDataLoadAction" />
+    <action message="PositiveStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.PositiveStaisticQueryAction" />
+    <action message="InitEventsDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitEventsDataLoadAction" />
+    <action message="EventsStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.EventsStaisticQueryAction" />
+    <action message="InitIllnessDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitIllnessDataLoadAction" />
+    <action message="IllnessStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.IllnessStaisticQueryAction" />
+    <action message="InitReportQualityDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitReportQualityDataLoadAction" />
+    <action message="ReportQualityStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.ReportQualityQueryAction" />
+    <action message="InitDiagnosticDataLoad" type="Kodak.GCRIS.Server.Statistic.Action.InitDiagnosticDataLoadActon" />
+    <action message="DiagnosticStaisticQuery" type="Kodak.GCRIS.Server.Statistic.Action.DiagnosticStaisticQueryAction" />
+
+    <!--for exam module authored by Bruce Deng -->
+    <action message="Exam_QueryList" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_QueryUser" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_Lock" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_Cancel" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_Update" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_Finish" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_QueryReShot" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_IsLockBySelf" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_QueryExamPhraseTemplate" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_UpdateQueue" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_QueryNotMatching" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_UpdateNotMatchingStatus" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_Unlock" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_CanFinish" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_FinishExamingExam" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_UpdateImagingExamSheets" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_QueryImagingExamSheets" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+    <action message="Exam_GetAllergys" type="Kodak.GCRIS.Server.Examination.Action.ExaminationAction" />
+
+    <!-- Oam Module authored by Caron -->
+    <action message="Oam.DictionaryManager" type="Kodak.GCRIS.Server.OamAction.Action.DictionaryManagerAction" />
+    <action message="Oam.ResourceManager" type="Kodak.GCRIS.Server.OamAction.Action.ResourceManagerAction" />
+    <action message="Oam.ProcedureCodeManager" type="Kodak.GCRIS.Server.OamAction.Action.ProcedureCodeManagerAction" />
+    <action message="Oam.ScheduleManager" type="Kodak.GCRIS.Server.OamAction.Action.ScheduleManagerAction" />
+
+    <action message="Common.GetFtpParameters" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <!-- Oam Module authored by Ahad -->
+    <action message="Oam.SystemProfileManager" type="Kodak.GCRIS.Server.OamAction.Action.SystemProfileManagerAction" />
+    <action message="Oam.RoleManager" type="Kodak.GCRIS.Server.OamAction.Action.RoleManagerAction" />
+    <action message="Oam.UserManager" type="Kodak.GCRIS.Server.OamAction.Action.UserManagerAction" />
+    <action message="Oam.ClientConfigManager" type="Kodak.GCRIS.Server.OamAction.Action.ClientConfigManagerAction" />
+    <action message="OAM.AssignReportManager" type="Kodak.GCRIS.Server.OamAction.Action.AssignReportAction" />
+
+    <!-- Report Module by Hankers Yan -->
+    <action message="Rpt_ReportOpenPolicy" type="Kodak.GCRIS.Server.ReportAction.Action.ReportOpenPolicyAction" />
+    <action message="Rpt_SaveLeaveSound" type="Kodak.GCRIS.Server.ReportAction.Action.LeaveSoundAction" />
+    <action message="Rpt_GetLeaveSound" type="Kodak.GCRIS.Server.ReportAction.Action.LeaveSoundAction" />
+    <action message="Rpt_UpdateLeaveSound" type="Kodak.GCRIS.Server.ReportAction.Action.LeaveSoundAction" />
+    <action message="Rpt_SetDrawer" type="Kodak.GCRIS.Server.ReportAction.Action.SetDrawerAction" />
+    <action message="Rpt_GetDrawerSign" type="Kodak.GCRIS.Server.ReportAction.Action.GetDrawerSignAction" />
+    <action message="Rpt_GetLock" type="Kodak.GCRIS.Server.ReportAction.Action.GetLockAction" />
+    <action message="Rpt_RecordLog" type="Kodak.GCRIS.Server.ReportAction.Action.RecordLogAction" />
+    <action message="Rpt_SaveReport" type="Kodak.GCRIS.Server.ReportAction.Action.SaveReportAction" />
+    <action message="Rpt_GetUserList" type="Kodak.GCRIS.Server.ReportAction.Action.GetUserListAction" />
+    <action message="Rpt_DeleteReport" type="Kodak.GCRIS.Server.ReportAction.Action.DeleteReportAction" />
+    <action message="Rpt_GetDictionary" type="Kodak.GCRIS.Server.ReportAction.Action.GetDictionaryAction" />
+    <action message="Rpt_GetGridColumn" type="Kodak.GCRIS.Server.ReportAction.Action.GetGridColumnAction" />
+    <action message="Rpt_GetReportInfo" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportInfoAction" />
+    <action message="Rpt_GetReportsList" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportsListAction" />
+    <action message="Rpt_DisqualifyImage" type="Kodak.GCRIS.Server.ReportAction.Action.DisqualifyImageAction" />
+    <action message="Rpt_GetReportHistory" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportHistoryAction" />
+    <action message="Rpt_GetReportTemplate" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportTemplateAction" />
+    <action message="Rpt_GetReportPrintLog" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportPrintLogAction" />
+    <action message="Rpt_GetReportShortInfo" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportShortInfoAction" />
+    <action message="Rpt_GetConditionColumn" type="Kodak.GCRIS.Server.ReportAction.Action.GetConditionColumnAction" />
+    <action message="Rpt_GetReportsListCount" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportsListCountAction" />
+    <action message="Rpt_GetConditionRelatedControlData" type="Kodak.GCRIS.Server.ReportAction.Action.GetConditionRelatedControlDataAction" />
+    <action message="Rpt_GetSignImage" type="Kodak.GCRIS.Server.ReportAction.Action.GetSignImageAction" />
+    <action message="Rpt_GetExamNumber" type="Kodak.GCRIS.Server.ReportAction.Action.GetExamNumberAction" />
+    <action message="Rpt_SaveLeaveWord" type="Kodak.GCRIS.Server.ReportAction.Action.LeaveWordAction" />
+    <action message="Rpt_GetReportPrintCopiesCount" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportPrintCopiesCountAction" />
+    <action message="Rpt_AssignReport" type="Kodak.GCRIS.Server.ReportAction.Action.AssignReportAction" />
+    <action message="Rpt_SaveConsultation" type="Kodak.GCRIS.Server.ReportAction.Action.ReportAction" />
+    <action message="Rpt_GetRePrint" type="Kodak.GCRIS.Server.ReportAction.Action.GetRePrintAction" />
+    <action message="Rpt_GetReferralMemo" type="Kodak.GCRIS.Server.ReportAction.Action.ReportAction" />
+    <action message="Rpt_UpdateReportIsModified" type="Kodak.GCRIS.Server.ReportAction.Action.UpdateReportIsModifiedAction" />
+    <action message="Rpt_GetReportHoldCount" type="Kodak.GCRIS.Server.ReportAction.Action.GetReportHoldCountAction" />
+
+    <!-- Registration and common by Bruce Deng -->
+    <action message="GetProfileInfo" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="SetCertificatePassword" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetCertificatePassword" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="UpdateCertificate" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetCertificate" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetAllProcedureCode" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetCurSiteProcedureCode" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetProcedureCodeBySite" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetRequisition" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetMoreDictionaryValue" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetProcedureCode" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetExtOptional" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="ReclaimID" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetDictionaryValue" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetModalityType" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetBodyCategory" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetBodyPart" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetCheckingItem" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetExamSystem" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetModality" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetStaff" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetRecordByProcedureCode" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetProcedureDefaultValue" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetDoctorSupervisor" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetSystemProfileValue" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GeneratePatientID" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GenerateAccNo" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GeneratePrescriptionNo" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="SaveNewRegistration" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadRegistration" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadPatient1" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="DeleteRP" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="DeleteOrder" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="UpdateRegistration" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="UnLock" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="SaveRequisition" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="DelRequisition" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryOrder" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryRP" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetGridColumn" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryList" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetModalityPlan" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetPatientChecking" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="Tran2Reg" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="Tran2Exam" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryForCalendar" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetEmergencyTemplate" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GenerateEmergency" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetRPStatus" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryERequisition" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GenerateER" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LockER" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="IsOldPatient" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="UpdatePatient" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="DelCasualTime" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="UnLockER" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="IsOldRemotePatient" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetERStatus" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetDSForRP" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="RegGetReportInfo" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadPatientRelation" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="SaveQueueNo" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadModalitySchedule" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="DelBooking" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadInvalidTime" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="UpdateBookingNotice" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="LoadCycleBooking" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QueryTotal" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="FilmOperation" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="QuashOrder" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="ResumeOrder" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="REG_RegistrationServer" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetTakeReportDate" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetPatientChangeTrace" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="BatchModifyModality" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="RollbackStatus" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetRelatePatientTrace" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="GetRelatePatientByRelatedId" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <action message="BookingPolicyCheck" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <!-- By Wade Zhou for US26246-->
+    <action message="UpdateProcedureTechnician" type="Kodak.GCRIS.Server.Registration.Action.RegistrationAction" />
+    <!-- By Wade Zhou for US26285-->
+    <action message="GetDateTypeByCalendar" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    
+    <!-- By Paul for defect 45891-->
+    <action message="GetLocalName" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="RegIntegration" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+
+    <action message="GetLocalNameByUserGuid" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+
+    <!-- Web Module authored by Ahad -->
+    <action message="GetCheckComboValues" type="Kodak.GCRIS.Server.WebAction.Action.ClinicReportListAction" />
+    <action message="SearchClinicReportList" type="Kodak.GCRIS.Server.WebAction.Action.ClinicReportListAction" />
+    <action message="Clinic_Logout" type="Kodak.GCRIS.Server.WebAction.Action.ClinicReportListAction" />
+    <action message="Clinic_GetProfile" type="Kodak.GCRIS.Server.WebAction.Action.ClinicReportListAction" />
+    <action message="GetReportViewer" type="Kodak.GCRIS.Server.WebAction.Action.ReportViewerAction" />
+    <action message="GetRequisitionImage" type="Kodak.GCRIS.Server.WebAction.Action.ReportViewerAction" />
+    <action message="GetReportHistoryList" type="Kodak.GCRIS.Server.WebAction.Action.ReportHistoryList" />
+    <!-- QualityControl Module by Paul Li -->
+    <action message="QC_QueryPatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryOrder" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryRP" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UpdatePatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UpdateOrder" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UpdateRP" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_DeleteOrder" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_AssignOrderToPatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_MergePatients" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_Lock" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UnLock" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryLock" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_DeleteRP" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_DeletePatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryRPwithDuplicatedReport" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryDuplicatedReport" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UpdateActiveReport" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_MergeOrders" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_MoveOrders" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_MoveRPs" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryLockInfo" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_RelatePatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_UnRelatePatient" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryPatientByRelateID" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_HasOtherPatientRelated" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_RelatePatientsByCondition" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_QueryPatientList" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <!--merge order by level, US26313, 2015-07-30 Requisition-->
+    <action message="QC_MergeRequisition" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_MergeCharge" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    
+    <!-- EK_HI00063904 -->
+    <action message="QC_GetRequisitionInfo" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <!--QC ChargeDataManagement -->
+    <action message="QC_ChargeQueryOrderList" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_ChargeQueryItemList" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+    <action message="QC_ChargeOperation" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+
+    <!-- QC_QueryNotRefundedOrderCharge, 2015-07-20, Oscar added (US26283) -->
+    <action message="QC_QueryNotRefundedOrderCharge" type="Kodak.GCRIS.Server.QualityControl.Action.QualityControlAction" />
+
+    <!-- BulletinPublish James Wei -->
+    <action message="OAM.BulletinPublish" type="Kodak.GCRIS.Server.OamAction.Action.BulletinPublishManagerAction" />
+    <action message="OAM.Hippa" type="Kodak.GCRIS.Server.OamAction.Action.HippaQueryAction" />
+    <action message="BookingNoticeTemplate" type="Kodak.GCRIS.Server.TemplatesActions.Action.BookingNoticeTemplateAction" />
+    <action message="OAM.QualityScoring" type="Kodak.GCRIS.Server.OamAction.Action.QualityScoringAction" />
+    <action message="OAM.KMS" type="Kodak.GCRIS.Server.OamAction.Action.KMSAction" />
+    <action message="OAM.ModalityTimeSlice" type="Kodak.GCRIS.Server.OamAction.Action.ModalityTimeSliceAction" />
+    <!--ConditionCol Foman -->
+    <action message="OAM.ConditionColManager" type="Kodak.GCRIS.Server.OamAction.Action.ConditionColManagerAction" />
+    <action message="OAM_QueryLock" type="Kodak.GCRIS.Server.OamAction.Action.AdministratorToolAction" />
+    <action message="OAM_UnLock" type="Kodak.GCRIS.Server.OamAction.Action.AdministratorToolAction" />
+    <action message="OAM_QueryOnline" type="Kodak.GCRIS.Server.OamAction.Action.AdministratorToolAction" />
+    <action message="OAM_SetOffline" type="Kodak.GCRIS.Server.OamAction.Action.AdministratorToolAction" />
+    <action message="OAM_DomainList" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_SyncDomainSiteList" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_AddDomain" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_ModifyDomain" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_DelDomain" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_AddSite" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_ModifySite" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_DelSite" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_GetSiteProfile" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_SaveSiteProfile" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_AddSiteProfile" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM_DeleteSiteProfile" type="Kodak.GCRIS.Server.OamAction.Action.DomainAction" />
+    <action message="OAM.ChargeCodeManager" type="Kodak.GCRIS.Server.OamAction.Action.ChargeCodeAction" />
+
+
+    <!--ConditionBuilder Server Migration by Hankers Yan-->
+    <action message="CMN_GetDictionaryALL" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetConditionColumn" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetGridColumn" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetUserList" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetConditionRelatedControlData" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetIMUserList" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetIMLog" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetDynamicFormStructure" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetValidUserList" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GETUSERTOPLEVELROLE" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GETUSERALLROLES" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_ISREFERRALANDREADONLY" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="GetRoleBySite" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_GetClientProfile" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_SaveClientProfile" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_SaveSystemProfile" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="cmn_LastReferralStatus" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="CMN_DIGITALSIGN" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+
+    <!-- DataCenter by Bruce Deng -->
+    <action message="DataCenter_RegList" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_ReportList" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_ReportTemplateField" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_ReportInfo" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_TeachingList" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_ShareTeaching" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <action message="DataCenter_TakebackTeaching" type="Carestream.RISGC.Server.DataCenter.Action.DataCenterAction" />
+    <!--Referral-->
+    <action message="ReferralManager" type="Carestream.RISGC.Server.Referral.Action.ReferralAction" />
+
+    <action message="GetBookingNoticeTemplate" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+
+    <!--Assignment-->
+    <action message="Assignment" type="Kodak.GCRIS.Server.AssignmentAction.Action.AssignmentAction" />
+
+    <!-- Common Functions by Hankers Yan -->
+    <action message="COMMON_getDataTable" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <action message="COMMON_queryDataTable" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction"/>
+    <!-- IM by James -->
+    <action message="Do" type="Kodak.GCRIS.Server.IMAction.Action.IMAction"/>
+    <!-- Film Loan by JW-->
+    <action message="SaveFilmLoan" type ="Kodak.GCRIS.Server.FilmLoan.Action.FilmLoanAction"/>
+    <action message="GetFilmLoanNoReturn" type ="Kodak.GCRIS.Server.FilmLoan.Action.FilmLoanAction"/>
+    <action message="PathologyTrackList" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="SetPathologyTrack" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="SetPathologyReport" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="SetDischargedSummary" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="PathologyJudge" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="GetReportAndSummary" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+    <action message="GetPatientInformation" type ="Kodak.GCRIS.Server.PathologyTrack.Action.PathologyTrackAction"/>
+
+    <action message="FilmReservedList" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="FilmStoreList" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="FilmEnteringAdd" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="FilmEnteringDel" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="FilmEnteringModify" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <!-- By Wade Zhou for Medicine Management-->
+    <action message="MedicineEnteringAdd" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="MedicineEnteringDel" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="MedicineEnteringModify" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="MedicineStoreLogList" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="MedicineStoreList" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="MedicineStoreCounts" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+    <action message="UpdateMedicineStore" type="Kodak.GCRIS.Server.SuppliesManagement.Action.SuppliesManagementAction" />
+
+    <action message="RemoveOrderMessageFlag" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+    <action message="AddOrderMessageFlag" type="Kodak.GCRIS.Server.Common.Action.CommonFunctionAction" />
+  </action-mappings>
+</GCRIS-config>

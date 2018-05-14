@@ -1,0 +1,4470 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "Foxit.PDF.Printing"
+    </assembly>
+    <members>
+        <member name="P:Foxit.PDF.Printing.FaxPrintJob.FaxOptions">
+            <summary>
+Gets the <see cref="P:Foxit.PDF.Printing.FaxPrintJob.FaxOptions" />object.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> object.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the fax print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the fax print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(System.String,System.String,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(System.String,System.String,Foxit.PDF.Printing.InputPdf,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the fax print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the fax print job.</param>
+            <param name="pageCount">The number of pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(System.String,System.String,Foxit.PDF.Printing.InputPdf)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(System.String,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printer">The fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the fax print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the fax print job.</param>
+            <param name="pageCount">The number of pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String,Foxit.PDF.Printing.InputPdf,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printer">The fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the fax print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the fax print job.</param>
+            <param name="pageCount">The number of pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printer">The fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String,Foxit.PDF.Printing.InputPdf)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printer">The fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the fax print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.FaxPrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.FaxPrintJob" /> class.
+</summary>
+            <param name="printer">The fax printer used by the fax print job.</param>
+            <param name="recipientNumber">The fax number associated with the recipient.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.FaxPrintJob">
+            <summary>
+Represents a job that can be sent to a printer for printing a fax.
+</summary>
+            <example>The following examples creates a fax print job and sends the fax.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a fax print job
+        Dim MyFaxPrintJob As FaxPrintJob = New FaxPrintJob("FaxPrinterName", "1-555-389-4567", "C:\MyDocument.pdf")
+
+        ' Send the fax
+        MyFaxPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a fax print job
+        FaxPrintJob faxPrintJob = new FaxPrintJob("FaxPrinterName", "1-555-465-1177", @"C:\MyDocument.pdf");
+
+        // Send the fax
+        faxPrintJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:Foxit.PDF.Printing.UnitConverter.MillimetersToPoints(System.Double)">
+            <summary>
+Converts from millimeters to typesetting points.
+</summary>
+            <param name="size">Size in millimeters.</param>
+            <returns>The size in typesetting points.</returns>
+        </member>
+        <member name="M:Foxit.PDF.Printing.UnitConverter.InchesToPoints(System.Double)">
+            <summary>
+Converts from inches to typesetting points.
+</summary>
+            <param name="size">Size in inches.</param>
+            <returns>The size in inches.</returns>
+        </member>
+        <member name="M:Foxit.PDF.Printing.UnitConverter.PointsToMillimeters(System.Double)">
+            <summary>
+Converts from typesetting points to millimeters.
+</summary>
+            <param name="size">Size in points.</param>
+            <returns>The size in typesetting points.</returns>
+        </member>
+        <member name="M:Foxit.PDF.Printing.UnitConverter.PointsToInches(System.Double)">
+            <summary>
+Converts from typesetting points to inches.
+</summary>
+            <param name="size">Size in points.</param>
+            <returns>The size in inches.</returns>
+        </member>
+        <member name="T:Foxit.PDF.Printing.UnitConverter">
+            <summary>
+Utility for converting to and from typesetting points.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.DocumentLoadException">
+            <summary>
+Represents a document load exception.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobEventArgs.PrintJob">
+            <summary>
+Gets the print job that caused the event.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobEventArgs">
+            <summary>
+Represents the print job event's arguments.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobFailedEventArgs.PrintJob">
+            <summary>
+Gets the print job that caused the event.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobFailedEventArgs.Exception">
+            <summary>
+Gets the exception thrown.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobFailedEventArgs">
+            <summary>
+Represents the print job failed event's arguments.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.ResolutionList.Count">
+            <summary>
+Gets the value indicating the number of printer resolutions in the list.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.ResolutionList.default(System.Int32,System.Int32)">
+            <summary>
+Gets a printer resolution by name.
+</summary>
+            <param name="horizontalDpi">The horizontal DPI of the resolution to be returned.</param>
+            <param name="verticalDpi">The vertical DPI of the resolution to be returned.</param>
+        </member>
+        <member name="P:Foxit.PDF.Printing.ResolutionList.Item(System.Int32)">
+            <summary>
+Gets a printer resolution by index.
+</summary>
+            <param name="index">The index of the resolution to be returned.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.ResolutionList">
+            <summary>
+Represents a list of resolutions.
+</summary>
+            <example>The following examples creates a  print job, sets resolution to 600 dpi if it is supported by the printer and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Get the list of available resolutions for the printer
+        Dim MyResolutions As ResolutionList = MyPrintJob.Printer.Resolutions
+
+        ' Set the resolution to 600 dpi if it is supported by the printer
+        If (Not MyResolutions(600, 600) Is Nothing) Then
+            MyPrintJob.PrintOptions.Resolution = MyResolutions(600, 600)
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get the list of available resolutions for the printer
+        ResolutionList resolutions = printJob.Printer.Resolutions;
+
+        // Set the resolution to 600 dpi if it is supported by the printer
+        if (resolutions[600, 600] != null)
+        {
+            printJob.PrintOptions.Resolution = resolutions[600, 600];
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Resolution.VerticalDpi">
+            <summary>
+Gets the vertical resolution.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Resolution.HorizontalDpi">
+            <summary>
+Gets the horizontal resolution.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.Resolution">
+            <summary>
+Represents the resolution of the printer.
+</summary>
+            <example>The following examples creates a  print job, sets the resolution to 600 dpi if it is supported by the printer and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Get the 600 dpi resolution from the printer
+        Dim MyResolution As Resolution = MyPrintJob.Printer.Resolutions(600, 600)
+
+        ' Set the resolution if it is supported by the printer
+        If (Not MyResolution Is Nothing) Then
+            MyPrintJob.PrintOptions.Resolution = MyResolution
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get the 600 dpi resolution from the printer
+        Resolution resolution = printJob.Printer.Resolutions[600, 600];
+
+        // Set the resolution if it is supported by the printer
+        if (resolution != null)
+        {
+            printJob.PrintOptions.Resolution = resolution;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.CoverPage">
+            <summary>
+Gets or sets the <see cref="T:Foxit.PDF.Printing.FaxCoverPage" /> object that represents the cover page for the fax document.
+</summary>
+            <remarks>
+If this value is null (Nothing in VB), no cover page will be added. To add a cover page, create a <see cref="T:Foxit.PDF.Printing.LocalFaxCoverPage" />
+or <see cref="T:Foxit.PDF.Printing.ServerFaxCoverPage" /> object and set it to this property. See the appropriate classes for an example.
+</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.SenderName">
+            <summary>
+Gets or sets the name of the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.SenderDept">
+            <summary>
+Gets or sets the department associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.SenderCompany">
+            <summary>
+Gets or sets the company name of the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.SenderBillingCode">
+            <summary>
+Gets or sets the billing code associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.RecipientNumber">
+            <summary>
+Gets or sets the fax number associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxOptions.RecipientName">
+            <summary>
+Gets or sets the name of the recipient.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.FaxOptions">
+            <summary>
+Represents the fax options.
+</summary>
+            <example>The following examples creates a fax print job, sets fax options and sends the fax.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a fax print job
+        Dim MyFaxPrintJob As FaxPrintJob = New FaxPrintJob("FaxPrinterName", "1-555-389-4567", "C:\MyDocument.pdf")
+
+        ' Set fax option values
+        MyFaxPrintJob.FaxOptions.RecipientName = "RecipientName"
+        MyFaxPrintJob.FaxOptions.SenderBillingCode = "SenderBillingCode"
+        MyFaxPrintJob.FaxOptions.SenderCompany = "CompanyName"
+        MyFaxPrintJob.FaxOptions.SenderDept = "DepartmentName"
+        MyFaxPrintJob.FaxOptions.SenderName = "SenderName"
+
+        ' Send the fax
+        MyFaxPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a fax print job
+        FaxPrintJob faxPrintJob = new FaxPrintJob("FaxPrinterName", "1-555-465-1177", @"C:\MyDocument.pdf");
+
+        // Set fax option values
+        faxPrintJob.FaxOptions.RecipientName = "RecipientName";
+        faxPrintJob.FaxOptions.SenderBillingCode = "SenderBillingCode";
+        faxPrintJob.FaxOptions.SenderCompany = "CompanyName";
+        faxPrintJob.FaxOptions.SenderDept = "DepartmentName";
+        faxPrintJob.FaxOptions.SenderName = "SenderName";
+
+        // Send the fax
+        faxPrintJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PercentagePageScaling.ScaleY">
+            <summary>
+Gets the vertical page scaling in percentage.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PercentagePageScaling.ScaleX">
+            <summary>
+Gets the horizontal page scaling in percentage.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PercentagePageScaling.#ctor(System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PercentagePageScaling" /> class.
+</summary>
+            <param name="scaleX">A value indicating horizontal page scaling in percentage.</param>
+            <param name="scaleY">A value indicating vertical page scaling in percentage.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PercentagePageScaling.#ctor(System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PercentagePageScaling" /> class.
+</summary>
+            <param name="scale">A value indicating page scaling in percentage.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PercentagePageScaling">
+            <summary>
+Represents the class that allows to specify page scaling size in percentage.
+</summary>
+            <example>The following examples creates a print job, sets the page scaling and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+			
+        ' Create a PercentagePageScaling object set to 10%
+        Dim MyPercentagePageScaling As PercentagePageScaling = New PercentagePageScaling(10.0F)
+
+        ' Set the scaling
+        MyPrintJob.PrintOptions.Scaling = MyPercentagePageScaling
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Create a PercentagePageScaling object set to 10%
+        PercentagePageScaling percentagePageScaling = new PercentagePageScaling(10f);
+
+        // Set the scaling
+        printJob.PrintOptions.Scaling = percentagePageScaling;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.AutoPageScaling.ScaleTo">
+            <summary>
+Gets or sets a value indicating the boundaries on the page to use for the scaling.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.AutoPageScaling.AutoShrink">
+            <summary>
+Gets or sets a value indicating if the page scaling size can be shrunk.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.AutoPageScaling.AutoExpand">
+            <summary>
+Gets or sets a value indicating if the page scaling size can be expanded.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.AutoPageScaling.#ctor(Foxit.PDF.Printing.ScaleTo,System.Boolean,System.Boolean)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.AutoPageScaling" /> class.
+</summary>
+            <param name="scaleTo">A <see cref="P:Foxit.PDF.Printing.AutoPageScaling.ScaleTo" /> value specifying the boundaries of the page to use for scaling.</param>
+            <param name="shrinkIfNeeded">Boolean value indicating if the page scale size can be shrunk.</param>
+            <param name="expandIfNeeded">Boolean value indicating if the page scale size can be expanded.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.AutoPageScaling.#ctor(Foxit.PDF.Printing.ScaleTo)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.AutoPageScaling" /> class.
+</summary>
+            <param name="scaleTo">A <see cref="P:Foxit.PDF.Printing.AutoPageScaling.ScaleTo" /> value specifying the boundaries of the auto page scaling.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.AutoPageScaling.#ctor">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.AutoPageScaling" /> class.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.AutoPageScaling">
+            <summary>
+Represents auto page scaling size for the job page .
+</summary>
+            <example>The following examples creates a print job, sets the scaling propety to auto page scaling and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the scaling
+        Dim MyAutoPageScaling As AutoPageScaling = New AutoPageScaling(ScaleTo.PagePrintableArea, True, True)
+        MyPrintJob.PrintOptions.Scaling = MyAutoPageScaling
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the scaling
+        AutoPageScaling autoPageScaling = new AutoPageScaling(ScaleTo.PagePrintableArea, true, true);
+        printJob.PrintOptions.Scaling = autoPageScaling;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.ScaleTo">
+            <summary>
+Represents the page scaling type.
+</summary>
+            <example>The following examples creates a print job, sets the scaling to printable area of the page and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the scaling
+        Dim MyAutoPageScaling As AutoPageScaling = New AutoPageScaling(ScaleTo.PagePrintableArea, True, True)
+        MyPrintJob.PrintOptions.Scaling = MyAutoPageScaling
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the scaling
+        AutoPageScaling autoPageScaling = new AutoPageScaling(ScaleTo.PagePrintableArea, true, true);
+        printJob.PrintOptions.Scaling = autoPageScaling;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.ScaleTo.PageEdges">
+            <summary>Scale to the edges of a page.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.ScaleTo.PagePrintableArea">
+            <summary>Scale to the printable area of a page.</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.LocalCoverPage.FilePath">
+            <summary>
+Gets or sets the file path of the local cover page (*.cov) file.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.LocalCoverPage.#ctor(System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.LocalCoverPage" /> class.
+</summary>
+            <param name="filePath">The file path of the local cover page (*.cov) file.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.LocalCoverPage">
+            <summary>
+Represents a cover page.
+</summary>
+            <example>The following examples creates a fax print job, sets the cover page values and sends the fax.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a fax print job
+        Dim MyFaxPrintJob As FaxPrintJob = New FaxPrintJob("FaxPrinterName", "1-555-465-1177", "C:\MyDocument.pdf")
+
+        ' Add a local cover page
+        MyFaxPrintJob.FaxOptions.CoverPage = New LocalCoverPage("C:\Custom.cov")
+
+        ' Set the cover page values
+        MyFaxPrintJob.FaxOptions.CoverPage.Note = "Note"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.Subject = "Subject"
+
+        ' Send the fax
+        MyFaxPrintJob.Print()	
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a fax print job
+        FaxPrintJob faxPrintJob = new FaxPrintJob("FaxPrinterName", "1-555-465-1177", @"C:\MyDocument.pdf");
+
+        // Add a local cover page
+        faxPrintJob.FaxOptions.CoverPage = new LocalCoverPage(@"Custom.cov");
+        
+        // Set the cover page values
+        faxPrintJob.FaxOptions.CoverPage.Note = "Note";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry";
+		faxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment";
+        faxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState";
+        faxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress";
+        faxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle";
+        faxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip";
+        faxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress";
+        faxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany";
+        faxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment";
+        faxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle";
+        faxPrintJob.FaxOptions.CoverPage.Subject = "Subject";
+
+        // Send the fax
+        faxPrintJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintFailedException">
+            <summary>
+Represents a print failed exception.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdfPageList.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.InputPdfPageList" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdfPageList.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.InputPdfPageList" /> object.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdfPageList.Count">
+            <summary>
+Gets the number of pages in the list.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdfPageList.Item(System.Int32)">
+            <summary>
+Gets the <see cref="T:Foxit.PDF.Printing.InputPdfPage" /> object that represents the PDF page.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.InputPdfPageList">
+            <summary>
+Represents the list of pdf pages to be added to the print job.
+</summary>
+            <example>The following examples creates a print job, adds PDF pages to print job and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+        
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName")
+
+        ' Create an InputPdf object to hold the source PDF
+        Dim MyInputPdf As InputPdf = New InputPdf("C:\MyDocument.pdf")
+
+        ' Get a list of the input PDF's pages
+        Dim MyInputPdfPages As InputPdfPageList = MyInputPdf.Pages
+
+        ' Add pages to the print job
+        MyPrintJob.Pages.Add(MyInputPdfPages(0)) ' First Page
+        MyPrintJob.Pages.Add(MyInputPdfPages(3)) ' Fourth Page
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName");
+
+        // Create an InputPdf object to hold the source PDF
+        InputPdf inputPdf = new InputPdf(@"C:\MyDocument.pdf");
+
+        // Get a list of the input PDF's pages
+        InputPdfPageList inputPdfPages = inputPdf.Pages;
+
+        // Add pages to the print job
+        printJob.Pages.Add(inputPdfPages[0]); // First Page
+        printJob.Pages.Add(inputPdfPages[3]); // Fourth Page
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(System.String,System.Int32,System.Int32)">
+            <summary>
+Add a pdf document .
+</summary>
+            <param name="pdfFilePath">The file path to the PDF to be added to the print job.</param>
+            <param name="startPage">The first page from the PDF to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(System.String,System.Int32)">
+            <summary>
+Add a pdf document .
+</summary>
+            <param name="pdfFilePath">The file path to the PDF to be added to the print job.</param>
+            <param name="pageNumber">The page number of the page to be added to the print job.</param>
+            <returns>An <see cref="T:Foxit.PDF.Printing.PrintJobPage" /> object.</returns>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(System.String)">
+            <summary>
+Add a pdf document .
+</summary>
+            <param name="pdfFilePath">The file path to the PDF to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(Foxit.PDF.Printing.InputPdfPage)">
+            <summary>
+Add pdf page <see cref="T:Foxit.PDF.Printing.PrintJobPage" />.
+</summary>
+            <param name="page">The <see cref="T:Foxit.PDF.Printing.InputPdfPage" /> object to be added to the print job.</param>
+            <returns>An <see cref="T:Foxit.PDF.Printing.PrintJobPage" /> object.</returns>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(Foxit.PDF.Printing.InputPdf,System.Int32,System.Int32)">
+            <summary>
+Add pdf to the list.
+</summary>
+            <param name="pdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> containing the pages to be added to the print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPageList.Add(Foxit.PDF.Printing.InputPdf)">
+            <summary>
+Add all the pages of a PDF to the list.
+</summary>
+            <param name="pdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> containing the pages to be added to the print job.</param>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPageList.Count">
+            <summary>
+Gets the value indicating the number of pages in a list.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPageList.Item(System.Int32)">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PrintJobPage" /> object by index.
+</summary>
+            <param name="index">The index of the page to be returned.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobPageList">
+            <summary>
+Represents a list of pdf pages added to the print job.
+</summary>
+            <example>The following examples creates a  print job, sets print options for the last page and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job containing the first four pages of the PDF
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf", 1, 4)
+
+        ' Get the list of pages in the print job
+        Dim MyPrintJobPageList As PrintJobPageList = MyPrintJob.Pages
+
+        ' Get the last page and set its print options
+        Dim MyPrintJobPage As PrintJobPage = MyPrintJobPageList(MyPrintJobPageList.Count - 1)
+        MyPrintJobPage.PrintOptions.Inherit = False
+        MyPrintJobPage.PrintOptions.HorizontalAlign = HorizontalAlign.Right
+        MyPrintJobPage.PrintOptions.Orientation.Type = OrientationType.Landscape
+        MyPrintJobPage.PrintOptions.PrintAnnotations = True
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job containing the first four pages of the PDF
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf", 1, 4);
+
+        // Get the list of pages in the print job
+        PrintJobPageList printjobPageList = printJob.Pages;
+
+        // Get the last page and set its print options
+        PrintJobPage printJobPage = printjobPageList[printjobPageList.Count - 1];
+        printJobPage.PrintOptions.Inherit = false;
+        printJobPage.PrintOptions.HorizontalAlign = HorizontalAlign.Right;
+        printJobPage.PrintOptions.Orientation.Type = OrientationType.Landscape;
+        printJobPage.PrintOptions.PrintAnnotations = true;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.InvalidPasswordException">
+            <summary>
+Represents a invalid password exception.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.ServerCoverPage.Name">
+            <summary>
+Gets or sets the name of the the server cover page.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.ServerCoverPage.#ctor(System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.ServerCoverPage" /> class.
+</summary>
+            <param name="name">The name of the server the cover page.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.ServerCoverPage">
+            <summary>
+Represents a cover page.
+</summary>
+            <example>The following examples creates a fax print job, sets cover page values and sends the fax.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a fax print job
+        Dim MyFaxPrintJob As FaxPrintJob = New FaxPrintJob("FaxPrinterName", "1-555-465-1177", "C:\MyDocument.pdf")
+
+        ' Add a local cover page
+        MyFaxPrintJob.FaxOptions.CoverPage = New ServerCoverPage("FileName")
+
+        ' Set the cover page values
+        MyFaxPrintJob.FaxOptions.CoverPage.Note = "Note"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.Subject = "Subject"
+
+        ' Send the fax
+        MyFaxPrintJob.Print()	
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a fax print job
+        FaxPrintJob faxPrintJob = new FaxPrintJob("FaxPrinterName", "1-555-465-1177", @"C:\MyDocument.pdf");
+
+        // Add a local cover page
+        faxPrintJob.FaxOptions.CoverPage = new ServerCoverPage("FileName");
+
+        // Set the cover page values
+        faxPrintJob.FaxOptions.CoverPage.Note = "Note";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry";
+        faxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment";
+        faxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState";
+        faxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress";
+        faxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle";
+        faxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip";
+        faxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress";
+        faxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany";
+        faxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment";
+        faxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle";
+        faxPrintJob.FaxOptions.CoverPage.Subject = "Subject";
+
+        // Send the fax
+        faxPrintJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.Subject">
+            <summary>
+Gets or sets the subject for the fax to be sent.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.Note">
+            <summary>
+Gets or sets the content of the note field.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderOfficePhone">
+            <summary>
+Gets or sets the office phone number associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderHomePhone">
+            <summary>
+Gets or sets the home phone number associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderOfficeLocation">
+            <summary>
+Gets or sets the office location of the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderDepartment">
+            <summary>
+Gets or sets the department name associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderTitle">
+            <summary>
+Gets or sets the title title associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderAddress">
+            <summary>
+Gets or sets the address of the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderCompany">
+            <summary>
+Gets or sets the company name associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderFaxNumber">
+            <summary>
+Gets or sets the fax number associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.SenderName">
+            <summary>
+Gets or sets the name associated with the sender.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientOfficePhone">
+            <summary>
+Gets or sets the office phone number associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientHomePhone">
+            <summary>
+Gets or sets the home phone number associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientOfficeLocation">
+            <summary>
+Gets or sets the office location of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientDepartment">
+            <summary>
+Gets or sets the department associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientTitle">
+            <summary>
+Gets or sets the title associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientCountry">
+            <summary>
+Gets or sets the country of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientZip">
+            <summary>
+Gets or sets the zip code of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientState">
+            <summary>
+Gets or sets the state of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientCity">
+            <summary>
+Gets or sets the city of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientStreetAddress">
+            <summary>
+Gets or sets the street address of the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientCompany">
+            <summary>
+Gets or sets the company name associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientFaxNumber">
+            <summary>
+Gets or sets the fax number associated with the recipient.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.FaxCoverPage.RecipientName">
+            <summary>
+Gets or sets the name of the recipient.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.FaxCoverPage">
+            <summary>
+Represents a cover page for the fax.
+</summary>
+            <example>The following examples creates a fax print job, sets the cover page values and sends the fax.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a fax print job
+        Dim MyFaxPrintJob As FaxPrintJob = New FaxPrintJob("FaxPrinterName", "1-555-465-1177", "C:\MyDocument.pdf")
+
+        ' Add a local cover page
+        MyFaxPrintJob.FaxOptions.CoverPage = New LocalCoverPage("C:\Custom.cov")
+
+        ' Set the cover page values
+        MyFaxPrintJob.FaxOptions.CoverPage.Note = "Note"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone"
+        MyFaxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle"
+        MyFaxPrintJob.FaxOptions.CoverPage.Subject = "Subject"
+
+        ' Send the fax
+        MyFaxPrintJob.Print()	
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a fax print job
+        FaxPrintJob faxPrintJob = new FaxPrintJob("FaxPrinterName", "1-555-465-1177", @"C:\MyDocument.pdf");
+
+        // Add a local cover page
+        faxPrintJob.FaxOptions.CoverPage = new LocalCoverPage(@"Custom.cov");
+
+        // Set the cover page values
+        faxPrintJob.FaxOptions.CoverPage.Note = "Note";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCity = "RecipientCity";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCompany = "RecipientCompany";
+        faxPrintJob.FaxOptions.CoverPage.RecipientCountry = "RecipientCountry";
+        faxPrintJob.FaxOptions.CoverPage.RecipientDepartment = "RecipientDepartment";
+        faxPrintJob.FaxOptions.CoverPage.RecipientFaxNumber = "RecipientFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.RecipientHomePhone = "RecipientHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientName = "RecipientName";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficeLocation = "RecipientOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.RecipientOfficePhone = "RecipientOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.RecipientState = "RecipientState";
+        faxPrintJob.FaxOptions.CoverPage.RecipientStreetAddress = "RecipientStreetAddress";
+        faxPrintJob.FaxOptions.CoverPage.RecipientTitle = "RecipientTitle";
+        faxPrintJob.FaxOptions.CoverPage.RecipientZip = "RecipientZip";
+        faxPrintJob.FaxOptions.CoverPage.SenderAddress = "SenderAddress";
+        faxPrintJob.FaxOptions.CoverPage.SenderCompany = "SenderCompany";
+        faxPrintJob.FaxOptions.CoverPage.SenderDepartment = "SenderDepartment";
+        faxPrintJob.FaxOptions.CoverPage.SenderFaxNumber = "SenderFaxNumber";
+        faxPrintJob.FaxOptions.CoverPage.SenderHomePhone = "SenderHomePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderName = "SenderName";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficeLocation = "SenderOfficeLocation";
+        faxPrintJob.FaxOptions.CoverPage.SenderOfficePhone = "SenderOfficePhone";
+        faxPrintJob.FaxOptions.CoverPage.SenderTitle = "SenderTitle";
+        faxPrintJob.FaxOptions.CoverPage.Subject = "Subject";
+
+        // Send the fax
+        faxPrintJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Title">
+            <summary>
+Gets the title property of the PDF document.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Subject">
+            <summary>
+Gets the subject property of the PDF document.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Producer">
+            <summary>
+Gets the producer property of the PDF document.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Pages">
+            <summary>
+Gets the <see cref="T:Foxit.PDF.Printing.InputPdfPageList" /> object that represents a collection of pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Keywords">
+            <summary>
+Gets the keywords property of the PDF document.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Creator">
+            <summary>
+Gets the creator property of the PDF document.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdf.Author">
+            <summary>
+Gets the author property of the PDF document.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.InputPdf" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.InputPdf" /> object.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.#ctor(System.String,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.InputPdf" /> class.
+</summary>
+            <param name="filePath">The file path of the PDF document.</param>
+            <param name="password">The string containing the password.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.#ctor(System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.InputPdf" /> class.
+</summary>
+            <param name="filePath">The file path of the PDF document.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.#ctor(System.Byte[],System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.InputPdf" /> class.
+</summary>
+            <param name="data">The byte array containing the PDF document.</param>
+            <param name="password">The string containing the password.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdf.#ctor(System.Byte[])">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.InputPdf" /> class.
+</summary>
+            <param name="data">The byte array containing the Pdf document.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.InputPdf">
+            <summary>
+Represents a pdf containing the pages to be added to the print job.
+</summary>
+            <example>The following examples creates a print job, adds PDF pages to print the job and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName")
+
+        ' Create an InputPdf object to hold the source PDF
+        Dim MyInputPdf As InputPdf = New InputPdf("C:\MyDocument.pdf", "password")
+
+        ' Add the InputPdf's pages to the print job
+        MyPrintJob.Pages.Add(MyInputPdf)
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName");
+
+        // Create an InputPdf object to hold the source PDF
+        InputPdf inputPdf = new InputPdf(@"C:\MyDocument.pdf", "password");
+
+        // Add the InputPdf's pages to the print job
+        printJob.Pages.Add(inputPdf);
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.ActualSizePageScaling">
+            <summary>
+Represents the actual page scaling size for the job page .
+</summary>
+            <example>The following examples creates a print job, sets the scaling propety to actual size and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the scaling
+        MyPrintJob.PrintOptions.Scaling = PageScaling.ActualSize
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the scaling
+        printJob.PrintOptions.Scaling = PageScaling.ActualSize;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.SetResolutionByDpi(System.Int32,System.Int32)">
+            <summary>
+Sets the resolution to use based on its DPI.
+</summary>
+            <param name="horizontalDpi">The horizontal DPI to set.</param>
+            <param name="verticalDpi">The vertical DPI to set.</param>
+            <returns>A boolean value indicating if the DPI is valid for this printer.</returns>
+            <remarks>If the specified DPI is not supported by the printer, the DPI will not be changed and this method will return false.</remarks>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.SetResolutionByDpi(System.Int32)">
+            <summary>
+Sets the resolution to use based on its DPI.
+</summary>
+            <param name="dpi">The horizontal and vertical DPI to set.</param>
+            <returns>A boolean value indicating if the DPI is valid for this printer.</returns>
+            <remarks>If the specified DPI is not supported by the printer, the DPI will not be changed and this method will return false.</remarks>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.SetPaperSourceByName(System.String)">
+            <summary>
+Sets the paper source (tray) to use based on its name.
+</summary>
+            <param name="name">The name of the paper source (tray) to set.</param>
+            <returns>A boolean value indicating if the paper source (tray) name is valid for this printer.</returns>
+            <remarks>If the specified paper source (tray) is not supported by the printer, the paper source (tray) will not be changed and this method will return false.</remarks>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.SetPaperSizeByName(System.String)">
+            <summary>
+Sets the size of paper to use based on its name.
+</summary>
+            <param name="name">The name of the paper size to set.</param>
+            <returns>A boolean value indicating if the paper size name is valid for this printer.</returns>
+            <remarks>If the specified paper size is not supported by the printer, the paper size will not be changed and this method will return false.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Scaling">
+            <summary>
+Gets or sets a value indicating the page scaling to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.VerticalAlign">
+            <summary>
+Gets or sets a value indicating the vertical alignment to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Resolution">
+            <summary>
+Gets or sets a value indicating the resolution to use when printing.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.PaperSource">
+            <summary>
+Gets or sets a value indicating the paper source (tray) to use when printing.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.PrintAnnotations">
+            <summary>
+Gets or sets a value indicating if annotations from the PDF should be printed.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.PaperSize">
+            <summary>
+Gets or sets a value indicating the size of paper to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Orientation">
+            <summary>
+Gets a value indicating the orientation to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.HorizontalAlign">
+            <summary>
+Gets or sets a value indicating the horizontal alignment to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.DuplexMode">
+            <summary>
+Gets or sets a value indicating the duplex mode to use when printing the pages.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Copies">
+            <summary>
+Gets or sets a value indicating the number of copies to print.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Color">
+            <summary>
+Gets or sets a value indicating if the job should printed in color.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPrintOptions.Collate">
+            <summary>
+Gets or sets a value indicating if the job's copies should be collated.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.PrintJobPrintOptions" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPrintOptions.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.PrintJobPrintOptions" /> object.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobPrintOptions">
+            <summary>
+Represents the printing options for a job.
+</summary>
+            <example>The following examples creates a  print job, sets print options and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set all the print options
+        If (MyPrintJob.Printer.Color) Then ' If the printer supports color printing
+            MyPrintJob.PrintOptions.Color = True
+        End If
+        If (MyPrintJob.Printer.Duplex) Then ' If the printer supports duplex printing
+            MyPrintJob.PrintOptions.DuplexMode = DuplexMode.DuplexVertical
+        End If
+        MyPrintJob.PrintOptions.Copies = 1
+        MyPrintJob.PrintOptions.HorizontalAlign = HorizontalAlign.Left
+        MyPrintJob.PrintOptions.PrintAnnotations = False
+        MyPrintJob.PrintOptions.Scaling = PageScaling.ActualSize
+        MyPrintJob.PrintOptions.SetPaperSizeByName("Legal")
+        MyPrintJob.PrintOptions.SetPaperSourceByName("Tray 2")
+        MyPrintJob.PrintOptions.SetResolutionByDpi(300)
+        MyPrintJob.PrintOptions.VerticalAlign = VerticalAlign.Top
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+ 
+        // Set all the print options
+        if (printJob.Printer.Color) // If the printer supports color printing
+        {
+            printJob.PrintOptions.Color = true;
+        }
+        if (printJob.Printer.Duplex) // If the printer supports duplex printing
+        {
+            printJob.PrintOptions.DuplexMode = DuplexMode.DuplexVertical;
+        }
+        printJob.PrintOptions.Copies = 1;
+        printJob.PrintOptions.HorizontalAlign = HorizontalAlign.Left;
+        printJob.PrintOptions.PrintAnnotations = false;
+        printJob.PrintOptions.Scaling = PageScaling.ActualSize;
+        printJob.PrintOptions.SetPaperSizeByName("Legal");
+        printJob.PrintOptions.SetPaperSourceByName("Tray 2");
+        printJob.PrintOptions.SetResolutionByDpi(300);
+        printJob.PrintOptions.VerticalAlign = VerticalAlign.Top;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+        </member>
+        <member name="T:Foxit.PDF.Printing.DuplexMode">
+            <summary>
+Represents duplex modes.
+</summary>
+            <example>The following examples creates a print job, sets the duplex mode if it is supported by the printer and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the duplex mode if it is supported by the printer
+        If (MyPrintJob.Printer.Duplex) Then
+            MyPrintJob.PrintOptions.DuplexMode = DuplexMode.DuplexHorizontal
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the duplex mode if it is supported by the printer
+        if (printJob.Printer.Duplex)
+        {
+            printJob.PrintOptions.DuplexMode = DuplexMode.DuplexHorizontal;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.DuplexMode.DuplexHorizontal">
+            <summary>
+Duplex mode that flips the page horizontally.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.DuplexMode.DuplexVertical">
+            <summary>
+Duplex mode that flips the page vertically.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.DuplexMode.Simplex">
+            <summary>
+Simplex (non duplex) mode.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPagePrintOptions.SetPaperSourceByName(System.String)">
+            <summary>
+Sets the paper source by name for the page.
+</summary>
+            <param name="name">String containing paper source.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJobPagePrintOptions.SetPaperSizeByName(System.String)">
+            <summary>
+Sets the paper size by name for the page.
+</summary>
+            <param name="name">String containing paper size.</param>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.VerticalAlign">
+            <summary>
+Gets or sets the vertical alignment for the page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Scaling">
+            <summary>
+Gets or sets the scaling size for the page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.PrintAnnotations">
+            <summary>
+Gets or sets the value indicating it PDF annotations should be printed for this page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.PaperSource">
+            <summary>
+Gets or sets the paper source for the page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.PaperSize">
+            <summary>
+Gets or sets the paper size for the page.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Orientation">
+            <summary>
+Gets or sets the page orientation for the page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit">
+            <summary>
+Gets or sets the value indicating if the print options should be inherited from the print job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.HorizontalAlign">
+            <summary>
+Gets or sets the horizontal alignment for the page.
+</summary>
+            <remarks>You must set the <see cref="P:Foxit.PDF.Printing.PrintJobPagePrintOptions.Inherit" /> property to false before setting this property.</remarks>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobPagePrintOptions">
+            <summary>
+Represents print options for the page to be added to the print job.
+</summary>
+            <example>The following examples creates a print job, sets print options for the last page and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job containing the first four pages of the PDF
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf", 1, 4)
+
+        ' Get the last page and set its print options
+        Dim MyPrintJobPage As PrintJobPage = MyPrintJob.Pages(MyPrintJob.Pages.Count - 1)
+        Dim MyPagePrintOptions As PrintJobPagePrintOptions = MyPrintJobPage.PrintOptions
+        MyPagePrintOptions.Inherit = False
+        MyPagePrintOptions.HorizontalAlign = HorizontalAlign.Left
+        MyPagePrintOptions.PrintAnnotations = False
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job containing the first four pages of the PDF
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf", 1, 4);
+
+        // Get the last page and set its print options
+        PrintJobPage printJobPage = printJob.Pages[printJob.Pages.Count - 1];
+        PrintJobPagePrintOptions pagePrintOptions = printJobPage.PrintOptions;
+        pagePrintOptions.Inherit = false;
+        pagePrintOptions.HorizontalAlign = HorizontalAlign.Left;
+        pagePrintOptions.PrintAnnotations = false;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PageOrientation.Rotated">
+            <summary>
+Gets or sets the value indicating if the page is to be rotated 180 degrees.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PageOrientation.Type">
+            <summary>
+Gets or sets the orientation type for the page to be printed.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PageOrientation">
+            <summary>
+Represents the page orientation.
+</summary>
+            <example>The following examples creates a print job, sets the orientation and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job containing the first four pages of the PDF
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf", 1, 4)
+
+        ' Set the orientation for the print job
+        MyPrintJob.PrintOptions.Orientation.Type = OrientationType.Landscape
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job containing the first four pages of the PDF
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf", 1, 4);
+
+        // Set the orientation for the print job
+        printJob.PrintOptions.Orientation.Type = OrientationType.Landscape;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.Print">
+            <summary>
+Prints the job to the printer.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.AddLicense(System.String)">
+            <summary>
+Adds a license key.
+</summary>
+            <param name="licenseKey">The license key to add.</param>
+            <returns>A boolean value indicating if the license key is valid.</returns>
+            <remarks>This method accepts a license key, not a serial number.</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.Status">
+            <summary>
+Gets the current status of the job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.PrintOptions">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PrintJobPrintOptions" /> objects that represents the printing options for the job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.Printer">
+            <summary>
+Gets the <see cref="T:Foxit.PDF.Printing.Printer" /> object that is targeted by the job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.PagesPrinted">
+            <summary>
+Gets a value indicating how many pages have been printed.
+</summary>
+            <remarks>
+This property is dependent on the printer driver to update the value. It is not generally accurate when printing to network printers.
+</remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.Pages">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PrintJobPageList" /> object that represents the pages to be printed by the job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.JobId">
+            <summary>
+Gets the ID of the job.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJob.DocumentName">
+            <summary>
+Gets or sets the name of the document that is to be shown in the print spooler.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.PrintJob" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.PrintJob" /> object.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the printer targeted by the print job.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(System.String,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the printer targeted by the print job.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(System.String,Foxit.PDF.Printing.InputPdf,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the printer targeted by the print job.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(System.String,Foxit.PDF.Printing.InputPdf)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the printer targeted by the print job.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printerName">The name of the printer targeted by the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printer">The <see cref="P:Foxit.PDF.Printing.PrintJob.Printer" /> object targeted by the print job.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(Foxit.PDF.Printing.Printer,System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printer">The <see cref="P:Foxit.PDF.Printing.PrintJob.Printer" /> object targeted by the print job.</param>
+            <param name="pdfFileName">The file path to the PDF containing the pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(Foxit.PDF.Printing.Printer,Foxit.PDF.Printing.InputPdf,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printer">The <see cref="P:Foxit.PDF.Printing.PrintJob.Printer" /> object targeted by the print job.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the print job.</param>
+            <param name="startPage">The first page from the <see cref="T:Foxit.PDF.Printing.InputPdf" /> to be added to the print job.</param>
+            <param name="pageCount">The number of pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(Foxit.PDF.Printing.Printer,Foxit.PDF.Printing.InputPdf)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printer">The <see cref="P:Foxit.PDF.Printing.PrintJob.Printer" /> object targeted by the print job.</param>
+            <param name="inputPdf">The <see cref="T:Foxit.PDF.Printing.InputPdf" /> object containing the pages to be added to the print job.</param>
+        </member>
+        <member name="M:Foxit.PDF.Printing.PrintJob.#ctor(Foxit.PDF.Printing.Printer)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.PrintJob" /> class.
+</summary>
+            <param name="printer">The <see cref="P:Foxit.PDF.Printing.PrintJob.Printer" /> object targeted by the print job.</param>
+        </member>
+        <member name="E:Foxit.PDF.Printing.PrintJob.Updated">
+            <summary>
+Occurs when a job's status or pages printed is updated.
+</summary>
+        </member>
+        <member name="E:Foxit.PDF.Printing.PrintJob.Succeeded">
+            <summary>
+Occurs when a job succeeds.
+</summary>
+        </member>
+        <member name="E:Foxit.PDF.Printing.PrintJob.Failed">
+            <summary>
+Occurs when a job fails.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJob">
+            <summary>
+Represents a job that can be sent to a printer.
+</summary>
+            <example>The following examples creates a  print job  and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job containing the first four pages of the PDF
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf", 1, 4)
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job containing the first four pages of the PDF
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf", 1, 4);
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobEventHandler">
+            <summary>
+Represents the method that is called when a job succeeds or is updated.
+</summary>
+            <licensing>
+This delegate is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobFailedEventHandler">
+            <summary>
+Represents the method that is called when a job fails.
+</summary>
+            <licensing>
+This delegate is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobStatus">
+            <summary>
+Represents the status of print.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.StatusUnAvailable">
+            <summary>
+Indicates that a print job's status is not available and have been removed from the printer queue.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Deleted">
+            <summary>
+Indicates that a print job has been deleted.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Deleting">
+            <summary>
+Indicates that a print job is being deleted.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Complete">
+            <summary>
+Indicates that a print job has been sent to the printer.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Restarting">
+            <summary>
+Indicates that a print job has been restarted.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.RequiresUserIntervention">
+            <summary>
+Indicates that a printer has an issue that requires the user to do something.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Printed">
+            <summary>
+Indicates that a print job has printed.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.PrinterOutOfPaper">
+            <summary>
+Indicates that a printer is out of paper.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.PrinterOffline">
+            <summary>
+Indicates that a printer is offline.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Printing">
+            <summary>
+Indicates that a print job is printing.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Spooling">
+            <summary>
+Indicates that a print job is spooling.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Error">
+            <summary>
+Indicates that an error occured while printing.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.Paused">
+            <summary>
+Indicates that a print job is paused.
+</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.PrintJobStatus.NotStarted">
+            <summary>
+Indicates that a print job has not started.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintingException">
+            <summary>
+Represents a exception thrown while printing.
+</summary>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:Foxit.PDF.Printing.Printer.GetLocalPrinters">
+            <summary>
+Returns an array of the system's local printers.
+</summary>
+            <returns>An array of <see cref="T:Foxit.PDF.Printing.Printer" /> objects.</returns>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Resolutions">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.ResolutionList" /> object that represents the available resolutions for the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MediaTypes">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.MediaTypeList" /> object that represents the available media types for the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.PaperSources">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSourceList" /> object that represents the available paper sources (trays) for the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.PaperSizes">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSizeList" /> object that represents the available paper sizes for the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Name">
+            <summary>
+Gets the name of the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MinPaperWidth">
+            <summary>
+Gets the minimum paper width supported by the printer in typesetting points.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MinPaperHeight">
+            <summary>
+Gets the minimum paper height supported by the printer in typesetting points.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MaxPaperWidth">
+            <summary>
+Gets the maximum paper width supported by the printer in typesetting points.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MaxPaperHeight">
+            <summary>
+Gets the maximum paper height supported by the printer in typesetting points.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.MaxCopies">
+            <summary>
+Gets the maximum number of copies supported by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Fax">
+            <summary>
+Gets a value indicating if the printer supports fax printing.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Duplex">
+            <summary>
+Gets a value indicating if the printer supports duplex printing.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Default">
+            <summary>
+Gets the system's default printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Color">
+            <summary>
+Gets a value indicating if the printer supports color printing.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.Printer.Collate">
+            <summary>
+Gets a value indicating if the printer supports collating.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.Printer.#ctor(System.String)">
+            <summary>
+Initializes a new instance of the <see cref="T:Foxit.PDF.Printing.Printer" /> class.
+</summary>
+            <param name="printerName">The name of the printer.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.Printer">
+            <summary>
+Represents a printer that can be used for print jobs.
+</summary>
+            <example>The following examples creates a print job using a Printer object, sets print job print options based on the Printer object and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a printer using its name
+        Dim MyPrinter As Printer = New Printer("PrinterName")
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob(MyPrinter, "C:\MyDocument.pdf")
+  
+        ' Set the collating if it is supported by the printer
+        If (MyPrinter.Collate) Then
+            MyPrintJob.PrintOptions.Collate = True
+        End If
+
+        ' Set the color if it is supported by the printer
+        If (MyPrinter.Color) Then
+            MyPrintJob.PrintOptions.Color = True
+        End If
+
+        ' Set the duplex  printing if it is supported by the printer
+        If (MyPrinter.Duplex) Then
+            MyPrintJob.PrintOptions.DuplexMode = DuplexMode.DuplexHorizontal
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a printer using its name
+        Printer printer = new Printer("PrinterName");
+
+        // Create a print job
+        PrintJob printJob = new PrintJob(printer, @"C:\MyDocument.pdf");
+
+        // Set the collating if it is supported by the printer
+        if (printer.Collate)
+        {
+            printJob.PrintOptions.Collate = true;
+        }
+
+        // Set the color if it is supported by the printer
+        if (printer.Color)
+        {
+            printJob.PrintOptions.Color = true;
+        }
+
+        // Set the duplex  printing if it is supported by the printer
+        if (printer.Duplex)
+        {
+            printJob.PrintOptions.DuplexMode = DuplexMode.DuplexHorizontal;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Transparency">
+            <summary>
+Gets the transparency media type if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Transperancy">
+            <summary>
+Gets the transperancy media type if it is specified by the printer.
+</summary>
+            <remarks> This property is obsolete. Use MediaTypeList.Transparency property instead. </remarks>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Glossy">
+            <summary>
+Gets the glossy media type if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Standard">
+            <summary>
+Gets the standard media type if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Count">
+            <summary>
+Gets the media type count.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.default(System.String)">
+            <summary>
+Gets the media type by its name.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaTypeList.Item(System.Int32)">
+            <summary>
+Gets the media type by its index.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.MediaTypeList">
+            <summary>
+Represents a list of media types.
+</summary>
+            <example>The following examples creates a print job, and selects the media type from the printer media type list and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+        
+        ' Create a print job
+		Dim printJob As New PrintJob(Printer.[Default], "C:\Temp\DocumentA.pdf")
+
+		' Find media types available for default printer
+		Dim mediaTypeList As MediaTypeList = Printer.[Default].MediaTypes
+
+		' Set appropriate media type.
+		If mediaTypeList.Standard IsNot Nothing Then
+		printJob.PrintOptions.MediaType = mediaTypeList.Standard
+		End If
+
+		' Print the job
+		printJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+		// Create a print job
+		PrintJob printJob = new PrintJob(Printer.Default, "C:\\Temp\\DocumentA.pdf");
+		// Find media types available for default printer
+		MediaTypeList mediaTypeList = Printer.Default.MediaTypes;
+
+		// Set appropriate media type.
+		if(mediaTypeList.Standard!= null)
+		printJob.PrintOptions.MediaType = mediaTypeList.Standard;
+
+		// Print the job
+		printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaType.DeviceContextMediaType">
+            <summary>
+Gets the value of the media type from DC_MEDIATYPES array.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.MediaType.Name">
+            <summary>
+Gets the name of the media type.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.MediaType">
+            <summary>
+Represents a media type.
+</summary>
+            <example>The following examples creates a print job, and selects the media type from the printer media type list and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+        
+        ' Create a print job
+		Dim printJob As New PrintJob(Printer.[Default], "C:\Temp\DocumentA.pdf")
+
+		' Find media types available for default printer
+		Dim mediaTypeList As MediaTypeList = Printer.[Default].MediaTypes
+
+		' Set appropriate media type.
+		If mediaTypeList.Standard IsNot Nothing Then
+		printJob.PrintOptions.MediaType = mediaTypeList.Standard
+		End If
+
+		' Print the job
+		printJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+		// Create a print job
+		PrintJob printJob = new PrintJob(Printer.Default, "C:\\Temp\\DocumentA.pdf");
+		// Find media types available for default printer
+		MediaTypeList mediaTypeList = Printer.Default.MediaTypes;
+
+		// Set appropriate media type.
+		if(mediaTypeList.Standard!= null)
+		printJob.PrintOptions.MediaType = mediaTypeList.Standard;
+
+		// Print the job
+		printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Upper">
+            <summary>
+Gets the 'Upper' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.SmallFormat">
+            <summary>
+Gets the 'SmallFormat' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Tractor">
+            <summary>
+Gets the 'Tractor' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.OnlyOne">
+            <summary>
+Gets the 'OnlyOne' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Middle">
+            <summary>
+Gets the 'Middle' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Manual">
+            <summary>
+Gets the 'Manual' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Lower">
+            <summary>
+Gets the 'Lower' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Last">
+            <summary>
+Gets the 'Last' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.LargeFormat">
+            <summary>
+Gets the 'LargeFormat' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.LargeCapacity">
+            <summary>
+Gets the 'LargeCapacity' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.FormSource">
+            <summary>
+Gets the 'FormSource' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.First">
+            <summary>
+Gets the 'First' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.EnvelopeManual">
+            <summary>
+Gets the 'EnvelopeManual' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Envelope">
+            <summary>
+Gets the 'Envelope' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Cassette">
+            <summary>
+Gets the 'Cassette' paper source if it is supported by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Automatic">
+            <summary>
+Gets the 'Automatic' paper source if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Count">
+            <summary>
+Gets the number of paper sources in the list.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.default(System.String)">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSource" /> object by name.
+</summary>
+            <param name="name">The name of the paper source to be returned.</param>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSourceList.Item(System.Int32)">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSource" /> object by index.
+</summary>
+            <param name="index">The index of the paper source to be returned.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PaperSourceList">
+            <summary>
+Represents a list of paper sources.
+</summary>
+            <example>The following examples creates a print job, sets the paper source and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+			
+        ' Get the list of available paper sources for the printer
+        Dim MyPaperSourceList As PaperSourceList = MyPrintJob.Printer.PaperSources
+
+        ' Set the paper source if it is supported by the printer
+        If (Not MyPaperSourceList.Automatic Is Nothing) Then
+            MyPrintJob.PrintOptions.PaperSource = MyPaperSourceList.Automatic
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get the list of available paper sources for the printer
+        PaperSourceList paperSourceList = printJob.Printer.PaperSources;
+
+        // Set the paper source if it is supported by the printer
+        if (paperSourceList.Automatic != null)
+        {
+            printJob.PrintOptions.PaperSource = paperSourceList.Automatic;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSource.DeviceContextBin">
+            <summary>
+Gets the value of the paper source from DC_BINS array.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSource.Name">
+            <summary>
+Gets the paper source name.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PaperSource">
+            <summary>
+Represents the paper source.
+</summary>
+            <example>The following examples creates a print job, sets the paper source and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+			
+        ' Get a paper source from the list
+        Dim MyPaperSource As PaperSource = MyPrintJob.Printer.PaperSources.Automatic
+
+        ' Set the paper source if it is supported by the printer
+        If (Not MyPaperSource Is Nothing) Then
+            MyPrintJob.PrintOptions.PaperSource = MyPaperSource
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get a paper source from the list
+        PaperSource paperSource = printJob.Printer.PaperSources.Automatic;
+
+        // Set the paper source if it is supported by the printer
+        if (paperSource != null)
+        {
+            printJob.PrintOptions.PaperSource = paperSource;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.TabloidExtra">
+            <summary>
+Gets the tabloid extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Tabloid">
+            <summary>
+Gets the tabloid paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Statement">
+            <summary>
+Gets the statement paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Quatro">
+            <summary>
+Gets the quatro paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope10Rotated">
+            <summary>
+Gets the PRC envelope 10 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope10">
+            <summary>
+Gets the PRC envelope 10 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope9Rotated">
+            <summary>
+Gets the PRC envelope 9 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope9">
+            <summary>
+Gets the PRC envelope 9 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope8Rotated">
+            <summary>
+Gets the PRC envelope 8 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope8">
+            <summary>
+Gets the PRC envelope 8 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope7Rotated">
+            <summary>
+Gets the PRC envelope 7 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope7">
+            <summary>
+Gets the PRC envelope 7 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope6Rotated">
+            <summary>
+Gets the PRC envelope 6 rotated size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope6">
+            <summary>
+Gets the PRC envelope 6 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope5Rotated">
+            <summary>
+Gets the PRC envelope 5 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope5">
+            <summary>
+Gets the PRC envelope 5 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope4Rotated">
+            <summary>
+Gets the PRC envelope 4 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope4">
+            <summary>
+Gets the PRC envelope 4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope3Rotated">
+            <summary>
+Gets the PRC envelope 3 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope3">
+            <summary>
+Gets the PRC envelope 3 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope2Rotated">
+            <summary>
+Gets the PRC envelope 2 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope2">
+            <summary>
+Gets the PRC envelope 2 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope1Rotated">
+            <summary>
+Gets the PRC envelope 1 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.PrcEnvelope1">
+            <summary>
+Gets the PRC envelope 1 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc32KBigRotated">
+            <summary>
+Gets the PRC 32K big rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc32KBig">
+            <summary>
+Gets the PRC 32K big paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc32KRotated">
+            <summary>
+Gets the PRC 32K rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc32K">
+            <summary>
+Gets the PRC 32K paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc16KRotated">
+            <summary>
+Gets the PRC 16K rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Prc16K">
+            <summary>
+Gets the PRC 16K paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Note">
+            <summary>
+Gets the note paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LetterTransverse">
+            <summary>
+Gets the letter transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LetterSmall">
+            <summary>
+Gets the letter small paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LetterRotated">
+            <summary>
+Gets the letter rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LetterExtraTransverse">
+            <summary>
+Gets the letter extra transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LetterExtra">
+            <summary>
+Gets the letter extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.LegalExtra">
+            <summary>
+Gets the legal extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Ledger">
+            <summary>
+Gets the ledger paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Last">
+            <summary>
+Gets the last paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeYou4Rotated">
+            <summary>
+Gets the Japanese envelope You 4 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeYou4">
+            <summary>
+Gets the Japanese envelope You 4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeKaku3Rotated">
+            <summary>
+Gets the Japanese envelope Kaku 3 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeKaku3">
+            <summary>
+Gets the Japanese envelope Kaku 3 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeKaku2Rotated">
+            <summary>
+Gets the Japanese envelope Kaku 2 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeKaku2">
+            <summary>
+Gets the Japanese envelope Kaku 2 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeChou4Rotated">
+            <summary>
+Gets the Japanese envelope Chou 4 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeChou4">
+            <summary>
+Gets the Japanese envelope Chou 4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeChou3Rotated">
+            <summary>
+Gets the Japanese envelope Chou 3 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapaneseEnvelopeChou3">
+            <summary>
+Gets the Japanese envelope Chou 3 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapanesePostcardRotated">
+            <summary>
+Gets the Japanese postcard rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.JapanesePostcard">
+            <summary>
+Gets the Japanese postcard paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.IsoB4">
+            <summary>
+Gets the ISO B4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Folio">
+            <summary>
+Gets the folio paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.FanfoldLegalGerman">
+            <summary>
+Gets the German fanfold legal paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.FanfoldStandardGerman">
+            <summary>
+Gets the German fanfold standard paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.FanfoldUs">
+            <summary>
+Gets the US fanfold paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Executive">
+            <summary>
+Gets the executive paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.ESheet">
+            <summary>
+Gets the E sheet paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopePersonal">
+            <summary>
+Gets the envelope personal paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeMonarch">
+            <summary>
+Gets the envelope monarch paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeItaly">
+            <summary>
+Gets the envelope Italy paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeInvite">
+            <summary>
+Gets the envelope invite paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeDL">
+            <summary>
+Gets the envelope DL paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeB6">
+            <summary>
+Gets the envelope B6 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeB5">
+            <summary>
+Gets the envelope B5 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeB4">
+            <summary>
+Gets the envelope B4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeC65">
+            <summary>
+Gets the envelope C65 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeC6">
+            <summary>
+Gets the envelope C6 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeC4">
+            <summary>
+Gets the envelope C4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeC3">
+            <summary>
+Gets the envelope C3 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.EnvelopeC5">
+            <summary>
+Gets the envelope C5 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Envelope14">
+            <summary>
+Gets the envelope 14 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Envelope12">
+            <summary>
+Gets the envelope 12 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Envelope11">
+            <summary>
+Gets the envelope 11 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Envelope10">
+            <summary>
+Gets the envelope 10 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Envelope9">
+            <summary>
+Gets the envelope 9 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.DSheet">
+            <summary>
+Gets the D sheet paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.DblJapanesePostcardRotated">
+            <summary>
+Gets the double Japanese postcard rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.DblJapanesePostcard">
+            <summary>
+Gets the double Japanese postcard paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.CSheet">
+            <summary>
+Gets the C sheet paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.BPlus">
+            <summary>
+Gets the B plus paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B6JisRotated">
+            <summary>
+Gets the B6 JIS rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B6Jis">
+            <summary>
+Gets the B6 JIS paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B5JisRotated">
+            <summary>
+Gets the B5 JIS rotated paper size '' if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B5Extra">
+            <summary>
+Gets the B5 extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B5">
+            <summary>
+Gets the B5 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B4JisRotated">
+            <summary>
+Gets the B4 JIS rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.B4">
+            <summary>
+Gets the B4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.APlus">
+            <summary>
+Gets the A plus paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A6Rotated">
+            <summary>
+Gets the A6 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A6">
+            <summary>
+Gets the A6 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A5Transverse">
+            <summary>
+Gets the A5 transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A5Rotated">
+            <summary>
+Gets the A5 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A5Extra">
+            <summary>
+Gets the A5 extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A5">
+            <summary>
+Gets the A5 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4Transverse">
+            <summary>
+Gets the A4 transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4Small">
+            <summary>
+Gets the A4 small paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4Rotated">
+            <summary>
+Gets the A4 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4Plus">
+            <summary>
+Gets the A4 plus paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4Extra">
+            <summary>
+Gets the A4 extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A4">
+            <summary>
+Gets the A4 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A3Transverse">
+            <summary>
+Gets the A3 transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A3Rotated">
+            <summary>
+Gets the A3 rotated paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A3ExtraTransverse">
+            <summary>
+Gets the A3 extra transverse paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A3Extra">
+            <summary>
+Gets the A3 extra paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A3">
+            <summary>
+Gets the A3 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.A2">
+            <summary>
+Gets the A2 paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size12By11">
+            <summary>
+Gets the paper size 12 by 11 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size11By17">
+            <summary>
+Gets the paper size 11 by 17 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size15By11">
+            <summary>
+Gets the paper size 15 by 11 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size10By14">
+            <summary>
+Gets the paper size 10 by 14 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size10By11">
+            <summary>
+Gets the paper size 10 by 11 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Size9By11">
+            <summary>
+Gets the paper size 9 by 11 if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Legal">
+            <summary>
+Gets the US Legal paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Letter">
+            <summary>
+Gets the US Letter paper size if it is specified by the printer.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Count">
+            <summary>
+Gets the number of paper sources in the list.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.default(System.String)">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSize" /> object by name.
+</summary>
+            <param name="name">The name of the paper size to be returned.</param>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSizeList.Item(System.Int32)">
+            <summary>
+Gets a <see cref="T:Foxit.PDF.Printing.PaperSize" /> object by index.
+</summary>
+            <param name="index">The index of the paper size to be returned.</param>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PaperSizeList">
+            <summary>
+Represents a list of papers.
+</summary>
+            <example>The following examples creates a print job, sets the paper size and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Get the list of available paper sizes for the printer
+        Dim MyPaperSizes As PaperSizeList = MyPrintJob.Printer.PaperSizes
+
+        ' Set the paper size
+        MyPrintJob.PrintOptions.PaperSize = MyPaperSizes(0)
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get the list of available paper sizes for the printer
+        PaperSizeList paperSizes = printJob.Printer.PaperSizes;
+
+        // Set the paper size
+        printJob.PrintOptions.PaperSize = paperSizes[0];
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSize.DeviceContextPaper">
+            <summary>
+Gets the value of the paper size from DC_PAPERS array.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSize.Width">
+            <summary>
+Gets the width of the paper.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSize.Name">
+            <summary>
+Gets the name of the paper size.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PaperSize.Height">
+            <summary>
+Gets the height of the paper.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PaperSize">
+            <summary>
+Represents a paper.
+</summary>
+            <example>The following examples creates a print job, sets the paper size and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Get a paper size from the list
+        Dim MyPaperSize As PaperSize = MyPrintJob.Printer.PaperSizes.Letter
+
+        ' Set the paper size if it is supported by the printer
+        If (Not MyPaperSize Is Nothing) Then
+            MyPrintJob.PrintOptions.PaperSize = MyPaperSize
+        End If
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Get a paper size from the list
+        PaperSize paperSize = printJob.Printer.PaperSizes.Letter;
+
+        // Set the paper size if it is supported by the printer
+        if (paperSize != null)
+        {
+            printJob.PrintOptions.PaperSize = paperSize;
+        }
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PageScaling.ActualSize">
+            <summary>
+Gets the actual scaling size for the page to be print.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PageScaling">
+            <summary>
+Represents the scaling  for the page to be printed.
+</summary>
+            <example>The following examples creates a print job, sets the scaling propety to actual size and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the scaling
+        MyPrintJob.PrintOptions.Scaling = PageScaling.ActualSize	
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the scaling
+        printJob.PrintOptions.Scaling = PageScaling.ActualSize;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdfPage.Width">
+            <summary>
+Gets the width of the PDF page.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.InputPdfPage.Height">
+            <summary>
+Gets the height of the PDF page.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdfPage.Finalize">
+            <summary>
+Frees the resources of the current <see cref="T:Foxit.PDF.Printing.InputPdfPage" /> object before it is reclaimed by the garbage collector.
+</summary>
+        </member>
+        <member name="M:Foxit.PDF.Printing.InputPdfPage.Dispose">
+            <summary>
+Releases resources used by the <see cref="T:Foxit.PDF.Printing.InputPdfPage" /> object.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.InputPdfPage">
+            <summary>
+Represents a page of pdf to be added to the print job.
+</summary>
+            <example>The following examples creates a print job, adds PDF pages to print job and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName")
+
+        ' Create an InputPdf object to hold the source PDF
+        Dim MyInputPdf As InputPdf = New InputPdf("C:\MyDocument.pdf")
+
+        ' Get pages from the input PDF
+        Dim MyFirstPage As InputPdfPage = MyInputPdf.Pages(0)
+        Dim MyFourthPage As InputPdfPage = MyInputPdf.Pages(3)
+
+        ' Add pages to the print job
+        MyPrintJob.Pages.Add(MyFirstPage)
+        MyPrintJob.Pages.Add(MyFourthPage)
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName");
+
+        // Create an InputPdf object to hold the source PDF
+        InputPdf inputPdf = new InputPdf(@"C:\MyDocument.pdf");
+
+        // Get pages from the input PDF
+        InputPdfPage firstPage = inputPdf.Pages[0];
+        InputPdfPage fourthPage = inputPdf.Pages[3];
+
+        // Add pages to the print job
+        printJob.Pages.Add(firstPage);
+        printJob.Pages.Add(fourthPage);
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="M:FPDF_GetMetaText(System.Void*,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,System.Void*,System.UInt32!System.Runtime.CompilerServices.IsLong)">
+ Get a text from meta data of the document. Result is encoded in UTF-16LE.
+ @param[in]  doc		- Handle to a document
+ @param[in]  tag		- The tag for the meta data. Currently, It can be "Title", "Author", 
+							"Subject", "Keywords", "Creator", "Producer", "CreationDate", or "ModDate".
+							For detailed explanation of these tags and their respective values,
+							please refer to PDF Reference 1.6, section 10.2.1, "Document Information Dictionary".
+ @param[out] buffer	- A buffer for output the title. Can be NULL.
+ @param[in]  buflen	- The length of the buffer, number of bytes. Can be 0.
+ @note	No matter on what platform, the title is always output in UTF-16LE encoding, which means the buffer 
+		can be regarded as an array of WORD (on Intel and compatible CPUs), each WORD represent the Unicode of 
+		a character (some special Unicode may take 2 WORDs). The string is followed by two bytes of zero 
+		indicating end of the string.
+
+		The return value always indicated number of bytes required for the buffer, even when there is
+		no buffer specified, or the buffer size is less then required. In this case, the buffer will not
+		be modified.
+ @retval Number of bytes the title consumes, including trailing zeros.
+
+</member>
+        <member name="M:FPDF_GetPageThumbnail(System.Void*)">
+ Get stored thumbnail image of a page. Only supported on Windows system.
+ @param[in] page -	Handle to a page.
+ @note	If no thumbnail is stored for a page, the application can render the page into a small bitmap for thumbnail.
+		The application should free the image with DeleteObject WIN32 function, when it's done with the thumbnail.
+		NOTE: This function is not supported on Windows CE.
+ @retval	Handle to a Windows bitmap storing the thumbnail. NULL if no thumbnail is stored for this page.
+
+</member>
+        <member name="M:FPDFLink_GetAction(System.Void*)">
+Get action info of a link.
+@param[in] link -	Handle to the link.
+@retval	Handle to the action. NULL if there is no action associated with the link.
+
+</member>
+        <member name="M:FPDFLink_GetDest(System.Void*,System.Void*)">
+ Get destination info of a link.
+ @param[in] document	-	Handle to the document.
+ @param[in] link		-	Handle to the link. Returned by FPDFLink_GetLinkAtPoint.
+ @retval Handle to the destination. NULL if there is no destination associated with the link, in this case
+		  the application should try FPDFLink_GetAction.
+
+</member>
+        <member name="M:FPDFLink_GetLinkAtPoint(System.Void*,System.Double,System.Double)">
+ Find a link at specified point on a document page.
+ @param[in] page	-	Handle to the document page.
+ @param[in] x		-	The x coordinate of the point, specified in page coordinate system.
+ @param[in] y		-	The y coordinate of the point, specified in page coordinate system.
+ @note	The point coordinates are specified in page coordinate system. You can convert coordinates 
+		from screen system to page system using FPDF_DeviceToPage functions.
+ @retval Handle to the link. NULL if no link found at that point.
+
+</member>
+        <member name="M:FPDFDest_GetZoomParam(System.Void*,System.Int32)">
+ Get zoom parameters.
+ @param[in] dest	-	Handle to the destination.
+ @param[in] param	-	Index of the parameter, starting with zero (see comments below).
+ @note	Different zoom mode has different parameters. Here is a list:
+		XYZ				Three parameters: x, y position in the page and the zoom ratio (0 for not specified).
+		FITPAGE			No parameters;
+		FITHORZ			One parameter: the top margin of the page.
+		FITVERT			One parameter: the left margin of the page.
+		FITRECT			Four parameters: the left, top, right, bottom margin of the fitting rectangle.
+						Use 0-3 as parameter index for them, respectively.
+ @retval A float number for the zoom parameter.
+
+</member>
+        <member name="M:FPDFDest_GetZoomMode(System.Void*)">
+ @name Zoom modes
+@{
+
+@brief Zoom level with specified offset. 
+@brief Fit both the width and height of the page (whichever smaller). 
+@brief Fit the page width. 
+@brief Fit the page height. 
+@brief Fit a specific rectangle area within the window. 
+@brief Fit the bounding box entirely within the window both horizontally and vertically. 
+@brief The contents of the page magnified just enough to fit the entire width of its bounding box within the window.
+@brief The contents of the page magnified just enough to fit the entire height of its bounding box within the window.
+@}
+Get the designated zoom mode of a destination.
+@param[in] dest -	Handle to the destination.
+@retval A type number as the zoom modes.
+
+</member>
+        <member name="M:FPDFDest_GetPageIndex(System.Void*,System.Void*)">
+Get page index of a destination.
+@param[in] document	-	Handle to the document.
+@param[in] dest		-	Handle to the destination.
+@retval The page index. Starting from 0 for the first page.
+
+</member>
+        <member name="M:FPDFAction_GetURIPath(System.Void*,System.Void*,System.Void*,System.UInt32!System.Runtime.CompilerServices.IsLong)">
+ Get URI path of a URI action.
+ @param[in]  document	-	Handle to the document.
+ @param[in]  action	-	Handle to the action. Must be a URI action.
+ @param[out] buffer	-	A buffer for output the path string. Can be NULL.
+ @param[in]  buflen	-	The length of the buffer, number of bytes. Can be 0.
+ @note The URI path is always encoded in 7-bit ASCII.
+		The return value always indicated number of bytes required for the buffer, even when there is
+		no buffer specified, or the buffer size is less then required. In this case, the buffer will not
+		be modified.
+ @retval Number of bytes the URI path consumes, including trailing zeros.
+
+</member>
+        <member name="M:FPDFAction_GetDest(System.Void*,System.Void*)">
+ Get destination of an action.
+ @param[in] document -	Handle to the document..
+ @param[in] action -	Handle to the action. It must be a GOTO or REMOTEGOTO action.
+ @note In case of remote goto action, the application should first use FPDFAction_GetFilePath to
+		get file path, then load that particular document, and use its document handle to call this
+		function.
+ @retval Handle to the destination data.
+
+</member>
+        <member name="M:FPDFAction_GetFilePath(System.Void*,System.Void*,System.UInt32!System.Runtime.CompilerServices.IsLong)">
+ Get file path of a remote goto action.
+ @param[in]  action	-	Handle to the action. Must be a RMEOTEGOTO or LAUNCH action.
+ @param[out] buffer	-	A buffer for output the path string. Can be NULL.
+ @param[in]  buflen	-	The length of the buffer, number of bytes. Can be 0.
+ @note The file path is output in local encoding.
+		The return value always indicated number of bytes required for the buffer, even when there is
+		no buffer specified, or the buffer size is less then required. In this case, the buffer will not
+		be modified.
+ @retval Number of bytes the file path consumes, including trailing zero.
+
+</member>
+        <member name="M:FPDFAction_GetType(System.Void*)">
+ @name Action styles
+@{
+
+@brief Unsupported action type. 
+@brief Go to a destination within current document. 
+@brief Go to a destination within another document. 
+@brief Universal Resource Identifier, including web pages and other Internet based resources. 
+@brief Launch an application or open a file.
+@}
+Get type of an action.
+@param[in] action -	Handle to the action.
+@retval A type number as the action styles.
+
+</member>
+        <member name="M:FPDFBookmark_GetPageFirstLine(System.Void*,System.Void*,System.Int32)">
+ Get first text line of the page, which can be used for alternative bookmark,
+ if no bookmark is available.
+ @param[in]  page		-	The page handle.
+ @param[out] buffer	-	A buffer for output the text. Can be NULL.
+ @param[in]  buflen	-	The length of the buffer, number of bytes. Can be 0.
+ @note No matter on what platform, the title is always output in UTF-16LE encoding, which means the buffer 
+		can be regarded as an array of WORD (on Intel and compatible CPUs), each WORD represent the Unicode of 
+		a character (some special Unicode may take 2 WORDs). The string is followed by two bytes of zero 
+		indicating end of the string.
+
+		The return value always indicated number of bytes required for the buffer, even when there is
+		no buffer specified, or the buffer size is less then required. In this case, the buffer will not
+		be modified.
+		
+		TEMPORARY FUNCTION WILL BE OBSOLETE SOON!
+ @retval Number of bytes the text line consumes, including trailing zeros.
+
+</member>
+        <member name="M:FPDFBookmark_GetDest(System.Void*,System.Void*)">
+Get the destination associated with a bookmark item.
+@param[in] document -	Handle to the document.
+@param[in] bookmark -	Handle to the bookmark.
+@retval Handle to the destination data. NULL if no destination is associated with this bookmark.
+
+</member>
+        <member name="M:FPDFBookmark_GetAction(System.Void*)">
+ Get the action associated with a bookmark item.
+ @param[in] bookmark -	Handle to the bookmark.
+ @retval Handle to the action data. NULL if no action is associated with this bookmark. In this case, the 
+		  application should try FPDFBookmark_GetDest.
+
+</member>
+        <member name="M:FPDFBookmark_GetTitle(System.Void*,System.Void*,System.UInt32!System.Runtime.CompilerServices.IsLong)">
+Get title of a bookmark.
+@param[in] bookmark	-	Handle to the bookmark.
+@param[out] buffer	-	A buffer for output the title. Can be NULL.
+@param[in] buflen		-	The length of the buffer, number of bytes. Can be 0..
+@note No matter on what platform, the title is always output in UTF-16LE encoding, which means the buffer 
+		can be regarded as an array of WORD (on Intel and compatible CPUs), each WORD represent the Unicode of 
+		a character (some special Unicode may take 2 WORDs). The string is followed by two bytes of zero 
+		indicating end of the string.
+
+		The return value always indicated number of bytes required for the buffer, even when there is
+		no buffer specified, or the buffer size is less then required. In this case, the buffer will not
+		be modified.
+@retval Number of bytes the title consumes, including trailing zeros.
+
+</member>
+        <member name="M:FPDFBookmark_GetFontStyle(System.Void*)">
+ @name Bookmark font styles
+@{
+
+@brief NORMAL 
+@brief ITALIC 
+@brief BOLD 
+@brief BOLD ITALIC 
+@}
+Get designated font style for a bookmark item.
+@param[in] bookmark -	Handle to the bookmark.
+@retval A number indicating the font style, as the bookmark font styles.
+
+</member>
+        <member name="M:FPDFBookmark_GetColorRef(System.Void*)">
+Get designated color of a bookmark item.
+@param[in] bookmark -	Handle to the bookmark.
+@retval A COLORREF value (0x00ggbbrr) for the bookmark item.
+
+</member>
+        <member name="M:FPDFBookmark_Find(System.Void*,System.UInt16!System.Runtime.CompilerServices.IsConst*)">
+Find a bookmark in the document, using the bookmark title.
+@param[in] document	-	Handle to the document. Returned by FPDF_LoadDocument or FPDF_LoadMemDocument.
+@param[in] title		-	The UTF-16LE encoded Unicode string for the bookmark title to be searched. Can't be NULL.
+@note It always returns the first found bookmark if more than one bookmarks have the same title.
+@retval Handle to the found bookmark item. NULL if the title can't be found.
+
+</member>
+        <member name="M:FPDFBookmark_GetNextSibling(System.Void*,System.Void*)">
+Get next bookmark item on the same level.
+@param[in] document -	Handle to the document. Returned by FPDF_LoadDocument or FPDF_LoadMemDocument.
+@param[in] bookmark -	Handle to the current bookmark. Cannot be NULL.
+@retval Handle to the next bookmark item on the same level. NULL if this is the last bookmark on this level.
+
+</member>
+        <member name="M:FPDFBookmark_GetFirstChild(System.Void*,System.Void*)">
+Get first child of a bookmark item, or first top level bookmark item.
+@param[in] document -	Handle to the document. Returned by FPDF_LoadDocument or FPDF_LoadMemDocument.
+@param[in] bookmark -	Handle to the current bookmark. Can be NULL if you want to get the first top level item.
+@retval Handle to the first child or top level bookmark item. NULL if no child or top level bookmark found.
+
+</member>
+        <member name="M:FPDF_SetSystemFontFile(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+ Make use of a system font. The font file must be in TrueType or Type1 format and must be
+ encoded in a standard encoding system.
+ Available for embedded Linux system only.
+ @param[in] file_path	-	The full path of the font file.
+ @retval	Non-zero for success. Zero for error.
+
+
+</member>
+        <member name="M:FPDF_SetGlyphProvider(FPDF_GLYPHPROVIDER*)">
+ Make use of a custom glyph bitmap provider.
+ Not available on Desktop Windows system.
+ @param[in] pProvider	-	Pointer to a provider structure. This structure must be available all the time
+							(better put it in static data). And all member interfaces of this structure
+							should be properly set and implemented.
+ @retval	None.
+
+</member>
+        <member name="M:FPDF_SetModulePath(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+Set the folder path for module files (like the FPDFCJK.BIN).
+@param[in] module_name	-	Name of the module. Currently please use NULL (0) only.
+@param[in] folder_name	-	Name of the folder. For example: "C:\\program files\\FPDFSDK".
+@retval	None.
+
+</member>
+        <member name="M:FPDF_SetErrorHandler(=FUNC:System.Void(System.Int32,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*))">
+ Set a call back function when FPDFSDK has some error to report.
+ @param[in] func	-	Pointer to the error handler function.
+ @note		Currently only two error codes are defined (see above).
+ @retval	None.
+
+
+</member>
+        <member name="D:FPDF_ErrorHandler">
+Out of memory. The error handler should quit the application, or use long jump to get out of current rendering.
+Missing PDF feature. The error handler can safely continue with other rendering.
+</member>
+        <member name="M:FPDF_FreeMemory(System.Void*)">
+ Free a memory area allocated by Foxit SDK.
+ @param[in] p		-	The pointer. Should not be NULL.
+ @retval	None.
+ @note		In case FPDFSDK allocated some memory for user application, the user application
+			must free it to avoid memory leakage. And the application must call FPDF_FreeMemory
+			function to do that. Do NOT use c/c++ memory free() function or other similar functions.
+
+</member>
+        <member name="M:FPDF_AllocMemory(System.UInt32!System.Runtime.CompilerServices.IsLong)">
+ Allocate memory block in FPDFSDK. This memory can be freed by FPDF_FreeMemory function.
+ @param[in] size		-	Byte size of requested memory block. Can not be zero.
+ @note		Some FPDFSDK interface may require application to allocate memory for internal use of
+			FPDFSDK. In this case application must call this function to allocate memory, don't
+			use malloc() or other memory allocator.
+			If an error handler installed and exception/long jump is used in the out of memory handling,
+			this function might never return if no memory available.
+ @retval	The allocated pointer. NULL if memory not available.
+
+</member>
+        <member name="M:FPDFBitmap_Destroy(System.Void*)">
+ Destroy an FXDIB and release all related buffers. 
+ @param[in] bitmap		-	Handle to the bitmap. Returned by FPDFBitmap_Create function.
+ @note		This function will not destroy any external buffer.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDFBitmap_GetStride(System.Void*)">
+Get number of bytes for each scan line in the bitmap buffer.
+@param[in] bitmap		-	Handle to the bitmap. Returned by FPDFBitmap_Create function.
+@retval	The number of bytes for each scan line in the bitmap buffer.
+
+</member>
+        <member name="M:FPDFBitmap_GetHeight(System.Void*)">
+Get height of an FXDIB.
+@param[in] bitmap		-	Handle to the bitmap. Returned by FPDFBitmap_Create function.
+@retval	The number of pixels in a vertical line of the bitmap.
+
+</member>
+        <member name="M:FPDFBitmap_GetWidth(System.Void*)">
+Get width of an FXDIB.
+@param[in] bitmap		-	Handle to the bitmap. Returned by FPDFBitmap_Create function.
+@retval	The number of pixels in a horizontal line of the bitmap.
+
+</member>
+        <member name="M:FPDFBitmap_GetBuffer(System.Void*)">
+ Get data buffer of an FXDIB
+ @param[in] bitmap		-	Handle to the bitmap. Returned by FPDFBitmap_Create function.
+ @note		Applications can use this function to get the bitmap buffer pointer, then manipulate any color
+			and/or alpha values for any pixels in the bitmap.
+ @retval	The pointer to the first byte of the bitmap buffer.
+
+</member>
+        <member name="M:FPDFBitmap_FillRect(System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ Fill a rectangle area in an FXDIB.
+ @param[in] bitmap		-	The handle to the bitmap. Returned by FPDFBitmap_Create function.
+ @param[in] left		-	The left side position. Starting from 0 at the left-most pixel.
+ @param[in] top		-	The top side position. Starting from 0 at the top-most scan line.
+ @param[in] width		-	Number of pixels to be filled in each scan line.
+ @param[in] height		-	Number of scan lines to be filled.
+ @param[in] red		-	A number from 0 to 255, identifying the red intensity.
+ @param[in] green		-	A number from 0 to 255, identifying the green intensity.
+ @param[in] blue		-	A number from 0 to 255, identifying the blue intensity.
+ @param[in] alpha		-	(Only if the alpha channeled is used when bitmap created) A number from 0 to 255,
+							identifying the alpha value.
+ @note
+			This function set the color and (optionally) alpha value in specified region of the bitmap.
+			NOTE: If alpha channel is used, this function does NOT composite the background with the source color,
+			instead the background will be replaced by the source color and alpha.
+			If alpha channel is not used, the "alpha" parameter is ignored.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDFBitmap_CreateEx(System.Int32,System.Int32,System.Int32,System.Void*,System.Int32)">
+ @name More DIB formats
+@{
+
+Gray scale bitmap, one byte per pixel. 
+3 bytes per pixel, byte order: blue, green, red. 
+4 bytes per pixel, byte order: blue, green, red, unused. 
+4 bytes per pixel, byte order: blue, green, red, alpha. 
+@}
+ Create a Foxit Device Independent Bitmap (FXDIB)
+ @param[in] width		-	Number of pixels in a horizontal line of the bitmap. Must be greater than 0.
+ @param[in] height		-	Number of pixels in a vertical line of the bitmap. Must be greater than 0.
+ @param[in] format		-	A number indicating for bitmap format, as defined above.
+ @param[in] first_scan	-	A pointer to the first byte of first scan line, for external buffer
+							only. If this parameter is NULL, then the SDK will create its own buffer.
+ @param[in] stride		-	Number of bytes for each scan line, for external buffer only..
+ @note		Similar to FPDFBitmap_Create function, with more formats and external buffer supported. 
+			Bitmap created by this function can be used in any place that a FPDF_BITMAP handle is 
+			required. 
+
+			If external scanline buffer is used, then the application should destroy the buffer
+			by itself. FPDFBitmap_Destroy function will not destroy the buffer.
+ @retval	The created bitmap handle, or NULL if parameter error or out of memory.
+
+
+</member>
+        <member name="M:FPDFBitmap_Create(System.Int32,System.Int32,System.Int32)">
+ Create a Foxit Device Independent Bitmap (FXDIB).
+ @param[in] width		-	Number of pixels in a horizontal line of the bitmap. Must be greater than 0.
+ @param[in] height		-	Number of pixels in a vertical line of the bitmap. Must be greater than 0.
+ @param[in] alpha		-	A flag indicating whether alpha channel is used. Non-zero for using alpha, zero for not using.
+ @note
+			An FXDIB always use 4 byte per pixel. The first byte of a pixel is always double word aligned.
+			Each pixel contains red (R), green (G), blue (B) and optionally alpha (A) values.
+			The byte order is BGRx (the last byte unused if no alpha channel) or BGRA.
+			
+			The pixels in a horizontal line (also called scan line) are stored side by side, with left most
+			pixel stored first (with lower memory address). Each scan line uses width*4 bytes.
+
+			Scan lines are stored one after another, with top most scan line stored first. There is no gap
+			between adjacent scan lines.
+
+			This function allocates enough memory for holding all pixels in the bitmap, but it doesn't 
+			initialize the buffer. Applications can use FPDFBitmap_FillRect to fill the bitmap using any color.
+ @retval	The created bitmap handle, or NULL if parameter error or out of memory.
+
+</member>
+        <member name="M:FPDF_PageToDevice(System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double,System.Double,System.Int32*,System.Int32*)">
+ Convert the page coordinate of a point to screen coordinate.
+ @param[in] page		-	Handle to the page. Returned by FPDF_LoadPage function.
+ @param[in] start_x	-	Left pixel position of the display area in the device coordinate.
+ @param[in] start_y	-	Top pixel position of the display area in the device coordinate.
+ @param[in] size_x		-	Horizontal size (in pixels) for displaying the page.
+ @param[in] size_y		-	Vertical size (in pixels) for displaying the page.
+ @param[in] rotate		-	Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise),
+							 2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).
+ @param[in] page_x		-	X value in page coordinate, for the point to be converted.
+ @param[in] page_y		-	Y value in page coordinate, for the point to be converted.
+ @param[in] device_x	-	A pointer to an integer receiving the result X value in device coordinate.
+ @param[in] device_y	-	A pointer to an integer receiving the result Y value in device coordinate.
+ @note
+			See comments of FPDF_DeviceToPage() function.
+
+ @retval	None.
+
+</member>
+        <member name="M:FPDF_DeviceToPage(System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Double*,System.Double*)">
+ Convert the screen coordinate of a point to page coordinate.
+ @param[in] page		-	Handle to the page. Returned by FPDF_LoadPage function.
+ @param[in] start_x	-	Left pixel position of the display area in the device coordinate.
+ @param[in] start_y	-	Top pixel position of the display area in the device coordinate.
+ @param[in] size_x		-	Horizontal size (in pixels) for displaying the page.
+ @param[in] size_y		-	Vertical size (in pixels) for displaying the page.
+ @param[in] rotate		-	Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise),
+							 2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).
+ @param[in] device_x	-	X value in device coordinate, for the point to be converted.
+ @param[in] device_y	-	Y value in device coordinate, for the point to be converted.
+ @param[in] page_x		-	A Pointer to a double receiving the converted X value in page coordinate.
+ @param[in] page_y		-	A Pointer to a double receiving the converted Y value in page coordinate.
+ @note
+			The page coordinate system has its origin at left-bottom corner of the page, with X axis goes along
+			the bottom side to the right, and Y axis goes along the left side upward. NOTE: this coordinate system 
+			can be altered when you zoom, scroll, or rotate a page, however, a point on the page should always have 
+			the same coordinate values in the page coordinate system. 
+
+			The device coordinate system is device dependent. For screen device, its origin is at left-top
+			corner of the window. However this origin can be altered by Windows coordinate transformation
+			utilities. You must make sure the start_x, start_y, size_x, size_y and rotate parameters have exactly
+			same values as you used in FPDF_RenderPage() function call.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDF_CloseDocument(System.Void*)">
+ Close a loaded PDF document.
+ @param[in] document	-	Handle to the loaded document.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDF_ClosePage(System.Void*)">
+ Close a loaded PDF page.
+ @param[in] page		-	Handle to the loaded page.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDF_QuickDrawPage(System.Void*,System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ Draw a thumbnail of a page into a bitmap.
+ @param[in] bitmap		-	Handle to the device independent bitmap (as the output buffer).
+							Bitmap handle can be created by FPDFBitmap_Create function.
+ @param[in] page		-	Handle to the page. Returned by FPDF_LoadPage function.
+ @param[in] start_x	-	Left pixel position of the display area in the device coordinate.
+ @param[in] start_y	-	Top pixel position of the display area in the device coordinate.
+ @param[in] size_x		-	Horizontal size (in pixels) for displaying the page.
+ @param[in] size_y		-	Vertical size (in pixels) for displaying the page.
+ @param[in] rotate		-	Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise),
+							 2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).
+ @param[in] flags		-	Currently must be zero.
+ @note		This functions draws a very low-resolution thumbnail of a page, sometimes with
+			inaccurate shape or position. The result thumbnail is meant for a very rough preview
+			of the page contents, just giving user some idea about how the page looks like.
+			The thumbnail is often useful in multi-threaded or progressive environment, the
+			application can first display the low-resolution thumbnail, start to respond to
+			user input, and a higher resolution thumbnail can be generated by FPDF_RenderPageBitmap 
+			function.
+ @retval	None.
+
+</member>
+        <member name="M:FPDF_RenderPageBitmap(System.Void*,System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ Render contents in a page to a device independent bitmap
+ @param[in] bitmap		-	Handle to the device independent bitmap (as the output buffer).
+							Bitmap handle can be created by FPDFBitmap_Create function.
+ @param[in] page		-	Handle to the page. Returned by FPDF_LoadPage function.
+ @param[in] start_x	-	Left pixel position of the display area in the bitmap coordinate.
+ @param[in] start_y	-	Top pixel position of the display area in the bitmap coordinate.
+ @param[in] size_x		-	Horizontal size (in pixels) for displaying the page.
+ @param[in] size_y		-	Vertical size (in pixels) for displaying the page.
+ @param[in] rotate		-	Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise),
+							2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).
+ @param[in] flags		-	0 for normal display, or combination of flags defined above.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDF_RenderPage(HDC__*,System.Void*,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+ @name The result of the process which check linearized to be rendered.
+@{
+
+Set if annotations are to be rendered. 
+Set if using text rendering optimized for LCD display. 
+Don't use the native text output available on some platforms Applicable to desktop Windows systems only.
+Grayscale output.
+Set if you want to get some debug info.  Please discuss with Foxit first if you need to collect debug info.
+Set if you don't want to catch exception.
+@}
+ Render contents in a page to a device (screen, bitmap, or printer). This function is only supported on Windows system. 
+ @param[in] dc			-	Handle to device context.
+ @param[in] page		-	Handle to the page. Returned by FPDF_LoadPage function.
+ @param[in] start_x	-	Left pixel position of the display area in the device coordinate.
+ @param[in] start_y	-	Top pixel position of the display area in the device coordinate.
+ @param[in] size_x		-	Horizontal size (in pixels) for displaying the page.
+ @param[in] size_y		-	Vertical size (in pixels) for displaying the page.
+ @param[in] rotate		-	Page orientation: 0 (normal), 1 (rotated 90 degrees clockwise),
+							2 (rotated 180 degrees), 3 (rotated 90 degrees counter-clockwise).
+ @param[in] flags		-	0 for normal display, or combination of flags defined above.
+ @retval	None.
+
+
+</member>
+        <member name="M:FPDF_EnumPageSize(System.Void*,=FUNC:System.Void(System.Int32,System.Double,System.Double))">
+Enumerating all pages within the document.
+@param[in] document	-	Handle to document. Returned by FPDF_LoadDocument function.
+@param[in] callback	-	A pointer to a callback function.
+@retval	None.
+
+</member>
+        <member name="D:FPDF_ENUMPAGESIZEPROC">
+ Declares of a pointer type to the callback function for the FPDF_EnumPageSize method.
+			page_index	-	Page index, zero for the first page.
+			width		-	The page width.
+			height		-	The page height.
+ @retval	None. 		
+
+</member>
+        <member name="M:FPDF_GetPageSizeByIndex(System.Void*,System.Int32,System.Double*,System.Double*)">
+ Get the size of a page by index.
+ @param[in] document	-	Handle to document. Returned by FPDF_LoadDocument function.
+ @param[in] page_index	-	Page index, zero for the first page.
+ @param[in] width		-	Pointer to a double receiving the page width (in points).
+ @param[in] height		-	Pointer to a double receiving the page height (in points).
+ @retval	Non-zero for success. 0 for error (document or page not found).
+
+
+</member>
+        <member name="M:FPDF_GetPageHeight(System.Void*)">
+ Get page height.
+ @param[in] page	-	Handle to the page. Returned by FPDF_LoadPage function.
+ @retval	Page height (excluding non-displayable area) measured in points.
+			One point is 1/72 inch (around 0.3528 mm)
+
+
+</member>
+        <member name="M:FPDF_GetPageWidth(System.Void*)">
+ Get page width.
+ @param[in] page	-	Handle to the page. Returned by FPDF_LoadPage function.
+ @retval	Page width (excluding non-displayable area) measured in points.
+			One point is 1/72 inch (around 0.3528 mm).
+
+
+</member>
+        <member name="M:FPDF_LoadPage(System.Void*,System.Int32)">
+ Load a page inside a document.
+ @param[in] document	-	Handle to document. Returned by FPDF_LoadDocument function.
+ @param[in] page_index	-	Index number of the page. 0 for the first page.
+ @note		Loaded page can be rendered to devices using FPDF_RenderPage function.
+			Loaded page can be closed by FPDF_ClosePage.
+ @retval	A handle to the loaded page. If failed, NULL is returned.
+
+</member>
+        <member name="M:FPDF_GetPageCount(System.Void*)">
+Get total number of pages in a document.
+@param[in] document	-	Handle to document. Returned by FPDF_LoadDocument function.
+@retval	Total number of pages in the document.
+
+</member>
+        <member name="M:FPDF_GetDocPermissions(System.Void*)">
+ Get file permission flags of the document.
+ @param[in] document	-	Handle to document. Returned by FPDF_LoadDocument function.
+ @retval	A 32-bit integer indicating permission flags. Please refer to PDF Reference for
+			detailed description. If the document is not protected, 0xffffffff will be returned.
+
+</member>
+        <member name="M:FPDF_GetLastError">
+ @name Last error code
+@{
+
+@brief No error. 
+@brief Unknown error. 
+@brief Unknown error. 
+@brief File not found or could not be opened. 
+@brief Password required or incorrect password. 
+@brief Unsupported security scheme. 
+@brief Page not found or content error. 
+@}
+ Get last error code when an SDK function failed.
+ @note		If the previous SDK call succeeded, the return value of this function
+			is not defined.
+ @retval	A 32-bit integer indicating error codes (defined above).
+
+</member>
+        <member name="M:FPDF_LoadCustomDocument(FPDF_FILEACCESS*,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+@}
+ Load PDF document from a custom access descriptor.
+ @param[in] pFileAccess	-	A structure for access the file.
+ @param[in] password		-	Optional password for decrypting the PDF file.
+ @note		The application should maintain the file resources being valid until the PDF document close.
+			Loaded document can be closed by FPDF_CloseDocument.
+ @retval	A handle to the loaded document. If failed, NULL is returned.
+
+</member>
+        <member name="M:FPDF_LoadMemDocument(System.Void!System.Runtime.CompilerServices.IsConst*,System.Int32,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+ Open and load a PDF document from memory.
+ @param[in] data_buf	-	Pointer to a buffer containing the PDF document.
+ @param[in] size		-	Number of bytes in the PDF document.
+ @param[in] password	-	A string used as the password for PDF file. 
+							If no password needed, empty or NULL can be used.
+ @note		The memory buffer must remain valid when the document is open.
+			Loaded document can be closed by FPDF_CloseDocument.
+			If this function fails, you can use FPDF_GetLastError() to retrieve
+			the reason why it fails.
+ @retval	A handle to the loaded document. If failed, NULL is returned.
+
+</member>
+        <member name="M:FPDF_LoadDocument(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+ Open and load a PDF document.
+ @param[in] file_path	-	Path to the PDF file (including extension).
+ @param[in] password	-	A string used as the password for PDF file. 
+							If no password needed, empty or NULL can be used.
+ @note		Loaded document can be closed by FPDF_CloseDocument.
+			If this function fails, you can use FPDF_GetLastError() to retrieve
+			the reason why it fails.
+ @retval	A handle to the loaded document. If failed, NULL is returned.
+
+</member>
+        <member name="M:FPDF_UnlockDLL(System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*,System.SByte!System.Runtime.CompilerServices.IsSignUnspecifiedByte!System.Runtime.CompilerServices.IsConst*)">
+ Unlock the DLL using license key info received from Foxit.
+ @param[in] license_id		-	A string received from Foxit identifying the SDK license.
+ @param[in] unlock_code	-	A string received from Foxit for unlocking the DLL.
+ @note		For SDK evaluators, this function call is not required, then all
+			rendered pages will come with an evaluation mark.
+			For purchased SDK customers, this should be the first function
+			called before any other functions to be called.
+ @retval	None.
+
+</member>
+        <member name="M:FPDF_DestroyLibrary">
+ Release all resources allocated by the FPDFSDK library.
+ @note		You can call this function to release all memory blocks allocated by the library. 
+			After this function is called, you should not call any PDF processing functions.
+ @retval	None.
+
+</member>
+        <member name="M:FPDF_GetModuleMgr">
+Get the module of this DLL.
+@retval	FPDF_MODULEMGR	-	The handle of this module.  
+
+</member>
+        <member name="M:FPDF_InitLibrary(System.Void*)">
+On Windows system, functions are exported in a DLL 
+Initialize the FPDFSDK library 
+@param[in] hInstance	-	For WIN32 system only: the instance of the executable or DLL module.
+@note		You have to call this function before you can call any PDF processing functions.
+@retval	None.
+
+</member>
+        <member name="D:FPDF_STRING">
+ For Windows programmers: for most case it's OK to treat FPDF_WIDESTRING as Windows unicode string,
+		 however, special care needs to be taken if you expect to process Unicode larger than 0xffff.
+ For Linux/Unix programmers: most compiler/library environment uses 4 bytes for a Unicode character,
+		you have to convert between FPDF_WIDESTRING and system wide string by yourself.
+
+</member>
+        <member name="D:FPDF_WIDESTRING">
+Foxit PDF SDK always use UTF-16LE encoding wide string, each character use 2 bytes (except subrogation), with low byte first. 
+</member>
+        <member name="D:FPDF_BYTESTRING">
+FPDFSDK may use three types of strings: byte string, wide string (UTF-16LE encoded), and platform dependent string
+</member>
+        <member name="D:FPDF_WCHAR">
+String types
+</member>
+        <member name="D:FPDF_BOOL">
+Basic data types
+</member>
+        <member name="D:FPDF_DOCUMENT">
+PDF types
+</member>
+        <member name="D:FPDF_MODULEMGR">
+@addtogroup FPDFVIEW
+Header file for the view module
+@{
+
+(C) 2011 Foxit Corporation. All Rights Reserved.
+ * The following code is copyrighted and contains proprietary information and trade secrets of Foxit Corporation.
+ * Functions in this header file, require "view" module to be enabled in your SDK license.
+ * \file
+ * \author	Foxit Corporation
+ * \brief	Header file for the view module - to render PDF documents and obtain basic PDF information.
+ * \note	If you want to purchase Foxit PDF SDK license and use ANY of the following functions, please
+ *			request for enabling view module explicitly.
+ * \version 3.1
+
+Data types
+</member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPage.PrintOptions">
+            <summary>
+Gets the <see cref="T:Foxit.PDF.Printing.PrintJobPagePrintOptions" /> object that represents print options for the page.
+</summary>
+        </member>
+        <member name="P:Foxit.PDF.Printing.PrintJobPage.InputPdfPage">
+            <summary>
+Gets the <see cref="P:Foxit.PDF.Printing.PrintJobPage.InputPdfPage" /> object that represents the PDF page.
+</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.PrintJobPage">
+            <summary>
+Represents a page of pdf added to the print job.
+</summary>
+            <example>The following examples creates a  print job, sets print options on the last page and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job containing the first four pages of the PDF
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf", 1, 4)
+
+        ' Get the last page and set its print options
+        Dim MyPrintJobPage As PrintJobPage = MyPrintJob.Pages(MyPrintJob.Pages.Count - 1)
+        MyPrintJobPage.PrintOptions.Inherit = False
+        MyPrintJobPage.PrintOptions.HorizontalAlign = HorizontalAlign.Right
+        MyPrintJobPage.PrintOptions.Orientation.Type = OrientationType.Landscape
+        MyPrintJobPage.PrintOptions.PrintAnnotations = True
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job containing the first four pages of the PDF
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf", 1, 4);
+
+        // Get the last page and set its print options
+        PrintJobPage printJobPage = printJob.Pages[printJob.Pages.Count - 1];
+        printJobPage.PrintOptions.Inherit = false;
+        printJobPage.PrintOptions.HorizontalAlign = HorizontalAlign.Right;
+        printJobPage.PrintOptions.Orientation.Type = OrientationType.Landscape;
+        printJobPage.PrintOptions.PrintAnnotations = true;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="T:Foxit.PDF.Printing.VerticalAlign">
+            <summary>
+Represents the vertical alignment to use when printing pages.
+</summary>
+            <example>The following examples creates a print job, sets the vertical align to top and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the vertical alignment
+        MyPrintJob.PrintOptions.VerticalAlign = VerticalAlign.Top
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the vertical alignment
+        printJob.PrintOptions.VerticalAlign = VerticalAlign.Top;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.VerticalAlign.Bottom">
+            <summary>Bottom vertical alignment.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.VerticalAlign.Middle">
+            <summary>Middle vertical alignment.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.VerticalAlign.Top">
+            <summary>Top vertical alignment.</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.OrientationType">
+            <summary>
+Represents the type of orientation.
+</summary>
+            <example>The following examples creates a print job, sets the orientation and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the orientation
+        MyPrintJob.PrintOptions.Orientation = OrientationType.Landscape
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+
+        // Set the orientation
+        printJob.PrintOptions.Orientation = OrientationType.Landscape;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.OrientationType.Landscape">
+            <summary>Landscape orientation.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.OrientationType.Portrait">
+            <summary>Portrait orientation.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.OrientationType.Auto">
+            <summary>Automatically select the orientation based on the page and the output paper sizes.</summary>
+        </member>
+        <member name="T:Foxit.PDF.Printing.HorizontalAlign">
+            <summary>
+Represents the horizontal alignment to use when printing pages.
+</summary>
+            <example>The following examples creates a print job, sets the horizontal align to left and prints the job.<p /><code lang="VB">
+Imports System
+Imports Foxit.PDF.Printing
+
+Module MyModule
+
+    Sub Main()
+
+        ' Create a print job
+        Dim MyPrintJob As PrintJob = New PrintJob("PrinterName", "C:\MyDocument.pdf")
+
+        ' Set the horizontal alignment
+        MyPrintJob.PrintOptions.HorizontalAlign = HorizontalAlign.Left
+
+        ' Print the job
+        MyPrintJob.Print()
+    End Sub
+End Module
+</code><code lang="C#">
+using System;
+using Foxit.PDF.Printing;
+
+class MyClass
+{
+    static void Main()
+    {
+        // Create a print job
+        PrintJob printJob = new PrintJob("PrinterName", @"C:\MyDocument.pdf");
+  
+        // Set the horizontal alignment
+        printJob.PrintOptions.HorizontalAlign = HorizontalAlign.Left;
+
+        // Print the job
+        printJob.Print();
+    }
+}
+</code></example>
+            <licensing>
+This class is a Foxit PDF PrintManager feature. The following license is required for non-evaluation usage:
+<list type="bullet"><item>Foxit PDF PrintManager for .NET SDK</item></list></licensing>
+        </member>
+        <member name="F:Foxit.PDF.Printing.HorizontalAlign.Right">
+            <summary>Right horizontal alignment.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.HorizontalAlign.Center">
+            <summary>Center horizontal alignment.</summary>
+        </member>
+        <member name="F:Foxit.PDF.Printing.HorizontalAlign.Left">
+            <summary>Left horizontal alignment.</summary>
+        </member>
+    </members>
+</doc>

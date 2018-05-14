@@ -1,0 +1,183 @@
+﻿<div class="fill" style="overflow-x: auto; overflow-y: auto; ">
+    <form name="clientConfigForm" class="ris-form col-lg-10" style="padding: 20px; padding-bottom: 60px;">
+        <div class="row container-title">
+            <span>{{::'GlobalConfig' | translate}}</span>
+            <hr class="container-divide">
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'ScanQualityLevel' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <input data-kendo-numeric-text-box data-k-format="'#'" data-k-min="-1" data-k-max="100" data-ng-model="config.scanQualityLevel" style="width: 100%;" />
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <span class="glyphicon glyphicon-info-sign line2Icon" style="margin-left: -30px; color: #ccc;" data-tooltip="{{::'ScanQualityLevelTooltip' | translate}}" tooltip-append-to-body='true'></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'StationName' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-3">
+                    <input type="text" class="form-control" ng-model="config.stationName" ng-model-options="{ updateOn: 'blur' }" maxlength="200">
+                </div>
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'StationLocation' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-3">
+                    <input type="text" class="form-control" ng-model="config.location" ng-model-options="{ updateOn: 'blur' }" maxlength="200">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'DefaultPrinter' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="config.defaultPrinter" theme="select2" search-enabled="false" style="width: 100%;">
+                        <ui-select-match allow-clear>{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="printer in printers">
+                            <span>{{printer}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'BarcodePrinter' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="config.barcodePrinter" theme="select2" search-enabled="false" style="width: 100%;">
+                        <ui-select-match allow-clear>{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="printer in printers">
+                            <span>{{printer}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'NoticePrinter' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="config.noticePrinter" theme="select2" search-enabled="false" style="width: 100%;">
+                        <ui-select-match allow-clear>{{$select.selected}}</ui-select-match>
+                        <ui-select-choices repeat="printer in printers">
+                            <span>{{printer}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container-title">
+            <span>{{::'AppointmentConfig' | translate}}</span>
+            <hr class="container-divide">
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-9">
+                    <div class="col-sm-6">
+                        <input type="checkbox" ng-model="config.appointmentAutoPrintBarcode" style="margin-right: 10px;">{{::'AutoPrintBarcode' |translate}}
+                        <span class="glyphicon glyphicon-info-sign line2Icon" style="color: #ccc;" data-tooltip="{{::'AppointmentAutoPrintBarcodeTooltip' | translate}}"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="checkbox" ng-model="config.appointmentAutoPrintNotice" style="margin-right: 10px;">{{::'AutoPrintNotice' |translate}}
+                        <span class="glyphicon glyphicon-info-sign line2Icon" style="color: #ccc;" data-tooltip="{{::'AppointmentAutoPrintNoticeTooltip' | translate}}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="type in modalityTypes">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">
+                        <input type="checkbox" ng-model="$parent.apptEnabledModalityTypes[type]" style="margin-right: 10px;">{{type}}
+                    </label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="apptSelectedModality[type]" ng-disabled="!$parent.apptEnabledModalityTypes[type]" theme="bootstrap" multiple search-enabled="false" style="width: 100%;">
+                        <ui-select-match>{{$item.modalityName}}</ui-select-match>
+                        <ui-select-choices repeat="item in _.where(modalities,{'modalityType':type})">
+                            <span>{{item.modalityName}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row container-title">
+            <span>{{::'RegistrationConfig' | translate}}</span>
+            <hr class="container-divide">
+        </div>
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-9">
+                    <div class="col-sm-6">
+                        <input type="checkbox" ng-model="config.autoPrintBarcode" style="margin-right: 10px;">{{::'AutoPrintBarcode' |translate}}
+                        <span class="glyphicon glyphicon-info-sign line2Icon" style="color: #ccc;" data-tooltip="{{::'AutoPrintBarcodeTooltip' | translate}}"></span>
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="checkbox" ng-model="config.autoPrintNotice" style="margin-right: 10px;">{{::'AutoPrintNotice' |translate}}
+                        <span class="glyphicon glyphicon-info-sign line2Icon" style="color: #ccc;" data-tooltip="{{::'AutoPrintNoticeTooltip' | translate}}"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-repeat="type in modalityTypes">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">
+                        <input type="checkbox" ng-model="$parent.enabledModalityTypes[type]" style="margin-right: 10px;">{{type}}
+                    </label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="selectedModality[type]" ng-disabled="!$parent.enabledModalityTypes[type]" theme="bootstrap" multiple search-enabled="false" style="width: 100%;">
+                        <ui-select-match>{{$item.modalityName}}</ui-select-match>
+                        <ui-select-choices repeat="item in _.where(modalities,{'modalityType':type})">
+                            <span>{{item.modalityName}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+        <div class="row container-title">
+            <span>{{::'IntegratedConfig' | translate}}</span>
+            <hr class="container-divide">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="col-sm-3">
+                    <label class="control-label">{{::'PACSIntegrationType' |translate}}</label>
+                </div>
+                <div class="ris-form-input col-sm-9">
+                    <ui-select ng-model="config.integrationType" theme="select2" search-enabled="false" style="width: 100%;">
+                        <ui-select-match>{{$select.selected | enumValueToString:'IntegrationTypes' | translate}}</ui-select-match>
+                        <ui-select-choices repeat="type in integrationTypes">
+                            <span>{{type | enumValueToString:'IntegrationTypes' | translate}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="ris-form-footer">
+        <button class="btn ris-btn-primary" translate ng-click="updateConfig()" ng-disabled="clientConfigForm.$pristine && !config.defaultPrinterChanged" style="padding-left: 25px; padding-right: 25px; margin-left: 20px; margin-top: 5px; margin-bottom: 5px;">{{::'saveConfig' | translate}}</button>
+    </div>
+</div>

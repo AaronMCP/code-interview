@@ -1,0 +1,54 @@
+﻿<div class="col-md-4 ">
+    <div class="info-widget">
+        <div class="title">
+            <h4>{{'ReceiverInformation'|translate}}</h4>
+            <div class="action" ng-show="editReceivePermission">
+                <a href="javascript:void(0);" class="icon-general icon-editFile" title="{{'Edit'|translate}}" ng-click="openRequestReceiveWindow()"></a>
+            </div>
+        </div>
+        <div class="main-info">
+            <div class="row">
+                <dt class="col-md-4">
+                    {{'Receiver'|translate}}
+                </dt>
+                <dd class="col-md-8">
+                    {{report.receiver}}
+                </dd>
+            </div>
+            <div class="row">
+                <dt class="col-md-4">
+                    {{'RequestType'|translate}}
+                </dt>
+                <dd class="col-md-8">
+                    <span ng-bind-html="report | serviceTypeToImage"></span>
+                </dd>
+            </div>
+            <div class="row scheduled-time">
+                <dt class="col-md-4" ng-show="report.consultationDate==null">
+                    {{'AppointmentDate'|translate}}
+                </dt>
+                <dt class="col-md-4" ng-show="report.consultationDate!=null">
+                    {{'ConsultationTimeInfo'|translate}}
+                </dt>
+                <dd class="col-md-8">
+                    <span ng-bind-html="report | dateToImage"></span>
+                </dd>
+            </div>
+            <div class="row" ng-show="report.assignExpertNames!=null && report.assignExpertNames!=''">
+                <dt class="col-md-4">
+                    {{'AttendExpert'|translate}}
+                </dt>
+                <dd class="col-md-8" ng-bind-html="expertNames">
+                </dd>
+            </div>
+            <div class="row" ng-show="report.assignedDescription!=null && report.assignedDescription!=''">
+                <dt class="col-md-4">
+                    {{'Description'|translate}}
+                </dt>
+                <dd class="col-md-8">
+                    {{report.assignedDescription}}
+                </dd>
+            </div>
+        </div>
+    </div>
+</div>

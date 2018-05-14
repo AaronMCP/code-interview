@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+  <Header />
+  <Body>
+    <HL7><MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" MessageControlID="100104"><SendingApplication EntityIdentifier="RISMALL_ADT"/><SendingFacility EntityIdentifier="MESA"/><ReceivingApplication EntityIdentifier="RIS_CSH_GC"/><ReceivingFacility EntityIdentifier="CSH"/><MessageType MessageCode="ADT" TriggerEvent="A04" MessageStructure="ADT_A01"/><ProcessingID ProcessingID="P"/><VersionID VersionID="2.3.1"/></MSH><EVN RecordDT="200008201100" EventOccurred="200008201100"/><PID DTOfBirth="19471104" Sex="M"><PatientID_InternalID ID="PID9901"><AssigningAuthority NameSpaceID="ADT1"/></PatientID_InternalID><PatientName FamilyName="RIS_CSH_GC" LastNamePrefix="DOE_IN_DEPT"/><Race Identifier="WH"/><PatientAddress StreetAddress="820 JORIE BLVD" City="CHICAGO" StateOrProvince="IL" ZipOrPostalCode="60523"/><PatientAccountNumber ID="20-98-4010"/></PID><PV1 PatientClass="E" AdmitDT="200008201100" VisitIndicator="V"><ReferringDoctor IDNumber="5101" FamilyName="NELL" LastNamePrefix="FREDERICK" GivenName="P" Surfix="DR"/><VisitNumber ID="V100-1123"><AssigningAuthority NameSpaceID="ADT1"/></VisitNumber></PV1></HL7>
+  </Body>
+</Message>

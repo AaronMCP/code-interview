@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsPanelInfo" targetNamespace="http://tempuri.org/DsPanelInfo.xsd" xmlns:mstns="http://tempuri.org/DsPanelInfo.xsd" xmlns="http://tempuri.org/DsPanelInfo.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsPanelInfo" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsPanelInfo" msprop:Generator_DataSetName="DsPanelInfo">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Panel" msprop:Generator_UserTableName="Panel" msprop:Generator_RowDeletedName="PanelRowDeleted" msprop:Generator_RowChangedName="PanelRowChanged" msprop:Generator_RowClassName="PanelRow" msprop:Generator_RowChangingName="PanelRowChanging" msprop:Generator_RowEvArgName="PanelRowChangeEvent" msprop:Generator_RowEvHandlerName="PanelRowChangeEventHandler" msprop:Generator_TableClassName="PanelDataTable" msprop:Generator_TableVarName="tablePanel" msprop:Generator_RowDeletingName="PanelRowDeleting" msprop:Generator_TablePropName="Panel">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PanelID" msprop:Generator_UserColumnName="PanelID" msprop:Generator_ColumnPropNameInRow="PanelID" msprop:Generator_ColumnVarNameInTable="columnPanelID" msprop:Generator_ColumnPropNameInTable="PanelIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_UserColumnName="Title" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInTable="TitleColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AssemblyQualifiedName" msprop:Generator_UserColumnName="AssemblyQualifiedName" msprop:Generator_ColumnPropNameInRow="AssemblyQualifiedName" msprop:Generator_ColumnVarNameInTable="columnAssemblyQualifiedName" msprop:Generator_ColumnPropNameInTable="AssemblyQualifiedNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parameter" msprop:Generator_UserColumnName="Parameter" msprop:Generator_ColumnPropNameInRow="Parameter" msprop:Generator_ColumnVarNameInTable="columnParameter" msprop:Generator_ColumnPropNameInTable="ParameterColumn" type="xs:int" />
+              <xs:element name="ModuleID" msprop:Generator_UserColumnName="ModuleID" msprop:Generator_ColumnPropNameInRow="ModuleID" msprop:Generator_ColumnVarNameInTable="columnModuleID" msprop:Generator_ColumnPropNameInTable="ModuleIDColumn" default="''">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Flag" msprop:Generator_UserColumnName="Flag" msprop:Generator_ColumnVarNameInTable="columnFlag" msprop:Generator_ColumnPropNameInRow="Flag" msprop:Generator_ColumnPropNameInTable="FlagColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ImageIndex" msprop:Generator_UserColumnName="ImageIndex" msprop:Generator_ColumnPropNameInRow="ImageIndex" msprop:Generator_ColumnVarNameInTable="columnImageIndex" msprop:Generator_ColumnPropNameInTable="ImageIndexColumn" type="xs:int" default="-1" minOccurs="0" />
+              <xs:element name="Key" msprop:Generator_UserColumnName="Key" msprop:Generator_ColumnPropNameInRow="Key" msprop:Generator_ColumnVarNameInTable="columnKey" msprop:Generator_ColumnPropNameInTable="KeyColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Module" msprop:Generator_UserTableName="Module" msprop:Generator_RowDeletedName="ModuleRowDeleted" msprop:Generator_RowChangedName="ModuleRowChanged" msprop:Generator_RowClassName="ModuleRow" msprop:Generator_RowChangingName="ModuleRowChanging" msprop:Generator_RowEvArgName="ModuleRowChangeEvent" msprop:Generator_RowEvHandlerName="ModuleRowChangeEventHandler" msprop:Generator_TableClassName="ModuleDataTable" msprop:Generator_TableVarName="tableModule" msprop:Generator_RowDeletingName="ModuleRowDeleting" msprop:Generator_TablePropName="Module">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ModuleID" msprop:Generator_UserColumnName="ModuleID" msprop:Generator_ColumnPropNameInRow="ModuleID" msprop:Generator_ColumnVarNameInTable="columnModuleID" msprop:Generator_ColumnPropNameInTable="ModuleIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Title" msprop:Generator_UserColumnName="Title" msprop:Generator_ColumnPropNameInRow="Title" msprop:Generator_ColumnVarNameInTable="columnTitle" msprop:Generator_ColumnPropNameInTable="TitleColumn" default="''">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Parameter" msprop:Generator_UserColumnName="Parameter" msprop:Generator_ColumnVarNameInTable="columnParameter" msprop:Generator_ColumnPropNameInRow="Parameter" msprop:Generator_ColumnPropNameInTable="ParameterColumn" type="xs:int" default="0" minOccurs="0" />
+              <xs:element name="ImageIndex" msprop:Generator_UserColumnName="ImageIndex" msprop:Generator_ColumnPropNameInRow="ImageIndex" msprop:Generator_ColumnVarNameInTable="columnImageIndex" msprop:Generator_ColumnPropNameInTable="ImageIndexColumn" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Panel" />
+      <xs:field xpath="mstns:PanelID" />
+    </xs:unique>
+    <xs:unique name="PanelKey2">
+      <xs:selector xpath=".//mstns:Panel" />
+      <xs:field xpath="mstns:Key" />
+    </xs:unique>
+    <xs:unique name="Module_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Module" />
+      <xs:field xpath="mstns:ModuleID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

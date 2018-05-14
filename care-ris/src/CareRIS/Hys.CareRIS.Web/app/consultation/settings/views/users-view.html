@@ -1,0 +1,32 @@
+﻿<div class="row" style="margin: 10px">
+    <!--<button type="button" class="btn btn-sm btn-primary pull-left" ng-click="createNewUser()" translate>CreateNewUser</button>-->
+    <form name="userFilter" class="form-inline" role="search">
+        <div class="form-group">
+            <input type="text" class="form-control input-sm input-search" id="Search_Name" placeholder="{{'PatientName' | translate}}" ng-model="filter.name">
+            <ui-select ng-if="loginUser.isSuperAdmin" ng-model="filter.hospitalID" theme="select2" search-enabled="false" style="width: 220px;">
+                <ui-select-match allow-clear placeholder="{{'Organization' | translate}}">{{$select.selected.hospitalName}}</ui-select-match>
+                <ui-select-choices repeat="hospital.uniqueID as hospital in hospitals">
+                    <span>{{hospital.hospitalName}}</span>
+                </ui-select-choices>
+            </ui-select>
+            <ui-select ng-model="filter.RoleID" theme="select2" search-enabled="false" style="width: 220px;">
+                <ui-select-match allow-clear placeholder="{{'Role' | translate}}">{{$select.selected.roleName}}</ui-select-match>
+                <ui-select-choices repeat="role.uniqueID as role in roles">
+                    <span>{{role.roleName}}</span>
+                </ui-select-choices>
+            </ui-select>
+            <ui-select ng-if="loginUser.isSuperAdmin" ng-model="filter.departmentID" theme="select2" search-enabled="false" style="width: 220px;">
+                <ui-select-match allow-clear placeholder="{{'Department' | translate}}">{{$select.selected.name}}</ui-select-match>
+                <ui-select-choices repeat="dept.uniqueID as dept in departments">
+                    <span>{{dept.name}}</span>
+                </ui-select-choices>
+            </ui-select>
+            <button type="submit" class="btn btn-default btn-sm" ng-click="searchUser()">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+</div>
+<div class="row g-kendo-grid" style="margin: 10px; height: 100%; padding-bottom: 60px;">
+    <div class="userListGrid" style="height:100%;" kendo-grid k-options="gridOption" k-ng-delay="gridOption"></div>
+</div>

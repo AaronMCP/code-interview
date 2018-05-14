@@ -1,0 +1,63 @@
+﻿
+
+<div class="popover" id="selectReveiverArea">
+    <div class="arrow"></div>
+    <style>
+        #selectReveiverArea {
+            padding: 10px;
+            width: 300px;
+            display: block;
+        }
+
+        #selectReveiverArea ul {
+            list-style: none;
+        }
+
+        #selectReveiverArea ul li.province {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+            float: left;
+        }
+
+        #selectReveiverArea ul li.city {
+            margin-left: 20px;
+            float: left;
+        }
+
+        #selectReveiverArea button {
+            background-image: none;
+            background-color: #f7941d;
+            padding: 3px 5px;
+            border: none;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        #selectReveiverArea button:hover {
+            background-color: #e27e04;
+        }
+
+        #selectReveiverArea .cleararea {
+            font-weight: bold;
+            color: red;
+        }
+
+        #selectReveiverArea hr {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <a href="javascript:void(0);" translate ng-click="selectArea('','')" class="cleararea">{{'ClearSelectedArea'|translate}}</a>
+    <hr/>
+    <ul>
+        <li class="province" ng-repeat="provinceItem in hoveredArea">
+            <a href="javascript:void(0);" ng-click="selectArea(provinceItem.provinceName,'')">{{provinceItem.provinceName}}</a><ul>
+                <li class="city" ng-repeat="cityItem in provinceItem.cityNames"><a href="javascript:void(0);" ng-click="selectArea(provinceItem.provinceName,cityItem)">{{cityItem}}</a></li>
+
+            </ul>
+        </li>
+
+    </ul>
+</div>

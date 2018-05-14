@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?><RdetOutboundAdapterConfig><OutGeneralParams><TimerInterval>30000</TimerInterval>
+<TimerEnable>True</TimerEnable>
+<UseCache>True</UseCache>
+<CacheDBConnStr>Provider=Microsoft.Jet.OLEDB.4.0;Data Source=rdetcache.mdb</CacheDBConnStr>
+</OutGeneralParams>
+<GWDataDBConnection /><ClientRdetParams><LocalIP /><LocalPort>-1</LocalPort>
+<ServerIP>127.0.0.1</ServerIP>
+<ServerPort>58431</ServerPort>
+<ConnectTimeout>60000</ConnectTimeout>
+<ConnectTryCount>5</ConnectTryCount>
+<SendTimeout>60000</SendTimeout>
+<RecTimeout>120000</RecTimeout>
+</ClientRdetParams>
+<OutboundChanels><RdetOutChannel><ChannelName>NewOrder/UpdateOrder</ChannelName>
+<Enable>True</Enable>
+<OperationName>NewPatient/UpdatePatient</OperationName>
+<Rule><CheckProcessFlag>True</CheckProcessFlag>
+<QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><RdetOutQueryCriterialItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>Or</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>Event_Type</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[10]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryCriterialItem>
+<RdetOutQueryCriterialItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>Or</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>Event_Type</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[11]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryCriterialItem>
+<RdetOutQueryCriterialItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>Or</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>Event_Type</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[01]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryCriterialItem>
+<RdetOutQueryCriterialItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>Or</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>Event_Type</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[00]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryCriterialItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Command</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>EVENT_TYPE</SourceField>
+<TargetField>Command</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName>lut_p_6330292169176792258</LutName>
+<ConstValue><![CDATA[]]></ConstValue>
+<Type>LookUpTable</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StudyInstanceUID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STUDY_INSTANCE_UID</SourceField>
+<TargetField>StudyInstanceUID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STUDY_INSTANCE_UID</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PATIENTID</SourceField>
+<TargetField>PatientID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PATIENT_NAME</SourceField>
+<TargetField>PatientName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENT_NAME</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>BirthDate</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>BIRTHDATE</SourceField>
+<TargetField>BirthDate</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>BIRTHDATE</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Gender</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SEX</SourceField>
+<TargetField>Gender</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName>lut_p_6330292169176792259</LutName>
+<ConstValue><![CDATA[]]></ConstValue>
+<Type>LookUpTable</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>SEX</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>AccessionNumber</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>FILLER_NO</SourceField>
+<TargetField>AccessionNumber</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>SCHEDULED_DT</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StudyDate</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SCHEDULED_DT</SourceField>
+<TargetField>StudyDate</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>SCHEDULED_DT</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StudyTime</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SCHEDULED_DT</SourceField>
+<TargetField>StudyTime</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_1</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Priority</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_1</SourceField>
+<TargetField>Priority</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[1]]></ConstValue>
+<Type>DefaultValue</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_NAME</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ProcedureName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PROCEDURE_NAME</SourceField>
+<TargetField>ProcedureName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_CODE</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ProcedureCode</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PROCEDURE_CODE</SourceField>
+<TargetField>ProcedureCode</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Patient</Table>
+<FieldName>CUSTOMER_1</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientComments</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_1</SourceField>
+<TargetField>PatientComments</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>REF_PHYSICIAN</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ReferringPhysician</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>REF_PHYSICIAN</SourceField>
+<TargetField>ReferringPhysician</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>PLACER_DEPARTMENT</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Department</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PLACER_DEPARTMENT</SourceField>
+<TargetField>Department</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENT_LOCATION</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientLocation</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PATIENT_LOCATION</SourceField>
+<TargetField>PatientLocation</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CNT_AGENT</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ContrastAgent</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CNT_AGENT</SourceField>
+<TargetField>ContrastAgent</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_2</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>TechID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>CUSTOMER_2</SourceField>
+<TargetField>TechID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>STUDY_ID</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StudyID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STUDY_ID</SourceField>
+<TargetField>StudyID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>STATION_NAME</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StationName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STATION_NAME</SourceField>
+<TargetField>StationName</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>63302921691767922510</RuleID>
+<RuleName /></Rule>
+</RdetOutChannel>
+<RdetOutChannel><ChannelName>NewImage</ChannelName>
+<Enable>False</Enable>
+<OperationName>NewImage</OperationName>
+<Rule><CheckProcessFlag>True</CheckProcessFlag>
+<QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><RdetOutQueryCriterialItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>LongVarChar</FieldType>
+<FieldName /></ThirdPartyDBPatamter>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>EqualSmallerThan</Operator>
+<SourceField>Event_Type</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[100]]></ConstValue>
+<Type>FixValue</Type>
+<LutName /></Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</RdetOutQueryCriterialItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><RdetOutQueryResultItem><GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Command</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField /><TargetField>Command</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[NewImage]]></ConstValue>
+<Type>FixValue</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>STUDY_INSTANCE_UID</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>StudyInstanceUID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>STUDY_INSTANCE_UID</SourceField>
+<TargetField>StudyInstanceUID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+<RdetOutQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>EXAM_DT</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Performed_startdt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>EXAM_DT</SourceField>
+<TargetField>Performed_startdt</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+<LutName /></Translating>
+</RdetOutQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>63302921691767922511</RuleID>
+<RuleName /></Rule>
+</RdetOutChannel>
+</OutboundChanels>
+<ThrPartyDBParamters /><LookupTables><LookupTable><TableName>lut_p_6330292169176792258</TableName>
+<DisplayName>EventType To Command </DisplayName>
+<Table><LookupItem><SourceValue>10</SourceValue>
+<TargetValue>NewPatient</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>11</SourceValue>
+<TargetValue>UpdatePatient</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>99</SourceValue>
+<TargetValue>NewImage</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>00</SourceValue>
+<TargetValue>NewPatient</TargetValue>
+</LookupItem>
+</Table>
+</LookupTable>
+<LookupTable><TableName>lut_p_6330292169176792259</TableName>
+<DisplayName>Sex To Gender </DisplayName>
+<Table><LookupItem><SourceValue>M</SourceValue>
+<TargetValue>1</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>F</SourceValue>
+<TargetValue>2</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>O</SourceValue>
+<TargetValue>3</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>U</SourceValue>
+<TargetValue>3</TargetValue>
+</LookupItem>
+</Table>
+</LookupTable>
+</LookupTables>
+</RdetOutboundAdapterConfig>

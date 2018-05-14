@@ -1,0 +1,18 @@
+<ui-select class="col-md-4" style="padding-right: 5px;" ng-model="region.province" theme="select2" search-enabled="false">
+    <ui-select-match allow-clear placeholder="{{'SelectProvince' | translate}}">{{$select.selected}}</ui-select-match>
+    <ui-select-choices repeat="province in provinces">
+        <span>{{province}}</span>
+    </ui-select-choices>
+</ui-select>
+<ui-select class="col-md-4" style="padding-right: 5px;" ng-model="region.city" theme="select2" search-enabled="false">
+    <ui-select-match allow-clear placeholder="{{'SelectCity' | translate}}">{{$select.selected}}</ui-select-match>
+    <ui-select-choices repeat="city in citys">
+        <span>{{city}}</span>
+    </ui-select-choices>
+</ui-select>
+<ui-select class="col-md-4" style="padding-left: 5px;" ng-model="region.area" theme="select2" search-enabled="false">
+    <ui-select-match allow-clear placeholder="{{'SelectArea' | translate}}">{{$select.selected}}</ui-select-match>
+    <ui-select-choices repeat="area in areas">
+        <span>{{area}}</span>
+    </ui-select-choices>
+</ui-select>

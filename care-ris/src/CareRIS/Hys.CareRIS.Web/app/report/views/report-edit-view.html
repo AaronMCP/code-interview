@@ -1,0 +1,330 @@
+﻿<div class="navbar navbar-default navbar-static-top navbar-width-1280 re-top-navbar">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#re-collapse-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-brand" style="line-height: 50px;">
+                <a href="javascript:void(0);" class="return-button" ng-click="returnWorkList()">
+                    <span class="iconfont icon-fanhui"></span>
+                    <span>返回</span>
+                </a>
+                <!--<button class="btn btn-default re-navbar-btn" translate ng-click="returnWorkList()">Return</button>-->
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="re-collapse-navbar">
+            <ul class="nav navbar-nav navbar-right rispro-navbar-nav" style="margin-right: auto;">
+                <li>
+                    <button class="btn btn-default re-navbar-btn" ng-click="saveReport(0)" translate ng-disabled="isDisabledSaveReport">SaveReport</button>
+                </li>
+                <li>
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="submitReport()" ng-disabled="isDisabledSubmitReport">SubmitReport</button>
+                </li>
+                <li>
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="approveReport()" ng-disabled="isDisabledApproveReport">ApproveReport</button>
+                </li>
+                <li>
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="rejectReport()" ng-disabled="isDisabledRejectReport">RejectReport</button>
+                </li>
+                <li>
+                    <span id="reportLoadImage" class="btn btn-default re-navbar-btn" ng-if="isPACSIntegration" translate ng-click="openPACSImageViewer()" style="padding: 5px 10px 5px 10px; height: 21px;line-height: 21px;">CallImage</span>
+                </li>
+                <!--<li>
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="previewReport()">Preview</button>
+                </li>-->
+                <li ng-if="!isMobile">
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="printReport()">PrintReport</button>
+                </li>
+                <li ng-if="!isMobile">
+                    <button class="btn btn-default re-navbar-btn" translate ng-click="viewRequisition()" ng-disabled="!isScan">ViewRequisition</button>
+                </li>
+                <!--<li>
+                    <button class="btn btn-default re-navbar-btn" ris-readdoc-together translate>ReadDocTogether</button>
+                </li>
+                <li>
+                    <button class="btn btn-default re-navbar-btn" ng-disabled="isDisabledReferral" ng-click="sendReferral()" translate>Referral</button>
+                </li>
+                <li>
+                    <button class="btn btn-default pull-left" ng-click="requestConsultation()" translate>SubmitRequest</button>
+                </li>-->
+                <li>
+                    <div class="btn-group re-navbar-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                            <span translate>Others</span>
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu multi-level" role="menu">
+                            <li ng-if="!isMobile">
+                                <a href="javascript:void(0);" ng-click="previewReport()" translate>Preview</a>
+                            </li>
+                            <li class="dropdown-submenu left" ng-if="!isMobile">
+                                <a href="javascript:void(0);" class="dropdown-toggle disabled" data-toggle="dropdown" aria-expanded="false" translate>PrintTemplate</a>
+                                <ul class="dropdown-menu">
+                                    <li ng-repeat="item in PrintTemplates">
+                                        <a href="javascript:void(0);" ng-click="selectPrintTemplate(item)" style="padding-left: 0;">
+                                            &nbsp;
+                                            <span class="tickMark ng-scope" ng-if="item.selected == false">&nbsp;&nbsp;&nbsp;</span>
+                                            <span class="tickMark ng-scope" ng-if="item.selected">✔</span>
+                                            {{item.templateName}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li ng-if="false">
+                                <a href="javascript:void(0);" ris-readdoc-together translate>ReadDocTogether</a>
+                            </li>
+                            <!--<li ng-if="!isDisabledDeleteReport">
+                                <a href="javascript:void(0);" ng-click="!isDisabledReferral&&sendReferral()"
+                                   translate>Referral</a>
+                            </li>-->
+                            <li ng-if="!isDisabledDeleteReport">
+                                <a href="javascript:void(0);" ng-click="deleteReport()"
+                                   translate>DeleteReport</a>
+                            </li>
+                            <!--<li ng-if="isDisableConsultation">
+                                <a href="javascript:void(0);" ng-click="!isDisableConsultation&&requestConsultation()"
+                                   translate>SubmitRequest</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="inputContainer" class="re-container" ng-show="isLoadAll">
+    <div class="re-topbar">
+        <div class="re-topbar-left">{{briefDesc}}</div>
+        <div class="re-topbar-right">
+            <a href="javascript:void(0)" class="re-template-toggle" style="color: #23a497;" ng-click="openWindow()" title="查看登记信息"><span class="iconfont icon-chakan"></span></a>
+        </div>
+    </div>
+    <div class="re-content">
+        <div class="re-content-wraper">
+            <div class="re-content-operator">
+                <div class="re-content-operator-toolbar">
+                    <div class="top">
+                        <a href="javascript:void(0);" class="re-operator-switcher"><span ng-class="reContentOperatorMinimized?'glyphicon-menu-right':'glyphicon-menu-left'" class="glyphicon" style="color: #f4b54d;"></span></a>
+                    </div>
+                    <div class="content">
+                        <div class="chunk report-template " ng-if="!isReadOnly" ng-class="{selected:reportTemplateSelected}"
+                             ng-click="selectOperator('reportTemplateSelected')"><span style="color:#0fb595;" class="iconfont icon-baogaomoban"></span><span translate>ReportTemplate</span></div>
+                        <div class="chunk" ng-class="{selected:reportHistorySelected}"
+                             ng-click="selectOperator('reportHistorySelected')" ><span style="color:#2ca5df;" class="iconfont icon-lishibaogao"></span><span translate>HistoryReport</span></div>
+                        <div class="chunk message" ng-class="{selected:messageSelected}"
+                             ng-click="selectOperator('messageSelected')" ><span style="color:#5ac351;" class="iconfont icon-liuyan"></span><span translate>Comments</span></div>
+                        <div class="chunk modify-history" ng-class="{selected:reportModifySelected}"
+                             ng-click="selectOperator('reportModifySelected')" ><span style="color:#eba432;" class="iconfont icon-xiugailishi"></span><span translate>EditHistory</span></div>
+                        <!--<div class="chunk ris-consultation" ng-class="{selected:consultationSelected}"
+                     ng-click="selectOperator('consultationSelected')" translate>RISReportConsultation</div>-->
+                    </div>
+                </div>
+                <div class="re-content-operator-pannel">
+                    <div class="report-operator-content ng-cloak" ng-if="!isReadOnly" ng-show="reportTemplateSelected">
+                        <div class="report-template-panel" kendo-tree-view k-options="toTemplate" id="tvTemplate">
+                        </div>
+                    </div>
+                    <div class="report-operator-content ng-cloak" ng-show="reportHistorySelected">
+                        <div class="report-history-top">
+                            <label class="report-history-top-desc"><span>{{otherReportList.length||0}}</span><span translate>CountHistoryReport</span></label>
+                        </div>
+                        <div class="report-history-content">
+                            <ul class="report-history-list">
+                                <li ng-repeat="item in otherReportList"
+                                    class="report-history-body-item"
+                                    ng-class="{selected:$parent.selectedItemId===item.uniqueID}">
+                                    <a href="javascript:void(0);"
+                                       style="display: block;width: 100%;height: 100%;"
+                                       id="{{item.uniqueID}}"
+                                       ng-click="clickReportOther(item)"
+                                       ng-mouseenter="$parent.showReportOther(item)"
+                                       ng-dblclick="$parent.selectReportOther(item)"
+                                       ris-popover popover-container=" body" data-overwrite="true"
+                                       use-optimized-placement-algorithm="true" data-placement="right" popover-auto-hide="true"
+                                       data-templateurl="/app/report/views/report-selectreportother-view.html">
+                                        <div class="report-history-list-time icon-history">
+
+                                            <span translate ng-if="item.status == 120">ApproverTime</span><span translate ng-if="item.status >= 110 && item.status < 120">SubmitterTime</span><span translate ng-if="item.status < 110">CreateTime</span>&nbsp;{{item.createTime | date:'yyyy/MM/dd'}}
+                                        </div>
+                                        <div ng-if="item.status == 120" class="report-history-list-item">
+                                            <span translate>Approver</span>&nbsp;{{item.firstApproverName}}
+                                        </div>
+                                        <div ng-if="item.status >= 110 && item.status < 120" class="report-history-list-item">
+                                            <span translate>Submitter</span>&nbsp;{{item.submitterName}}
+                                        </div>
+                                        <div ng-if="item.status < 110" class="report-history-list-item">
+                                            <span translate>Creater</span>&nbsp;{{item.createrName}}
+                                        </div>
+                                        <div class="report-history-list-item" title="{{item.reportName}}">
+                                            {{item.reportName}}
+                                        </div>
+                                        <div class="report-history-list-item">
+                                            {{item.statuses}}
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="report-operator-content ng-cloak" ng-show="messageSelected">
+                        <div class="re-message-viewer" ng-bind-html="reportData.comments">
+                        </div>
+                        <div class="re-message-inputer">
+                            <input id="txtInputReportComments" class="form-control" type="text"
+                                   ris-focus-on="ris::report:addComments" ng-keypress="commentsKeypress()" />
+                        </div>
+                    </div>
+                    <div class="report-operator-content ng-cloak" ng-show="reportModifySelected">
+                        <div class="report-history-top">
+                            <label class="report-history-top-desc"><span>{{historyList.length||0}}</span><span translate>CountModifyHistory</span></label>
+                        </div>
+                        <div class="report-history-content">
+                            <ul class="report-history-list">
+                                <li class="report-history-body-item" ng-repeat="item in historyList" 
+                                    ng-class="{selected:$parent.selectedHostoryId===item.uniqueID}">
+                                    <a href="javascript:void(0);"
+                                       style="display: block;width: 100%;height: 100%;"
+                                       id='{{item.uniqueID}}'
+                                       ng-dblclick="$parent.selectReportHis(item)"
+                                       ng-click="clickReportHis(item)"
+                                       ng-mouseenter="$parent.showReportHis(item)"
+                                       ris-popover popover-container=" body" data-overwrite="true"
+                                       use-optimized-placement-algorithm="true" data-placement="right" popover-auto-hide="true"
+                                       data-templateurl="/app/report/views/report-selectreporthis-view.html">
+                                        <div class="report-history-list-time icon-history">
+                                            {{item.operationTime | date:'yyyy-MM-dd HH:mm'}}
+                                        </div>
+                                        <div ng-if="item.mender != null && item.mender != ''" class="report-history-list-item">
+                                            {{item.mender}}
+                                        </div>
+                                        <div ng-if="item.mender == null || item.mender == ''" class="report-history-list-item">
+                                            {{item.creater}}
+                                        </div>
+                                        <div class="report-history-list-item">
+                                            {{item.statuses}}
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="re-content-body">
+                <div class="re-content-body-top">
+                    <form>
+                        <label ng-repeat="item in positiveList" class="radio-inline">
+                            <input name="isPositive" type="radio" value="{{item.value}}" ng-model="reportData.isPositive" ng-disabled="isReadOnly" />{{item.text}}
+                        </label>
+                    </form>
+                    <div class="report-template-operator">
+                        <button class="btn btn-default" translate ng-click="saveUserTemplate()">SaveUserTemplate</button>
+                    </div>
+                </div>
+                <div class="re-content-body-textarea">
+                    <div class="re-content-body-textarea-group">
+                        <div class="group-title">
+                            <span translate>WYS</span>
+                        </div>
+                        <div class="group-pannel">
+                            <textarea id="areaWYS" class="form-control ng-valid ng-dirty ng-valid-parse ng-touched" required ng-model="reportData.wysText" ng-disabled="isReadOnly"></textarea>
+                        </div>
+                    </div>
+                    <div class="re-content-body-textarea-group">
+                        <div class="group-title">
+                            <span translate>WYG</span>
+                        </div>
+                        <div class="group-pannel">
+                            <textarea id="areaWYG" class="form-control ng-valid ng-dirty ng-valid-parse ng-touched" required ng-model="reportData.wygText" ng-disabled="isReadOnly"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div kendo-window="reTemplateWindow"
+                     k-title="'登记信息'"
+                     k-width="'680px'" k-height="'420px'"
+                     k-visible="false" k-resizable="false"
+                     k-modal="true">
+                    <div class="re-template-content" ng-bind-html="baseInfo">
+                    </div> 
+                </div>               
+            </div>
+        </div>
+    </div>
+    <script id="treeview-template" type="text/kendo-ui-template">
+        <!--#: item.name #-->
+        # if (!item.items) { #
+        <span class="btn-selectable ris-popover role-font-color"
+              id='#: item.id #'
+              ng-click="$parent.showReportTemplate('#: item.id #')"
+              ng-dblclick="$parent.selectReportTemplate('#: item.id #')"
+              ris-popover popover-container="body" popover-auto-hide="true"
+              data-overwrite="true" use-optimized-placement-algorithm="true" data-placement="right"
+              data-templateurl="/app/report/views/report-selectreporttemplate-view.html"
+              style="padding:0;">
+            #: item.name #
+        </span>
+        # } else {#
+        #: item.name #
+        #}#
+    </script>
+
+    <script id="consultationStatus" type="text/x-kendo-tmpl">
+        #if (isDeleted == 1)  { #
+        <span class=" icon-general icon-general icon-status_trash icon-red k-gird-font"></span>
+        # } else {#
+
+        #if (status == 1)  { #
+        <span class="icon-general icon-status_apply icon-blue k-gird-font"></span>
+        # } #
+
+        #if (status == 2)  { #
+        <span class="icon-general icon-status_accept icon-blue k-gird-font"></span>
+        # } #
+
+        #if (status == 3)  { #
+        <span class="icon-general icon-status_complete icon-blue k-gird-font"></span>
+        # } #
+
+        #if (status == 4)  { #
+        <span class="icon-general icon-status_cancel icon-red k-gird-font"></span>
+        # } #
+
+        #if (status == 5)  { #
+        <span class="icon-general icon-status_refuse icon-red k-gird-font"></span>
+        # } #
+
+        #if (status == 6)  { #
+        <span class="icon-general icon-status_inMeeting icon-blue k-gird-font"></span>
+        # } #
+
+        #if (status == 7)  { #
+        <span class="icon-general icon-status_inReConsultation icon-blue k-gird-font"></span>
+        # } #
+
+        #if (status == 10)  { #
+        <span class="icon-general icon-status_cancelApply icon-red k-gird-font"></span>
+        # } #
+
+        #if (status == 8)  { #
+        <span class=" icon-general icon-status_end icon-red k-gird-font"></span>
+        # }} #
+    </script>
+
+    <style scoped>
+        #templateContainer {
+            text-align: center;
+        }
+
+        .sectionContainer {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            height: 100px;
+            text-align: left;
+        }
+    </style>
+</div>

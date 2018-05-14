@@ -1,0 +1,78 @@
+﻿@using Hys.CrossCutting.Common.Utils;
+@using Scripts = System.Web.Optimization.Scripts
+@using Styles = System.Web.Optimization.Styles
+@{
+    Layout = null;
+    var appConfig = new AppConfig();
+
+    var isDebug = HttpContext.Current.IsDebuggingEnabled;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>CareRis</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    @if (isDebug)
+    {
+        @Styles.Render("~/bundles/login-css")
+    }
+    else
+    {
+        <link href="~/script/login.css" rel="stylesheet" />
+    }
+</head>
+
+<body class="login">
+    <input type="hidden" id="webapiUrl" value="@(appConfig["WebApiHostUrl"])" />
+    <div class="login_wrapper">
+        <div class="login_banner_bg">
+            <div class="login_main">
+                <div class="login_banner">
+                    @*<img class="hys-logo" alt="logo" src="~/LogoImage/logo.png" />*@
+                    <span class="first-title">
+                        @appConfig["AppTitle"]
+                    </span>
+                    <span class="second-title">
+                        RIS
+                    </span>
+                </div>
+                <div id="mainForm" class="form_wrapper" style="width: 400px; height: auto;">
+                    <form id="loginFull" class="loginfull">
+                        <div class="form-group">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input id="loginFullEmail" name="loginFullEmail" type="text" class="form-control" trans="{prop:'placeholder',value:'userName'}">
+                        </div>
+                        <div class="form-group">
+                            <span class="glyphicon glyphicon-lock"></span>
+                            <input id="loginFullPwd" name="loginFullPwd" type="password" class="form-control" trans="{prop:'placeholder',value:'password'}">
+                        </div>
+                        <div class="form-group" id="realNameContainer" style="display: none;">
+                            <span class="glyphicon glyphicon-user"></span>
+                            <input id="loginFullRealName" name="loginFullRealName" type="text" class="form-control" trans="{prop:'placeholder',value:'publicAccountHolder'}">
+                        </div>
+                        <div class="form-group">
+                            <button id="btnFullLogin" class="login_btn" type="button" tabindex="0" trans="login" ng-disabled="flag"></button>
+                            @*<a href="javascript:void(0);" id="btnForgotPwd1" rel="forgot_password" tabindex="-1" class="btn btn-sm btn-link linkform pull-right" style="display: none;" trans="forgotPsd"></a>*@
+                        </div>
+                    </form>
+                </div>
+                <input type="hidden" value="@Url.Content("~")" id="urlPrefix" />
+            </div>
+        </div>
+    </div>
+    <div class="busy-indicator-container" id="loginDHXG">
+        <div class="busy-indicator">
+            <div class="login-gif"></div>
+        </div>
+    </div>
+    @if (isDebug)
+    {
+        @Scripts.Render("~/bundles/login-js")
+    }
+    else
+    {
+        <script src="~/script/login.js"></script>
+    }
+</body>
+</html>

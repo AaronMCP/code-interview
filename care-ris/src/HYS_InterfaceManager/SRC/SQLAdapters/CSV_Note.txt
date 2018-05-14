@@ -1,0 +1,48 @@
+http://en.wikipedia.org/wiki/Comma-separated_values
+
+- 行分隔符为LF（0x0A）\n或CRLF（0x0D,0x0A）\r\n。
+- 列分隔符可配，默认为逗号（,）。
+- 第一行是否是可忽略的标题行可配。
+- 空格是否看成是值的一部分（即能否忽略）可配。
+- 值可以用，或可用不用双引号括起来。
+- 包含行分隔符或列分隔符的值必须用双引号括起来。
+- 双引号内的双引号用两个双引号表示。
+- 双引号内的前导后导空格不可忽略。
+- 双引号外的空格应被忽略。
+
+http://www.connectionstrings.com/textfile
+
+第一行为标题行：
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\CSVFiles\;Extended Properties="text;HDR=Yes;FMT=Delimited";
+SELECT * FROM [HI GCC Telephone Directory 2011 Feb 25.csv]
+
+无标题行：
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\CSVFiles\;Extended Properties="text;HDR=No;FMT=Delimited";
+SELECT * FROM [good.csv] WHERE F2 LIKE '李%'
+
+-- CREATE TABLE data.csv (CharColumn VARCHAR(30), IntColumn INT)
+-- INSERT INTO data.csv (CharColumn, IntColumn) VALUES (?, ?)
+CREATE TABLE data2.csv (F1 TEXT, F2 TEXT)
+INSERT INTO data2.csv VALUES ('ab"c测试d', 1234);
+
+访问access（可能还包括csv）一次只能执行一条语句
+
+参数设置：
+(x86) HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Text\Format
+(x64) HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Jet\4.0\Engines\Text
+http://msdn.microsoft.com/en-us/library/ms709353(v=vs.85).aspx?ppud=4
+
+对SQLInbound的修改：
+
+- Connection Config: 可完整输入连接串，可配置文件名筛选模式和文件读取成功失败后的处理规则。
+- Channel Config: 只能用表的方式，可输入查询语句（其中表名用宏实现可替换），并应用（测试）。
+- 运行时：在Interface级访问和管理csv文件，在Channel级查询csv文件内容。
+
+对SQLOubound的修改：
+
+- Connection Config: 可完整输入连接串。
+- Channel Config: 只能用Table的方式，禁用Access Mode和Table Name输入框。
+- 运行时：在Channel级创建文件并插入文件（每次查询HYSIMDB就产生一个新文件，文件名为自增长随机数）。
+  可通过配置（默认）自动删除OLEDB自动生成的schema.ini文件。
+  可通过配置（非默认）创建索引文件。
+

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header>
+    <soap12:Upgrade xmlns:soap12="http://www.w3.org/2003/05/soap-envelope">
+      <soap12:SupportedEnvelope qname="soap:Envelope"></soap12:SupportedEnvelope>
+      <soap12:SupportedEnvelope qname="soap12:Envelope"></soap12:SupportedEnvelope>
+    </soap12:Upgrade>
+  </soap:Header>
+  <soap:Body>
+    <soap:Fault>
+      <faultcode>soap:Server</faultcode>
+      <faultstring>Cannot process this SOAP message in current application configuraiton.</faultstring>
+      <detail/>
+    </soap:Fault>
+  </soap:Body>
+</soap:Envelope>

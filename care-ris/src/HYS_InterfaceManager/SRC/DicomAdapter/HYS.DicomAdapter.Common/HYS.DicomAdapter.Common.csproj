@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E1EF831A-9DD5-4E68-B31A-53FE6E5EE891}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.DicomAdapter.Common</RootNamespace>
+    <AssemblyName>HYS.DicomAdapter.Common</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Dicom">
+      <HintPath>..\..\..\3rdParty\foDicom\Dicom.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\..\..\3rdParty\foDicom\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DicomMappingHelper.cs" />
+    <Compile Include="FieldControler.cs" />
+    <Compile Include="FieldControler2.cs" />
+    <Compile Include="FormElement2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormElement2.Designer.cs">
+      <DependentUpon>FormElement2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModality.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModality.Designer.cs">
+      <DependentUpon>FormModality.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSCP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSCP.Designer.cs">
+      <DependentUpon>FormSCP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSCU.Designer.cs">
+      <DependentUpon>FormSCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormText.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormText.Designer.cs">
+      <DependentUpon>FormText.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IDicomConfigMgt.cs" />
+    <Compile Include="IDicomMappingItem.cs" />
+    <Compile Include="IDicomSCUConfigMgt.cs" />
+    <Compile Include="ListControler.cs" />
+    <Compile Include="ListControler2.cs" />
+    <Compile Include="PersonNameComponent.cs" />
+    <Compile Include="PersonNameRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TagControler.cs" />
+    <Compile Include="TagControler2.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormElement2.resx">
+      <DependentUpon>FormElement2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModality.resx">
+      <DependentUpon>FormModality.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSCP.resx">
+      <DependentUpon>FormSCP.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSCU.resx">
+      <DependentUpon>FormSCU.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormText.resx">
+      <DependentUpon>FormText.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.Common.Dicom\HYS.Common.Dicom.csproj">
+      <Project>{60386368-A41D-4A74-BF7F-9AC87575CADC}</Project>
+      <Name>HYS.Common.Dicom</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

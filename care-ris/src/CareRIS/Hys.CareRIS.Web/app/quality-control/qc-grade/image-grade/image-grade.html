@@ -1,0 +1,40 @@
+﻿<div>
+    <div class="checkbox" ng-repeat="standard in imageScore.standards" style="margin-bottom: 5px;">
+        <label>
+            <input type="checkbox" ng-model="standard.selected" ng-true-value="true" ng-false-value="false" ng-click="imageSoreChanged()" />
+            {{standard.desc}}
+        </label>
+    </div>
+    <form class="form-inline">
+        <div class="form-group">
+            <label for="qc-result">评分结果</label>
+            <input type="text" class="form-control input-sm" id="qc-result" readonly ng-model="imageScore.result.desc" />
+        </div>
+        <div class="form-group">
+            <label for="qc-comment">备注</label>
+            <input type="text" class="form-control input-sm" style="width:350px;"
+                   id="qc-comment" ng-model="imageScore.result.comment"
+                   title="{{imageScore.result.comment}}"
+                   maxlength="100" />
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="历史评分" ng-click="imageHistory()" />
+        </div>
+        <div class="form-group">
+            <input type="button" class="btn btn-primary" value="查看图像" ng-click="viewImage()" ng-disabled="!viewImageEnabled" />
+        </div>
+        <div class="form-group" style="float:right">
+            <input type="button" class="btn btn-primary" value="评分" ng-click="imageGrade()" />
+        </div>
+    </form>
+
+    <div kendo-window="imageHistoryWindow"
+         class="image-history"
+         k-title="'历史评分'"
+         k-width="'600px'" k-height="'420px'"
+         k-content="{url:'app/quality-control/qc-grade/image-grade/image-history-window.html'}"
+         k-visible="false"
+         k-modal="true"
+         k-resizable="false">
+    </div>
+</div>

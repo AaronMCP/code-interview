@@ -1,0 +1,46 @@
+﻿<div class="dictionary-relation">
+    <div class="col-md-12">
+      
+        <div class="col-md-4 pagge-top-left">
+            <h5>注释:<span ng-show="selectedMapItem.name">{{selectedMapItem.name}}->{{selectedMapItem.mapName}}:{{mapDicText}}</span></h5>
+        </div>
+        <div class="col-md-4 pagge-top-left">
+            <div class="col-md-3 propertyLable"><span translate>Site</span>:</div>
+            <div class="col-md-9">
+                <select style="width:100%" class="form-control" ng-options="site for site in sites" ng-model="mapSite" ng-change="mapSiteChange()"><option value="">全局</option></select>
+            </div>
+        </div>
+        <div class="pagge-top-right">
+            <ul class="nav navbar-nav  rispro-navbar-nav" style="background: #fff!important;"> 
+                <li>
+                    <button type="button" class="btn btn-default" ng-click="saveMapDics()" ng-disabled="dicMapForm.$pristine || dicMapForm.$invalid">保存</button>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="mapRefresh()">
+                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-12" style="height:96%;overflow-y:auto;">
+        <div class="col-md-8">
+            <form name="dicMapForm" novalidate class="system-dictionary-form">
+                <table class="table table-hover">
+                    <tr ng-repeat="map in dicRelationList" ng-class="{'quality-active': map.selected}" ng-click="clickMapItem(map)">
+                        <td class="col-lg-6">
+                            <div class="col-md-11">{{map.value}}</div>
+                            <div class="col-md-1"> <span ng-show="map.isChange">*</span></div>
+                        </td>
+                        <td class="col-lg-6 choice">
+                            <select style="width: 95%; border: 0" class="form-control" ng-options="i for i in map.options" ng-model="map.mapValue" ng-change="mapValueChange()"></select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+
+    </div>
+</div>

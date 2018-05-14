@@ -1,0 +1,25 @@
+{
+  "presets": [
+    "es2015",
+    "react", [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 3 versions",
+            "ie >= 9"
+          ]
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-dynamic-import", [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": "css"
+      }
+    ]
+  ]
+}

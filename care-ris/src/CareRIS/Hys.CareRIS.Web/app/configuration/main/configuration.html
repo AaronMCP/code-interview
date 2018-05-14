@@ -1,0 +1,106 @@
+﻿<div id="configuration" class="configuration">
+    <ul class="nav nav-tabs configuration-tab">
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab1" ng-click="showTab('sourceManagement')">资源管理</a>
+            <span ng-show="panel.sourceManagement"></span>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab2" ng-click="showTab('systemDic')">系统字典</a>
+            <span ng-show="panel.systemDic"></span>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab3" ng-click="showTab('diseaseCode')">ICD10</a>
+            <span ng-show="panel.diseaseCode"></span>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span ng-show="panel.checkCode"></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab4" ng-click="showTab('checkCode')">检查代码</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin" ng-class="{true: 'active', false: ''}[loginUser.isAdmin||loginUser.isSiteAdmin]">
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab5" ng-click="showTab('management')">
+                <span>排班管理</span>
+                <span ng-show="panel.management"></span>
+            </a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span ng-show="panel.sourceManagement"></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab6" ng-click="showTab('sysConfigure')">系统配置</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab7" ng-click="showTab('roleManage')">角色管理</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab8" ng-click="showTab('userManage')">用户管理</a>
+        </li>
+        <!--<li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab9" ng-click="showTab('backup')">备份配置</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab10" ng-click="showTab('department')">科室公告</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab11" ng-click="showTab('HIPAA')">HIPAA日志</a>
+        </li>-->
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab12" ng-click="showTab('administratorManagement')">管理员工具</a>
+        </li>
+        <li ng-if="loginUser.isAdmin||loginUser.isSiteAdmin">
+            <span></span>
+            <a href="javascript:void(0);" data-toggle="tab" data-target="#con-tab13" ng-click="showTab('groupManagement')">集团医院管理</a>
+        </li>
+        <li ng-class="{true: 'active', false: ''}[!loginUser.isAdmin&&!loginUser.isSiteAdmin]">
+            <span></span>
+            <a href="#con-tab14" data-toggle="tab" data-target="#con-tab14" ng-click="showTab('clientManage')">PACS配置</a>
+        </li>
+    </ul>
+    <div class="tab-content configuration-content">
+        <div class="tab-pane" id="con-tab1">
+            <source-manage ng-if="panel.sourceManagement"></source-manage>
+        </div>
+        <div class="tab-pane" id="con-tab2">
+            <system-dictionary ng-if="panel.systemDic"></system-dictionary>
+        </div>
+        <div class="tab-pane" id="con-tab3">
+            <disease-code ng-if="panel.diseaseCode"></disease-code>
+        </div>
+        <div class="tab-pane" id="con-tab4">
+            <check-code ng-if="panel.checkCode"></check-code>
+        </div>
+        <div class="tab-pane " ng-class="{true: 'active', false: ''}[loginUser.isAdmin||loginUser.isSiteAdmin]" id="con-tab5">
+            <management ng-if="panel.management"></management>
+        </div>
+        <div class="tab-pane" id="con-tab6">
+            <system-configure ng-if="panel.sysConfigure"></system-configure>
+        </div>
+        <div class="tab-pane" id="con-tab7">
+            <role-manage ng-if="panel.roleManage"></role-manage>
+        </div>
+        <div class="tab-pane" id="con-tab8">
+            <user-manage ng-if="panel.userManage"></user-manage>
+        </div>
+        <div class="tab-pane" id="con-tab9">
+            <p ng-if="panel.backup">备份配置</p>
+        </div>
+        <div class="tab-pane" id="con-tab10">
+            <p ng-if="panel.department">科室公告</p>
+        </div>
+        <div class="tab-pane" id="con-tab11">
+            <p ng-if="panel.HIPAA">HIPAA日志</p>
+        </div>
+        <div class="tab-pane" id="con-tab12">
+            <!--<p ng-if="panel.administratorManagement">管理员工具</p>-->
+            <administrator-tools ng-if="panel.administratorManagement"></administrator-tools>
+        </div>
+        <div class="tab-pane" id="con-tab13">
+            <hospital-manage ng-if="panel.groupManagement"></hospital-manage>
+        </div>
+        <div class="tab-pane " ng-class="{true: 'active', false: ''}[!loginUser.isAdmin&&!loginUser.isSiteAdmin]" id="con-tab14">
+            <client-manage ng-if="panel.clientManage"></client-manage>
+        </div>
+    </div>
+</div>

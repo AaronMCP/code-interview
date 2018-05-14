@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HL7>
+  <!-- MSH|^~\&|RIS||HIS||20050120||OMI^O23^OMI_O23|mn123|P|2.5||||||~ISO IR87||ISO 2022-1994 -->
+  <MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" DTOfMessage="20050120" MessageControlID="mn123" AlternateCharacterSetHandlingScheme="ISO 2022-1994">
+    <SendingApplication NameSpaceID="RIS"/>
+    <ReceivingApplication NameSpaceID="HIS"/>
+    <MessageType MessageCode="ORM" TriggerEvent="O01" MessageStructure="ORM_O01"/>
+    <ProcessingID ProcessingID="P"/>
+    <VersionID VersionID="2.3.1"/>
+    <CharacterSet>~ISO IR87</CharacterSet>
+  </MSH>
+  <!-- PID|||12345678^^^^PI||東京^太郎^^^^^L^I~トウキョウ^タロウ^^^^^L^P||19501214|M|||東京都虎ノ門1-19-9^^^^1050001^^H||03-5569-3150^PRN^PH -->
+  <PID DTOfBirth="19501214" Sex="M">
+    <PatientID_InternalID ID="12345678" IdentifierTypeCodeID="PI"/>
+    <PatientName GivenName="太郎" NameTypeCode="L" NameRepresentationCode="I">
+      <FamilyName Surname="東京"/>
+    </PatientName>
+    <PatientName GivenName="タロウ" NameTypeCode="L" NameRepresentationCode="P">
+      <FamilyName Surname="トウキョウ"/>
+    </PatientName>
+    <PatientAddress ZipOrPostalCode="1050001" AddressType="H">
+      <StreetAddress StreetOrMailingAddress="東京都虎ノ門1-19-9"/>
+    </PatientAddress>
+    <PhoneNumber-Home CAnyText="03-5569-3150" TelecommunicationUseCode="PRN" TelecommunicationEquipmentType="PH"/>
+  </PID>
+  <!-- PV1||O|01^^^^^C||||^中田^隆^^^^^^^L^^^^^I||| -->
+  <PV1 PatientClass="O">
+    <AssignedPatientLocation PointOfCare="01" PersonLocationType="C"/>
+    <AttendingDoctor GivenName="隆" NameTypeCode="L" NameRepresentationCode="I">
+      <FamilyName Surname="中田"/>
+    </AttendingDoctor>
+  </PV1>
+  <!-- ORC|NW|2005012000100|||||||200501201010|||^中田^隆^^^^^^^L^^^^^I|01^^^^^C -->
+  <ORC OrderControl="NW" DTOfTransaction="200501201010">
+    <PlacerOrderNumber EntityIdentifier="2005012000100"/>
+    <OrderingProvider GivenName="隆" NameTypeCode="L" NameRepresentationCode="I">
+      <FamilyName Surname="中田"/>
+    </OrderingProvider>
+    <EnterersLocation PointOfCare="01" PersonLocationType="C"/>
+    <QuantityTiming StartDateTime="20100203150908"/>
+  </ORC>
+  <!-- OBR|1|2005012000100||1000000000000000^Ｘ線単純撮影^JJ1017-16P||||||||||||^ 中田^隆^^^^^^^L^^^^^I -->
+  <OBR SetIDObservationRequest="1" DiagnosticServSectID="CT" Placerfield1="AccNo0001">
+    <PlacerOrderNumber EntityIdentifier="2005012000100"/>
+    <UniversalServiceID Identifier="1000000000000000" Text="Ｘ線単純撮影" NameOfCodingSystem="JJ1017-16P"/>
+    <OrderingProvider GivenName="隆" NameTypeCode="L" NameRepresentationCode="I">
+      <FamilyName Surname=" 中田"/>
+    </OrderingProvider>
+    <UniversalServiceID Text="Procedure Code" NameOfCodingSystem="CT1" Identifier="CT001"/>
+    <Technician Room="String" Building="B01">
+      <Name Prefix="Dr." GivenName="John" IDNumber="00343">
+        <FamilyName Surname="LEE"/>
+        <AssigningAuthority NameSpaceID="Radiology"/>
+      </Name>
+    </Technician>
+  </OBR>
+  <ZDS>
+    <ReferencePointer SubType="DICOM" DataOfType="Application" Pointer="1234234.4564.2342342.123.23423423">
+    </ReferencePointer>
+  </ZDS>
+</HL7>

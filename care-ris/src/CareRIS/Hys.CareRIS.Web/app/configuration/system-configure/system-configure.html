@@ -1,0 +1,125 @@
+﻿<div class="system-configure">
+    <div class="system-configure-top">
+        <div class="form-group col-md-2">
+            <label>医院</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-model="domain" ng-options="h for h in hospitalList"></select>
+            </div>
+        </div>
+        <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+            <li>
+                <button type="button" class="btn btn-default" ng-click="saveSystemProfile()">保存</button>
+            </li>
+            <li>
+                <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="refresh()">
+                    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                </button>
+            </li>
+        </ul>
+    </div>
+    <div class="system-configure-content">
+        <div class="system-configure-right">
+            <ul class="nav nav-tabs">
+                <li class="active">
+                    <a href="#system1" data-toggle="tab">
+                        全局
+                    </a>
+                </li>
+                <li>
+                    <a href="#system2" data-toggle="tab">
+                        系统框架
+                    </a>
+                </li>
+                <li>
+                    <a href="#system3" data-toggle="tab">
+                        检查申请
+                    </a>
+                </li>
+                <li>
+                    <a href="#system4" data-toggle="tab">
+                        预约
+                    </a>
+                </li>
+                <li>
+                    <a href="#system5" data-toggle="tab">
+                        登记检查
+                    </a>
+                </li>
+                <li>
+                    <a href="#system6" data-toggle="tab">
+                        检查
+                    </a>
+                </li>
+                <li>
+                    <a href="#system7" data-toggle="tab">
+                        报告
+                    </a>
+                </li>
+                <li>
+                    <a href="#system8" data-toggle="tab">
+                        教学
+                    </a>
+                </li>
+                <li>
+                    <a href="#system9" data-toggle="tab">
+                        统计
+                    </a>
+                </li>
+                <li>
+                    <a href="#system10" data-toggle="tab">
+                        配置
+                    </a>
+                </li>  
+                <li>
+                    <a href="#system11" data-toggle="tab">
+                        质量控制
+                    </a>
+                </li>      
+                <li>
+                    <a href="#system12" data-toggle="tab">
+                        集成
+                    </a>
+                </li>          
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="system1">
+                    <system-configure-all system-profiles="systemProfileGlobal"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system2">
+                    <system-configure-all system-profiles="systemProfileAuthorization"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system3">
+                    <system-configure-all system-profiles="systemProfileExamApplication"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system4">
+                    <system-configure-all system-profiles="systemProfileBooking"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system5">
+                    <system-configure-all system-profiles="systemProfileRegistration"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system6">
+                    <system-configure-all system-profiles="systemProfileExamination"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system7">
+                    <system-configure-all system-profiles="systemProfileReport"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system8">
+                    <system-configure-all system-profiles="systemProfileTeaching"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system9">
+                    <system-configure-all system-profiles="systemProfileStatistic"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system10">
+                    <system-configure-all system-profiles="systemProfileConfigure"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system11">
+                    <system-configure-all system-profiles="systemProfileQualityControl"></system-configure-all>
+                </div>
+                <div class="tab-pane fade" id="system12">
+                    <system-configure-all system-profiles="systemProfileIntegration"></system-configure-all>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

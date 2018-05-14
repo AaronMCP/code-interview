@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <soap:Header></soap:Header>
+  <soap:Body>
+    <MessageComResponse xmlns="http://www.HaoYiShenghealth.com/">
+      <MessageComResult>{0}</MessageComResult>
+      <ReturnMessage>{1}</ReturnMessage>
+    </MessageComResponse>
+  </soap:Body>
+</soap:Envelope>

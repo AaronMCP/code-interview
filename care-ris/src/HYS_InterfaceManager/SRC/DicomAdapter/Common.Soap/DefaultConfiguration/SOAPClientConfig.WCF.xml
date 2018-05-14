@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.serviceModel>
+    <extensions>
+      <bindingElementExtensions>
+        <add name="swaMessageEncoding"
+          type="HYS.IM.Common.WCFHelper.SwA.SwaMessageEncodingElement, HYS.IM.Common.WCFHelper" />
+      </bindingElementExtensions>
+    </extensions>
+    <bindings>
+      <customBinding>
+        <binding name="SwaBindingConfiguration">
+          <swaMessageEncoding innerMessageEncoding="textMessageEncoding" />
+          <httpTransport maxReceivedMessageSize="62914560" authenticationScheme="Anonymous"
+            maxBufferSize="62914560" proxyAuthenticationScheme="Anonymous"
+            useDefaultWebProxy="true" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint binding="customBinding" bindingConfiguration="SwaBindingConfiguration"
+            contract="HYS.Common.Soap.IAbstractClientContract" name="ABSTRACT_CLIENT_ENDPOINT"/>
+    </client>
+  </system.serviceModel>
+</configuration>

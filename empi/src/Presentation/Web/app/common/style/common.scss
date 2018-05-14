@@ -1,0 +1,218 @@
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font: 14px;
+    background: #fff;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #4a4a4a;
+    text-decoration: none
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: #4a4a4a;
+    text-decoration: none;
+}
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.index {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    min-width: 1000px;
+    font-size: 14px;
+    color: #4a4a4a;
+    position: relative;
+    background: #f6f6fb;
+    .core-nav {
+        float: left;
+        height: 100%;
+        background: #3d4f66;
+        box-shadow: 0 0 6px 0 #d7d7d7;
+        width: 86px;
+        li {
+            float: left;
+            width: 86px;
+            height: 110px;
+            a {
+                display: block;
+                width: 86px;
+                height: 110px;
+                span {
+                    text-align: center;
+                    display: block;
+                    width: 86px;
+                    color: #fff;
+                }
+                span:first-child {
+                    height: 63px;
+                }
+                span:last-child {
+                    height: 47px;
+                    line-height: 32px;
+                    font-size: 14px;
+                }
+                .patient-span {
+                    background: url('../image/rules.png') no-repeat center bottom;
+                }
+                .rules-span {
+                    background: url('../image/rules.png') no-repeat center bottom;
+                }
+                .source-span {
+                    background: url('../image/source.png') no-repeat center bottom;
+                }
+            }
+        }
+        li:hover {
+            background-color: #203248;
+        }
+        li.active {
+            background-color: #203248;
+        }
+    }
+    .main-body {
+        position: absolute;
+        left: 86px;
+        right: 0;
+        top: 43px;
+        bottom: 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        padding: 10px 10px 0 10px;
+    }
+}
+
+// 必填项样式
+.form-required label {
+    color: red;
+}
+
+.ant-table-tbody>.ant-table-expanded-row:hover>td {
+    background: #fff;
+}
+
+// antd table head样式统一修改
+.ant-table-body .ant-table-thead tr th {
+    background: #fff;
+    border-right: 0;
+    font-size: 14px;
+    color: #787878;
+    text-align: center;
+}
+
+.ant-table-body .ant-table-tbody tr td {
+    font-size: 14px;
+    text-align: center;
+}
+
+// 历史table样式统一修改
+.history-modal .ant-modal-body {
+    padding: 0;
+}
+
+.history-modal .ant-table-thead tr th {
+    background: #ececec;
+    border-top: 1px solid #d3d3d3;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.history-modal .ant-table {
+    border-radius: 0;
+}
+
+.history-modal .ant-table-wrapper .ant-table-pagination {
+    margin-right: 15px;
+}
+
+// modal头部样式统一修改
+.ant-modal-header {
+    height: 52px;
+    padding: 15px 16px;
+    .ant-modal-title {
+        font-size: 16px;
+        color: #5c9df5;
+    }
+}
+
+// modal footer样式统一修改
+.ant-modal-footer {
+    border-top: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    padding-bottom: 38px;
+    button {
+        width: 128px;
+        height: 30px;
+        font-size: 16px;
+    }
+    button:first-child {
+        margin-right: 20px;
+    }
+    button:last-child {
+        margin-left: 20px;
+        background: #ffffff;
+        border: 1px solid #5c9df5;
+        border-radius: 2px;
+        color: #5c9df5;
+    }
+}
+
+.ant-input-number {
+    width: 100%;
+}

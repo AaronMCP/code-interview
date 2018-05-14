@@ -1,0 +1,51 @@
+﻿<div class="qc-grade-container">
+    <form style="overflow: hidden;zoom:1;">
+        <div class="form-group col-md-2">
+            <label>病人姓名</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.localName" />
+            </div>
+        </div>
+        <div class="form-group col-md-2">
+            <label>放射编号</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.accNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-5">
+            <label>检查时间</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="examineTimeStart" autocomplete="off" kendo-date-picker="examineTimeStart" ng-model="searchOption.examineTimeStart" />
+                </p>
+            </div>
+            <label>到</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="examineTimeEnd" autocomplete="off" kendo-date-picker="examineTimeEnd" ng-model="searchOption.examineTimeEnd" />
+                </p>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <button style="float:right;" class="btn btn-default" ng-click="search()">查询</button>
+        </div>
+    </form>
+    <div class="qc-content-container">
+        <div class="qc-grade-pan-top">
+            <div style="height:100%" kendo-grid="pingfenGrid" data-k-options="pingfenGridOption"></div>
+        </div>
+        <div class="qc-grade-pan-bottom">
+            <div class="qc-grade-pan-bar">
+                <span class="qc-grade-pan-btn" ng-class="{active:pan.image}" ng-click="togglePan('image')">图像质量评分</span>
+                <span class="qc-grade-pan-btn" ng-class="{active:pan.report}" ng-click="togglePan('report')">报告质量评分</span>
+            </div>
+            <div ng-show="pan.image" class="qc-grade-pan-content">
+                <image-grade></image-grade>
+            </div>
+            <div ng-show="pan.report" class="qc-grade-pan-content">
+                <report-grade></report-grade>
+            </div>
+        </div>
+    </div>
+
+</div>

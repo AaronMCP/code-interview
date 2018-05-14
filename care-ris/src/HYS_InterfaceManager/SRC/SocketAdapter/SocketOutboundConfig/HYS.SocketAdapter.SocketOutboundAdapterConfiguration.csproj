@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7DC0B947-90FB-4D2D-8DAB-27B01F4F36BF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.SocketAdapter.SocketOutboundAdapterConfiguration</RootNamespace>
+    <AssemblyName>HYS.SocketAdapter.SocketOutboundAdapterConfiguration</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CheckItemValid.cs" />
+    <Compile Include="Config\ConfigMain.cs" />
+    <Compile Include="Forms\FChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FChannel.designer.cs">
+      <DependentUpon>FChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLUTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLUTable.designer.cs">
+      <DependentUpon>FLUTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FLUTItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FLUTItem.designer.cs">
+      <DependentUpon>FLUTItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FQueryCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FQueryCriteria.Designer.cs">
+      <DependentUpon>FQueryCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FQueryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FQueryResult.designer.cs">
+      <DependentUpon>FQueryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FQuerySQL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FQuerySQL.designer.cs">
+      <DependentUpon>FQuerySQL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FSocketOutConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FSocketOutConfiguration.designer.cs">
+      <DependentUpon>FSocketOutConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GWFields.cs" />
+    <Compile Include="ListViewSort.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FChannel.resx">
+      <DependentUpon>FChannel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLUTable.resx">
+      <DependentUpon>FLUTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FLUTItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FLUTItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FQueryCriteria.resx">
+      <DependentUpon>FQueryCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FQueryResult.resx">
+      <DependentUpon>FQueryResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FQuerySQL.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FQuerySQL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FSocketOutConfiguration.resx">
+      <DependentUpon>FSocketOutConfiguration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UIControls\EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIControls\EnumComboBox.designer.cs">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\HYS.SocketAdapter.Common.csproj">
+      <Project>{BCDAB08C-43FC-4479-90CE-FA0C12DE413C}</Project>
+      <Name>HYS.SocketAdapter.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Configuration\HYS.SocketAdapter.Configuration.csproj">
+      <Project>{5608C177-B2DB-43C4-AC28-169853EDCC48}</Project>
+      <Name>HYS.SocketAdapter.Configuration</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

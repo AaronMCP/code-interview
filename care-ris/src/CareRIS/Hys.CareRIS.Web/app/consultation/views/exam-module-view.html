@@ -1,0 +1,72 @@
+﻿<div class="module-panel" ng-show="needShow()">
+    <div class="module-panel-body">
+        <div class="module-panel-body-head">
+            <div class="right">
+                <ul>
+                    <li ng-hide="disableEdit"><a href="javascript:void(0);" class="icon-remove" title="{{'DeleteModule'|translate}}" ng-click="removeModule()"></a></li>
+                    <li ng-show="!disableEdit&&!moduleEmpty&&moduleReady"><a href="javascript:void(0);" title="{{'AddExamItem'|translate}}" class="icon-add ng-cloak" ng-click="operateContent()"></a></li>
+                </ul>
+            </div>
+            <div class="left">
+                <ul class="module-move-handle">
+                    <li>
+                        <div class="module-move-handle module-{{module.type}}">{{module.title}}</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="module-panel-body-container">
+            <div class="module-add-large" ng-show="!disableEdit&&moduleEmpty&&moduleReady">
+                <a class="icon-add" title="{{'AddExamItem'|translate}}" href="javascript:void(0);" ng-click="operateContent()"></a>
+            </div>
+            <ul class="module-file-container ng-cloak" ng-show="!moduleEmpty">
+                <li ng-repeat="item in moduleData">
+                    <div class="title">
+                        <div class="title-op-bar">
+                            <a href="javascript:void(0);" class="icon-edit" title="{{'EditExamItem'|translate}}" ng-click="operateContent(item,$index)"></a>
+                            <a ng-hide="disableEdit" href="javascript:void(0);" class="icon-remove" title="{{'DeleteExamItem'|translate}}" ng-click="deleteItem($index)"></a>
+                        </div>
+                        <div>{{item.examDate}}</div>
+                    </div>
+                    <ul>
+                        <li ng-repeat="detail in item.itemDetails" ng-show="detail.file.fileName"
+                            ng-class="{'file-editing':detail.file&&detail.file.fileEditing,'folder':detail.file&&detail.file.fileType==='folder','module-error':!detail.file||detail.file.error}">
+                            <!--class="module-error"-->
+                            <div class="module-operation-bar">
+                                <span class="module-complete-persent" ng-class="{'disabled-lable':disableEdit}">{{detail.file?detail.file.progress:0}}%</span>
+                                <a ng-hide="disableEdit" href="javascript:void(0);" class="icon-uploadContinue" title="{{'ContinueUpload'|translate}}" ng-click="detail.file&&continueUpload(detail.file,$parent.$index,$index,detail.detailID)"></a>
+                                <a ng-hide="disableEdit" href="javascript:void(0);" class="icon-edit" title="{{'EditFileName'|translate}}" ng-click="detail.file&&editFile(detail.file)"></a>
+                                <a ng-hide="disableEdit" href="javascript:void(0);" class="icon-remove" title="{{'DeleteFile'|translate}}" ng-click="deleteFile(item.itemDetails,$index)"></a>
+                                <a href="javascript:void(0);" class="icon-ok" title="{{'OK'|translate}}" ng-click="detail.file&&saveEditFile(detail.file)"></a>
+                                <a href="javascript:void(0);" class="icon-cancel" title="{{'Cancel'|translate}}" ng-click="detail.file&&cancelEditing(detail.file)"></a>
+                            </div>
+                            <div class="module-info-bar">
+                                <div class="module-file-desc">
+                                    <div class="module-file-state icon-alert" ng-attr-title="{{detail.file.errorDesc}}"></div>
+                                    <div class="moddule-progress-bar">
+                                        <div class="module-progress-completed" style="width:{{detail.file?detail.file.progress:0}}%;"></div>
+                                    </div>
+                                </div>
+                                <div class="module-filename-bar">
+                                    <div class="exam-file {{detail.file.fileType}}">
+                                        <a ng-hide="detail.file.fileEditing" href="javascript:void(0);" ng-click="selectFile(module.type,item.clientId,detail.clientId)">{{detail.file.fileName}}</a>
+                                        <input type="text" class="ng-cloak" ng-show="detail.file.fileEditing" ng-model="detail.file.editingFileName" maxlength=128 />
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="loader" ng-show="!moduleReady"></div>
+        </div>
+    </div>
+    <div class="module-panel-border horizon top" data-border="top"></div>
+    <div class="module-panel-border horizon bottom" data-border="bottom"></div>
+    <div class="module-panel-border vertical left" data-border="left"></div>
+    <div class="module-panel-border vertical right" data-border="right"></div>
+    <div class="module-panel-border corner north-west" data-border="north-west"></div>
+    <div class="module-panel-border corner north-east" data-border="north-east"></div>
+    <div class="module-panel-border corner south-east" data-border="south-east"></div>
+    <div class="module-panel-border corner south-west" data-border="south-west"></div>
+</div>

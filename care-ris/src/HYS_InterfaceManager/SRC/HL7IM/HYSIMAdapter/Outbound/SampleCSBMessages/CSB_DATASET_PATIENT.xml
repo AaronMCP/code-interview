@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<csb:Patient xmlns:csb="http://www.carestream.com/csbroker">
+  <!-- 
+    Notice: 
+    
+    1. One ADT message map to one <Patient> element.
+    
+    2. There could be multiple <Table> elements in one <Patient> element. 
+    
+    3. All the sub-elements in the <Table> element are mandatory,
+       the value format of these sub-elements should be the same with that of CS Broker
+       (e.g. the date time format should be YYYY-MM-DD HH:MM:SS).
+    
+    4. One patient information map to one <Table> element, 
+       the semantics of which is defined by the value of <DATAINDEX_EVENT_TYPE> element according to CS Broker coding system
+       (see CS Broker Event Type definition for details).
+    
+    5. All the <Table> elements in one <Patient> element are tend to be inserted into CS Broker database in one transaction,
+       however, currently we do not provide this feature as the default configuration, 
+       currently each <Table> element is inserted in one transaction as default.
+  -->
+  <csb:Table>
+    <csb:DATAINDEX_DATA_SOURCE/>
+    <csb:DATAINDEX_EVENT_TYPE/>
+    <csb:DATAINDEX_PROCESS_FLAG/>
+    <csb:DATAINDEX_RECORD_INDEX_1/>
+    <csb:DATAINDEX_RECORD_INDEX_2/>
+    <csb:DATAINDEX_RECORD_INDEX_3/>
+    <csb:DATAINDEX_RECORD_INDEX_4/>
+    <csb:PATIENT_ACCOUNT_NUMBER/>
+    <csb:PATIENT_ADDRESS/>
+    <csb:PATIENT_BED_NUMBER/>
+    <csb:PATIENT_BIRTH_PLACE/>
+    <csb:PATIENT_BIRTHDATE/>
+    <csb:PATIENT_CITIZENSHIP/>
+    <csb:PATIENT_COUNTRY_CODE/>
+    <csb:PATIENT_CUSTOMER_1/>
+    <csb:PATIENT_CUSTOMER_2/>
+    <csb:PATIENT_CUSTOMER_3/>
+    <csb:PATIENT_CUSTOMER_4/>
+    <csb:PATIENT_DRIVERLIC_NUMBER/>
+    <csb:PATIENT_ETHNIC_GROUP/>
+    <csb:PATIENT_MARITAL_STATUS/>
+    <csb:PATIENT_MOTHER_MAIDEN_NAME/>
+    <csb:PATIENT_NATIONALITY/>
+    <csb:PATIENT_OTHER_PID/>
+    <csb:PATIENT_PATIENT_ALIAS/>
+    <csb:PATIENT_PATIENT_LOCAL_NAME/>
+    <csb:PATIENT_PATIENT_LOCATION/>
+    <csb:PATIENT_PATIENT_NAME/>
+    <csb:PATIENT_PATIENT_STATUS/>
+    <csb:PATIENT_PATIENT_TYPE/>
+    <csb:PATIENT_PATIENTID/>
+    <csb:PATIENT_PHONENUMBER_BUSINESS/>
+    <csb:PATIENT_PHONENUMBER_HOME/>
+    <csb:PATIENT_PRIMARY_LANGUAGE/>
+    <csb:PATIENT_PRIOR_PATIENT_ID/>
+    <csb:PATIENT_PRIOR_PATIENT_NAME/>
+    <csb:PATIENT_PRIOR_VISIT_NUMBER/>
+    <csb:PATIENT_RACE/>
+    <csb:PATIENT_RELIGION/>
+    <csb:PATIENT_SEX/>
+    <csb:PATIENT_SSN_NUMBER/>
+    <csb:PATIENT_VETERANS_MIL_STATUS/>
+    <csb:PATIENT_VISIT_NUMBER/>
+  </csb:Table>
+  <csb:Table>
+    <csb:DATAINDEX_DATA_SOURCE/>
+    <csb:DATAINDEX_EVENT_TYPE/>
+    <csb:DATAINDEX_PROCESS_FLAG/>
+    <csb:DATAINDEX_RECORD_INDEX_1/>
+    <csb:DATAINDEX_RECORD_INDEX_2/>
+    <csb:DATAINDEX_RECORD_INDEX_3/>
+    <csb:DATAINDEX_RECORD_INDEX_4/>
+    <csb:PATIENT_ACCOUNT_NUMBER/>
+    <csb:PATIENT_ADDRESS/>
+    <csb:PATIENT_BED_NUMBER/>
+    <csb:PATIENT_BIRTH_PLACE/>
+    <csb:PATIENT_BIRTHDATE/>
+    <csb:PATIENT_CITIZENSHIP/>
+    <csb:PATIENT_COUNTRY_CODE/>
+    <csb:PATIENT_CUSTOMER_1/>
+    <csb:PATIENT_CUSTOMER_2/>
+    <csb:PATIENT_CUSTOMER_3/>
+    <csb:PATIENT_CUSTOMER_4/>
+    <csb:PATIENT_DRIVERLIC_NUMBER/>
+    <csb:PATIENT_ETHNIC_GROUP/>
+    <csb:PATIENT_MARITAL_STATUS/>
+    <csb:PATIENT_MOTHER_MAIDEN_NAME/>
+    <csb:PATIENT_NATIONALITY/>
+    <csb:PATIENT_OTHER_PID/>
+    <csb:PATIENT_PATIENT_ALIAS/>
+    <csb:PATIENT_PATIENT_LOCAL_NAME/>
+    <csb:PATIENT_PATIENT_LOCATION/>
+    <csb:PATIENT_PATIENT_NAME/>
+    <csb:PATIENT_PATIENT_STATUS/>
+    <csb:PATIENT_PATIENT_TYPE/>
+    <csb:PATIENT_PATIENTID/>
+    <csb:PATIENT_PHONENUMBER_BUSINESS/>
+    <csb:PATIENT_PHONENUMBER_HOME/>
+    <csb:PATIENT_PRIMARY_LANGUAGE/>
+    <csb:PATIENT_PRIOR_PATIENT_ID/>
+    <csb:PATIENT_PRIOR_PATIENT_NAME/>
+    <csb:PATIENT_PRIOR_VISIT_NUMBER/>
+    <csb:PATIENT_RACE/>
+    <csb:PATIENT_RELIGION/>
+    <csb:PATIENT_SEX/>
+    <csb:PATIENT_SSN_NUMBER/>
+    <csb:PATIENT_VETERANS_MIL_STATUS/>
+    <csb:PATIENT_VISIT_NUMBER/>
+  </csb:Table>
+</csb:Patient>

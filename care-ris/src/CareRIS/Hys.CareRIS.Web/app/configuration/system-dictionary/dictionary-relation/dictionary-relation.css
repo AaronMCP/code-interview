@@ -1,0 +1,20 @@
+﻿
+.dictionary-relation {
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+}
+
+.pagge-top-left {
+    padding-top: 10px;
+    float: left;
+}
+
+.pagge-top-right {
+    float: right;
+    margin-right: 10px;
+}
+
+h5 {
+    margin-left: 8px;
+}

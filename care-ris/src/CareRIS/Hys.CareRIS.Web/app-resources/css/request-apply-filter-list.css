@@ -1,0 +1,78 @@
+﻿.filter-list .select-pane-title {
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.filter-list {
+    padding: 10px;
+    width: 300px;
+    display: block;
+}
+
+
+    .filter-list .label-filter {
+        cursor: pointer;
+        font-size: 14px;
+        padding: .3em .4em .4em;
+        margin: .3em;
+        -moz-min-width: 60px !important;
+        -ms-min-width: 60px !important;
+        -o-min-width: 60px !important;
+        -webkit-min-width: 60px !important;
+        min-width: 60px !important;
+        display: inline-block;
+    }
+
+.tag-selection {
+    font-size: 14px;
+    padding: .3em .4em .4em;
+    margin: 0 .1em;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid lightgray;
+    white-space: nowrap;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    float: left;
+}
+
+    .tag-selection a {
+        color: lightgray;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+        .tag-selection a:hover {
+            opacity: 1.0;
+        }
+
+    .tag-selection .remove {
+        vertical-align: bottom;
+        top: 0;
+    }
+
+    .tag-selection a {
+        margin: 0 0 0 .3em;
+    }
+
+    .tag-selection .glyphicon-gray {
+        color: gray;
+        margin-bottom: 2px;
+        line-height: none;
+    }
+
+.container-selection {
+    padding: 0 .4em 1em;
+    border-bottom: 2px solid lightgray;
+}
+
+a.cleararea {
+    font-weight: bold;
+    color: red;
+}
+a.cleararea:hover {
+    font-weight: bold;
+    color: red;
+}

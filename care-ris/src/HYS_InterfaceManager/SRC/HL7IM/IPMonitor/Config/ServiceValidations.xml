@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="gb2312"?>
+
+<!-- 符合语法规则的XML文档才能被正确读取, 请使用正确方法修改此文档以保证功能的正常运行  -->
+
+<!-- 医院名称中包含5个字符中的任何一个 < > & ' " 请使用相应的预定义的实体引用 &lt; &gt; &amp; &apos; &quot; -->
+
+<!--  关于语法规则的更多信息，请访问下面链接  -->
+<!--  http://www.w3school.com.cn/xml/xml_syntax.asp  -->
+<!--  http://www.w3.org/TR/REC-xml/  -->
+
+<validations>
+
+<validation service="">   <!--  service="" 表示这个验证适用于所有服务 and service="IPSwitcher" 表示这个验证仅适用于IPSwitcher服务   -->
+<name>IsRunning</name>
+<description>check if the service is running</description>
+<type>HYS.HL7Gateway.IPMonitor.Policies.Validations.IsRunning</type>
+</validation>
+
+</validations>

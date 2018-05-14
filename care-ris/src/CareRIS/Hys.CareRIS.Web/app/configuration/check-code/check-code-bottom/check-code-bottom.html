@@ -1,0 +1,414 @@
+﻿
+<div class="check-code-bottom">
+    <form name="checkCodeForm" style="overflow:hidden;">
+        <div class="clear-float">
+            <div class="form-group col-md-3" tabindex="1">
+                <label class="col-md-5">检查代码<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" ng-model="procedureInfo.procedureCode" name="procedureCode"
+                           ris-auto-focus ris-enter-index required />
+                </div>
+                <div ng-messages="checkCodeForm.procedureCode.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                <label>
+                    <input type="checkbox" ng-model="procedureInfo.effective" ng-true-value="1" ng-false-value="0" ng-disabled="isEdit" />
+                    是否有效
+                </label>
+            </div>
+            <div class="form-group col-md-3" tabindex="2">
+                <label class="col-md-5">部位分类<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.bodyCategory" name="bodyCategory"
+                            ng-options="bodyCategory.text as bodyCategory.text for bodyCategory in bodyCategoryList"
+                            ng-disabled="isEdit"
+                            required
+                            ng-change="getFrequency()"
+                            ris-enter-index></select>
+                </div>
+                <div ng-messages="checkCodeForm.bodyCategory.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="showBodyCategoryActive()">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="form-group col-md-3" tabindex="3">
+                <label class="col-md-5">设备类型<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.modalityType" name="modalityType"
+                            ng-options="m for m in modalityTypeList"
+                            ng-disabled="isEdit"
+                            ng-change="getDefaultModality();"
+                            required
+                            ris-enter-index></select>
+                </div>
+                <div ng-messages="checkCodeForm.modalityType.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                <label>
+                    <input type="checkbox" ng-disabled="isEdit" ng-model="procedureInfo.enhance" ng-true-value="1" ng-false-value="0" />
+                    是否增强
+                </label>
+            </div>
+        </div>
+        <div class="clear-float">
+            <div class="form-group col-md-3">
+                <label class="col-md-5">默认设备</label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.defaultModality" name="defaultModality"
+                            ng-options="d.modalityName as d.modalityName for d in defaultModalityList"
+                            ng-selected="procedureInfo.defaultModality==d.modalityName"
+                            ng-disabled="isEdit"
+                            ris-enter-index>
+                        <!--<option ng-selected="procedureInfo.defaultModality==d.modalityName"
+                            ng-repeat="d in defaultModalityList"
+                            value="{{d.modalityName}}">
+                            {{d.modalityName}}
+                        </option>-->
+                    </select>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+            <div class="form-group col-md-3" tabindex="4">
+                <label class="col-md-5">检查项目<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.checkingItem" name="checkingItem"
+                            ng-options="c.text as c.text for c in checkingItemList"
+                            required
+                            ng-change="getFrequency()"
+                            ris-enter-index></select>
+                </div>
+                <div ng-messages="checkCodeForm.checkingItem.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="showCheckingItemActive()">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="form-group col-md-3" tabindex="5">
+                <label class="col-md-5">检查部位<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.bodyPart" name="bodyPart"
+                            ng-options="bodyPart.bodyPart as bodyPart.bodyPart for bodyPart in bodyPartList"
+                            ng-change="getBodySystemMap(true)"
+                            required
+                            ris-enter-index></select>
+                </div>
+                <div ng-messages="checkCodeForm.bodyPart.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="showBodyPartActive()">
+                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <div class="clear-float">
+            <div class="form-group col-md-3" tabindex="6">
+                <label class="col-md-5">部位分类频率</label>
+                <div class="col-md-7">
+                    <input class="form-control" type="number" ng-model="procedureInfo.frequency" name="frequency"
+                           ris-auto-focus ris-enter-index disabled />
+                </div>
+                <div ng-messages="checkCodeForm.frequency.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="col-md-5">检查系统</label>
+                <div class="col-md-7">
+                    <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.examSystem" />
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="col-md-5">检查项目频率</label>
+                <div class="col-md-7">
+                    <input class="form-control" type="number" ng-model="procedureInfo.checkingItemFrequency" disabled />
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+        </div>
+        <div class="clear-float">
+            <div class="form-group col-md-3">
+                <label class="col-md-5">部位频率</label>
+                <div class="col-md-7">
+                    <input class="form-control" type="number" ng-model="procedureInfo.bodypartFrequency" disabled />
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+            <div class="form-group col-md-3">
+                <label class="col-md-5">胶片规格</label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.filmSpec" name="filmspec"
+                            ng-options="filmSpec.value as filmSpec.text for filmSpec in filmspecList"
+                            ng-disabled="isEdit"
+                            ris-enter-index></select>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+            </div>
+            <div class="form-group col-md-3" tabindex="7">
+                <label class="col-md-5">持续检查<span class="registration-edit-required">*</span></label>
+                <div class="col-md-7">
+                    <select class="form-control" ng-model="procedureInfo.duration" name="duration"
+                            ng-options="duration.value as duration.text for duration in durationList"
+                            ng-disabled="isEdit"
+                            required
+                            ris-enter-index></select>
+                </div>
+                <div ng-messages="checkCodeForm.duration.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                    <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                </div>
+            </div>
+            <div class="form-group col-md-1">
+                分钟
+            </div>
+        </div>
+        
+        <div class="form-group col-md-3">
+            <label class="col-md-5">胶片数量</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" ng-model="procedureInfo.filmCount" name="filmCount" min="0" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">前期准备</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.preparation" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">费用</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="charge" ng-model="procedureInfo.charge" min="0" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">图像数</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="imageCount" ng-model="procedureInfo.imageCount" min="0" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">造影剂</label>
+            <div class="col-md-7">
+                <select class="form-control" ng-model="procedureInfo.contrastName" name="contrastName"
+                        ng-options="contrastName.value as contrastName.text  for contrastName in contrastNameList"
+                        ng-disabled="isEdit"
+                        ris-enter-index></select>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">曝光数</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="exposalCount" ng-model="procedureInfo.exposalCount" min="0" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">造影剂量</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.contrastDose" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">快捷码</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.shortcutCode" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">检查</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.description" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">英文描述</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.englishDescription" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3 col-md-offset-4">
+            <label class="col-md-5">临床设备</label>
+            <div class="col-md-7">
+                <input class="form-control" type="text" ng-disabled="isEdit" ng-model="procedureInfo.bodypartFrequency" />
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+            <label class="col-md-12">
+                <input type="checkbox" ng-disabled="isEdit" ng-model="procedureInfo.puncture" ng-true-value="1" ng-false-value="0" />
+                穿刺
+            </label>
+            <label class="col-md-12">
+                <input type="checkbox" ng-disabled="isEdit" ng-model="procedureInfo.radiography" ng-true-value="1" ng-false-value="0" />
+                造影
+            </label>
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">技师</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="technicianWeight"
+                       ng-model="procedureInfo.technicianWeight" min="1" />
+            </div>
+            <div ng-messages="checkCodeForm.technicianWeight.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                <div ng-message="min"><span class="label label-danger" translate>该项最小值为1</span></div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">报告医生</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="radiologistWeight"
+                       ng-model="procedureInfo.radiologistWeight" min="1" />
+            </div>
+            <div ng-messages="checkCodeForm.radiologistWeight.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                <div ng-message="min"><span class="label label-danger" translate>该项最小值为1</span></div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+        <div class="form-group col-md-3">
+            <label class="col-md-5">审核医生</label>
+            <div class="col-md-7">
+                <input class="form-control" type="number" ng-disabled="isEdit" name="approvedRadiologistWeight"
+                       ng-model="procedureInfo.approvedRadiologistWeight" min="1" />
+            </div>
+            <div ng-messages="checkCodeForm.approvedRadiologistWeight.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                <div ng-message="min"><span class="label label-danger" translate>该项最小值为1</span></div>
+            </div>
+        </div>
+        <div class="form-group col-md-1">
+        </div>
+    </form>
+    <div style="background-color:#f5f5f5;height:60px;">
+        <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+            <li>
+                <button type="button" class="btn btn-primary" ng-click="quilt()" data-dismiss="modal">取消</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-primary" ng-click="saveCheckCode(checkCodeForm)">保存</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-primary" ng-disabled="!isAdd" ng-click="clear()">清空</button>
+            </li>
+            <!--<li ng-show="false">
+                <button type="button" class="btn btn-primary">复制部位到站点</button>
+            </li>
+            <li ng-show="false">
+                <button type="button" class="btn btn-primary">删除站点部位</button>
+            </li>-->
+        </ul>
+    </div>
+    
+    <div class="hys-confirm-modal" ng-show="isSmallModalShow">
+        <div class="hys-modal-bg"></div>
+        <div class="modal-main">
+            <form ng-show="showBodyCategory" name="bodyCategoryForm">
+                <div class="form-group col-md-12">
+                    <label>部位分类<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="subbodyCategory" name="subbodyCategory"
+                               ris-auto-focus ris-enter-index required />
+                    </div>
+                    <div ng-messages="bodyCategoryForm.subbodyCategory.$error" class="col-md-12" ng-if="isShowSub1ErrorMsg">
+                        <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                    </div>
+                </div>
+            </form>
+            <form ng-show="showCheckingItem" name="checkingItemForm">
+                <div class="form-group col-md-12">
+                    <label>检查项目<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="subcheckingItem" name="subcheckingItem"
+                               ris-auto-focus ris-enter-index required />
+                    </div>
+                    <div ng-messages="checkingItemForm.subcheckingItem.$error" class="col-md-9 col-md-offset-3" ng-if="isShowSub2ErrorMsg">
+                        <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                    </div>
+                </div>
+            </form>
+            <form ng-show="showBodyPart" name="bodyPartForm">
+                <div class="form-group col-md-12">
+                    <label>设备类型<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <select class="form-control" ng-model="submodalityType" name="submodalityType"
+                                ng-options="modalityType as modalityType for modalityType in modalityTypeList"
+                                ng-disabled="isEdit"
+                                required
+                                ris-enter-index></select>
+                    </div>
+                    <div ng-messages="bodyPartForm.submodalityType.$error" class="col-md-9 col-md-offset-3" ng-if="isShowSub3ErrorMsg">
+                        <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>检查部位<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="subbodyPart" name="subbodyPart"
+                               ris-auto-focus ris-enter-index required />
+                    </div>
+                    <div ng-messages="bodyPartForm.subbodyPart.$error" class="col-md-9 col-md-offset-3" ng-if="isShowSub3ErrorMsg">
+                        <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>检查系统<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <select class="form-control" ng-model="subexamSystem" name="subexamSystem"
+                                ng-options="subexamSystem.text as subexamSystem.text for subexamSystem in subexamSystemList"
+                                ng-disabled="isEdit"
+                                required
+                                ris-enter-index></select>
+                    </div>
+                    <div ng-messages="bodyPartForm.subexamSystem.$error" class="col-md-9 col-md-offset-3" ng-if="isShowSub3ErrorMsg">
+                        <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                    </div>
+                </div>
+            </form>
+            <div class="hys-modal-footer">
+                <div>
+                    <button class="btn btn-primary" ng-click="smallAddSub()">确定</button>
+                    <button class="btn btn-primary" ng-click="closeSmallModal()">取消</button>
+                </div>    
+            </div>
+        </div>
+    </div>
+</div>

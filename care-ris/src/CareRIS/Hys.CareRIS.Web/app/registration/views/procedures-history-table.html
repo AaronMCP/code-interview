@@ -1,0 +1,44 @@
+﻿<table class="table table-hover quality-table">
+    <colgroup>
+        <col />
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+        <col/>
+    </colgroup>
+    <thead>
+    <tr>
+        <th translate>CreateTime</th>
+        <th translate>Procedure</th>
+        <th translate>AccNo</th>
+        <th translate>ModalityType</th>
+        <th translate>Modality</th>
+        <th translate>Registrar</th>
+        <th translate>Status</th>
+        <th translate>PreviewReport</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat=" row in procedureHistoryItems" ng-if="procedureHistoryItems.length !== 0">
+        <td>{{row.createTime|date:'yyyy-MM-dd HH:mm'}}</td>
+        <td>{{row.rpDesc}}</td>
+        <td>{{row.accNo}}</td>
+        <td>{{row.modalityType}}</td>
+        <td>{{row.modality}}</td>
+        <td>{{row.registrar}}</td>
+        <td ng-bind-html="row.status|statusFilter:statusList"></td>
+        <td>
+            <a ng-hide="row.reportID===null" href="javascript:void(0);"
+               title="{{'PreviewReport'|translate}}"
+               class="iconfont icon-baogaomoban" ng-mouseenter="$parent.prepareSummary(row)"
+               ng-click="$parent.showSummary()"
+               ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+               data-placement="auto right left bottom top"
+               data-templateurl="/app/registration/views/registration-history-report-preview.html"></a>
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<csb:Index xmlns:csb="http://www.carestream.com/csbroker">
+  <csb:Table>
+    <csb:DATAINDEX_DATA_SOURCE/>
+    <csb:DATAINDEX_EVENT_TYPE></csb:DATAINDEX_EVENT_TYPE>
+    <csb:DATAINDEX_PROCESS_FLAG>0</csb:DATAINDEX_PROCESS_FLAG>
+    <csb:DATAINDEX_RECORD_INDEX_1>EXCEPTION</csb:DATAINDEX_RECORD_INDEX_1>
+    <csb:DATAINDEX_RECORD_INDEX_2>Can not outbound this message according to current system configuration, please see log files for details.</csb:DATAINDEX_RECORD_INDEX_2>
+    <csb:DATAINDEX_RECORD_INDEX_3/>
+    <csb:DATAINDEX_RECORD_INDEX_4/>
+  </csb:Table>
+</csb:Index>

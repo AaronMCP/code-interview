@@ -1,0 +1,249 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7E36712-34DB-4440-B090-62D108186271}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.Messaging.Config</RootNamespace>
+    <AssemblyName>HYS.Messaging.Config</AssemblyName>
+    <SccProjectName>Rational ClearCase</SccProjectName>
+    <SccLocalPath>Rational ClearCase</SccLocalPath>
+    <SccAuxPath>Rational ClearCase</SccAuxPath>
+    <SccProvider>Rational ClearCase</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/CSH.XDSGateway.Messaging.Config/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormChannelURI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChannelURI.Designer.cs">
+      <DependentUpon>FormChannelURI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDuplexProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDuplexProcess.Designer.cs">
+      <DependentUpon>FormDuplexProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInteractionType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInteractionType.Designer.cs">
+      <DependentUpon>FormInteractionType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.Publish.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Request.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Response.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Subscribe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageType.Designer.cs">
+      <DependentUpon>FormMessageType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMessageTypePair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMessageTypePair.Designer.cs">
+      <DependentUpon>FormMessageTypePair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOneWayProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOneWayProcess.Designer.cs">
+      <DependentUpon>FormOneWayProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPullChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPullChannel.Designer.cs">
+      <DependentUpon>FormPullChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPushChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPushChannel.Designer.cs">
+      <DependentUpon>FormPushChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormChannelURI.resx">
+      <DependentUpon>FormChannelURI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDuplexProcess.resx">
+      <DependentUpon>FormDuplexProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInteractionType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormInteractionType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageType.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMessageType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMessageTypePair.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormMessageTypePair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOneWayProcess.resx">
+      <DependentUpon>FormOneWayProcess.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPullChannel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormPullChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPushChannel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormPushChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ProtocolTypeControler.cs" />
+    <Compile Include="RoutingTypeControler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859b757e-44c6-4183-8e1e-9c3c21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Logging\Common.Logging.csproj">
+      <Project>{391A304B-8F73-4D9C-AD82-2DB495EF6E23}</Project>
+      <Name>Common.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Base\Messaging.Base.csproj">
+      <Project>{670743BB-BD5E-4840-87D9-6D507F3535F6}</Project>
+      <Name>Messaging.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Mapping\Messaging.Mapping.csproj">
+      <Project>{5497186E-8E85-4BE2-BDEE-46EF44828796}</Project>
+      <Name>Messaging.Mapping</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Objects\Messaging.Objects.csproj">
+      <Project>{BB39B254-8B49-4924-9124-A66271B913D1}</Project>
+      <Name>Messaging.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Queuing\Messaging.Queuing.csproj">
+      <Project>{8BDE987B-8994-4E34-A809-F23792560866}</Project>
+      <Name>Messaging.Queuing</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft.Net.Framework.2.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

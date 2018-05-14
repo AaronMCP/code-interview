@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Message>
+  <Header />
+  <Body>
+    <HL7><MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" DTOfMessage="200603121200" MessageControlID="10503102"><SendingApplication NameSpaceID="MESA_PIX_CLIENT"/><SendingFacility NameSpaceID="MESA_DEPARTMENT"/><ReceivingApplication NameSpaceID="MESA_XREF"/><ReceivingFacility NameSpaceID="XYZ_HOSPITAL"/><MessageType MessageCode="QBP" TriggerEvent="Q23" MessageStructure="QBP_Q21"/><ProcessingID ProcessingID="P"/><VersionID VersionID="2.5"/></MSH><QPD QueryTag="QRY10503102"><MessageQueryName Identifier="QRY_1001" Text="Query for Corresponding Identifiers" NameOfCodingSystem="IHEDEMO"/><DemographicsFields SegmentFieldName="ABC10503"/></QPD><RCP QueryPriority="I"/></HL7>
+  </Body>
+</Message>

@@ -1,0 +1,39 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>SelectUserToReject</h4>
+</div>
+<div class="modal-body" style="overflow-x: hidden; overflow-y: auto;">
+    <form class="form-horizontal" role="form">
+
+        <div class="form-group">
+            <div class="col-sm-8">
+                <div id="treeContainer">
+                    <div class="sectionContainer k-header" style="background-color:#fff;">
+                        <div id="treeview" kendo-tree-view k-options="treeOptions"></div>
+                    </div>
+
+                    <style scoped>
+                        #treeContainer {
+                            text-align: center;
+                        }
+
+                        .sectionContainer {
+                            display: inline-block;
+                            vertical-align: top;
+                            width: 100%;
+                            height: 100px;
+                            text-align: left;
+                        }
+                    </style>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-green" ng-click="select()" translate>
+        Select
+    </button>
+    <button class="btn btn-default" ng-click="cancel()" translate>Cancel</button>
+
+</div>

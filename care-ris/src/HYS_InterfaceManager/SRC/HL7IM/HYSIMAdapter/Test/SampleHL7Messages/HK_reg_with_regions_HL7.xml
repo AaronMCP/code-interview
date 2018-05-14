@@ -1,0 +1,477 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Message>
+  <Header />
+  <Body>
+<ris:ORM_O01 xmlns:ris="urn:hl7-org:v2xml">
+   <ris:MSH>
+      <ris:MSH.1>|</ris:MSH.1>
+      <ris:MSH.2>^~\&amp;</ris:MSH.2>
+      <ris:MSH.3>
+         <ris:HD.1>RIS</ris:HD.1>
+         <ris:HD.2>RAD-EP-SCH</ris:HD.2>
+         <ris:HD.3>L</ris:HD.3>
+      </ris:MSH.3>
+      <ris:MSH.4>
+         <ris:HD.1>QEH</ris:HD.1>
+         <ris:HD.2>QEH</ris:HD.2>
+         <ris:HD.3>DNS</ris:HD.3>
+      </ris:MSH.4>
+      <ris:MSH.5>
+         <ris:HD.1/>
+      </ris:MSH.5>
+      <ris:MSH.6>
+         <ris:HD.1>HAHO</ris:HD.1>
+      </ris:MSH.6>
+      <ris:MSH.7>
+         <ris:TS.1>20110112161716.906</ris:TS.1>
+      </ris:MSH.7>
+      <ris:MSH.9>
+         <ris:MSG.1>ORM</ris:MSG.1>
+         <ris:MSG.2>O01</ris:MSG.2>
+         <ris:MSG.3>ORM_O01</ris:MSG.3>
+      </ris:MSH.9>
+      <ris:MSH.10>RIS00420110112000010</ris:MSH.10>
+      <ris:MSH.11>
+         <ris:PT.2>P</ris:PT.2>
+      </ris:MSH.11>
+      <ris:MSH.12>
+         <ris:VID.1>2.3.1</ris:VID.1>
+      </ris:MSH.12>
+      <ris:MSH.13>RIS00420110112000010</ris:MSH.13>
+      <ris:MSH.15>NE</ris:MSH.15>
+      <ris:MSH.16>NE</ris:MSH.16>
+      <ris:MSH.17>HKG</ris:MSH.17>
+      <ris:MSH.18>UNICODE</ris:MSH.18>
+      <ris:MSH.19>
+         <ris:CE.1>CHT</ris:CE.1>
+      </ris:MSH.19>
+   </ris:MSH>
+   <ris:ORM_O01.PATIENT>
+      <ris:PID>
+         <ris:PID.1>1</ris:PID.1>
+         <ris:PID.3>
+            <ris:CX.1> C5555556   </ris:CX.1>
+            <ris:CX.5>9</ris:CX.5>
+         </ris:PID.3>
+         <ris:PID.3>
+            <ris:CX.1>00000157</ris:CX.1>
+            <ris:CX.5>PATKEY</ris:CX.5>
+            <ris:CX.6>
+               <ris:HD.1>HA</ris:HD.1>
+            </ris:CX.6>
+         </ris:PID.3>
+         <ris:PID.5>
+            <ris:XPN.1>
+               <ris:FN.1>HO, SAI CHONG                                   </ris:FN.1>
+            </ris:XPN.1>
+         </ris:PID.5>
+         <ris:PID.7>
+            <ris:TS.1>19810101000000.000</ris:TS.1>
+         </ris:PID.7>
+         <ris:PID.8>M</ris:PID.8>
+         <ris:PID.30>N</ris:PID.30>
+      </ris:PID>
+      <ris:NTE>
+         <ris:NTE.1>1</ris:NTE.1>
+         <ris:NTE.3>S</ris:NTE.3>
+      </ris:NTE>
+      <ris:NTE>
+         <ris:NTE.1>1</ris:NTE.1>
+         <ris:NTE.3>S</ris:NTE.3>
+      </ris:NTE>
+      <ris:ORM_O01.PATIENT_VISIT>
+         <ris:PV1>
+            <ris:PV1.1>1</ris:PV1.1>
+            <ris:PV1.2>O</ris:PV1.2>
+            <ris:PV1.3>
+               <ris:PL.1/>
+               <ris:PL.2/>
+               <ris:PL.3/>
+               <ris:PL.4>
+                  <ris:HD.1/>
+               </ris:PL.4>
+            </ris:PV1.3>
+            <ris:PV1.6>
+               <ris:PL.1>@NM </ris:PL.1>
+               <ris:PL.2>@DRI</ris:PL.2>
+               <ris:PL.3/>
+               <ris:PL.4>
+                  <ris:HD.1>QEH</ris:HD.1>
+               </ris:PL.4>
+            </ris:PV1.6>
+            <ris:PV1.7>
+               <ris:XCN.1>CT259     </ris:XCN.1>
+               <ris:XCN.2>
+                  <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+               </ris:XCN.2>
+               <ris:XCN.14>
+                  <ris:HD.1>QEH</ris:HD.1>
+               </ris:XCN.14>
+            </ris:PV1.7>
+            <ris:PV1.11>
+               <ris:PL.2>NMR1 </ris:PL.2>
+            </ris:PV1.11>
+            <ris:PV1.18/>
+            <ris:PV1.19>
+               <ris:CX.1>HN04004636V </ris:CX.1>
+               <ris:CX.6>
+                  <ris:HD.1>QEH</ris:HD.1>
+               </ris:CX.6>
+            </ris:PV1.19>
+            <ris:PV1.39/>
+            <ris:PV1.44>
+               <ris:TS.1/>
+            </ris:PV1.44>
+            <ris:PV1.45>
+               <ris:TS.1/>
+            </ris:PV1.45>
+            <ris:PV1.51>V</ris:PV1.51>
+         </ris:PV1>
+      </ris:ORM_O01.PATIENT_VISIT>
+      <ris:AL1>
+         <ris:AL1.1>1</ris:AL1.1>
+         <ris:AL1.2>P</ris:AL1.2>
+         <ris:AL1.3>
+            <ris:CE.2>testing </ris:CE.2>
+         </ris:AL1.3>
+         <ris:AL1.5>0001 </ris:AL1.5>
+      </ris:AL1>
+      <ris:AL1>
+         <ris:AL1.1>2</ris:AL1.1>
+         <ris:AL1.2>P</ris:AL1.2>
+         <ris:AL1.3>
+            <ris:CE.2>testing 2</ris:CE.2>
+         </ris:AL1.3>
+         <ris:AL1.5>0002</ris:AL1.5>
+      </ris:AL1>
+   </ris:ORM_O01.PATIENT>
+   <ris:ORM_O01.ORDER>
+      <ris:ORC>
+         <ris:ORC.2>
+            <ris:EI.1>OR1012161424:0</ris:EI.1>
+            <ris:EI.2>QEH</ris:EI.2>
+         </ris:ORC.2>
+         <ris:ORC.3>
+            <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+         </ris:ORC.3>
+         <ris:ORC.7/>
+         <ris:ORC.9>
+            <ris:TS.1>20110112161710.853</ris:TS.1>
+         </ris:ORC.9>
+         <ris:ORC.10>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.10>
+         <ris:ORC.12>
+            <ris:XCN.1>CT259     </ris:XCN.1>
+            <ris:XCN.2>
+               <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+            </ris:XCN.2>
+            <ris:XCN.14>
+               <ris:HD.1>QEH</ris:HD.1>
+            </ris:XCN.14>
+         </ris:ORC.12>
+         <ris:ORC.15>
+            <ris:TS.1>20110112161716.630</ris:TS.1>
+         </ris:ORC.15>
+         <ris:ORC.19>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.19>
+      </ris:ORC>
+      <ris:ORM_O01.ORDER_DETAIL>
+         <ris:ORM_O01.CHOICE>
+            <ris:OBR>
+               <ris:OBR.1>1</ris:OBR.1>
+               <ris:OBR.2>
+                  <ris:EI.1>OR1012161424:0</ris:EI.1>
+                  <ris:EI.2>QEH</ris:EI.2>
+               </ris:OBR.2>
+               <ris:OBR.3>
+                  <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+               </ris:OBR.3>
+               <ris:OBR.4>
+                  <ris:CE.1>9042           </ris:CE.1>
+                  <ris:CE.2>Brain HMPAOstab+D</ris:CE.2>
+               </ris:OBR.4>
+               <ris:OBR.5>1</ris:OBR.5>
+               <ris:OBR.6>
+                  <ris:TS.1>20101216142400.000</ris:TS.1>
+               </ris:OBR.6>
+               <ris:OBR.16>
+                  <ris:XCN.1>CT259     </ris:XCN.1>
+                  <ris:XCN.2>
+                     <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+                  </ris:XCN.2>
+                  <ris:XCN.14>
+                     <ris:HD.1>QEH</ris:HD.1>
+                  </ris:XCN.14>
+               </ris:OBR.16>
+               <ris:OBR.18>QEH000443634P   </ris:OBR.18>
+               <ris:OBR.22>
+                  <ris:TS.1/>
+               </ris:OBR.22>
+               <ris:OBR.25>S</ris:OBR.25>
+               <ris:OBR.26>
+                  <ris:PRL.1>
+                     <ris:CE.1/>
+                  </ris:PRL.1>
+               </ris:OBR.26>
+               <ris:OBR.29>
+                  <ris:EIP.2>
+                     <ris:EI.1/>
+                  </ris:EIP.2>
+               </ris:OBR.29>
+               <ris:OBR.30>WALK</ris:OBR.30>
+               <ris:OBR.32>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.32>
+               <ris:OBR.33>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.33>
+               <ris:OBR.36>
+                  <ris:TS.1/>
+               </ris:OBR.36>
+               <ris:OBR.44>
+                  <ris:CE.1>9042           </ris:CE.1>
+                  <ris:CE.2>Brain HMPAOstab+D</ris:CE.2>
+               </ris:OBR.44>
+               <ris:OBR.45>
+                  <ris:CE.1>9042           </ris:CE.1>
+                  <ris:CE.2>Brain HMPAOstab+D</ris:CE.2>
+               </ris:OBR.45>
+            </ris:OBR>
+         </ris:ORM_O01.CHOICE>
+      </ris:ORM_O01.ORDER_DETAIL>
+   </ris:ORM_O01.ORDER>
+   <ris:ORM_O01.ORDER>
+      <ris:ORC>
+         <ris:ORC.2>
+            <ris:EI.1>OR1012161424:0</ris:EI.1>
+            <ris:EI.2>QEH</ris:EI.2>
+         </ris:ORC.2>
+         <ris:ORC.3>
+            <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+         </ris:ORC.3>
+         <ris:ORC.7/>
+         <ris:ORC.9>
+            <ris:TS.1>20110112161710.853</ris:TS.1>
+         </ris:ORC.9>
+         <ris:ORC.10>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.10>
+         <ris:ORC.12>
+            <ris:XCN.1>CT259     </ris:XCN.1>
+            <ris:XCN.2>
+               <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+            </ris:XCN.2>
+            <ris:XCN.14>
+               <ris:HD.1>QEH</ris:HD.1>
+            </ris:XCN.14>
+         </ris:ORC.12>
+         <ris:ORC.15>
+            <ris:TS.1>20110112161716.630</ris:TS.1>
+         </ris:ORC.15>
+         <ris:ORC.19>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.19>
+      </ris:ORC>
+      <ris:ORM_O01.ORDER_DETAIL>
+         <ris:ORM_O01.CHOICE>
+            <ris:OBR>
+               <ris:OBR.1>1</ris:OBR.1>
+               <ris:OBR.2>
+                  <ris:EI.1>OR1012161424:0</ris:EI.1>
+                  <ris:EI.2>QEH</ris:EI.2>
+               </ris:OBR.2>
+               <ris:OBR.3>
+                  <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+               </ris:OBR.3>
+               <ris:OBR.4>
+                  <ris:CE.1>9045           </ris:CE.1>
+                  <ris:CE.2>Brain ECD</ris:CE.2>
+               </ris:OBR.4>
+               <ris:OBR.5>1</ris:OBR.5>
+               <ris:OBR.6>
+                  <ris:TS.1>20101216142400.000</ris:TS.1>
+               </ris:OBR.6>
+               <ris:OBR.16>
+                  <ris:XCN.1>CT259     </ris:XCN.1>
+                  <ris:XCN.2>
+                     <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+                  </ris:XCN.2>
+                  <ris:XCN.14>
+                     <ris:HD.1>QEH</ris:HD.1>
+                  </ris:XCN.14>
+               </ris:OBR.16>
+               <ris:OBR.18>QEH000443634P   </ris:OBR.18>
+               <ris:OBR.22>
+                  <ris:TS.1/>
+               </ris:OBR.22>
+               <ris:OBR.25>S</ris:OBR.25>
+               <ris:OBR.26>
+                  <ris:PRL.1>
+                     <ris:CE.1/>
+                  </ris:PRL.1>
+               </ris:OBR.26>
+               <ris:OBR.29>
+                  <ris:EIP.2>
+                     <ris:EI.1/>
+                  </ris:EIP.2>
+               </ris:OBR.29>
+               <ris:OBR.30>WALK</ris:OBR.30>
+               <ris:OBR.32>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.32>
+               <ris:OBR.33>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.33>
+               <ris:OBR.36>
+                  <ris:TS.1/>
+               </ris:OBR.36>
+               <ris:OBR.44>
+                  <ris:CE.1>9045           </ris:CE.1>
+                  <ris:CE.2>Brain ECD</ris:CE.2>
+               </ris:OBR.44>
+               <ris:OBR.45>
+                  <ris:CE.1>9045           </ris:CE.1>
+                  <ris:CE.2>Brain ECD</ris:CE.2>
+               </ris:OBR.45>
+            </ris:OBR>
+         </ris:ORM_O01.CHOICE>
+      </ris:ORM_O01.ORDER_DETAIL>
+   </ris:ORM_O01.ORDER>
+   <ris:ORM_O01.ORDER>
+      <ris:ORC>
+         <ris:ORC.2>
+            <ris:EI.1>OR1012161424:0</ris:EI.1>
+            <ris:EI.2>QEH</ris:EI.2>
+         </ris:ORC.2>
+         <ris:ORC.3>
+            <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+         </ris:ORC.3>
+         <ris:ORC.7/>
+         <ris:ORC.9>
+            <ris:TS.1>20110112161710.853</ris:TS.1>
+         </ris:ORC.9>
+         <ris:ORC.10>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.10>
+         <ris:ORC.12>
+            <ris:XCN.1>CT259     </ris:XCN.1>
+            <ris:XCN.2>
+               <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+            </ris:XCN.2>
+            <ris:XCN.14>
+               <ris:HD.1>QEH</ris:HD.1>
+            </ris:XCN.14>
+         </ris:ORC.12>
+         <ris:ORC.15>
+            <ris:TS.1>20110112161716.630</ris:TS.1>
+         </ris:ORC.15>
+         <ris:ORC.19>
+            <ris:XCN.1>aye676</ris:XCN.1>
+         </ris:ORC.19>
+      </ris:ORC>
+      <ris:ORM_O01.ORDER_DETAIL>
+         <ris:ORM_O01.CHOICE>
+            <ris:OBR>
+               <ris:OBR.1>1</ris:OBR.1>
+               <ris:OBR.2>
+                  <ris:EI.1>OR1012161424:0</ris:EI.1>
+                  <ris:EI.2>QEH</ris:EI.2>
+               </ris:OBR.2>
+               <ris:OBR.3>
+                  <ris:EI.1>ENM11000001N00004   </ris:EI.1>
+               </ris:OBR.3>
+               <ris:OBR.4>
+                  <ris:CE.1>9046           </ris:CE.1>
+                  <ris:CE.2>Brain ECD+D</ris:CE.2>
+               </ris:OBR.4>
+               <ris:OBR.5>1</ris:OBR.5>
+               <ris:OBR.6>
+                  <ris:TS.1>20101216142400.000</ris:TS.1>
+               </ris:OBR.6>
+               <ris:OBR.16>
+                  <ris:XCN.1>CT259     </ris:XCN.1>
+                  <ris:XCN.2>
+                     <ris:FN.1>CHEUK, TSAN</ris:FN.1>
+                  </ris:XCN.2>
+                  <ris:XCN.14>
+                     <ris:HD.1>QEH</ris:HD.1>
+                  </ris:XCN.14>
+               </ris:OBR.16>
+               <ris:OBR.18>QEH000443634P   </ris:OBR.18>
+               <ris:OBR.22>
+                  <ris:TS.1/>
+               </ris:OBR.22>
+               <ris:OBR.25>S</ris:OBR.25>
+               <ris:OBR.26>
+                  <ris:PRL.1>
+                     <ris:CE.1/>
+                  </ris:PRL.1>
+               </ris:OBR.26>
+               <ris:OBR.29>
+                  <ris:EIP.2>
+                     <ris:EI.1/>
+                  </ris:EIP.2>
+               </ris:OBR.29>
+               <ris:OBR.30>WALK</ris:OBR.30>
+               <ris:OBR.32>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.32>
+               <ris:OBR.33>
+                  <ris:NDL.1>
+                     <ris:CN.1/>
+                     <ris:CN.2/>
+                  </ris:NDL.1>
+                  <ris:NDL.3>
+                     <ris:TS.1/>
+                  </ris:NDL.3>
+               </ris:OBR.33>
+               <ris:OBR.36>
+                  <ris:TS.1/>
+               </ris:OBR.36>
+               <ris:OBR.44>
+                  <ris:CE.1>9046           </ris:CE.1>
+                  <ris:CE.2>Brain ECD+D</ris:CE.2>
+               </ris:OBR.44>
+               <ris:OBR.45>
+                  <ris:CE.1>9046           </ris:CE.1>
+                  <ris:CE.2>Brain ECD+D</ris:CE.2>
+               </ris:OBR.45>
+            </ris:OBR>
+         </ris:ORM_O01.CHOICE>
+      </ris:ORM_O01.ORDER_DETAIL>
+   </ris:ORM_O01.ORDER>
+</ris:ORM_O01>
+  </Body>
+</Message>

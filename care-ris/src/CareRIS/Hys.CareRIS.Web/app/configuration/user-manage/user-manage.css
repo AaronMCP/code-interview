@@ -1,0 +1,73 @@
+﻿.user-manage {
+    height:100%;
+    position:relative;
+}
+    .user-manage .k-grid {
+        border:0;
+        height: 100%;
+    }
+    .user-manage .user-manage-top {
+        padding-top:20px;
+        padding-bottom:20px;
+        overflow: auto;
+    }
+    .user-manage .user-manage-content{
+        position: absolute;
+        top:110px;
+        bottom: 0;
+
+    }
+    .user-manage .user-manage-top form {
+        overflow:hidden;
+    }
+    .user-manage .user-manage-top form > .col-md-12 .col-md-5 {
+        width:auto;
+        line-height:34px;
+        padding-right:5px;
+    }
+    .user-manage .user-manage-top form > .col-md-12 .col-md-7 {
+       width:11%;
+       padding-right:10px;
+    }
+.user-manage .user-manage-top form > .col-md-1 {
+    width:4%;
+}
+.user-manage .user-manage-top form > .col-md-1 .btn{
+    float:right;
+}
+        .user-manage .user-manage-top form .form-group {
+            margin-bottom:0;
+        }
+    .user-manage .user-manage-top form > .col-md-2 label {
+        line-height:34px;
+    }
+.user-manage .user-manage-top .navbar-right {
+    margin-right:0;
+}
+ .user-manage .hys-modal .modal-dialog .modal-header{
+        height:37px;
+    }
+    .user-manage .hys-modal .modal-dialog {
+        top:90px;
+        bottom:50px;
+        width:95%;    
+    }
+        .user-manage .hys-modal .modal-dialog .modal-content {
+            height:100%;
+            overflow-y: hidden;
+        }
+        .user-manage .hys-modal .modal-dialog .modal-content .modal-body{
+            height:94%;
+        }
+.k-multiselect-wrap {
+    height: 34px;
+    overflow-x: auto;
+
+}
+.k-multiselect-wrap > ul{
+
+}
+.k-multiselect-wrap > ul > li {
+    float: left;
+
+}

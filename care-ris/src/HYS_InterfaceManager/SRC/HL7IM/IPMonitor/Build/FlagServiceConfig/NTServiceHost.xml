@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?><NTServiceHostConfig><Entities><EntityAssemblyConfig><Enable>True</Enable>
+<ClassName><![CDATA[HYS.HL7Gateway.IPMonitor.EntityImpl]]></ClassName>
+<AssemblyLocation><![CDATA[App\HYS.HL7Gateway.IPMonitor.exe]]></AssemblyLocation>
+<InitializeArgument><ConfigFilePath><![CDATA[App\]]></ConfigFilePath>
+<LogConfig><LogType>Error</LogType>
+<DurationDay>7</DurationDay>
+<HostName /><DumpData>False</DumpData>
+</LogConfig>
+<Description /></InitializeArgument>
+<EntityInfo><EntityID>00000000-0000-0000-0000-000000000000</EntityID>
+<Name><![CDATA[]]></Name>
+<DeviceName><![CDATA[]]></DeviceName>
+<Description><![CDATA[]]></Description>
+</EntityInfo>
+</EntityAssemblyConfig>
+</Entities>
+<LogConfig><LogType>Information</LogType>
+<DurationDay>7</DurationDay>
+<HostName>FlagService</HostName>
+<DumpData>False</DumpData>
+</LogConfig>
+<ServiceName><![CDATA[FlagService]]></ServiceName>
+<DependOnServiceNameList><![CDATA[]]></DependOnServiceNameList>
+<StartType>Automatic</StartType>
+<AccountType>LocalSystem</AccountType>
+<InteractWithDesktop>False</InteractWithDesktop>
+<UserName><![CDATA[]]></UserName>
+<Password><![CDATA[]]></Password>
+<Description><![CDATA[CS Broker Flag Service Monitoring Other Services.]]></Description>
+<NotifyStatusToManager>False</NotifyStatusToManager>
+<ManagerWindowCaption /></NTServiceHostConfig>

@@ -1,0 +1,15 @@
+﻿<div style="height:100%;position:relative;padding-top:50px;">
+    <div style="height:50px;width:100%;line-height:50px;vertical-align:middle;float:left;margin-top:-50px;margin-bottom:0;padding:8px 15px;"
+         class="navbar navbar-default navbar-static-top">
+        <button class="btn btn-default pull-left" style="margin-right:10px;" translate ng-click="returnWorkList()">Return</button>
+        <button class="btn btn-default pull-left" ng-if="isPACSIntegration" style="margin-right:10px;"
+                translate ng-click="openPACSImageViewer()">
+            CallImage
+        </button>
+        <button class="btn btn-default pull-left" style="margin-right:10px;" ng-disabled="isDisabledEditReport" translate ng-click="editReport()">EditReport</button>
+        <button class="btn btn-default pull-left" style="margin-right:10px;" translate ng-click="printReport(procedureId)">PrintReport</button>
+    </div>
+    <div id="inputContainer" style="overflow: hidden;height:98%;width:100%;padding:8px 15px;">
+        <iframe id="iframeReport" width="100%" height="100%" frameborder="0" marginwidth="0" marginheight="0" scrolling="auto"></iframe>
+    </div>
+</div>

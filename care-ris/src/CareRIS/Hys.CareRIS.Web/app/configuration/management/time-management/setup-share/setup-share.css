@@ -1,0 +1,34 @@
+﻿.setup-share{
+    height:100%;
+}
+    .setup-share .setup-share-top {
+        height:10%;
+        padding-bottom: 10px;
+    }
+        .setup-share .setup-share-top > p {
+            float:right;
+        }
+    .setup-share .setup-share-form .form-group label{
+        line-height:34px;
+    }
+     .setup-share .setup-share-form {
+        height:10%;
+    }
+    .setup-share .setup-share-table {
+        height:70%;
+    }
+    .setup-share .setup-share-table {
+        height:70%;
+        overflow-y: auto;
+        width: 100%;
+    }
+    .setup-share .nav {
+        height:10%;
+        margin-right:0;
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+    }
+ .setup-share tr.selected{
+    background-color: #d5f3ff !important;
+}

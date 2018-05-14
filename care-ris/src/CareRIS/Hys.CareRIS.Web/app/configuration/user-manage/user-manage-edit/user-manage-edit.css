@@ -1,0 +1,124 @@
+﻿.user-manage-edit {
+    height:100%;
+    overflow-y:auto;
+}
+.user-manage-edit >div{
+    height:100%;
+}
+    .user-manage-edit .title-user {
+        height:6%;
+        padding-left:4%;
+        font-size:16px;
+        color:#333333;
+    }
+    .user-manage-edit > div.col-md-7 > .form-group .col-md-offset-6 {
+        text-align:right;
+        line-height:30px;
+        padding-right:15px;
+        font-size: 14px;
+        font-weight: normal;
+        margin-bottom:0;
+        color: #333;
+    }
+    .user-manage-edit .left-accor {
+        padding-left:30px;
+        padding-top:15%;
+    }
+        .user-manage-edit .left-accor a {
+            background:#e0e0e0;
+            border-radius:1px;
+            padding:40px 5px;
+        }
+    .user-manage-edit .qxmain {
+        background:#fafafa;
+        height:94%;
+        padding:10px;
+    }
+        .user-manage-edit .qxmain .accordion-group {
+            background:#ffffff;
+            border:1px solid #e2e2e2;
+            border-right: 0;
+        }
+            .user-manage-edit .qxmain .accordion-group .table tr{
+                width: 100%;
+                border-top: 1px solid #e2e2e2;
+            }
+                .user-manage-edit .qxmain .accordion-group .table tr td {
+                    padding:0;
+                    padding-left:5px;
+                    line-height:34px;
+                    border:0;
+                    border-right: 1px solid #e2e2e2;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    box-sizing: border-box;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    width: 50%;
+                }
+                .user-manage-edit .user-profile {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                .user-manage-edit .qxmain .accordion-group .table tr > td.choice {
+                    border-left:1px solid #e2e2e2;
+                }
+                    .user-manage-edit .qxmain .accordion-group .table tr td select {
+                        border-radius: 0;
+                        border: 0;
+                        width:50%;
+                        height: 32px;
+                    }
+        .user-manage-edit .qxmain .zhushi {
+            padding-bottom:5px;
+            border-bottom:3px solid #f5a623;
+        }
+    .user-manage-edit form .form-group {
+        margin-bottom: 5px;
+    }
+.user-manage-edit form .form-group label{
+    text-align:right;
+    line-height:30px;
+    padding-right:15px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom:0;
+    color: #333;
+}
+    .user-manage-edit form .form-group label.col-md-4 {
+        width:32%;
+    }
+        .user-manage-edit form .form-group .address {
+            height: 60px;
+        }
+    .user-manage-edit .k-widget {
+        background-color:#fff;
+    }
+        .accordion-inner {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .accordion-inner table{
+            table-layout: fixed;
+            width: 100%;
+        }
+        .accordion-inner .k-multiselect {
+            border: 0!important;
+        }
+
+        .user-active {
+            background: #d5f3ff!important;
+        }
+        .k-animation-container {
+            width: 100%;
+        }
+
+        .user-manage-edit form .k-datepicker{
+            width: 100%;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }

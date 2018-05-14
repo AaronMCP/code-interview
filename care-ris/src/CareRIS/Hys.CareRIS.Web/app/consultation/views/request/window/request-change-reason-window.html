@@ -1,0 +1,36 @@
+﻿<div>
+    <link href="/app-resources/css/request-edit-window.css" rel="stylesheet" />
+    <div class="request-advice-title title">
+        <strong>
+            {{ dailogTitle  | translate}}
+        </strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </div>
+    <form name="requestAdvice" class="ris-form">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="Reason">{{'Reason'|translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <select class="form-control col2input" ng-model="reason.changeReasonType" name="changeReason"
+                        ng-options="r.value as r.name for r in reasonList"
+                        required
+                        ris-enter-index tabindex="4"></select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label for="OtherReason">{{'OtherReason'|translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea ng-model="reason.newReason" class="form-control col2input"></textarea>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="request-advice-action">
+            <button class="btn btn-green" translate ng-click="updateRequestChangeReason()">OK</button>
+            <button class="btn btn-default btn-left" translate ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

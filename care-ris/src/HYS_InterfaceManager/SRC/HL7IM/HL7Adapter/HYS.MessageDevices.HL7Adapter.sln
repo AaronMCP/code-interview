@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging", "..\Common\Logging\Common.Logging.csproj", "{391A304B-8F73-4D9C-AD82-2DB495EF6E23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Xml", "..\Common\Xml\Common.Xml.csproj", "{06005189-D4C3-4919-A08A-B825B68AA3D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Base", "..\Messaging\Base\Messaging.Base.csproj", "{670743BB-BD5E-4840-87D9-6D507F3535F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Mapping", "..\Messaging\Mapping\Messaging.Mapping.csproj", "{5497186E-8E85-4BE2-BDEE-46EF44828796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Objects", "..\Messaging\Objects\Messaging.Objects.csproj", "{BB39B254-8B49-4924-9124-A66271B913D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Queuing", "..\Messaging\Queuing\Messaging.Queuing.csproj", "{8BDE987B-8994-4E34-A809-F23792560866}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{ADDCD6FD-B713-4542-A184-CE3A74461CF8}"
+	ProjectSection(SolutionItems) = preProject
+		HL7Adapter.Note.txt = HL7Adapter.Note.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{2ADDB95F-7E93-4BC1-96A8-0885B49CA686}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.HL7v2", "..\Common\HL7v2\Common.HL7v2.csproj", "{339F990F-0B1F-489D-9D73-E2786FC3FB21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Test", "HL7Test\HL7Test.csproj", "{7307EFB2-A580-4317-B66B-B53A113205BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Sender", "HL7Sender\HL7Sender.csproj", "{1392DAFC-A4F3-4DC2-B5E2-5C2EBD04C5A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Receiver", "HL7Receiver\HL7Receiver.csproj", "{205CA62A-EC1C-4ADF-A993-5D0B99A4C74E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Registry", "..\Messaging\Registry\Messaging.Registry.csproj", "{E11F62A6-9BFB-4B20-8FCD-E6FE2DE9BBFA}"
+EndProject
+Global
+	GlobalSection(RationalClearCase) = preSolution
+		SourceControlProvider = RationalClearCase
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06005189-D4C3-4919-A08A-B825B68AA3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06005189-D4C3-4919-A08A-B825B68AA3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06005189-D4C3-4919-A08A-B825B68AA3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{670743BB-BD5E-4840-87D9-6D507F3535F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670743BB-BD5E-4840-87D9-6D507F3535F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670743BB-BD5E-4840-87D9-6D507F3535F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5497186E-8E85-4BE2-BDEE-46EF44828796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5497186E-8E85-4BE2-BDEE-46EF44828796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5497186E-8E85-4BE2-BDEE-46EF44828796}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB39B254-8B49-4924-9124-A66271B913D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB39B254-8B49-4924-9124-A66271B913D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB39B254-8B49-4924-9124-A66271B913D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BDE987B-8994-4E34-A809-F23792560866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDE987B-8994-4E34-A809-F23792560866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDE987B-8994-4E34-A809-F23792560866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{339F990F-0B1F-489D-9D73-E2786FC3FB21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{339F990F-0B1F-489D-9D73-E2786FC3FB21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{339F990F-0B1F-489D-9D73-E2786FC3FB21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7307EFB2-A580-4317-B66B-B53A113205BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7307EFB2-A580-4317-B66B-B53A113205BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7307EFB2-A580-4317-B66B-B53A113205BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7307EFB2-A580-4317-B66B-B53A113205BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1392DAFC-A4F3-4DC2-B5E2-5C2EBD04C5A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1392DAFC-A4F3-4DC2-B5E2-5C2EBD04C5A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1392DAFC-A4F3-4DC2-B5E2-5C2EBD04C5A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1392DAFC-A4F3-4DC2-B5E2-5C2EBD04C5A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{205CA62A-EC1C-4ADF-A993-5D0B99A4C74E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{205CA62A-EC1C-4ADF-A993-5D0B99A4C74E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{205CA62A-EC1C-4ADF-A993-5D0B99A4C74E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{205CA62A-EC1C-4ADF-A993-5D0B99A4C74E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E11F62A6-9BFB-4B20-8FCD-E6FE2DE9BBFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11F62A6-9BFB-4B20-8FCD-E6FE2DE9BBFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11F62A6-9BFB-4B20-8FCD-E6FE2DE9BBFA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06005189-D4C3-4919-A08A-B825B68AA3D0} = {2ADDB95F-7E93-4BC1-96A8-0885B49CA686}
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23} = {2ADDB95F-7E93-4BC1-96A8-0885B49CA686}
+		{339F990F-0B1F-489D-9D73-E2786FC3FB21} = {2ADDB95F-7E93-4BC1-96A8-0885B49CA686}
+		{5497186E-8E85-4BE2-BDEE-46EF44828796} = {1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}
+		{BB39B254-8B49-4924-9124-A66271B913D1} = {1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}
+		{8BDE987B-8994-4E34-A809-F23792560866} = {1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}
+		{670743BB-BD5E-4840-87D9-6D507F3535F6} = {1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}
+		{E11F62A6-9BFB-4B20-8FCD-E6FE2DE9BBFA} = {1182AC26-A3BB-4B5E-91F4-2C7D9E7B0B5F}
+	EndGlobalSection
+EndGlobal

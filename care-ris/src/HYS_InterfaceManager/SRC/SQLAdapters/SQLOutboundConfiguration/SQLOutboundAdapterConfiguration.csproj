@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{795594F9-7297-480A-858A-6EE869E515A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.SQLOutboundAdapterConfiguration</RootNamespace>
+    <AssemblyName>HYS.SQLOutboundAdapterConfiguration</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Adapter\AdapterMain.cs" />
+    <Compile Include="CheckItemValid.cs" />
+    <Compile Include="Controls\ActiveMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ActiveMode.Designer.cs">
+      <DependentUpon>ActiveMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\FormCharSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controls\FormCharSet.Designer.cs">
+      <DependentUpon>FormCharSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ParameterPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ParameterPage.Designer.cs">
+      <DependentUpon>ParameterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\PassiveMode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\PassiveMode.Designer.cs">
+      <DependentUpon>PassiveMode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\StatementPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\StatementPage.Designer.cs">
+      <DependentUpon>StatementPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Channel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Channel.Designer.cs">
+      <DependentUpon>Channel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QueryCriteria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QueryCriteria.designer.cs">
+      <DependentUpon>QueryCriteria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QueryInParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QueryInParameter.Designer.cs">
+      <DependentUpon>QueryInParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QueryOutParameter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QueryOutParameter.Designer.cs">
+      <DependentUpon>QueryOutParameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QueryResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QueryResult.Designer.cs">
+      <DependentUpon>QueryResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ShowConnection.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ShowConnection.Designer.cs">
+      <DependentUpon>ShowConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StorageProcedure.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StorageProcedure.Designer.cs">
+      <DependentUpon>StorageProcedure.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GWFields.cs" />
+    <Compile Include="ListViewSort.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controls\ActiveMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ActiveMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\FormCharSet.resx">
+      <DependentUpon>FormCharSet.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\ParameterPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ParameterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\PassiveMode.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PassiveMode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\StatementPage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StatementPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Channel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Channel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QueryCriteria.resx">
+      <DependentUpon>QueryCriteria.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QueryInParameter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryInParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QueryOutParameter.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>QueryOutParameter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QueryResult.resx">
+      <DependentUpon>QueryResult.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ShowConnection.resx">
+      <DependentUpon>ShowConnection.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StorageProcedure.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>StorageProcedure.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SQLOutboundConfiguration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SQLOutboundConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SQLOutboundConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLOutboundConfiguration.Designer.cs">
+      <DependentUpon>SQLOutboundConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UIControl\EnumComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UIControl\EnumComboBox.Designer.cs">
+      <DependentUpon>EnumComboBox.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SQLOutboundObjects\SQLOutboundAdapterObjects.csproj">
+      <Project>{7F406CA0-1F0D-41E1-B63E-15FFCE00A9FE}</Project>
+      <Name>SQLOutboundAdapterObjects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+﻿<div class="popover report-preview-content-popover">
+    <div class="arrow"></div>
+        <div class="popover-content container" style="width:400px;height:auto">
+            <div class="row">
+                <form id="modalityInputForm" class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="inputModality" class="col-sm-2 control-label" style="padding-left:0px" translate>Modality</label>
+                        <div class="col-sm-5" style="padding-left:0px">
+                            <select class="form-control" ng-model="selectedProcedure.modality"
+                                    ng-options="modality.modalityName as modality.modalityName for modality in modalities"
+                                    required
+                                    ris-enter-index></select>
+                        </div>
+                        <button style="margin-right:10px" type="button" class="btn btn-primary col-sm-2" ng-click="updateModality(selectedProcedure)"
+                                ng-disabled="selectedProcedure.modality.length === 0" translate>
+                            Ok
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</div>

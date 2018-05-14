@@ -1,0 +1,273 @@
+﻿<div class="qc-check-info">
+    <form>
+        <div class="form-group col-md-2">
+            <label class="col-md-5">病人编号</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.patientNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-2">
+            <label class="col-md-5">病人姓名</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.localName" />
+            </div>
+        </div>
+        <div class="form-group col-md-5">
+            <label>创建时间</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="meregeCreateTimeStart" autocomplete="off" kendo-date-picker="meregeCreateTimeStart" ng-model="searchOption.createTimeStart" />
+                </p>
+            </div>
+            <label>到</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="meregeCreateTimeEnd" autocomplete="off" kendo-date-picker="meregeCreateTimeEnd" ng-model="searchOption.createTimeEnd" />
+                </p>
+            </div>
+        </div>
+    </form>
+    <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+        <li>
+            <input type="checkbox" id="mergeRequisition" ng-model="isMergeRequisition" ng-disabled="!selectedSourceOrder.selected || !selectedTargetOrder" />
+            <label style="cursor: pointer;" for="mergeRequisition">合并申请单</label>
+        </li>
+        <li>
+            <input type="checkbox" id="mergeOrderCharge" ng-model="isMergeOrderCharge" ng-disabled="!selectedSourceOrder.selected || !selectedTargetOrder" />
+            <label style="cursor: pointer;" for="mergeOrderCharge">合并费用</label>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" ng-click="mergePatient()" ng-disabled="!selectedSourcePatient || !selectedTargetPatient">合并病人</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" ng-click="moveOrder()" ng-disabled="!selectedSourceOrder.selected || !selectedTargetPatient">移动检查</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" ng-click="mergeOrder()" ng-disabled="!selectedSourceOrder.selected || !selectedTargetOrder">合并检查</button>
+        </li>
+        <li>
+            <button type="button" class="btn btn-default" ng-click="moveCheckingItem()" ng-disabled="!selectedSourceProcedure.selected || !selectedTargetOrder">移动部位</button>
+        </li>
+    </ul>
+    <div class="qc-check-content">
+        <div class="left">
+            <div class="title">
+                源病人信息
+                <div class="qc-btn">
+                    <button class="btn btn-primary" ng-click="sourceSearch()">查询</button>
+                </div>
+            </div>
+            <div class="qc-check-main">
+                <div class="quality-table-content">
+                    <p>病人信息</p>
+                    <div kendo-grid="sourcePatitentInfoGrid"
+                         class="info source-patient"
+                         data-k-options="sourcePatitentInfoGridOption"
+                         ng-class="{'patient-blur':!isSourcePatient}"></div>
+                </div>  
+                <div class="quality-table-content">
+                    <p>检查信息</p>
+                    <div class="info table-checkinfo">
+                        <table class="table table-hover quality-table" style="table-layout: fixed">
+                            <thead>
+                                <tr>
+                                    <th style="width:25%;">放射编号</th>
+                                    <th style="width:20%;">病人类型</th>
+                                    <th style="width:15%;">住院号</th>
+                                    <th style="width:15%;">门诊号</th>
+                                    <th style="width:15%;">申请部门</th>
+                                    <th style="width:10%;">申请医生</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="table-flex-container">
+                            <table class="table table-hover quality-table" style="table-layout: fixed">
+                                <tbody>
+                                    <tr ng-repeat="sourceOrder in sourceOrders" ng-click="clickSourceOrder(sourceOrder)"
+                                        ng-class="{'quality-active':sourceOrder.selected, 'quality-border':sourceOrder.selectedBorder}">
+                                        <td style="width:25%;">
+                                            {{sourceOrder.accNo}}
+                                        </td>
+                                        <td style="width:20%;">
+                                            {{sourceOrder.patientType}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{sourceOrder.inhospitalNo}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{sourceOrder.clinicNo}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{sourceOrder.applyDept}}
+                                        </td>
+                                        <td style="width:10%;">
+                                            {{sourceOrder.applyDoctor}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="quality-table-content">
+                    <p>部位信息</p>
+                    <div class="info table-checkPartinfo">
+                        <table class="table table-hover quality-table" style="table-layout: fixed">
+                            <thead>
+                                <tr>
+                                    <th style="width: 20%">设备类型</th>
+                                    <th style="width: 20%">检查系统</th>
+                                    <th style="width: 20%">检查项目</th>
+                                    <th style="width: 20%">撤销前状态</th>
+                                    <th style="width: 20%">当前状态</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="table-flex-container">
+                            <table class="table table-hover quality-table" style="table-layout: fixed">
+                                <tbody>
+                                    <tr ng-repeat="sourceProcedure in sourceProcedures" ng-click="clickSourceProcedure(sourceProcedure)"
+                                        ng-class="{'quality-active':sourceProcedure.selected, 'quality-border':sourceProcedure.selectedBorder}">
+                                        <td style="width: 20%">
+                                            {{sourceProcedure.modalityType}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{sourceProcedure.examSystem}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{sourceProcedure.checkingItem}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{sourceProcedure.preStatusText}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{sourceProcedure.statusText}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="title">
+                目标病人信息
+                <div class="qc-btn">
+                    <button class="btn btn-primary" ng-click="targetSearch()">查询</button>
+                </div>
+            </div>
+            <div class="qc-check-main">
+                <div class="quality-table-content">
+                    <p>病人信息</p>
+                    <div kendo-grid="targetPatitentInfoGrid"
+                         data-k-options="targetPatitentInfoGridOption"
+                         class="info target-patient"
+                         ng-class="{'patient-blur':!isTargetPatient}"></div>
+                </div>
+                
+                <div class="quality-table-content">
+                    <p>检查信息</p>
+                    <div class="info table-checkinfo">
+                        <table class="table table-hover quality-table" style="table-layout: fixed">
+                            <thead>
+                                <tr>
+                                    <th style="width:25%;">放射编号</th>
+                                    <th style="width:20%;">病人类型</th>
+                                    <th style="width:15%;">住院号</th>
+                                    <th style="width:15%;">门诊号</th>
+                                    <th style="width:15%;">申请部门</th>
+                                    <th style="width:10%;">申请医生</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="table-flex-container">
+                            <table class="table table-hover" style="table-layout: fixed">
+                                <tbody>
+                                    <tr ng-repeat="targetOrder in targetOrders" ng-click="clickTargetOrder(targetOrder)"
+                                        ng-class="{'quality-active':targetOrder.selected, 'quality-border':targetOrder.selectedBorder}">
+                                        <td style="width:25%;">
+                                            {{targetOrder.accNo}}
+                                        </td>
+                                        <td style="width:20%;">
+                                            {{targetOrder.patientType}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{targetOrder.inhospitalNo}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{targetOrder.clinicNo}}
+                                        </td>
+                                        <td style="width:15%;">
+                                            {{targetOrder.applyDept}}
+                                        </td>
+                                        <td style="width:10%;">
+                                            {{targetOrder.applyDoctor}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="quality-table-content">
+                    <p>部位信息</p>
+                    <div class="info table-checkPartinfo">
+                        <table class="table table-hover quality-table" style="table-layout: fixed">
+                            <thead>
+                                <tr>
+                                    <th style="width: 20%">设备类型</th>
+                                    <th style="width: 20%">检查系统</th>
+                                    <th style="width: 20%">检查项目</th>
+                                    <th style="width: 20%">撤销前状态</th>
+                                    <th style="width: 20%">当前状态</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div class="table-flex-container">
+                            <table class="table table-hover" style="table-layout: fixed">
+                                <tbody>
+                                    <tr ng-repeat="targetProcedure in targetProcedures" ng-click="clickTargetProcedure(targetProcedure)"
+                                        ng-class="{'quality-active':targetProcedure.selected, 'quality-border':targetProcedure.selectedBorder}">
+                                        <td style="width: 20%">
+                                            {{targetProcedure.modalityType}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{targetProcedure.examSystem}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{targetProcedure.checkingItem}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{targetProcedure.preStatusText}}
+                                        </td>
+                                        <td style="width: 20%">
+                                            {{targetProcedure.statusText}}
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div kendo-window="mergePatientWindow"
+             class="merge-patient"
+             k-width="'400px'" k-min-height="'150px'"
+             k-visible="false" k-actions="[]"
+             k-modal="true" k-resizable="false">
+            <div class="merge-patient-tipInfo">{{tipInfo}}</div>
+            <div class="afterDelPatient" ng-show="isMergePatient">
+                <input type="checkbox" ng-model="afterDelPatient" id="afterDelPatient" />
+                <label for="afterDelPatient">是否删除源病人</label>
+            </div>
+            <div style="position: absolute;bottom: 10px;right: 10px;">
+                <button class="btn btn-primary" ng-click="mergeCancel()">取消</button>
+                <button class="btn btn-primary" ng-click="isLock(mergeSure)">确定</button>
+            </div>
+        </div>
+    </div>
+</div>

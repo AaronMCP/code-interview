@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67D8A10E-941A-46DC-A367-5ED034136D8E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CommonCtrls</RootNamespace>
+    <AssemblyName>CommonCtrls</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.C1Report.4, Version=4.6.20131.54624, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\deps\ComponentOnev4\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Telerik.WinControls">
+      <HintPath>..\deps\telerik\Telerik.WinControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.GridView">
+      <HintPath>..\deps\telerik\Telerik.WinControls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.RadChart">
+      <HintPath>..\deps\telerik\Telerik.WinControls.RadChart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.WinControls.UI">
+      <HintPath>..\deps\telerik\Telerik.WinControls.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="TelerikCommon">
+      <HintPath>..\deps\telerik\TelerikCommon.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarestreamCommonControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSCheckComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSColorSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSColorSelectForm.Designer.cs">
+      <DependentUpon>CSColorSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSComboBoxExx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSCommonFunctions.cs" />
+    <Compile Include="CSDataTable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSDateTimePicker.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSDateTimePickerNullable.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSListBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSOnlineUserCountSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSOnlineUserCountSettingForm.Designer.cs">
+      <DependentUpon>CSOnlineUserCountSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSPrintPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CSPrintPreviewForm.Designer.cs">
+      <DependentUpon>CSPrintPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSPropertyGridCellElement.cs" />
+    <Compile Include="CSPropertyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSSplitContainerEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSTimePeriod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CSTimePeriod.Designer.cs">
+      <DependentUpon>CSTimePeriod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSToolbarBigControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CSToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSTreeViewComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CSTreeViewComboBoxEx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions.cs" />
+    <Compile Include="FirstPYManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ControlExtends.cs" />
+    <Compile Include="RichTextBoxEx2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CSColorSelectForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CSColorSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSOnlineUserCountSettingForm.resx">
+      <DependentUpon>CSOnlineUserCountSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSPrintPreviewForm.resx">
+      <DependentUpon>CSPrintPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CSTreeView.resx">
+      <DependentUpon>CSTreeView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

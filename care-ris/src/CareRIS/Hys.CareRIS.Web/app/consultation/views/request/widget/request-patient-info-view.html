@@ -1,0 +1,91 @@
+﻿<div class="row patient-info">
+    <div class="col-md-6">
+        <div class="title">
+            <h4>{{'PatientBaseInformation'|translate}}</h4>
+            <div class="action">
+                <a href="javascript:void(0);" class="icon-general icon-viewDetail" title="{{'ViewCase'|translate}}"
+                   ng-click="openExamInfoWindow()"><span style="font-size: 14px">{{'ViewCase'|translate}}</span></a>
+                <a href="javascript:void(0);" class="icon-general icon-editFile" title="{{'Edit'|translate}}" ng-click="openPatientInfoWindow()" ng-show="editPatientInfoPermission"></a>
+            </div>
+        </div>
+        <div class="main-info">
+            <div class="row">
+                <dt class="col-md-2">
+                    {{'ConsultPatientNo'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.patientNo}}
+                </dd>
+                <dt class="col-md-2">
+                    {{'InsuranceNumber'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.insuranceNumber}}
+                </dd>
+            </div>
+            <div class="row">
+                <dt class="col-md-2">
+                    {{'UserName'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.patientName}}
+                </dd>
+                <dt class="col-md-2">
+                    {{'Gender'|translate}}
+                </dt>
+                <dd class="col-md-4" ng-bind-html="report.gender| genderToImage">
+                </dd>
+            </div>
+            <div class="row">
+                <dt class="col-md-2">
+                    {{'Birthday'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.birthday|date:'yyyy/MM/dd'}}
+                </dd>
+                <dt class="col-md-2">
+                    {{'Age'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.currentAgeT}}
+                </dd>
+            </div>
+            <div class="row">
+                <dt class="col-md-2">
+                    {{'IdentityCard'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.identityCard}}
+                </dd>
+                <dt class="col-md-2">
+                    {{'Telephone'|translate}}
+                </dt>
+                <dd class="col-md-4">
+                    {{report.telephone}}
+                </dd>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3" style="border-left: 0px;">
+        <div class="title">
+            <h4>{{'History'|translate}}</h4>
+            <div class="action" ng-show="editPatientInfoPermission">
+                <a href="javascript:void(0);" class="icon-general icon-editFile" title="{{'Edit'|translate}}" ng-click="openPatientHisgoryWindow()"></a>
+            </div>
+        </div>
+        <div class="main-info">
+            <p ng-bind-html="report.history"></p>
+        </div>
+    </div>
+    <div class="col-md-3" style="border-left: 0px;">
+        <div class="title">
+            <h4>{{'ClinicalDiagnosis'|translate}}</h4>
+            <div class="action" ng-show="editPatientInfoPermission">
+                <a href="javascript:void(0);" class="icon-general icon-editFile" title="{{'Edit'|translate}}" ng-click="openClinicalDiagnosisWindow()"></a>
+            </div>
+        </div>
+        <div class="main-info">
+            <p ng-bind-html="report.clinicalDiagnosis"></p>
+        </div>
+    </div>
+</div>

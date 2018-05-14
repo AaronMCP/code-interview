@@ -1,0 +1,30 @@
+﻿{
+    "welcomeWords": "Welcome",
+    "userName": "User Name",                                      
+    "password": "Password",
+    "publicAccountHolder": "Please enter your real name in the public account",
+    "login": "Login",
+    "forgotPsd": "Forgot password?",
+    "CompanyName": "Rayco Asia Pacific Investment & Management (Shanghai) Company Limited",                                                
+    "HotLine": "Free service hotline",
+    "English": "English",
+    "SimplifiedChinese": "简体中文",                            
+    "emailNotExists": "User name does not exist.",
+    "wrongPassword": "User name does not match password.",
+    "inactiveAccount": "User is inactive.",
+    "expiredAccount": "User is expired.",
+    "unknownError": "Unknown error",
+    "emailRequired": "User name is required.",
+    "passwordRequired": "Password is required.",
+    "realNameRequired": "Please input real name for public account.",
+    "email4Pwd": {
+        "required": "User name is required.",
+        "emailNotExists": "Invalid user name, please input again."                             
+    },
+    "sameUserLogin": "You have logged on [{0}]（IP:{1}. Do you want to contiue?",
+    "maxOnline": "Exceed max online user limitation！",
+    "sameLocationLogin": "[{0}] has been logged in on the same machine，Do you want to contiue?！",
+    "isLocked": "User is locked, please contact administrator.",
+    "cannotGetLicenseData": "Failed to get license, please contact administrator.",
+    "licenseExpired": "License is expired, please contact administrator.！"
+}

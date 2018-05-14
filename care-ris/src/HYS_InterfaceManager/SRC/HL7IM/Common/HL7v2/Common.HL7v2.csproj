@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{339F990F-0B1F-489D-9D73-E2786FC3FB21}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.Common.HL7v2</RootNamespace>
+    <AssemblyName>HYS.Common.HL7v2</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>Rational ClearCase</SccProjectName>
+    <SccLocalPath>Rational ClearCase</SccLocalPath>
+    <SccAuxPath>Rational ClearCase</SccAuxPath>
+    <SccProvider>Rational ClearCase</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Encoding\HL7MessageParser.cs" />
+    <Compile Include="Encoding\HL7MessageTemplates.cs" />
+    <Compile Include="MLLP\CodePageHelper.cs" />
+    <Compile Include="MLLP\IClient.cs" />
+    <Compile Include="MLLP\ICodePageIndicator.cs" />
+    <Compile Include="MLLP\IServer.cs" />
+    <Compile Include="MLLP\ISocketWorker.cs" />
+    <Compile Include="MLLP\SocketClient.cs" />
+    <Compile Include="MLLP\SocketClientConfig.cs" />
+    <Compile Include="MLLP\SocketClientFactory.cs" />
+    <Compile Include="MLLP\SocketClientNoMLLP.cs" />
+    <Compile Include="MLLP\SocketClientWithLongConnection.cs" />
+    <Compile Include="MLLP\SocketClientWithLongConnectionNoMLLP.cs" />
+    <Compile Include="MLLP\SocketHelper.cs" />
+    <Compile Include="MLLP\SocketLogMgt.cs" />
+    <Compile Include="MLLP\SocketResult.cs" />
+    <Compile Include="MLLP\SocketServerConfig.cs" />
+    <Compile Include="MLLP\SocketWorker.cs" />
+    <Compile Include="MLLP\SocketWorkerFactory.cs" />
+    <Compile Include="MLLP\SocketWorkerNoMLLP.cs" />
+    <Compile Include="MLLP\SocketWorkerWithBreakPointSupport.cs" />
+    <Compile Include="MLLP\SocketWorkerWithLongConnection.cs" />
+    <Compile Include="MLLP\SocketWorkerWithLongConnection2.cs" />
+    <Compile Include="MLLP\SocketWorkerWithLongConnectionNoMLLP.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MLLP\SocketServer.cs" />
+    <Compile Include="Xml\HL7ToolkitTransformer.cs" />
+    <Compile Include="Xml\NHApiTransformer.cs" />
+    <Compile Include="Xml\NHL7ToolkitTransformer.cs" />
+    <Compile Include="Xml\Transforming\Exception\ComponentNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\FieldNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\HL7Exception.cs" />
+    <Compile Include="Xml\Transforming\Exception\InvalidDelimetersException.cs" />
+    <Compile Include="Xml\Transforming\Exception\InvalidFieldException.cs" />
+    <Compile Include="Xml\Transforming\Exception\InvalidMessageTypeException.cs" />
+    <Compile Include="Xml\Transforming\Exception\InvalidSegmentException.cs" />
+    <Compile Include="Xml\Transforming\Exception\MessageHeaderNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\MessageTypeNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\SegmentNameNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\SegmentNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\SubComponentNotFoundException.cs" />
+    <Compile Include="Xml\Transforming\Exception\UnableToGetStringException.cs" />
+    <Compile Include="Xml\Transforming\HL7baseclass.cs" />
+    <Compile Include="Xml\Transforming\HL7CharacterSets.cs" />
+    <Compile Include="Xml\Transforming\HL7Component.cs" />
+    <Compile Include="Xml\Transforming\HL7DataElement.cs" />
+    <Compile Include="Xml\Transforming\HL7Delimeters.cs" />
+    <Compile Include="Xml\Transforming\HL7Field.cs" />
+    <Compile Include="Xml\Transforming\HL7FieldItem.cs" />
+    <Compile Include="Xml\Transforming\HL7Message.cs" />
+    <Compile Include="Xml\Transforming\HL7Segment.cs" />
+    <Compile Include="Xml\Transforming\HL7SubComponent.cs" />
+    <Compile Include="Xml\XmlHelper.cs" />
+    <Compile Include="Xml\XmlTransformerBase.cs" />
+    <Compile Include="Xml\XmlTransformerFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859b757e-44c6-4183-8e1e-9c3c21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Logging\Common.Logging.csproj">
+      <Project>{391A304B-8F73-4D9C-AD82-2DB495EF6E23}</Project>
+      <Name>Common.Logging</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

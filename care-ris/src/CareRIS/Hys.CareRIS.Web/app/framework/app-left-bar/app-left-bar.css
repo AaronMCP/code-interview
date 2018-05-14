@@ -1,0 +1,47 @@
+﻿.ris-navbar-left {
+    position: absolute;
+    top: 0;
+    width: 56px;
+    height: 100%;
+    z-index: 100;
+    background:#263958;
+}
+   .ris-navbar-left > li:first-child .hys-logo {
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin:9px;
+    }
+    .ris-navbar-left > li:first-child {
+        background-color:transparent;
+    }
+    .ris-navbar-left > li {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .ris-navbar-left > li > a {
+        color:#8391a6;
+        border:0;
+        border-left-width:4px;
+        border-left-style:solid;
+        border-left-color:transparent;
+        border-radius:0;
+        padding: 15px 10px;
+        text-align: center;
+        margin: 0;
+    }
+    .ris-navbar-left > li > a > span {
+        font-size: 24px;
+    }
+        .ris-navbar-left > li > a.hys-tab.active {
+            border-left-color:#23a497;
+            background-color:#4f5d74;
+            color:#fff;
+        }
+        .ris-navbar-left > li > a:hover, .ris-navbar-left > li > a:focus {
+            background:#4f5d74;
+            border-color:transparent;
+            color:#fff;
+        }

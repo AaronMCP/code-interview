@@ -1,0 +1,89 @@
+﻿.worklist-container {
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: auto !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    background: #f2f2f2;
+}
+
+    .worklist-container .k-splitbar-horizontal {
+        height: auto !important;
+        top: 0;
+        bottom: 0;
+    }
+
+.worklist-nav-pan {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    z-index: 1003;
+}
+
+.worklist-content {
+    height: 100%;
+    overflow: hidden;
+}
+
+/*#advancedSearchForm .ng-hide-remove {
+    -webkit-animation: bounceIn 0.5s;
+    animation: bounceIn 0.5s;
+}
+
+#advancedSearchForm .ng-hide-add {
+    -webkit-animation: flipOutX 0.5s;
+    animation: flipOutX 0.5s;
+    display: block !important;
+}*/
+
+.advanced-search-container {
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: 555px;
+}
+
+.no-left-right-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.time-range-button-container {
+    margin: 3px 0 0 -20px;
+}
+
+.k-ghost-splitbar-horizontal {
+    z-index: 1003;
+}
+
+.btn-new-registration {
+    
+}
+.btn-new-registration:active {
+  border-color: #e38d13;
+}
+.btn-new-registration:hover,.btn-new-registration:focus {
+        background-position: 0 -15px !important;
+        color: rgb(255,255,255) !important;
+    }
+
+.hisid-input {
+    width: 164px;
+    margin-top: 10px;
+    height: 30px;
+    font-size: 16px;
+}
+
+/*for kendo grid refresh icon in pager*/
+.k-pager-refresh .k-i-refresh {
+    background-position: 0!important;
+    width: 26px;
+    height: 26px;
+   
+}
+.k-pager-refresh:hover{
+    background-color: #eeeeee!important;
+}

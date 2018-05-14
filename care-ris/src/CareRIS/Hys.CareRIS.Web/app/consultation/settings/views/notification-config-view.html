@@ -1,0 +1,64 @@
+﻿<div style="overflow-x: auto; overflow-y: auto; height: 100%; width: 100%; padding: 20px;">
+    <!--<div class="row" style="padding-bottom: 10px;" ng-if="loginUser.isSuperAdmin">
+        <span style="color: red;">{{::'NotificationSuperadminWarning' | translate}}</span>
+    </div>-->
+    <form class="ris-form" name="notificationConfigForm">
+        <div style="height: 30px;">
+            <div class="container-title ris-module-title ng-binding">
+                <span class="ng-scope">{{::'NotificationConfigTitle' | translate}}</span>
+                <hr class="container-divide">
+            </div>
+        </div>
+        <div ng-repeat="config in configs | orderBy:'event'">
+            <div class="notification-setting-container">
+                <div class="container-sub-title">
+                    <b>{{config.event | enumValueToString:'NotifyEvent' | translate}}</b>
+                    <label style="margin-left: 20px;" ng-style="{color: config.isEnable ? 'green':'red'}"><input type="checkbox" ng-model="config.isEnable">{{ config.isEnable ?'Enable':'Disable'| translate}}</label>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>{{::'Variables' | translate}}:</span>
+                    </div>
+                    <div class="col-md-11">
+                        <ul class="list-inline">
+                            <li ng-repeat="v in config.variables.split(',')">
+                                <span>{</span>{{v}}<span>}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>{{::'Template' | translate}}:</span>
+                    </div>
+                    <div class="col-md-11">
+                        <textarea style="height: 50px; width: 80%" ng-model="config.template"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1">
+                        <span>{{::'NotifyType' | translate}}:</span>
+                    </div>
+                    <div class="col-md-11">
+                        <span ng-repeat="(key, value) in notifyType" style="margin-right: 20px">
+                            <input type="checkbox" checklist-model="config.notifyTypeList" checklist-value="''+value">{{key}}
+                        </span>
+                    </div>
+                </div>
+                <div class="row" ng-if="config.event == $parent.enums.NotifyEvent.ConsolutionAdminAssignToExpert">
+                    <div class="col-md-1">
+                        <span>{{::'AdvanceNotification' | translate}}:</span>
+                    </div>
+                    <div class="col-md-11">
+                        <input type="text" ng-model="config.sendingTimes" />
+                        <span class="glyphicon glyphicon-info-sign line2Icon" style="color: #ccc;" data-tooltip="{{::'SendingTimeConfigTooltip' | translate}}"></span>
+                    </div>
+                </div>
+            </div>
+            <hr />
+        </div>
+    </form>
+    <div class="ris-module-footer">
+        <button class="btn ris-btn-primary" style="padding-left: 25px; padding-right:25px;" translate ng-click="updateConfig()" ng-disabled="notificationConfigForm.$pristine">{{::'saveConfig' | translate}}</button>
+    </div>
+</div>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="D:\Work\Broker_CCView\gcgateway\CS_Broker_2.1\SRC\HL7GW\XSLT\dataset_to_hl7_sdk\main.xsl"?>
+<Message>
+	<Header/>
+	<Body>
+		<csb:Order xmlns:csb="http://www.carestream.com/csbroker">
+			<!-- 
+     Notice: 
+    
+    1. One ORM message map to one <Order> element.
+    
+    2. There could be multiple <Table> elements in one <Order> element. 
+    
+    3. All the sub-elements in the <Table> element are mandatory,
+       the value format of these sub-elements should be the same with that of CS Broker
+       (e.g. the date time format should be YYYY-MM-DD HH:MM:SS).
+    
+    4. One order information map to one <Table> element, 
+       the semantics of which is defined by the value of <DATAINDEX_EVENT_TYPE> element according to CS Broker coding system
+       (see CS Broker Event Type definition for details).
+    
+    5. All the <Table> elements in one <Order> element are tend to be inserted into CS Broker database in one transaction,
+       however, currently we do not provide this feature as the default configuration, 
+       currently each <Table> element is inserted in one transaction as default.
+  -->
+			<csb:Table>
+				<csb:DATAINDEX_DATA_SOURCE>HIS</csb:DATAINDEX_DATA_SOURCE>
+				<csb:DATAINDEX_EVENT_TYPE>10</csb:DATAINDEX_EVENT_TYPE>
+				<csb:DATAINDEX_DATADT>20110531090909</csb:DATAINDEX_DATADT>
+				<csb:DATAINDEX_PROCESS_FLAG/>
+				<csb:DATAINDEX_RECORD_INDEX_1/>
+				<csb:DATAINDEX_RECORD_INDEX_2/>
+				<csb:DATAINDEX_RECORD_INDEX_3/>
+				<csb:DATAINDEX_RECORD_INDEX_4/>
+				<csb:PATIENT_ACCOUNT_NUMBER/>
+				<csb:PATIENT_ADDRESS/>
+				<csb:PATIENT_BED_NUMBER/>
+				<csb:PATIENT_BIRTH_PLACE/>
+				<csb:PATIENT_BIRTHDATE/>
+				<csb:PATIENT_CITIZENSHIP/>
+				<csb:PATIENT_COUNTRY_CODE/>
+				<csb:PATIENT_CUSTOMER_1/>
+				<csb:PATIENT_CUSTOMER_2/>
+				<csb:PATIENT_CUSTOMER_3/>
+				<csb:PATIENT_CUSTOMER_4/>
+				<csb:PATIENT_DRIVERLIC_NUMBER/>
+				<csb:PATIENT_ETHNIC_GROUP/>
+				<csb:PATIENT_MARITAL_STATUS/>
+				<csb:PATIENT_MOTHER_MAIDEN_NAME/>
+				<csb:PATIENT_NATIONALITY/>
+				<csb:PATIENT_OTHER_PID/>
+				<csb:PATIENT_PATIENT_ALIAS/>
+				<csb:PATIENT_PATIENT_LOCAL_NAME/>
+				<csb:PATIENT_PATIENT_LOCATION/>
+				<csb:PATIENT_PATIENT_NAME>张三</csb:PATIENT_PATIENT_NAME>
+				<csb:PATIENT_PATIENT_STATUS/>
+				<csb:PATIENT_PATIENT_TYPE/>
+				<csb:PATIENT_PATIENTID>PID001</csb:PATIENT_PATIENTID>
+				<csb:PATIENT_PHONENUMBER_BUSINESS/>
+				<csb:PATIENT_PHONENUMBER_HOME/>
+				<csb:PATIENT_PRIMARY_LANGUAGE/>
+				<csb:PATIENT_PRIOR_PATIENT_ID/>
+				<csb:PATIENT_PRIOR_PATIENT_NAME/>
+				<csb:PATIENT_PRIOR_VISIT_NUMBER/>
+				<csb:PATIENT_RACE/>
+				<csb:PATIENT_RELIGION/>
+				<csb:PATIENT_SEX/>
+				<csb:PATIENT_SSN_NUMBER/>
+				<csb:PATIENT_VETERANS_MIL_STATUS/>
+				<csb:PATIENT_VISIT_NUMBER/>
+				<csb:ORDER_BODY_PART/>
+				<csb:ORDER_CHARGE_AMOUNT/>
+				<csb:ORDER_CHARGE_STATUS/>
+				<csb:ORDER_CNT_AGENT/>
+				<csb:ORDER_CUSTOMER_1/>
+				<csb:ORDER_CUSTOMER_2/>
+				<csb:ORDER_CUSTOMER_3/>
+				<csb:ORDER_CUSTOMER_4/>
+				<csb:ORDER_DURATION/>
+				<csb:ORDER_EXAM_COMMENT/>
+				<csb:ORDER_EXAM_DT/>
+				<csb:ORDER_EXAM_LOCATION/>
+				<csb:ORDER_EXAM_REQUIREMENT/>
+				<csb:ORDER_EXAM_STATUS/>
+				<csb:ORDER_EXAM_VOLUME/>
+				<csb:ORDER_FILLER/>
+				<csb:ORDER_FILLER_CONTACT/>
+				<csb:ORDER_FILLER_DEPARTMENT/>
+				<csb:ORDER_FILLER_NO>ACC0009</csb:ORDER_FILLER_NO>
+				<csb:ORDER_MODALITY>CR</csb:ORDER_MODALITY>
+				<csb:ORDER_ORDER_NO/>
+				<csb:ORDER_PATIENT_ID/>
+				<csb:ORDER_PLACER/>
+				<csb:ORDER_PLACER_CONTACT/>
+				<csb:ORDER_PLACER_DEPARTMENT/>
+				<csb:ORDER_PLACER_NO/>
+				<csb:ORDER_PROCEDURE_CODE/>
+				<csb:ORDER_PROCEDURE_DESC/>
+				<csb:ORDER_PROCEDURE_NAME/>
+				<csb:ORDER_REF_CLASS_UID/>
+				<csb:ORDER_REF_CONTACT/>
+				<csb:ORDER_REF_ORGANIZATION/>
+				<csb:ORDER_REF_PHYSICIAN/>
+				<csb:ORDER_REQUEST_REASON/>
+				<csb:ORDER_REUQEST_COMMENTS/>
+				<csb:ORDER_SCHEDULED_DT/>
+				<csb:ORDER_SERIES_NO/>
+				<csb:ORDER_STATION_AETITLE/>
+				<csb:ORDER_STATION_NAME/>
+				<csb:ORDER_STUDY_ID/>
+				<csb:ORDER_STUDY_INSTANCE_UID/>
+				<csb:ORDER_TECHNICIAN/>
+				<csb:ORDER_TRANSPORT_ARRANGE/>
+			</csb:Table>
+			<csb:Table>
+				<csb:DATAINDEX_DATA_SOURCE/>
+				<csb:DATAINDEX_EVENT_TYPE>11</csb:DATAINDEX_EVENT_TYPE>
+				<csb:DATAINDEX_PROCESS_FLAG/>
+				<csb:DATAINDEX_RECORD_INDEX_1/>
+				<csb:DATAINDEX_RECORD_INDEX_2/>
+				<csb:DATAINDEX_RECORD_INDEX_3/>
+				<csb:DATAINDEX_RECORD_INDEX_4/>
+				<csb:PATIENT_ACCOUNT_NUMBER/>
+				<csb:PATIENT_ADDRESS/>
+				<csb:PATIENT_BED_NUMBER/>
+				<csb:PATIENT_BIRTH_PLACE/>
+				<csb:PATIENT_BIRTHDATE/>
+				<csb:PATIENT_CITIZENSHIP/>
+				<csb:PATIENT_COUNTRY_CODE/>
+				<csb:PATIENT_CUSTOMER_1/>
+				<csb:PATIENT_CUSTOMER_2/>
+				<csb:PATIENT_CUSTOMER_3/>
+				<csb:PATIENT_CUSTOMER_4/>
+				<csb:PATIENT_DRIVERLIC_NUMBER/>
+				<csb:PATIENT_ETHNIC_GROUP/>
+				<csb:PATIENT_MARITAL_STATUS/>
+				<csb:PATIENT_MOTHER_MAIDEN_NAME/>
+				<csb:PATIENT_NATIONALITY/>
+				<csb:PATIENT_OTHER_PID/>
+				<csb:PATIENT_PATIENT_ALIAS/>
+				<csb:PATIENT_PATIENT_LOCAL_NAME/>
+				<csb:PATIENT_PATIENT_LOCATION/>
+				<csb:PATIENT_PATIENT_NAME/>
+				<csb:PATIENT_PATIENT_STATUS/>
+				<csb:PATIENT_PATIENT_TYPE/>
+				<csb:PATIENT_PATIENTID/>
+				<csb:PATIENT_PHONENUMBER_BUSINESS/>
+				<csb:PATIENT_PHONENUMBER_HOME/>
+				<csb:PATIENT_PRIMARY_LANGUAGE/>
+				<csb:PATIENT_PRIOR_PATIENT_ID/>
+				<csb:PATIENT_PRIOR_PATIENT_NAME/>
+				<csb:PATIENT_PRIOR_VISIT_NUMBER/>
+				<csb:PATIENT_RACE/>
+				<csb:PATIENT_RELIGION/>
+				<csb:PATIENT_SEX/>
+				<csb:PATIENT_SSN_NUMBER/>
+				<csb:PATIENT_VETERANS_MIL_STATUS/>
+				<csb:PATIENT_VISIT_NUMBER/>
+				<csb:ORDER_BODY_PART/>
+				<csb:ORDER_CHARGE_AMOUNT/>
+				<csb:ORDER_CHARGE_STATUS/>
+				<csb:ORDER_CNT_AGENT/>
+				<csb:ORDER_CUSTOMER_1/>
+				<csb:ORDER_CUSTOMER_2/>
+				<csb:ORDER_CUSTOMER_3/>
+				<csb:ORDER_CUSTOMER_4/>
+				<csb:ORDER_DURATION/>
+				<csb:ORDER_EXAM_COMMENT/>
+				<csb:ORDER_EXAM_DT/>
+				<csb:ORDER_EXAM_LOCATION/>
+				<csb:ORDER_EXAM_REQUIREMENT/>
+				<csb:ORDER_EXAM_STATUS/>
+				<csb:ORDER_EXAM_VOLUME/>
+				<csb:ORDER_FILLER/>
+				<csb:ORDER_FILLER_CONTACT/>
+				<csb:ORDER_FILLER_DEPARTMENT/>
+				<csb:ORDER_FILLER_NO/>
+				<csb:ORDER_MODALITY/>
+				<csb:ORDER_ORDER_NO/>
+				<csb:ORDER_PATIENT_ID/>
+				<csb:ORDER_PLACER/>
+				<csb:ORDER_PLACER_CONTACT/>
+				<csb:ORDER_PLACER_DEPARTMENT/>
+				<csb:ORDER_PLACER_NO/>
+				<csb:ORDER_PROCEDURE_CODE/>
+				<csb:ORDER_PROCEDURE_DESC/>
+				<csb:ORDER_PROCEDURE_NAME/>
+				<csb:ORDER_REF_CLASS_UID/>
+				<csb:ORDER_REF_CONTACT/>
+				<csb:ORDER_REF_ORGANIZATION/>
+				<csb:ORDER_REF_PHYSICIAN/>
+				<csb:ORDER_REQUEST_REASON/>
+				<csb:ORDER_REUQEST_COMMENTS/>
+				<csb:ORDER_SCHEDULED_DT/>
+				<csb:ORDER_SERIES_NO/>
+				<csb:ORDER_STATION_AETITLE/>
+				<csb:ORDER_STATION_NAME/>
+				<csb:ORDER_STUDY_ID/>
+				<csb:ORDER_STUDY_INSTANCE_UID/>
+				<csb:ORDER_TECHNICIAN/>
+				<csb:ORDER_TRANSPORT_ARRANGE/>
+			</csb:Table>
+		</csb:Order>
+	</Body>
+</Message>

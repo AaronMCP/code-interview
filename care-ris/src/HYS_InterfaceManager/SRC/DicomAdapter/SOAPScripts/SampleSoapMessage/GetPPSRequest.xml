@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DICOM xmlns="http://www.carestream.com/DCM_SDK">
+  <DElementList>
+    <DElement>
+      <VR>UL</VR>
+      <Tag>00000000</Tag>
+      <Value>98</Value>
+      <Sequence />
+    </DElement>
+    <DElement>
+      <VR>UI</VR>
+      <Tag>00000003</Tag>
+      <Value>1.2.840.10008.5.1.4.32.3</Value>
+      <Sequence />
+    </DElement>
+    <DElement>
+      <VR>US</VR>
+      <Tag>00000100</Tag>
+      <Value>272</Value>
+      <Sequence />
+    </DElement>
+    <DElement>
+      <VR>US</VR>
+      <Tag>00000110</Tag>
+      <Value>2</Value>
+      <Sequence />
+    </DElement>
+    <DElement>
+      <VR>US</VR>
+      <Tag>00000800</Tag>
+      <Value>0</Value>
+      <Sequence />
+    </DElement>
+    <DElement>
+      <VR>UI</VR>
+      <Tag>00001001</Tag>
+      <Value>10.1.2.3.3.3.3.33333.1221546</Value>
+      <Sequence />
+    </DElement>
+  </DElementList>
+</DICOM>

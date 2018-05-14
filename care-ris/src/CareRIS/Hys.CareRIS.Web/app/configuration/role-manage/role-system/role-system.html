@@ -1,0 +1,82 @@
+﻿<div class="role-system">
+    <h5>注释：  {{selectedRoleProfile ? selectedRoleProfile.PropertyDesc:'选择要显示的检查申请模块面板'}}</h5>
+    <form name="roleForm" novalidate>
+        <table class="table">
+            <tr ng-repeat="roleProfile in  roleProfileList"
+                ng-click="roleProfileClick(roleProfile)"
+                ng-blur="roleProfileBlur(roleProfile)"
+                ng-class="{'configuration-active':roleProfile.selected}">
+                <td title="{{roleProfile.Name}}" class="col-lg-6">
+                    <div class="col-md-11">{{roleProfile.Name}}</div>
+                    <div class="col-md-1"><span ng-show="roleProfile.isChange">*</span></div>
+                </td>
+                <td ng-if="roleProfile.PropertyType==='0'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <input ng-show="roleProfile.selected" ng-change="roleProfile.isChange=true" ng-model="roleProfile.Value" type="text" />
+                </td>
+
+                <td ng-if="roleProfile.PropertyType==='1'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <input class="input-number" ng-show="roleProfile.selected"
+                           ng-model="roleProfile.Value" type="number"
+                           ng-min="roleProfile.minNumber"
+                           ng-max="roleProfile.maxNumber"
+                           name="roleProfile.Name"
+                           ng-change="roleProfile.isChange=true" />
+                </td>
+
+                <td ng-show="roleProfile.PropertyType==='3'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <select ng-show="roleProfile.selected"
+                            ng-model="roleProfile.Value"
+                            ng-change="roleProfile.isChange=true"
+                            ng-options="o for o in roleProfile.selectOptions"></select>
+                </td>
+
+                <td ng-show="roleProfile.PropertyType==='4'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <select ng-show="roleProfile.selected"
+                            ng-model="roleProfile.Value"
+                            ng-change="roleProfile.isChange=true"
+                            ng-options="o for o in roleProfile.selectOptions"></select>
+                </td>
+                <td ng-if="roleProfile.PropertyType==='5'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected" title="{{roleProfile.Value}}">{{roleProfile.Value}}</span>
+                    <select ng-show="roleProfile.selected" kendo-multi-select
+                            k-value-primitive="true"
+                            k-auto-bind="false"
+                            k-data-bound="noDataFound"
+                            k-on-change="roleProfileChange(roleProfile)"
+                            k-ng-model="roleProfile.selectValue"
+                            k-data-source="roleProfile.selectOptions"></select>
+                </td>
+                <td ng-show="roleProfile.PropertyType==='6'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <div ng-show="roleProfile.selected"
+                         ng-model="color" kendo-flat-color-picker k-opciaty="true"
+                         class="role-color"></div>
+                </td>
+
+                <td ng-if="roleProfile.PropertyType==='9'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <input ng-show="roleProfile.selected"
+                           ng-model="roleProfile.Value"
+                           ng-pattern="/^[a-zA-Z]:(\\[0-9a-zA-Z\u4e00-\u9fa5]*)$/" type="text"
+                           ng-change="roleProfile.isChange=true" />
+                </td>
+
+                <td ng-if="roleProfile.PropertyType==='10'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <input ng-show="roleProfile.selected" ng-model="roleProfile.Value" type="url" ng-change="roleProfile.isChange=true" />
+                </td>
+                <td ng-if="roleProfile.PropertyType==='11'" class="col-lg-6">
+                    <span ng-model="roleProfile.Value">{{roleProfile.Value==='1'?'是':'否'}}</span>
+                </td>
+                <td ng-if="roleProfile.PropertyType==='15'" class="col-lg-6">
+                    <span ng-show="!roleProfile.selected">{{roleProfile.Value}}</span>
+                    <input ng-show="roleProfile.selected" ng-change="roleProfile.isChange=true" ng-model="roleProfile.Value" type="password" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>

@@ -1,0 +1,131 @@
+﻿<div class="dictionary-system">
+    <div class="col-md-12">
+        <div class="pagge-top-left">
+            <h5>注释:{{(selectedItem.tag)+selectedItem.description}}</h5>
+        </div>
+        <div class="pagge-top-right">
+            <ul class="nav navbar-nav  rispro-navbar-nav" style="background: #fff!important;">
+                <li>
+                    <button type="button" class="btn btn-default" ng-click="updateSystem()">修改</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-default" ng-click="saveDics()" ng-disabled="dicForm.$pristine || dicForm.$invalid">保存</button>
+                </li>
+                <li>
+                    <button type="submit" class="btn btn-default btn-sm search-btn" ng-click="refresh()">
+                        <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
+                    </button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-12" style="height:96%;overflow-y:auto;">
+        <div class="col-md-8">
+            <form name="dicForm" novalidate class="system-dictionary-form">
+                <table class="table table-hover">
+                    <tr ng-repeat="item in dicList" ng-class="{'quality-active': item.selected}" ng-click="clickItem(item)">
+                        <td class="col-lg-6">
+                            <div class="col-md-11">{{item.name}}</div>
+                            <div class="col-md-1"> <span ng-show="item.isChange">*</span></div>
+                        </td>
+                        <td class="col-lg-6 choice">
+                            <select style="width: 95%; border: 0" class="form-control" ng-options="i for i in item.options" ng-model="item.value" ng-change="optionChange()"></select>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="col-md-4">
+        </div>
+
+    </div>
+
+    <div kendo-window="updateSystemWindow"
+         class="updateSystemWindow"
+         k-width="'500px'" k-height="'590px'"
+         k-visible="false"
+         k-resizable="false" k-modal="true"
+         k-title="'修改系统字典'"
+         style="font-size:16px;">
+
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-3 propertyLable"><span translate>Site</span>:</div>
+                <div class="col-md-9">
+                    <select style="width:100%" class="form-control" ng-options="site for site in sites" ng-model="currentSite" ng-change="siteChange()">
+                        <option value="">全局</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-3 propertyLable"><span translate>字典名称</span>:</div>
+                <div class="col-md-9">
+                    <input type="text" style="width:100%" class="form-control" ng-model="selectedItem.name" disabled="disabled" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 propertyLable"><span translate>默认值</span>:</div>
+                <div class="col-md-9">
+                    <input type="text" style="width:100%" class="form-control" ng-model="selectedItem.value" disabled="disabled" />
+                </div>
+            </div>
+            <div style="height:300px">
+                <form name="divValueForm" id="divValueForm" novalidate style="height: 300px;" class="system-dictionary-form">
+                    <div class="k-grid-header" style="padding-bottom: 0;">
+                        <table class="table" style="margin-bottom:0px;">
+                            <thead>
+                                <tr>
+                                    <th id="no-padding-th">字典描述</th>
+                                    <th id="no-padding-th">快捷方式代码</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div style="overflow-y:auto;height:240px;">
+                        <table class="table table-hover" style="margin-top:0px;border-top: 1px solid #e2e2e2;box-sizing: border-box;">
+                            <tbody>
+                                <tr ng-repeat="item in dicValueList" ng-class="{'quality-active': item.selected}" ng-click="clickValueItem(item)">
+                                    <td class="col-lg-6">
+                                        <span>{{item.value}}</span>
+                                    </td>
+                                    <td class="col-lg-6">
+                                        <span>{{item.shortcutCode}}</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </form>
+            </div>
+            <form name="valueEditFrom" novalidate>
+                <div class="row" style="margin-top:10px;">
+                    <div class="col-md-3 propertyLable">
+                        <span translate>字典描述:</span>
+                        <span class="registration-edit-required right" style="margin-right:4px;">*</span>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" style="width:100%" class="form-control" maxlength="50" ng-maxlength="50"   ng-model="dicValueItem.value" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 propertyLable"><span ng-show="!showText" translate>快捷方式代码</span><span ng-show="showText" translate>链接地址</span>:</div>
+                    <div class="col-md-9">
+                        <input type="text" style="width:100%" class="form-control" maxlength="50"  ng-maxlength="50" ng-model="dicValueItem.shortcutCode" />
+                    </div>
+                </div>
+                <div class="role-btn-group">
+                    <button type="button" class="btn btn-primary" ng-click="upDicValue()" ng-disabled="!selectedValueItem">上移</button>
+                    <button type="button" class="btn btn-primary" ng-click="downDicValue()" ng-disabled="!selectedValueItem">下移</button>
+                    <button type="button" class="btn btn-primary" ng-click="addDicValueSure()" ng-disabled="valueEditFrom.$invalid">添加</button>
+                    <button type="button" class="btn btn-primary" ng-click="delDicValue()" ng-disabled="!selectedValueItem">删除</button>
+                    <button type="button" class="btn btn-primary" ng-click="updateDicValue()" ng-disabled="!selectedValueItem || valueEditFrom.$invalid">保存</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+</div>

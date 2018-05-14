@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Hys.CareRIS.Domain.Entities.AccessionNumberList" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQABAAAQAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Entities\AccessionNumberList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ApplyDept" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAIQAAAAAAgAAACAAAIAAAAAAQAA=</HashCode>
+      <FileName>Entities\ApplyDept.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ApplyDoctor" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgACAAAQAAAAAAgAQQCCAAIAAAAAAQAA=</HashCode>
+      <FileName>Entities\ApplyDoctor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Dictionary" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAgAAAAAAAAAAAAAAUAA=</HashCode>
+      <FileName>Entities\Dictionary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.DictionaryValue" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAARAAAAAggCAAAAQAAAAAAgAAACAAAAAgCAAAQAA=</HashCode>
+      <FileName>Entities\DictionaryValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.GWDataIndex" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAgAAAAQAAAAEAAAAAAAAAAAAAAABQAA=</HashCode>
+      <FileName>Entities\GWDataIndex.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.GWOrder" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gMEAQAAAQQACAAARkQwYIAuQQBASAAAAQmAIAAoCQUY=</HashCode>
+      <FileName>Entities\GWOrder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.GWPatient" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RCEBAAACbQAgBAAEAAUCAQQAEAwEAJACAAAAQEAAbIE=</HashCode>
+      <FileName>Entities\GWPatient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.GWReport" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEQAQAEQQAAAABBAASAAAAAAAAAAAAIAAABAIEAYEQ=</HashCode>
+      <FileName>Entities\GWReport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Modality" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAggAAAABQAAAAEAgAAAAAAAAACAAACQAA=</HashCode>
+      <FileName>Entities\Modality.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ModalityType" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAQCAAAAAgAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Entities\ModalityType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Order" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UrCZI5BQoQnGBEBEABQQER+oApFoDBGYyYCGggCA5EE=</HashCode>
+      <FileName>Entities\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Patient" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAQAIIgQCAAAQAACBAAiUJAEACgIAACAABYAg=</HashCode>
+      <FileName>Entities\Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.PrintTemplate" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABAAAAAAAkAEAAAQAAQAAAgAAAAAAAQASAAAAQAA=</HashCode>
+      <FileName>Entities\PrintTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.PrintTemplateFields" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAQAAAAAAgCAAAAAAQAAAAAAQAA=</HashCode>
+      <FileName>Entities\PrintTemplateFields.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Procedure" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EEGBMBEkIAQEAgQNASShCAEBogEoAACgBAAGAAQiYUc=</HashCode>
+      <FileName>Entities\Procedure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Procedurecode" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEGAAAAgAAQmgAQIAASACAEAAoSgICAAAAACCEAASTM=</HashCode>
+      <FileName>Entities\Procedurecode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Report" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkABOQCMQQgkASABZJQBCKiNoiGmQBcAEAAcAoUJbEA=</HashCode>
+      <FileName>Entities\Report.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ReportDelPool" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkABOQCMQQgkASABZJQBDKiNoiGmQBcAEAA8AoUJbEA=</HashCode>
+      <FileName>Entities\ReportDelPool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ReportFile" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAIAAAAAAAQAAAAAAgFAAACACIAAAEBAYAA=</HashCode>
+      <FileName>Entities\ReportFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ReportList" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAKACMAAgkACAAZAQAAGCBogEmQBOAEAAUAIEAaEA=</HashCode>
+      <FileName>Entities\ReportList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ReportTemplate" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAMAAAAAAAAACAAAQAAQAAAgAkwCEAAAACAIAIQQA=</HashCode>
+      <FileName>Entities\ReportTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.ReportTemplateDirec" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAEQAAAgAAkAAAAAgAQACgAAQQAA=</HashCode>
+      <FileName>Entities\ReportTemplateDirec.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Role" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAABAAQAAAAAAgAAAAAAAAAAEAAAQAA=</HashCode>
+      <FileName>Entities\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.RoleProfile" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAACAQABAQAAgAAAAAAAIAiEAAAUCA=</HashCode>
+      <FileName>Entities\RoleProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.RoleToUser" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAgAAAAAAAAAAEAAAQAA=</HashCode>
+      <FileName>Entities\RoleToUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Site" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIAEAAAAAAIgIAAAAAAAAABIAgAIAAACAoAAAABAIAA=</HashCode>
+      <FileName>Entities\Site.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.SiteProfile" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAgAAACAQABAQAAgAAAAAAAIAiAAAAUCA=</HashCode>
+      <FileName>Entities\SiteProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.Sync" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QACAQBCCAAAAAACAAAAAAAAAA0EAAAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Entities\Sync.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.SystemProfile" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAACAQABAQAAgAAAAAAAIAiAAAAUCA=</HashCode>
+      <FileName>Entities\SystemProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.User" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAGAEAAQBAAEAAAAQAAAQAAgABAEAiAAAgAAAAYAA=</HashCode>
+      <FileName>Entities\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.UserExpiration" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAggAAAAgAAAAAAAAEAAQAA=</HashCode>
+      <FileName>Entities\UserExpiration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hys.CareRIS.Domain.Entities.UserProfile" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAACAQABAwAAgAAAAAAAIAiAAAAUCA=</HashCode>
+      <FileName>Entities\UserProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

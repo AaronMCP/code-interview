@@ -1,0 +1,44 @@
+Provider=SQLOLEDB;Server=CN-SH-D0406210;Database=GWConfigDB;UID=10095177;Trusted_Connection=Yes;
+
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database.mdb
+
+-------------------------------------------
+
+Adapter Service:
+
+installutil HYS.Adapters.Service.exe
+installutil /u HYS.Adapters.Service.exe
+
+These two assemblies should be exactly the same, or you can not uninstall the service.
+
+Does it have anything to do with weak named assembly? What if they are strong named assemably?
+
+However, sometimes it works well.
+
+-------------------------------------------
+
+Adapter Config:
+
+Consider to combine FormConfigIn and FormConfigOut into one form...
+
+-------------------------------------------
+
+Adapter Service:
+
+IAdapter.Exit() won't not be call untill operation system is shut down. Is that all right?
+
+-------------------------------------------
+
+Adapter Service:
+
+FindWindow
+ERROR_ALREADY_EXISTS
+183 Cannot create a file when that file already exists. 
+
+Solution: 
+
+In order for a Windows service to obtain the handle of the running IM it needs to be able to interact with the desktop. 
+This is done by editing the service properties and checking the 'Allow service to interact with desktop' button.
+
+http://www.codeproject.com/cs/system/cswindowsservicedesktop.asp (see replies also)
+

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Message>
+  <Header></Header>
+  <Body>
+    <csb:Index xmlns:csb="http://www.carestream.com/csbroker">
+      <!-- 
+     Notice: 
+    
+    1. One ACK message map to one <Index> element.
+      
+    2. CSB Inbound adapter will update the value to database if it is not null.
+    
+  -->
+      <csb:Table>
+        <csb:DATAINDEX_DATA_SOURCE/>
+        <csb:DATAINDEX_EVENT_TYPE></csb:DATAINDEX_EVENT_TYPE>
+        <csb:DATAINDEX_PROCESS_FLAG>1</csb:DATAINDEX_PROCESS_FLAG>
+        <csb:DATAINDEX_RECORD_INDEX_1>AE</csb:DATAINDEX_RECORD_INDEX_1>
+        <csb:DATAINDEX_RECORD_INDEX_2>Application can not process the hl7 message</csb:DATAINDEX_RECORD_INDEX_2>
+        <csb:DATAINDEX_RECORD_INDEX_3/>
+        <csb:DATAINDEX_RECORD_INDEX_4/>
+        </csb:Table>
+    </csb:Index>
+  </Body>
+</Message>

@@ -1,0 +1,19 @@
+﻿<div class="row sub-nav-request">
+    <div class="col-md-4 status">
+        <div class="status-flag">
+            <div class="status-title">{{'ApplyConsultation'|translate}}</div>
+            <div class="flag-arrow"></div>
+        </div>
+    </div>
+    <div class="col-md-4 status" ng-class="{'status-disabled': report.status==enums.consultationRequestStatus.Applied }">
+        <div class="status-flag">
+            <div class="status-title">{{'Accepted'|translate}}</div>
+            <div class="flag-arrow"></div>
+        </div>
+    </div>
+    <div class="col-md-4 status" ng-class=" {'status-disabled': report.status==enums.consultationRequestStatus.Applied || report.status==enums.consultationRequestStatus.Accepted}">
+        <div class="status-flag">
+            <div class="status-title">{{'Completed'|translate}}</div>
+        </div>
+    </div>
+</div>

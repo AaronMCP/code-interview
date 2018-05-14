@@ -1,0 +1,60 @@
+﻿<div>
+    <style>
+        .recipient-config-edit-window .modal-dialog {
+            width: 950px;
+            margin-top: 100px;
+        }
+    </style>
+
+    <p class="ris-module-title">
+        <strong>{{isEdit ? 'EditRecipientConfig' : 'CreateRecipientConfig' | translate}}</strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </p>
+    <form name="recipientConfigForm" class="ris-form" style=" padding: 20px 20px 10px 10px; overflow-y: auto; overflow-x: hidden; max-height: 625px; min-height: 300px;">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'RequestorOrg' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <span class="col-md-4">{{loginUser.user.hospital.hospitalName}}</span>
+                <div class="col-md-8">
+                    <div class="col-md-4">
+                        <label class="control-label">{{::'Requestor' | translate}}</label>
+                    </div>
+                    <div class="col-md-8">
+                        <ui-select ng-model="config.selectedUserID" theme="select2" search-enabled="false" style="width: 220px;">
+                            <ui-select-match allow-clear>{{$select.selected.localName}}</ui-select-match>
+                            <ui-select-choices repeat="user.uniqueID as user in users">
+                                <span>{{user.localName}}</span>
+                            </ui-select-choices>
+                        </ui-select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Recipient' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <span >{{recipient[0].text}}</span>
+            </div>
+
+            <div class="clearfix"></div>
+            <recipient-selector on-selected="recipientConfigForm.$setDirty(); showRecipient = false;" selection="recipient" mode="single" page-size="4"></recipient-selector>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label" translate>Description</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea class="form-control" id="input" style="height: 50px;" ng-model="config.description"></textarea>
+            </div>
+        </div>
+    </form>
+
+    <p class="ris-module-footer">
+        <button class="btn ris-btn-primary" translate ng-click="saveRecipientConfig()" ng-disabled="recipientConfigForm.$pristine || !recipient.length ">OK</button>
+        <button class="btn btn-normal" translate ng-click="close()">Cancel</button>
+    </p>
+</div>

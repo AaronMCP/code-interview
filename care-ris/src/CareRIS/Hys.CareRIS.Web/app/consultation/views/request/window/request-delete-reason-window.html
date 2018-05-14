@@ -1,0 +1,25 @@
+﻿<div>
+    <link href="/app-resources/css/request-edit-window.css" rel="stylesheet" />
+    <div class="request-advice-title title">
+        <strong>
+            {{ reason.deleteTitle  | translate}}
+        </strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </div>
+    <form name="requestAdvice" class="ris-form">
+        <div class="row">
+            <div class="col-md-2">
+                <label for="DeleteReason">{{'DeleteReason'|translate}}</label><span class="registration-edit-required">*</span>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea ng-model="reason.deleteReason" class="form-control col2input"></textarea>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <div class="request-advice-action">
+            <button class="btn btn-green" translate ng-click="deleteRequest()">OK</button>
+            <button class="btn btn-default btn-left" translate ng-click="close()">Cancel</button>
+        </div>
+    </div>
+</div>

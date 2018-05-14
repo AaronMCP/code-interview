@@ -1,0 +1,11 @@
+﻿<div style="height:100%;position:relative;">
+    <div ng-if="isPreviewReport" style="height:100%;position:relative;">
+        <report-preview-view report-id="{{reportId}}" procedure-id="{{procedureId}}" print-id="{{printId}}" from="{{from}}" patient-case-order-id="{{patientCaseOrderId}}" />
+    </div>
+    <!--<div ng-hide="isPreviewReport">-->
+    <div ng-if="!isPreviewReport" >
+        <report-edit-view report-id="{{reportId}}" order-id="{{orderId}}" procedure-id="{{procedureId}}" is-read="{{isRead}}" patient-case-order-id="{{patientCaseOrderId}}" from="{{from}}">
+        </report-edit-view>
+    </div>
+</div>
+

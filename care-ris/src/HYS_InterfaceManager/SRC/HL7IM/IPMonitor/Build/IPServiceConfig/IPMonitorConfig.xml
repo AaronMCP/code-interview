@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?><MonitorConfig><PolicyIP><Enable>True</Enable>
+<IntervalInMS>3000</IntervalInMS>
+<AdapterName /><TimeOutInS4Ping>5</TimeOutInS4Ping>
+<FlagService>FlagService</FlagService>
+<IPPrivate /><IPPublic /><SubnetPrivate /><SubnetPublic /><GatewayPrivate /><GatewayPublic /><DNSPrivate /><DNSPublic /></PolicyIP>
+<PolicyFlag><Enable>False</Enable>
+<IntervalInMS>3000</IntervalInMS>
+<AdapterName /><ServicesWithValidations /></PolicyFlag>
+<EntityID>00000000-0000-0000-0000-000000000000</EntityID>
+<Name><![CDATA[]]></Name>
+<DeviceName><![CDATA[]]></DeviceName>
+<Description><![CDATA[]]></Description>
+<Direction>Unknown</Direction>
+<Interaction>Unknown</Interaction>
+<PublishConfig><Publication><MessageTypeList /></Publication>
+<Channels /><ProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</ProcessConfig>
+</PublishConfig>
+<SubscribeConfig><Channels /><ProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</ProcessConfig>
+</SubscribeConfig>
+<RequestConfig><Channels /><ProcessConfig><PreProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</PreProcessConfig>
+<PostProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</PostProcessConfig>
+</ProcessConfig>
+</RequestConfig>
+<ResponseConfig><ResponseContract><MessageTypePairList /></ResponseContract>
+<Channels /><ProcessConfig><PreProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</PreProcessConfig>
+<PostProcessConfig><XSLTFileLocation /><EnableXSLTTransform>False</EnableXSLTTransform>
+<EnableXSLTExtension>False</EnableXSLTExtension>
+</PostProcessConfig>
+</ProcessConfig>
+</ResponseConfig>
+</MonitorConfig>

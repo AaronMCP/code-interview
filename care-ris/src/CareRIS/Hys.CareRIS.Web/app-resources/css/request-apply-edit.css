@@ -1,0 +1,74 @@
+﻿#applyRequestFormContainer {
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+    #applyRequestFormContainer .consultationTypeClass {
+        float: left;
+        position: relative;
+        -moz-min-width: 150px;
+        -ms-min-width: 150px;
+        -o-min-width: 150px;
+        -webkit-min-width: 150px;
+        min-width: 150px;
+        margin: 0 5px;
+        border: 1px solid #e3e3e3;
+        text-align: center;
+        vertical-align: middle;
+        max-width: 600px;
+        min-height: 50px;
+    }
+
+   #applyRequestFormContainer  .other-item-container {
+       padding-bottom: 15px;
+   }
+  
+#applyRequestFormContainer .k-state-selected {
+        background-color: #fdf6dc;
+        color: black;
+        border: 1px solid #f69f36;
+        -webkit-box-shadow: 0px 0px 2px 0px #f69f36;
+        -ms-box-shadow: 0px 0px 2px 0px #f69f36;
+        box-shadow: 0px 0px 2px 0px #f69f36;
+    }
+
+#applyRequestFormContainer hr {
+        height: 1px;
+        background-color: silver;
+        width: 100%;
+    }
+
+.apply-edit-window .modal-dialog {
+    width: 800px;
+    margin-top: 100px;
+}
+.apply-edit-center-window .modal-dialog {
+    width: 1000px;
+   margin-top: 100px;
+}
+
+.request-advice-title {
+    background: #E6E7E8;
+    padding: 10px;
+}
+
+.request-advice-action {
+    background: #E6E7E8;
+    padding: 5px;
+    text-align: center;
+}
+
+.btn-left {
+    margin-left: 30px;
+}
+
+.ris-form {
+    padding: 20px 20px 10px 10px;
+}
+
+.from-group-title {
+    height: 30px;
+}
+
+

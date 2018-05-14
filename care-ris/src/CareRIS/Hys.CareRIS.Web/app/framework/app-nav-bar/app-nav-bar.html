@@ -1,0 +1,98 @@
+﻿<nav class="navbar navbar-default rispro-navbar navbar-fixed-top" role="navigation" ng-cloak>
+    <!--设置角色切换-->
+    <div class="navbar-top-setting">
+        <span class="title" ng-show="$state.includes('ris.worklist')">工作列表</span>
+        <span class="title" ng-show="$state.includes('ris.newbooking')">新建预约</span>
+        <span class="title" ng-show="$state.includes('ris.newregistration')">新建登记</span>
+        <span class="title" ng-show="$state.includes('ris.qualitycontrol')">质量控制</span>
+        <span class="title" ng-show="$state.includes('ris.configuration')">配置</span>
+        <span class="title" ng-show="$state.includes('ris.template')">模板</span>
+        <ul class="nav navbar-nav navbar-right">
+            <!--<li ng-show="$state.includes('ris.consultation')">
+                <a ng-href="{{statisticsUri}}" target="_blank" title="{{'ConsultationStatistics' | translate}}">
+                    <span class="icon-general icon-chart" aria-hidden="true"></span>
+                </a>
+            </li>-->
+            <li ng-show="$state.includes('ris.consultation') && (loginUser.isDoctor|| loginUser.isConsAdmin||loginUser.isExpert)">
+                <a href="javascript:void(0);" title="{{'ConsultationWorklist' | translate}}" ng-click="switchToConsultationApp()">
+                    <span class="icon-general icon-consultationList" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li ng-show="$state.includes('ris.consultation')&& (loginUser.isDoctor || loginUser.isSuperAdmin)">
+                <a href="javascript:void(0);" title="{{'PatientCase' | translate}}" ng-click="switchToCases()">
+                    <span class="icon-general icon-viewDetail" aria-hidden="true"></span>
+                </a>
+            </li>
+            <li ng-show="$state.includes('ris.consultation') &&  loginUser.isSuperAdmin">
+                <a href="javascript:void(0);" ng-click="gotoConsultationConfig()">
+                    <span class=" icon-general icon-setting" aria-hidden="true" title="{{'ClientConfig'|translate}}">
+                    </span>
+                </a>
+            </li>
+            <!--<li ng-show="$state.includes('ris.worklist')||$state.includes('ris.newbooking')||$state.includes('ris.newregistration')||$state.includes('ris.qualitycontrol')||$state.includes('ris.configuration')">
+                <a href="javascript:void(0);" ng-click="switchToReferralApp()">
+                    <span class=" icon-general icon-transConsultation" aria-hidden="true" title="{{'ReferralList'|translate}}">
+                    </span>
+                </a>
+            </li>-->
+            <li ng-show="$state.includes('ris.referral')">
+                <a href="javascript:void(0);" ng-click="switchToRisApp()">
+                    <span class="icon-general icon-examList" aria-hidden="true" title="RIS">
+                    </span>
+                </a>
+            </li>
+            <!--<li ng-show="$state.includes('ris.worklist') || $state.includes('ris.referral')||$state.includes('ris.newbooking')||$state.includes('ris.newregistration')||$state.includes('ris.qualitycontrol')||$state.includes('ris.configuration')" ng-if="!isMobile">
+                <a href="javascript:void(0);" ng-click="gotoRisConfig()">
+                    <span class=" icon-general icon-setting" aria-hidden="true" title="{{'ClientConfig'|translate}}">
+                    </span>
+                </a>
+            </li>-->
+            <li class="dropdown" id="navbar-right-role-dropdown">
+                <a href="javascript:void(0);" class="dropdown-toggle namecolor"
+                   data-toggle="dropdown" role="button" aria-expanded="false"
+                   style="padding-right: 15px" ng-attr-title="{{loginUser.user.defaultRisRoleName }}">
+                    <span class="iconfont icon-renxiang" aria-hidden="true" id="icon-menu-role"></span>
+                    <span class="ng-binding">{{::localName}}</span>
+                    <span class="caret"></span>
+                </a>
+                <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" title="{{loginUser.user.defaultRoleName}}" ng-show="$state.includes('ris.consultation')">
+                    <span id="icon-menu-role-consultation"></span>
+                    <span class="role-title">{{::localName}}</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu hys-dropdown-menu" role="menu">
+                    <li ng-repeat="role in risUserRoles" ng-click="setRisDefaultRole(role);" ng-class="{selected:role.roleName == loginUser.user.risRole}">
+                        <a style="margin-left: 10px">
+                            {{role.description}}
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li ng-click="changePassword()"><a style="margin-left: 10px;" href="javascript:void(0)" translate>changePassword</a></li>
+                    <li ng-click="logout()"><a style="margin-left: 10px;" href="javascript:void(0)" translate>Logout</a></li>
+                </ul>
+                <ul ng-show="$state.includes('ris.consultation')" class="dropdown-menu" role="menu">
+                    <li ng-repeat="role in loginUser.user.roles" ng-class="{selected:role.uniqueID == loginUser.user.defaultRoleID}" ng-click="setDefaultRole(role);">
+                        <a>
+                            <span ng-show="role.uniqueID==constants.adminRoleID" class="icon-general icon-role_admin"></span>
+                            <span ng-show="role.uniqueID==constants.siteAdminRoleID" class="icon-general icon-role_admin"></span>
+                            <span ng-show="role.uniqueID==constants.expertRoleId" class="icon-general icon-role_expert"></span>
+                            <span ng-show="role.uniqueID==constants.consAdminRoleId" class="icon-general icon-hospital"></span>
+                            <span ng-show="role.uniqueID==constants.doctorRoleId" class="icon-general icon-doctor"></span>{{role.roleName}}
+                        </a>
+                    </li>
+                    <li class="with-no-icon with-border" ng-click="logout()"><a href="javascript:void(0)" translate>Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--<div class="container-fluid rispro-navbar-content">-->
+        <!--切换会诊与ris-->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!--<div id="main-navbar-collapse" class="collapse navbar-collapse hys-nav-bar">
+            <div ng-hide="$state.current.url && $state.current.url.indexOf('settings') > -1" class="search-bar-container">
+                <app-worklist-search ng-show="$state.includes('ris.worklist')"></app-worklist-search>
+                <consultation-request-search-view ng-show="$state.includes('ris.consultation') && !$state.includes('ris.consultation.cases')"></consultation-request-search-view>
+            </div>
+        </div>-->
+    <!--</div>-->
+</nav>

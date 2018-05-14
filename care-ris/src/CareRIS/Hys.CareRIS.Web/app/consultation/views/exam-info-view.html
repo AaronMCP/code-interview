@@ -1,0 +1,68 @@
+﻿<div class="exam-info-panel">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#exam-info-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-brand" translate>CheckingInformation</div>
+            </div>
+            <div class="collapse navbar-collapse" id="exam-info-toggle">
+                <div class="nav navbar-nav navbar-right">
+                    <ul class="view-switcher" ng-show="!!patientCaseId">
+                        <li ng-class="{'dashboard-view':true,active:showModules}">
+                            <a href="javascript:void(0)" class="icon-dashboardView" ng-click="showModules=true"></a>
+                        </li>
+                        <li ng-class="{'tree-view':true,active:!showModules}">
+                            <a href="javascript:void(0)" class="icon-treeView" ng-click="showViewer()"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav navbar-nav navbar-right" ng-hide="disableEdit&&allPages.length<2">
+                    <ul class="page-switcher" ng-show="showModules">
+                        <li ng-repeat="page in allPages" ng-class="{active:page===pageIndex}">
+                            <a href="javascript:void(0)" class="icon-screen" title="{{$index+1}}" ng-click="changePage(page)"></a>
+                        </li>
+                        <li class="add" ng-hide="disableEdit">
+                            <a href="javascript:void(0)" class="icon-add" ng-click="addPage()" title="{{'AddPage'|translate}}"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="ei-work-panel" ng-show="showModules">
+        <div ng-repeat="(page,modules) in pagedModule" >
+            <exam-module-view ng-repeat="module in modules" belong-to-page="page"
+                              module="module" container-net="cellNet"
+                              disable-edit="disableEdit"
+                              update-module="updateModule(module)"
+                              container-page="pageIndex" patient-case-id="patientCaseId"></exam-module-view>
+        </div>
+        <div class="module-panel-placeholder" style="display: none;"></div>
+        <div class='selectedDynamicArea' style="display: none;"></div>
+        <div class="module-panel-size-adjust" style="display: none"></div>
+    </div>
+    <div class="ei-work-tree ng-cloak" ng-show="!showModules">
+        <exam-viewer-view tree-source="viewerSource" ini-item="iniItem"></exam-viewer-view>
+    </div>
+    <div style="display:none;" kendo-window="invisibleModuleWin"
+         k-width="400" k-height="450" k-visible="false" k-resizable="false" k-modal="true" k-title="invisibleModuleWinTitle" k-on-open="invisibleModules = getInvisibleModules()">
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="invisibleModule in invisibleModules">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="invModuleGroup" ng-click="selectModule(invisibleModule)">{{invisibleModule.title}}
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div style="display:none;" kendo-window="operateContentWin"
+         k-width="'80%'" k-height="'80%'" k-visible="false" k-resizable="false" k-modal="true" k-title="addContentWinTitle" k-actions="[]"
+         k-on-activate="contentWindowOpened(kendoEvent)" k-on-deactivate="contentWindowClosed(kendoEvent)">
+    </div>
+</div>

@@ -1,0 +1,4 @@
+USE master
+DROP DATABASE GWConfigDB
+DROP DATABASE GWDataDB
+go

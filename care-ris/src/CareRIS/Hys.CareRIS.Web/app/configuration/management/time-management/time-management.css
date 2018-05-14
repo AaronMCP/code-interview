@@ -1,0 +1,214 @@
+﻿.time-management-container {
+    position: relative;
+    height: 100%;
+    padding: 15px;
+    padding-top: 111px;
+}
+
+.time-management-head {
+    float: left;
+    width: 100%;
+    height: 111px;
+    margin-top: -111px;
+    padding: 15px 0;
+}
+
+.time-management-head-top {
+    overflow: auto;
+    zoom: 1;
+}
+
+    .time-management-head-top div {
+        float: left;
+        margin-right: 24px;
+    }
+
+        .time-management-head-top div span {
+            margin-right: 7px;
+        }
+
+        .time-management-head-top div select {
+            width: 138px;
+            height: 30px;
+        }
+
+            .time-management-head-top div select:nth-child(1) {
+                width: 179px;
+                height: 30px;
+            }
+
+.time-management-head-bottom {
+    margin-top: 19px;
+    overflow: auto;
+    zoom: 1;
+}
+
+.btn-group-left {
+    float: left;
+}
+
+.btn-group-right {
+    float: right;
+}
+
+    .btn-group-right button {
+        padding: 5px 28px !important;
+    }
+
+.time-management-content {
+    height: 100%;
+    background: #fff;
+    padding-top: 45px;
+    padding-bottom: 10px;
+}
+
+.time-management-table-wraper {
+    margin: 0 15px;
+    margin-bottom:14px;
+    border:1px solid #e2e2e2;
+}
+
+    .time-management-table-wraper > .table {
+        margin-bottom: 15px;
+    }
+
+.time-management-content-head {
+    float: left;
+    width: 100%;
+    height: 35px;
+    margin-top: -35px;
+    padding-left:10px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.time-management-content-body {
+    height: 100%;
+    overflow: auto;
+}
+
+.time-management-content-inside {
+    border: 1px solid #e2e2e2;
+    margin-top: 17px;
+    margin-right:18px;
+    margin-left:18px;
+}
+
+    .time-management-content-inside .time {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 8px;
+        cursor: pointer;
+    }
+        .time-management-content-inside .time > span.glyphicon {
+            color:#f5a623;
+            font-weight:500;
+        }
+
+        .time-management-content-inside .time span:nth-child(2) {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+.time-management-table tr.selected {
+    background-color: #d5f3ff !important;
+}
+
+.work-group {
+    overflow: auto;
+    zoom: 1;
+    margin-bottom: 10px;
+}
+
+.work-time-select {
+    width: 90px;
+    height: 26px;
+}
+
+.work-group button {
+    padding: 5px 28px !important;
+    margin-left: 31px;
+}
+
+.alias-input {
+    width: 236px;
+    height: 26px;
+}
+
+#workGrid {
+    margin-top: 15px;
+}
+
+.work-modal-footer {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+    .work-modal-footer button {
+        margin-left: 20px;
+        padding: 5px 48px !important;
+    }
+
+div.add-time {
+    padding: 15px;
+}
+
+    div.add-time label {
+        line-height: 34px;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+.k-window {
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%,-50%) !important;
+    box-shadow: 0 2px 14px 0 rgba(127,127,127,0.50) !important;
+    border-radius: 0 !important;
+}
+
+.timeslice-copy {
+    padding:10px 15px;
+    box-sizing: border-box!important;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50px;
+    height: 100%;
+}
+
+.copy-form {
+    height: 100%;
+    overflow: auto;
+}
+
+.timeslice-copy .form-group > span:nth-child(1) {
+    display: inline-block;
+    width: 30%;
+}
+
+.timeslice-copy .form-group > span:nth-child(2) {
+    width: 60%!important;
+}
+
+.timeslice-copy  select {
+    width: 60%;
+    height: 30px;
+}
+.copy-btn-group {
+    text-align: right;
+    vertical-align: middle;
+    line-height: 50px;
+    height: 50px;
+    margin-bottom: -50px;
+}
+
+.time-management-container .hys-modal .modal-dialog {
+    width:50%;
+    top:100px;
+}
+    .time-management-container .hys-modal .modal-dialog .modal-body {
+        height:400px;
+    }
+ .time-management-container .hys-modal .modal-dialog .modal-header{
+    height:37px;
+}

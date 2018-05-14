@@ -1,0 +1,18 @@
+﻿<div style="display:none;" kendo-window="timesliceWin"
+     k-width="'80%'" k-height="'80%'" k-visible="false" k-resizable="false" k-modal="true"
+     k-actions="[]"
+     k-on-activate="timesliceWinActived(kendoEvent)" k-on-deactivate="timesliceWinDeactivated(kendoEvent)">
+    <div class="timeslice-win-content"></div>
+    <div class="timeslice-win-bottom">
+        <!--<input type="button" class="btn btn-default" value="Unlock" ng-click="unlockTimeSlice()"/>-->
+        <input type="button" class="btn btn-default" value="{{'Cancel'|translate}}" ng-click="closeTimesliceWin()"/>
+        <input type="button" class="btn btn-green"
+               ng-disabled="!timesliceSelected"
+               value="{{'Ok'|translate}}"
+               ng-click="selectTimeSlice()" />
+    </div>
+    <div class="ng-cloak timeslice-win-error" ng-show="errorHappend">
+        <alert type="danger" close="errorMsgClosed()" dismiss-on-timeout="4">{{errorMsg}}</alert>
+    </div>
+</div>
+

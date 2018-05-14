@@ -1,0 +1,2217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StorageServerConfig>
+	<DumpDicomData>False</DumpDicomData>
+	<SaveFileToDirectory>False</SaveFileToDirectory>
+	<FileInboxDirectory>Dicom</FileInboxDirectory>
+	<GWDataDBConnection>Provider=SQLOLEDB;Server=(local)\sqlexpress;Database=GWDataDB;UID=sa;Password=123456;</GWDataDBConnection>
+	<SCPConfig>
+		<ImplementationClassUID>1.2.840.113564.3.1.64</ImplementationClassUID>
+		<ImplementationVersion>2.0</ImplementationVersion>
+		<MaxPduLength>128</MaxPduLength>
+		<MaxAssociation>-1</MaxAssociation>
+		<AssociationTimeOut>10000</AssociationTimeOut>
+		<SessionTimeOut>1800000</SessionTimeOut>
+		<AETitle>HYS_STORAGE</AETitle>
+		<Port>108</Port>
+		<KnownModalities />
+		<EnableAETitleChecking>False</EnableAETitleChecking>
+		<EnableModalityChecking>False</EnableModalityChecking>
+	</SCPConfig>
+
+	<SOAPEnable>false</SOAPEnable>
+	<SOAPClientSetting>
+		<ServerURI><![CDATA[http://localhost:2489/Service/Service.asmx?wsdl]]></ServerURI>
+		<SOAPAction><![CDATA[http://www.carestreamhealth.com/MessageCom]]></SOAPAction>
+		<DumpMessage>True</DumpMessage>
+		<EnableRequestTransform>True</EnableRequestTransform>
+		<EnableResponseTransform>True</EnableResponseTransform>
+	</SOAPClientSetting>
+	<XSLTFileToTransformSOAPtoDICOM>XSLT\StdResponseToDicom.xsl</XSLTFileToTransformSOAPtoDICOM>
+	<XSLTFileToTransformDICOMtoSOAP>XSLT\DicomToStdRequest.xsl</XSLTFileToTransformDICOMtoSOAP>
+
+	<StorageServiceUIDs>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>CRImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>CTImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>Curve</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.9</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>DXPresentation</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>DXProcessing</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.1.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>EnhancedCTImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.2.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>EnhancedMRImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.4.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>GrayscalePresentationState</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.11.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>HCColor</Name>
+			<UID>1.2.840.10008.5.1.1.30</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>HCGrayscale</Name>
+			<UID>1.2.840.10008.5.1.1.29</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>IOPresentation</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.3</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>IOProcessing</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.3.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>MGPresentation</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>MGProcessing</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.1.2.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>ModLUT</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.10</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>MRImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.4</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>NM93Image</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.5</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>NMImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.20</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>OPImage16</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.77.1.5.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>OPImage8</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.77.1.5.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>Overlay</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.8</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTBeamsTreatment</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.4</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTBrachyTreatment</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.6</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTDose</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTPlan</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.5</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTStructureSet</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.3</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>RTTreatmentSummary</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.481.7</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SCImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.7</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SCMFGB</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.7.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SCMFGW</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.7.3</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SCMFSB</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.7.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SCMFTC</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.7.4</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SRChestCAD</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.65</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SRComprehensive</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.33</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SREnhanced</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.22</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SRKeyObject</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.59</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SRMammoCAD</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.50</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>SRText</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.88.11</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>StoredPrint</Name>
+			<UID>1.2.840.10008.5.1.1.27</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>StudyContent</Name>
+			<UID>1.2.840.10008.1.9</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>US93Image</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.6</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>USImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.6.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>USMF93Image</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.3</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>USMFImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.3.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>VOILUT</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.11</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>XABIImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.12.3</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>XAImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.12.1</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>XRFImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.12.2</UID>
+		</StorageServiceUID>
+		<StorageServiceUID>
+			<Enable>True</Enable>
+			<Name>PETImage</Name>
+			<UID>1.2.840.10008.5.1.4.1.1.128</UID>
+		</StorageServiceUID>
+	</StorageServiceUIDs>
+	<StorageRule>
+		<QueryCriteria>
+			<Type>None</Type>
+			<SQLStatement />
+			<MappingList />
+		</QueryCriteria>
+		<QueryResult>
+			<MappingList>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0010_kPatientsName</Path>
+						<VR>PN</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0010_kPatientsName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>PATIENT_NAME</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0020_kPatientID</Path>
+						<VR>LO</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0020_kPatientID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>PATIENTID</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0021_kIssuerOfPatientID</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0021_kIssuerOfPatientID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0030_kPatientsBirthDate</Path>
+						<VR>DA</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0030_kPatientsBirthDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>BIRTHDATE</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0032_kPatientsBirthTime</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0032_kPatientsBirthTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_1000_kOtherPatientIDs</Path>
+						<VR>LO</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_1000_kOtherPatientIDs</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>OTHER_PID</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_1001_kOtherPatientNames</Path>
+						<VR>PN</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_1001_kOtherPatientNames</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_0040_kPatientsSex</Path>
+						<VR>CS</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_0040_kPatientsSex</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>SEX</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_1030_kPatientsWeight</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_1030_kPatientsWeight</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_4000_kPatientComments</Path>
+						<VR>LT</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_4000_kPatientComments</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0038_0500_kPatientState</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0038_0500_kPatientState</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_21C0_kPregnancyStatus</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_21C0_kPregnancyStatus</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_2000_kMedicalAlerts</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_2000_kMedicalAlerts</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_2110_kContrastAllergies</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_2110_kContrastAllergies</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0038_0050_kSpecialNeeds</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0038_0050_kSpecialNeeds</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_1010_kPatientsAge</Path>
+						<VR>AS</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_1010_kPatientsAge</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_1020_kPatientsSize</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_1020_kPatientsSize</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_2160_kEthnicGroup</Path>
+						<VR>SH</VR>
+						<Enable>True</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_2160_kEthnicGroup</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Patient</Table>
+						<FieldName>ETHNIC_GROUP</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_2180_kOccupation</Path>
+						<VR>SH</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_2180_kOccupation</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0010_21B0_kAdditionalPatientHistory</Path>
+						<VR>LT</VR>
+						<Enable>False</Enable>
+						<Catagory>Patient</Catagory>
+					</DPath>
+					<SourceField>_0010_21B0_kAdditionalPatientHistory</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_000D_kStudyInstanceUID</Path>
+						<VR>UI</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0020_000D_kStudyInstanceUID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>STUDY_INSTANCE_UID</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0020_kStudyDate</Path>
+						<VR>DA</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_0020_kStudyDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>EXAM_DT</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0030_kStudyTime</Path>
+						<VR>TM</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_0030_kStudyTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>CUSTOMER_4</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0090_kReferringPhysiciansName</Path>
+						<VR>PN</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_0090_kReferringPhysiciansName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>REF_PHYSICIAN</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0094_kReferringPhysiciansTelephoneNumbers</Path>
+						<VR>SH</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_0094_kReferringPhysiciansTelephoneNumbers</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0010_kStudyID</Path>
+						<VR>SH</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0020_0010_kStudyID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>STUDY_ID</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0050_kAccessionNumber</Path>
+						<VR>SH</VR>
+						<Enable>True</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_0050_kAccessionNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>FILLER_NO</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1030_kStudyDescription</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_1030_kStudyDescription</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1060_kNameOfPhysiciansReadingStudy</Path>
+						<VR>PN</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_1060_kNameOfPhysiciansReadingStudy</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1080_kAdmittingDiagnosesDescription</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0008_1080_kAdmittingDiagnosesDescription</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0032_000C_kStudyPriorityID</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0032_000C_kStudyPriorityID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0040_2010_kOrderCallbackPhoneNumber</Path>
+						<VR>SH</VR>
+						<Enable>False</Enable>
+						<Catagory>Study</Catagory>
+					</DPath>
+					<SourceField>_0040_2010_kOrderCallbackPhoneNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0060_kModality</Path>
+						<VR>CS</VR>
+						<Enable>True</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_0060_kModality</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>MODALITY</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_000E_kSeriesInstanceUID</Path>
+						<VR>UI</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0020_000E_kSeriesInstanceUID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0011_kSeriesNumber</Path>
+						<VR>IS</VR>
+						<Enable>True</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0020_0011_kSeriesNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>SERIES_NO</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0060_kLaterality</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0020_0060_kLaterality</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0021_kSeriesDate</Path>
+						<VR>DA</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_0021_kSeriesDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0031_kSeriesTime</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_0031_kSeriesTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1050_kPerformingPhysiciansName</Path>
+						<VR>PN</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_1050_kPerformingPhysiciansName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1030_kProtocolName</Path>
+						<VR>LO</VR>
+						<Enable>True</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0018_1030_kProtocolName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>PROCEDURE_CODE</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_103E_kSeriesDescription</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_103E_kSeriesDescription</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1070_kOperatorsName</Path>
+						<VR>PN</VR>
+						<Enable>True</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0008_1070_kOperatorsName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>TECHNICIAN</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_0015_kBodyPartExamined</Path>
+						<VR>CS</VR>
+						<Enable>True</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0018_0015_kBodyPartExamined</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Order</Table>
+						<FieldName>BODY_PART</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_5100_kPatientPosition</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Series</Catagory>
+					</DPath>
+					<SourceField>_0018_5100_kPatientPosition</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0070_kManufacturer</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_0070_kManufacturer</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0080_kInstitutionName</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_0080_kInstitutionName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0081_kInstitutionAddress</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_0081_kInstitutionAddress</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1010_kStationName</Path>
+						<VR>SH</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_1010_kStationName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1040_kInstitutionalDepartmentName</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_1040_kInstitutionalDepartmentName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_1090_kManufacturersModelName</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0008_1090_kManufacturersModelName</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1000_kDeviceSerialNumber</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1000_kDeviceSerialNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1020_kSoftwareVersions</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1020_kSoftwareVersions</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1050_kSpatialResolution</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1050_kSpatialResolution</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1200_kDateOfLastCalibration</Path>
+						<VR>DA</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1200_kDateOfLastCalibration</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1201_kTimeOfLastCalibration</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1201_kTimeOfLastCalibration</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_1400_kAcquisitionDeviceProcessingDescription</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_1400_kAcquisitionDeviceProcessingDescription</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0018_5101_kViewPosition</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0018_5101_kViewPosition</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0120_kPixelPaddingValue</Path>
+						<VR>SS</VR>
+						<Enable>False</Enable>
+						<Catagory>Equipment</Catagory>
+					</DPath>
+					<SourceField>_0028_0120_kPixelPaddingValue</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0013_kInstanceNumber</Path>
+						<VR>IS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0020_0013_kInstanceNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0020_kPatientOrientation</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0020_0020_kPatientOrientation</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0023_kContentDate</Path>
+						<VR>DA</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_0023_kContentDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0033_kContentTime</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_0033_kContentTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0008_kImageType</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_0008_kImageType</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_0012_kAcquisitionNumber</Path>
+						<VR>IS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0020_0012_kAcquisitionNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0022_kAcquisitionDate</Path>
+						<VR>DA</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_0022_kAcquisitionDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0032_kAcquisitionTime</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_0032_kAcquisitionTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_002A_kAcquisitionDatetime</Path>
+						<VR>DT</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0008_002A_kAcquisitionDatetime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_1002_kImagesInAcquisition</Path>
+						<VR>IS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0020_1002_kImagesInAcquisition</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0020_4000_kImageComments</Path>
+						<VR>LT</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0020_4000_kImageComments</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0002_kSamplesPerPixel</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0002_kSamplesPerPixel</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0004_kPhotometricInterpretation</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0004_kPhotometricInterpretation</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0010_kRows</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0010_kRows</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0011_kColumns</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0011_kColumns</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0030_kPixelSpacing</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0030_kPixelSpacing</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0100_kBitsAllocated</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0100_kBitsAllocated</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0101_kBitsStored</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0101_kBitsStored</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0102_kHighBit</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0102_kHighBit</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0103_kPixelRepresentation</Path>
+						<VR>US</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0103_kPixelRepresentation</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0300_kQualityControlImage</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0300_kQualityControlImage</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_1050_kWindowCenter</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_1050_kWindowCenter</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_1051_kWindowWidth</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_1051_kWindowWidth</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_0301_kBurnedInAnnotation</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_0301_kBurnedInAnnotation</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_2110_kLossyImageCompression</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_2110_kLossyImageCompression</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_2112_kLossyImageCompressionRatio</Path>
+						<VR>DS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_2112_kLossyImageCompressionRatio</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0028_2114_kLossyImageCompressionMethod</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_0028_2114_kLossyImageCompressionMethod</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>2050_0020_kPresentationLUTShape</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>Image</Catagory>
+					</DPath>
+					<SourceField>_2050_0020_kPresentationLUTShape</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0016_kSOPClassUID</Path>
+						<VR>UI</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0016_kSOPClassUID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0018_kSOPInstanceUID</Path>
+						<VR>UI</VR>
+						<Enable>True</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0018_kSOPInstanceUID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>Index</Table>
+						<FieldName>RECORD_INDEX_1</FieldName>
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0005_kSpecificCharacterSet</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0005_kSpecificCharacterSet</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0012_kInstanceCreationDate</Path>
+						<VR>DA</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0012_kInstanceCreationDate</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0013_kInstanceCreationTime</Path>
+						<VR>TM</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0013_kInstanceCreationTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0008_0014_kInstanceCreatorUID</Path>
+						<VR>UI</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0008_0014_kInstanceCreatorUID</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0100_0410_kSOPInstanceStatus</Path>
+						<VR>CS</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0100_0410_kSOPInstanceStatus</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0100_0420_kSOPAuthorizationDateAndTime</Path>
+						<VR>DT</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0100_0420_kSOPAuthorizationDateAndTime</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0100_0424_kSOPAuthorizationComment</Path>
+						<VR>LT</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0100_0424_kSOPAuthorizationComment</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+				<StorageItem>
+					<DPath Type="Normal">
+						<Path>0100_0426_kAuthorizationEquipmentCertificationNumber</Path>
+						<VR>LO</VR>
+						<Enable>False</Enable>
+						<Catagory>SOP Common</Catagory>
+					</DPath>
+					<SourceField>_0100_0426_kAuthorizationEquipmentCertificationNumber</SourceField>
+					<TargetField />
+					<RedundancyFlag>False</RedundancyFlag>
+					<Translating>
+						<LutName />
+						<ConstValue><![CDATA[]]></ConstValue>
+						<Type>None</Type>
+					</Translating>
+					<GWDataDBField>
+						<Table>None</Table>
+						<FieldName />
+					</GWDataDBField>
+				</StorageItem>
+			</MappingList>
+		</QueryResult>
+		<RuleID>6330827862097289670</RuleID>
+		<RuleName />
+	</StorageRule>
+</StorageServerConfig>

@@ -1,0 +1,83 @@
+﻿<div class="doctor-management">
+    <div class="doctor-management-head">
+        <div class="doctor-management-head-left">
+            <div>
+                <span>站点</span>
+                <select id="siteType" ng-model="siteType" name="siteType"
+                        ng-options="siteType.value as siteType.text for siteType in siteTypeList"
+                        ris-enter-index>
+                    <option value=""></option>
+                </select>
+            </div>
+            <div>
+                <span>医生</span>
+                <select>
+                    <option value="郑涵和">郑涵和</option>
+                    <option value="王妮">王妮</option>
+                    <option value="李知恩">李知恩</option>
+                </select>
+            </div>
+        </div>  
+        <div class="doctor-management-head-right">
+            <button class="btn btn-default">导出</button>
+            <button class="btn btn-default">保存</button>
+            <button class="btn btn-default">开始复制</button>
+            <button class="btn btn-default" ng-click="workTimeSet()">复制到下周</button>
+            <span class="glyphicon glyphicon-cloud"></span>
+        </div>     
+    </div>
+    <div class="doctor-management-content">
+        <div class="doctor-management-content-head">
+            <div class="doctor-change">
+                <span>上一周</span>
+                <span>本周</span>
+                <span>下一周</span>
+            </div>
+            <div class="doctor-time">
+                2017年01月09日-2017年01月15日
+            </div>
+            <div class="doctor-operate">
+                <span><input type="checkbox" />展开所有分组</span>
+                <span><input type="checkbox" />隐藏无排班记录</span>
+            </div>
+        </div>
+        <div class="doctor-management-content"-content>
+            <ul>
+                <li>人员</li>
+                <li>周一01/09</li>
+                <li>周二01/10</li>
+                <li>周三01/11</li>
+                <li>周四01/12</li>
+                <li>周五01/13</li>
+                <li>周六01/14</li>
+                <li>周日01/15</li>
+            </ul>
+            <div class="doctor-cpllapse" data-toggle="collapse" data-target="#doctor-management-grid">
+                <span style="color:#f5a623" class="glyphicon glyphicon-arrow-up"></span>
+                <span>1</span>
+            </div>
+            <div id="doctor-management-grid"></div>
+        </div>       
+    </div>
+    <div id="work-modal">
+        <div class="work-modal-body">
+            <div class="work-group">
+                <input class="work-time-select" kendo-time-picker k-interval="60" />
+                到
+                <input type="checkbox" />
+                次日
+                <input class="work-time-select" kendo-time-picker k-interval="60" />
+                <button class="btn btn-default">添加</button>
+            </div>
+            <div class="work-group">
+                别名
+                <input type="text" class="alias-input" />
+            </div>
+            <div id="workGrid"></div>
+        </div>
+        <div class="work-modal-footer">
+            <button class="btn btn-green">取消</button>
+            <button class="btn btn-green">确定</button>
+        </div>
+    </div>
+</div>

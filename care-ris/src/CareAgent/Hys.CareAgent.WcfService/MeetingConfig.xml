@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hys type="conferenceconfig" version="1.0">
+  <server command="login" version="1.0">
+    <ipaddress value="http://@ipaddress@" />
+    <username value="@username@" />
+    <userpassword value="@userpassword@" />
+  </server>
+  <conference>
+    <conferenceid value="@conferenceid@" />
+    <conferencepwd value="@conferencepass@" />
+    <showname value="@showname@" />
+  </conference>
+</hys>

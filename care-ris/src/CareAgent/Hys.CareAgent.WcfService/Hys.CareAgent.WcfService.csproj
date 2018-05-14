@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="..\Lib\CefSharp.WinForms.49.0.1\build\CefSharp.WinForms.props" Condition="Exists('..\Lib\CefSharp.WinForms.49.0.1\build\CefSharp.WinForms.props')" />
+  <Import Project="..\Lib\CefSharp.Common.49.0.1\build\CefSharp.Common.props" Condition="Exists('..\Lib\CefSharp.Common.49.0.1\build\CefSharp.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E94B7574-C510-4DD8-9AB3-BBB3DBC20C37}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hys.CareAgent.WcfService</RootNamespace>
+    <AssemblyName>Hys.CareAgent.WcfService</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\output\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\output\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>none</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.DICOMVIEWERLib">
+      <HintPath>..\Lib\AxInterop.DICOMVIEWERLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DShowNET, Version=1.0.0.1, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DICOMVIEWERLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\Lib\Interop.DICOMVIEWERLib.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\log4net.2.0.8\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CameraCapture.cs" />
+    <Compile Include="CameraSingleton.cs" />
+    <Compile Include="CefContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CefContainer.Designer.cs">
+      <DependentUpon>CefContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\IRISProTaskService.cs" />
+    <Compile Include="Contract\PacsConfig.cs" />
+    <Compile Include="DCMCont.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DCMCont.designer.cs">
+      <DependentUpon>DCMCont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FakeCardReaderService.cs" />
+    <Compile Include="Contract\CardInfo.cs" />
+    <Compile Include="Contract\ICardReaderService.cs" />
+    <Compile Include="Contract\IVersionService.cs" />
+    <Compile Include="Contract\RisProTask.cs" />
+    <Compile Include="FormDcmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDcmInfo.designer.cs">
+      <DependentUpon>FormDcmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormShell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShell.Designer.cs">
+      <DependentUpon>FormShell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lang.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Lang.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RibbonMenuButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RisProTaskService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="security\ServiceContractAttribute.cs" />
+    <Compile Include="security\WcfOperationBehavior.cs" />
+    <Compile Include="security\WcfOperationInvoker.cs" />
+    <Compile Include="VersionService.cs" />
+    <Compile Include="VideoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VideoForm.Designer.cs">
+      <DependentUpon>VideoForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CefContainer.resx">
+      <DependentUpon>CefContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DCMCont.resx">
+      <DependentUpon>DCMCont.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDcmInfo.resx">
+      <DependentUpon>FormDcmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShell.resx">
+      <DependentUpon>FormShell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lang.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Lang.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VideoForm.resx">
+      <DependentUpon>VideoForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MeetingConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\NEXT_PAGE.png" />
+    <None Include="Resources\LAST_PAGE.png" />
+    <None Include="Resources\FIRST_PAGE.png" />
+    <None Include="Resources\PRE_PAGE.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Hys.CareAgent.Common\Hys.CareAgent.Common.csproj">
+      <Project>{1867338C-C8C7-471C-9078-D5C4B0E8BD4F}</Project>
+      <Name>Hys.CareAgent.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CareAgent.DAP\Hys.CareAgent.DAP.csproj">
+      <Project>{977e08a1-cf9f-41b3-b1cc-9f7bb9a319dd}</Project>
+      <Name>Hys.CareAgent.DAP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\Lib\cef.redist.x64.3.2623.1401\build\cef.redist.x64.targets" Condition="Exists('..\Lib\cef.redist.x64.3.2623.1401\build\cef.redist.x64.targets')" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\Lib\cef.redist.x86.3.2623.1401\build\cef.redist.x86.targets" Condition="Exists('..\Lib\cef.redist.x86.3.2623.1401\build\cef.redist.x86.targets')" />
+  <Import Project="..\Lib\CefSharp.Common.49.0.1\build\CefSharp.Common.targets" Condition="Exists('..\Lib\CefSharp.Common.49.0.1\build\CefSharp.Common.targets')" />
+</Project>

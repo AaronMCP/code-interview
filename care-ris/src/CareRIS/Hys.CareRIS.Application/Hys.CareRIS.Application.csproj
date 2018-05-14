@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CB913999-72AC-488F-AB47-6036B0409A72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hys.CareRIS.Application</RootNamespace>
+    <AssemblyName>Hys.CareRIS.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\Packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Report.4, Version=4.6.20131.54624, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll\C1.C1Report.4.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\EntityFramework.6.1.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Common.FTPClientLibrary">
+      <HintPath>..\..\dll\Hys.Common.FTPClientLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Application">
+      <HintPath>..\..\dll\Hys.Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.Extensions">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.Globalization">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.Globalization.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.CrossCutting.LogContract">
+      <HintPath>..\..\dll\Hys.Platform.CrossCutting.LogContract.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Data.EntityFramework">
+      <HintPath>..\..\dll\Hys.Platform.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain">
+      <HintPath>..\..\dll\Hys.Platform.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain.Integration">
+      <HintPath>..\..\dll\Hys.Platform.Domain.Integration.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain.Ris">
+      <HintPath>..\..\dll\Hys.Platform.Domain.Ris.dll</HintPath>
+    </Reference>
+    <Reference Include="Kendo.DynamicLinq, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Packages\Kendo.DynamicLinq.1.1.2.0\lib\net40\Kendo.DynamicLinq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LinqKit">
+      <HintPath>..\Packages\LINQKit.1.1.2\lib\net45\LinqKit.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\EnterpriseLibrary.Data.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\Packages\System.Linq.Dynamic.1.0.0\lib\net40\System.Linq.Dynamic.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dtos\Common\BodySystemMapDto.cs" />
+    <Compile Include="Dtos\Common\EnumerationDtos.cs" />
+    <Compile Include="Dtos\Common\Enums.cs" />
+    <Compile Include="Dtos\Common\GWDataIndexDto.cs" />
+    <Compile Include="Dtos\Common\GWOrderDto.cs" />
+    <Compile Include="Dtos\Common\GWPatientDto.cs" />
+    <Compile Include="Dtos\Common\LicenseDataDto.cs" />
+    <Compile Include="Dtos\Configuration\ScanningTechDto.cs" />
+    <Compile Include="Dtos\Configuration\ApplyDeptLiteDto.cs" />
+    <Compile Include="Dtos\Configuration\ApplyDoctorLiteDto.cs" />
+    <Compile Include="Dtos\Configuration\ClientConfigDto.cs" />
+    <Compile Include="Dtos\Configuration\DictionaryMapDto.cs" />
+    <Compile Include="Dtos\Configuration\SearchResultDto.cs" />
+    <Compile Include="Dtos\Configuration\SearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Configuration\ProfileLiteDto.cs" />
+    <Compile Include="Dtos\Configuration\ICDTenDto.cs" />
+    <Compile Include="Dtos\Configuration\RoleDirDto.cs" />
+    <Compile Include="Dtos\Configuration\PanelDto.cs" />
+    <Compile Include="Dtos\Configuration\RolePfDto.cs" />
+    <Compile Include="Dtos\Configuration\SyncSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\QC\MergeObjectDto.cs" />
+    <Compile Include="Dtos\QC\ScoringResultDto.cs" />
+    <Compile Include="Dtos\QC\QualityScoreDto.cs" />
+    <Compile Include="Dtos\QC\QualityScoreResultDto.cs" />
+    <Compile Include="Dtos\Referral\ManualReferralDto.cs" />
+    <Compile Include="Dtos\Referral\ReferralListSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Referral\ReferralListDto.cs" />
+    <Compile Include="Dtos\Referral\ReferralListSearchDto.cs" />
+    <Compile Include="Dtos\Registration\ModalityShareDto.cs" />
+    <Compile Include="Dtos\Registration\ModalityTimeSliceDto.cs" />
+    <Compile Include="Dtos\Registration\PatientListDto.cs" />
+    <Compile Include="Dtos\Registration\RequestListDto.cs" />
+    <Compile Include="Dtos\Registration\RequisitionDto.cs" />
+    <Compile Include="Dtos\Report\ACRCodeSubPathologicalDto.cs" />
+    <Compile Include="Dtos\Report\ACRCodePathologicalDto.cs" />
+    <Compile Include="Dtos\Report\ACRCodeSubAnatomicalDto.cs" />
+    <Compile Include="Dtos\Report\ACRCodeAnatomicalDto.cs" />
+    <Compile Include="Dtos\Report\LockDto.cs" />
+    <Compile Include="Dtos\Schedule\NewTimeSlice.cs" />
+    <Compile Include="Dtos\Schedule\TimeSliceCopier.cs" />
+    <Compile Include="Dtos\Schedule\TimeSliceModifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dtos\Schedule\TimesliceSharer.cs" />
+    <Compile Include="Dtos\Schedule\TimesliceSharerRequest.cs" />
+    <Compile Include="Dtos\UserManagement\OnlineClientDto.cs" />
+    <Compile Include="Dtos\UserManagement\ProfileDto.cs" />
+    <Compile Include="Dtos\UserManagement\UserPwdDto.cs" />
+    <Compile Include="Dtos\Worklist\ProcedureCodeSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Worklist\ICDTenSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Worklist\ICDTenSearchDto.cs" />
+    <Compile Include="Mappers\ACRCodeSubPathologicalMapper.cs" />
+    <Compile Include="Mappers\ACRCodePathologicalMapper.cs" />
+    <Compile Include="Mappers\ACRCodeSubAnatomicalMapper.cs" />
+    <Compile Include="Mappers\ClientConfigMapper.cs" />
+    <Compile Include="Mappers\ICDTenMapper.cs" />
+    <Compile Include="Mappers\ModalityShareMapper.cs" />
+    <Compile Include="Mappers\ModalityTimeSliceMapper.cs" />
+    <Compile Include="Mappers\ScanningTechMapper.cs" />
+    <Compile Include="Mappers\OnlineClientMapper.cs" />
+    <Compile Include="Mappers\ACRCodeAnatomicalMapper.cs" />
+    <Compile Include="Mappers\RoleDirMappr.cs" />
+    <Compile Include="Mappers\ScoringResultMapper.cs" />
+    <Compile Include="Mappers\PatientListMapper.cs" />
+    <Compile Include="Mappers\Referral\ReferralListMapper.cs" />
+    <Compile Include="Mappers\RequestListMapper.cs" />
+    <Compile Include="Dtos\Common\PaginationDto.cs" />
+    <Compile Include="Dtos\Common\ModalityTypeDto.cs" />
+    <Compile Include="Dtos\Common\ProcedureCodeDto.cs" />
+    <Compile Include="Dtos\Common\GWReportDto.cs" />
+    <Compile Include="Dtos\Configuration\ProfilesDto.cs" />
+    <Compile Include="Dtos\Configuration\ApplyDeptDto.cs" />
+    <Compile Include="Dtos\Configuration\ApplyDoctorDto.cs" />
+    <Compile Include="Dtos\Configuration\DictionaryDto.cs" />
+    <Compile Include="Dtos\Configuration\DictionaryValueDto.cs" />
+    <Compile Include="Dtos\Configuration\ModalityDto.cs" />
+    <Compile Include="Dtos\Configuration\RoleProfileDto.cs" />
+    <Compile Include="Dtos\Configuration\DomainListDto.cs" />
+    <Compile Include="Dtos\Configuration\SiteDto.cs" />
+    <Compile Include="Dtos\Configuration\SiteProfileDto.cs" />
+    <Compile Include="Dtos\Configuration\SystemProfileDto.cs" />
+    <Compile Include="Dtos\Configuration\UserProfileDto.cs" />
+    <Compile Include="Dtos\Registration\AccessionNumberListDto.cs" />
+    <Compile Include="Dtos\Registration\RequestInfoDto.cs" />
+    <Compile Include="Dtos\Registration\RequestChargeDto.cs" />
+    <Compile Include="Dtos\Registration\RequestItemDto.cs" />
+    <Compile Include="Dtos\Registration\RequestDto.cs" />
+    <Compile Include="Dtos\Registration\PatientEditDto.cs" />
+    <Compile Include="Dtos\Registration\RegistrationDto.cs" />
+    <Compile Include="Dtos\Registration\OrderDto.cs" />
+    <Compile Include="Dtos\Registration\PatientDto.cs" />
+    <Compile Include="Dtos\Registration\ProcedureDto.cs" />
+    <Compile Include="Dtos\Registration\SimplifyEnglish.cs" />
+    <Compile Include="Dtos\Report\ShowHtmlDataDto.cs" />
+    <Compile Include="Dtos\Report\PrintDataDto.cs" />
+    <Compile Include="Dtos\Report\PrintTemplateFieldsDto.cs" />
+    <Compile Include="Dtos\Report\PrintTemplateDto.cs" />
+    <Compile Include="Dtos\Report\Enum.cs" />
+    <Compile Include="Dtos\Report\SyncDto.cs" />
+    <Compile Include="Dtos\Report\ReportListDto.cs" />
+    <Compile Include="Dtos\Report\ReportTemplateDirecDto.cs" />
+    <Compile Include="Dtos\Report\ReportTemplateDto.cs" />
+    <Compile Include="Dtos\Report\ReportFileDto.cs" />
+    <Compile Include="Dtos\Report\ReportDto.cs" />
+    <Compile Include="Dtos\UserManagement\RoleToUserDto.cs" />
+    <Compile Include="Dtos\UserManagement\RoleDto.cs" />
+    <Compile Include="Dtos\UserManagement\UserDto.cs" />
+    <Compile Include="Dtos\Worklist\OrderItemDto.cs" />
+    <Compile Include="Dtos\Worklist\SearchCriteriaShortcutDto.cs" />
+    <Compile Include="Dtos\Worklist\WorklistSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Worklist\WorklistSearchResultDto.cs" />
+    <Compile Include="Mappers\AccessionNumberListMapper.cs" />
+    <Compile Include="Mappers\BodySystemMapMapper.cs" />
+    <Compile Include="Mappers\ApplyDoctorMapper.cs" />
+    <Compile Include="Mappers\ApplyDeptMapper.cs" />
+    <Compile Include="Mappers\DictionaryMapper.cs" />
+    <Compile Include="Mappers\DictionaryValueMapper.cs" />
+    <Compile Include="Mappers\GWDataIndexMapper.cs" />
+    <Compile Include="Mappers\GWPatientMapper.cs" />
+    <Compile Include="Mappers\GWOrderMapper.cs" />
+    <Compile Include="Mappers\ModalityMapper.cs" />
+    <Compile Include="Mappers\GWReportMapper.cs" />
+    <Compile Include="Mappers\RequestItemMapper.cs" />
+    <Compile Include="Mappers\RequisitionMapper.cs" />
+    <Compile Include="Mappers\ReuqestChargeMapper.cs" />
+    <Compile Include="Mappers\RequestMapper.cs" />
+    <Compile Include="Mappers\RoleToUserMapper.cs" />
+    <Compile Include="Mappers\DomainListMapper.cs" />
+    <Compile Include="Mappers\SearchCriteriaShortcutMapper.cs" />
+    <Compile Include="Mappers\SiteMapper.cs" />
+    <Compile Include="Mappers\SyncMapper.cs" />
+    <Compile Include="Mappers\ReportListMapper.cs" />
+    <Compile Include="Mappers\ReportDelPoolMapper.cs" />
+    <Compile Include="Mappers\OrderMapper.cs" />
+    <Compile Include="Mappers\PatientMapper.cs" />
+    <Compile Include="Mappers\ModalityTypeMapper.cs" />
+    <Compile Include="Mappers\PrintTemplateFieldsMapper.cs" />
+    <Compile Include="Mappers\ProcedureCodeMapper.cs" />
+    <Compile Include="Mappers\ProcedureMapper.cs" />
+    <Compile Include="Mappers\PrintTemplateMapper.cs" />
+    <Compile Include="Mappers\ReportTemplateDirecMapper.cs" />
+    <Compile Include="Mappers\ReportTemplateMapper.cs" />
+    <Compile Include="Mappers\ReportFileMapper.cs" />
+    <Compile Include="Mappers\ReportMapper.cs" />
+    <Compile Include="Mappers\RoleMapper.cs" />
+    <Compile Include="Mappers\RoleProfileMapper.cs" />
+    <Compile Include="Mappers\SiteProfileMapper.cs" />
+    <Compile Include="Mappers\SystemProfileMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
+    <Compile Include="Mappers\UserProfileMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AuditService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HISConService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Services\ICommonService.cs" />
+    <Compile Include="Services\IConfigurationService.cs" />
+    <Compile Include="Services\ILicenseService.cs" />
+    <Compile Include="Services\IScheduleService.cs" />
+    <Compile Include="Services\IQCService.cs" />
+    <Compile Include="Services\IReferralService.cs" />
+    <Compile Include="Services\IRegistrationService.cs" />
+    <Compile Include="Services\IReportTemplateService.cs" />
+    <Compile Include="Services\IReportLockService.cs" />
+    <Compile Include="Services\IReportPrintService.cs" />
+    <Compile Include="Services\IReportService.cs" />
+    <Compile Include="Services\IStructuredReportService.cs" />
+    <Compile Include="Services\IUserManagementService.cs" />
+    <Compile Include="Services\IWorklistService.cs" />
+    <Compile Include="Services\ServiceImpl\LicenseService.cs" />
+    <Compile Include="Services\ServiceImpl\CommonService.cs" />
+    <Compile Include="Services\ServiceImpl\ConfigurationService.cs" />
+    <Compile Include="Services\ServiceImpl\Contants.cs" />
+    <Compile Include="Services\ServiceImpl\Enums.cs" />
+    <Compile Include="Services\ServiceImpl\GenerateStudyInstance.cs" />
+    <Compile Include="Services\ServiceImpl\ScheduleService.cs" />
+    <Compile Include="Services\ServiceImpl\QCService.cs" />
+    <Compile Include="Services\ServiceImpl\ReferralService.cs" />
+    <Compile Include="Services\ServiceImpl\RegistrationService.cs" />
+    <Compile Include="Services\ServiceImpl\ReportTemplateService.cs" />
+    <Compile Include="Services\ServiceImpl\ReportLockService.cs" />
+    <Compile Include="Services\ServiceImpl\ReportPrintService.cs" />
+    <Compile Include="Services\ServiceImpl\ReportService.cs" />
+    <Compile Include="Services\ServiceImpl\ReportUtils.cs" />
+    <Compile Include="Services\ServiceImpl\StructuredReportService.cs" />
+    <Compile Include="Services\ServiceImpl\UserManagementService.cs" />
+    <Compile Include="Services\ServiceImpl\WorklistService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dtos\Template\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuditService\Csh.Hcis.GC.RisPro.Application.AuditService.DataResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuditService\Csh.Hcis.GC.RisPro.Application.AuditService.GetRisLicenseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AuditService\service.wsdl" />
+    <None Include="Service References\HISConService\Csh.Hcis.GC.RisPro.Application.HISConService.DoCommandResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HISConService\Csh.Hcis.GC.RisPro.Application.HISConService.ModelsInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HISConService\Csh.Hcis.GC.RisPro.Application.HISConService.ReturnModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\HISConService\HISConService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AuditService\" />
+    <WCFMetadataStorage Include="Service References\HISConService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HISConService\HISConService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HISConService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HISConService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\HISConService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuditService\service.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuditService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuditService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuditService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hys.CareRIS.Domain\Hys.CareRIS.Domain.csproj">
+      <Project>{24217679-47ff-47f4-8220-66be854f8d5d}</Project>
+      <Name>Hys.CareRIS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CareRIS.EnterpriseLib\Hys.CareRIS.EnterpriseLib.csproj">
+      <Project>{2e5f5716-5206-46da-9295-61314f7f967c}</Project>
+      <Name>Hys.CareRIS.EnterpriseLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CareRIS.EntityFramework\Hys.CareRIS.EntityFramework.csproj">
+      <Project>{98622138-b273-4d0b-9240-b6c6633f9572}</Project>
+      <Name>Hys.CareRIS.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.Consultation.Application\Hys.Consultation.Application.csproj">
+      <Project>{C088CEBD-2BF2-4AE5-BFF5-876612FDD0E3}</Project>
+      <Name>Hys.Consultation.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CrossCutting.Common\Hys.CrossCutting.Common.csproj">
+      <Project>{abea6ca6-c724-435d-8740-f81c943d4356}</Project>
+      <Name>Hys.CrossCutting.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

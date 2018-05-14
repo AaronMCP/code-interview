@@ -1,0 +1,62 @@
+﻿<div>
+    <style>
+        .role-edit-window .modal-dialog {
+            width: 800px;
+            margin-top: 30px;
+        }
+    </style>
+    <p class="ris-module-title">
+        <strong>{{isEdit ? 'EditRole' : 'CreateRole' | translate}}</strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </p>
+    <form name="roleEditForm" class="ris-form" style=" padding: 20px 20px 10px 10px; overflow-y: auto; overflow-x: hidden; height: 600px;">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'RoleName' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input ris-auto-focus type="text" class="form-control" name="roleName" ng-model="role.roleName" ng-model-options="{ debounce: 500 }" data-unique="validateRoleName" required>
+                <div style="position: absolute; z-index: 10; ">
+                    <span class="label label-danger" ng-show="roleEditForm.roleName.$error.duplicate" translate>RoleNameDuplicated</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label" translate>Status</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ui-select id="roleStatus" ng-disabled="role.isSystem" ng-model="role.status" theme="select2" search-enabled="false" style="width: 220px;">
+                    <ui-select-match>{{$select.selected ? 'Active':'Inactive' | translate}}</ui-select-match>
+                    <ui-select-choices repeat="status in [true,false]">
+                        <span>{{status ? 'Active':'Inactive' | translate}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label" translate>Description</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea class="form-control" id="input" style="height: 100px;" ng-model="role.description"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><label class="control-label" translate>Permission</label></div>
+            <div class="ris-form-input col-md-10">
+                <label class="box-label" ng-repeat-start="(groupKey, permissionGroup) in permissions">
+                    <input type="checkbox" data-ris-select-all="{{'.select-all-group-'+$index}}">{{::groupKey | translate}}
+                </label>
+                <div class="box-group {{'select-all-group-'+$index}}" ng-repeat-end>
+                    <label class="box-label" ng-repeat="(permissionValue,permissionKey) in _.invert(permissionGroup)">
+                        <input type="checkbox" checklist-model="role.permissionList" checklist-value="''+permissionValue">{{::permissionKey | translate}}
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <p class="ris-module-footer">
+        <button class="btn ris-btn-primary" translate ng-click="saveRole()" ng-disabled="roleEditForm.$pristine || roleEditForm.$invalid ">OK</button>
+        <button class="btn btn-normal" translate ng-click="close()">Cancel</button>
+    </p>
+</div>

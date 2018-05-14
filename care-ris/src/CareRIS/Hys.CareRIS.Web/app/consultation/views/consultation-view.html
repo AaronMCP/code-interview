@@ -1,0 +1,28 @@
+<div class="container">
+    <div ui-view="consultation-side-panel"></div>
+    <div class="main" ng-class="sidePanel.isExpanded ? 'main-expanded' : 'main-collapsed'">
+        <div class="content-container" ui-view="requests" ng-show="$state.is('ris.consultation.requests')"></div>
+        <div class="content-container" ui-view="request" ng-show="$state.is('ris.consultation.request')"></div>
+        <div class="content-container" ui-view="exam" ng-show="$state.is('ris.consultation.exam')"></div>
+        <div class="content-container" ui-view="cases" ng-show="$state.is('ris.consultation.cases')"></div>
+        <div class="content-container" ui-view="newpatientcase" ng-show="$state.is('ris.consultation.newpatientcase')"></div>
+        <div class="content-container" ui-view="roles" ng-show="$state.is('ris.consultation.roles')"></div>
+        <div class="content-container" ui-view="users" ng-show="$state.is('ris.consultation.users')"></div>
+        <div class="content-container" ui-view="hospitals" ng-show="$state.is('ris.consultation.hospitals')"></div>
+        <div class="content-container" ui-view="recipientconfig" ng-show="$state.is('ris.consultation.recipientconfig')"></div>
+        <div class="content-container" ui-view="reporttemplate" ng-show="$state.is('ris.consultation.reporttemplate')"></div>
+        <div class="content-container" ui-view="notificationconfig" ng-show="$state.is('ris.consultation.notificationconfig')"></div>
+        <div class="content-container" ui-view="completed" ng-show="$state.is('ris.consultation.completed')"></div>
+        <div class="content-container" ui-view="applied" ng-show="$state.is('ris.consultation.applied')"></div>
+        <div class="content-container" ui-view="accepted" ng-show="$state.is('ris.consultation.accepted')"></div>
+        <div class="content-container" ui-view="cancelled" ng-show="$state.is('ris.consultation.cancelled')"></div>
+        <div class="content-container" ui-view="rejected" ng-show="$state.is('ris.consultation.rejected')"></div>
+        <div class="content-container" ui-view="apply" ng-show="$state.is('ris.consultation.apply')"></div>
+        <div class="content-container" ui-view="default" ng-show="$state.is('ris.consultation.default')"></div>
+        <div class="content-container" ui-view="reconsider" ng-show="$state.is('ris.consultation.reconsider')"></div>
+        <div class="content-container" ui-view="terminate" ng-show="$state.is('ris.consultation.terminate')"></div>
+        <div class="content-container" ui-view="deleted" ng-show="$state.is('ris.consultation.deleted')"></div>
+        <div class="content-container" ui-view="applycancel" ng-show="$state.is('ris.consultation.applycancel')"></div>
+        <div class="content-container" ui-view="dicoms" ng-show="$state.is('ris.consultation.dicoms')"></div>
+    </div>
+</div>

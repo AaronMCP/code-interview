@@ -1,0 +1,141 @@
+﻿<div class="dictionary-depart">
+    <div class="dictionary-depart-top">
+        
+        <div class="dictionary-depart-title"><strong>申请部门</strong> </div>
+        <div class="dictionary-depart-content">
+            <div kendo-grid="departGrid" data-k-options="departGridOption"></div>
+            <div class="dictionary-depart-footer">
+                <button class="btn btn-default" ng-click="updateDept()" ng-disabled="!selectedDepart">修改</button>
+                <button class="btn btn-default" ng-click="addDept()">新建</button>
+                <button class="btn btn-default" ng-click="delDept()" ng-disabled="!selectedDepart">删除</button>
+            </div>
+        </div>
+  
+    </div>
+    <div class="dictionary-depart-bottom">
+        <div class="dictionary-depart-title"><strong>申请医生</strong> </div>
+        <div class="dictionary-depart-content">
+            <div kendo-grid="doctorGrid" data-k-options="doctorGridOption"></div>
+            <div class="dictionary-depart-footer">
+                <button class="btn btn-default" ng-click="updateDoctor()" ng-disabled="!selectedDoctor">修改</button>
+                <button class="btn btn-default" ng-click="addDoctor()">新建</button>
+                <button class="btn btn-default" ng-click="delDoctor()" ng-disabled="!selectedDoctor">删除</button>
+            </div>
+        </div>     
+    </div>
+    <div kendo-window="updateDeptWindow"
+         k-width="'350px'" k-height="'260px'"
+         k-visible="false"
+         k-resizable="false" k-modal="true"
+         k-title="'申请部门'"
+         style="font-size:16px;">
+        <form name="editDeptForm" novalidate>
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4 ">
+                        <span translate>申请部门</span>:
+                        <span class="registration-edit-required right" style="margin-right:4px;">*</span>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" style="width:100%" class="form-control" maxlength="30" ng-model="currentDepart.deptName" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 "><span translate>电话</span>:</div>
+                    <div class="col-md-8">
+                        <input type="text" style="width:100%" class="form-control" ng-maxlength="20" ng-model="currentDepart.telephone" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 "><span translate>快捷码</span>:</div>
+                    <div class="col-md-8">
+                        <input type="text" style="width:100%" maxlength="30" class="form-control" ng-model="currentDepart.shortcutCode" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 "><span translate>Site</span>:</div>
+                    <div class="col-md-8">
+                        <select style="width:100%" class="form-control" ng-options="site for site in sites" ng-model="currentDepart.site"></select>
+                    </div>
+                </div>
+                <div class="role-btn-group">
+                    <button type="button" class="btn btn-default" ng-click="saveDept()" ng-disabled="editDeptForm.$pristine || editDeptForm.$invalid">确定</button>
+                    <button type="button" class="btn btn-default" ng-click="deptCancle()">取消</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div kendo-window="updateDoctorWindow"
+         k-width="'700px'" k-height="'350px'"
+         k-visible="false"
+         k-resizable="false" k-modal="true"
+         k-title="'申请医生'"
+         style="font-size:16px;">
+        <form name="editDoctorForm" novalidate>
+            <div class="col-md-12" id="doctorEdit">
+                <div class="row">
+                    <div class="col-md-2 edit-doctor "><span translate>申请部门</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <select  style="width:100%" class="form-control" ng-model="currentDoctor.applyDeptID" name="deptName"
+                                ng-options="dept.uniqueID as dept.deptName for dept in dicDepartList"></select> 
+                    </div>
+                    <div class="col-md-2 edit-doctor  ">
+                        <span translate>申请医生</span>:
+                        <span class="registration-edit-required right" style="margin-right:4px;">*</span>
+                    </div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="text" style="width:100%" class="form-control" ng-model="currentDoctor.doctorName" maxlength="30" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 edit-doctor "><span translate>性别</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <select style="width:100%" class="form-control" ng-model="currentDoctor.gender" name="gender"
+                                ng-options="gender.value as gender.text for gender in genderList"
+                                ></select> 
+                    </div>
+                    <div class="col-md-2 edit-doctor  "><span translate>手机</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="text" style="width:100%" class="form-control" ng-maxlength="11" ng-model="currentDoctor.mobile" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 edit-doctor "><span translate>电话</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="text" style="width:100%" class="form-control" ng-maxlength="20" ng-model="currentDoctor.telephone" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" />
+                    </div>
+                    <div class="col-md-2 edit-doctor "><span translate>员工号</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="text" style="width:100%" class="form-control" maxlength="30" ng-model="currentDoctor.staffNo" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 edit-doctor "><span translate></span>邮箱</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="email" style="width:100%" class="form-control" maxlength="50" ng-model="currentDoctor.email" />
+                    </div>
+
+                    <div class="col-md-2 edit-doctor "><span translate>快捷码</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <input type="text" style="width:100%" class="form-control" maxlength="30" ng-model="currentDoctor.shortcutCode" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 edit-doctor "><span translate>Site</span>:</div>
+                    <div class="col-md-4 edit-doctor ">
+                        <select style="width:100%" class="form-control" ng-options="site for site in sites" ng-model="currentDoctor.site"></select>
+                    </div>
+                    <div class="col-md-6 "></div>
+                </div>
+                <div class="role-btn-group">
+                    <button type="button" class="btn btn-default" ng-click="saveDoctor()" ng-disabled="editDoctorForm.$pristine || editDoctorForm.$invalid">确定</button>
+                    <button type="button" class="btn btn-default" ng-click="doctorCancle()">取消</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

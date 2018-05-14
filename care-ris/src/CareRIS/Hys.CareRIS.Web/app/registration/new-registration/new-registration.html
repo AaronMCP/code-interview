@@ -1,0 +1,471 @@
+﻿<div class="new-registration-container">
+    <p class="csd-module-footer registration-edit-footer">
+       
+        <!--ng-disabled="userForm.$pristine || userForm.$invalid"-->
+        <button type="submit" class="btn btn-default  btn-registration-edit-save" form="#" ng-click="save(newRegistrationForm)" translate>Ok</button>
+        <button type="button" class="btn btn-default" ng-click="printRequisition()" translate>PrintRequisition</button>
+        <button type="button" class="btn btn-default" ng-click="printBarCode()" translate>PrintBarCode</button>
+        <button type="button" class="btn btn-default" ng-click="scanRequisition()" translate ng-disabled="isSaved">ScanRequisition</button>
+        <input type="button" class="btn  btn-default"
+               timeslice-launcher
+               t-operater="timesliceOperater"
+               t-options="timesliceOption"
+               ng-click="modifySlice()"
+               value="{{'ModifySplic'|translate}}" ng-if="isBooking" ng-disabled="isSaved" />
+        <button class="btn btn-default" type="button" ng-click="cancel()" ng-disabled="isSaved" translate>Cancel</button>
+    </p>
+    <div class="popup-content" id="registrationContent" ris-scroll-spy ris-enter-action>
+        <article style="width:100%">
+            <ris-fieldset ng-disabled="isSaved">
+                <form name="newRegistrationForm" accessibleform>
+                    <div class="row">
+                        <div id="newRegistrationFormContainer" class="col-md-12">
+                            <div class="row info-container" id="patientInfo">
+                                <div class="container-title">
+                                    <span translate>PatientBaseInfo</span>
+                                </div>
+                                <div class="registration-edit-inputGroup col-md-11">
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="patientNo">{{'PatientNo'|translate}}<span class="registration-edit-required">*</span></label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control"
+                                                       id="patientNo"
+                                                       ng-model="patient.patientNo"
+                                                       placeholder="{{'PatientNo'|translate}}"
+                                                       name="patientNo"
+                                                       maxlength=128
+                                                       disabled
+                                                       tabindex="1"
+                                                       required>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.patientNo.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="ReferenceNo" translate>ReferenceNo</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control"
+                                                       id="referenceNo"
+                                                       name="referenceNo"
+                                                       ng-model="patient.referenceNo"
+                                                       maxlength=128
+                                                       tabindex="4"
+                                                       ris-enter-index
+                                                       ris-id-number
+                                                       placeholder="{{'ReferenceNo'|translate}}" />
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.referenceNo.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <div ng-message="IDNumber_valid">
+                                                    <span class="label label-danger">
+                                                        <span translate>IDCardNumberError</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="Birthday">{{'Birthday'|translate}}</label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="8">
+                                                <p class="input-group" style="width:100%">
+                                                    <input kendo-date-picker="registbirthdayPicker"
+                                                           autocomplete="off"
+                                                           k-max="maxDate"
+                                                           name="birthday"
+                                                           id="registbirthday"
+                                                           ng-model="patient.birthday"
+                                                           k-format="'yyyy-MM-dd'"
+                                                           ng-keydown="birthdayKey($event)"
+                                                           ng-click="birthdayclick()"
+                                                           ng-change="setAge()"
+                                                           style="width:100%" />
+                                                </p>
+                                            </div>
+
+                                            <div ng-messages="newRegistrationForm.birthday.$error" class="col-md-9 col-md-offset-3" ng-if="isShowTransformError">
+                                                <!-- the required message is displayed first... -->
+                                                <div ng-message="transform">
+                                                    <span class="label label-danger">
+                                                        <span ng-bind="newRegistrationForm.birthday.transformAgeError">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        
+                                    </div>
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-3">
+                                            <div class="col-md-4 patient-name">
+                                                <label for="patientName">{{'PatientName'|translate}}<span class="registration-edit-required">*</span></label>
+                                            </div>
+                                            <div class="col-md-8">
+                                                <input type="text" class="form-control registration-edit-search-box"
+                                                       id="localName" placeholder="{{'PatientName'|translate}}"
+                                                       autocomplete="off"
+                                                       ng-model="patient.localName"
+                                                       ris-auto-focus
+                                                       name="localName"
+                                                       ris-enter-index
+                                                       maxlength="128"
+                                                       required
+                                                       tabindex="2"
+                                                       aria-describedby="localName2Status"
+                                                       ng-blur="simplifiedToEnglish(patient.localName)" />
+                                                <span class="glyphicon glyphicon-search form-control-feedback registration-edit-search-btn" ng-click="searchPatient($event)"></span>
+                                                <span id="localName2Status" class="sr-only">(search)</span>
+                                                <!--search patient data-->
+                                                <div class="registration-edit-patient-search-table-container" ng-show="isShowPatientContainer" ris-outside-click='isShowPatientContainer=false'>
+                                                    <table id="patientSearchTable" class="table table-hover">
+                                                        <tbody>
+                                                            <!--ng-click="selectPatient(row)"-->
+                                                            <tr style="width: 350px" ng-if="patientItems.length !== 0" ng-repeat="row in patientItems" ng-click="selectPatient(row)">
+                                                                <!--<td ng-bind-html="row.accNo | risTextHighlight : $parent.accNoHighlightString"></td>-->
+                                                                <td class="col-md-2" title="{{row.localName}}">{{row.localName}}</td>
+                                                                <td class="col-md-1">{{row.gender}}</td>
+                                                                <td class="col-md-3" title="{{row.birthday|date:'MM/dd/yyyy'}}">{{row.birthday|date:'MM/dd/yyyy'}}</td>
+                                                                <td class="col-md-6" title="{{row.referenceNo}}">{{row.referenceNo}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                </div>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.localName.$error" class="col-md-8 col-md-offset-4" ng-if="isShowErrorMsg">
+                                                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row registration-edit-form-group col-md-1 vip-checkbox">
+                                            <div class="col-md-3">
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="checkbox"
+                                                       id="IsVip"
+                                                       ris-enter-index
+                                                       name="IsVip"
+                                                       ng-model="patient.isVip" tabindex="10" />
+                                                <span>VIP</span>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.IsVip.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                                <!--<div ng-message="required">Birthday Required.</div>-->
+                                            </div>
+                                        </div>  
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="gender">{{'Gender'|translate}}<span class="registration-edit-required">*</span></label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="5">
+                                                <select class="form-control" ng-model="patient.gender" name="gender"
+                                                        ng-options="gender.value as gender.text for gender in genderList"
+                                                        required
+                                                        ris-enter-index></select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.gender.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                                            </div>
+                                        </div>                                                                                                           
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="Telephone">{{'Telephone'|translate}}</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" ris-enter-index id="telephone" placeholder="{{'Telephone'|translate}}"
+                                                       name="telephone" ng-model="patient.telephone" ng-pattern="/(^(\d{3,4}-)?\d{7,8})$|(1[3,5,7,8][0-9]{9})/" tabindex="9" />
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.telephone.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <div ng-message="pattern"><span class="label label-danger" translate>TelephoneErrorMsg</span></div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="EnglishName">{{'EnglishName'|translate}}</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control"
+                                                       id="englishName" placeholder="{{'EnglishName'|translate}}"
+                                                       ng-model="patient.englishName"
+                                                       ris-enter-index
+                                                       name="englishName"
+                                                       tabindex="3"
+                                                       maxlength="128" />
+                                            </div>
+
+                                            <div ng-messages="newRegistrationForm.englishName.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!--<div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>-->
+                                            </div>
+                                        </div>    
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="currentAge">{{'Age'|translate}}<span class="registration-edit-required">*</span></label>
+                                            </div>
+                                            <div class="col-md-5" tabindex="7">
+                                                <input type="text" class="form-control" id="currentAge" name="currentAge" ris-enter-index ng-pattern="/[0-9]/"
+                                                       ng-model="order.currentAge" placeholder="{{'Age'|translate}}" ng-change="setBirthday()" required tabindex="6" />
+                                            </div>
+                                            <div class="col-md-4">
+                                                <select class="form-control" ng-model="order.ageType"
+                                                        ng-options="ageType.value as ageType.text for ageType in ageUnitList"
+                                                        ng-change="ageTypeChage()"
+                                                        ris-enter-index></select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.currentAge.$error" class="col-md-9 col-md-offset-3"
+                                                 ng-if="isShowErrorMsg||isShowTransformError">
+                                                <!-- the required message is displayed first... -->
+                                                <div ng-message="transform">
+                                                    <span class="label label-danger">
+                                                        <span ng-bind="newRegistrationForm.currentAge.transformAgeError">
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                                <div ng-message="required" ng-if="isShowErrorMsg"><span class="label label-danger" translate>AgeRequiredErrorMsg</span></div>
+                                            </div>
+                                        </div> 
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="address">{{'Address'|translate}}</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <input type="text" class="form-control" ris-enter-index id="address" placeholder="{{'Address'|translate}}"
+                                                       name="address" ng-model="patient.address" tabindex="10" />
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.address.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                            </div>
+                                        </div>
+                                    </div>                       
+                                </div>
+                            </div>
+                            <div class="row info-container" id="orderInfo">
+                                <div class="container-title">
+                                    <span translate>OrderInfo</span>
+                                </div>
+                                <div class="registration-edit-inputGroup col-md-11">
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="patientType">{{'PatientType'|translate}}<span class="registration-edit-required">*</span></label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="11">
+                                                <select id="patientType" class="form-control" ng-model="order.patientType" name="patientType" required
+                                                        ng-options="patientType.value as patientType.text for patientType in patientTypeList"
+                                                        ris-enter-index>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.patientType.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                                <div ng-message="required"><span class="label label-danger" translate>RequiredErrorMsg</span></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="chargeType" translate>ChargeType</label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="12">
+                                                <select id="chargeType" class="form-control" ng-model="order.chargeType" name="chargeType"
+                                                        ng-options="chargeType.value as chargeType.text for chargeType in chargeTypeList"
+                                                        ris-enter-index>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.chargeType.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="applyDept" translate>ApplyDepartment</label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="13">
+                                                <select kendo-combo-box="deptCombox"
+                                                        k-data-text-field="'deptName'"
+                                                        k-data-value-field="'deptName'"
+                                                        k-filter="'contains'"
+                                                        k-auto-bind="true"
+                                                        ris-enter-index
+                                                        k-data-source="applyDeptList"
+                                                        k-data-bound="noDataFound"
+                                                        onfiltering="applyDeptFiltering(kendoEvent)"
+                                                        ng-change="applyDeptChange()"
+                                                        style="width:100%"
+                                                        ng-model="order.applyDept"></select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.applyDept.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="observation" translate>Observation</label>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <select kendo-combo-box="observationCombox"
+                                                        k-data-bound="noDataFound"
+                                                        k-data-text-field="'text'"
+                                                        k-data-value-field="'text'"
+                                                        k-filter="'contains'"
+                                                        k-auto-bind="true"
+                                                        ris-enter-index="#addCheckItem"
+                                                        k-data-source="observationList"
+                                                        style="width:100%;"
+                                                        name="observation"
+                                                        ng-model="order.observation" tabindex="16"></select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.observation.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                                <!--<div ng-message="required">Birthday Required.</div>-->
+                                            </div>
+                                        </div>
+                                        <div class="form-group row registration-edit-form-group col-md-4">
+                                            <div class="col-md-3">
+                                                <label for="applyDoctor" translate>ApplyDoctor</label>
+                                            </div>
+                                            <div class="col-md-9" tabindex="14">
+                                                <select kendo-combo-box="doctCombox"
+                                                        k-data-bound="noDataFound"
+                                                        k-data-text-field="'doctorName'"
+                                                        k-data-value-field="'doctorName'"
+                                                        k-filter="'contains'"
+                                                        k-auto-bind="true"
+                                                        ris-enter-index
+                                                        k-data-source="applyDoctorList"
+                                                        onfiltering="applyDoctorFiltering(kendoEvent)"
+                                                        ng-change="applyDoctorChange()"
+                                                        style="width:100%;"
+                                                        ng-model="order.applyDoctor"></select>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.applyDoctor.$error" class="col-md-9 col-md-offset-3" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                            </div>
+                                        </div>
+                                    </div>   
+                                    <div class="clear-float">
+                                        <div class="form-group row registration-edit-form-group col-md-12">
+                                            <div class="col-md-1" style="text-align: right;padding-top: 10px;padding-right: 3px;">
+                                                <label for="healthHistory" translate>HealthHistory</label>
+                                            </div>
+                                            <div class="col-md-11">
+                                                <textarea class="form-control"
+                                                          id="healthHistory"
+                                                          ris-enter-index
+                                                          name="healthHistory"
+                                                          placeholder="{{'HealthHistory'|translate}}" tabindex="15"
+                                                          ng-model="order.healthHistory" rows="3" cols="5"></textarea>
+                                            </div>
+                                            <div ng-messages="newRegistrationForm.healthHistory.$error" class="col-md-11 col-md-offset-1" ng-if="isShowErrorMsg">
+                                                <!-- the required message is displayed first... -->
+                                            </div>
+                                        </div>
+                                    </div>                  
+                                </div>
+                            </div>
+
+                            <div class="row info-container" id="orderPlan">
+                                <div class="container-title">
+                                    <span translate>OrderPlan</span>
+                                </div>
+                                <div class="registration-edit-inputGroup col-md-11">
+                                    <div>
+                                        <input type="button" ris-focus-on="notSelectProcedure" id="addCheckItem" class="btn btn-primary" style="border-radius: 3px;" ng-click="addProcedure()" value="{{'AddProcedure'|translate}}" />
+                                        <button style="border-radius: 3px;" class="btn btn-primary" id="hidePopover" ng-click="popoverProcedureHistoryContainer()" ng-if="!isShowProcedureHistoryContainer">查看历史检查信息</button>
+                                    </div>
+                                    <span class="label label-danger" translate ng-show="isShowNotSelectedError">NotSelectCheckingItemErrorMsg</span>
+                                </div>            
+                                <table class="table table-hover quality-table" ng-if="addedProcedures.length !== 0">
+                                    <thead>
+                                        <tr>
+                                            <th translate>ModalityType</th>
+                                            <th translate>BodyCategory</th>
+                                            <th translate>BodyPart</th>
+                                            <th translate>CheckingItem</th>
+                                            <th translate>CheckingSystem</th>
+                                            <th translate>Modality</th>
+                                            <th>编辑</th>
+                                            <th>删除</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat=" row in addedProcedures">
+                                            <td>{{row.modalityType}}</td>
+                                            <td>{{row.bodyCategory}}</td>
+                                            <td>{{row.bodyPart}}</td>
+                                            <td>{{row.checkingItem}}</td>
+                                            <td>{{row.examSystem}}</td>
+                                            <td>{{row.modality}}</td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-sm" ng-click="updateAddedProcedure(row)">
+                                                    <span class="glyphicon glyphicon-pencil procedure-operation"></span>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="btn btn-sm" ng-click="deleteAddedProcedure(row.procedureCode)">
+                                                    <span class="glyphicon glyphicon-remove procedure-operation"></span>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </ris-fieldset>
+        </article>
+    </div>
+
+    <!--order history popover-->
+    <div class="registration-edit-order-history-popover" ng-show="isShowProcedureHistoryContainer"
+         ris-outside-click="hidePopoverClick()" ignore="hidePopover">
+        <div class="conten-title-container" style="margin-top:10px;padding-bottom:10px;">
+            <span class="content-title" style="left:-10px;" translate>ProceduresHistory</span>
+            <span class="glyphicon glyphicon-chevron-down" aria-hidden="true" ng-click="hidePopoverClick()"></span>
+        </div>
+        <div class="history-table-container">
+            <table id="procedureHistoryTable" class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th translate>CreateTime</th>
+                        <th translate>Procedure</th>
+                        <th translate>AccNo</th>
+                        <th translate>ModalityType</th>
+                        <th translate>Modality</th>
+                        <th translate>Registrar</th>
+                        <th translate>Status</th>
+                        <th translate>PreviewReport</th>
+                    </tr>
+                </thead>
+                <tbody style="height:180px;overflow:auto">
+                    <tr ng-repeat=" row in procedureHistoryItems" ng-if="procedureHistoryItems.length !== 0">
+                        <td>{{row.createTime|date:'yyyy-MM-dd HH:mm'}}</td>
+                        <td>{{row.rpDesc}}</td>
+                        <td>{{row.accNo}}</td>
+                        <td>{{row.modalityType}}</td>
+                        <td>{{row.modality}}</td>
+                        <td>{{row.registrar}}</td>
+                        <td ng-bind-html="row.status|statusFilter:statusList"></td>
+                        <td ng-hide="row.reportID===null">
+                            <a href="javascript:void(0);" class="iconfont icon-baogaomoban" title="{{'PreviewReport'|translate}}" ng-mouseenter="$parent.prepareSummary(row)"
+                               ng-click="$parent.showSummary()"
+                               ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+                               data-placement="auto right left bottom left" data-templateurl="/app/registration/views/registration-history-report-preview.html"></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

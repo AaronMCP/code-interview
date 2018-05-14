@@ -1,0 +1,6 @@
+<div class="container">
+    <div ui-view="referral-side-panel"></div>
+    <div class="main" ng-class="sidePanel.isExpanded ? 'main-expanded' : 'main-collapsed'">
+        <div class="content-container" ui-view="referrals" ng-show="$state.is('ris.referral.referrals')"></div>
+    </div>
+</div>

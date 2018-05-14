@@ -1,0 +1,31 @@
+﻿<div class="time-slice-container">
+    <div class="time-slice-head form-inline">
+        <!--<select kendo-drop-down-list k-data-source="modalityTypes" k-on-change="modalityTypeChanged(kendoEvent)"
+                k-enable="option.modalityTypeEnable"
+                ng-model="selectedModalityType"></select>
+        <select kendo-drop-down-list k-data-source="modalities"
+                k-enable="option.modalityEnable"
+                ng-model="selectedModality"
+                k-on-change="modalityChanged(kendoEvent)"></select>-->
+        <select class="form-control"
+                ng-options="mt for mt in modalityTypes track by mt"
+                ng-change="modalityTypeChanged()"
+                ng-disabled="!option.modalityTypeEnable"
+                ng-model="selectedModalityType"></select>
+        <select class="form-control"
+                ng-options="m for m in modalities track by m"
+                ng-disabled="!option.modalityEnable"
+                ng-model="selectedModality"
+                ng-change="modalityChanged()"></select>
+    </div>
+    <div class="time-slice-body">
+        <div kendo-scheduler="scheduler" k-options="schedulerOptions" >
+            <div k-event-template class='time-slice-event'
+                 ng-class="{'init-selected':dataItem.customData.initSelected,disabled:dataItem.customData.fulled,selected:dataItem.customData.selected}"
+                 title="{{dataItem.title}}">
+                <span><em>{{dataItem.customData.totalUsedQuota}}</em>/{{dataItem.customData.totalQuota}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="loader ng-cloak" ng-show="!ready"></div>
+</div>

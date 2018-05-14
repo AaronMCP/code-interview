@@ -1,0 +1,66 @@
+﻿<div class="qc-edit-checkInfo">
+    <form>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">放射编号</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" disabled ng-model="order.accNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">病人类型</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-disabled="!isOrder" ng-model="order.patientType">
+                    <option ng-repeat="patientType in patientTypeList">{{patientType.text}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">住院号</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-disabled="!isOrder" ng-model="order.inhospitalNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">申请部门</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-disabled="!isOrder" ng-model="order.applyDept">
+                    <option ng-repeat="applyDept in applyDeptList">{{applyDept.deptName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">申请医生</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-disabled="!isOrder" ng-model="order.applyDoctor">
+                    <option ng-repeat="applyDoctor in applyDoctorList">{{applyDoctor.doctorName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">病区</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-disabled="!isOrder" ng-model="order.domain" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">床号</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" ng-disabled="!isOrder" ng-model="order.bedNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">创建时间</label>
+            <div class="col-md-8">
+                <input class="form-control" type="text" disabled ng-model="order.createTime" />
+            </div>
+        </div>
+        <div class="form-group col-md-4">
+            <label class="col-md-2">收费类型</label>
+            <div class="col-md-8">
+                <select class="form-control" ng-disabled="!isOrder" ng-model="order.chargeType">
+                    <option ng-repeat="chargeType in chargeTypeList">{{chargeType.text}}</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>

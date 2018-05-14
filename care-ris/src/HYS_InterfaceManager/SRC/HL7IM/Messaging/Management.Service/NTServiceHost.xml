@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?><NTServiceHostConfig><ServiceName><![CDATA[MGT_SVC]]></ServiceName>
+<DependOnServiceNameList><![CDATA[]]></DependOnServiceNameList>
+<StartType>Manual</StartType>
+<AccountType>LocalSystem</AccountType>
+<InteractWithDesktop>False</InteractWithDesktop>
+<UserName><![CDATA[]]></UserName>
+<Password><![CDATA[]]></Password>
+<Description><![CDATA[Back ended management service of XDS Gateway.]]></Description>
+<NotifyStatusToManager>False</NotifyStatusToManager>
+<ManagerWindowCaption /><Entities><EntityAssemblyConfig><ClassName><![CDATA[HYS.IM.Messaging.Management.Service.EntityImpl]]></ClassName>
+<AssemblyLocation><![CDATA[HYS.IM.Messaging.Management.Service.exe]]></AssemblyLocation>
+<InitializeArgument><ConfigFilePath><![CDATA[]]></ConfigFilePath>
+<LogConfig><LogType>Error</LogType>
+<DurationDay>7</DurationDay>
+<HostName /><DumpData>False</DumpData>
+</LogConfig>
+<Description /></InitializeArgument>
+<EntityInfo><EntityID>00000000-0000-0000-0000-000000000000</EntityID>
+<Name><![CDATA[]]></Name>
+<DeviceName><![CDATA[]]></DeviceName>
+<Description><![CDATA[]]></Description>
+</EntityInfo>
+</EntityAssemblyConfig>
+</Entities>
+<LogConfig><LogType>Debug</LogType>
+<DurationDay>7</DurationDay>
+<HostName>MGT_SVC</HostName>
+<DumpData>False</DumpData>
+</LogConfig>
+</NTServiceHostConfig>

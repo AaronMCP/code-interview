@@ -1,0 +1,17 @@
+﻿<div class="popover report-preview-content-popover">
+    <div class="arrow"></div>
+    <div class="popover-inner popover-content container report-preview-container">
+        <div class="row" style="height:45%">
+            <span class="label label-warning" translate>WYS</span>
+            <textarea style="height:135px; width:100%; margin-top:10px;background-color: #f7f7f7;" ng-model="popReportOther.wysText" ng-readonly="true"></textarea>
+        </div>
+        <div class="row" style="height:45%">
+            <span class="label label-warning" translate>WYG</span>
+            <textarea style="height:135px; width:100%;margin-top:10px; background-color: #f7f7f7;" ng-model="popReportOther.wygText" ng-readonly="true"></textarea>
+        </div>
+        <div class="row" style="height: 10%;vertical-align: middle;">
+            <button type="button" class="btn btn-primary pull-right" style="margin: 10px" ng-click="selectReportOther(popReportOther)" translate ng-disabled="isReadOnly">Import</button>
+            <button type="button" class="btn btn-primary pull-right" style="margin: 10px" ng-click="closeAllPopover()" translate>CloseReportOther</button>
+        </div>
+    </div>
+</div>

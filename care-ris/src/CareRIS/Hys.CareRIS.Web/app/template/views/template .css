@@ -1,0 +1,183 @@
+﻿.report-template {
+    height: 100%;
+    position: relative;
+}
+
+.back-up {
+    width: 25%;
+    height: 100%;
+    background: #ccc;
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+.template-left {
+    float: left;
+    width: 25%;
+    overflow-y: hidden;
+    height: 100%;
+    background-color: #ececec;
+    position: relative;
+    padding-top:47px;
+}
+    .template-left .template-tree {
+        margin-top:0 !important;
+        height:100%;
+        overflow-y:auto;
+    }
+    .template-left .report-title {
+        line-height: 34px;
+        padding-left: 19px;
+    }
+
+.template-right {
+    margin-left: 25%;
+    overflow-y: auto;
+    height: 100%;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+    .template-right > div {
+        position: absolute;
+        left: 25%;
+        overflow-y: auto;
+        right: 0;
+        top: 63px;
+        bottom: 0;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+.template-container {
+    background: #fafafa;
+    border: 1px solid #e9e9e9;
+}
+
+.template-right > .nav {
+    margin-right: 0;
+    width: 100%;
+    border-bottom: 1px solid #979797;
+    margin-bottom: 10px;
+}
+
+    .template-right > .nav > li {
+        float: right;
+    }
+
+.template-right .form-group {
+    margin-bottom: 10px;
+}
+
+.template-container .template-title {
+    padding-left: 12px;
+    line-height: 32px;
+}
+
+.template-container .template-middle > .form-control {
+    padding: 5px 12px;
+    min-height: 100px;
+    border: 0;
+}
+
+.template-container .template-middle:first-child > .form-control {
+    height: auto;
+    min-height: inherit;
+}
+
+ul.option-icons {
+    background: #374152;
+    height: 40px;
+    position: absolute;
+    top:7px;
+    right:0;
+    left:0;
+}
+
+    ul.option-icons > .col-md-2 {
+        width: 20%;
+        list-style-type: none;
+    }
+    ul.option-icons > .col-md-2:hover {
+        background-color:#0fb494;
+    }
+
+        ul.option-icons > .col-md-2 > span {
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            line-height: 40px;
+            color: #aaaaaa;
+            font-size: 20px;
+        }
+        ul.option-icons > .col-md-2 > span:hover {
+            color:#fff;
+        }
+
+.template-tree {
+    margin-top: 40px !important;
+}
+
+.add-container {
+    margin-top: 30px;
+    width: 100%;
+    height: 34px;
+}
+.add-container input {
+    float: left;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+.add-container button {
+    float: right;
+}
+
+#codeTable thead tr th {
+    /* background: #e0e0e0; */
+    color: #333;
+    font-weight: normal;
+}
+
+.my-select {
+    font-size: 12px;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.report-template .table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #dddddd;
+    background: #ffffff;
+}
+
+.report-template .table > thead > tr > th {
+    padding-top: 1px;
+    padding-right: 8px;
+    padding-bottom: 1px;
+    padding-left: 8px;
+    line-height: 20px;
+}
+
+.my-select {
+    position: absolute;
+    z-index: 999;
+    height: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    top: 61px;
+    left: 0;
+    right: 0;
+}
+
+    .my-select .my-select-table {
+        height: 230px;
+        overflow-y: auto;
+    }

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D805299-9559-4F4B-A95C-FEFB294AC2FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.Common.Objects</RootNamespace>
+    <AssemblyName>HYS.Common.Objects</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="hasp_net_windows">
+      <HintPath>..\..\..\3rdParty\HCISDogFx\SentineSoftKey\hasp_net_windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config\AdapterComposerCfg.cs" />
+    <Compile Include="Config\AdapterComposerCfgMgt.cs" />
+    <Compile Include="Config\AdapterConfigArgument.cs" />
+    <Compile Include="Config\AdapterConfigCfg.cs" />
+    <Compile Include="Config\AdapterConfigCfgMgt.cs" />
+    <Compile Include="Config\AdapterConfigExitCode.cs" />
+    <Compile Include="Config\AdapterMonitorCfg.cs" />
+    <Compile Include="Config\AdapterMonitorCfgMgt.cs" />
+    <Compile Include="Config\AdapterServiceCfg.cs" />
+    <Compile Include="Config\AdapterServiceCfgMgt.cs" />
+    <Compile Include="Config\Chinese2PinyinRule.cs" />
+    <Compile Include="Config\Chinese2PinyinRuleItem.cs" />
+    <Compile Include="Config\ComposingRule.cs" />
+    <Compile Include="Config\ComposingRuleItem.cs" />
+    <Compile Include="Config\ConfigBase.cs" />
+    <Compile Include="Config\ConfigHelper.cs" />
+    <Compile Include="Config\ConfigMgtBase.cs" />
+    <Compile Include="Config\FieldControler.cs" />
+    <Compile Include="Config\GarbageRule.cs" />
+    <Compile Include="Config\IMCfg.cs" />
+    <Compile Include="Config\IMCfgMgt.cs" />
+    <Compile Include="Config\IMParameter.cs" />
+    <Compile Include="Config\Level3KanJiReplacementRule.cs" />
+    <Compile Include="Config\ParticularTime.cs" />
+    <Compile Include="Config\RegularExpressionItem.cs" />
+    <Compile Include="Config\ReplacementRule.cs" />
+    <Compile Include="Config\ReplacementRuleItem.cs" />
+    <Compile Include="Device\Command.cs" />
+    <Compile Include="Device\CommandCollection.cs" />
+    <Compile Include="Device\CommandType.cs" />
+    <Compile Include="Device\DeviceDir.cs" />
+    <Compile Include="Device\DeviceDirManager.cs" />
+    <Compile Include="Device\DeviceFile.cs" />
+    <Compile Include="Device\DeviceFileCollection.cs" />
+    <Compile Include="Device\DeviceFileType.cs" />
+    <Compile Include="Device\DeviceInfor.cs" />
+    <Compile Include="Config\Level3KanJiReplacementRuleItem.cs" />
+    <Compile Include="LDKDog\LDKKeyLicense.cs" />
+    <Compile Include="LDKDog\LDKNativeApi.cs" />
+    <Compile Include="License2\DataCrypto.cs" />
+    <Compile Include="License2\DeviceLicense.cs" />
+    <Compile Include="License2\DeviceLicenseListControler.cs" />
+    <Compile Include="License2\DeviceName.cs" />
+    <Compile Include="License2\GWLicense.cs" />
+    <Compile Include="License2\GWLicenseAgent.cs" />
+    <Compile Include="License2\GWLicenseHeader.cs" />
+    <Compile Include="License2\GWLicenseHelper.cs" />
+    <Compile Include="License2\GWLicenseResult.cs" />
+    <Compile Include="License2\MaxDayCountLevel.cs" />
+    <Compile Include="License\DeviceName.cs" />
+    <Compile Include="Device\DeviceType.cs" />
+    <Compile Include="Device\DirectionType.cs" />
+    <Compile Include="Device\LogInfo.cs" />
+    <Compile Include="License\DataCrypto.cs" />
+    <Compile Include="License\DeviceLicense.cs" />
+    <Compile Include="License\DeviceLicenseListControler.cs" />
+    <Compile Include="License\GWLicense.cs" />
+    <Compile Include="License\GWLicenseAgent.cs" />
+    <Compile Include="License\GWLicenseHeader.cs" />
+    <Compile Include="License\GWLicenseHelper.cs" />
+    <Compile Include="License\DeviceLicenseLevel.cs" />
+    <Compile Include="License\GWLicenseManager.cs" />
+    <Compile Include="License\GWLicenseResult.cs" />
+    <Compile Include="Logging\ILogging.cs" />
+    <Compile Include="Logging\Log.cs" />
+    <Compile Include="Logging\LogDataMgt.cs" />
+    <Compile Include="Logging\LogItem.cs" />
+    <Compile Include="Logging\LogType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rule\GWDataDB.cs" />
+    <Compile Include="Rule\GWDataDBField.cs" />
+    <Compile Include="Rule\GWDataDBTable.cs" />
+    <Compile Include="Rule\GWEventType.cs" />
+    <Compile Include="Rule\GWExamStatus.cs" />
+    <Compile Include="Rule\IInboundRule.cs" />
+    <Compile Include="Rule\InboundRule.cs" />
+    <Compile Include="Rule\InboundRuleManager.cs" />
+    <Compile Include="Rule\IOutboundRule.cs" />
+    <Compile Include="Rule\IRule.cs" />
+    <Compile Include="Rule\IRuleSupplier.cs" />
+    <Compile Include="Rule\LookupItem.cs" />
+    <Compile Include="Rule\LookupTable.cs" />
+    <Compile Include="Rule\MappingItem.cs" />
+    <Compile Include="Rule\MappingRule.cs" />
+    <Compile Include="Rule\OutboundRule.cs" />
+    <Compile Include="Rule\OutboundRuleManager.cs" />
+    <Compile Include="Rule\QueryCriteriaItem.cs" />
+    <Compile Include="Rule\QueryCriteriaOperator.cs" />
+    <Compile Include="Rule\QueryCriteriaRule.cs" />
+    <Compile Include="Rule\QueryCriteriaRuleType.cs" />
+    <Compile Include="Rule\QueryCriteriaSignal.cs" />
+    <Compile Include="Rule\QueryCriteriaType.cs" />
+    <Compile Include="Rule\QueryResultItem.cs" />
+    <Compile Include="Rule\QueryResultRule.cs" />
+    <Compile Include="Rule\RuleBase.cs" />
+    <Compile Include="Rule\RuleControl.cs" />
+    <Compile Include="Rule\RuleManagerBase.cs" />
+    <Compile Include="Rule\RuleScript.cs" />
+    <Compile Include="Rule\RuleScriptType.cs" />
+    <Compile Include="Rule\TranslatingRule.cs" />
+    <Compile Include="Rule\TranslatingType.cs" />
+    <Compile Include="SentinelDog\SentinelKey.cs" />
+    <Compile Include="SentinelDog\SentinelKeyNativeApi.cs" />
+    <Compile Include="SentinelDog\SentinelKeysLicense.cs" />
+    <Compile Include="Translation\BIG52RomaPinyin.cs" />
+    <Compile Include="Translation\ChineseCode.cs" />
+    <Compile Include="Translation\GBTC2RomaPinyin.cs" />
+    <Compile Include="Translation\PinyinBase.cs" />
+    <Compile Include="Translation\PinyinFactory.cs" />
+    <Compile Include="Translation\GBSC2Pinyin.cs" />
+    <Compile Include="Translation\IPinyin.cs" />
+    <Compile Include="Translation\LUTItem.cs" />
+    <Compile Include="Translation\LUTItemMgt.cs" />
+    <Compile Include="Translation\LUTMgt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

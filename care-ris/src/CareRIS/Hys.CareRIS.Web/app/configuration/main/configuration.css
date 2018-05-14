@@ -1,0 +1,66 @@
+﻿.configuration {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.configuration-tab {
+    position: absolute;
+    width: 155px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    top:0;
+    left:0;
+    bottom:0;
+    background: #fff;
+}
+.configuration-content {
+    position:absolute;
+    left: 155px;
+    bottom: 0;
+    right:0;
+    top:0;
+    overflow:hidden;
+    padding: 4px 10px;
+    background: #f6f6f6;
+}
+    .configuration-content>.tab-pane {
+        height:100%;
+        position: relative;
+    }
+
+.configuration-tab li {
+    width: 155px;
+}
+
+    .configuration-tab li span:nth-child(2) {
+        /*display: block;
+        width: 6px;
+        height: 52px;
+        margin-left: 15px;
+        background:*/
+    }
+
+.configuration-tab li a {
+    padding: 15px!important;
+    text-align: center;
+    color: #333;
+    margin-right: 0;
+    border: 0;
+}
+
+.configuration-tab li:hover a {
+    color: #0fb595;
+}
+
+.configuration-tab li:hover {
+    background: #fff;
+    color: #0fb595;
+}
+
+.configuration-tab  li.active > a, .configuration-tab > li > a:hover, .configuration-tab > li.active > a:focus {
+    color: #0fb595!important;
+    border: 0!important;
+    background: #fff!important;
+}

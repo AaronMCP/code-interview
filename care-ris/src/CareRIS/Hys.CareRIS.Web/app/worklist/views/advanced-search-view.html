@@ -1,0 +1,196 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>Search</h4>
+</div>
+<div class="modal-body advanced-search-container" ui-keydown="{'enter':'search($event)'}">
+    <form id="advancedSearchForm" class="form-horizontal" role="form">
+        <div class="form-group">
+            <div class="col-sm-6">
+                <label for="inputPatientNo" class="col-sm-4 control-label" translate>PatientNo</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPatientNo" ng-model="searchCriteria.patientNo">
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="inputPatientName" class="col-sm-4 control-label" translate>PatientName</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputPatientName" ng-model="searchCriteria.patientName">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <label for="inputPatientType" class="col-sm-4 control-label" translate>PatientType</label>
+                <div class="col-sm-8 select-parent">
+                    <ui-select id="inputPatientType" multiple ng-model="searchCriteria.patientTypes"
+                               theme="bootstrap" search-enabled="false">
+                        <ui-select-match>{{$item.text}}</ui-select-match>
+                        <ui-select-choices repeat="patientType.value as patientType in patientTypeList">
+                            <span>{{patientType.text}}</span>
+                        </ui-select-choices>              
+                    </ui-select>
+                    <span class="k-icon k-i-arrow-60-down select-icon"></span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="inputAccNo" class="col-sm-4 control-label" translate>AccNo</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="inputAccNo" ng-model="searchCriteria.accNo">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <label for="inputModilityType" class="col-sm-4 control-label" translate>ModalityType</label>
+                <div class="col-sm-8 select-parent">
+                    <!--<input type="text" class="form-control" id="inputModilityType">-->
+                    <ui-select id="inputModilityType" multiple ng-model="searchCriteria.modalityTypes" ng-change="onModalityTypesChange()"
+                               theme="bootstrap" search-enabled="false">
+                        <ui-select-match>{{$item}}</ui-select-match>
+                        <ui-select-choices repeat="modalityType in modalityTypeList">
+                            <span>{{modalityType}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                    <span class="k-icon k-i-arrow-60-down select-icon"></span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="inputStatus" class="col-sm-4 control-label" translate>Status</label>
+                <div class="col-sm-8 select-parent">
+                    <ui-select id="inputStatus" multiple ng-model="searchCriteria.statuses"
+                               theme="bootstrap" search-enabled="false">
+                        <ui-select-match>{{$item.text}}</ui-select-match>
+                        <ui-select-choices repeat="status.value as status in statusList">
+                            <span>{{status.text}}</span>
+                        </ui-select-choices>
+                    </ui-select> 
+                    <span class="k-icon k-i-arrow-60-down select-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-6">
+                <label for="inputModility" class="col-sm-4 control-label" translate>Modality</label>
+                <div class="col-sm-8 select-parent">
+                    <ui-select id="inputModility" multiple ng-model="searchCriteria.modalities"
+                               theme="bootstrap" search-enabled="false">
+                        <ui-select-match>{{$item.modalityName}}</ui-select-match>
+                        <ui-select-choices repeat="modality.modalityName as modality in modalityList">
+                            <span>{{modality.modalityName}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                    <span class="k-icon k-i-arrow-60-down select-icon"></span>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <label for="inputSite" class="col-sm-4 control-label" translate>Site</label>
+                <div class="col-sm-8 select-parent">
+                    <ui-select id="inputStatus" multiple ng-model="searchCriteria.accessSites"
+                               theme="bootstrap" search-enabled="false">
+                        <ui-select-match>{{$item}}</ui-select-match>
+                        <ui-select-choices repeat="site as site in siteList">
+                            <span>{{site}}</span>
+                        </ui-select-choices>
+                    </ui-select>
+                    <span class="k-icon k-i-arrow-60-down select-icon"></span>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>WorklistCreateTime</label>
+            <div class="col-sm-4" style="padding-top: 7px;">
+                <div class="btn-group">
+                    <input id="creatTimeRange" type="radio" name="creatTimeRadio" value="1" ng-model="searchCriteria.createTimeFlag" ng-click="searchCriteria.createTimeFlag = 1">
+                    <label translate style="cursor: pointer;margin-right: 10px;" for="creatTimeRange" style="margin-right: 10px">DateRange</label>
+                    <input id="creatTimeDays" type="radio" name="creatTimeRadio" value="2" ng-model="searchCriteria.createTimeFlag" ng-click="searchCriteria.createTimeFlag = 2">
+                    <label translate style="cursor: pointer;" for="creatTimeDays">Days</label>
+                </div>
+            </div>
+            
+        </div>
+        <div class="form-group">
+            <div ng-show="searchCriteria.createTimeFlag===2">
+                <label class="col-sm-1 col-sm-offset-2 control-label" translate>Recent</label>
+                <div class="col-sm-2 no-left-right-padding">
+                    <input data-kendo-numeric-text-box data-k-format="'#'" data-k-min="0" data-k-max="999" data-ng-model="searchCriteria.createDays" style="width: 100%;" />
+                </div>
+                <label class="col-sm-1 control-label" translate>Day</label>
+            </div>
+            <div ng-show="searchCriteria.createTimeFlag===1">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <input kendo-date-time-picker="createStartDate"
+                           id="createStartDate"
+                           autocomplete="off"
+                           ng-keydown="dateKeydown($event, 'createStartDate')"
+                           ng-click="dateClick('createStartDate')"
+                           ng-blur="dateBlur(searchCriteria.createStartDate, 'createStartDate')"
+                           ng-model="searchCriteria.createStartDate"
+                           style="width: 100%;" />
+                </div>
+                <div class="col-sm-4">
+                    <input kendo-date-time-picker="createEndDate"
+                           id="createEndDate"
+                           autocomplete="off"
+                           ng-keydown="dateKeydown($event,'createEndDate')"
+                           ng-click="dateClick('createEndDate')"
+                           ng-blur="dateBlur(searchCriteria.createEndDate, 'createEndDate')"
+                           ng-model="searchCriteria.createEndDate"
+                           style="width: 100%;" />
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label" translate>ExamineTime</label>
+            <div class="col-sm-4" style="padding-top: 7px;">
+                <div class="btn-group">
+                    <input type="radio" id="examineTimeRange" name="examineTimeRadio" ng-model="searchCriteria.examineTimeFlag" value="1" ng-click="searchCriteria.examineTimeFlag = 1">
+                    <label translate style="cursor: pointer;margin-right: 10px;" for="examineTimeRange" style="margin-right: 10px;">DateRange</label>
+                    <input type="radio" id="examineTimeDays" name="examineTimeRadio" ng-model="searchCriteria.examineTimeFlag" value="2" ng-click="searchCriteria.examineTimeFlag = 2">
+                    <label translate style="cursor: pointer;" for="examineTimeDays">Days</label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div ng-show="searchCriteria.examineTimeFlag===1">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <input kendo-date-time-picker="examineStartDate"
+                           ng-keydown="dateKeydown($event, 'examineStartDate')"
+                           ng-click="dateClick('examineStartDate')"
+                           ng-model="searchCriteria.examineStartDate"
+                           ng-blur="dateBlur(searchCriteria.examineStartDate, 'examineStartDate')"
+                           style="width: 100%;" />
+                </div>
+                <div class="col-sm-4">   
+                    <input kendo-date-time-picker="examineEndDate"
+                           ng-keydown="dateKeydown($event, 'examineEndDate')"
+                           ng-click="dateClick('examineEndDate')"
+                           ng-model="searchCriteria.examineEndDate"
+                           ng-blur="dateBlur(searchCriteria.examineEndDate, 'examineEndDate')"
+                           style="width: 100%;" />
+                </div>
+            </div>
+            <div ng-show="searchCriteria.examineTimeFlag===2">
+                <label class="col-sm-1 col-sm-offset-2 control-label" translate>Recent</label>
+                <div class="col-sm-2 no-left-right-padding">
+                    <input data-kendo-numeric-text-box data-k-format="'#'" data-k-min="0" data-k-max="999"
+                           data-ng-model="searchCriteria.examineDays" style="width: 100%;" />
+                </div>
+                <label class="col-sm-1 control-label" translate>Day</label>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary" ng-click="search()">
+        <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+    </button>
+    <button class="btn btn-primary" ng-click="cancel()" translate>Cancel</button>
+
+    <button class="btn btn-primary pull-left" ng-click="reset()" translate>ResetSearchCriteria</button>
+    <button class="btn btn-primary pull-left ris-popover" ng-click="clearShortcutName()" translate id="showShortcutNameButton"
+            ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true" use-optimized-placement-algorithm="true"
+            data-placement="auto top bottom" data-templateurl="/app/worklist/views/shortcut-name-input-view.html">
+        Save
+    </button>
+</div>

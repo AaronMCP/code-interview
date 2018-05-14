@@ -1,0 +1,2591 @@
+<?xml version="1.0" encoding="utf-8"?><MWLServerConfig><DumpDicomData>True</DumpDicomData>
+<SplitCodeValue>False</SplitCodeValue>
+<CodeValueSeperator>^</CodeValueSeperator>
+<CodeValueColumnName>_0040_0100_A_0_0040_0008_A_0_0008_0100_A</CodeValueColumnName>
+<MergeElementList>False</MergeElementList>
+<PrimaryKeyColumnName>_0008_0050_A</PrimaryKeyColumnName>
+<GWDataDBConnection>Provider=SQLNCLI;Server=(local);Database=GWDataDB;UID=sa;Password=csbroker;</GWDataDBConnection>
+<SendCharacterSetTag>True</SendCharacterSetTag>
+<AutoGenerateRPID>False</AutoGenerateRPID>
+<AutoGenerateSPSPID>False</AutoGenerateSPSPID>
+<AutoGenerateSTDUID>True</AutoGenerateSTDUID>
+<SCPConfig><ImplementationClassUID>1.2.840.113564.3.1.64</ImplementationClassUID>
+<ImplementationVersion>2.0</ImplementationVersion>
+<MaxPduLength>128</MaxPduLength>
+<MaxAssociation>-1</MaxAssociation>
+<AssociationTimeOut>10000</AssociationTimeOut>
+<SessionTimeOut>600000</SessionTimeOut>
+<AETitle>HYS_MWL</AETitle>
+<Port>5678</Port>
+<KnownModalities /><EnableAETitleChecking>False</EnableAETitleChecking>
+<EnableModalityChecking>False</EnableModalityChecking>
+</SCPConfig>
+<Rule><CheckProcessFlag>False</CheckProcessFlag>
+<QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A</Path>
+<VR>SQ</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0040_0100_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_Begin Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0001_A</Path>
+<VR>AE</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0001_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0002_A</Path>
+<VR>DA</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0040_0100_A_0_0040_0002_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>DATA_DT</FieldName>
+</GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0003_A</Path>
+<VR>TM</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0040_0100_A_0_0040_0003_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0008_0060_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0008_0060_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>MODALITY</FieldName>
+</GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0006_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0006_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0007_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0007_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0010_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0010_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0011_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0011_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0040_0100_A_0_0040_0008_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_Begin Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0008_A_0_0008_0100_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0008_A_0_0008_0102_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0008_A_0_0008_0103_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0008_A_0_0008_0104_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_End Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0012_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0012_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0009_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0009_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0032_1070_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0032_1070_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0020_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_0100_A_0_0040_0020_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_End Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0040_1001_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_1001_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1060_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1060_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1064_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0032_1064_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_Begin Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1064_A_0_0008_0100_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1064_A_0_0008_0102_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1064_A_0_0008_0103_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1064_A_0_0008_0104_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_End Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0020_000D_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0020_000D_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><DPath Type="Normal"><Path>0008_1110_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1110_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_Begin Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1110_A_0_0008_1150_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1110_A_0_0008_1150_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1110_A_0_0008_1155_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1110_A_0_0008_1155_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0008_1110_A_0_0040_1003_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1110_A_0_0040_1003_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0008_1110_A_0_0040_1004_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1110_A_0_0040_1004_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_End Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_1005_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0040_1005_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0008_0050_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+<DPath Type="Normal"><Path>0008_0050_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1032_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0032_1032_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0008_0090_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_0090_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0032_1033_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0032_1033_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0010_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0010_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0300_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0300_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1120_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1120_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_Begin Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1120_A_0_0008_1150_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1120_A_0_0008_1150_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0008_1120_A_0_0008_1155_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0008_1120_A_0_0008_1155_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_End Item 0</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0008_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0008_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0400_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0400_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_0010_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENT_NAME</FieldName>
+</GWDataDBField>
+<DPath Type="Normal"><Path>0010_0010_A</Path>
+<VR>PN</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_0020_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+<DPath Type="Normal"><Path>0010_0020_A</Path>
+<VR>LO</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0010_0030_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_0030_A</Path>
+<VR>DA</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0010_0032_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_0032_A</Path>
+<VR>TM</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_1000_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_1000_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_1001_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_1001_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_0040_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_0040_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_1030_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_1030_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0040_3001_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0040_3001_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0500_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0500_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField>_0010_21C0_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_21C0_A</Path>
+<VR>US</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_2000_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_2000_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_2110_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_2110_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0038_0050_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0038_0050_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_1010_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_1010_A</Path>
+<VR>AS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_1020_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_1020_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_2160_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+<DPath Type="Normal"><Path>0010_2160_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_2180_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[0]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>PROCESS_FLAG</FieldName>
+</GWDataDBField>
+<DPath Type="Normal"><Path>0010_2180_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+<MWLQueryCriteriaItem><Type>And</Type>
+<Singal>None</Singal>
+<Operator>Like</Operator>
+<SourceField>_0010_21B0_A</SourceField>
+<TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[10]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+<DPath Type="Normal"><Path>0010_21B0_A</Path>
+<VR>LT</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+</MWLQueryCriteriaItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A</Path>
+<VR>SQ</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0001_A</Path>
+<VR>AE</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0001_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0002_A</Path>
+<VR>DA</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0002_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>DATA_DT</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0003_A</Path>
+<VR>TM</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0003_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>DATA_DT</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0008_0060_A</Path>
+<VR>CS</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0008_0060_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>MODALITY</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0006_A</Path>
+<VR>PN</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0006_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>TECHNICIAN</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0007_A</Path>
+<VR>LO</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0007_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0010_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0010_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_NAME</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0011_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0011_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A</Path>
+<VR>SQ</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0008_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_CODE</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0008_0102_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0008_0103_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0008_0104_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_NAME</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A040_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A040_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0102_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0103_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A043_A_0_0008_0104_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A120_A</Path>
+<VR>DT</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A120_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A123_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A123_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A160_A</Path>
+<VR>UT</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A160_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0102_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0103_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_A168_A_0_0008_0104_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0102_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0103_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0008_A_0_0040_0440_A_0_0040_08EA_A_0_0008_0104_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0012_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0012_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0009_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0009_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0032_1070_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0032_1070_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_0100_A_0_0040_0020_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Scheduled Procedure Step</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_0100_A_0_0040_0020_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_1001_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_1001_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1060_A</Path>
+<VR>LO</VR>
+<Enable>True</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1060_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_DESC</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1064_A</Path>
+<VR>SQ</VR>
+<Enable>True</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1064_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0100_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1064_A_0_0008_0100_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>PROCEDURE_CODE</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0102_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1064_A_0_0008_0102_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0103_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1064_A_0_0008_0103_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1064_A_0_0008_0104_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1064_A_0_0008_0104_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0020_000D_A</Path>
+<VR>UI</VR>
+<Enable>True</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0020_000D_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STUDY_INSTANCE_UID</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1110_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1110_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1110_A_0_0008_1150_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1110_A_0_0008_1150_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1110_A_0_0008_1155_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1110_A_0_0008_1155_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_1002_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_1002_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_1003_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_1003_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_1004_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_1004_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_1005_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Request Procedure</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_1005_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_0050_A</Path>
+<VR>SH</VR>
+<Enable>True</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_0050_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1032_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1032_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_0090_A</Path>
+<VR>PN</VR>
+<Enable>True</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_0090_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>REF_PHYSICIAN</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0032_1033_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Image Service Request</Catagory>
+</DPath>
+<SourceField /><TargetField>_0032_1033_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0010_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0010_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0300_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0300_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1120_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1120_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1120_A_0_0008_1150_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1120_A_0_0008_1150_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0008_1120_A_0_0008_1155_A</Path>
+<VR>UI</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0008_1120_A_0_0008_1155_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0008_A</Path>
+<VR>CS</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0008_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0400_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Visit</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0400_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_0010_A</Path>
+<VR>PN</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_0010_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENT_NAME</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_0020_A</Path>
+<VR>LO</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_0020_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_0030_A</Path>
+<VR>DA</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_0030_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>BIRTHDATE</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_0032_A</Path>
+<VR>TM</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_0032_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_1000_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_1000_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_1001_A</Path>
+<VR>PN</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_1001_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_0040_A</Path>
+<VR>CS</VR>
+<Enable>True</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_0040_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>SEX</FieldName>
+</GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_1030_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_1030_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_3001_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0040_3001_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0500_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0500_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_21C0_A</Path>
+<VR>US</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_21C0_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_2000_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_2000_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_2110_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_2110_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0038_0050_A</Path>
+<VR>LO</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0038_0050_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_1010_A</Path>
+<VR>AS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_1010_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_1020_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_1020_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_2160_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_2160_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_2180_A</Path>
+<VR>SH</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_2180_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0010_21B0_A</Path>
+<VR>LT</VR>
+<Enable>False</Enable>
+<Catagory>Patient</Catagory>
+</DPath>
+<SourceField /><TargetField>_0010_21B0_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_030E_A</Path>
+<VR>SQ</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_0040_030E_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="BeginItem"><Path>Begin Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_Begin Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_030E_A_0_0018_0060_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_0040_030E_A_0_0018_0060_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_030E_A_0_0018_1150_A</Path>
+<VR>IS</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_0040_030E_A_0_0018_1150_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="Normal"><Path>0040_030E_A_0_0018_8151_A</Path>
+<VR>DS</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_0040_030E_A_0_0018_8151_A</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+<MWLQueryResultItem><DPath Type="EndItem"><Path>End Item 0</Path>
+<VR>Unknown</VR>
+<Enable>False</Enable>
+<Catagory /></DPath>
+<SourceField /><TargetField>_End Item 0</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue><![CDATA[]]></ConstValue>
+<Type>FixValue</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</MWLQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>6330109046919800430</RuleID>
+<RuleName /></Rule>
+<CSDivisionMAXCount>5</CSDivisionMAXCount>
+<CSDivisionSeperator>,</CSDivisionSeperator>
+<PersonNameRule><SelectedGroup>SingleByte</SelectedGroup>
+<Components><PersonNameComponent><Type>FamilyName</Type>
+<DisplayName>Family Name</DisplayName>
+<Enable>True</Enable>
+</PersonNameComponent>
+<PersonNameComponent><Type>GivenName</Type>
+<DisplayName>Given Name</DisplayName>
+<Enable>True</Enable>
+</PersonNameComponent>
+<PersonNameComponent><Type>MiddleName</Type>
+<DisplayName>Middle Name</DisplayName>
+<Enable>False</Enable>
+</PersonNameComponent>
+<PersonNameComponent><Type>Prefix</Type>
+<DisplayName>Prefix</DisplayName>
+<Enable>False</Enable>
+</PersonNameComponent>
+<PersonNameComponent><Type>Suffix</Type>
+<DisplayName>Suffix</DisplayName>
+<Enable>False</Enable>
+</PersonNameComponent>
+</Components>
+</PersonNameRule>
+<CharacterSetName>GB18030</CharacterSetName>
+<AffectedUID /></MWLServerConfig>

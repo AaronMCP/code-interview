@@ -1,0 +1,19 @@
+﻿<div id="consultation-applied">
+    <link href="/app-resources/css/request-completed-view.css" rel="stylesheet" />
+    <div class="container-applied">
+        <div class="main-applied">
+            <request-nav-info-view></request-nav-info-view>
+            <div class="row hospital-info">
+                <request-receiver-info-view></request-receiver-info-view>
+                <request-request-info-view></request-request-info-view>
+            </div>
+            <request-patient-info-view></request-patient-info-view>
+        </div>
+    </div>
+    <div class="footer-applied">
+        <request-info-back-button></request-info-back-button>
+        <div class="action">
+            <button type="button" class="btn btn-md btn-primary" ng-click="acceptRequest()">{{'AcceptRequest'|translate}}</button>
+        </div>
+    </div>
+</div>

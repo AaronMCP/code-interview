@@ -1,0 +1,30 @@
+﻿<div>
+    <div ng-show="sidePanel.isExpanded" class="g-sidepanel g-sidepanel-expand">
+        <div class="g-sidepanel-title">{{'PatientCase' | translate}}<a class="icon-general icon-left" title="{{'Collapse' | translate}}" ng-click="sidePanel.collapse()"></a></div>
+        <button type="button" class="btn btn-lg btn-primary" ng-click="createPatientCase()" ng-show="user.isJuniorDoctor">{{'CreateNewCase'|translate}}</button>
+        <ul class="g-sidepanel-menu">
+            <li ng-click="statusFilterContext.filter(enums.patientCaseStatus.All)" ng-class="highlightStauts(enums.patientCaseStatus.All)">
+                <span class="icon-general icon-all" title="{{'All' | translate}}"></span><span class="title">{{'All' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(enums.patientCaseStatus.NotApply)" ng-class="highlightStauts(enums.patientCaseStatus.NotApply)">
+                <span class="icon-general icon-inMeeting" title="{{'NotApply' | translate}}"></span><span class="title">{{'NotApply' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(enums.patientCaseStatus.Applied)" ng-class="highlightStauts(enums.patientCaseStatus.Applied)">
+                <span class="icon-general icon-inMeeting" title="{{'Applied' | translate}}"></span><span class="title">{{'Applied' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(enums.patientCaseStatus.Deleted)" ng-class="highlightStauts(enums.patientCaseStatus.Deleted)">
+                <span class="icon-general icon-trash" title="{{'Deleted' | translate}}"></span><span class="title">{{'Deleted' | translate}}</span>
+            </li>
+            <li ng-click="showDICOMList()" ng-class="highlightStauts(enums.patientCaseStatus.DicomList)" class="dicom-list-nav" ng-if="!isMobile">
+                <span class="icon-general  icon-receive_image icon-blue" title="{{'DICOMList' | translate}}">
+                    <span class="icon-circle icon-mark" ng-if="isUpdatedDicom"></span>
+                </span>
+                <span class="title">{{'DICOMList' | translate}}</span>
+
+            </li>
+        </ul>
+    </div>
+    <div ng-hide="sidePanel.isExpanded" class="g-sidepanel">
+        <div class="g-sidepanel-title">{{'PatientCase' | translate}}<a class="icon-general icon-right" title="{{'Expand' | translate}}" ng-click="sidePanel.expand()" style="color: #f7941e"></a></div>
+    </div>
+</div>

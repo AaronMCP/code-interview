@@ -1,0 +1,31 @@
+﻿{
+    "welcomeWords": "欢迎您登录",
+    "userName": "用户名",
+    "password": "密码",
+    "publicAccountHolder": "公共账号请输入真实姓名",
+    "login": "登录",
+    "changePassword":  "修改密码",
+    "forgotPsd": "忘记密码?",
+    "CompanyName": "锐珂亚太投资管理（上海）有限公司",
+    "HotLine": "免费售后服务热线",
+    "English": "English",
+    "SimplifiedChinese": "简体中文",
+    "emailNotExists": "用户名不存在",
+    "wrongPassword": "用户名密码不匹配",
+    "inactiveAccount": "用户名已被删除",
+    "expiredAccount": "该用户不在有效期内",
+    "unknownError": "未知异常",
+    "emailRequired": "请输入用户名",
+    "passwordRequired": "请输入密码",
+    "realNameRequired": "使用公共账号登录请输入真实姓名",
+    "email4Pwd": {
+        "required": "请输入用户名",
+        "emailNotExists": "用户名不合法，请重新输入"
+    },
+    "sameUserLogin": "您已在[{0}]（IP为{1}）上登录，请确认是否继续在当前机器上登录！",
+    "maxOnline": "达到最大在线用户数！",
+    "sameLocationLogin": "同一台机器上用户[{0}]已登陆，请确认是否继续登录！",
+    "isLocked": "用户已被锁，请联系管理员！",
+    "cannotGetLicenseData": "无法获取License数据，请联系管理员！",
+    "licenseExpired": "License已经过期，请联系管理员！"
+}

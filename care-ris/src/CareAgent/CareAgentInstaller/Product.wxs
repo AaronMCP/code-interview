@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="*" Name="CareAgent"
+           Language="2052"
+           Version="!(bind.fileVersion.Hys_CareAgent_Main)"
+           Manufacturer="CloudHys"
+           UpgradeCode="8413e043-1f9f-4ab0-ae54-6d44abeebe3a">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="license.rtf" />
+
+    <WixVariable Id="WixUIBannerBmp" Value="resource\banner.BMP" />
+    <WixVariable Id="WixUIDialogBmp" Value="resource\welcome.bmp" />
+    <!--<WixVariable Id="WixUIExclamationIco" Value="resource\logo32.ico" />
+    <WixVariable Id="WixUIInfoIco" Value="resource\logo32.ico" />
+    <WixVariable Id="WixUINewIco" Value="resource\logo16.ico" />
+    <WixVariable Id="WixUIUpIco" Value="resource\logo16.ico" />-->
+
+    <MajorUpgrade Schedule="afterInstallInitialize" DowngradeErrorMessage="已经安装了[ProductName]的更新的版本。" />
+    <MediaTemplate EmbedCab="yes"/>
+
+    <Feature Id="ProductFeature" Title="CareAgent" Level="1">
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentRef Id="RegistryEntries"/>
+    </Feature>
+    <UIRef Id="WixUI_FeatureTree"/>
+  </Product>
+
+  <Fragment>
+    <InstallExecuteSequence>
+      <Custom Action='MyProcess.TaskKill' Before='InstallValidate'/>
+      <Custom Action="LaunchApp" After="InstallFinalize" >NOT Installed AND NOT REMOVE</Custom>
+    </InstallExecuteSequence>
+
+    <Property Id="QtExecCmdLine"
+              Value='"[WindowsFolder]\System32\taskkill.exe" /F /IM Hys.CareAgent.Main.exe'/>
+    <CustomAction Id="MyProcess.TaskKill"
+                  BinaryKey="WixCA"
+                  DllEntry="CAQuietExec"
+                  Execute="immediate"
+                  Return="ignore"/>
+
+    <CustomAction Id="LaunchApp" Directory="INSTALLFOLDER" ExeCommand="[SystemFolder]cmd.exe /C start Hys.CareAgent.Main.exe" />
+
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="INSTALLFOLDER" Name="CareAgent" />
+      </Directory>
+    </Directory>
+  </Fragment>
+  <Fragment>
+    <DirectoryRef Id="INSTALLFOLDER">
+      <Component Id="RegistryEntries" Guid="80EFA385-DDB9-41FC-B7AE-AEC1C11F5AD5" >
+        <RegistryKey Root="HKCU"
+                     Key="Software\Microsoft\Windows\CurrentVersion\Run"
+                     Action="none">
+          <RegistryValue Type="string" Name="CareAgent" Value="[SystemFolder]cmd.exe /C cd /d &quot;[INSTALLFOLDER]&quot; &amp; start Hys.CareAgent.Main.exe" KeyPath="yes">
+          </RegistryValue>
+        </RegistryKey>
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+</Wix>

@@ -1,0 +1,179 @@
+﻿.check-code-bottom {
+    overflow:hidden;
+}
+.check-code-bottom form label.col-md-5 {
+    text-align:right;
+    padding-right:5px;
+    color:#787878;
+    font-weight: normal;
+}
+.check-code-bottom form label {
+    line-height:34px;
+}
+.check-code-bottom form .form-group {
+    padding-right: 10px;
+    margin-bottom: 0;
+}
+    .check-code-bottom form .form-group .doubleInput {
+        height:60px;
+    }
+.check-code-bottom .navbar-right {
+    margin-right:0px;
+    padding-right:20px;
+}
+.hys-confirm-modal {
+    position:absolute;
+    left:0;
+    top:-8%;
+    right:0;
+    bottom:0;
+}
+    .hys-confirm-modal .hys-modal-bg {
+        position:absolute;
+        background-color:#000;
+        opacity: 0.5;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+    }
+    .hys-confirm-modal .modal-main {
+        position:absolute;
+        left:50%;
+        top:50%;
+        width:300px;
+        min-height:130px;
+        padding: 30px 20px 60px;
+        background-color:#fff;
+        transform:translate(-50%,-50%);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+        .hys-confirm-modal .modal-main form {
+            overflow:hidden;
+        }
+            .hys-confirm-modal .modal-main form label {
+                float:left;
+            }
+        .hys-confirm-modal .modal-main .hys-modal-footer {
+            position:absolute;
+            bottom:20px;
+            left: 0;
+            right: 0;
+        }
+        .hys-confirm-modal .modal-main .hys-modal-footer div {
+            width: 130px;
+            margin: 0 auto;
+        }
+            .hys-confirm-modal .modal-main .hys-modal-footer button + button {
+                margin-left: 5px;
+            }
+            .hys-confirm-modal .modal-main .hys-modal-footer>button:last-child {
+                margin-right:0;
+                margin-left:1%;
+            }
+.hys-big-modal {
+    position:fixed;
+    top:-100%;
+    left:0;
+    bottom:0;
+    right:0;
+}
+    .hys-big-modal .hys-big-modal-bg {
+        position:absolute;
+        background-color:#000;
+        opacity: 0.5;
+        left:0;
+        top:0;
+        right:0;
+        bottom:0;
+    }
+    .hys-big-modal .hys-big-modal-main {
+        position:absolute;
+        left:50%;
+        top:60%;
+        width:90%;
+        height:auto;
+        background-color:#fff;
+        transform:translate(-50%);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    }
+        .hys-big-modal .hys-big-modal-main .hys-big-modal-header {
+            line-height:34px;
+            border-bottom:1px solid #dcdcdc;
+            padding-left:15px;
+        }
+        .hys-big-modal .hys-big-modal-main .hys-big-modal-content {
+            height:420px;
+            padding:0 20px 20px;
+            overflow-y: auto;
+        }
+            .hys-big-modal .hys-big-modal-main .hys-big-modal-content .modal-table {
+                float:left;
+                height:100%;
+                overflow-y:auto;
+                width:25%;
+                margin-left:4.16%;
+                background-color:#fafafa;
+            }
+                .hys-big-modal .hys-big-modal-main .hys-big-modal-content .modal-table:first-child {
+                    margin-left:0;
+                    width:12.5%;
+                }
+                .hys-big-modal .hys-big-modal-main .hys-big-modal-content .modal-table caption {
+                    padding:10px;
+                    font-size:14px;
+                    color:#333333;
+                }
+                .hys-big-modal .hys-big-modal-main .hys-big-modal-content .modal-table tr{
+                    display:block;
+                    height:36px;
+                    border-bottom:1px solid #cacaca;
+                }
+               .modal-table th,.modal-table td{
+                    display:inline-block;
+                    height:100%;
+                    line-height:36px;
+                }
+th.win100 {
+     background:#e0e0e0;
+     width:100%;
+}
+th.win45 {
+    width:45%;
+    background:#e0e0e0;
+    border-right:1px solid #cacaca;
+}
+th.win55 {
+    width:53%;
+    background:#e0e0e0;
+}
+td.win45 {
+    width:45%;
+    border-right:1px solid #cacaca;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+td.win55 {
+    width:53%;
+}
+    td.win55 input {
+        width:100%;
+        height:100%;
+        border:0;
+        background-color:transparent;
+    }
+td.win100 {
+    width:100%;
+}
+.hys-bg-modal-footer {
+    padding:15px 20px;
+    overflow:hidden;
+}
+    .hys-bg-modal-footer button {
+        float:right;
+        margin-left:20px;
+    }
+.hys-big-modal .hys-big-modal-main .hys-big-modal-content .modal-table tr.active{
+    background:#d5f2ff;
+}

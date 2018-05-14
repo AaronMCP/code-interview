@@ -1,0 +1,113 @@
+.rules {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    // 操作按钮样式
+    .operate-container {
+        height: 50px;
+        width: 100%;
+        text-align: right;
+        button {
+            background: #5c9df5;
+            border-radius: 2px;
+            width: 100px;
+            height: 30px;
+            color: #fff;
+            margin-top: 7px;
+            margin-right: 21px;
+        }
+    }
+    .rules-detail {
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        bottom: 0;
+        background: #fff;
+        overflow-y: auto;
+        // 规则类型样式
+        .rule-type {
+            display: block;
+            border-radius: 2px;
+            width: 48px;
+            height: 18px;
+            line-height: 16px;
+            text-align: center;
+            color: #fff;
+            margin: auto;
+        }
+        .rule-type.same {
+            background: #63ba70;
+            border: 1px solid #6bbd78;
+        }
+        .rule-type.no-same {
+            background: #a770b3;
+            border: 1px solid #a770b3;
+        }
+        // 规则优先级样式
+        .same-rule-priority {
+            font-size: 18px;
+            color: #63ba70;
+        }
+        .no-same-rule-priority {
+            font-size: 18px;
+            color: #a770b3;
+        }
+        // 操作按钮样式
+        .rule-table-operate {
+            text-align: center;
+            span {
+                display: inline-block;
+                width: 60px;
+                height: 21px;
+                font-size: 14px;
+                text-align: left;
+                color: #1c2029;
+                cursor: pointer;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+            span:first-child {
+                margin-right: 7px;
+            }
+            .rule-history {
+                text-indent: 25px;
+                background: url('../../common/image/history.png') no-repeat left center;
+            }
+            .rule-edit {
+                text-indent: 29px;
+                background: url('../../common/image/edit.png') no-repeat left center;
+            }
+            .rule-delete {
+                text-indent: 22px;
+                background: url('../../common/image/delete.png') no-repeat left center;
+            }
+        }
+    }
+}
+
+
+// 表格样式调整
+.rules-detail, .history-content{
+    overflow: hidden;
+    border: 1px solid #e9e9e9;
+    .ant-table-scroll{
+        overflow: hidden;
+    }
+    .ant-table-fixed-header .ant-table-scroll .ant-table-header{
+        overflow: hidden;
+        margin-bottom: 0 !important;   
+    }
+    .ant-table-header{
+        .ant-table-thead > tr > th{
+            border-right: none;
+            text-align: center;
+            padding: 12px 0 10px;
+        }
+    }
+    .ant-table-body{
+        overflow-y: auto !important;
+    }
+}
+// .source-content .ant-table-thead > tr > th {
+//     background-color: #fff;
+// }

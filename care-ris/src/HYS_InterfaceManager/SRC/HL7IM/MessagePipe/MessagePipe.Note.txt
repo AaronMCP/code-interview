@@ -1,0 +1,12 @@
+
+TODO:
+
+- add thread ID loging into dispatcher/channel. (done)
+- if dispatching message from subscriber find no match channel, return false/LPC exception.  (done)
+
+- use message property in the message package to accelarate channel's message entry criteria checking.
+- use compiled XSLT/XMl Schame cache to optimize memory usage
+
+- optimize configuration GUI of message pipe.
+
+- document LLD: please notice the message type handling/processing mechanism.

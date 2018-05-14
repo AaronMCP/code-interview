@@ -1,0 +1,27 @@
+﻿.client-manage {
+    height: 100%;
+    background: #fff !important;
+    position: relative;
+}
+
+
+.client-manage-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top:15px;
+    background: #fff;
+}
+
+.client-row-col {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.client-pacs-title {
+    border-bottom: 3px solid #f5a623;
+    margin-top:15px;
+   
+
+}

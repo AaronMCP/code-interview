@@ -1,0 +1,38 @@
+﻿<div>
+    <link href="/app-resources/css/patient-cases-view.css" rel="stylesheet" />
+    <div>
+        <form class="navbar-form form-inline rispro-search-wrapform" role="search" style="left: 10px;margin-left: 0px">
+            <div class="form-group">
+                <input type="text" class="form-control input-sm input-search" id="Search_PatientNo" placeholder="{{'ConsultPatientNo' | translate}}" ng-model="searchVal.patientNo">
+                <input type="text" class="form-control input-sm input-search" id="Search_PatientName" placeholder="{{'PatientName' | translate}}" ng-model="searchVal.patientName">
+                <input type="text" class="form-control input-sm input-search" id="Search_InsuranceNumber" placeholder="{{'InsuranceNumber' | translate}}" ng-model="searchVal.insuranceNumber">
+                <input type="text" class="form-control input-sm input-search" id="Search_IdentityCard" placeholder="{{'IdentityCard' | translate}}" ng-model="searchVal.identityCard">
+                <button type="submit" class="btn btn-default btn-sm" ng-click="search()">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div id="patient-cases">
+        <div id="consulationCases" ng-if="isLoadUserSetting" kendo-grid k-options="consulationCases" k-ng-delay="consulationCases" class="patient-cases-gird"></div>
+        <script id="column-menu-cases" type="text/x-kendo-tmpl">
+            <div class="dropdown patientcases-gird-dropdown">
+                <a href=" javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                    <span class="icon-general icon-pencil"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="" ng-click="editCase(dataItem.patientCaseID)">{{ 'ViewInformation' | translate }}</a></li>
+                    <li><a href="" ng-click="applyRequest(dataItem)" ng-if="user.isJuniorDoctor && dataItem.isDeleted==0">{{ 'ApplyConsultation' | translate }}</a></li>
+                    <li><a href="" ng-click="openDeletePatientCaseWindow(dataItem.patientCaseID)" ng-if="dataItem.isDeleted==0 && dataItem.status==0">{{ 'DeletePatientCase' | translate }}</a></li>
+                    <li><a href="" ng-click="recoverPatientCase(dataItem)" ng-if="dataItem.isDeleted==1 && dataItem.status==0">{{ 'RecoverPatientCase' | translate }}</a></li>
+                </ul>
+            </div>
+        </script>
+        <script id="column-menu-createTime" type="text/x-kendo-tmpl">
+            #= kendo.toString(kendo.parseDate(createTime), 'yyyy/MM/dd HH:mm:ss')#
+        </script>
+        <script id="column-menu-lastUpdateTime" type="text/x-kendo-tmpl">
+            #= kendo.toString(kendo.parseDate(lastUpdateTime), 'yyyy/MM/dd HH:mm:ss')#
+        </script>
+    </div>
+</div>

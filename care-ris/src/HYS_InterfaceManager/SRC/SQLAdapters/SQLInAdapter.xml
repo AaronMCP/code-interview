@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SQLInAdapterConfig>
+  <ThirdPartyInteractConfig>
+    <ShareConnectionAmongChannels>True</ShareConnectionAmongChannels>
+    <SuicideWhenOleDbException>True</SuicideWhenOleDbException>
+    <SuicideWhenOleDbExceptionErrorCodeExclude>40001</SuicideWhenOleDbExceptionErrorCodeExclude>
+    <InteractType>Active</InteractType>
+    <ConnectionParameter>
+      <IsChanged>False</IsChanged>
+      <Server>CNSHW9RSZM1X</Server>
+      <Database>GWDATADB</Database>
+      <User>sa</User>
+      <Password>123456</Password>
+      <ConnectionStr></ConnectionStr>
+    </ConnectionParameter>
+    <TimerInterval>30000</TimerInterval>
+    <TimerEnable>True</TimerEnable>
+  </ThirdPartyInteractConfig>
+  <InboundChanels>
+    <SQLInboundChanel>
+      <ChannelName>p_patient_3rdin</ChannelName>
+      <Enable>True</Enable>
+      <OperationName>p_patient_3rdin</OperationName>
+      <OperationType>StorageProcedure</OperationType>
+      <Rule>
+        <QueryCriteria>
+          <Type>DataSet</Type>
+          <SQLStatement />
+          <MappingList>
+            <SQLInQueryCriteriaItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>BigInt</FieldType>
+                <FieldName>process_flag</FieldName>
+              </ThirdPartyDBPatamter>
+              <Type>None</Type>
+              <Singal>None</Singal>
+              <Operator>Equal</Operator>
+              <SourceField />
+              <TargetField>process_flag</TargetField>
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue>0</ConstValue>
+                <Type>FixValue</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>None</Table>
+                <FieldName />
+              </GWDataDBField>
+            </SQLInQueryCriteriaItem>
+            <SQLInQueryCriteriaItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>VarChar</FieldType>
+                <FieldName>event_type</FieldName>
+              </ThirdPartyDBPatamter>
+              <Type>None</Type>
+              <Singal>None</Singal>
+              <Operator>Equal</Operator>
+              <SourceField />
+              <TargetField />
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue>00</ConstValue>
+                <Type>FixValue</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>None</Table>
+                <FieldName />
+              </GWDataDBField>
+            </SQLInQueryCriteriaItem>
+          </MappingList>
+        </QueryCriteria>
+        <QueryResult>
+          <MappingList>
+            <SQLInQueryResultItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>BigInt</FieldType>
+                <FieldName>patientid</FieldName>
+              </ThirdPartyDBPatamter>
+              <SourceField>PATIENTID</SourceField>
+              <TargetField>patientid</TargetField>
+              <RedundancyFlag>True</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue />
+                <Type>None</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>Patient</Table>
+                <FieldName>PATIENTID</FieldName>
+              </GWDataDBField>
+            </SQLInQueryResultItem>
+            <SQLInQueryResultItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>VarChar</FieldType>
+                <FieldName>patient_name</FieldName>
+              </ThirdPartyDBPatamter>
+              <SourceField>PATIENT_NAME</SourceField>
+              <TargetField>patient_name</TargetField>
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue />
+                <Type>None</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>Patient</Table>
+                <FieldName>PATIENT_NAME</FieldName>
+              </GWDataDBField>
+            </SQLInQueryResultItem>
+            <SQLInQueryResultItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>DBDate</FieldType>
+                <FieldName>birthdate</FieldName>
+              </ThirdPartyDBPatamter>
+              <SourceField>BIRTHDATE</SourceField>
+              <TargetField>birthdate</TargetField>
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue />
+                <Type>None</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>Patient</Table>
+                <FieldName>BIRTHDATE</FieldName>
+              </GWDataDBField>
+            </SQLInQueryResultItem>
+            <SQLInQueryResultItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>VarChar</FieldType>
+                <FieldName>address</FieldName>
+              </ThirdPartyDBPatamter>
+              <SourceField>ADDRESS</SourceField>
+              <TargetField>address</TargetField>
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue />
+                <Type>None</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>Patient</Table>
+                <FieldName>ADDRESS</FieldName>
+              </GWDataDBField>
+            </SQLInQueryResultItem>
+            <SQLInQueryResultItem>
+              <ThirdPartyDBPatamter>
+                <FieldID>0</FieldID>
+                <FieldType>VarChar</FieldType>
+                <FieldName>event_type</FieldName>
+              </ThirdPartyDBPatamter>
+              <SourceField>EVENT_TYPE</SourceField>
+              <TargetField>event_type</TargetField>
+              <RedundancyFlag>False</RedundancyFlag>
+              <Translating>
+                <LutName />
+                <ConstValue />
+                <Type>None</Type>
+              </Translating>
+              <GWDataDBField>
+                <Table>Index</Table>
+                <FieldName>EVENT_TYPE</FieldName>
+              </GWDataDBField>
+            </SQLInQueryResultItem>
+          </MappingList>
+        </QueryResult>
+        <RuleID>6330110947962913120</RuleID>
+        <RuleName>SP_SIA11_p_patient_3rdin</RuleName>
+      </Rule>
+      <SPName />
+      <Modified>False</Modified>
+      <SPStatement><![CDATA[]]></SPStatement>
+    </SQLInboundChanel>
+  </InboundChanels>
+  <InboundPassiveChanels />
+  <ThrPartyDBParamters />
+  <ThrPartyAppConfig>
+    <TimerInterval>1000</TimerInterval>
+    <FilePath>CallExternalMethod.dll</FilePath>
+  </ThrPartyAppConfig>
+</SQLInAdapterConfig>

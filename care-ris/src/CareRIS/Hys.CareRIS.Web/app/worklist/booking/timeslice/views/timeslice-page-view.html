@@ -1,0 +1,13 @@
+﻿<div class="timeslice-page-container">
+    <div class="timeslice-page-top">
+        <!--<input type="button" class="btn btn-default" value="Unlock" ng-click="unlockTimeSlice()"/>-->
+        <input type="button" class="btn btn-default" value="{{'Cancel'|translate}}" ng-click="cancel()" />
+        <input type="button" class="btn btn-default"
+               ng-disabled="!timesliceSelected"
+               value="{{'Ok'|translate}}"
+               ng-click="selectTimeSlice()" />
+    </div>
+    <div class="timeslice-page-body" style="position:static">
+        <time-slice-view option="timesliceOption"></time-slice-view>
+    </div>
+</div>

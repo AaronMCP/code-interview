@@ -1,0 +1,23 @@
+Debug
+Release
+bin
+obj
+packages
+Logs
+TestResults
+Runtime
+.vs
+.vscode
+
+*.suo
+*.user
+
+# modules
+node_modules
+# npm debug file
+npm-debug.log
+
+dist
+
+*.db
+*.opensdf

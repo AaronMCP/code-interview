@@ -1,0 +1,10 @@
+﻿<div class="popover filter-list">
+    <div class="arrow"></div>
+    <link href="/app-resources/css/request-apply-filter-list.css" rel="stylesheet" />
+    <div class="select-pane-title">
+        <a href="javascript:void(0);" class="cleararea" translate ng-click="clearHop()">ClearSelectedHop</a>
+    </div>
+
+    <span class="label label-info label-filter" ng-repeat="hp in hoveredHospitals" ng-click="selectFilterHospital(hp)" ng-if="hp.hospitalName">{{hp.hospitalName}}</span>
+</div>
+

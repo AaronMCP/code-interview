@@ -1,0 +1,62 @@
+﻿.content-container {
+    position: relative;
+}
+#patient-cases, #dicomList {
+    position: absolute; top: 45px; left: 0; right: 0; bottom: 0;
+}
+
+ #patient-cases .patient-cases-gird,#dicomList .dicom-gird {
+        height: 100%;
+    }
+
+    #patient-cases .patientcases-gird-dropdown, #dicomList .dicom-gird-dropdown{
+        vertical-align: middle;
+    }
+
+  .dicom-search-form {
+      padding-left: 10px;
+  }
+
+.k-grid tr td {
+    overflow: visible;
+}
+
+a.dropdown-toggle:hover {
+    text-decoration: none;
+}
+
+a.dropdown-toggle:active {
+    text-decoration: none;
+}
+
+a.dropdown-toggle:focus {
+    text-decoration: none;
+}
+
+.k-grid td {
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+}
+
+.innerGrid td {
+    border-width: 0 !important;
+}
+
+.k-state-selected {
+    background-color: #fdf6dc !important;
+    color: #333333 !important;
+}
+
+.icon-gender-font {
+    font-size: 20px !important;
+}
+
+.dicom-list-nav {
+    border-top: 1px solid rgb(188, 188, 188);
+}
+.module-item {
+    margin: 0 0 5px 10px;
+}
+.module-item:hover {
+    cursor: pointer;
+}

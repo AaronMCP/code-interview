@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DICOM xmlns="http://www.carestream.com/DCM_SDK">
+  <DElementList>
+    <!--Data Set Type-->
+    <DElement>
+      <VR>US</VR>
+      <Tag>00000800</Tag>
+      <Value>240</Value>
+      <Sequence />
+    </DElement>
+    <!--Status-->
+    <DElement>
+      <VR>US</VR>
+      <Tag>00000900</Tag>
+      <Value>0</Value>
+      <Sequence />
+    </DElement>
+    <!--Affected SOP Instance UID-->
+    <DElement>
+      <VR>UI</VR>
+      <Tag>00001000</Tag>
+      <Value>1.1.2.2.2.2.2.2.1.00000002</Value>
+      <Sequence />
+    </DElement>
+    <!--Action Type ID-->
+    <DElement>
+      <VR>US</VR>
+      <Tag>00001008</Tag>
+      <Value>1</Value>
+      <Sequence />
+    </DElement>
+    <!--Patient's Name-->
+    <DElement>
+      <VR>PN</VR>
+      <Tag>00100010</Tag>
+      <Value>Test^Name</Value>
+      <Sequence></Sequence>
+    </DElement>
+    <!--Patient ID-->
+    <DElement>
+      <VR>LO</VR>
+      <Tag>00100020</Tag>
+      <Value>PID0001</Value>
+      <Sequence></Sequence>
+    </DElement>
+  </DElementList>
+</DICOM>

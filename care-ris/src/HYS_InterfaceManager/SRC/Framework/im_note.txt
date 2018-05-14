@@ -1,0 +1,104 @@
+
+Adding Device
+------------------------------
+>> create device installation log file (suspended)
+
+// add device to database
+
+- update DeviceDir
+
+ID=<main key in DeviceTable>
+
+
+Installing Interface
+------------------------------
+>> create interface installation log file (suspended)
+
+Step 2: interface definition
+
+- update DeviceDir
+
+Name=<interfaceName>
+Description=<interfaceDescription>
+ReferenceID=<deviceID>
+ReferenceName=<deviceName>
+
+- update AdapterService.config
+
+NotifyStatusToIM=True
+IMWindowCaption=<IMCaption>
+ConfigDBConnection=<configDBConnection>
+DataDBConnection=<dataDBConnection>
+ServiceName=<interfaceName>
+
+- update AdapterConfig.config
+
+ConfigDBConnection=<configDBConnection>
+DataDBConnection=<dataDBConnection>
+
+- update install.bat
+
+osql...<interfaceName>
+osql...<interfaceName>
+osql...<interfaceName>
+
+InstallUtil.exe HYS.Adapter.Service.exe
+
+- update uninstall.bat
+
+InstallUtil.exe -u HYS.Adapter.Service.exe
+
+osql...<interfaceName>
+osql...<interfaceName>
+osql...<interfaceName>
+
+- update netstart.bat
+
+net start <interfaceName>
+
+- update netstop.bat
+
+net start <interfaceName>
+
+- ROLE BACK (option): delete interface folder
+
+
+
+Step 3: interface configuration
+
+// show configuration GUI
+// run install.bat
+// add interface to database
+
+- Update interface id (main key in the database) into DeviceDir file.
+
+- ROLE BACK (option): delete interface from database and run uninstall.bat
+
+// start NT service (option)
+
+
+
+
+
+
+
+
+
+
+Backup: Installing Interface
+------------------------------
+
+Step 2: interface definition
+
+- Update interface name/description into DeviceDir file.
+- Update reference device id/name into DeviceDir file.
+
+Step 3: interface configuration
+
+// interface configuration
+// interface installation
+// add interface to database
+
+- Update interface id (main key in the database) into DeviceDir file.
+
+// start NT service (option)

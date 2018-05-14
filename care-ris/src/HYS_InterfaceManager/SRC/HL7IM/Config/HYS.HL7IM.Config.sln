@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HL7Gateway.Config", "Config\HL7Gateway.Config.csproj", "{F11AEF15-CBB4-467D-B69F-F15B34D2C0F6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{347D69B6-A6FC-48B6-8E10-085DC948BB9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Xml", "..\Common\Xml\Common.Xml.csproj", "{06005189-D4C3-4919-A08A-B825B68AA3D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Logging", "..\Common\Logging\Common.Logging.csproj", "{391A304B-8F73-4D9C-AD82-2DB495EF6E23}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Objects", "..\Messaging\Objects\Messaging.Objects.csproj", "{BB39B254-8B49-4924-9124-A66271B913D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Mapping", "..\Messaging\Mapping\Messaging.Mapping.csproj", "{5497186E-8E85-4BE2-BDEE-46EF44828796}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Queuing", "..\Messaging\Queuing\Messaging.Queuing.csproj", "{8BDE987B-8994-4E34-A809-F23792560866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Messaging.Base", "..\Messaging\Base\Messaging.Base.csproj", "{670743BB-BD5E-4840-87D9-6D507F3535F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management", "..\Messaging\Management\Management.csproj", "{9C4FAF94-70C5-4424-9386-EB6AC41664F5}"
+EndProject
+Global
+	GlobalSection(RationalClearCase) = preSolution
+		SourceControlProvider = RationalClearCase
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F11AEF15-CBB4-467D-B69F-F15B34D2C0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F11AEF15-CBB4-467D-B69F-F15B34D2C0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F11AEF15-CBB4-467D-B69F-F15B34D2C0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F11AEF15-CBB4-467D-B69F-F15B34D2C0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06005189-D4C3-4919-A08A-B825B68AA3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06005189-D4C3-4919-A08A-B825B68AA3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB39B254-8B49-4924-9124-A66271B913D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB39B254-8B49-4924-9124-A66271B913D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5497186E-8E85-4BE2-BDEE-46EF44828796}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5497186E-8E85-4BE2-BDEE-46EF44828796}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BDE987B-8994-4E34-A809-F23792560866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BDE987B-8994-4E34-A809-F23792560866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{670743BB-BD5E-4840-87D9-6D507F3535F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{670743BB-BD5E-4840-87D9-6D507F3535F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C4FAF94-70C5-4424-9386-EB6AC41664F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C4FAF94-70C5-4424-9386-EB6AC41664F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C4FAF94-70C5-4424-9386-EB6AC41664F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{06005189-D4C3-4919-A08A-B825B68AA3D0} = {347D69B6-A6FC-48B6-8E10-085DC948BB9E}
+		{391A304B-8F73-4D9C-AD82-2DB495EF6E23} = {347D69B6-A6FC-48B6-8E10-085DC948BB9E}
+		{BB39B254-8B49-4924-9124-A66271B913D1} = {E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}
+		{5497186E-8E85-4BE2-BDEE-46EF44828796} = {E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}
+		{8BDE987B-8994-4E34-A809-F23792560866} = {E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}
+		{670743BB-BD5E-4840-87D9-6D507F3535F6} = {E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}
+		{9C4FAF94-70C5-4424-9386-EB6AC41664F5} = {E14EE3EC-C511-4BFC-B9D3-C30CE93E42BE}
+	EndGlobalSection
+EndGlobal

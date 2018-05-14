@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4A280B55-A6C2-4DFC-B612-34DB6E3F918E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HYS.XmlAdapter.Common</RootNamespace>
+    <AssemblyName>HYS.XmlAdapter.Common</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Files\DirectoryMonitor.cs" />
+    <Compile Include="Controlers\FieldControler.cs" />
+    <Compile Include="Controlers\GWEventTypeControler.cs" />
+    <Compile Include="Controlers\HL7EventTypeControler.cs" />
+    <Compile Include="Controlers\MessageListViewControler.cs" />
+    <Compile Include="Controlers\XmlListViewItem.cs" />
+    <Compile Include="Controlers\XmlListViewControler.cs" />
+    <Compile Include="Files\DirectoryMonitorConfig.cs" />
+    <Compile Include="Forms\FormAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdvance.Designer.cs">
+      <DependentUpon>FormAdvance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormElement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormElement.Designer.cs">
+      <DependentUpon>FormElement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormField.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormField.Designer.cs">
+      <DependentUpon>FormField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormMessage.Designer.cs">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormQCItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormQCItem.Designer.cs">
+      <DependentUpon>FormQCItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IEntity.cs" />
+    <Compile Include="Net\SocketEntity.cs" />
+    <Compile Include="Net\SocketConfig.cs" />
+    <Compile Include="Net\SocketHelper.cs" />
+    <Compile Include="Net\SocketLogMgt.cs" />
+    <Compile Include="Net\SocketResult.cs" />
+    <Compile Include="Net\SocketWorker.cs" />
+    <Compile Include="Objects\HL7EventType.cs" />
+    <Compile Include="Objects\IXmlElementItem.cs" />
+    <Compile Include="Objects\XIM.cs" />
+    <Compile Include="Objects\XIMHelper.cs" />
+    <Compile Include="Objects\XIMItem.cs" />
+    <Compile Include="Objects\XIMMappingHelper.cs" />
+    <Compile Include="Objects\XIMMappingItem.cs" />
+    <Compile Include="Objects\XIMInboundMessage.cs" />
+    <Compile Include="Objects\XIMMessage.cs" />
+    <Compile Include="Objects\XIMOutboundMessage.cs" />
+    <Compile Include="Objects\XIMTransformHelper.cs" />
+    <Compile Include="Objects\XIMType.cs" />
+    <Compile Include="Objects\XmlElementItem.cs" />
+    <Compile Include="Objects\XmlMessage.cs" />
+    <Compile Include="Objects\XmlElement.cs" />
+    <Compile Include="Objects\XMLTransformer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\FormAdvance.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAdvance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormElement.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormElement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormField.resx">
+      <DependentUpon>FormField.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormMessage.resx">
+      <DependentUpon>FormMessage.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormQCItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormQCItem.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Framework\HYS.Adapter.Base\Adapter.Base.csproj">
+      <Project>{5ACF1F45-A8BA-4A67-B2D1-8506381EC0E5}</Project>
+      <Name>Adapter.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.DataAccess\Common.DataAccess.csproj">
+      <Project>{79390527-CC64-4CDC-B8FE-25072D303606}</Project>
+      <Name>Common.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Objects\Common.Objects.csproj">
+      <Project>{4d805299-9559-4f4b-a95c-fefb294ac2ff}</Project>
+      <Name>Common.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Framework\HYS.Common.Xml\Common.Xml.csproj">
+      <Project>{859B757E-44C6-4183-8E1E-9C3C21871843}</Project>
+      <Name>Common.Xml</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

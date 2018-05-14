@@ -1,0 +1,170 @@
+﻿<div class="time-management-container">
+    <div class="time-management-head">
+        <div class="time-management-head-top">
+            <div>
+                <span>站点</span>
+                <select ng-options="s for s in sites"
+                        ng-model="searchOption.site"
+                        ng-change="refreshModality()">
+                    <option value="">全局</option>
+                </select>
+            </div>
+            <div>
+                <span>设备类型</span>
+                <select ng-model="searchOption.modalityType"
+                        ng-change="refreshModality()"
+                        ng-options="m for m in modalityTypes"></select>
+            </div>
+            <div>
+                <span>设备</span>
+                <select ng-model="searchOption.modality"
+                        ng-change="searchOptionChanged()"
+                        ng-options="m for m in modalities"></select>
+            </div>
+            <div>
+                <span>日期类型</span>
+                <select ng-model="searchOption.dateType"
+                        ng-change="searchOptionChanged()"
+                        ng-options="d.id as d.text for d in dateTypes"></select>
+            </div>
+        </div>
+        <div class="time-management-head-bottom">
+            <div class="btn-group-left">
+                <button class="btn btn-default" ng-click="openSetupShare()" ng-disabled="selectedTimeslices.length<=0">设置共享</button>
+                <button class="btn btn-default" ng-click="clearShare()" ng-disabled="isShareSliceId.length===0 || selectedTimeslices.length<=0">清空共享</button>
+            </div>
+            <div class="btn-group-right">
+                <button class="btn btn-default" ng-click="modifyTimeslice()" ng-disabled="selectedTimeslices.length!==1">修改</button>
+                <button class="btn btn-default" ng-disabled="selectedTimeslices.length<=0" ng-click="delTimeslice()">删除</button>
+                <button class="btn btn-default" ng-disabled="selectedTimeslices.length<=0" ng-click="timesliceCopy()">复制为</button>
+                <button class="btn btn-default" ng-click="newTimeslice()">添加</button>
+                <button class="btn btn-default" ng-click="getTimeSlice()"><span class="glyphicon glyphicon-refresh"></span></button>
+            </div>
+        </div>
+    </div>
+    <div class="time-management-content">
+        <div class="time-management-content-head">生效日期</div>
+        <div class="time-management-content-body">
+            <div class="time-management-content-inside" ng-repeat="slice in timeslices">
+                <div class="time"
+                     ng-click="togglePan(slice)">
+                    <span class="glyphicon"
+                          ng-class="{'glyphicon-chevron-up':slice.down,'glyphicon-chevron-down':!slice.down}"></span>
+                    <span>{{slice.availableDate}}</span>
+                </div>
+                <div ng-class="{in:slice.down}" class="collapse time-management-table-wraper">
+                    <table class="table table-striped table-hover time-management-table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <input type="checkbox" ng-click="selectAll(slice.items)" ng-model="slice.items.allFlag" />
+                                    <label>全选</label>
+                                </th>
+                                <th>
+                                    起始时间
+                                </th>
+                                <th>
+                                    结束时间
+                                </th>
+                                <th>
+                                    描述
+                                </th>
+                                <th>
+                                    最大量
+                                </th>
+                                <th>
+                                    已共享
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="item in slice.items" ng-class="{selected:item.selected}" ng-click="choseTimeslice($event, item, slice.items)">
+                                <td><input type="checkbox" ng-model="item.single" ng-checked="allFlag" ng-click="selectSingle($event, item ,slice.items)"></td>
+                                <td>{{item.startDt|date:'HH:mm'}}</td>
+                                <td>{{item.endDt|date:'HH:mm'}}</td>
+                                <td>{{item.description}}</td>
+                                <td>{{item.maxNumber}}</td>
+                                <td>{{item.isShared?'是':'否'}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div kendo-window="timesliceWindow"
+         k-width="'480px'" k-height="'455px'"
+         k-visible="false" style="display:none;"
+         k-resizable="false" k-modal="true"
+         k-actions="[]">
+        <div ng-if="dataReady" class="tm-slicewindow">
+            <timeslice-maintainer sites="sites"
+                                  site="{{searchOption.site}}"
+                                  modality-type="{{searchOption.modalityType}}"
+                                  modality="{{searchOption.modality}}"
+                                  modality-types="modalityTypes"
+                                  modality-getter="getModality(site, modalityType, callback)"
+                                  edit-timeslice="modifyTarget"
+                                  on-cancel="cancelTimeslice()"
+                                  on-ok="confirmTimeslice()"></timeslice-maintainer>
+        </div>
+    </div>
+    <div kendo-window="timesliceCopyWindow"
+         k-width="'40%'" k-height="'45%'"
+         k-visible="false" k-modal="true"
+         k-actions="[]"
+         k-resizable="false">
+        <div class="timeslice-copy">
+            <div class="copy-form">
+                <div class="form-group">
+                    <span>站点</span>
+                    <select ng-model="copyOption.site"
+                            ng-change="copyRefreshModality()"
+                            ng-options="s for s in sites">
+                        <option value="">全局</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <span>设备类型</span>
+                    <select ng-model="copyOption.modalityType"
+                            ng-change="copyRefreshModality()"
+                            ng-options="m for m in modalityTypes"></select>
+                </div>
+                <div class="form-group">
+                    <span>设备</span>
+                    <select ng-model="copyOption.modality"
+                            ng-options="m for m in copyModalities"></select>
+                </div>
+                <div class="form-group">
+                    <span>生效日期</span>
+                    <input type="datetime"
+                           autocomplete="off"
+                           id="availableDatePicker"
+                           kendo-date-picker="availableDatePicker"
+                           ng-model="copyOption.availableDate"
+                           style="width: 50%">
+                </div>
+            </div>
+            <div class="copy-btn-group">
+                <button class="btn btn-primary" ng-click="cancelCopy()">取消</button>
+                <button class="btn btn-primary" ng-click="okCopy()">确定</button>
+            </div>
+        </div>
+    </div>
+    <div kendo-window="setupShareWindow"
+         k-width="'800px'" k-height="'450px'"
+         k-visible="false" style="display:none;"
+         k-resizable="false" k-modal="true"
+         k-actions="[]">
+        <div ng-if="shareReady" class="tm-slicewindow" style="overflow: hidden;height: 100%;">
+            <setup-share search-option="searchOption"
+                         sliceids="pushSliceIds"
+                         items="selectedTimeslices"
+                         is-share-data="addListsShare"
+                         on-cancel="closeSetupShare()"
+                         on-ok="saveSetupShare()"
+                         is-share-slice-id="isShareSliceId"
+                         slice-ids-arr="sliceIdsArr"></setup-share>
+        </div>
+    </div>
+</div>

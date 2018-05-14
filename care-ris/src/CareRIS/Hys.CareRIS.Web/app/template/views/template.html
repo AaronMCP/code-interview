@@ -1,0 +1,191 @@
+﻿
+<div class="report-template">
+    <div class="template-left" ng-disabled="isEdit">
+        <ul class="option-icons">
+            <li class="col-md-2"><span title="{{'AddDirectory'|translate}}" class="iconfont icon-jiahao" ng-click="addBelow();"></span></li>
+            <li class="col-md-2"><span title="{{'Rename'|translate}}" class="iconfont icon-edit" ng-click="edit()"></span></li>
+            <li class="col-md-2"><span title="{{'UpNode'|translate}}" class="iconfont icon-up" ng-click="arrowUp()"></span></li>
+            <li class="col-md-2"><span title="{{'MoveDownNode'|translate}}" class="iconfont icon-down" ng-click="arrowDown()"></span></li>
+            <li class="col-md-2"><span title="{{'Delete'|translate}}" class="glyphicon glyphicon-trash" ng-click="remove(selectedItem)"></span></li>
+        </ul>
+        <div class="template-tree"
+             kendo-tree-view="tree"
+             k-data-source="treeData"
+             k-on-change="click(dataItem);"
+             k-on-expand="expandNode(kendoEvent)"
+             k-on-collapse="collapseNode(kendoEvent)"
+             draggable="false"
+             title="{{dataItem.text}}">
+            <span k-template>
+                <span class="role-font-color">{{dataItem.text}}</span>
+            </span>
+        </div>
+    </div>
+    <div class="back-up" ng-if="flag"></div>
+    <div class="template-right">
+        <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+            <li>
+                <button type="button" class="btn btn-default" ng-click="cancel()" ng-disabled="!flag">取消</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="save()" ng-disabled="!isEdit">保存</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="saveAnother()" ng-disabled="!isSaveAnother">另存为</button>
+            </li>
+            <li>
+                <button type="button" class="btn btn-default" ng-click="addTemplate()" ng-disabled="isEdit">添加模板</button>
+            </li>
+        </ul>
+        <div>
+            <div class="col-md-8">
+                <div class="form-group col-md-12 template-container">
+                    <label class="template-title">检查名称  <span style="color:red">*</span></label>
+                    <div class="col-md-12 template-middle">
+                        <textarea class="form-control" ng-model="template.checkItemName" />
+                    </div>
+                </div>
+                <div class="form-group col-md-12 template-container">
+                    <label class="template-title">影像学表现</label>
+                    <div class="col-md-12 template-middle">
+                        <textarea class="form-control" ng-model="template.wysText"/>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 template-container">
+                    <label class="template-title">影像学诊断</label>
+                    <div class="col-md-12 template-middle">
+                        <textarea class="form-control" ng-model="template.wygText"/>
+                    </div>
+                </div>
+                <div class="form-group col-md-12 template-container">
+                    <label class="template-title">医生建议</label>
+                    <div class="col-md-12 template-middle">
+                        <textarea class="form-control" ng-model="template.doctorAdvice"/>
+                    </div>
+                </div>
+            </div>
+            <form class="col-md-3 col-md-offset-1">
+                <div class="form-group col-md-12">
+                    <label>快捷码</label>
+                    <div class="col-md-12">
+                        <input class="form-control" type="text" ng-model="template.shortcutCode"/>
+                    </div>
+                </div>
+                <div class="form-group col-md-12" style="position:relative;">
+                    <label>疾病编码</label>
+                    <div class="col-md-12">
+                        <input id="icdCode" class="form-control" type="text" ng-model="template.acrCode" ng-change="codeChange()" ng-blur="closeSelectCodes()" />
+                        <!--<select class="form-control" ng-model="acrCode">
+                <option ng-repeat="code in codes">{{code.name}}</option>
+            </select>-->
+                    </div>
+                    <div class="my-select" ng-if="codeSelect">
+                        <div id="tableContainer" data-ris-table-sticky-header style="overflow: hidden;height:260px;">
+                            <table ris-table-sort-wrapper class="table table-striped table-hover" style="margin-bottom: 0;">
+                                <thead>
+                                    <tr>
+                                        <th ris-table-sort-criteria="id">编号</th>
+                                        <th ris-table-sort-criteria="Name">名称</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <div class="my-select-table">
+                                <table id="codeTable" ris-table-sort-wrapper class="table table-striped table-hover">
+                                    <tbody>
+                                        <tr data-ris-repeat-done="Codes:RepeatDone" ng-mousedown="selectCode(row)"
+                                            ng-repeat="row in codes" ris-table-sort-repeat ng-class="{'st-selected': row.isSelected}">
+                                            <td><span ng-bind-html="row.id"></span></td>
+                                            <td><span ng-bind-html="row.name"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                        <nav id="paginationContainer" style="height:35px;">
+                            <ul class="pager" style="margin:0 0 5px 5px;">
+                                <li><a translate readonly  ng-mousedown="paginationContext.selectPreviousPage()" ng-click="idCodeFcous()" ng-class="{disabled: paginationContext.hasNoPreviousPage()}"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                                <li>{{paginationContext.pageIndex}}</li>
+                                <li><a translate readonly ng-mousedown="paginationContext.selectNextPage()" ng-click="idCodeFcous()" ng-class="{disabled: paginationContext.hasNoNextPage()}"><span class="glyphicon glyphicon-chevron-right"></span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                
+                <div class="form-group col-md-12">
+                    <label>设备类型  <span style="color:red">*</span></label>
+                    <div class="col-md-12">
+                        <select class="form-control" ng-model="template.modalityType" ng-options="m for m in modalityTypeList"></select>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>部位分类</label>
+                    <div class="col-md-12">
+                        <select class="form-control" ng-model="template.bodyCategory" ng-options=" b.text as b.text for b in bodyCategoryList"></select>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>检查部位  <span style="color:red">*</span></label>
+                    <div class="col-md-12">
+                        <select class="form-control" ng-model="template.bodyPart" ng-options="b.bodyPart as b.bodyPart for b in bodyPartList"></select>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>性别</label>
+                    <div class="col-md-12">
+                        <select class="form-control" ng-model="template.gender" ng-options="gender.value as gender.text for gender in genderList">
+                           
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group col-md-12">
+                    <label>阳性率</label>
+                    <div class="col-md-12">
+                        <select class="form-control" ng-model="template.isPositive" ng-options="positive.value as positive.text for positive in positiveList"></select>
+                    </div>
+                </div>
+                
+                <!--<div class="form-group col-md-12">
+                    <input class="form-control btn btn-default" type="button" value="选择疾病编码" />
+                </div>
+                <div class="form-group col-md-12">
+                    <input class="form-control btn btn-default" type="button" value="清除疾病编码"/>
+                </div>-->
+            </form>
+        </div>
+    </div>
+    <div kendo-window="addCatalogNameWindow"
+         class="add-catalog"
+         k-title="'添加目录名称'"
+         k-width="'300px'" k-height="'100px'"
+         k-visible="false" k-resizable="false"
+         k-modal="true">
+        <div class="add-container">
+            <input type="text" ng-model="catalogName" class="add-input form-control" />
+            <button class="btn btn-primary" ng-click="addSure()" ng-disabled="!catalogName">确定</button>
+        </div>
+    </div>
+    <div kendo-window="templateNameWindow"
+         class="add-catalog"
+         k-title="'模板名称'"
+         k-width="'300px'" k-height="'100px'"
+         k-visible="false" k-resizable="false"
+         k-modal="true">
+        <div class="add-container">
+            <input type="text" ng-model="templateName" class="add-input form-control" />
+            <button class="btn btn-primary" ng-click="saveSure()" ng-disabled="!templateName">确定</button>
+        </div>
+    </div>
+    <div kendo-window="resetNameWindow"
+         class="add-catalog"
+         k-title="'设定名称'"
+         k-width="'300px'" k-height="'100px'"
+         k-visible="false" k-resizable="false"
+         k-modal="true">
+        <div class="add-container">
+            <input type="text" ng-model="resetName" class="add-input form-control" />
+            <button class="btn btn-primary" ng-click="resetSure()" ng-disabled="!resetName">确定</button>
+        </div>
+    </div>
+</div>
+

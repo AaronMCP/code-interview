@@ -1,0 +1,35 @@
+﻿<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable">
+    <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="cancel()" ng-disabled="isSaving">×</button>
+    <p class="registration-module-title" style="font-size:18px" translate>SimilarPatient</p>
+    <div class="popup-content" style="height:400px;">
+      
+        <!--<p class="similar-patient-tip"  translate>SimilarPatientHandle</p>-->
+        <table class="table table-condensed table-hover" ng-if="similarPatients.length !== 0">
+            <thead>
+                <tr>
+                    <th translate>PatientNo</th>
+                    <th translate>PatientName</th>
+                    <th translate>Gender</th>
+                    <th translate>Birthday</th>
+                    <th translate>ReferenceNo</th>
+                    <th translate>Telephone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat=" row in similarPatients" ng-click="selectSimilarPatient(row);" ng-class="{'st-selected': row.isSelected}">
+                    <td>{{row.patientNo}}</td>
+                    <td>{{row.localName||row.englishName}}</td>
+                    <td>{{row.gender}}</td>
+                    <td>{{row.birthday|date:'yyyy-MM-dd'}}</td>
+                    <td>{{row.referenceNo}}</td>
+                    <td>{{row.telephone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="csd-module-footer registration-edit-footer">
+        <button type="submit" class="btn btn-green  btn-registration-edit-save" ng-click="ok()" translate>NewFlup</button>
+        <button class="btn btn-green btn-registration-edit-save" type="button" ng-click="createNewPatient()" translate>NewPatient</button>
+        <button class="btn btn-registration-edit-cancel" type="button" ng-click="cancel()" translate>Cancel</button>
+    </p>
+</div>

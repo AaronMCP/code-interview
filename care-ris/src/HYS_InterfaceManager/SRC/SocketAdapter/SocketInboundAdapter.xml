@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?><SocketInboundAdapterConfig><InGeneralParams /><ListenServerSocketParams><ListenIP>127.0.0.1</ListenIP>
+<ListenPort>6000</ListenPort>
+<ConnectTimeout>60000</ConnectTimeout>
+<ConnectTryCount>5</ConnectTryCount>
+<SendTimeout>60000</SendTimeout>
+<RecTimeout>60000</RecTimeout>
+<CodePageName>utf-8</CodePageName>
+</ListenServerSocketParams>
+<InboundChanels><SocketInChannel><ChannelName>ImageArrival</ChannelName>
+<Enable>True</Enable>
+<OperationName /><Rule><QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><SocketInQueryCriteriaItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Commandtype</FieldName>
+</ThirdPartyDBPatamter>
+<Type>None</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField /><TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue>8</ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</SocketInQueryCriteriaItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>Performed_enddt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Performed_enddt</SourceField>
+<TargetField>CUSTOMER_2</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_2</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>Performed_startdt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Performed_startdt</SourceField>
+<TargetField>CUSTOMER_1</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_1</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>OperatorName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>OperatorName</SourceField>
+<TargetField>TECHNICIAN</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>TECHNICIAN</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>AccessionNumber</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>AccessionNumber</SourceField>
+<TargetField>FILLER_NO</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Commandtype</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Commandtype</SourceField>
+<TargetField>EVENT_TYPE</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName>lut_p_6330058594143548720</LutName>
+<ConstValue /><Type>LookUpTable</Type>
+</Translating>
+<GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PatientID</SourceField>
+<TargetField>PATIENTID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ModalityName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>ModalityName</SourceField>
+<TargetField>STATION_AETITLE</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>6330446921212092774</RuleID>
+<RuleName /></Rule>
+</SocketInChannel>
+<SocketInChannel><ChannelName>PACS QC Notification</ChannelName>
+<Enable>True</Enable>
+<OperationName /><Rule><QueryCriteria><Type>DataSet</Type>
+<SQLStatement /><MappingList><SocketInQueryCriteriaItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Commandtype</FieldName>
+</ThirdPartyDBPatamter>
+<Type>Or</Type>
+<Singal>None</Singal>
+<Operator>Equal</Operator>
+<SourceField /><TargetField /><RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue>15</ConstValue>
+<Type>None</Type>
+</Translating>
+<GWDataDBField><Table>None</Table>
+<FieldName /></GWDataDBField>
+</SocketInQueryCriteriaItem>
+</MappingList>
+</QueryCriteria>
+<QueryResult><MappingList><SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>AccessionNumber</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>AccessionNumber</SourceField>
+<TargetField>FILLER_NO</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>FILLER_NO</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>PatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>PatientID</SourceField>
+<TargetField>PATIENTID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Patient</Table>
+<FieldName>PATIENTID</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>ModalityName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>ModalityName</SourceField>
+<TargetField>STATION_AETITLE</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+<GWDataDBField><Table>Order</Table>
+<FieldName>STATION_AETITLE</FieldName>
+</GWDataDBField>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>TECHNICIAN</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>OperatorName</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>OperatorName</SourceField>
+<TargetField>TECHNICIAN</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_1</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>Performed_startdt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Performed_startdt</SourceField>
+<TargetField>CUSTOMER_1</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_2</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>Date</FieldType>
+<FieldName>Performed_enddt</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Performed_enddt</SourceField>
+<TargetField>CUSTOMER_2</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Patient</Table>
+<FieldName>PRIOR_PATIENT_ID</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourcePatientID</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SourcePatientID</SourceField>
+<TargetField>PRIOR_PATIENT_ID</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_3</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourceAccessionNumber</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SourceAccessionNumber</SourceField>
+<TargetField>CUSTOMER_3</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Order</Table>
+<FieldName>CUSTOMER_4</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>SourceAcceNoEmpty</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>SourceAcceNoEmpty</SourceField>
+<TargetField>CUSTOMER_4</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName /><ConstValue /><Type>None</Type>
+</Translating>
+</SocketInQueryResultItem>
+<SocketInQueryResultItem><GWDataDBField><Table>Index</Table>
+<FieldName>EVENT_TYPE</FieldName>
+</GWDataDBField>
+<ThirdPartyDBPatamter><FieldID>0</FieldID>
+<FieldType>VarChar</FieldType>
+<FieldName>Commandtype</FieldName>
+</ThirdPartyDBPatamter>
+<SourceField>Commandtype</SourceField>
+<TargetField>EVENT_TYPE</TargetField>
+<RedundancyFlag>False</RedundancyFlag>
+<Translating><LutName>lut_p_6330058594143548720</LutName>
+<ConstValue /><Type>LookUpTable</Type>
+</Translating>
+</SocketInQueryResultItem>
+</MappingList>
+</QueryResult>
+<RuleID>6330446990362457502</RuleID>
+<RuleName /></Rule>
+</SocketInChannel>
+</InboundChanels>
+<ThrPartyDBParamters /><LookupTables><LookupTable><TableName>lut_p_6330058594143548720</TableName>
+<DisplayName>CommandType to EventType</DisplayName>
+<Table><LookupItem><SourceValue>1</SourceValue>
+<TargetValue>00</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>3</SourceValue>
+<TargetValue>01</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>4</SourceValue>
+<TargetValue>10</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>6</SourceValue>
+<TargetValue>11</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>8</SourceValue>
+<TargetValue>14</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>15</SourceValue>
+<TargetValue>15</TargetValue>
+</LookupItem>
+<LookupItem><SourceValue>7</SourceValue>
+<TargetValue>32</TargetValue>
+</LookupItem>
+</Table>
+</LookupTable>
+</LookupTables>
+</SocketInboundAdapterConfig>

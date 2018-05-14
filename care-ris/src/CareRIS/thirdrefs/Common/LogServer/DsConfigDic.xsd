@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsConfigDic" targetNamespace="http://tempuri.org/DsConfigDic.xsd" xmlns:mstns="http://tempuri.org/DsConfigDic.xsd" xmlns="http://tempuri.org/DsConfigDic.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="GCRIS2ConnectionString" IsAppSettingsProperty="true" Modifier="Assembly" Name="GCRIS2ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.LogServer.Properties.Settings.GlobalReference.Default.GCRIS2ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsConfigDic" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsConfigDic" msprop:Generator_UserDSName="DsConfigDic">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ConfigDic" msprop:Generator_UserTableName="ConfigDic" msprop:Generator_RowEvArgName="ConfigDicRowChangeEvent" msprop:Generator_TableVarName="tableConfigDic" msprop:Generator_TablePropName="ConfigDic" msprop:Generator_RowDeletingName="ConfigDicRowDeleting" msprop:Generator_RowChangingName="ConfigDicRowChanging" msprop:Generator_RowDeletedName="ConfigDicRowDeleted" msprop:Generator_RowEvHandlerName="ConfigDicRowChangeEventHandler" msprop:Generator_TableClassName="ConfigDicDataTable" msprop:Generator_RowChangedName="ConfigDicRowChanged" msprop:Generator_RowClassName="ConfigDicRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ConfigName" msprop:Generator_ColumnVarNameInTable="columnConfigName" msprop:Generator_ColumnPropNameInRow="ConfigName" msprop:Generator_ColumnPropNameInTable="ConfigNameColumn" msprop:Generator_UserColumnName="ConfigName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" msprop:Generator_UserColumnName="Value" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ModuleID" msprop:Generator_ColumnVarNameInTable="columnModuleID" msprop:Generator_ColumnPropNameInRow="ModuleID" msprop:Generator_ColumnPropNameInTable="ModuleIDColumn" msprop:Generator_UserColumnName="ModuleID">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="16" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Exportable" msprop:Generator_ColumnVarNameInTable="columnExportable" msprop:Generator_ColumnPropNameInRow="Exportable" msprop:Generator_ColumnPropNameInTable="ExportableColumn" msprop:Generator_UserColumnName="Exportable" type="xs:int" />
+              <xs:element name="PropertyDesc" msprop:Generator_ColumnVarNameInTable="columnPropertyDesc" msprop:Generator_ColumnPropNameInRow="PropertyDesc" msprop:Generator_ColumnPropNameInTable="PropertyDescColumn" msprop:Generator_UserColumnName="PropertyDesc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="256" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PropertyOptions" msprop:Generator_ColumnVarNameInTable="columnPropertyOptions" msprop:Generator_ColumnPropNameInRow="PropertyOptions" msprop:Generator_ColumnPropNameInTable="PropertyOptionsColumn" msprop:Generator_UserColumnName="PropertyOptions" type="xs:anyType" minOccurs="0" />
+              <xs:element name="Inheritance" msprop:Generator_ColumnVarNameInTable="columnInheritance" msprop:Generator_ColumnPropNameInRow="Inheritance" msprop:Generator_ColumnPropNameInTable="InheritanceColumn" msprop:Generator_UserColumnName="Inheritance" type="xs:int" />
+              <xs:element name="PropertyType" msprop:Generator_ColumnVarNameInTable="columnPropertyType" msprop:Generator_ColumnPropNameInRow="PropertyType" msprop:Generator_ColumnPropNameInTable="PropertyTypeColumn" msprop:Generator_UserColumnName="PropertyType" type="xs:int" />
+              <xs:element name="IsHidden" msprop:Generator_ColumnVarNameInTable="columnIsHidden" msprop:Generator_ColumnPropNameInRow="IsHidden" msprop:Generator_ColumnPropNameInTable="IsHiddenColumn" msprop:Generator_UserColumnName="IsHidden" type="xs:int" />
+              <xs:element name="OrderingPos" msprop:Generator_ColumnVarNameInTable="columnOrderingPos" msprop:Generator_ColumnPropNameInRow="OrderingPos" msprop:Generator_ColumnPropNameInTable="OrderingPosColumn" msprop:Generator_UserColumnName="OrderingPos" type="xs:int" />
+              <xs:element name="Domain" msprop:Generator_ColumnVarNameInTable="columnDomain" msprop:Generator_ColumnPropNameInRow="Domain" msprop:Generator_ColumnPropNameInTable="DomainColumn" msprop:Generator_UserColumnName="Domain" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="64" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ConfigDic" />
+      <xs:field xpath="mstns:ConfigName" />
+      <xs:field xpath="mstns:ModuleID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

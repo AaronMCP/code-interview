@@ -1,0 +1,98 @@
+﻿.qualite-control {
+    height: 100%;
+    padding-top: 60px;
+}
+
+.qualite-control-nav {
+    float: left;
+    width: 100%;
+    margin-top: -60px;
+}
+
+.qualite-control-content {
+    height: 100%;
+}
+
+    .qualite-control-content > .tab-pane {
+        height: 100%;
+    }
+
+.qualite-control .hys-tab-bottom {
+    background-color: #f2f2f2;
+    padding-top:13px;
+}
+
+.hys-tab-bottom > li.active > a, .hys-tab-bottom > li.active > a:hover, .hys-tab-bottom > li.active > a:focus {
+    color: #f4b54d !important;
+    border-bottom: 5px solid #f4b54d;
+    background: none !important;
+    border-radius:0;
+}
+
+.hys-tab-bottom > li > a:hover, .hys-tab-bottom > li > a:focus {
+    outline: none;
+    outline-offset: 0;
+    color:#f4b54d;
+    background-color:transparent;
+}
+
+.hys-tab-bottom > li > a {
+    color: #6d6d6d;
+}
+
+.quality-info-ontainer {
+    width: 100%;
+    background: #fff;
+    padding: 11px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+    .quality-info-ontainer label {
+        font-weight: normal;
+        text-align: right;
+        font-size: 14px;
+        width: 90px;
+        padding-right: 5px;
+        height: 26px;
+        line-height: 26px;
+    }
+
+.patient-info, .check-info {
+    width: 100%;
+    background: #fafafa;
+    border: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 10px 27px;
+}
+
+.patient-info-title, .check-info-title {
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+}
+
+.patient-info-content, .check-info-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quality-table-content {
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    margin-top: 10px;
+}
+.quality-table-content > p {
+    background: #f2f2f2;
+    height: 36px;
+    line-height: 36px;
+    color: #333333;
+    margin-bottom: 0;
+    text-indent: 20px;
+    font-weight: bold;
+}

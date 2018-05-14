@@ -1,0 +1,29 @@
+TODO
+
+- in B02: trim empty component/subcomponent (e.g. ^^^ or &&& ) in HL7 message
+
+
+
+[Note 20100325]
+
+ÓÃIKVM0.38.0.2¿ÉÒÔ°ÑJava HL7ToolkitµÄjarÎÄ¼þ±àÒë³É.Net³ÌÐò¼¯£¬
+µ«Õâ¸ö³ÌÐò¼¯·Ö±ðÔÚVS2005(.Net 2.0)»·¾³ÏÂºÍVS2008(.Net 2.0»ò.Net 3.5)»·¾³ÏÂ±»µ÷ÓÃµÄÊ±ºò£¬ÐÐÎªÂÔÓÐ²»Í¬¡£
+
+1¡¢ÎÞÂÛÔÚÄÇ¸ö»·¾³ÏÂÔËÐÐ£¬HL7×ªXMLµÄÐÐÎª¶¼ÊÇÒ»ÑùµÄ£¬HL7ÏûÏ¢»á±»×ª»»³É´øÓÐÈçÏÂÉùÃ÷µÄXML×Ö·û´®¡£
+<?xml version="1.0" encoding="ISO-8859-1"?>
+¶øÇÒÍ¨¹ýHL7Message¹¹Ôìº¯ÊýÎÞÂÛ¸øHL7Toolkit´«Èëutf-8, utf-16»¹ÊÇgb18030½á¹û¶¼ÊÇÈç´Ë¡£
+
+2¡¢ÔÚVS2005(.Net 2.0)»·¾³ÏÂ£¬XML×ªHL7µÄÊ±ºò£¬HL7ToolkitËÆºõ²»»áÀí»áXMLÉùÃ÷ÖÐµÄ×Ö·û¼¯£¬¶¼ÄÜÕý³£½øÐÐ×ª»»¡£
+
+3¡¢ÔÚVS2008(.Net 2.0»ò.Net 3.5)»·¾³ÏÂ£¬XML×ªHL7µÄÊ±ºò£¬HL7Toolkit¶ÔXMLÉùÃ÷ÖÐµÄ×Ö·û¼¯ÓÐÑÏ¸ñÒªÇó,
+   Èç¹ûÍ¨¹ýHL7Message¹¹Ôìº¯Êý¸øHL7Toolkit´«ÈëµÄÊÇutf-8£¬ÄÇÃ´XMLÉùÃ÷ÖÐ±ØÐëÊÇµ¥×Ö½Ú(¼æÈÝ)×Ö·û¼¯£¨ÈçISO-8859-1, utf-8, gb18030£©
+   Èç¹ûÍ¨¹ýHL7Message¹¹Ôìº¯Êý¸øHL7Toolkit´«ÈëµÄÊÇutf-16£¬ÄÇÃ´XMLÉùÃ÷ÖÐ±ØÐëÊÇË«×Ö½Ú×Ö·û¼¯£¨Èçutf-16£©
+
+BTW, ÔÚ.Net»·¾³ÖÐÔÚXML×Ö·û´®ÖÐ°üº¬×Ö·û¼¯ÉùÃ÷ÊÇÃ»ÓÐÒâÒåµÄ£¬ÒòÎª.Net×Ö·û´®×ÜÊÇutf-16±àÂë¡£
+
+Ïê¼û£º
+
+VS2005(.Net 2.0)»·¾³ÏÂµÄ²âÊÔ´úÂë£º
+\gcgateway\XDS_Gateway_1.0\3rdParty\IKVM\HL7Test\HL7Test\HL7Test.csproj
+VS2008(.Net 2.0»ò.Net 3.5)»·¾³ÏÂµÄ²âÊÔ´úÂë£º
+\gcgateway\XDS_Gateway_1.1\SRC\HL7Adapter\HL7AdapterTest\HL7AdapterTest.csproj

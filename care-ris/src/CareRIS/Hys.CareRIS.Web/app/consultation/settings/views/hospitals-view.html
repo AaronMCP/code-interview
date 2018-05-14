@@ -1,0 +1,6 @@
+﻿<div class="row" style="margin: 10px" ng-show="loginUser.isSuperAdmin">
+    <button type="button" class="btn btn-sm btn-primary" ng-click="createNewHospital()" translate>CreateNewHospital</button>
+</div>
+<div class="row g-kendo-grid" style="margin: 10px; height: 100%;" ng-style="{'padding-bottom': loginUser.isSuperAdmin ?'60px':'0px'}">
+    <div class="hospitalListGrid" style="height:100%;" kendo-grid k-options="gridOption" k-ng-delay="gridOption"></div>
+</div>

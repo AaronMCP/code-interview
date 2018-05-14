@@ -1,0 +1,24 @@
+﻿<div class="modal-header">
+    <h4 class="modal-title" translate>CombinePatientNo</h4>
+</div>
+<div class="modal-body" style="overflow-x: hidden; overflow-y: auto;">
+    <style>
+    .k-grid td {
+    border-style: solid !important;
+    border-width: 0 0 1px 0 !important;
+    }
+    </style>
+    <div>{{combinePatientNoInfo}}</div>
+    <div id="patientList" style="height:200px;" kendo-grid k-options="worklist" k-ng-delay="worklist"></div>
+    <!--<div style="margin-top:10px;">
+        {{'NewPatientNo'|translate}}<select style="width:150px;" ng-model="result.patientNo"
+                ng-options="o as o for o in patientNoList"></select>
+    </div>-->
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-green" ng-click="saveData()" translate>
+        CombineOk
+    </button>
+    <button class="btn btn-default" ng-click="cancel()" translate>CombineCancel</button>
+
+</div>

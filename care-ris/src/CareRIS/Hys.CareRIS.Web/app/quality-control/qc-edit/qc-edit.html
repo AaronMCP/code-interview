@@ -1,0 +1,186 @@
+﻿<div class="qc-edit-container">
+    <form>
+        <div class="form-group col-md-2">
+            <label>病人编号</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.patientNo" />
+            </div>
+        </div>
+        <div class="form-group col-md-2">
+            <label>病人姓名</label>
+            <div class="col-md-7">
+                <input class="form-control" ng-model="searchOption.localName" />
+            </div>
+        </div>
+        <div class="form-group col-md-5">
+            <label>创建时间</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="createTimeStart" autocomplete="off" kendo-date-picker="createTimeStart" ng-model="searchOption.createTimeStart" />
+                </p>
+            </div>
+            <label>到</label>
+            <div class="col-md-5">
+                <p class="input-group">
+                    <input id="createTimeEnd" autocomplete="off" kendo-date-picker="createTimeEnd" ng-model="searchOption.createTimeEnd" />
+                </p>
+            </div>
+        </div>
+        <div class="form-group col-md-3">
+            <ul class="nav navbar-nav navbar-right rispro-navbar-nav">
+                <li>
+                    <button class="btn btn-default" ng-click="operateProcedure()" ng-disabled="!selectedOrder.selected">{{operateText}}</button>
+                </li>
+                <li>
+                    <button class="btn btn-default" ng-click="search()">查询</button>
+                </li>
+                <li>
+                    <button type="button" class="btn btn-default" ng-click="changeSomething()" data-toggle="modal" data-target="#qcEditModal">修改</button>
+
+                </li>
+                <li>
+                    <button type="button" class="btn btn-default" ng-click="delete()">删除</button>
+                </li>
+            </ul>
+        </div>
+    </form>
+    
+    <div class="qc-edit-main">
+        <div class="quality-table-content">
+            <p>病人信息</p>
+            <div ng-class="{'patient-blur':!isPatient}" kendo-grid="patitentInfoGrid" data-k-options="patitentInfoGridOption" class="infopatient"></div>
+        </div>
+        <div class="quality-table-content">
+            <p>检查信息</p>
+            <div class="info checkPart">
+                <table class="table table-hover quality-table" style="table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th style="width: 13%">放射编号</th>
+                            <th style ="width: 9%">病人类型</th>
+                            <th style="width: 9%">住院号</th>
+                            <th style="width: 9%">门诊号</th>
+                            <th style="width: 10%">申请部门</th>
+                            <th style="width: 8%">申请医生</th>
+                            <th style="width: 10%">病区</th>
+                            <th style="width: 10%">床号</th>
+                            <th style="width: 14%">检查创建时间</th>
+                            <th style="width: 8%">收费类型</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="table-flex-container">
+                    <table class="table table-hover quality-table" style="table-layout: fixed;">
+                        <tbody>
+                            <tr ng-repeat="order in orders" ng-click="clickOrder(order)"
+                                ng-class="{'quality-border':order.selectedBorder, 'quality-active':order.selected}"
+                                class="qualityOrder">
+                                <td style="width: 13%">{{order.accNo}}</td>
+                                <td style="width: 9%">{{order.patientType}}</td>
+                                <td style="width: 9%">{{order.inhospitalNo}}</td>
+                                <td style="width: 9%">{{order.clinicNo}}</td>
+                                <td style="width: 10%">{{order.applyDept}}</td>
+                                <td style="width: 8%">{{order.applyDoctor}}</td>
+                                <td style="width: 10%">{{order.domain}}</td>
+                                <td style="width: 10%">{{order.bedNo}}</td>
+                                <td style="width: 14%">{{order.createTime}}</td>
+                                <td style="width: 8%">{{order.chargeType}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="quality-table-content">
+            <p>检查部位信息</p>
+            <div class="info checkPart">
+                <table class="table table-hover quality-table" style="table-layout: fixed;">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%">设备类型</th>
+                            <th style="width: 20%">检查系统</th>
+                            <th style="width: 20%">检查项目</th>
+                            <th style="width: 20%">撤销前状态</th>
+                            <th style="width: 20%">当前状态</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="table-flex-container">
+                    <table class="table table-hover" style="table-layout: fixed;">
+                        <tbody>
+                            <tr ng-repeat="procedure in procedures" ng-click="clickProcedure(procedure)"
+                                ng-class="{'quality-border':procedure.selectedBorder, 'quality-active':procedure.selected}"
+                                class="qualityProcedure">
+                                <td style="width: 20%">
+                                    {{procedure.modalityType}}
+                                </td>
+                                <td style="width: 20%">
+                                    {{procedure.examSystem}}
+                                </td>
+                                <td style="width: 20%">
+                                    {{procedure.checkingItem}}
+                                </td>
+                                <td style="width: 20%">{{procedure.preStatusText}}</td>
+                                <td style="width: 20%">{{procedure.statusText}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade hys-modal" id="qcEditModal" tabindex="-1" role="dialog" aria-labelledby="qcEditModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <ul class="nav nav-pills hys-tab-bottom">
+                        <li class="edit-title-tab">
+                            <a href="javascript:void(0);" data-toggle="tab" data-target="#qcPatientInfo">
+                                信息病人{{patientName}}
+                            </a>
+                        </li>
+                        <li class="edit-title-tab">
+                            <a href="javascript:void(0);" data-toggle="tab" data-target="#qcCheckInfo">检查信息{{patientAccNo}}</a>
+                        </li>
+                        <li class="edit-title-tab">
+                            <a href="javascript:void(0);" data-toggle="tab" data-target="#qcCheckPart">检查部位信息{{patientCheckIngItem}}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body tab-content">
+                    <div  class="tab-pane fade edit-content-tab" id="qcPatientInfo">
+                        <edit-patient-info></edit-patient-info>
+                    </div>
+                    <div class="tab-pane fade edit-content-tab"id="qcCheckInfo">
+                        <check-info></check-info>
+                    </div>
+                    <div class="tab-pane fade edit-content-tab" id="qcCheckPart">
+                        <check-part></check-part>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                        取消
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="save()">
+                        保存
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div kendo-window="reasonWindow"
+         class="reason-window" k-title="'{{operateReason}}'"
+         k-width="'300px'" k-height="'200px'"
+         k-visible="false" k-resizable="false"
+         k-modal="true">
+        <div class="reason-container">
+            <textarea>理由</textarea>
+            <button class="btn btn-primary" ng-click="operateSure()">确定</button>
+        </div>
+
+    </div>
+</div>

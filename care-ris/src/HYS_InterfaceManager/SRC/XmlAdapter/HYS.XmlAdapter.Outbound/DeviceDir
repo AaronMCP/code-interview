@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?><DeviceDir><Header><Type>XML</Type>
+<Direction>OUTBOUND</Direction>
+<ID>12</ID>
+<Name>XML_HL7_OUT</Name>
+<Version>1.0.0.0</Version>
+<UseCommandOnly>False</UseCommandOnly>
+<Description>XIM Outbound Adapter</Description>
+<RefDeviceID /><RefDeviceName /><EventTypes /></Header>
+<Files><DeviceFile><Type>Installer</Type>
+<Backupable>False</Backupable>
+<Location>InstallUtil.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ServiceAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Service.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ServiceConfig</Type>
+<Backupable>True</Backupable>
+<Location>HYS.Adapter.Service.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ConfigAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Config.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>ConfigConfig</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Config.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Composer.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Composer.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Base.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.DataAccess.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.Objects.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Common.Xml.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>OutboundDBInstall.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>OtherScript</Type>
+<Backupable>False</Backupable>
+<Location>OutboundDBInstallConfig.xml</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>MonitorConfig</Type>
+<Backupable>False</Backupable>
+<Location>HYS.Adapter.Monitor.config</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>MonitorAssembly</Type>
+<Backupable>False</Backupable>
+<Location>HYS.IM.Adapter.Monitor.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.XmlAdapter.Common.dll</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>HYS.XmlAdapter.Outbound.exe</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>OtherScript</Type>
+<Backupable>True</Backupable>
+<Location>XIMOutbound.xml</Location>
+<Description /></DeviceFile>
+<DeviceFile><Type>Other</Type>
+<Backupable>False</Backupable>
+<Location>gatewaylang_SC.dll</Location>
+<Description /></DeviceFile>
+
+
+</Files>
+<Commands /><LogInfo><LogType>Error</LogType>
+<FileDuration>7</FileDuration>
+</LogInfo>
+</DeviceDir>

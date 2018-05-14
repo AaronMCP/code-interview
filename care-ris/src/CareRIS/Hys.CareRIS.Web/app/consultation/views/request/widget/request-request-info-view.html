@@ -1,0 +1,55 @@
+﻿<div class="col-md-8 ">
+    <div class="info-widget" style="margin-left: 10px;">
+        <div class="title">
+            <h4>{{'RequestInfomationAndDescription'|translate}}</h4>
+            <div class="action" ng-show="editRequestCommentPermission">
+                <a href="javascript:void(0);" class="icon-general icon-editFile" title="{{'Edit'|translate}}" ng-click="openRequestInfoWindow()"></a>
+            </div>
+        </div>
+        <div class="row main-info">
+            <div class="col-md-4">
+                <div class="row">
+                    <dt class="col-md-4">
+                        {{'RequestDoctor'|translate}}
+                    </dt>
+                    <dd class="col-md-8">
+                        {{report.requestUser}}
+                    </dd>
+                </div>
+                <div class="row">
+                    <dt class="col-md-4">
+                        {{'Hospital'|translate}}
+                    </dt>
+                    <dd class="col-md-8">
+                        {{report.requestHospitalName}}
+                    </dd>
+                </div>
+                <div class="row" ng-show="report.showReason">
+                    <dt class="col-md-4" style="color: #FF0000">
+                        {{ report.reasonTitle | translate}}
+                    </dt>
+                    <dd class="col-md-8">
+                        {{report.changeReasonTypeName}}<br />
+                        {{report.otherReason}}
+                    </dd>
+                </div>
+            </div>
+            <div class="col-md-8 with-border with-height">
+                <div class="row" style="height: 50%">
+                    <dt class="col-md-2">
+                        {{'RequestPurpose'|translate}}
+                    </dt>
+                    <dd class="col-md-10" ng-bind-html="report.requestPurpose">
+                    </dd>
+                </div>
+                <div class="row" style="height: 50%">
+                    <dt class="col-md-2">
+                        {{'RequestRequirement'|translate}}
+                    </dt>
+                    <dd class="col-md-10" ng-bind-html="report.requestRequirement">
+                    </dd>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

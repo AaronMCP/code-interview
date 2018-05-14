@@ -1,0 +1,87 @@
+﻿<div class="disease-code">
+    <div class="code-top">
+        <form name="diseaseCodeFrom" ng-show="isChange" novalidate>
+            <div class="col-md-10">
+                <div class="option-container">
+                    <label class="col-md-5">编号<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text"
+                               ng-model="selectIcdMirror.id"
+                               ng-disabled="!isNew"
+                               name="diseaseCode"
+                               required />
+                    </div>
+                </div>
+                <div class="option-container">
+                    <label class="col-md-5">病名<span class="registration-edit-required">*</span></label>
+                    <div class="col-md-7">
+                        <input class="form-control"
+                               type="text"
+                               ng-model="selectIcdMirror.name"
+                               name="diseaseName"
+                               required />
+                    </div>
+                </div>
+                <div class="option-container">
+                    <label class="col-md-5">拼音</label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="selectIcdMirror.py" />
+                    </div>
+                </div>
+                <div class="option-container">
+                    <label class="col-md-5">五笔</label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="selectIcdMirror.wb" />
+                    </div>
+                </div>
+                <div class="option-container">
+                    <label class="col-md-5">备注</label>
+                    <div class="col-md-7">
+                        <input class="form-control" type="text" ng-model="selectIcdMirror.memo" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <ul class="nav navbar-nav navbar-right rispro-navbar-nav" ng-show="isChange">
+                    <li>
+                        <button type="button" class="btn btn-default" ng-click="save()"
+                                ng-disabled="diseaseCodeFrom.$invalid">
+                            保存
+                        </button>
+                    </li>
+                    <li>
+                        <button type="button" class="btn btn-default" ng-click="cancel()">取消</button>
+                    </li>
+                </ul>
+            </div>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right rispro-navbar-nav" ng-show="!isChange" style="width: 100%">
+            <li style="padding-left: 20px;">
+                <form class="searchForm" ng-show="!isChange">
+                    <div class="col-md-5" style="margin-right: 10px;">
+                        <label class="col-md-3">编号</label>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" ng-model="searchOption.id" />
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <label class="col-md-3">病名</label>
+                        <div class="col-md-9">
+                            <input class="form-control" type="text" ng-model="searchOption.name" />
+                        </div>
+                    </div>
+                </form>
+            </li>
+            <li style="float: right">
+                <button type="button" class="btn btn-default" ng-click="searchIcd()">查询</button>
+                <button type="button" class="btn btn-default" ng-click="addIcd()">添加</button>
+                <button type="button" class="btn btn-default" ng-click="modify()">修改</button>
+                <button type="button" class="btn btn-default" ng-click="delete()">删除</button>
+            </li>
+        </ul>
+    </div>
+    <div class="code-content">
+        <div style="height:100%;" kendo-grid="codeGrid" data-k-options="codeGridOption"></div>
+    </div>
+</div>

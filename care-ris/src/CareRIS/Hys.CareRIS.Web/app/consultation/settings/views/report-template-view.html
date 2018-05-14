@@ -1,0 +1,7 @@
+﻿<div class="row ng-scope" style="margin: 10px">
+    <div class="btn btn-primary btn-upload" upload-button url="/ReportTemplate/Import/"
+         accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+         on-error="onError(response)" on-success="onSuccess(response)"
+         on-upload="onUpload(files)" on-complete="onComplete(response)">{{::'ImportTemplate' | translate}}</div>
+    <a class="btn btn-sm btn-primary ng-scope" href="/ReportTemplate/Export/" target="_blank" style="margin-left: 20px;">{{::'ExportTemplate' | translate}}</a>
+</div>

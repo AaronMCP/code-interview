@@ -1,0 +1,147 @@
+﻿
+<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable">
+    <p class="registration-module-title" translate>{{title}}</p>
+    <div class="popup-content registration-procedure-content" id="registrationProcedureContent">
+        <div class="row registration-procedure-select-container">
+            <div class="container-title">
+                <span translate>SelectCheckItemTitle</span>
+                <hr class="container-divide" />
+            </div>
+            <div class="row registration-procedure-select-items-container">
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                        <span translate>ModalityType</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-class="{itemActive:modlityType===selectedModalityType}" ng-repeat="modlityType in modlityTypeList"
+                               ng-click="selectModalityType(modlityType,false)" ng-dblclick="directSelectProcedure()">
+                                {{modlityType}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                            <span translate>BodyCategory</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-class="{itemActive:category===selectedBodyCategory}" ng-repeat="category in bodyCategoryList"
+                               ng-click="selectBodyCategory(category,false)" ng-dblclick="directSelectProcedure()">
+                                {{category}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                            <span translate>BodyPart</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-class="{itemActive:part===selectedBodyPart}" ng-repeat="part in bodyPartList"
+                               ng-click="selectBodyPart(part,false)" ng-dblclick="directSelectProcedure()">
+                                {{part}}
+                            </a>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                            <span translate>CheckingItem</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-repeat="item in checkingItemList"
+                               ng-class="{itemActive:item.checkingItem===selectedCheckingItem.checkingItem}"
+                               ng-click="selectCheckingItem(item)" ng-dblclick="directSelectProcedure()">
+                                {{item.checkingItem}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                            <span translate>CheckingSystem</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-class="{itemActive:system.examSystem===selectedCheckingSystem.examSystem}" ng-repeat="system in checkSystemList"
+                               ng-click="selectCheckingSystem(system)" ng-dblclick="directSelectProcedure()">
+                                {{system.examSystem}}
+                            </a>
+                        </div>
+                        </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="col-select-items">
+                        <div class="col-select-items-title">
+                            <span translate>Modality</span>
+                        </div>
+                        <div class="col-select-items-field list-group">
+                            <a href="javascript:void(0);" class="list-group-item" ng-class="{itemActive:modality.modalityName===selectedModality.modalityName}" ng-repeat="modality in modalityList"
+                               ng-click="selectModality(modality)" ng-dblclick="directSelectProcedure()">
+                                {{modality.modalityName}}
+                            </a>
+                        </div>
+                        </div>
+                </div>
+            </div>
+            <!--<div class="transfer-notExist" ng-if="notExistData.length!==0">
+                <ul ng-repeat="data in notExistData" class="list-unstyled">
+                    <li>
+                        <span class="label label-danger">{{data}}</span>
+                    </li>
+                </ul>
+            </div>-->
+        </div>
+
+        <div class="row registration-procedure-select-table">
+            <div class="container-title">
+                <span ng-hide="isUpdate" translate>AddedCheckingItemTitle</span>
+                <span ng-hide="!isUpdate" translate>UpdateCheckingItemTitle</span>
+                <hr class="container-divide" />
+            </div>
+
+            <!--registration-autooverflow-table--> 
+            <div class="row registration-procedure-select-items-container">
+                <table id="proceduresTable" class="table table-condensed" ng-if="addedProcedures.length !== 0">
+                    <thead>
+                        <tr>
+                            <th translate>ModalityType</th>
+                            <th translate>BodyCategory</th>
+                            <th translate>BodyPart</th>
+                            <th translate>CheckingItem</th>
+                            <th translate>CheckingSystem</th>
+                            <th translate>Modality</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in addedProcedures">
+                            <td>{{row.modalityType}}</td>
+                            <td>{{row.bodyCategory}}</td>
+                            <td>{{row.bodyPart}}</td>
+                            <td>{{row.checkingItem}}</td>
+                            <td>{{row.examSystem}}</td>
+                            <td>{{row.modality}}</td>
+                            <td>
+                                <a href="javascript:void(0);" class="btn btn-sm" ng-click="deleteProcedure(row.procedureCode)" ng-hide="isUpdate" title="{{'Delete'|translate}}">
+                                    <span class="glyphicon glyphicon-remove procedure-operation"></span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <p class="csd-module-footer registration-edit-footer">
+        <!--ng-disabled="userForm.$pristine || userForm.$invalid"-->
+        <button type="submit" class="btn btn-primary  btn-registration-edit-save" ng-hide="isDisableAddNext" ng-disabled="!selectedModality" ng-click="add()" translate>AddNext</button>
+        <button type="submit" class="btn btn-primary  btn-registration-edit-save" ng-click="complete()" ng-disabled="!selectedModality" translate>Complete</button>
+        <button class="btn btn-primary" type="button" ng-click="cancel()" ng-disabled="isSaving" translate>Cancel</button>
+    </p>
+</div>

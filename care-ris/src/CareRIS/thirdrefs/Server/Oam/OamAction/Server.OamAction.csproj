@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A0FA8576-58C3-4913-94BD-A43E5FFA4F6D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Server.OamAction</RootNamespace>
+    <AssemblyName>Server.OamAction</AssemblyName>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Action\ACRCodeAction.cs" />
+    <Compile Include="Action\AdministratorToolAction.cs" />
+    <Compile Include="Action\AnatomyAction.cs" />
+    <Compile Include="Action\BulletinPublishManagerAction.cs" />
+    <Compile Include="Action\ChargeCodeAction.cs" />
+    <Compile Include="Action\ClientConfigManagerAction.cs" />
+    <Compile Include="Action\ConditionColManagerAction.cs" />
+    <Compile Include="Action\RandomInspectionAction.cs" />
+    <Compile Include="Action\DomainAction.cs" />
+    <Compile Include="Action\KeyPerformanceRatingAction.cs" />
+    <Compile Include="Action\KMSAction.cs" />
+    <Compile Include="Action\DictionaryManagerAction.cs" />
+    <Compile Include="Action\HippaQueryAction.cs" />
+    <Compile Include="Action\ICD10Action.cs" />
+    <Compile Include="Action\LoginSettingsAction.cs" />
+    <Compile Include="Action\ModalityTimeSliceAction.cs" />
+    <Compile Include="Action\PathologyAction.cs" />
+    <Compile Include="Action\ProcedureCodeManagerAction.cs" />
+    <Compile Include="Action\QualityScoringAction.cs" />
+    <Compile Include="Action\ResourceManagerAction.cs" />
+    <Compile Include="Action\RoleManagerAction.cs" />
+    <Compile Include="Action\ScheduleManagerAction.cs" />
+    <Compile Include="Action\SystemProfileManagerAction.cs" />
+    <Compile Include="Action\TemplateIEAction.cs" />
+    <Compile Include="Action\UserManagerAction.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\Common.GlobalSettings\CommonGlobalSettings.csproj">
+      <Project>{b08b8253-744a-4c76-a1a7-264704d352f5}</Project>
+      <Name>CommonGlobalSettings</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\CommonFunction\CommonAction\CommonAction.csproj">
+      <Project>{f1a76884-bcb3-4f16-9847-0e04e6f8b233}</Project>
+      <Name>CommonAction</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Common\LogServer\LogServer.csproj">
+      <Project>{14198e0b-98a6-4d3e-818a-bb96f2ee32e9}</Project>
+      <Name>LogServer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Report\ReportCommon\Server.ReportCommon.csproj">
+      <Project>{E414853E-945E-4E91-B730-76DB1D870070}</Project>
+      <Name>Server.ReportCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utilities\Server.Utilities.csproj">
+      <Project>{f92a4d11-56ae-4b01-b9a8-82a5edad0bb8}</Project>
+      <Name>Server.Utilities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Business\Server.Business.Oam.csproj">
+      <Project>{8b8777e9-c077-4ab8-b695-22c89901c3b3}</Project>
+      <Name>Server.Business.Oam</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\Server.Dao.Oam.csproj">
+      <Project>{b13f9ed1-61d2-464d-a45c-71f20020b057}</Project>
+      <Name>Server.Dao.Oam</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Server.Utilities.Oam.csproj">
+      <Project>{6bba5762-a79d-4d90-8140-58fc0706f577}</Project>
+      <Name>Server.Utilities.Oam</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

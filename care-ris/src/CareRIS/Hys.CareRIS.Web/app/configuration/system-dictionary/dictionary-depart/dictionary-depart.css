@@ -1,0 +1,67 @@
+﻿.dictionary-depart {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.dictionary-depart-top {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+
+.dictionary-depart-bottom {
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.dictionary-depart .k-grid-header {
+    padding-right: 0!important;
+}
+.dictionary-depart-title {
+    height: 30px;
+    line-height: 30px;
+}
+.dictionary-depart-content {
+    position: absolute;
+    top: 30px;
+    bottom: 0;
+    width: 100%;
+}
+.dictionary-depart .k-grid {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    width: 100%;
+}
+.dictionary-depart .k-grid-content {
+    position: absolute;
+    top: 41px;
+    bottom: 0;
+}
+.dictionary-depart-footer {
+    height: 50px;
+    padding: 10px 0;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.edit-doctor {
+    padding: 5px;
+}
+
+.title-table {
+   margin-top: 15px;
+   margin-bottom:0px;
+   border-top: 3px solid #f5a623;
+}
+
+table tbody tr td {
+    border: 1px solid #e2e2e2;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    vertical-align: middle;
+}

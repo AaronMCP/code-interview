@@ -1,0 +1,2122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Message>
+  <Header>
+    <ID>6eeaf439-6261-40f7-844c-c18bca6d5005</ID>
+    <Type>
+      <CodeSystem>GENERIC</CodeSystem>
+      <Code>NOTIFICATION</Code>
+      <Meaning><![CDATA[Generic notification message (request message without meaningful response) without particular schema specification.]]></Meaning>
+    </Type>
+    <RelationList />
+    <HistoryList />
+  </Header>
+  <Body>
+    <ORU_R01>
+      <MSH>
+        <FIELD.1>|</FIELD.1>
+        <FIELD.2>^~\&amp;</FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>RIS</COMPONENT.1>
+            <COMPONENT.2>RAD-ER-EDR</COMPONENT.2>
+            <COMPONENT.3>L</COMPONENT.3>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+            <COMPONENT.3>DNS</COMPONENT.3>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6>
+          <FIELD_ITEM>
+            <COMPONENT.1>HAHO</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.6>
+        <FIELD.7>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.346</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.7>
+        <FIELD.8 />
+        <FIELD.9>
+          <FIELD_ITEM>
+            <COMPONENT.1>ORU</COMPONENT.1>
+            <COMPONENT.2>R01</COMPONENT.2>
+            <COMPONENT.3>ORU_R01</COMPONENT.3>
+          </FIELD_ITEM>
+        </FIELD.9>
+        <FIELD.10>
+          <FIELD_ITEM>
+            <COMPONENT.1>RIS01320121220000855</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.10>
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1 />
+            <COMPONENT.2>P</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12>
+          <FIELD_ITEM>
+            <COMPONENT.1>2.3.1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.12>
+        <FIELD.13>
+          <FIELD_ITEM>
+            <COMPONENT.1>RIS01320121220000855</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.13>
+        <FIELD.14 />
+        <FIELD.15>
+          <FIELD_ITEM>
+            <COMPONENT.1>NE</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.15>
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>NE</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17>
+          <FIELD_ITEM>
+            <COMPONENT.1>HKG</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.17>
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>UNICODE</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>CHT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+      </MSH>
+      <PID>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2 />
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H4772921</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5>HKID</COMPONENT.5>
+          </FIELD_ITEM>
+          <FIELD_ITEM>
+            <COMPONENT.1>02976614</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5>PATKEY</COMPONENT.5>
+            <COMPONENT.6>HA</COMPONENT.6>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>MAK, TSZ PO</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7>
+          <FIELD_ITEM>
+            <COMPONENT.1>19331206000000.000</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.7>
+        <FIELD.8>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.8>
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16 />
+        <FIELD.17 />
+        <FIELD.18 />
+        <FIELD.19 />
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22 />
+        <FIELD.23 />
+        <FIELD.24 />
+        <FIELD.25 />
+        <FIELD.26 />
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>N</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+      </PID>
+      <PV1>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>I</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+            <COMPONENT.2> </COMPONENT.2>
+            <COMPONENT.3> </COMPONENT.3>
+            <COMPONENT.4> </COMPONENT.4>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5 />
+        <FIELD.6>
+          <FIELD_ITEM>
+            <COMPONENT.1>RDT:</COMPONENT.1>
+            <COMPONENT.2>4E</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4>PWH</COMPONENT.4>
+          </FIELD_ITEM>
+        </FIELD.6>
+        <FIELD.7>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.7>
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16 />
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>EP1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>HN12136979M</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6>PWH</COMPONENT.6>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22 />
+        <FIELD.23 />
+        <FIELD.24 />
+        <FIELD.25 />
+        <FIELD.26 />
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30 />
+        <FIELD.31 />
+        <FIELD.32 />
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36 />
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.39>
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.45>
+        <FIELD.46 />
+        <FIELD.47 />
+        <FIELD.48 />
+        <FIELD.49 />
+        <FIELD.50 />
+        <FIELD.51>
+          <FIELD_ITEM>
+            <COMPONENT.1>V</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.51>
+      </PV1>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4101</COMPONENT.1>
+            <COMPONENT.2>Brain plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4101</COMPONENT.1>
+            <COMPONENT.2>Brain plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4101</COMPONENT.1>
+            <COMPONENT.2>Brain plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>2</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4102</COMPONENT.1>
+            <COMPONENT.2>Brain+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4102</COMPONENT.1>
+            <COMPONENT.2>Brain+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4102</COMPONENT.1>
+            <COMPONENT.2>Brain+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>3</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4201</COMPONENT.1>
+            <COMPONENT.2>Thorax plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4201</COMPONENT.1>
+            <COMPONENT.2>Thorax plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4201</COMPONENT.1>
+            <COMPONENT.2>Thorax plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>4</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4202</COMPONENT.1>
+            <COMPONENT.2>Thorax+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4202</COMPONENT.1>
+            <COMPONENT.2>Thorax+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4202</COMPONENT.1>
+            <COMPONENT.2>Thorax+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>5</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4203</COMPONENT.1>
+            <COMPONENT.2>Abdomen plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4203</COMPONENT.1>
+            <COMPONENT.2>Abdomen plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4203</COMPONENT.1>
+            <COMPONENT.2>Abdomen plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>6</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4204</COMPONENT.1>
+            <COMPONENT.2>Abdomen +con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4204</COMPONENT.1>
+            <COMPONENT.2>Abdomen +con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4204</COMPONENT.1>
+            <COMPONENT.2>Abdomen +con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>7</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4205</COMPONENT.1>
+            <COMPONENT.2>Pelvis plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4205</COMPONENT.1>
+            <COMPONENT.2>Pelvis plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4205</COMPONENT.1>
+            <COMPONENT.2>Pelvis plain</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+      <OBR>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>8</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>OR121454351M:0</COMPONENT.1>
+            <COMPONENT.2>PWH</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4>
+          <FIELD_ITEM>
+            <COMPONENT.1>4206</COMPONENT.1>
+            <COMPONENT.2>Pelvis+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.4>
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>0</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11 />
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14 />
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>CKP632</COMPONENT.1>
+            <COMPONENT.2>CHAN, Ka Pang</COMPONENT.2>
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+            <COMPONENT.5 />
+            <COMPONENT.6 />
+            <COMPONENT.7 />
+            <COMPONENT.8 />
+            <COMPONENT.9 />
+            <COMPONENT.10 />
+            <COMPONENT.11 />
+            <COMPONENT.12 />
+            <COMPONENT.13 />
+            <COMPONENT.14>PWH</COMPONENT.14>
+          </FIELD_ITEM>
+        </FIELD.16>
+        <FIELD.17 />
+        <FIELD.18>
+          <FIELD_ITEM>
+            <COMPONENT.1>AHN0001551238</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.18>
+        <FIELD.19>
+          <FIELD_ITEM>
+            <COMPONENT.1>9CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.19>
+        <FIELD.20 />
+        <FIELD.21 />
+        <FIELD.22>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.22>
+        <FIELD.23 />
+        <FIELD.24>
+          <FIELD_ITEM>
+            <COMPONENT.1>CT</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.24>
+        <FIELD.25>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.25>
+        <FIELD.26>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.26>
+        <FIELD.27 />
+        <FIELD.28 />
+        <FIELD.29 />
+        <FIELD.30>
+          <FIELD_ITEM>
+            <COMPONENT.1>WALK</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.30>
+        <FIELD.31>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1>ccc378a</SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>DR. CHAN, CHAK CHUNG</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.31>
+        <FIELD.32>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              <SUBCOMPONENT.1></SUBCOMPONENT.1>
+              <SUBCOMPONENT.2>\20121220124045.196</SUBCOMPONENT.2>
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.32>
+        <FIELD.33 />
+        <FIELD.34 />
+        <FIELD.35 />
+        <FIELD.36>
+          <FIELD_ITEM>
+            <COMPONENT.1> </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.36>
+        <FIELD.37 />
+        <FIELD.38 />
+        <FIELD.39 />
+        <FIELD.40 />
+        <FIELD.41 />
+        <FIELD.42 />
+        <FIELD.43 />
+        <FIELD.44>
+          <FIELD_ITEM>
+            <COMPONENT.1>4206</COMPONENT.1>
+            <COMPONENT.2>Pelvis+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.44>
+        <FIELD.45>
+          <FIELD_ITEM>
+            <COMPONENT.1>4206</COMPONENT.1>
+            <COMPONENT.2>Pelvis+con.</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.45>
+      </OBR>
+      <OBX>
+        <FIELD.1>
+          <FIELD_ITEM>
+            <COMPONENT.1>1</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.1>
+        <FIELD.2>
+          <FIELD_ITEM>
+            <COMPONENT.1>TX</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.2>
+        <FIELD.3>
+          <FIELD_ITEM>
+            <COMPONENT.1>H477292100015</COMPONENT.1>
+            <COMPONENT.2 />
+            <COMPONENT.3 />
+            <COMPONENT.4 />
+          </FIELD_ITEM>
+        </FIELD.3>
+        <FIELD.4 />
+        <FIELD.5>
+          <FIELD_ITEM>
+            <COMPONENT.1>
+              Clinical History
+              radiological CA lung with brain met. Exam noted abdominal mass. She has scheduled CT thorax and brain on 20/12/2012 at AHNH. Please kindly add on a CT abdomen and pelvis to the scheduled CT
+
+              Clinical Diagnosis
+              ca lung
+
+
+              CT SCAN OF BRAIN (PRE AND POST CONTRAST)
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Contrast enhancing lesions are seen in right thalamus (2.2cm) and left cerebellar hemisphere (0.6cm).  They are consistent with brain metastases.  The right thalamic tumour is associated with extensive vasogenic oedema in right cerebral hemisphere.  Mass effect with midline shift to the left is noted.  The lateral ventricles are mildly dilated, suspicious of developing hydrocephalus.
+
+              IMPRESSION:
+              Brain metastases with developing hydrocephalus.
+
+              ==========================================================================
+
+              CT SCAN OF THORAX, ABDOMEN AND PELVIS
+              \R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\\R\
+              Mass lesion with contrast enhancement is seen in medial aspect of left lower lobe, extending from hilum to diaphragmatic surface.  It measures about 4.2cm x 3.1cm x 4.9cm in dimension.  The left lower lobe bronchus appear being compressed and narrowed by the mass.  Findings are suggestive of bronchogenic carcinoma with hilar lymph node metastasis.  Enlarged lymph node is also seen in the subcarinal region, suggestive of metastasis.
+              Small left pleural effusion is present.
+              No mass lesion is seen in right lung.
+
+              Faecal distension of rectum is noted.
+              The liver is normal in attenuation and contrast enhancement. There is no hepatic tumour detected. The biliary tree is not dilated.
+              The portal vein is patent.
+              The gallbladder and pancreas appear unremarkable. The spleen is not enlarged.
+              The kidneys show no hydronephrosis.
+              There is no adrenal mass. There is no enlarged lymph node seen inside the abdomen.
+              There is no free gas seen inside the peritoneum.
+              There is no ascites.
+
+
+              IMPRESSION:
+              Left lower lobe bronchogenic carcinoma with hilar and mediastinal lymph node metastases.  Small left pleural effusion.
+              Faecal distension of rectum.  Please correlate with PR exam.
+            </COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.5>
+        <FIELD.6 />
+        <FIELD.7 />
+        <FIELD.8 />
+        <FIELD.9 />
+        <FIELD.10 />
+        <FIELD.11>
+          <FIELD_ITEM>
+            <COMPONENT.1>F</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.11>
+        <FIELD.12 />
+        <FIELD.13 />
+        <FIELD.14>
+          <FIELD_ITEM>
+            <COMPONENT.1>20121220124045.196</COMPONENT.1>
+          </FIELD_ITEM>
+        </FIELD.14>
+        <FIELD.15 />
+        <FIELD.16>
+          <FIELD_ITEM>
+            <COMPONENT.1>ccc378a</COMPONENT.1>
+            <COMPONENT.2>DR. CHAN, CHAK CHUNG</COMPONENT.2>
+          </FIELD_ITEM>
+        </FIELD.16>
+      </OBX>
+    </ORU_R01>
+  </Body>
+  <Reference>
+    <FileList />
+  </Reference>
+  <BodyObjectTypeName />
+</Message>

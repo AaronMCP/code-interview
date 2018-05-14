@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="textBoxHL7Msg.Text" xml:space="preserve">
+    <value>MSH|^~\&amp;|RISMALL_ADT|MESA|RIS_CSH_GC|CSH|||ADT^A01|102108|P|2.3.1||||||||
+EVN||200007010800||||200007010800
+PID|||583030^^^ADT1||RISMALL^Monday||19501216|M||AI|537 PURDUE AVE^^ST. LOUIS^MO^63130|||||||20952000|||||||||||||||||||||
+PV1||I|1W^111^2^XYZ_HOSPITAL||||1234^WEAVER^TIMOTHY^P^^DR|||100|||||||1234^WEAVER^TIMOTHY^P^^DR||V1001^^^ADT1|||||||||||||||||||||||||200007010800|||||||V|</value>
+  </data>
+  <data name="textBoxXmlMsg.Text" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;
+&lt;ADT_A01&gt;
+  &lt;MSH&gt;
+    &lt;FIELD.1&gt;|&lt;/FIELD.1&gt;
+    &lt;FIELD.2&gt;^~\&amp;amp;&lt;/FIELD.2&gt;
+    &lt;FIELD.3&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;RISMALL_ADT&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.3&gt;
+    &lt;FIELD.4&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;MESA&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.4&gt;
+    &lt;FIELD.5&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;RIS_CSH_GC&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.5&gt;
+    &lt;FIELD.6&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;CSH&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.6&gt;
+    &lt;FIELD.7 /&gt;
+    &lt;FIELD.8 /&gt;
+    &lt;FIELD.9&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;ADT&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2&gt;A01&lt;/COMPONENT.2&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.9&gt;
+    &lt;FIELD.10&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;102108&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.10&gt;
+    &lt;FIELD.11&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;P&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.11&gt;
+    &lt;FIELD.12&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;2.3.1&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.12&gt;
+    &lt;FIELD.13 /&gt;
+    &lt;FIELD.14 /&gt;
+    &lt;FIELD.15 /&gt;
+    &lt;FIELD.16 /&gt;
+    &lt;FIELD.17 /&gt;
+    &lt;FIELD.18 /&gt;
+    &lt;FIELD.19 /&gt;
+    &lt;FIELD.20 /&gt;
+  &lt;/MSH&gt;
+  &lt;EVN&gt;
+    &lt;FIELD.1 /&gt;
+    &lt;FIELD.2&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;200007010800&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.2&gt;
+    &lt;FIELD.3 /&gt;
+    &lt;FIELD.4 /&gt;
+    &lt;FIELD.5 /&gt;
+    &lt;FIELD.6&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;200007010800&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.6&gt;
+  &lt;/EVN&gt;
+  &lt;PID&gt;
+    &lt;FIELD.1 /&gt;
+    &lt;FIELD.2 /&gt;
+    &lt;FIELD.3&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;583030&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2 /&gt;
+        &lt;COMPONENT.3 /&gt;
+        &lt;COMPONENT.4&gt;ADT1&lt;/COMPONENT.4&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.3&gt;
+    &lt;FIELD.4 /&gt;
+    &lt;FIELD.5&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;RISMALL&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2&gt;Monday&lt;/COMPONENT.2&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.5&gt;
+    &lt;FIELD.6 /&gt;
+    &lt;FIELD.7&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;19501216&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.7&gt;
+    &lt;FIELD.8&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;M&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.8&gt;
+    &lt;FIELD.9 /&gt;
+    &lt;FIELD.10&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;AI&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.10&gt;
+    &lt;FIELD.11&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;537 PURDUE AVE&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2 /&gt;
+        &lt;COMPONENT.3&gt;ST. LOUIS&lt;/COMPONENT.3&gt;
+        &lt;COMPONENT.4&gt;MO&lt;/COMPONENT.4&gt;
+        &lt;COMPONENT.5&gt;63130&lt;/COMPONENT.5&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.11&gt;
+    &lt;FIELD.12 /&gt;
+    &lt;FIELD.13 /&gt;
+    &lt;FIELD.14 /&gt;
+    &lt;FIELD.15 /&gt;
+    &lt;FIELD.16 /&gt;
+    &lt;FIELD.17 /&gt;
+    &lt;FIELD.18&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;20952000&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.18&gt;
+    &lt;FIELD.19 /&gt;
+    &lt;FIELD.20 /&gt;
+    &lt;FIELD.21 /&gt;
+    &lt;FIELD.22 /&gt;
+    &lt;FIELD.23 /&gt;
+    &lt;FIELD.24 /&gt;
+    &lt;FIELD.25 /&gt;
+    &lt;FIELD.26 /&gt;
+    &lt;FIELD.27 /&gt;
+    &lt;FIELD.28 /&gt;
+    &lt;FIELD.29 /&gt;
+    &lt;FIELD.30 /&gt;
+    &lt;FIELD.31 /&gt;
+    &lt;FIELD.32 /&gt;
+    &lt;FIELD.33 /&gt;
+    &lt;FIELD.34 /&gt;
+    &lt;FIELD.35 /&gt;
+    &lt;FIELD.36 /&gt;
+    &lt;FIELD.37 /&gt;
+    &lt;FIELD.38 /&gt;
+    &lt;FIELD.39 /&gt;
+  &lt;/PID&gt;
+  &lt;PV1&gt;
+    &lt;FIELD.1 /&gt;
+    &lt;FIELD.2&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;I&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.2&gt;
+    &lt;FIELD.3&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;1W&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2&gt;111&lt;/COMPONENT.2&gt;
+        &lt;COMPONENT.3&gt;2&lt;/COMPONENT.3&gt;
+        &lt;COMPONENT.4&gt;XYZ_HOSPITAL&lt;/COMPONENT.4&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.3&gt;
+    &lt;FIELD.4 /&gt;
+    &lt;FIELD.5 /&gt;
+    &lt;FIELD.6 /&gt;
+    &lt;FIELD.7&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;1234&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2&gt;WEAVER&lt;/COMPONENT.2&gt;
+        &lt;COMPONENT.3&gt;TIMOTHY&lt;/COMPONENT.3&gt;
+        &lt;COMPONENT.4&gt;P&lt;/COMPONENT.4&gt;
+        &lt;COMPONENT.5 /&gt;
+        &lt;COMPONENT.6&gt;DR&lt;/COMPONENT.6&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.7&gt;
+    &lt;FIELD.8 /&gt;
+    &lt;FIELD.9 /&gt;
+    &lt;FIELD.10&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;100&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.10&gt;
+    &lt;FIELD.11 /&gt;
+    &lt;FIELD.12 /&gt;
+    &lt;FIELD.13 /&gt;
+    &lt;FIELD.14 /&gt;
+    &lt;FIELD.15 /&gt;
+    &lt;FIELD.16 /&gt;
+    &lt;FIELD.17&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;1234&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2&gt;WEAVER&lt;/COMPONENT.2&gt;
+        &lt;COMPONENT.3&gt;TIMOTHY&lt;/COMPONENT.3&gt;
+        &lt;COMPONENT.4&gt;P&lt;/COMPONENT.4&gt;
+        &lt;COMPONENT.5 /&gt;
+        &lt;COMPONENT.6&gt;DR&lt;/COMPONENT.6&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.17&gt;
+    &lt;FIELD.18 /&gt;
+    &lt;FIELD.19&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;V1001&lt;/COMPONENT.1&gt;
+        &lt;COMPONENT.2 /&gt;
+        &lt;COMPONENT.3 /&gt;
+        &lt;COMPONENT.4&gt;ADT1&lt;/COMPONENT.4&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.19&gt;
+    &lt;FIELD.20 /&gt;
+    &lt;FIELD.21 /&gt;
+    &lt;FIELD.22 /&gt;
+    &lt;FIELD.23 /&gt;
+    &lt;FIELD.24 /&gt;
+    &lt;FIELD.25 /&gt;
+    &lt;FIELD.26 /&gt;
+    &lt;FIELD.27 /&gt;
+    &lt;FIELD.28 /&gt;
+    &lt;FIELD.29 /&gt;
+    &lt;FIELD.30 /&gt;
+    &lt;FIELD.31 /&gt;
+    &lt;FIELD.32 /&gt;
+    &lt;FIELD.33 /&gt;
+    &lt;FIELD.34 /&gt;
+    &lt;FIELD.35 /&gt;
+    &lt;FIELD.36 /&gt;
+    &lt;FIELD.37 /&gt;
+    &lt;FIELD.38 /&gt;
+    &lt;FIELD.39 /&gt;
+    &lt;FIELD.40 /&gt;
+    &lt;FIELD.41 /&gt;
+    &lt;FIELD.42 /&gt;
+    &lt;FIELD.43 /&gt;
+    &lt;FIELD.44&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;200007010800&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.44&gt;
+    &lt;FIELD.45 /&gt;
+    &lt;FIELD.46 /&gt;
+    &lt;FIELD.47 /&gt;
+    &lt;FIELD.48 /&gt;
+    &lt;FIELD.49 /&gt;
+    &lt;FIELD.50 /&gt;
+    &lt;FIELD.51&gt;
+      &lt;FIELD_ITEM&gt;
+        &lt;COMPONENT.1&gt;V&lt;/COMPONENT.1&gt;
+      &lt;/FIELD_ITEM&gt;
+    &lt;/FIELD.51&gt;
+    &lt;FIELD.52 /&gt;
+  &lt;/PV1&gt;
+&lt;/ADT_A01&gt;</value>
+  </data>
+</root>

@@ -1,0 +1,47 @@
+﻿<div>
+    <div class="g-sidepanel g-sidepanel-expand conf-sidepanel">
+        <div class="g-sidepanel-title" translate>Configration</div>
+        <div ng-show="loginUser.isSuperAdmin">
+            <h5 translate>RoleSetting</h5>
+            <ul class="g-sidepanel-menu">
+                <li ng-class="{'highlight':$state.is('ris.consultation.roles')}" ui-sref="ris.consultation.roles">
+                    <span class="icon-general conf-icon-general icon-privilege"></span>
+                    <span class="title" translate>RolePermission</span>
+                </li>
+            </ul>
+        </div>
+        <h5 translate>UserManagement</h5>
+        <ul class="g-sidepanel-menu">
+            <li ng-class="{'highlight':$state.is('ris.consultation.users')}" ui-sref="ris.consultation.users">
+                <span class="icon-general conf-icon-general icon-account2"></span>
+                <span class="title" translate>User</span>
+            </li>
+            <li ng-class="{'highlight':$state.is('ris.consultation.hospitals')}" ui-sref="ris.consultation.hospitals">
+                <span class="icon-general conf-icon-general icon-hospital"></span>
+                <span class="title" translate>Organization</span>
+            </li>
+        </ul>
+        <h5 translate>ConsultationConfig</h5>
+        <ul class="g-sidepanel-menu">
+            <li ng-class="{'highlight':$state.is('ris.consultation.recipientconfig')}" ui-sref="ris.consultation.recipientconfig">
+                <span class="icon-general conf-icon-general icon-consultation_accept"></span>
+                <span class="title" translate>ConsultationRecipientConfig</span>
+            </li>
+
+        </ul>
+        <h5 translate>TemplateConfig</h5>
+        <ul class="g-sidepanel-menu">
+            <li ng-class="{'highlight':$state.is('ris.consultation.reporttemplate')}" ui-sref="ris.consultation.reporttemplate">
+                <span class="icon-general conf-icon-general icon-report_tp"></span>
+                <span class="title" translate>ReportTemplate</span>
+            </li>
+        </ul>
+        <h5 ng-show="loginUser.isSuperAdmin" translate>SystemManagement</h5>
+        <ul ng-show="loginUser.isSuperAdmin" class="g-sidepanel-menu">
+            <li ng-class="{'highlight':$state.is('ris.consultation.notificationconfig')}" ui-sref="ris.consultation.notificationconfig">
+                <span class="icon-general conf-icon-general icon-conf_list"></span>
+                <span class="title" translate>NotificationConfig</span>
+            </li>
+        </ul>
+    </div>
+</div>

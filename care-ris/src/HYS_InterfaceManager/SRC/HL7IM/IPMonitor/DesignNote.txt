@@ -1,0 +1,87 @@
+﻿2013/03/04
+
+For High Availability Solution
+------------------------------
+1. In order to replace EMC cluster's virtual IP mechanism.
+2. Base on EMC's fail over mechanism on Windows Service (e.g. SQL Server DB service)
+3. We develop this IP address monitor service as the following logic (run periodically):
+
+if DB service is running
+   if network cable is unpluged
+      stop DB service (to trigger EMC to switch to backup server) 
+   else
+      modify local IP from private IP to public IP
+else
+   modify local IP from public IP to private IP
+
+Note: 
+
+1) This IP address monitor service should NOT be monitored by EMC's fail over mechanism.
+2) This IP address monitor service should monitor a seperate network adapter NOT being monitored by EMC's fail over mechanism.
+
+// For Multi Site Solution (cancel)
+// ---------------------------------
+// if ping public IP failed
+//    set local IP to public IP
+
+Reference:
+
+命令行修改网络设置ip地址、dns、网关的方法（windows） 
+netsh interface ip set address "网络连接名" static 192.168.0.88 255.255.255.0 192.168.0.1 1
+netsh interface ip set dns "网络连接名" static 202.216.224.66
+http://blog.csdn.net/zmxj/article/details/1485546
+
+如何用C#判断服务器上是否存在网卡适配器网线被拔出的情况
+http://bbs.csdn.net/topics/320176561
+http://include.wutils.com/wmi/ROOT/cimv2/CIM_ManagedSystemElement/CIM_LogicalElement/CIM_LogicalDevice/CIM_NetworkAdapter/Win32_NetworkAdapter/cs-samples.html
+
+//http://wutils.com/wmi/
+//create a management scope object
+ManagementScope scope = new ManagementScope("\\\\.\\ROOT\\cimv2");
+
+//create object query
+ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_NetworkAdapter");
+
+//create object searcher
+ManagementObjectSearcher searcher =
+                        new ManagementObjectSearcher(scope, query);
+
+//get collection of WMI objects
+ManagementObjectCollection queryCollection = searcher.Get();
+
+//enumerate the collection.
+foreach (ManagementObject m in queryCollection) 
+{
+// access properties of the WMI object
+  Console.WriteLine("AdapterType : {0}", m["AdapterType"]);
+  
+}
+
+Win32_NetworkAdapter
+NetConnectionStatus
+0 (0x0)
+Disconnected
+1 (0x1)
+Connecting
+2 (0x2)
+Connected
+3 (0x3)
+Disconnecting
+4 (0x4)
+Hardware not present
+5 (0x5)
+Hardware disabled
+6 (0x6)
+Hardware malfunction
+7 (0x7)
+Media disconnected
+8 (0x8)
+Authenticating
+9 (0x9)
+Authentication succeeded
+10 (0xA)
+Authentication failed
+11 (0xB)
+Invalid address
+12 (0xC)
+Credentials required 

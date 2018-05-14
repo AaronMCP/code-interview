@@ -1,0 +1,195 @@
+﻿
+<div class="pg-content" style="position:relative">
+
+    <div class="transfer-title">
+        <h4 translate>RegistrationTransfer</h4>
+    </div>
+
+    <ris-fieldset class="transfer-container" ris-fieldset ng-disabled="isSaved">
+
+        <div id="transferPatient">
+            <table class="table table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th translate>PatientNo</th>
+                        <th translate>PatientName</th>
+                        <th translate>Gender</th>
+                        <th translate>Birthday</th>
+                        <th translate>ReferenceNo</th>
+                        <th translate>Telephone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{patient.patientNo}}</td>
+                        <td>{{patient.localName||patient.englishName}}</td>
+                        <td>{{patient.gender}}</td>
+                        <td>{{patient.birthday|date:'yyyy-MM-dd'}}</td>
+                        <td>{{patient.referenceNo}}</td>
+                        <td>{{patient.telephone}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p>
+            <span translate class="pane-title">OrderRequest</span>
+            <input type="button" class="btn btn-default" value="{{'RegistrationTransfer'|translate}}" ng-disabled="isTransfered||isDisableTransfer" ng-click="transferToRegistration()">
+            <input type="button" class="btn btn-default"
+                   timeslice-launcher
+                   t-operater="timesliceOperater"
+                   t-options="timesliceOption"
+                   value="{{'BookingTransfer'|translate}}"
+                   ng-disabled="isTransfered||isDisableTransfer"
+                   ng-click="transferToBooking()">
+            <input type="button" class="btn btn-default" value="{{'Reject'|translate}}" ng-click="reject()" ng-disabled="isTransfered||isDisableReject">
+        </p>
+
+        <div id="transferRequest">
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th width="5%"></th>
+                        <th width="20%" translate>Status</th>
+                        <th width="20%" translate>ModalityType</th>
+                        <th width="20%" translate>CheckingItem</th>
+                        <th width="30%" translate style="border-right:1px solid #dcdee0!important">Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="6" style="padding:0px">
+                            <div class="request-info-container bg-light" ng-repeat="request in requests">
+                                <div>
+                                    <input type="checkbox" class="request-check" ng-model="request.isSelected" ng-change="selectRequest(request)">{{'ERNO'|translate}}: {{request.erNo}}
+                                    <a href="javascript:void(0);" class="btn btn-sm pull-right" ng-click="editOrderInfo(request)" ng-disabled="!request.isReged">
+                                        <span class="glyphicon glyphicon-pencil procedure-operation"></span>
+                                    </a>
+                                </div>
+                                <table class="table request-info-table">
+                                    <colgroup>
+                                        <col style="width:auto;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:15%;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:20%;" />
+                                        <col style="width:auto;" />
+                                        <col style="width:20%;" />
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th translate>PatientType</th>
+                                            <td>{{request.patientType}}</td>
+                                            <th translate>ApplyDepartment</th>
+                                            <td>{{request.applyDept}}</td>
+                                            <th translate rowspan="2">Observation</th>
+                                            <td rowspan="2">{{request.observation}}</td>
+                                            <th translate rowspan="2">HealthHistory</th>
+                                            <td rowspan="2">{{request.healthHistory}}</td>
+                                        </tr>
+                                        <tr>
+                                            <th translate>ChargeType</th>
+                                            <td>{{request.chargeType}}</td>
+                                            <th translate>ApplyDoctor</th>
+                                            <td>{{request.applyDoctor}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="table table-condensed" style="margin:0px">
+                                    <tbody>
+                                        <tr ng-repeat="row in request.requestItems">
+                                            <td width="5%">
+                                                <input type="checkbox" ng-model="row.isSelected" ng-change="validateOperationStatus()" ng-if="row.status==='Pending'" style="position:relative;top:-2px">
+                                            </td>
+                                            <td width="20%">{{row.showStatus}}</td>
+                                            <td width="20%">{{row.modalityType}}</td>
+                                            <td width="20%">{{row.rpDesc}}</td>
+                                            <td width="30%">{{row.comment}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel panel-default" id="transferOrderPlan">
+            <!-- Default panel contents -->
+            <div class="panel-heading pane-title">
+                <p>
+                    {{'OrderPlan'|translate}}
+                    <a href="javascript:void(0);" class="btn btn-sm" ng-click="addProcedure()" ng-disabled="!isTransfered||isRequestInValid">{{'AddProcedure'|translate}}</a>
+                    <a href="javascript:void(0);" class="btn btn-sm"
+                       timeslice-launcher
+                       t-operater="timesliceOperater"
+                       t-options="timesliceOption"
+                       ng-disabled="!isTransfered||isRequestInValid"
+                       ng-click="modifySlice()" ng-if="modifySliceEnable">{{'ModifySplic'|translate}}</a>
+                </p>
+            </div>
+
+            <!-- Table -->
+            <table class="table table table-condensed">
+                <thead>
+                    <tr>
+                        <th translate>Status</th>
+                        <th translate>CheckingItem</th>
+                        <th translate>CheckingSystem</th>
+                        <th translate>ModalityType</th>
+                        <th translate>Modality</th>
+                        <th translate>Operation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in regedProcedures">
+                        <td>{{row.showStatus}}</td>
+                        <td>{{row.checkingItem}}</td>
+                        <td>{{row.examSystem}}</td>
+                        <td>{{row.modalityType}}</td>
+                        <td>
+                            <a href="javascript:void(0);" class="btn btn-sm  ris-popover transfer-modality-popover" ng-if="row.status!=10"
+                               ng-click="$parent.showUpdateModalityView(row)"
+                               ris-popover popover-container="body" popover-auto-hide="true" data-overwrite="true"
+                               use-optimized-placement-algorithm="true"
+                               data-placement="auto bottom top" data-templateurl="/app/registration/views/modality-input-view.html" ng-bind="row.modality">
+                            </a>
+                            <span ng-if="row.status==10" ng-bind="row.modality"></span>
+                        </td>
+                        <td>
+                            <a href="javascript:void(0);" class="btn btn-sm" ng-click="deleteRegedProcedure(row)">
+                                <span class="glyphicon glyphicon-remove procedure-operation"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="9">
+                            <a href="javascript:void(0);" class="pull-right btn btn-sm" ng-click="getItemHistory()">
+                                {{historyOperation}}
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div>
+                <div collapse="isCollapsed">
+                    <div ng-include="'/app/registration/views/procedures-history-table.html'"></div>
+                </div>
+            </div>
+
+        </div>
+    </ris-fieldset>
+
+    <div class="csd-module-footer transfer-footer">
+        <!--ng-disabled="userForm.$pristine || userForm.$invalid"-->
+        <button type="submit" class="btn btn-green  btn-registration-edit-save" ng-click="complete()" translate ng-disabled="regedProcedures.length===0||isRequestInValid">Complete</button>
+        <button ng-if="!isMobile" type="button" class="btn btn-green" ng-click="printRequisition()" translate ng-disabled="regedProcedures.length===0||isRequestInValid">PrintRequisition</button>
+        <button ng-if="!isMobile" type="button" class="btn btn-green" ng-click="printBarCode()" translate ng-disabled="regedProcedures.length===0||isRequestInValid">PrintBarCode</button>
+        <button class="btn btn-registration-edit-cancel" type="button" ng-click="cancel()" ng-disabled="isSaved" translate>Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HL7>
+  <MSH FieldSeparator="|" EncodingCharacters="^~\&amp;" MessageControlID="102108">
+    <SendingApplication EntityIdentifier="RISMALL_ADT"/>
+    <SendingFacility EntityIdentifier="MESA"/>
+    <ReceivingApplication EntityIdentifier="RIS_CSH_GC"/>
+    <ReceivingFacility EntityIdentifier="CSH"/>
+    <MessageType MessageCode="ADT" TriggerEvent="A01" MessageStructure="ADT_A01"/>
+    <ProcessingID ProcessingID="P"/>
+    <VersionID VersionID="2.3.1"/>
+  </MSH>
+  <EVN RecordDT="200007010800" EventOccurred="200007010800"/>
+  <PID DTOfBirth="19501216" Sex="M">
+    <PatientID_InternalID ID="583030">
+      <AssigningAuthority NameSpaceID="ADT1"/>
+    </PatientID_InternalID>
+    <PatientName FamilyName="RISMALL" LastNamePrefix="Monday"/>
+    <Race Identifier="AI"/>
+    <PatientAddress StreetAddress="537 PURDUE AVE" City="ST. LOUIS" StateOrProvince="MO" ZipOrPostalCode="63130"/>
+    <PatientAccountNumber ID="20952000"/>
+  </PID>
+  <PV1 PatientClass="I" HospitalService="100" AdmitDT="200007010800" VisitIndicator="V">
+    <AssignedPatientLocation PointOfCare="1W" Room="111" Bed="2">
+      <Facility NameSpaceID="XYZ_HOSPITAL"/>
+    </AssignedPatientLocation>
+    <AttendingDoctor IDNumber="1234" FamilyName="WEAVER" LastNamePrefix="TIMOTHY" GivenName="P" Surfix="DR"/>
+    <AdmittingDoctor IDNumber="1234" FamilyName="WEAVER" LastNamePrefix="TIMOTHY" GivenName="P" Surfix="DR"/>
+    <VisitNumber ID="V1001">
+      <AssigningAuthority NameSpaceID="ADT1"/>
+    </VisitNumber>
+  </PV1>
+</HL7>

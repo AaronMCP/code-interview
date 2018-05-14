@@ -1,0 +1,20 @@
+if(m_nameEN=="")
+		{
+			HINSTANCE hDLL;                 // Handle to DLL
+			SC2PY py;
+			hDLL = LoadLibrary("gatewaylang_SC");
+			if(hDLL != NULL)
+			{
+				py = (SC2PY)GetProcAddress(hDLL,"CC2PY");
+				if (!py)
+				{
+					FreeLibrary(hDLL);
+					//return;
+				}
+				else
+				{
+					py(m_nameEN.GetBuffer(8*m_nameSC.GetLength()), m_nameSC.GetBuffer(1), 2);
+					FreeLibrary(hDLL);
+				}
+			}
+		}

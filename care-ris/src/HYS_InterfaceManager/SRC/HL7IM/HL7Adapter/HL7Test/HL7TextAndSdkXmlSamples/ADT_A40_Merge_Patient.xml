@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ADT_A40>
+  <MSH>
+    <FIELD.1>|</FIELD.1>
+    <FIELD.2>^~\&amp;</FIELD.2>
+    <FIELD.3>
+      <FIELD_ITEM>
+        <COMPONENT.1>RISMALL_ADT</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.3>
+    <FIELD.4>
+      <FIELD_ITEM>
+        <COMPONENT.1>MESA</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.4>
+    <FIELD.5>
+      <FIELD_ITEM>
+        <COMPONENT.1>RIS_CSH_GC</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.5>
+    <FIELD.6>
+      <FIELD_ITEM>
+        <COMPONENT.1>CSH</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.6>
+    <FIELD.7 />
+    <FIELD.8 />
+    <FIELD.9>
+      <FIELD_ITEM>
+        <COMPONENT.1>ADT</COMPONENT.1>
+        <COMPONENT.2>A40</COMPONENT.2>
+      </FIELD_ITEM>
+    </FIELD.9>
+    <FIELD.10>
+      <FIELD_ITEM>
+        <COMPONENT.1>101168</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.10>
+    <FIELD.11>
+      <FIELD_ITEM>
+        <COMPONENT.1>P</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.11>
+    <FIELD.12>
+      <FIELD_ITEM>
+        <COMPONENT.1>2.3.1</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.12>
+    <FIELD.13 />
+    <FIELD.14 />
+    <FIELD.15 />
+    <FIELD.16 />
+    <FIELD.17 />
+    <FIELD.18 />
+    <FIELD.19 />
+    <FIELD.20 />
+  </MSH>
+  <EVN>
+    <FIELD.1 />
+    <FIELD.2>
+      <FIELD_ITEM>
+        <COMPONENT.1>200004211000</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.2>
+    <FIELD.3 />
+    <FIELD.4 />
+    <FIELD.5 />
+    <FIELD.6>
+      <FIELD_ITEM>
+        <COMPONENT.1>200004210950</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.6>
+  </EVN>
+  <PID>
+    <FIELD.1 />
+    <FIELD.2 />
+    <FIELD.3>
+      <FIELD_ITEM>
+        <COMPONENT.1>V_TPID001</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>VirtualDataCenter</COMPONENT.4>
+      </FIELD_ITEM>
+      <FIELD_ITEM>
+        <COMPONENT.1>PID0005</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>PatientIDIssuer</COMPONENT.4>
+      </FIELD_ITEM>
+    </FIELD.3>
+    <FIELD.4 />
+    <FIELD.5>
+      <FIELD_ITEM>
+        <COMPONENT.1>TESTPATIENT001</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.5>
+    <FIELD.6 />
+    <FIELD.7>
+      <FIELD_ITEM>
+        <COMPONENT.1>19980704</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.7>
+    <FIELD.8>
+      <FIELD_ITEM>
+        <COMPONENT.1>M</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.8>
+    <FIELD.9 />
+    <FIELD.10>
+      <FIELD_ITEM>
+        <COMPONENT.1>AI</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.10>
+    <FIELD.11>
+      <FIELD_ITEM>
+        <COMPONENT.1>7616 STANFORD AVE</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3>ST. LOUIS</COMPONENT.3>
+        <COMPONENT.4>MO</COMPONENT.4>
+        <COMPONENT.5>63130</COMPONENT.5>
+      </FIELD_ITEM>
+    </FIELD.11>
+    <FIELD.12 />
+    <FIELD.13 />
+    <FIELD.14 />
+    <FIELD.15 />
+    <FIELD.16 />
+    <FIELD.17 />
+    <FIELD.18>
+      <FIELD_ITEM>
+        <COMPONENT.1>20981701</COMPONENT.1>
+      </FIELD_ITEM>
+    </FIELD.18>
+    <FIELD.19 />
+    <FIELD.20 />
+    <FIELD.21 />
+    <FIELD.22 />
+    <FIELD.23 />
+    <FIELD.24 />
+    <FIELD.25 />
+    <FIELD.26 />
+    <FIELD.27 />
+    <FIELD.28 />
+    <FIELD.29 />
+    <FIELD.30 />
+    <FIELD.31 />
+    <FIELD.32 />
+    <FIELD.33 />
+    <FIELD.34 />
+    <FIELD.35 />
+    <FIELD.36 />
+    <FIELD.37 />
+    <FIELD.38 />
+    <FIELD.39 />
+  </PID>
+  <MRG>
+    <FIELD.1>
+      <FIELD_ITEM>
+        <COMPONENT.1>PID0005</COMPONENT.1>
+        <COMPONENT.2 />
+        <COMPONENT.3 />
+        <COMPONENT.4>PatientIDIssuer</COMPONENT.4>
+      </FIELD_ITEM>
+    </FIELD.1>
+    <FIELD.2 />
+    <FIELD.3 />
+    <FIELD.4 />
+    <FIELD.5 />
+  </MRG>
+</ADT_A40>

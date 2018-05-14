@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?><DeviceDir><Commands /><LogInfo><LogType>Error</LogType>
+<FileDuration>7</FileDuration>
+</LogInfo>
+<Header><Type>RDET</Type>
+<Direction>OUTBOUND</Direction>
+<ID>10</ID>
+<Name>RDET_MWL_OUT</Name>
+<Version>2.1</Version>
+<UseCommandOnly>False</UseCommandOnly>
+<Description>RDET Outbound Adapter</Description>
+<RefDeviceID /><RefDeviceName /><EventTypes /></Header>
+<Files><DeviceFile><Location>HYS.RdetOutboundAdapter.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>RdetOutboundAdapter.xml</Location>
+<Description /><Type>Other</Type>
+<Backupable>True</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Service.exe</Location>
+<Description /><Type>ServiceAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Service.config</Location>
+<Description /><Type>ServiceConfig</Type>
+<Backupable>True</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Config.exe</Location>
+<Description /><Type>ConfigAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Config.config</Location>
+<Description /><Type>ConfigConfig</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Composer.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Base.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.DataAccess.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Objects.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Xml.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>InstallUtil.exe</Location>
+<Description /><Type>Installer</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Composer.config</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>OutboundDBInstall.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>OutboundDBInstallConfig.xml</Location>
+<Description /><Type>OtherScript</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.RdetOutboundAdapterConfiguration.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.RdetAdapter.Common.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.RdetAdapter.Configuration.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>StarConvert.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Monitor.exe</Location>
+<Description /><Type>MonitorAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Monitor.config</Location>
+<Description /><Type>MonitorConfig</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>SentinelKeyW.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>gatewaylang_SC.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+
+
+<DeviceFile><Type>Other</Type>
+<Backupable>True</Backupable>
+<Location>apidsp_windows.dll</Location>
+<Description /></DeviceFile>
+
+<DeviceFile><Type>Other</Type>
+<Backupable>True</Backupable>
+<Location>apidsp_windows_x64.dll</Location>
+<Description /></DeviceFile>
+
+<DeviceFile><Type>Other</Type>
+<Backupable>True</Backupable>
+<Location>hasp_net_windows.dll</Location>
+<Description /></DeviceFile>
+
+<DeviceFile><Type>Other</Type>
+<Backupable>True</Backupable>
+<Location>hasp_windows_93200.dll</Location>
+<Description /></DeviceFile>
+
+<DeviceFile><Type>Other</Type>
+<Backupable>True</Backupable>
+<Location>hasp_windows_x64_93200.dll</Location>
+<Description /></DeviceFile>
+
+
+</Files>
+</DeviceDir>

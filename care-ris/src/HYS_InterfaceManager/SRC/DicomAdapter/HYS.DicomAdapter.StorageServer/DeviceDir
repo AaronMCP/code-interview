@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?><DeviceDir><Header><Type>DICOM</Type>
+<Direction>INBOUND</Direction>
+<ID>9</ID>
+<Name>DICOM_SSCP_IN</Name>
+<Version>1.0.0.0</Version>
+<UseCommandOnly>False</UseCommandOnly>
+<Description>DICOM Storage Inbound Adapter</Description>
+<RefDeviceID /><RefDeviceName /><EventTypes><GWEventType><Code>14</Code>
+<Description>PACS Image Arrival</Description>
+<Enable>True</Enable>
+</GWEventType>
+</EventTypes>
+</Header>
+<Files><DeviceFile><Location>InstallUtil.exe</Location>
+<Description /><Type>Installer</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Service.exe</Location>
+<Description /><Type>ServiceAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Service.config</Location>
+<Description /><Type>ServiceConfig</Type>
+<Backupable>True</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Config.exe</Location>
+<Description /><Type>ConfigAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Config.config</Location>
+<Description /><Type>ConfigConfig</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Composer.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Composer.config</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Base.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.DataAccess.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Objects.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Xml.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Dicom.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Common.Soap.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>True</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.DicomAdapter.Common.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.DicomAdapter.StorageServer.exe</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+  <DeviceFile>
+    <Type>Other</Type>
+    <Backupable>False</Backupable>
+    <Location>Dicom.dll</Location>
+    <Description />
+  </DeviceFile>
+
+  <DeviceFile>
+    <Type>Other</Type>
+    <Backupable>False</Backupable>
+    <Location>NLog.dll</Location>
+    <Description />
+  </DeviceFile>
+
+  <DeviceFile>
+    <Type>Other</Type>
+    <Backupable>False</Backupable>
+    <Location>NLog.xml</Location>
+    <Description />
+  </DeviceFile>
+<DeviceFile><Location>StorageServer.xml</Location>
+<Description /><Type>OtherScript</Type>
+<Backupable>True</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Adapter.Monitor.exe</Location>
+<Description /><Type>MonitorAssembly</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.Adapter.Monitor.config</Location>
+<Description /><Type>MonitorConfig</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+
+<DeviceFile><Location>gatewaylang_SC.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>HYS.IM.Common.WCFHelper.dll</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>StdResponseToDicom.xsl</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>SOAPClientConfig.WCF.xml</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>SOAPClient.Request.xslt</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>SOAPClient.Response.xslt</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>XSLT\DicomToStdRequest.xsl</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+<DeviceFile><Location>XSLT\StdResponseToDicom.xsl</Location>
+<Description /><Type>Other</Type>
+<Backupable>False</Backupable>
+</DeviceFile>
+
+</Files>
+<Commands /><LogInfo><LogType>Error</LogType>
+<FileDuration>7</FileDuration>
+</LogInfo>
+</DeviceDir>

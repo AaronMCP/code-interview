@@ -1,0 +1,103 @@
+﻿<div id="consulation-requests">
+    <link href="/app-resources/css/consultation-requests-view.css" rel="stylesheet" />
+    <div id="consulationWorklist" ng-if="isLoadUserSetting" kendo-grid k-options="consulationWorklist" k-ng-delay="consulationWorklist" class="consulation-gird"></div>
+    <div kendo-window="reportWin" k-title="'{{'ConsultationReport'|translate}}'"
+         k-width="'80%'" k-height="'80%'" k-visible="false" k-modal="true" k-on-activate="activeReportWin(kendoEvent)" k-on-deactivate="deactiveReportWin(kendoEvent)">
+    </div>
+    <script id="column-menu-consultation" type="text/x-kendo-tmpl">
+        <div class="dropdown consulation-gird-dropdown">
+            <a href=" javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                <span class="icon-general icon-pencil"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="" ng-click="viewAppliedRequest('#=requestId#',#=status#)">{{ 'ViewInformation' | translate }}</a></li>
+                #if (isDeleted ==0 ) { #
+                #if (status == 1)  { #
+                <li><a href="" ng-if="user.isJuniorDoctor" ng-click="cancelApplication('#=requestId#')">{{ 'CancelApplication' | translate }}</a></li>
+                <li><a href="" ng-if="user.isJuniorDoctor" ng-click="terminatRequest('#=requestId#')">{{ 'TerminatForcedly' | translate }}</a></li>
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="acceptRequest('#=requestId#')">{{ 'AcceptRequest' | translate }}</a></li>
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="rejectRequest('#=requestId#')">{{ 'RefuseRequest' | translate }}</a></li>
+                # } #
+
+                #if (status == 2)  { #
+                <li><a href="" ng-if="user.isJuniorDoctor" ng-click="ApplyCancelRequest('#=requestId#')">{{ 'ApplyCancellingConsultation' | translate }}</a></li>
+                <li><a href="" ng-click="startMeeting('#=requestId#')">{{ 'StartMeeting' | translate }}</a></li>
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="rejectRequest('#=requestId#')">{{ 'RefuseRequest' | translate }}</a></li>
+                # } #
+
+                #if (status == 3)  { #
+                <li><a href="" ng-click="printResults('#=requestId#')" ng-if="user.PrintResult">{{ 'PrintResults' | translate }}</a></li>
+                <li><a href="" ng-if="user.isJuniorDoctor" ng-click="requestReconsideration('#=requestId#')">{{ 'ApplyReconsideration' | translate }}</a></li>
+                # } #
+
+                #if (status == 4 || status == 5)  { #
+                <li><a href="" ng-if="user.isJuniorDoctor" ng-click="applyRequest('#=patientCaseID#')">{{ 'ApplyConsultation' | translate }}</a></li>
+                # } #
+
+                #if (status == 6)  { #
+                <li><a href="" ng-click="startMeeting('#=requestId#')">{{ 'StartMeeting' | translate }}</a></li>
+                <li><a href="" ng-if="user.isConsultationCenter || user.isExpert" ng-click="rejectRequest('#=requestId#')">{{ 'RefuseRequest' | translate }}</a></li>
+                # } #
+
+                #if (status == 7)  { #
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="acceptRequest('#=requestId#')">{{ 'AcceptRequest' | translate }}</a></li>
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="rejectRequest('#=requestId#')">{{ 'RefuseRequest' | translate }}</a></li>
+                # } #
+
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="openDeleteRequestWindow('#=requestId#')">{{ 'DeleteRequest' | translate }}</a></li>
+                # } #
+
+                #if (isDeleted == 1)  { #
+                <li><a href="" ng-if="user.isConsultationCenter" ng-click="openRecoverRequestWindow('#=requestId#')">{{ 'RecoverRequest' | translate }}</a></li>
+                # } #
+            </ul>
+        </div>
+    </script>
+    <script id="column-menu-statusUpdateTime" type="text/x-kendo-tmpl">
+        #= kendo.toString(kendo.parseDate(statusUpdateTime), 'yyyy/MM/dd HH:mm:ss')#
+    </script>
+    <script id="column-menu-applyTime" type="text/x-kendo-tmpl">
+        #= kendo.toString(kendo.parseDate(requestCreateDate), 'yyyy/MM/dd HH:mm:ss')#
+    </script>
+    <script id="column-menu-status" type="text/x-kendo-tmpl">
+        #if (isDeleted == 1)  { #
+        <span class=" icon-general icon-general icon-status_trash icon-red k-gird-font" title="{{'Deleted' |translate}}"></span>
+        # } else {#
+
+        #if (status == 1)  { #
+        <span class="icon-general icon-status_apply icon-blue k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 2)  { #
+        <span class="icon-general icon-status_accept icon-blue k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 3)  { #
+        <span class="icon-general icon-status_complete icon-blue k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 4)  { #
+        <span class="icon-general icon-status_cancel icon-red k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 5)  { #
+        <span class="icon-general icon-status_refuse icon-red k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 6)  { #
+        <span class="icon-general icon-status_inMeeting icon-blue k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 7)  { #
+        <span class="icon-general icon-status_inReConsultation icon-blue k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+        
+        #if (status == 10)  { #
+        <span class="icon-general icon-status_cancelApply icon-red k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # } #
+
+        #if (status == 8)  { #
+        <span class=" icon-general icon-status_end icon-red k-gird-font" title="{{#=status# | enumValueToString:'consultationRequestStatus' |translate}}"></span>
+        # }} #
+    </script>
+</div>

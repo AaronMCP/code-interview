@@ -1,0 +1,4 @@
+Provider=SQLOLEDB;Server=CN-SH-D0406210;Database=GWConfigDB;UID=10095177;Trusted_Connection=Yes;
+
+Provider=Microsoft.Jet.OLEDB.4.0;Data Source=database.mdb
+ 

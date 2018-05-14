@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsMultiLanRes" targetNamespace="http://tempuri.org/DsMultiLanRes.xsd" xmlns:mstns="http://tempuri.org/DsMultiLanRes.xsd" xmlns="http://tempuri.org/DsMultiLanRes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+        </Connections>
+        <Tables>
+        </Tables>
+        <Sources>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsMultiLanRes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsMultiLanRes" msprop:Generator_DataSetName="DsMultiLanRes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MultiLanRes" msprop:Generator_UserTableName="MultiLanRes" msprop:Generator_RowDeletedName="MultiLanResRowDeleted" msprop:Generator_RowChangedName="MultiLanResRowChanged" msprop:Generator_RowClassName="MultiLanResRow" msprop:Generator_RowChangingName="MultiLanResRowChanging" msprop:Generator_RowEvArgName="MultiLanResRowChangeEvent" msprop:Generator_RowEvHandlerName="MultiLanResRowChangeEventHandler" msprop:Generator_TableClassName="MultiLanResDataTable" msprop:Generator_TableVarName="tableMultiLanRes" msprop:Generator_RowDeletingName="MultiLanResRowDeleting" msprop:Generator_TablePropName="MultiLanRes">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LCID" msprop:Generator_UserColumnName="LCID" msprop:Generator_ColumnVarNameInTable="columnLCID" msprop:Generator_ColumnPropNameInRow="LCID" msprop:Generator_ColumnPropNameInTable="LCIDColumn" type="xs:int" />
+              <xs:element name="Name" msprop:Generator_UserColumnName="Name" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" type="xs:string" />
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnPropNameInTable="ValueColumn" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:MultiLanRes" />
+      <xs:field xpath="mstns:LCID" />
+      <xs:field xpath="mstns:Name" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

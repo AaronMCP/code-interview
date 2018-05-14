@@ -1,0 +1,463 @@
+﻿#consultation-applied {
+    font-family: "微软雅黑", "Open Sans", "Helvetica Neue", Helvetica, sans-serif, Arial !important;
+}
+
+.content-container {
+    overflow-y: auto !important;
+}
+
+/*global start*/
+.container-applied {
+    width: 100%;
+    padding: 0;
+}
+
+    .container-applied .favorite {
+        color: red;
+    }
+
+    .container-applied .sub-nav-request {
+        margin-bottom: 15px !important;
+    }
+
+        .container-applied .sub-nav-request .status {
+            text-align: center !important;
+        }
+
+        .container-applied .sub-nav-request .status-flag {
+            position: relative !important;
+        }
+
+        .container-applied .sub-nav-request .status-title {
+            float: left !important;
+            width: 100% !important;
+            padding-top: 2px !important;
+            padding-bottom: 2px !important;
+            background-color: #f7941e !important;
+            color: #fff !important;
+        }
+
+        .container-applied .sub-nav-request .flag-arrow {
+            position: absolute !important;
+            display: block !important;
+            right: -14px !important;
+            width: 14px !important;
+            height: 25px !important;
+            background: url(../images/consultation/status_flag_orange.png) 0 0 no-repeat !important;
+            height: 25px !important;
+            z-index: 1 !important;
+        }
+
+        .container-applied .sub-nav-request .status-disabled .status-title {
+            background-color: #e2e2e2 !important;
+            color: #666 !important;
+        }
+
+        .container-applied .sub-nav-request .status-disabled .flag-arrow {
+            background: url(../images/consultation/status_flag_grey.png) 0 0 no-repeat !important;
+        }
+
+        .container-applied .sub-nav-request .status-date {
+            color: #666 !important;
+            font-size: 12px !important;
+            margin-top: 5px !important;
+        }
+
+    .container-applied .with-height {
+        height: 100%;
+    }
+
+    .container-applied .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .container-applied .row {
+        margin: 0;
+    }
+
+    .container-applied .main-applied {
+        padding: 15px 15px 75px 15px;
+    }
+
+    .container-applied .btn-primary {
+        color: #ffffff;
+        background-color: #ffc368;
+        background-image: linear-gradient(to bottom,#ffc368 0px,#ff9900 50%,#f49200 50%,#f49200 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc368', endColorstr='#f49200', GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        background-repeat: repeat-x;
+        border-color: #d57e00;
+    }
+
+        .container-applied .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary:active {
+            background-image: none;
+            color: #ffffff;
+            background-color: #f49200;
+            border-color: #d57e00;
+        }
+
+    .container-applied .btn-normal {
+        color: #333;
+        background-color: #ffc368;
+        background-image: linear-gradient(to bottom,#fff 0px,#efefef 50%,#e9e9e9 50%,#e0e0e0 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ccc', GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        background-repeat: repeat-x;
+        border-color: #bbb;
+    }
+
+        .container-applied .btn-normal:hover,
+        .btn-normal:focus,
+        .btn-normal:active {
+            background-image: none;
+            color: #333;
+            background-color: #e9e9e9;
+            border-color: #bbb;
+        }
+
+        .container-applied .btn-normal.disabled, .btn-normal[disabled] {
+            color: #aaa;
+            border-color: #ccc;
+        }
+    /*global end*/
+
+    /*consultation start*/
+    .container-applied .patient-info > div {
+        border: 1px solid #bcbcbc;
+    }
+
+    .container-applied .patient-info, .hospital-info, .suggest-info {
+        margin: 0;
+        margin-top: 10px !important;
+    }
+
+        .container-applied .patient-info .main-info {
+            height: 140px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .container-applied .patient-info .title, .hospital-info .title {
+            position: relative;
+            width: 100%;
+        }
+
+        .container-applied .patient-info > div h4, .hospital-info > div h4, .suggest-info h4 {
+            font-size: 14px;
+        }
+
+    .container-applied .hospital-info .main-info {
+        height: 285px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .container-applied .accept-info {
+        width: 25%;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .container-applied .detail-info {
+        width: 74%;
+        margin-left: 10px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    .container-applied .info-widget {
+        border: 1px solid #e2e2e2;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 0;
+    }
+
+    .container-applied .patient-info > div h4, .hospital-info > div h4, .suggest-info h4 {
+        padding: 10px;
+        margin: 0;
+    }
+
+    .container-applied .title {
+        background-color: #e2e2e2;
+    }
+
+    .container-applied .patient-info .title .action, .info-widget .title .action {
+        right: 18px;
+        top: 5px;
+        width: auto;
+        position: absolute;
+    }
+
+    .container-applied .scheduled-time .icon-general {
+        position: absolute;
+        left: 110px;
+        top: 10px;
+    }
+
+    .container-applied .suggest-info .title h4 {
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .container-applied .suggest-info .title .action {
+        right: 18px;
+        top: 2px;
+        position: absolute;
+    }
+
+        .container-applied .suggest-info .title .action button {
+            margin-left: 10px;
+        }
+
+    .container-applied .main-info dt {
+        padding: 10px 0 0 10px;
+        font-size: 13px;
+        color: #999;
+        font-weight: normal;
+    }
+
+    .container-applied .main-info dd {
+        padding: 10px 10px 0 10px;
+    }
+
+    .container-applied .main-info > p {
+        padding-right: 10px;
+        padding-left: 10px;
+        margin: 10px 0 0;
+    }
+
+    .container-applied .main-info .with-border .row {
+        border-left: 1px solid #e2e2e2;
+    }
+
+    .container-applied .main-info .category img {
+        margin-bottom: 5px;
+    }
+
+    .container-applied .suggest-info {
+        position: relative;
+        background-color: #fff0e1;
+        border: 1px solid #fbb040;
+    }
+
+        .container-applied .suggest-info .title {
+            background-color: #fbb040;
+        }
+
+        .container-applied .suggest-info p {
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 10px 0 0;
+        }
+
+        .container-applied .suggest-info .footer {
+            bottom: 0;
+            background-color: #fff0e1;
+            border-top: 1px solid #fff;
+            box-shadow: none;
+            padding: 10px;
+            z-index: 0;
+            width: 100%;
+        }
+
+            .container-applied .suggest-info .footer dt, .suggest-info .footer dd {
+                float: left;
+            }
+
+            .container-applied .suggest-info .footer dt {
+                width: 70px;
+            }
+
+        .container-applied .suggest-info .main-info {
+            height: 275px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+    .container-applied .history {
+        margin: 20px 0 0 5px;
+    }
+
+        .container-applied .history .time-mark {
+            padding-left: 3px;
+            color: #999;
+            content: "";
+            font-family: 'icoRisPro';
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+            .container-applied .history .time-mark:before {
+                content: "\e631";
+            }
+
+        .container-applied .history .detail {
+            padding: 10px 0 10px 15px;
+            border-left: 1px solid #ddd7d0;
+            margin-left: 10px;
+        }
+
+    .container-applied .suggest-info .toolbar {
+        height: 40px;
+        background-color: #f2f2f2;
+    }
+
+    .container-applied .suggest-info textarea.suggest-input {
+        width: 100%;
+        height: 170px;
+        resize: none;
+    }
+
+    .container-applied .suggest-info textarea.comment-input {
+        width: 100%;
+        height: 80px;
+        resize: none;
+    }
+    /*consultation end*/
+
+    /*form start*/
+    .container-applied .form-section {
+        padding-bottom: 18px;
+    }
+
+        .container-applied .form-section .title {
+            padding: 12px 0 18px 0;
+            border-top: 1px solid #f2f2f2;
+        }
+
+        .container-applied .form-section button {
+            margin-bottom: 10px;
+        }
+
+        .container-applied .form-section.with-no-border .title {
+            border-top: none;
+        }
+
+        .container-applied .form-section textarea {
+            width: 100%;
+            resize: none;
+            height: 250px;
+        }
+
+        .container-applied .form-section .form-input {
+            padding-left: 20px;
+        }
+/*form end*/
+
+/*footer start*/
+.footer-applied {
+    box-shadow: 0 -1px 1px #999;
+    background-color: #fff;
+    position: fixed;
+    bottom: 25px;
+    padding: 10px 50px;
+    width: 100%;
+    z-index: 2;
+    left: 0;
+    height: 54px;
+}
+
+    .footer-applied > div, .footer > ul {
+        float: left;
+    }
+
+        .footer-applied > div.back-link {
+            position: fixed;
+            left: 80px;
+            cursor: pointer;
+            color: #00acf1;
+        }
+
+            .footer-applied > div.back-link:hover {
+                color: #0084b9;
+            }
+
+            .footer-applied > div.back-link a.icon-general {
+                color: #00acf1;
+            }
+
+                .footer-applied > div.back-link a.icon-general:hover {
+                    color: #0084b9;
+                }
+
+            .footer-applied > div.back-link span {
+                line-height: 2.5;
+            }
+
+    .footer-applied .action {
+        text-align: center;
+        width: 100%;
+    }
+
+        .footer-applied .action button {
+            display: inline-block;
+            margin-left: 10px;
+        }
+/*footer end*/
+
+
+.status-message-red {
+    border: 1px solid #bcbcbc;
+    border-left: 5px solid #f25a29;
+    padding: 5px 10px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.status-message-blue {
+    border: 1px solid #bcbcbc;
+    border-left: 5px solid #00acf1;
+    padding: 5px 10px;
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.status-message-icon {
+    display: block;
+    float: left;
+}
+
+    .status-message-icon .icon-general {
+        font-size: 40px;
+        margin-right: 10px;
+    }
+
+.status-message-text {
+    margin-left: 60px;
+}
+
+.status-message-title {
+    color: #f25a29;
+}
+
+.status-message-sig {
+    color: #999;
+}
+
+    .status-message-sig span {
+        display: block;
+        float: left;
+        margin-right: 5px;
+    }
+
+.status-message-blue .status-message-title {
+    color: #00acf1;
+}
+
+.container-applied .sub-nav-request .status-red .status-title {
+    background-color: #f25a29 !important;
+}
+
+.container-applied .sub-nav-request .status-title-time {
+    font-size: 12px;
+    margin-left: 10px;
+}

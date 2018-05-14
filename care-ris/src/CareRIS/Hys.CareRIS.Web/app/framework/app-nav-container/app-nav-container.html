@@ -1,0 +1,14 @@
+﻿<div style="height:100%">
+    <div ui-view="worklist" ng-show="$state.includes('ris.worklist')" class="fill-container"></div>
+    <div ui-view="consultation" ng-show="$state.includes('ris.consultation')"></div>
+    <div ui-view="referral" ng-show="$state.includes('ris.referral')"></div>
+    <div ui-view="clientsetting" ng-show="$state.includes('ris.clientsetting')"></div>
+    <div ui-view="selfservicesetting" ng-show="$state.includes('ris.selfservicesetting')"></div>
+    <div ui-view="newbooking" ng-show="$state.includes('ris.newbooking')" style="height:100%"></div>
+    <div ui-view="newregistration " ng-show="$state.includes('ris.newregistration')" style="height:100%"></div>
+    <div ui-view="qualitycontrol" class="fill-container" ng-show="$state.includes('ris.qualitycontrol')"></div>
+    <div ui-view="configuration" ng-show="$state.includes('ris.configuration')"></div>
+    <div ui-view="template" ng-show="$state.includes('ris.template')" style="height:100%;"></div>
+    <div ui-view="registration" ng-show="$state.includes('ris.registration')" style="height:100%;"></div>
+    <div ui-view="report" ng-show="$state.includes('ris.report')" style="height:100%;"></div>
+</div>

@@ -1,0 +1,96 @@
+﻿<div class="system-configure col-md-6">
+    <h5>注释：{{selectedSystemProfile.PropertyDesc}}</h5>
+    <div class="table-container">
+        <table class="table" style="table-layout: fixed;">
+            <tr ng-repeat="systemProfile in systemProfiles"
+                ng-class="{'configuration-active':systemProfile.selected}"
+                ng-click="systemProfileClick(systemProfile)">
+                <td title="{{systemProfile.Name}}">
+                    <div class="col-md-11">{{systemProfile.Name}}</div>
+                    <div class="col-md-1" ng-show="systemProfile.isChange">*</div>
+                </td>
+                <td ng-if="systemProfile.PropertyType==='0'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="form-control" ng-show="systemProfile.selected" ng-change="systemProfile.isChange=true" ng-model="systemProfile.Value" type="text" />
+                </td>
+
+                <td ng-if="systemProfile.PropertyType==='1'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="input-number form-control" ng-show="systemProfile.selected"
+                           ng-model="systemProfile.Value" type="number"
+                           ng-min="systemProfile.minNumber"
+                           ng-max="systemProfile.maxNumber"
+                           name="systemProfile.Name"
+                           ng-change="systemProfile.isChange=true" />
+                </td>
+
+                <td ng-if="systemProfile.PropertyType==='3'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <select class="form-control" ng-show="systemProfile.selected"
+                            ng-model="systemProfile.Value"
+                            ng-change="systemProfile.isChange=true"
+                            ng-options="o for o in systemProfile.selectOptions"></select>
+                </td>
+
+                <td ng-if="systemProfile.PropertyType==='4'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <select class="form-control" ng-show="systemProfile.selected"
+                            ng-model="systemProfile.Value"
+                            ng-change="systemProfile.isChange=true"
+                            ng-options="o for o in systemProfile.selectOptions"></select>
+                </td>
+                <td ng-if="systemProfile.PropertyType==='5'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected" title="{{systemProfile.Value}}">{{systemProfile.Value}}</span>
+                    <select ng-show="systemProfile.selected" kendo-multi-select
+                            k-value-primitive="true"
+                            k-auto-bind="false"
+                            k-data-bound="noDataFound"
+                            k-on-change="systemProfileChange(systemProfile)"
+                            k-ng-model="systemProfile.selectValue"
+                            k-data-source="systemProfile.selectOptions"></select>
+                </td>
+                <td ng-if="systemProfile.PropertyType==='6'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <div ng-if="systemProfile.selected"
+                         kendo-flat-color-picker
+                         k-ng-model="systemProfile.selectValue"
+                         k-on-change="systemProfileColorChange(systemProfile)"
+                         k-opacity="true"
+                         class="role-color"></div>
+                </td>
+
+                <td ng-if="systemProfile.PropertyType==='9'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="form-control" ng-show="systemProfile.selected"
+                           ng-model="systemProfile.Value"
+                           ng-pattern="/^[a-zA-Z]:(\\[0-9a-zA-Z\u4e00-\u9fa5]*)$/" type="text"
+                           ng-change="systemProfile.isChange=true" />
+                </td>
+
+                <td ng-if="systemProfile.PropertyType==='10'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="form-control" ng-show="systemProfile.selected" 
+                           ng-model="systemProfile.Value" 
+                           ng-change="systemProfile.isChange=true" />
+                </td>
+                <td ng-if="systemProfile.PropertyType==='11'" class="col-lg-6">
+                    <span ng-model="systemProfile.Value">{{systemProfile.Value==='1'?'是':'否'}}</span>
+                </td>
+                <td ng-if="systemProfile.PropertyType==='15'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="form-control"
+                           ng-show="systemProfile.selected"
+                           ng-change="systemProfile.isChange=true"
+                           ng-model="systemProfile.Value" type="password" />
+                </td>
+                <td ng-if="systemProfile.PropertyType==='15'" class="col-lg-6">
+                    <span ng-show="!systemProfile.selected">{{systemProfile.Value}}</span>
+                    <input class="form-control"
+                           ng-show="systemProfile.selected"
+                           ng-change="systemProfile.isChange=true"
+                           ng-model="systemProfile.Value" type="password" />
+                </td>
+            </tr>
+        </table>
+    </div>  
+</div>

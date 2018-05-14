@@ -1,0 +1,233 @@
+﻿<style>
+    .gridStyle {
+        
+    }
+
+    .pg-content .navbar {
+        margin-bottom: 5px;
+    }
+
+    .pg-content .navbar-brand {
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-left: -15px !important;
+    }
+
+    .rispro-grid {
+        font-size: 14px;
+        -moz-word-break: break-all;
+        -o-word-break: break-all;
+        word-break: break-all;
+        height:100%;
+    }
+
+    .navbar-common .btn-group .btn + .btn {
+        margin-left: 0;
+    }
+
+    .navbar-common .btn-group > a {
+        border-right: 0 !important;
+    }
+
+    .navbar-common .btn-group button {
+        border-left: 0;
+    }
+
+    thead tr th {
+        background: #e0e0e0;
+        color: #333;
+        font-weight: normal;
+    }
+
+    .rispro-grid [class *= "-sm "] {
+        font-size: 13px !important;
+    }
+    .registions-nav {
+        border: 0;
+    }
+    .registionsGrid-container {
+        position: absolute; 
+        padding: 0 10px 10px 10px;
+        top: 101px;
+        bottom: 5px;
+        left:0;
+        right:0;
+        background: #fff;
+    }
+    .registionsGrid {
+        height: 100%;
+        font-size: 14px;
+        -moz-word-break: break-all;
+        -o-word-break: break-all;
+        word-break: break-all;
+        border-radius: 0;
+    }
+    .registions-nav {
+        background: #f2f2f2;
+        background-image: none;
+        box-shadow: none;
+    }
+</style>
+
+<div class="pg-content" style="padding-bottom: 0; background: transparent;">
+    <div class="content-container" style="overflow: hidden;overflow-y:hidden;position:relative;">
+        <app-worklist-search></app-worklist-search>
+        <nav class="registions-nav navbar navbar-default navbar-static-top navbar-width-1280" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#searchResult">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="navbar-brand">
+                        <label aria-hidden="true" class="checkbox-inline" ng-if="isPACSIntegration">
+                            <input type="checkbox" ng-model="isAutoLoadImage" ng-checked="isAutoLoadImage" ng-click="setAutoLoadImage()">
+                            <span translate>AutoLoadImage</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse registrations-op-navbar navbar-common " id="searchResult">
+                    <ul class="nav navbar-nav navbar-right rispro-navbar-nav" style="margin-right:auto;">
+                        <!--<li>
+                            <button type="button" class="btn btn-default btn-sm" ng-click="viewOrder()" ng-disabled="orderItems === null || orderItems.length === 0" translate>ViewRegistration</button>
+                        </li>-->
+                        <li>
+                            <span id="calledTheNumber" class="btn btn-default btn-sm" translate ng-click="calledTheNumber()">叫号</span>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-default btn-sm" ng-disabled="orderItems === null || orderItems.length === 0||!selectedOrder.isScan" ng-click="viewRequisition()" translate>ViewRequisition</button>
+                        </li>
+                        <li>
+                            <span id="registrationsLoadImage" class="btn btn-default btn-sm"
+                                  ng-disabled="!selectedOrder.studyInstanceUID"
+                                  ng-click="openPACSImageViewer()" translate>LoadImage</span>
+                        </li>
+                        <li>
+                            <div class="btn-group">
+                                <a id="writeReportLoadImage" class="btn btn-default btn-sm" translate ng-disabled="isDisabledWriteReport" 
+                                   ng-click="selectRelateReport()" 
+                                   style="padding-right: 5px!important;">WriteReprot</a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false" 
+                                        ng-disabled="isDisabledWriteReport"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="editReportDropdown">
+                                    <li id="listLoadImage" ng-repeat="item in dataWriteReprot"  ng-click="selectLockedProcedure(item)">
+                                        <a style="padding-left:0;">
+                                            &nbsp;
+                                            <span class="tickMark ng-scope" ng-if="item.status == enums.rpStatus.examination">&nbsp;&nbsp;</span>
+                                            <span class="tickMark ng-scope" ng-if="item.status > enums.rpStatus.examination">✔</span>
+                                            <span class="glyphicon glyphicon-lock" aria-hidden="true" ng-if="item.isLock==true"></span>
+                                            {{item.rpDesc}}
+                                        </a>
+                                    </li>
+                                    <li class='divider' ng-if="writeReprotCount > 1"></li>
+                                    <li ng-if="writeReprotCount > 1" ng-click="selectRelateReport()" >
+                                        <a id="relateReportLoadImage" style="text-indent: 1em;" translate>RelateReport</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-default btn-sm" translate ng-disabled="isDisabledPreviewReport"
+                                   ng-click="selectViewReport()"
+                                   style="padding-right: 5px!important;">
+                                    PreviewReport
+                                </a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false" ng-disabled="isDisabledPreviewReport"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="viewReportDropdown">
+                                    <li ng-repeat="item in dataViewReprot" ng-click="previewReport(item.procedureID)"><a >{{item.rpDesc}}</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li ng-if="!isMobile">
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-default btn-sm" translate ng-disabled="isDisabledPreviewReport"
+                                   ng-click="printReport(dataViewReprot[0].procedureID,dataViewReprot[0].orderId)"
+                                   style="padding-right: 5px!important;">PrintReport</a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle"
+                                        data-toggle="dropdown" aria-expanded="false" ng-disabled="isDisabledPreviewReport"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="viewReportDropdown">
+                                    <li ng-repeat="item in dataViewReprot" ng-click="printReport(item.procedureID,item.orderId)"><a href="javascript:void(0);">{{item.rpDesc}}</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li ng-hide="collapseOpNavbar" ng-if="!isMobile">
+                            <div class="btn-group">
+                                <a type="button" class="btn btn-default btn-sm" ng-disabled="orderItems === null || orderItems.length === 0"
+                                   ng-click="printCurrentPage()" translate
+                                   style="padding-right: 5px!important;">BulkPrint</a>
+                                <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false"
+                                        ng-disabled="orderItems === null || orderItems.length === 0"
+                                        style="padding-left: 5px!important;border-left: 0!important;padding-right: 5px!important">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu" id="viewReportDropdown">
+                                    <li ng-click="printCurrentPage()"><a href="javascript:void(0);"  translate>PrintCurrentPage</a></li>
+                                    <li ng-click="printAllPages()" ><a href="javascript:void(0);" translate>PrintAllPages</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button" class="btn btn-default btn-sm" ng-disabled="isDisabledFinishExam" ng-click="finishExam()" translate>FinishExam</button>
+                        </li>
+                        <li ng-hide="collapseOpNavbar">
+                            <button type="button" class="btn btn-default btn-sm" ng-disabled="isDisabledTransferReg" ng-click="transferBookingToReg()" translate>Booking2Reg</button>
+                        </li>
+                        <li ng-hide="true">
+                            <button type="button" class="btn btn-default btn-sm" ng-disabled="isDisabledReferral" ng-click="sendReferral()" translate>Referral</button>
+                        </li>
+                        <li ng-show="collapseOpNavbar">
+                            <div class="btn-group re-navbar-btn">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span translate>Others</span>
+                                    <span class="caret"></span>
+                                    <span class="sr-only">Toggle Dropdown</span>
+                                </button>
+                                <ul class="dropdown-menu multi-level" role="menu">
+                                    <li class="dropdown-submenu left" ng-class="{disabled:orderItems === null || orderItems.length === 0}" ng-if="!isMobile">
+                                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown"
+                                           ng-click="orderItems !== null && orderItems.length !== 0&&printCurrentPage()"
+                                           style="padding-right: 5px!important;"
+                                           aria-expanded="false" translate>BulkPrint</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="javascript:void(0);" ng-click="printCurrentPage()" translate>PrintCurrentPage</a></li>
+                                            <li><a href="javascript:void(0);" ng-click="printAllPages()" translate>PrintAllPages</a></li>
+                                        </ul>
+                                    </li>
+                                    <li ng-class="{disabled:isDisabledTransferReg}">
+                                        <a href="javascript:void(0);" ng-click="!isDisabledTransferReg&&transferBookingToReg()"
+                                           translate>Booking2Reg</a>
+                                    </li>
+                                    <li ng-class="{disabled:isDisabledReferral}" ng-if="false">
+                                        <a href="javascript:void(0);" ng-click="!isDisabledReferral&&sendReferral()"
+                                           translate>Referral</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="registionsGrid-container">
+            <div class="registionsGrid gridStyle" kendo-grid="registionsGrid" data-k-options="registionsGrid" k-ng-delay="registionsGrid"></div>
+        </div>
+    </div>
+</div>

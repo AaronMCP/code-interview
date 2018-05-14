@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C088CEBD-2BF2-4AE5-BFF5-876612FDD0E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hys.Consultation.Application</RootNamespace>
+    <AssemblyName>Hys.Consultation.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\Packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\Packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Application">
+      <HintPath>..\..\dll\Hys.Platform.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Data.EntityFramework">
+      <HintPath>..\..\dll\Hys.Platform.Data.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Hys.Platform.Domain">
+      <HintPath>..\..\dll\Hys.Platform.Domain.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.2\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dtos\Common\UserSettingDto.cs" />
+    <Compile Include="Dtos\Configuration\ConsultationPatientNoDto.cs" />
+    <Compile Include="Dtos\Configuration\NotificationConfigDto.cs" />
+    <Compile Include="Dtos\Configuration\NotificationContext.cs" />
+    <Compile Include="Dtos\Configuration\NotificationData.cs" />
+    <Compile Include="Dtos\Configuration\NotificationDto.cs" />
+    <Compile Include="Dtos\PatientCase\ConsultationResultDto.cs" />
+    <Compile Include="Dtos\PatientCase\PatientCaseDeleteDto.cs" />
+    <Compile Include="Dtos\PatientCase\CombinePatientCaseDto.cs" />
+    <Compile Include="Dtos\PatientCase\VisitEMRFileItemDto.cs" />
+    <Compile Include="Dtos\PatientCase\RegEMRFileItemDto.cs" />
+    <Compile Include="Dtos\Request\ConsultationAssignDto.cs" />
+    <Compile Include="Dtos\Request\ConsultationRequestFlatDto.cs" />
+    <Compile Include="Dtos\Request\MeetingInfoDto.cs" />
+    <Compile Include="Dtos\Request\RequestDeleteReason.cs" />
+    <Compile Include="Mappers\ConsultationPatientNoMapper.cs" />
+    <Compile Include="Mappers\ConsultationAssignMapper.cs" />
+    <Compile Include="Mappers\NotifyConfigMapper.cs" />
+    <Compile Include="Mappers\Request\PatientCaseHistioryMapper.cs" />
+    <Compile Include="Mappers\RoleMapper.cs" />
+    <Compile Include="Mappers\UserSettingMapper.cs" />
+    <Compile Include="Services\INotificationService.cs" />
+    <Compile Include="Services\ServiceImpl\NotificationService.cs" />
+    <Compile Include="Services\ServiceImpl\LoginUserService.cs" />
+    <Compile Include="Dtos\Request\ConsultatReportTemplateDirecDto.cs" />
+    <Compile Include="Dtos\Request\ConsultatReportTemplateDto.cs" />
+    <Compile Include="Mappers\Request\ConsultatReportTemplateDirecMapper.cs" />
+    <Compile Include="Mappers\Request\ConsultatReportTemplateMapper.cs" />
+    <Compile Include="Dtos\Common\Enums.cs" />
+    <Compile Include="Dtos\Common\ShortcutDto.cs" />
+    <Compile Include="Dtos\Configuration\DepartmentDto.cs" />
+    <Compile Include="Dtos\Configuration\ConsultationDictionaryDtos.cs" />
+    <Compile Include="Dtos\Configuration\ConsultationDictionaryDto.cs" />
+    <Compile Include="Dtos\Configuration\DAMInfoDto.cs" />
+    <Compile Include="Dtos\Configuration\HospitalDefaultDto.cs" />
+    <Compile Include="Dtos\Configuration\ServiceTypeDto.cs" />
+    <Compile Include="Dtos\Configuration\UserDto.cs" />
+    <Compile Include="Dtos\Configuration\UserSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\PatientCase\EMRItemDetailDto.cs" />
+    <Compile Include="Dtos\PatientCase\EMRItemDto.cs" />
+    <Compile Include="Dtos\PatientCase\PatientCaseEditInfoDto.cs" />
+    <Compile Include="Dtos\PatientCase\EditEMRItemFileDto.cs" />
+    <Compile Include="Dtos\PatientCase\RegEMRItemFileDto.cs" />
+    <Compile Include="Dtos\PatientCase\NewEMRItemFileDto.cs" />
+    <Compile Include="Dtos\PatientCase\NewEMRItemDto.cs" />
+    <Compile Include="Dtos\PatientCase\EMRItemSuperDto.cs" />
+    <Compile Include="Dtos\PatientBaseDto.cs" />
+    <Compile Include="Dtos\PatientCase\PatientCaseCombineDto.cs" />
+    <Compile Include="Dtos\Request\AuditDto.cs" />
+    <Compile Include="Dtos\Request\ChangeReasonDto.cs" />
+    <Compile Include="Dtos\Request\ConsultationRequestHistoryDto.cs" />
+    <Compile Include="Dtos\Request\PatientBaseInfoDto.cs" />
+    <Compile Include="Dtos\Request\ClinicalDiagnosisDto.cs" />
+    <Compile Include="Dtos\Request\PatientHistoryDto.cs" />
+    <Compile Include="Dtos\Request\RequestInfomationDto.cs" />
+    <Compile Include="Dtos\Request\RequestAcceptInfoDto.cs" />
+    <Compile Include="Dtos\Request\RequestReceiverDto.cs" />
+    <Compile Include="Dtos\Request\ReportAdviceDto.cs" />
+    <Compile Include="Dtos\Report\ConsultationReportHistoryDto.cs" />
+    <Compile Include="Dtos\Report\ConsultationReportDto.cs" />
+    <Compile Include="Dtos\Request\SelectAreaDto.cs" />
+    <Compile Include="Dtos\Request\SelectHospitalSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Worklist\ConsultationRequestBaseDto.cs" />
+    <Compile Include="Dtos\Request\NewConsultationRequestDto.cs" />
+    <Compile Include="Dtos\Worklist\ConsultationRequestTransfer.cs" />
+    <Compile Include="Dtos\Worklist\ConsultationRequestSpecialistDto.cs" />
+    <Compile Include="Dtos\PatientCase\PatientCaseInfoDto.cs" />
+    <Compile Include="Dtos\Worklist\ConsultationRequestSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Configuration\ExamModuleDto.cs" />
+    <Compile Include="Dtos\PatientCase\ExpertProfileDto.cs" />
+    <Compile Include="Dtos\PatientCase\HospitalProfileDto.cs" />
+    <Compile Include="Dtos\PatientCase\PatientCaseDto.cs" />
+    <Compile Include="Dtos\PatientCase\PersonDto.cs" />
+    <Compile Include="Dtos\Worklist\ConsultationRequestDto.cs" />
+    <Compile Include="Dtos\Worklist\Search\PatientCaseSearchCriteriaDto.cs" />
+    <Compile Include="Dtos\Worklist\Search\ConsultationRequestSpecialistSearchDto.cs" />
+    <Compile Include="Dtos\Worklist\Search\PatientCaseSearchDto.cs" />
+    <Compile Include="Dtos\Worklist\Search\ConsultationRequestSearchDto.cs" />
+    <Compile Include="Dtos\Worklist\Search\ConsultationSearchBaseDto.cs" />
+    <Compile Include="Mappers\ConsultationRequestMapper.cs" />
+    <Compile Include="Mappers\DepartmentMapper.cs" />
+    <Compile Include="Mappers\EMRItemDetailMapper.cs" />
+    <Compile Include="Mappers\EMRItemMapper.cs" />
+    <Compile Include="Mappers\EMRItemSuperMapper.cs" />
+    <Compile Include="Mappers\ExamModuleMapper.cs" />
+    <Compile Include="Mappers\ExpertProfileMapper.cs" />
+    <Compile Include="Mappers\HospitalProfileMapper.cs" />
+    <Compile Include="Mappers\PatientCaseInfoMapper.cs" />
+    <Compile Include="Mappers\PatientCaseMapper.cs" />
+    <Compile Include="Mappers\ConsultationDictionaryMapper.cs" />
+    <Compile Include="Mappers\DAMInfoMapper.cs" />
+    <Compile Include="Mappers\PersonMapper.cs" />
+    <Compile Include="Mappers\Request\ConsultationRequestHistioryMapper.cs" />
+    <Compile Include="Mappers\Request\ChangeReasonMapper.cs" />
+    <Compile Include="Mappers\Request\ReportHistoryMapper.cs" />
+    <Compile Include="Mappers\Request\RequestClinicalDiagnosisMapper.cs" />
+    <Compile Include="Mappers\Request\RequestPatientHistoryMapper.cs" />
+    <Compile Include="Mappers\Request\RequestPatientMapper.cs" />
+    <Compile Include="Mappers\Request\RequestInfomationMapper.cs" />
+    <Compile Include="Mappers\Request\RequestReceiveMapper.cs" />
+    <Compile Include="Mappers\Request\ReportAdviceMapper.cs" />
+    <Compile Include="Mappers\HospitalDefaultMapper.cs" />
+    <Compile Include="Mappers\ServiceTypeMapper.cs" />
+    <Compile Include="Mappers\UserExtentionMapper.cs" />
+    <Compile Include="Mappers\UserMapper.cs" />
+    <Compile Include="Mappers\ShortcutMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ILoginUserService.cs" />
+    <Compile Include="Services\IConsultationConfigurationService.cs" />
+    <Compile Include="Services\IConsultationPatientCaseService.cs" />
+    <Compile Include="Services\IConsultationService.cs" />
+    <Compile Include="Services\IUserManagementService.cs" />
+    <Compile Include="Services\IShortcutService.cs" />
+    <Compile Include="Services\ServiceImpl\ConsultationConfigurationService.cs" />
+    <Compile Include="Services\ServiceImpl\ConsultationPatientCaseService.cs" />
+    <Compile Include="Services\ServiceImpl\ConsultationService.cs" />
+    <Compile Include="Dtos\Configuration\RoleDto.cs" />
+    <Compile Include="Services\ServiceImpl\InitialDataService.cs" />
+    <Compile Include="Services\ServiceImpl\UserManagementService.cs" />
+    <Compile Include="Services\ServiceImpl\ShortcutService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hys.CareRIS.Domain\Hys.CareRIS.Domain.csproj">
+      <Project>{24217679-47ff-47f4-8220-66be854f8d5d}</Project>
+      <Name>Hys.CareRIS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CareRIS.EntityFramework\Hys.CareRIS.EntityFramework.csproj">
+      <Project>{98622138-b273-4d0b-9240-b6c6633f9572}</Project>
+      <Name>Hys.CareRIS.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.Consultation.Domain\Hys.Consultation.Domain.csproj">
+      <Project>{7e8c08cc-c56f-4b69-b4d2-8fb645f2ad59}</Project>
+      <Name>Hys.Consultation.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.Consultation.EntityFramework\Hys.Consultation.EntityFramework.csproj">
+      <Project>{9d4bc2b8-ecb0-4393-8a9a-67f49030b963}</Project>
+      <Name>Hys.Consultation.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hys.CrossCutting.Common\Hys.CrossCutting.Common.csproj">
+      <Project>{abea6ca6-c724-435d-8740-f81c943d4356}</Project>
+      <Name>Hys.CrossCutting.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

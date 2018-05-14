@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="PIXService.asmx.cs" Class="ASPNetWSAppTest.PIXService" %>

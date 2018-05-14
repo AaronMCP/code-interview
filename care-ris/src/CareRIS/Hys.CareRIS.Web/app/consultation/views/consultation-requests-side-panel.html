@@ -1,0 +1,63 @@
+﻿<div>
+    <div ng-show="sidePanel.isExpanded" class="g-sidepanel g-sidepanel-expand">
+        <div class="g-sidepanel-title">
+            {{'Consultation' | translate}}<a class="icon-general icon-left" title="{{'Collapse' | translate}}" ng-click="sidePanel.collapse()"></a>
+        </div>
+        <button type="button" class="btn btn-lg btn-primary" ng-click="createPatientCase()" ng-show="user.isJuniorDoctor">{{'CreateNewCase'|translate}}</button>
+        <ul class="g-sidepanel-menu">
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.All)" ng-class="highlightStauts(statusFilterContext.status.All)">
+                <span class="icon-general icon-all" title="{{'All' | translate}}"></span><span class="title">{{'All' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Consulting)" ng-class="highlightStauts(statusFilterContext.status.Consulting)">
+                <span class="icon-general icon-inMeeting" title="{{'Consulting' | translate}}"></span><span class="title">{{'Consulting' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Applied)" ng-hide="user.isExpert" ng-class="highlightStauts(statusFilterContext.status.Applied)">
+                <span class="icon-general icon-apply" title="{{'Applied' | translate}}"></span><span class="title">{{'Applied' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Accepted)" ng-class="highlightStauts(statusFilterContext.status.Accepted)">
+                <span class="icon-general icon-accept" title="{{'Accepted' | translate}}"></span><span class="title">{{'Accepted' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Completed)" ng-class="highlightStauts(statusFilterContext.status.Completed)">
+                <span class="icon-general icon-complete" title="{{'Completed' | translate}}"></span><span class="title">{{'Completed' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Cancelled)" ng-class="highlightStauts(statusFilterContext.status.Cancelled)">
+                <span class="icon-general icon-cancel2" title="{{'Cancelled' | translate}}"></span><span class="title">{{'Cancelled' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Rejected)" ng-class="highlightStauts(statusFilterContext.status.Rejected)">
+                <span class="icon-general icon-refuse" title="{{'Rejected' | translate}}"></span><span class="title">{{'Rejected' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Terminate)" ng-class="highlightStauts(statusFilterContext.status.Terminate)">
+                <span class="icon-general icon-end" title="{{'Terminated' | translate}}"></span><span class="title">{{'Terminated' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Reconsider)" ng-class="highlightStauts(statusFilterContext.status.Reconsider)">
+                <span class="icon-general icon-inReConsultation" title="{{'RequestReconsideration' | translate}}"></span><span class="title">{{'RequestReconsideration' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.ApplyCancel)" ng-class="highlightStauts(statusFilterContext.status.ApplyCancel)">
+                <span class="icon-general icon-cancelApply" title="{{'ApplyCancel' | translate}}"></span><span class="title">{{'ApplyCancel' | translate}}</span>
+            </li>
+            <li ng-click="statusFilterContext.filter(statusFilterContext.status.Delete)" ng-class="highlightStauts(statusFilterContext.status.Delete)">
+                <span class="icon-general icon-trash" title="{{'Deleted' | translate}}"></span><span class="title">{{'Deleted' | translate}}</span>
+            </li>
+        </ul>
+        <div class="customed-filter">
+            <div class="title">{{'Customization' | translate}}<a class="icon-general" ng-class="shortcutContext.visible ? 'icon-down' : 'icon-up'" ng-click="shortcutContext.switchVisibility()"></a></div>
+            <ul ng-show="shortcutContext.visible">
+                <li ng-repeat="shortcut in shortcutContext.shortcuts" ng-mousemove="showButton = true;" ng-mouseleave="showButton = false;">
+                    <a href="javascript:void(0);" ng-click="shortcutContext.searchByShortcut(shortcut)">
+                        <span title="{{shortcut.name}}">{{shortcut.name}}</span>
+                        <span class="glyphicon glyphicon-star" aria-hidden="true" title="{{'Default' | translate}}"
+                              ng-show="shortcut.isDefault"></span>
+
+                        <span class="glyphicon glyphicon-remove pull-right" aria-hidden="true" title="{{'Delete' | translate}}"
+                              ng-show="showButton" ng-click="shortcutContext.deleteShortcut($event, shortcut)"></span>
+                        <span class="glyphicon glyphicon-star-empty pull-right" aria-hidden="true" title="{{'SetAsDetault' | translate}}"
+                              style="margin-right:5px" ng-show="showButton" ng-click="shortcutContext.setDefaultShortcut($event, shortcut)"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div ng-hide="sidePanel.isExpanded" class="g-sidepanel">
+        <div class="g-sidepanel-title">{{'Consultation' | translate}}<a class="icon-general icon-right" title="{{'Expand' | translate}}" ng-click="sidePanel.expand()" style="color: #f7941e"></a></div>
+    </div>
+</div>

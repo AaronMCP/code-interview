@@ -1,0 +1,18 @@
+﻿<div class="popover report-preview-content-popover" style="z-index:99999;">
+    <div class="arrow"></div>
+    <div class="popover-content container report-preview-container">
+        <div class="row" style="height:45%">
+            <span class="label label-warning">影像学表现</span>
+            <textarea style="height:135px; width:100%;margin-top:10px; background-color: #f7f7f7;" ng-model="report.wysText" ng-readonly="true"></textarea>
+        </div>
+
+        <div class="row" style="height:45%">
+            <span class="label label-warning" >影像学诊断2</span>
+            <textarea style="height:135px; width:100%;margin-top:10px; background-color: #f7f7f7;" ng-model="report.wygText" ng-readonly="true"></textarea>
+        </div>
+         <div class="row" style="height:10%">
+             <button type="button" class="btn btn-primary pull-right" ng-show="notPreview" ng-click="closeAllPopover()" style="margin:10px" translate>关闭</button>
+             <button type="button" class="btn btn-primary pull-right" ng-show="!notPreview" ng-click="viewReport(report.uniqueID)" style="margin:10px" translate>ViewReport</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+﻿<div class="csd-popup csd-popup-dialog csd-popup-with-form csd-popup-dismissable requisition-popup">
+    <p class="ris-module-title" translate ng-bind="requisitionTitle"></p>
+    <div class="popup-content requisition-content">
+        <div class="ris-popup-leftside">
+            <div class="ris-popup-list">
+                <h5 translate>ScannedList</h5>
+                <ul>
+                    <li ng-repeat="file in fileList" ng-click="selectScanFile(file)" ng-class="{'st-selected': file.isSelected}">{{file.fileName}}</li>
+                </ul>
+            </div>
+            <div class="ris-popup-list" ng-hide="isViewRequisition||!isSafari">
+                <h5 translate>ScanArea</h5>
+                <div class="scanner">
+                    <video id="requisitionVideo" autoplay></video>
+                </div>
+            </div>
+        </div>
+        <div class="ris-popup-rightside">
+            <div class="ris-popup-toolbar">
+                <button class="btn btn-sm btn-primary" type="button" title="{{'Scan'|translate}}" ng-click="scan()" ng-disabled="isSavingImg||isViewRequisition||!isStreaming" ris-focus-on="focusScan"><span class="glyphicon glyphicon-camera"></span></button>
+                <button class="btn btn-sm btn-primary" type="button" title="{{'Save'|translate}}" ng-disabled="!isRotated||isViewRequisition" ng-click="update()"><span class="glyphicon glyphicon-floppy-disk"></span></button>
+                <button class="btn btn-sm btn-primary" type="button" title="{{'Delete'|translate}}" ng-click="delete()" ng-disabled="isViewRequisition"><span class="glyphicon glyphicon-trash"></span></button>
+                <button class="btn btn-sm btn-primary" type="button" title="{{'OpenVideo'|translate}}" ng-click="openVideo()" ng-disabled="isViewRequisition"><span class="icon-general icon-camera_open"></span></button>
+                <button class="btn btn-sm btn-primary" type="button" title="{{'RotateLeft'|translate}}" ng-click="rotateLeft()"><span class="icon-general icon-anticlockwise_90"></span></button>
+                <button class="btn btn-sm btn-primary" type="button" title="{{'RotateRight'|translate}}" ng-click="rotateRight()"><span class="icon-general icon-clockwise_90"></span></button>
+                <button class="btn btn-sm btn-primary right" type="button" title="{{endScanInfo}}" ng-click="endScan()"><span class="glyphicon glyphicon-log-out"></span></button>
+            </div>
+            <!--<div class="scanner-preview">-->
+                <canvas id="requisitionCanvas"></canvas>
+            <!--</div>-->
+        </div>
+
+    </div>
+</div>
+
+
+

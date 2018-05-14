@@ -1,0 +1,50 @@
+﻿<div class="management-container">
+    <ul class="nav nav-tabs management-tab" style="border: 0;">
+        <li class="active"><a href="#man-tab3" data-toggle="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解锁&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
+        <!--<li ><a href="#man-tab1" data-toggle="tab">在线用户</a></li>
+        <li><a href="#man-tab2" data-toggle="tab">工具栏</a></li>-->
+    </ul>
+    <div class="tab-content management-content">
+        <div class="tab-pane active" id="man-tab3">
+            <div class="administrator-tools-container">
+                <div class="administrator-tools-head">
+                    <form>
+                        <div class="col-lg-3 col-md-3 form-group" >
+                            <label class="col-md-3">所属用户</label>
+                            <div class="col-md-9">
+                                <input  style ="width:174px" class="form-control" type="text" ng-model="searchCriteria.ownerName" />
+                            </div>
+                        </div>                  
+                        <div class="col-lg-3 col-md-3 form-group">
+                            <div class="col-md-1" style="height: 34px;line-height: 38px;">
+                                <input style="margin: 0;" type="checkbox" ng-model="searchCriteria.haveTime" ng-true-value="true" ng-false-value="false" />
+                            </div>
+                            <label class="col-md-3">被锁时间</label>
+                            <div class="col-md-8">
+                                <input autocomplete="off"
+                                       id="startDatePicker"
+                                       kendo-date-picker="startDatePicker"
+                                       ng-model="searchCriteria.createStartTime">
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 form-group">
+                            <label class="col-md-1">到</label>
+                            <div class="col-md-8">
+                                <input autocomplete="off"
+                                       id="endDatePicker"
+                                       kendo-date-picker="endDatePicker"
+                                       ng-model="searchCriteria.createEndTime">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-default"ng-disabled="!currentItem" ng-click="openLock()">解锁</button>
+                        <button style="margin-left:6px;margin-right: 15px;" type="submit" class="btn btn-default" ng-click="search()">查询</button>           
+                    </form>
+
+                </div>
+                <div class="administrator-tools-content">
+                    <div style="height:100%;" kendo-grid="openLockGrid" data-k-options="openLockGridOption"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

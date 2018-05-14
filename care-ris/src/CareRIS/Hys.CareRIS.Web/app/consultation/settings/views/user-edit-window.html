@@ -1,0 +1,117 @@
+﻿<div>
+    <style>
+        .user-edit-window .modal-dialog {
+            width: 800px;
+            margin-top: 30px;
+        }
+
+        .favorite {
+            color: red;
+        }
+    </style>
+    <p class="ris-module-title">
+        <strong>{{isEdit ? 'EditUser' : 'CreateUser' | translate}}</strong>
+        <button aria-hidden="true" data-dismiss="alert" class="close" type="button" ng-click="close()">×</button>
+    </p>
+    <form name="userEditForm" class="ris-form" style=" padding: 20px 20px 10px 10px;">
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Avatar' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ris-avatar data="user.avatar" on-changed="userEditForm.$setDirty()" default-image="/app-resources/images/consultation/user_portrait_default.png"></ris-avatar>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'Mobile' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" ng-model="user.mobile" ng-change="user.isMobileChanged = true">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'UserName' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" name="userName" ng-model="user.loginName" required disabled="disabled">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'RealName' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" name="realName" ng-model="user.localName" required disabled="disabled">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Organization' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ui-select ng-model="user.hospitalID" theme="select2" required search-enabled="false" ng-disabled="!loginUser.isSuperAdmin && user.hospitalID" style="width: 255px;">
+                    <ui-select-match>{{$select.selected.hospitalName}}</ui-select-match>
+                    <ui-select-choices repeat="hospital.uniqueID as hospital in hospitals">
+                        <span>{{hospital.hospitalName}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'Department' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <ui-select ng-model="user.departmentID" theme="select2" search-enabled="false" style="width: 255px;">
+                    <ui-select-match>{{$select.selected.name}}</ui-select-match>
+                    <ui-select-choices repeat="dept.uniqueID as dept in departments">
+                        <span>{{dept.name}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'SelectableRole' | translate}}<span class="form-icon-general icon-star icon-orange"></span></label>
+            </div>
+            <div class="col-md-10">
+                <ui-select id="roles" ng-model="$parent.user.roles" theme="bootstrap" multiple ng-change="roleChanged()" search-enabled="false" style="width: 100%;">
+                    <ui-select-match><span class="glyphicon glyphicon-star" ng-class="{'favorite':$item.uniqueID == $parent.user.defaultRoleID}" style="line-height: 0.3" ng-click="$parent.user.defaultRoleID = $item.uniqueID; userEditForm.$setDirty()"></span>{{$item.roleName}}</ui-select-match>
+                    <ui-select-choices repeat="role in roles">
+                        <span>{{role.roleName}}</span>
+                    </ui-select-choices>
+                </ui-select>
+            </div>
+        </div>
+        <div class="row" ng-show="user.isExpert">
+            <div class="col-md-2">
+                <label class="control-label">{{::'ExpertLevel' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" name="phone" ng-model="user.expertLevel">
+            </div>
+            <div class="col-md-2">
+                <label class="control-label">{{::'ResearchDomain' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-4">
+                <input type="text" class="form-control" name="email" ng-model="user.researchDomain">
+            </div>
+        </div>
+        <div class="row" ng-show="user.isExpert">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Introduction' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea class="form-control" id="input" style="height: 100px;" ng-model="user.introduction"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <label class="control-label">{{::'Description' | translate}}</label>
+            </div>
+            <div class="ris-form-input col-md-10">
+                <textarea class="form-control" id="input" style="height: 100px;" ng-model="user.description"></textarea>
+            </div>
+        </div>
+    </form>
+    <p class="ris-module-footer">
+        <button class="btn btn-green" translate ng-click="saveUser()" ng-disabled="userEditForm.$pristine || userEditForm.$invalid">OK</button>
+        <button class="btn btn-default" style="margin-left:30px;" translate ng-click="close()">Cancel</button>
+    </p>
+</div>
